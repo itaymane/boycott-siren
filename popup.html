@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boycott Siren</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 320px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 0;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0047ab 0%, #4a90e2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .tagline {
+            font-size: 11px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 16px;
+        }
+        
+        .stats {
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .stat-item:last-child {
+            border-bottom: none;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 13px;
+        }
+        
+        .stat-value {
+            color: #0047ab;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            border-left: 3px solid #0047ab;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+        
+        .info-box p {
+            font-size: 11px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .footer {
+            background: white;
+            border-radius: 12px;
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        
+        .footer-link {
+            color: #0047ab;
+            text-decoration: none;
+            font-size: 11px;
+        }
+        
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            font-size: 10px;
+            color: #999;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(135deg, #0047ab 0%, #4a90e2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: transform 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Boycott Siren</div>
+        <div class="tagline">Artist Information Tool</div>
+    </div>
+    
+    <div class="content">
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Artists tracked</span>
+                <span class="stat-value" id="totalArtists">215+</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Sources verified</span>
+                <span class="stat-value">Multiple</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Privacy</span>
+                <span class="stat-value">100% Local</span>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <p>This tool displays publicly documented information about artists and their stated positions on boycotts of Israel.</p>
+            <p>All information is sourced from public records including Wikipedia, news articles, and official statements. Sources are provided for independent verification.</p>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-links">
+                <a href="#" class="footer-link" id="termsLink">Terms</a>
+                <a href="#" class="footer-link" id="privacyLink">Privacy</a>
+                <a href="#" class="footer-link" id="correctionsLink">Report Issue</a>
+            </div>
+            <div class="copyright">© 2026 Boycott Siren</div>
+        </div>
+        
+        <button class="btn" id="viewWebsite">View Full Database</button>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

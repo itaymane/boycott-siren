@@ -1,0 +1,52 @@
+/* Boycott Alerts Extension Styles */
+
+.boycott-alert-indicator {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 71, 171, 0.3));
+}
+
+.boycott-alert-indicator:hover {
+    transform: scale(1.2);
+}
+
+.boycott-alert-indicator svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Remove old dot animation */
+@keyframes subtle-pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1.05);
+    }
+}
+
+/* Modal overlay */
+#boycott-alert-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    backdrop-filter: blur(4px);
+}
+
+/* Ensure extension content is always on top */
+.boycott-alert-indicator,
+#boycott-alert-modal {
+    all: initial;
+    all: revert;
+}

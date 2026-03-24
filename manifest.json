@@ -1,0 +1,120 @@
+{
+  "manifest_version": 3,
+  "name": "Boycott Siren",
+  "version": "1.0.0",
+  "description": "Sound the alarm on boycotting artists. Shows clear notifications when boycotting artists are detected.",
+  
+  "permissions": [
+    "activeTab"
+  ],
+  
+  "host_permissions": [
+    "*://www.ticketmaster.com/*",
+    "*://www.ticketmaster.co.uk/*",
+    "*://www.ticketmaster.com.au/*",
+    "*://*.ticketmaster.com/*",
+    "*://*.ticketmaster.co.uk/*",
+    "*://*.ticketmaster.com.au/*",
+    "*://www.livenation.com/*",
+    "*://www.livenation.com.au/*",
+    "*://*.livenation.com/*",
+    "*://*.livenation.com.au/*",
+    "*://concerts.livenation.com/*",
+    "*://www.stubhub.com/*",
+    "*://www.stubhub.ca/*",
+    "*://www.stubhub.co.uk/*",
+    "*://www.stubhub.com.au/*",
+    "*://*.stubhub.com/*",
+    "*://*.stubhub.ca/*",
+    "*://*.stubhub.co.uk/*",
+    "*://*.stubhub.com.au/*",
+    "*://seatgeek.com/*",
+    "*://*.seatgeek.com/*",
+    "*://www.axs.com/*",
+    "*://*.axs.com/*",
+    "*://www.vividseats.com/*",
+    "*://*.vividseats.com/*",
+    "*://www.eventbrite.com/*",
+    "*://*.eventbrite.com/*",
+    "*://www.seetickets.com/*",
+    "*://*.seetickets.com/*",
+    "*://www.gigantic.com/*",
+    "*://*.gigantic.com/*",
+    "*://www.bandsintown.com/*",
+    "*://*.bandsintown.com/*",
+    "*://www.songkick.com/*",
+    "*://*.songkick.com/*",
+    "*://www.ticketek.com.au/*",
+    "*://*.ticketek.com.au/*",
+    "*://www.moshtix.com.au/*",
+    "*://*.moshtix.com.au/*",
+    "*://tixel.com/*",
+    "*://*.tixel.com/*",
+    "*://www.frontiertouring.com/*",
+    "*://*.frontiertouring.com/*"
+  ],
+  
+  "action": {
+    "default_popup": "popup.html"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.ticketmaster.com/*",
+        "*://www.ticketmaster.co.uk/*",
+        "*://*.ticketmaster.com/*",
+        "*://*.ticketmaster.co.uk/*",
+        "*://www.livenation.com/*",
+        "*://*.livenation.com/*",
+        "*://concerts.livenation.com/*",
+        "*://www.stubhub.com/*",
+        "*://www.stubhub.ca/*",
+        "*://www.stubhub.co.uk/*",
+        "*://www.stubhub.com.au/*",
+        "*://*.stubhub.com/*",
+        "*://*.stubhub.ca/*",
+        "*://*.stubhub.co.uk/*",
+        "*://*.stubhub.com.au/*",
+        "*://seatgeek.com/*",
+        "*://*.seatgeek.com/*",
+        "*://www.axs.com/*",
+        "*://*.axs.com/*",
+        "*://www.vividseats.com/*",
+        "*://*.vividseats.com/*",
+        "*://www.eventbrite.com/*",
+        "*://*.eventbrite.com/*",
+        "*://www.seetickets.com/*",
+        "*://*.seetickets.com/*",
+        "*://www.gigantic.com/*",
+        "*://*.gigantic.com/*",
+        "*://www.bandsintown.com/*",
+        "*://*.bandsintown.com/*",
+        "*://www.songkick.com/*",
+        "*://*.songkick.com/*",
+        "*://www.ticketmaster.com.au/*",
+        "*://*.ticketmaster.com.au/*",
+        "*://www.ticketek.com.au/*",
+        "*://*.ticketek.com.au/*",
+        "*://www.moshtix.com.au/*",
+        "*://*.moshtix.com.au/*",
+        "*://tixel.com/*",
+        "*://*.tixel.com/*",
+        "*://www.frontiertouring.com/*",
+        "*://*.frontiertouring.com/*",
+        "*://www.livenation.com.au/*",
+        "*://*.livenation.com.au/*"
+      ],
+      "js": ["artists-data.js", "content.js"],
+      "css": ["overlay.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["modal.html", "logo.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

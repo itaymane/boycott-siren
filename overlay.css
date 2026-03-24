@@ -1,0 +1,204 @@
+/* Boycott Alerts - Workaround Version - Floating Overlay Styles */
+
+/* Small Icon Indicator */
+.boycott-small-icon {
+    display: inline-block !important;
+    margin-left: 8px !important;
+    vertical-align: middle !important;
+    cursor: pointer !important;
+    transition: transform 0.2s ease !important;
+    position: relative !important;
+    z-index: 1000 !important;
+}
+
+.boycott-small-icon:hover {
+    transform: scale(1.3) !important;
+}
+
+.boycott-small-icon svg {
+    display: block !important;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) !important;
+}
+
+/* Floating Alert - Option 1: Professional & Clean */
+.boycott-floating-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 400px;
+    max-width: calc(100vw - 40px);
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    z-index: 2147483647;
+    opacity: 0;
+    transform: translateX(450px);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow: hidden;
+}
+
+.boycott-floating-alert.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.boycott-alert-content {
+    /* No padding - header has its own */
+}
+
+/* Header with gradient background */
+.boycott-alert-header {
+    background: linear-gradient(135deg, #0047ab 0%, #4a90e2 100%);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Logo container */
+.boycott-alert-logo {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header text container */
+.boycott-header-text {
+    flex: 1;
+}
+
+.boycott-alert-title {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.5px;
+}
+
+.boycott-alert-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+/* Close button */
+.boycott-alert-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    line-height: 1;
+}
+
+.boycott-alert-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Alert body */
+.boycott-alert-body {
+    padding: 1.5rem;
+}
+
+.boycott-artist-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.boycott-stance-badge {
+    display: inline-block;
+    background: #ff4444;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.boycott-statement {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.boycott-details-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #0047ab, #4a90e2);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boycott-details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 71, 171, 0.3);
+}
+
+.boycott-details-btn:active {
+    transform: translateY(0);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .boycott-floating-alert {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        width: auto;
+        max-width: none;
+    }
+    
+    .boycott-alert-header {
+        padding: 1.25rem;
+    }
+    
+    .boycott-alert-logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .boycott-alert-title {
+        font-size: 1.1rem;
+    }
+    
+    .boycott-alert-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .boycott-alert-body {
+        padding: 1.25rem;
+    }
+    
+    .boycott-artist-name {
+        font-size: 1.5rem;
+    }
+}
