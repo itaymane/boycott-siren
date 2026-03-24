@@ -4,4 +4,4 @@ Allow: /
 Disallow: /privacy.html
 Disallow: /terms.html
 
-Sitemap: https://boycottsiren.netlify.app/sitemap.xml
+Sitemap: https://boycott-siren.netlify.app/sitemap.xml
