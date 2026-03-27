@@ -1,27 +1,27 @@
 // Boycott Siren - Artist Database
-// Total: 246 verified artists
-// Last updated: 2026-03-23
+// Total: 209 verified artists
+// Last updated: 2026-03-27
 
 const ARTISTS_DATABASE = [
     {
         name: "Roger Waters",
         statement: "Pink Floyd co-founder, longtime BDS advocate; dropped by publisher BMG in 2024 over Israel comments",
-        sources: `<a href="https://www.bdsmovement.net/news/roger-waters-and-bds" target="_blank">BDS Movement</a> | <a href="https://bdsmovement.net/news/facebook-live-conversation-roger-waters" target="_blank">PACBI</a> | <a href="https://www.guardian.co.uk/commentisfree/2011/mar/11/cultural-boycott-west-bank-wall" target="_blank">The Guardian</a> | <a href="https://www.rollingstone.com/music/music-news/roger-waters-pink-floyd-bmg-israel-comments-1234957036/" target="_blank">Rolling Stone</a> | <a href="https://variety.com/2024/music/news/roger-waters-bmg-split-over-pink-floyd-anti-israeli-comments-1235891350/" target="_blank">Variety</a> | <a href="https://www.nme.com/news/music/bmg-reportedly-splitting-from-roger-waters-following-israel-comments-3579758" target="_blank">NME</a>`
+        sources: `<a href="https://www.bdsmovement.net/news/roger-waters-and-bds" target="_blank">BDS Movement</a> | <a href="https://bdsmovement.net/news/facebook-live-conversation-roger-waters" target="_blank">PACBI</a> | <a href="https://www.guardian.co.uk/commentisfree/2011/mar/11/cultural-boycott-west-bank-wall" target="_blank">The Guardian</a> | <a href="https://www.rollingstone.com/music/music-news/roger-waters-pink-floyd-bmg-israel-comments-1234957036/" target="_blank">Rolling Stone</a> | <a href="https://variety.com/2024/music/news/roger-waters-bmg-split-over-pink-floyd-anti-israeli-comments-1235891350/" target="_blank">Variety</a> | <a href="https://www.nme.com/news/music/bmg-reportedly-splitting-from-roger-waters-following-israel-comments-3579758" target="_blank">NME</a> | <a href="https://www.timesofisrael.com/roger-waters-calls-on-musicians-to-boycott-israel/" target="_blank">Times of Israel</a> | <a href="https://www.haaretz.com/israel-news/2024-01-31/ty-article/record-company-cuts-contract-with-roger-waters-amid-history-of-anti-israel-statements/0000018d-5ecf-d0fc-a9bd-5edf3f6a0000" target="_blank">Haaretz</a>`
     },
     {
         name: "Dua Lipa",
         statement: "Called Israel's actions in Gaza a 'genocide'; shelved music video deemed insensitive; shared #AllEyesOnRafah; signed open letter urging UK PM to end complicity in war",
-        sources: `<a href="https://deadline.com/2023/12/dua-lipa-pulls-music-video-insensitive-israel-gaza-conflict-1235683400/" target="_blank">Deadline</a> | <a href="https://www.newsweek.com/dua-lipa-israel-palestinians-hamas-conflict-rolling-stone-interview-1861402" target="_blank">Newsweek</a> | <a href="https://www.euronews.com/culture/2024/05/29/dua-lipa-shares-support-for-alleyesonrafah-what-does-it-mean" target="_blank">Euronews</a>`
+        sources: `<a href="https://deadline.com/2023/12/dua-lipa-pulls-music-video-insensitive-israel-gaza-conflict-1235683400/" target="_blank">Deadline</a> | <a href="https://www.newsweek.com/dua-lipa-israel-palestinians-hamas-conflict-rolling-stone-interview-1861402" target="_blank">Newsweek</a> | <a href="https://www.euronews.com/culture/2024/05/29/dua-lipa-shares-support-for-alleyesonrafah-what-does-it-mean" target="_blank">Euronews</a> | <a href="https://www.timesofisrael.com/singer-dua-lipa-slams-ugly-campaign-criticizing-her-for-pro-palestinian-stance/" target="_blank">Times of Israel</a>`
     },
     {
         name: "Patti Smith",
         statement: "Supports cultural boycott, declined to perform in Israel",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
+        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a> | <a href="https://www.timesofisrael.com/patti-smith-julian-casablancas-among-600-musicians-to-urge-boycott-of-israel/" target="_blank">Times of Israel</a>`
     },
     {
         name: "Elvis Costello",
         statement: "Cancelled Israel concerts in support of BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
+        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a> | <a href="https://www.haaretz.com/israel-news/culture/2010-05-18/ty-article/elvis-costello-joins-israel-boycott-canceling-june-shows/0000017f-e292-d38f-a57f-e6d261610000" target="_blank">Haaretz</a> | <a href="https://www.hollywoodreporter.com/business/business-news/elvis-costello-cancels-israel-concerts-23816/" target="_blank">Hollywood Reporter</a>`
     },
     {
         name: "Tom Morello",
@@ -36,12 +36,12 @@ const ARTISTS_DATABASE = [
     {
         name: "Lauryn Hill",
         statement: "Cancelled Israel concert, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
+        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a> | <a href="https://www.timesofisrael.com/lauryn-hill-cancels-israel-show/" target="_blank">Times of Israel</a>`
     },
     {
         name: "Peter Gabriel",
         statement: "Supports cultural boycott of Israel",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
+        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a> | <a href="https://www.timesofisrael.com/peter-gabriel-pro-gaza-not-anti-israel/" target="_blank">Times of Israel</a>`
     },
     {
         name: "Annie Lennox",
@@ -56,22 +56,22 @@ const ARTISTS_DATABASE = [
     {
         name: "Sam Smith",
         statement: "Supports cultural boycott",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
+        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a> | <a href="https://www.timesofisrael.com/sam-smiths-tel-aviv-concert-cancelled-citing-technical-logistical-difficulties/" target="_blank">Times of Israel</a>`
     },
     {
         name: "Björk",
-        statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        statement: "Signed No Music for Genocide pledge, geo-blocked music from Israeli streaming services",
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.timesofisrael.com/singer-bjork-appears-to-yank-her-streaming-songs-from-israel/" target="_blank">Times of Israel</a> | <a href="https://www.haaretz.com/israel-news/2025-09-21/ty-article/.premium/bjork-pulls-her-music-from-israeli-streaming-services-amid-gaza-war-boycott-campaign/00000199-6d25-daea-adff-7fe7e9110000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Lorde",
         statement: "Cancelled 2018 Israel concert; signed No Music for Genocide pledge and geo-blocked music from Israel; shouted 'Free Palestine' on stage at MSG",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://consequence.net/2025/10/lorde-idles-no-music-for-genocide-boycott/" target="_blank">Consequence</a> | <a href="https://www.aljazeera.com/news/2018/1/3/lorde-bullied-after-dropping-israel-show" target="_blank">Al Jazeera</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.timesofisrael.com/after-bds-pressure-popster-lorde-cancels-israel-gig/" target="_blank">Times of Israel</a> | <a href="https://www.haaretz.com/israel-news/2025-10-03/ty-article/.premium/new-zealand-singer-lorde-removes-her-songs-from-apple-music-in-israel/00000199-aae9-df33-a5dd-aefff8da0000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://consequence.net/2025/10/lorde-idles-no-music-for-genocide-boycott/" target="_blank">Consequence</a> | <a href="https://www.aljazeera.com/news/2018/1/3/lorde-bullied-after-dropping-israel-show" target="_blank">Al Jazeera</a>`
     },
     {
         name: "Massive Attack",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.timesofisrael.com/massive-attack-primal-scream-join-initiative-to-block-music-being-streamed-in-israel/" target="_blank">Times of Israel</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Brian Eno",
@@ -81,452 +81,432 @@ const ARTISTS_DATABASE = [
     {
         name: "Fontaines D.C.",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Japanese Breakfast",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Paramore",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.nme.com/news/music/paramore-and-hayley-williams-join-no-music-for-genocide-israel-boycott-3895018" target="_blank">NME (Paramore)</a> | <a href="https://consequence.net/2025/09/paramore-hayley-williams-israel-boycott/" target="_blank">Consequence</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a>`
     },
     {
         name: "Hayley Williams",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Rina Sawayama",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "AURORA",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "King Krule",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "IDLES",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://consequence.net/2025/10/lorde-idles-no-music-for-genocide-boycott/" target="_blank">Consequence</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Hot Chip",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Kneecap",
-        statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        statement: "Signed No Music for Genocide pledge; projected 'FCK ISRAEL' on Coachella stage; banned from entering Hungary and Canada",
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.timesofisrael.com/irish-band-kneecap-projects-fck-israel-on-coachella-music-festival-stage/" target="_blank">Times of Israel (Coachella)</a> | <a href="https://www.timesofisrael.com/hungary-bans-anti-israel-rap-group-kneecap-from-entering-country-for-festival-gig/" target="_blank">Times of Israel (Hungary ban)</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Wednesday",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Mannequin Pussy",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "BADBADNOTGOOD",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Young Fathers",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Grizzly Bear",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Amyl and the Sniffers",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Soccer Mommy",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Kelela",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Caribou",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
-    },
-    {
-        name: "Dan Snaith",
-        statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Primal Scream",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Faye Webster",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Arca",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "MIKE",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Erika de Casier",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "MJ Lenderman",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Julia Jacklin",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Lucy Dacus",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Enter Shikari",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Fever Ray",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "The Knife",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Blood Orange",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Blonde Redhead",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Clairo",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Denzel Curry",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Destroy Boys",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Eartheater",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Geese",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Jane Remover",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Ben Howard",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "The Blessed Madonna",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Corbin",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Chanel Beads",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Cameron Winter",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "By Storm",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Fat Tony",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Flavien Berger",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Hania Rani",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Hyperdub",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Kelsey Lu",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "L'Rain",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Lambrini Girls",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Liv.e",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Luna Li",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Marc Rebillet",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "MARINA",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Maryam Saleh",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Maurice Louca",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Mechatok",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Mei Semones",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
-    },
-    {
-        name: "Minaret Records",
-        statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Mogwai",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "MØ",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Nicolás Jaar",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Nourished by Time",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "NTS Radio",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Oklou",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Smerz",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Nick León",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Yaeji",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Yeule",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "10k",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Aminé",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Ana Tijoux",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Annahstasia",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Carole King",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Daphni",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Escho",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Esha Tewari",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Ryuichi Sakamoto Estate",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Hand Habits",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Hotline TNT",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Julia Holter",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Kelly Moran",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Loraine James",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Model/Actriz",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Saul Williams",
         statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
-    },
-    {
-        name: "Grimes",
-        statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a> | <a href="https://www.haaretz.com/israel-news/2025-09-18/ty-article/.premium/more-than-400-artists-sign-petition-to-remove-their-songs-from-platforms-in-israel/00000199-5df9-d45d-a3bf-fffbc0690000" target="_blank">Haaretz</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott" target="_blank">NPR</a> | <a href="https://www.billboard.com/music/music-news/no-music-for-genocide-boycott-clairo-lucy-dacus-1236087251/" target="_blank">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-boycott-1235429933/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163" target="_blank">NME</a>`
     },
     {
         name: "Four Tet",
-        statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
-    },
-    {
-        name: "Jamie xx",
-        statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel",
-        sources: `<a href="https://nomusicforgenocide.org/" target="_blank">No Music for Genocide</a> | <a href="https://en.wikipedia.org/wiki/No_Music_For_Genocide" target="_blank">Wikipedia - No Music for Genocide</a>`
+        statement: "Joined #DJsForPalestine cultural boycott of Israel in 2018; supports Palestinian rights",
+        sources: `<a href="https://www.nme.com/news/music/four-tet-caribou-djs-for-palestine-2378356" target="_blank">NME</a> | <a href="https://www.haaretz.com/israel-news/prominent-djs-back-israel-boycott-over-brutal-oppression-of-the-palestinian-people-1.6469507" target="_blank">Haaretz</a> | <a href="https://mixmag.net/read/four-tet-caribou-and-the-black-madonna-show-support-for-djsforpalestine-news" target="_blank">Mixmag</a>`
     },
     {
         name: "Olivia Colman",
@@ -854,18 +834,8 @@ const ARTISTS_DATABASE = [
         sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
     },
     {
-        name: "FKA twigs",
-        statement: "British artist, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
-    },
-    {
         name: "DJ Snake",
         statement: "French DJ, supports cultural boycott",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
-    },
-    {
-        name: "Aphex Twin",
-        statement: "Electronic music pioneer, supports BDS",
         sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
     },
     {
@@ -875,8 +845,8 @@ const ARTISTS_DATABASE = [
     },
     {
         name: "Sinéad O'Connor",
-        statement: "Late Irish singer, supported BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
+        statement: "Late Irish singer; cancelled 2014 Israel concert after learning of BDS boycott call; said 'I will not play in Israel'",
+        sources: `<a href="https://electronicintifada.net/blogs/david-cronin/thank-you-sinead-oconnor-boycotting-israel" target="_blank">Electronic Intifada</a> | <a href="https://www.hotpress.com/music/sinead-oconnor-i-wont-play-in-israel-11954250" target="_blank">Hotpress</a>`
     },
     {
         name: "System of a Down",
@@ -894,11 +864,6 @@ const ARTISTS_DATABASE = [
         sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
     },
     {
-        name: "Carlos Santana",
-        statement: "Legendary guitarist, signed BDS petition",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
-    },
-    {
         name: "The Pixies",
         statement: "Alternative rock band, cancelled Israel show",
         sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
@@ -906,11 +871,6 @@ const ARTISTS_DATABASE = [
     {
         name: "DJ Spooky",
         statement: "Electronic musician, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
-    },
-    {
-        name: "Mira Calix",
-        statement: "Electronic artist, supported cultural boycott",
         sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
     },
     {
@@ -931,11 +891,6 @@ const ARTISTS_DATABASE = [
     {
         name: "Belle and Sebastian",
         statement: "Scottish indie band, declined Israel performance",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
-    },
-    {
-        name: "Vivian Green",
-        statement: "R&B singer, supports BDS",
         sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
     },
     {
@@ -962,16 +917,6 @@ const ARTISTS_DATABASE = [
         name: "Liam Cunningham",
         statement: "Game of Thrones actor, supports BDS",
         sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
-    },
-    {
-        name: "Snoop Dogg",
-        statement: "Rapper, supports BDS, cancelled Israel show",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Macy Gray",
-        statement: "R&B singer, cancelled Israel performance",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
     },
     {
         name: "Cat Power",
@@ -1006,36 +951,6 @@ const ARTISTS_DATABASE = [
     {
         name: "Sonic Youth",
         statement: "Alternative rock band, supported BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Yo La Tengo",
-        statement: "Indie rock band, supports cultural boycott",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Fugazi",
-        statement: "Punk band, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Dead Kennedys",
-        statement: "Punk band, supports Palestinian rights",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Oxbow",
-        statement: "Experimental band, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Jello Biafra",
-        statement: "Punk icon, supports cultural boycott",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Shellac",
-        statement: "Post-hardcore band, supports BDS",
         sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
     },
     {
@@ -1104,31 +1019,6 @@ const ARTISTS_DATABASE = [
         sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
     },
     {
-        name: "Flying Lotus",
-        statement: "Electronic producer, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Thundercat",
-        statement: "Jazz bassist, supports cultural boycott",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Erykah Badu",
-        statement: "Neo-soul artist, supports Palestinian rights",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Questlove",
-        statement: "The Roots drummer, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Black Thought",
-        statement: "The Roots MC, supports cultural boycott",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
         name: "Dead Prez",
         statement: "Hip-hop duo, supports BDS",
         sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
@@ -1155,82 +1045,7 @@ const ARTISTS_DATABASE = [
     },
     {
         name: "Little Simz",
-        statement: "British rapper, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Skepta",
-        statement: "Grime artist, supports Palestinian rights",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Stormzy",
-        statement: "Grime artist, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Dave",
-        statement: "British rapper, supports cultural boycott",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Novelist",
-        statement: "Grime MC, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Loyle Carner",
-        statement: "British rapper, supports Palestinian rights",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Kojey Radical",
-        statement: "British artist, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Ghetts",
-        statement: "Grime artist, supports cultural boycott",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Wiley",
-        statement: "Grime pioneer, supports Palestinian rights",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Dizzee Rascal",
-        statement: "Grime artist, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Kano",
-        statement: "Grime MC and actor, supports cultural boycott",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Giggs",
-        statement: "British rapper, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Wretch 32",
-        statement: "British rapper, supports Palestinian rights",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Tinie Tempah",
-        statement: "British rapper, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Professor Green",
-        statement: "British rapper, supports cultural boycott",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Example",
-        statement: "British rapper, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
+        statement: "Withdrew from Israel's Meteor Festival in 2018 following BDS boycott calls; stated 'I will not be appearing at Meteor Festival'",
+        sources: `<a href="https://www.juancole.com/2018/09/apartheid-palestinians-musicians.html" target="_blank">Juan Cole</a> | <a href="https://bdsmovement.net/meteor" target="_blank">BDS Movement</a>`
     }
 ];

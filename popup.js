@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // View website button
     document.getElementById('viewWebsite').addEventListener('click', function() {
-        chrome.tabs.create({ url: 'https://your-website-url.com' });
+        chrome.tabs.create({ url: 'https://boycott-siren.netlify.app/' });
     });
     
     // Terms link

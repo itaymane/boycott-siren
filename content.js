@@ -9,8 +9,8 @@
         debounceDelay: 500
     };
     
-    const processedElements = new WeakSet();
-    const displayedArtists = new Set();
+    let processedElements = new WeakSet();
+    let displayedArtists = new Set();
     
     // Detect which site we're on
     function getSiteDetector() {
@@ -61,7 +61,79 @@
         if (hostname.includes('songkick')) {
             return detectSongkick;
         }
-        
+        if (hostname.includes('ticketnetwork')) {
+            return detectTicketNetwork;
+        }
+        if (hostname.includes('tixr')) {
+            return detectTixr;
+        }
+        if (hostname.includes('dice.fm')) {
+            return detectDice;
+        }
+        if (hostname.includes('eventim')) {
+            return detectEventim;
+        }
+        if (hostname.includes('showclix')) {
+            return detectShowclix;
+        }
+        if (hostname.includes('universe.com')) {
+            return detectUniverse;
+        }
+        if (hostname.includes('etix')) {
+            return detectEtix;
+        }
+        if (hostname.includes('alttickets')) {
+            return detectAltTickets;
+        }
+        if (hostname.includes('skiddle')) {
+            return detectSkiddle;
+        }
+        if (hostname.includes('theticketfactory')) {
+            return detectTheTicketFactory;
+        }
+        if (hostname.includes('ticketweb')) {
+            return detectTicketWeb;
+        }
+        if (hostname.includes('ticketone')) {
+            return detectTicketOne;
+        }
+        if (hostname.includes('fnac')) {
+            return detectFnac;
+        }
+        if (hostname.includes('admission.com')) {
+            return detectAdmission;
+        }
+        if (hostname.includes('oztix')) {
+            return detectOztix;
+        }
+        if (hostname.includes('trybooking')) {
+            return detectTryBooking;
+        }
+        if (hostname.includes('viagogo')) {
+            return detectViaGogo;
+        }
+        if (hostname.includes('bookmyshow')) {
+            return detectBookMyShow;
+        }
+        if (hostname.includes('youtube.com')) {
+            return detectYouTube;
+        }
+        if (hostname.includes('spotify.com')) {
+            return detectSpotify;
+        }
+        if (hostname.includes('music.apple.com')) {
+            return detectAppleMusic;
+        }
+        if (hostname.includes('netflix.com')) {
+            return detectNetflix;
+        }
+        if (hostname.includes('primevideo.com')) {
+            return detectAmazonPrime;
+        }
+        if (hostname.includes('disneyplus.com')) {
+            return detectDisneyPlus;
+        }
+
         return null;
     }
     
@@ -284,6 +356,350 @@
         return getElementsFromSelectors(selectors);
     }
     
+    // YouTube detection (video pages, channel pages, search results, Music)
+    function detectYouTube() {
+        const selectors = [
+            // Video page: title (usually "Artist - Song Title")
+            'h1.ytd-watch-metadata',
+            'h1 yt-formatted-string',
+            // Video page: channel/artist name below the video
+            '#owner ytd-channel-name a',
+            '#owner-name a',
+            '#upload-info ytd-channel-name a',
+            // Channel page: channel header name
+            '#channel-name yt-formatted-string',
+            '#inner-header-container ytd-channel-name yt-formatted-string',
+            // Search results: channel names
+            'ytd-channel-renderer #text a',
+            // Search results: video titles
+            'ytd-video-renderer h3 a',
+            'ytd-compact-video-renderer h3 a',
+            // YouTube Music
+            'ytmusic-detail-header-renderer h2 yt-formatted-string',
+            'ytmusic-responsive-list-item-renderer .secondary-flex-columns a'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // Spotify detection (artist pages, now-playing bar, track rows)
+    function detectSpotify() {
+        const selectors = [
+            'h1',
+            '[data-testid="entityTitle"]',
+            '[data-testid="artist-link"]',
+            '[data-testid="now-playing-widget"] a',
+            '[data-testid="context-item-link"]',
+            '[class*="artist-name"]',
+            'span[data-encore-id="text"] a',
+            '.encore-text-body-small a'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // Apple Music detection (artist pages, album pages)
+    function detectAppleMusic() {
+        const selectors = [
+            'h1',
+            '.artist-header__title',
+            '.product-creator',
+            '[class*="artist-name"]',
+            '[class*="product-artist"]',
+            '[data-testid="artist-name"]',
+            '.headings__title',
+            '.headings__subtitles a'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // Netflix detection (title pages, browse cards)
+    function detectNetflix() {
+        const selectors = [
+            'h1',
+            '.title-title',
+            '[class*="title-title"]',
+            '[class*="entity-title"]',
+            '[data-uia="title"]',
+            '[data-uia="video-title"]',
+            '.previewModal--player-titleTreatmentWrapper h1',
+            '[class*="TitleCard"] p'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // Amazon Prime Video detection (title pages, cast sections)
+    function detectAmazonPrime() {
+        const selectors = [
+            'h1',
+            '[data-automation-id="title"]',
+            '[class*="DpTitleName"]',
+            '[class*="CastWidget"] a',
+            '[data-testid="title"]',
+            '[class*="actor-name"]',
+            '[class*="cast-name"]',
+            'a[href*="/gp/video/detail/"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // Disney+ detection (title pages, details panel)
+    function detectDisneyPlus() {
+        const selectors = [
+            'h1',
+            '[class*="title__title"]',
+            '[data-testid="title"]',
+            '[class*="hero-title"]',
+            '[class*="StandaloneTitle"]',
+            '[class*="detailsMetadata"] h1',
+            '[class*="entity-title"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // TicketNetwork detection
+    function detectTicketNetwork() {
+        const selectors = [
+            'h1', 'h2',
+            '.event-name',
+            '.performer-name',
+            '[class*="event-title"]',
+            '[class*="performer"]',
+            '[class*="artist"]',
+            'a[href*="/tickets/"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // Tixr detection
+    function detectTixr() {
+        const selectors = [
+            'h1', 'h2',
+            '[class*="artist"]',
+            '[class*="event-name"]',
+            '[class*="event-title"]',
+            '[data-testid*="artist"]',
+            '[data-testid*="event"]',
+            '.lineup-artist'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // DICE detection
+    function detectDice() {
+        const selectors = [
+            'h1', 'h2',
+            '[class*="artist"]',
+            '[class*="event"]',
+            '[class*="lineup"]',
+            '[data-testid="artist-name"]',
+            '[data-testid="event-title"]',
+            '.event-details__title'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // Eventim detection (eventim.com and eventim.de)
+    function detectEventim() {
+        const selectors = [
+            'h1', 'h2',
+            '.stage-title',
+            '.product-title',
+            '.artist-name',
+            '[class*="artist"]',
+            '[class*="event-title"]',
+            '[class*="stage"]',
+            '[itemprop="name"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // Showclix detection
+    function detectShowclix() {
+        const selectors = [
+            'h1', 'h2',
+            '.event-name',
+            '.event-title',
+            '[class*="event"]',
+            '[class*="artist"]',
+            '[class*="performer"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // Universe detection
+    function detectUniverse() {
+        const selectors = [
+            'h1', 'h2',
+            '.event-title',
+            '.organizer-name',
+            '[class*="event-name"]',
+            '[class*="organizer"]',
+            '[data-automation*="event"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // Etix detection
+    function detectEtix() {
+        const selectors = [
+            'h1', 'h2',
+            '.event-name',
+            '.artist-name',
+            '[class*="event"]',
+            '[class*="artist"]',
+            '[class*="performer"]',
+            'a[href*="/event/"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // AltTickets detection
+    function detectAltTickets() {
+        const selectors = [
+            'h1', 'h2',
+            '.event-name',
+            '.artist-name',
+            '[class*="event"]',
+            '[class*="artist"]',
+            'a[href*="/tickets/"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // Skiddle detection
+    function detectSkiddle() {
+        const selectors = [
+            'h1', 'h2',
+            '.artist-name',
+            '.event-name',
+            '[class*="artist"]',
+            '[class*="event-title"]',
+            '.headliner',
+            'a[href*="/whats-on/artist/"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // The Ticket Factory detection
+    function detectTheTicketFactory() {
+        const selectors = [
+            'h1', 'h2',
+            '.event-title',
+            '.event-name',
+            '[class*="event"]',
+            '[class*="artist"]',
+            '[class*="performer"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // TicketWeb detection
+    function detectTicketWeb() {
+        const selectors = [
+            'h1', 'h2',
+            '.event-name',
+            '.artist-name',
+            '[class*="event-title"]',
+            '[class*="artist"]',
+            '[class*="performer"]',
+            'a[href*="/event/"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // TicketOne (Italy) detection
+    function detectTicketOne() {
+        const selectors = [
+            'h1', 'h2',
+            '.event-title',
+            '.artist-name',
+            '[class*="artist"]',
+            '[class*="event"]',
+            '[itemprop="name"]',
+            'a[href*="/artist/"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // Fnac (France) detection
+    function detectFnac() {
+        const selectors = [
+            'h1', 'h2',
+            '.artist-name',
+            '.event-title',
+            '[class*="artist"]',
+            '[class*="spectacle"]',
+            '[class*="concert"]',
+            '[itemprop="name"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // Admission (Canada) detection
+    function detectAdmission() {
+        const selectors = [
+            'h1', 'h2',
+            '.event-name',
+            '.artist-name',
+            '[class*="event"]',
+            '[class*="artist"]',
+            '[class*="performer"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // OzTix (Australia) detection
+    function detectOztix() {
+        const selectors = [
+            'h1', 'h2',
+            '.event-name',
+            '.artist-name',
+            '[class*="event"]',
+            '[class*="artist"]',
+            'a[href*="/event/"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // TryBooking (Australia) detection
+    function detectTryBooking() {
+        const selectors = [
+            'h1', 'h2',
+            '.event-name',
+            '.organiser-name',
+            '[class*="event-title"]',
+            '[class*="organiser"]',
+            '[class*="event"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // Viagogo detection
+    function detectViaGogo() {
+        const selectors = [
+            'h1', 'h2',
+            '[data-testid="performer-name"]',
+            '[data-testid="event-title"]',
+            '[class*="performer"]',
+            '[class*="event-name"]',
+            '[class*="artist"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
+    // BookMyShow detection
+    function detectBookMyShow() {
+        const selectors = [
+            'h1', 'h2',
+            '.artist-name',
+            '.event-name',
+            '[class*="artist"]',
+            '[class*="event-title"]',
+            '[data-testid="event-name"]',
+            'a[href*="/artist/"]'
+        ];
+        return getElementsFromSelectors(selectors);
+    }
+
     // Helper function to get elements from selectors
     function getElementsFromSelectors(selectors) {
         const elements = [];
@@ -447,9 +863,7 @@
             
             <div style="margin-bottom: 20px;">
                 <div style="font-size: 13px; color: #666; margin-bottom: 8px; font-weight: 500;">Sources:</div>
-                ${artist.sources.map(source => `
-                    <div style="font-size: 12px; color: #0047ab; margin-bottom: 4px;">• ${source}</div>
-                `).join('')}
+                <div style="font-size: 12px; color: #0047ab; line-height: 1.8;">${artist.sources}</div>
             </div>
             
             <div style="background: #f8f9fa; padding: 12px; border-radius: 8px; margin-bottom: 20px;">
@@ -573,25 +987,39 @@
     }
     
     // Initialize
+    function resetState() {
+        processedElements = new WeakSet();
+        displayedArtists = new Set();
+    }
+
     function init() {
         console.log('🔵 Boycott Siren - Workaround: Started');
         console.log('🔵 Current URL:', window.location.href);
         console.log('🔵 Artists in database:', ARTISTS_DATABASE.length);
-        
+
         setTimeout(() => {
             console.log('🔵 Running first detection...');
             processElements();
         }, 1000);
-        
+
+        // YouTube fires this event on every SPA navigation (new video, channel, search)
+        if (window.location.hostname.includes('youtube.com')) {
+            document.addEventListener('yt-navigate-finish', () => {
+                console.log('🔵 YouTube navigation detected, resetting state...');
+                resetState();
+                setTimeout(processElements, 1500);
+            });
+        }
+
         const observer = new MutationObserver(() => {
             debounce(processElements, CONFIG.debounceDelay);
         });
-        
+
         observer.observe(document.body, {
             childList: true,
             subtree: true
         });
-        
+
         setInterval(() => {
             console.log('🔵 Periodic check...');
             processElements();
