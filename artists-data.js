@@ -1,5 +1,5 @@
 // Boycott Siren - Artist Database
-// Total: 181 verified artists
+// Total: 178 verified artists
 // Last updated: 2026-04-03
 
 const ARTISTS_DATABASE = [
@@ -30,8 +30,8 @@ const ARTISTS_DATABASE = [
     {
         name: "Tom Morello",
         level: "HIGH",
-        statement: "Rage Against the Machine member, supports Palestinian rights",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
+        statement: "Rage Against the Machine guitarist who signed the 2021 open letter with 600+ musicians explicitly calling on artists to boycott Israel; stated there is 'no room for Anti-Semitism' while condemning 'horrific war crimes in Gaza'",
+        sources: `<a href="https://www.rollingstone.com/music/music-news/rage-against-the-machine-serj-tankian-roger-waters-sign-open-letter-artists-boycott-israel-1175281/" target="_blank">Rolling Stone</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/" target="_blank">Billboard</a> | <a href="https://www.haaretz.com/us-news/2021-05-28/ty-article/.premium/patti-smith-run-the-jewels-among-over-600-artists-calling-to-boycott-israel/0000017f-db96-df9c-a17f-ff9ea4580000" target="_blank">Haaretz</a> | <a href="https://consequence.net/2021/05/rage-against-the-machine-solidarity-palestinians/" target="_blank">Consequence</a> | <a href="https://www.nme.com/news/music/tom-morello-says-theres-no-room-for-anti-semitism-when-criticising-horrific-war-crimes-in-gaza-3537940" target="_blank">NME</a>`
     },
     {
         name: "The Roots",
@@ -42,8 +42,8 @@ const ARTISTS_DATABASE = [
     {
         name: "Lauryn Hill",
         level: "MEDIUM",
-        statement: "Cancelled her May 2015 Tel Aviv concert, stating she could not perform only in Israel without also playing Ramallah; appeared in the 'When I See Them I See Us' BDS solidarity video alongside Omar Barghouti holding a 'Free Political Prisoners' sign",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a> | <a href="https://www.timesofisrael.com/lauryn-hill-cancels-israel-show/" target="_blank">Times of Israel</a>`
+        statement: "Cancelled her May 2015 Tel Aviv concert, stating she could not perform only in Israel without also playing Ramallah; appeared in the 'When I See Them I See Us' BDS solidarity video alongside BDS co-founder Omar Barghouti holding a 'Free Political Prisoners' sign",
+        sources: `<a href="https://www.timesofisrael.com/lauryn-hill-cancels-israel-show/" target="_blank">Times of Israel</a> | <a href="https://www.haaretz.com/2015-05-05/ty-article/lauryn-hill-cancels-israel-concert-citing-inablity-to-perform-in-ramallah-as-well/0000017f-db88-d856-a37f-ffc8a9cb0000" target="_blank">Haaretz</a> | <a href="https://www.rollingstone.com/music/music-news/lauryn-hill-cancels-israel-show-amid-controversy-240622/" target="_blank">Rolling Stone</a> | <a href="https://www.nme.com/news/music/lauryn-hill-5-1207215" target="_blank">NME</a>`
     },
     {
         name: "Peter Gabriel",
@@ -53,15 +53,15 @@ const ARTISTS_DATABASE = [
     },
     {
         name: "Annie Lennox",
-        level: "MEDIUM",
-        statement: "Vocal supporter of Palestinian rights and BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
+        level: "HIGH",
+        statement: "Called for a ceasefire in Gaza at the 2024 Grammy Awards during Sinéad O'Connor tribute; signed open letter to UK PM Keir Starmer calling for action on Gaza; recorded a new version of 'Why?' for the 'Together for Palestine' charity project",
+        sources: `<a href="https://www.rollingstone.com/music/music-news/annie-lennox-calls-for-ceasefire-in-gaza-sinead-oconnor-tribute-grammys-2024-1234960958/" target="_blank">Rolling Stone</a> | <a href="https://www.billboard.com/music/awards/annie-lennox-ceasefire-gaza-2024-grammys-1235598344/" target="_blank">Billboard</a> | <a href="https://www.nme.com/news/music/annie-lennox-ceasefire-palestine-2024-grammys-stevie-wonder-jon-batiste-3582317" target="_blank">NME</a> | <a href="https://variety.com/2024/music/news/palestine-protest-grammys-red-carpet-1235897370/" target="_blank">Variety</a> | <a href="https://www.nme.com/news/music/watch-annie-lennoxs-new-version-of-why-recorded-for-together-for-palestine-3893460" target="_blank">NME (Together for Palestine)</a>`
     },
     {
         name: "Charlotte Church",
-        level: "MEDIUM",
-        statement: "Supports BDS, declined to perform in Israel",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
+        level: "HIGH",
+        statement: "Repeatedly used the chant 'From the River to the Sea, Palestine will be free' at her shows and publicly defended doing so; stated her family received threats over her support for Gaza; among the most outspoken British artists condemning Israeli actions",
+        sources: `<a href="https://www.nme.com/news/music/charlotte-church-defends-use-of-pro-palestinian-river-to-the-sea-chant-at-show-3593172" target="_blank">NME</a> | <a href="https://www.nme.com/news/music/charlotte-church-says-her-family-have-been-threatened-by-some-pretty-scary-people-over-support-of-gaza-3600203" target="_blank">NME (threats)</a>`
     },
     {
         name: "Sam Smith",
@@ -666,8 +666,8 @@ const ARTISTS_DATABASE = [
     {
         name: "Portishead",
         level: "HIGH",
-        statement: "Geoff Barrow has signed open letters explicitly criticising Israeli military actions; the band has been publicly supportive of Palestinian rights with statements specifically naming Israel",
-        sources: `<a href="https://www.aljazeera.com/news/longform/2025/9/25/who-are-the-artists-speaking-out" target="_blank">Al Jazeera</a> | <a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a>`
+        statement: "Joined the cultural boycott of Israel and signed Artists for Palestine UK letters explicitly condemning Israeli military actions; among notable British electronic acts to take a public stance",
+        sources: `<a href="https://consequence.net/2018/05/portishead-join-cultural-boycott-of-israel/" target="_blank">Consequence</a> | <a href="https://www.nme.com/news/music/wolf-alice-shame-portishead-lend-support-artistsforpalestine-2322658" target="_blank">NME</a>`
     },
     {
         name: "PJ Harvey",
@@ -706,12 +706,6 @@ const ARTISTS_DATABASE = [
         sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
     },
     {
-        name: "Sigur Rós",
-        level: "HIGH",
-        statement: "Icelandic band, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
         name: "Propagandhi",
         level: "CRITICAL",
         statement: "Canadian punk band, vocal BDS supporters",
@@ -721,12 +715,6 @@ const ARTISTS_DATABASE = [
         name: "Refused",
         level: "CRITICAL",
         statement: "Swedish hardcore band, supports BDS",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
-    },
-    {
-        name: "Faithless",
-        level: "MEDIUM",
-        statement: "Electronic music group, supports BDS",
         sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia</a>`
     },
     {
@@ -871,12 +859,6 @@ const ARTISTS_DATABASE = [
         name: "John Williams (guitarist)",
         level: "MEDIUM",
         statement: "Classical guitarist, supports cultural boycott",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
-    },
-    {
-        name: "The Pixies",
-        level: "MEDIUM",
-        statement: "Alternative rock band, cancelled Israel show",
         sources: `<a href="https://bdsmovement.net/cultural-boycott" target="_blank">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement" target="_blank">Wikipedia - BDS Supporters</a>`
     },
     {
