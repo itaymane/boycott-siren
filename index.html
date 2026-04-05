@@ -321,14 +321,23 @@
             font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
-        .stance-boycott {
-            background: #ff4444;
+        .level-CRITICAL {
+            background: #cc0000;
             color: white;
         }
-        .stance-critical {
-            background: #ffc107;
-            color: #333;
+        .level-HIGH {
+            background: #e85d00;
+            color: white;
+        }
+        .level-MEDIUM {
+            background: #e6a800;
+            color: white;
+        }
+        .level-LOW {
+            background: #2e8b57;
+            color: white;
         }
         .artist-statement {
             color: #555;
@@ -654,7 +663,7 @@
                             <div class="artist-name">${artist.name}</div>
                             <div class="artist-category">${artist.category}</div>
                         </div>
-                        <div class="stance-badge stance-${artist.stance}">${artist.stance === 'boycott' ? 'BOYCOTTER' : 'CRITICAL'}</div>
+                        <div class="stance-badge level-${artist.level || 'CRITICAL'}">${artist.level || 'CRITICAL'}</div>
                     </div>
                     <div class="artist-statement">${artist.statement}</div>
                     <div class="artist-sources">
