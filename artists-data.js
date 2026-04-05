@@ -1,4 +1,4 @@
-// Boycott Siren - Artist Database
+// ArtSiren - Artist Database
 // Total: 178 verified artists
 // Last updated: 2026-04-03
 

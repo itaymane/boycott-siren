@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Boycott Siren",
+  "name": "ArtSiren",
   "version": "1.0.0",
   "description": "Sound the alarm on boycotting artists. Shows clear notifications when boycotting artists are detected.",
 

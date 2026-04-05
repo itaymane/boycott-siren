@@ -1,4 +1,4 @@
-// Boycott Siren - Workaround Version
+// ArtSiren - Workaround Version
 // Uses floating overlay that can't be hidden by page CSS
 
 (function() {
@@ -993,7 +993,7 @@
     }
 
     function init() {
-        console.log('🔵 Boycott Siren - Workaround: Started');
+        console.log('🔵 ArtSiren - Workaround: Started');
         console.log('🔵 Current URL:', window.location.href);
         console.log('🔵 Artists in database:', ARTISTS_DATABASE.length);
 
