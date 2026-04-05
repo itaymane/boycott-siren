@@ -232,30 +232,55 @@
         }
         .filters {
             display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 0.75rem;
+            align-items: center;
             margin-bottom: 3rem;
         }
+        .filter-group {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .filter-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-right: 0.25rem;
+        }
         .filter-btn {
-            padding: 0.75rem 1.5rem;
-            border: 2px solid #e0e0e0;
-            background: white;
+            padding: 0.5rem 1.1rem;
+            border: 2px solid rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.15);
+            color: white;
             border-radius: 30px;
             cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 500;
-            font-size: 0.95rem;
+            transition: all 0.25s;
+            font-weight: 600;
+            font-size: 0.88rem;
+            backdrop-filter: blur(4px);
         }
         .filter-btn:hover {
-            border-color: #0047ab;
-            color: #0047ab;
+            border-color: white;
+            background: rgba(255,255,255,0.25);
         }
         .filter-btn.active {
-            background: linear-gradient(135deg, #0047ab, #4a90e2);
-            color: white;
-            border-color: #0047ab;
+            background: white;
+            color: #0047ab;
+            border-color: white;
         }
+        .level-btn-CRITICAL.active { background: #cc0000; color: white; border-color: #cc0000; }
+        .level-btn-HIGH.active { background: #e85d00; color: white; border-color: #e85d00; }
+        .level-btn-MEDIUM.active { background: #c48800; color: white; border-color: #c48800; }
+        .level-btn-LOW.active { background: #2e8b57; color: white; border-color: #2e8b57; }
+        .level-btn-CRITICAL:hover { border-color: #cc0000; color: #cc0000; background: rgba(204,0,0,0.1); }
+        .level-btn-HIGH:hover { border-color: #e85d00; color: #e85d00; background: rgba(232,93,0,0.1); }
+        .level-btn-MEDIUM:hover { border-color: #c48800; color: #c48800; background: rgba(196,136,0,0.1); }
+        .level-btn-LOW:hover { border-color: #2e8b57; color: #2e8b57; background: rgba(46,139,87,0.1); }
         .stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -411,10 +436,21 @@
             </div>
             
             <div class="filters">
-                <button class="filter-btn active" data-filter="all">All Artists</button>
-                <button class="filter-btn" data-filter="musician">Musicians</button>
-                <button class="filter-btn" data-filter="actor">Actors</button>
-                <button class="filter-btn" data-filter="director">Directors</button>
+                <div class="filter-group">
+                    <span class="filter-label">Category:</span>
+                    <button class="filter-btn category-btn active" data-filter="all">All</button>
+                    <button class="filter-btn category-btn" data-filter="musician">Musicians</button>
+                    <button class="filter-btn category-btn" data-filter="actor">Actors</button>
+                    <button class="filter-btn category-btn" data-filter="director">Directors</button>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Severity:</span>
+                    <button class="filter-btn level-btn active" data-level="all">All</button>
+                    <button class="filter-btn level-btn level-btn-CRITICAL" data-level="CRITICAL">● Critical</button>
+                    <button class="filter-btn level-btn level-btn-HIGH" data-level="HIGH">● High</button>
+                    <button class="filter-btn level-btn level-btn-MEDIUM" data-level="MEDIUM">● Medium</button>
+                    <button class="filter-btn level-btn level-btn-LOW" data-level="LOW">● Low</button>
+                </div>
             </div>
         </div>
         
@@ -639,19 +675,19 @@
     {id: 178, name: "Little Simz", category: "musician", stance: "BOYCOTTER", level: "CRITICAL", statement: "Withdrew from Israel's Meteor Festival in 2018 following BDS boycott calls; stated 'I will not be appearing at Meteor Festival'", sources: [{name: "Juan Cole", url: "https://www.juancole.com/2018/09/apartheid-palestinians-musicians.html"}, {name: "BDS Movement", url: "https://bdsmovement.net/meteor"}]},
 ];
         
-        let currentFilter = 'all';
-        
+        let categoryFilter = 'all';
+        let levelFilter = 'all';
+
         function renderArtists() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const grid = document.getElementById('artistsGrid');
-            
+
             let filtered = ARTISTS_DATABASE.filter(artist => {
-                const matchesFilter = currentFilter === 'all' || 
-                                    artist.stance === currentFilter || 
-                                    artist.category === currentFilter;
+                const matchesCategory = categoryFilter === 'all' || artist.category === categoryFilter;
+                const matchesLevel = levelFilter === 'all' || artist.level === levelFilter;
                 const matchesSearch = artist.name.toLowerCase().includes(searchTerm) ||
                                     (artist.country && artist.country.toLowerCase().includes(searchTerm));
-                return matchesFilter && matchesSearch;
+                return matchesCategory && matchesLevel && matchesSearch;
             });
             
             // Stats are now static (no need to update)
@@ -673,11 +709,20 @@
             `).join('');
         }
 
-        document.querySelectorAll('.filter-btn').forEach(btn => {
+        document.querySelectorAll('.category-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
                 e.target.classList.add('active');
-                currentFilter = e.target.dataset.filter;
+                categoryFilter = e.target.dataset.filter;
+                renderArtists();
+            });
+        });
+
+        document.querySelectorAll('.level-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.level-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                levelFilter = e.target.dataset.level;
                 renderArtists();
             });
         });
@@ -716,7 +761,7 @@
                 dropdown.querySelectorAll('.autocomplete-item').forEach((el, i) => {
                     el.addEventListener('mousedown', (e) => {
                         e.preventDefault();
-                        selectItem(matches[i].name);
+                        selectItem(matches[i]);
                     });
                 });
                 dropdown.classList.add('visible');
@@ -727,10 +772,10 @@
                 activeIndex = -1;
             }
 
-            function selectItem(name) {
-                input.value = name;
+            function selectItem(artist) {
+                input.value = artist.name;
                 hideDropdown();
-                renderArtists();
+                showArtistDetails(artist.id);
             }
 
             function updateActiveItem() {
@@ -760,7 +805,7 @@
                 } else if (e.key === 'Enter' && activeIndex >= 0) {
                     e.preventDefault();
                     const matches = getMatches(this.value.trim());
-                    if (matches[activeIndex]) selectItem(matches[activeIndex].name);
+                    if (matches[activeIndex]) selectItem(matches[activeIndex]);
                 } else if (e.key === 'Escape') {
                     hideDropdown();
                 }
@@ -874,9 +919,9 @@
         }
         
         // Add filter tracking
-        document.querySelectorAll('.filter-btn').forEach(btn => {
+        document.querySelectorAll('.category-btn, .level-btn').forEach(btn => {
             btn.addEventListener('click', function() {
-                trackFilterClick(this.dataset.filter);
+                trackFilterClick(this.dataset.filter || this.dataset.level);
             });
         });
         
