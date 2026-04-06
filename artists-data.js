@@ -1072,12 +1072,6 @@ const ARTISTS_DATABASE = [
         sources: `<a href="https://www.juancole.com/2018/09/apartheid-palestinians-musicians.html" target="_blank">Juan Cole</a> | <a href="https://bdsmovement.net/meteor" target="_blank">BDS Movement</a>`
     },
     {
-        name: "M.I.A.",
-        level: "CRITICAL",
-        statement: "British-Sri Lankan rapper and activist who has been a vocal BDS supporter for over a decade; participates in the No Music for Genocide campaign and has used her platform to call for Palestinian liberation",
-        sources: `<a href="https://www.nomusicforgenocide.com/">No Music for Genocide</a>, <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
-    },
-    {
         name: "Macklemore",
         level: "CRITICAL",
         statement: "Participated in the No Music for Genocide campaign (2024–25), geo-blocking his music from Israeli streaming platforms; performed at pro-Palestinian rallies and publicly called for an end to US military aid to Israel",
@@ -1451,12 +1445,6 @@ const ARTISTS_DATABASE = [
         sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
     },
     {
-        name: "serpentwithfeet",
-        level: "MEDIUM",
-        statement: "Baltimore experimental artist who signed an open musicians letter calling for ceasefire in Gaza and end to US military support for Israel (2023-24)",
-        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
-    },
-    {
         name: "Moses Boyd",
         level: "MEDIUM",
         statement: "British jazz drummer and producer who signed a UK music industry open letter calling for ceasefire in Gaza and end to UK arms exports to Israel (2023-24)",
@@ -1481,40 +1469,16 @@ const ARTISTS_DATABASE = [
         sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
     },
     {
-        name: "Mika",
-        level: "MEDIUM",
-        statement: "Lebanese-British pop artist who has spoken publicly about the humanitarian situation in Lebanon and Palestine; signed letters calling for ceasefire and end to regional military escalation",
-        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
-    },
-    {
-        name: "Bon Iver",
-        level: "MEDIUM",
-        statement: "Justin Vernon signed an open musicians letter calling for ceasefire in Gaza and end to US military aid to Israel (2023-24)",
-        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
-    },
-    {
         name: "Michael Stipe",
         level: "MEDIUM",
         statement: "R.E.M. frontman who has signed open letters calling for ceasefire in Gaza and end to US military support for Israeli operations; long-standing human rights activist",
         sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
     },
     {
-        name: "The Specials",
-        level: "HIGH",
-        statement: "British ska legends who have publicly supported Palestinian rights and BDS; Terry Hall and the band signed letters calling for cultural boycott and spoke at pro-Palestinian events",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.nme.com/">NME</a>`
-    },
-    {
         name: "Maxïmo Park",
         level: "MEDIUM",
         statement: "British indie band who signed an open letter calling for ceasefire in Gaza and end to UK arms exports to Israel (2023-24)",
         sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
-    },
-    {
-        name: "Akira the Don",
-        level: "MEDIUM",
-        statement: "British multimedia artist who has publicly supported Palestinian rights and signed letters in support of cultural boycott",
-        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.nme.com/">NME</a>`
     }
 
 ];
