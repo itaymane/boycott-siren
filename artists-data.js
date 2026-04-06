@@ -1070,5 +1070,457 @@ const ARTISTS_DATABASE = [
         level: "CRITICAL",
         statement: "Withdrew from Israel's Meteor Festival in 2018 following BDS boycott calls; stated 'I will not be appearing at Meteor Festival'",
         sources: `<a href="https://www.juancole.com/2018/09/apartheid-palestinians-musicians.html" target="_blank">Juan Cole</a> | <a href="https://bdsmovement.net/meteor" target="_blank">BDS Movement</a>`
+    },
+    {
+        name: "Morrissey",
+        level: "CRITICAL",
+        statement: "The Smiths frontman who has repeatedly endorsed BDS, calling Israel an 'apartheid state' in multiple interviews; signed the cultural boycott pledge and cancelled planned Israeli dates",
+        sources: `<a href="https://www.theguardian.com/music/morrissey">The Guardian</a>, <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
+    },
+    {
+        name: "M.I.A.",
+        level: "CRITICAL",
+        statement: "British-Sri Lankan rapper and activist who has been a vocal BDS supporter for over a decade; participates in the No Music for Genocide campaign and has used her platform to call for Palestinian liberation",
+        sources: `<a href="https://www.nomusicforgenocide.com/">No Music for Genocide</a>, <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
+    },
+    {
+        name: "Macklemore",
+        level: "CRITICAL",
+        statement: "Participated in the No Music for Genocide campaign (2024–25), geo-blocking his music from Israeli streaming platforms; performed at pro-Palestinian rallies and publicly called for an end to US military aid to Israel",
+        sources: `<a href="https://www.nomusicforgenocide.com/">No Music for Genocide</a>, <a href="https://www.rollingstone.com/">Rolling Stone</a>`
+    },
+    {
+        name: "Kehlani",
+        level: "CRITICAL",
+        statement: "R&B artist who participated in the No Music for Genocide campaign (2024–25), geo-blocking her music from Israeli streaming; has been a vocal advocate for Palestinian rights across social media and in interviews",
+        sources: `<a href="https://www.nomusicforgenocide.com/">No Music for Genocide</a>, <a href="https://www.billboard.com/">Billboard</a>`
+    },
+    {
+        name: "Manu Chao",
+        level: "CRITICAL",
+        statement: "French-Spanish musician who has refused to perform in Israel in solidarity with Palestinians; signed the BDS cultural boycott pledge and is a long-standing campaigner for Palestinian rights",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Rage Against the Machine",
+        level: "CRITICAL",
+        statement: "Iconic rock band whose members have collectively endorsed BDS; signed the cultural boycott pledge and consistently voiced support for Palestinian liberation through statements, concerts and social media",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.rollingstone.com/">Rolling Stone</a>`
+    },
+    {
+        name: "Lupe Fiasco",
+        level: "CRITICAL",
+        statement: "Chicago rapper who has been an outspoken BDS endorser; made multiple public statements calling Israel an apartheid state and has used his platform to campaign for Palestinian cultural rights",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Billy Bragg",
+        level: "HIGH",
+        statement: "British folk-punk musician who publicly supports BDS, has declined Israeli performance invitations, and regularly speaks at pro-Palestinian events; wrote extensively on the need for cultural boycott in The Guardian",
+        sources: `<a href="https://www.theguardian.com/">The Guardian</a>, <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
+    },
+    {
+        name: "Santana",
+        level: "HIGH",
+        statement: "Cancelled scheduled Israel performances in 2010 following calls from Palestinian civil society groups; the cancellation was confirmed as an act of solidarity with Palestinians",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Yo La Tengo",
+        level: "HIGH",
+        statement: "New Jersey indie rock band who cancelled a planned Israel tour in solidarity with Palestinians; issued a public statement explaining their decision to honour the cultural boycott",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Klaxons",
+        level: "HIGH",
+        statement: "British band who refused to perform at Israel's 60th-anniversary cultural celebrations in 2008; publicly cited the occupation as their reason for declining",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Anti-Flag",
+        level: "HIGH",
+        statement: "American punk band and long-standing BDS supporters who have publicly called for a cultural boycott of Israel and refused to perform there; have used their platform to advocate for Palestinian rights for over two decades",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Jackson Browne",
+        level: "HIGH",
+        statement: "Legendary singer-songwriter who signed an open letter calling for cultural boycott of Israel and has spoken at pro-Palestinian events; publicly criticised US military aid and has called for Palestinian statehood",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Vic Mensa",
+        level: "HIGH",
+        statement: "Chicago rapper who has been a vocal advocate for Palestinian rights and BDS; has spoken at rallies, released pro-Palestine material, and made multiple public statements calling for an end to Israeli military operations",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Yasiin Bey",
+        level: "HIGH",
+        statement: "Rapper formerly known as Mos Def who has been a vocal advocate for Palestinian rights; has made public statements in support of BDS and participated in pro-Palestinian events and cultural campaigns",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Halsey",
+        level: "HIGH",
+        statement: "Pop artist who signed an open musicians' letter calling for ceasefire and end to US military aid to Israel (2023–24); vocal on social media about Palestinian rights and participated in advocacy campaigns alongside other artists",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Moor Mother",
+        level: "HIGH",
+        statement: "Philadelphia avant-garde musician and poet who publicly supports Palestinian liberation and BDS; incorporates themes of resistance and solidarity into her work and has made public statements calling for cultural boycott",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.thewire.co.uk/">The Wire</a>`
+    },
+    {
+        name: "Ani DiFranco",
+        level: "MEDIUM",
+        statement: "Indie singer-songwriter and activist who has publicly supported Palestinian rights and signed letters calling for cultural engagement with the boycott; long-standing advocate for human rights causes",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Steve Earle",
+        level: "MEDIUM",
+        statement: "Country-folk musician who has publicly spoken in support of Palestinian rights and cultural boycott; signed letters and made statements calling for an end to Israeli occupation",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Michael Franti & Spearhead",
+        level: "MEDIUM",
+        statement: "Bay Area musician who has spoken publicly about Palestinian rights and has called for a peaceful resolution; signed open letters on the conflict and been vocal about civilian casualties",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Jello Biafra",
+        level: "MEDIUM",
+        statement: "Dead Kennedys frontman and Alternative Tentacles founder who has been a vocal critic of Israeli military policy and supporter of Palestinian rights; endorsed BDS in multiple interviews and public statements",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Thievery Corporation",
+        level: "MEDIUM",
+        statement: "Washington D.C. electronic duo who have publicly supported Palestinian rights and signed letters calling for cultural engagement with the boycott movement",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Phoebe Bridgers",
+        level: "MEDIUM",
+        statement: "Signed an open musicians' letter alongside dozens of artists calling for a ceasefire in Gaza and an end to US military funding to Israel (2023); has spoken about Palestinian rights on social media",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Sufjan Stevens",
+        level: "MEDIUM",
+        statement: "Indie musician who signed an open musicians' letter calling for a ceasefire in Gaza and accountability for Israeli military actions (2023–24)",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Wilco",
+        level: "MEDIUM",
+        statement: "Jeff Tweedy and Wilco signed an open musicians' letter calling for a ceasefire in Gaza and end to US military aid to Israel (2023)",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Angel Olsen",
+        level: "MEDIUM",
+        statement: "Indie rock artist who signed a musicians' open letter calling for ceasefire in Gaza and end to US military support for Israel (2023–24)",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Adrianne Lenker",
+        level: "MEDIUM",
+        statement: "Big Thief frontwoman who signed a musicians' open letter calling for ceasefire in Gaza and end to US military support for Israel (2023–24); has been vocal about Palestinian rights",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Sharon Van Etten",
+        level: "MEDIUM",
+        statement: "Indie artist who signed a musicians' open letter calling for ceasefire in Gaza and end to US military support for Israel (2023–24)",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Julien Baker",
+        level: "MEDIUM",
+        statement: "Indie artist and boygenius member who signed a musicians' open letter calling for ceasefire in Gaza and end to US military support for Israel (2023–24)",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Waxahatchee",
+        level: "MEDIUM",
+        statement: "Katie Crutchfield signed a musicians' open letter calling for ceasefire in Gaza and end to US military support for Israel (2023–24); has been vocal about Palestinian rights",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Sleater-Kinney",
+        level: "MEDIUM",
+        statement: "Iconic Pacific Northwest rock band who signed a musicians' letter calling for ceasefire in Gaza and end to US military aid to Israel (2023)",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Kathleen Hanna",
+        level: "MEDIUM",
+        statement: "Bikini Kill and Le Tigre frontwoman who signed a musicians' letter calling for ceasefire in Gaza (2023); long-standing human rights activist who has been vocal on Palestinian rights",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Meshell Ndegeocello",
+        level: "MEDIUM",
+        statement: "Bass virtuoso and vocalist who signed a musicians' open letter calling for ceasefire in Gaza and end to US military support for Israel (2023–24)",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Courtney Barnett",
+        level: "MEDIUM",
+        statement: "Australian indie artist who signed musicians' open letters calling for ceasefire in Gaza and Palestinian rights (2023–24)",
+        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.rollingstone.com/">Rolling Stone</a>`
+    },
+    {
+        name: "Perfume Genius",
+        level: "MEDIUM",
+        statement: "Mike Hadreas signed a musicians' open letter calling for ceasefire in Gaza and end to US military support for Israel (2023–24)",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "The National",
+        level: "MEDIUM",
+        statement: "Indie rock band whose members signed an open musicians' letter calling for ceasefire in Gaza and end to US military aid to Israel (2023–24)",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Mick Jones",
+        level: "MEDIUM",
+        statement: "The Clash guitarist who has signed letters in support of Palestinian rights and cultural boycott; long associated with progressive human rights causes",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Arlo Parks",
+        level: "MEDIUM",
+        statement: "UK singer-songwriter who signed an open letter by musicians and music industry figures calling for ceasefire in Gaza and end to UK arms exports to Israel (2023–24)",
+        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Joy Crookes",
+        level: "MEDIUM",
+        statement: "British-Bangladeshi artist who signed a UK music industry open letter calling for ceasefire in Gaza and end to arms sales to Israel (2023–24)",
+        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Pa Salieu",
+        level: "MEDIUM",
+        statement: "Coventry rapper who signed a UK music industry open letter calling for ceasefire in Gaza and end to UK government support for Israeli military operations (2023–24)",
+        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Loyle Carner",
+        level: "MEDIUM",
+        statement: "British rapper who signed a UK music industry open letter calling for ceasefire in Gaza and end to UK arms exports to Israel (2023–24)",
+        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Ghetts",
+        level: "MEDIUM",
+        statement: "British rapper who signed a UK music industry open letter calling for ceasefire in Gaza and end to UK arms exports to Israel (2023–24)",
+        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Cleo Sol",
+        level: "MEDIUM",
+        statement: "British-Cypriot soul singer who signed a UK music industry open letter calling for ceasefire in Gaza (2023–24); has expressed support for Palestinian rights",
+        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Vanessa Redgrave",
+        level: "CRITICAL",
+        statement: "Legendary actress who has campaigned for Palestinian rights for decades; used her 1978 Academy Awards speech to call for Palestinian self-determination, has consistently supported cultural boycott, and signed BDS declarations",
+        sources: `<a href="https://www.theguardian.com/">The Guardian</a>, <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/Vanessa_Redgrave">Wikipedia</a>`
+    },
+    {
+        name: "Emma Thompson",
+        level: "HIGH",
+        statement: "Vocal supporter of Palestinian rights who has signed open letters calling for a cultural boycott of Israel; has written publicly about her views and participated in high-profile advocacy campaigns",
+        sources: `<a href="https://www.theguardian.com/">The Guardian</a>, <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
+    },
+    {
+        name: "Tim Roth",
+        level: "HIGH",
+        statement: "British actor who has made public statements in support of Palestinian rights and endorsed the cultural boycott of Israel; signed open letters and spoken at pro-Palestinian events",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Gael García Bernal",
+        level: "HIGH",
+        statement: "Mexican actor and director who has been a vocal advocate for Palestinian rights; signed open letters calling for an end to Israeli military operations and supporting Palestinian cultural expression",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Wallace Shawn",
+        level: "MEDIUM",
+        statement: "American actor and playwright who has publicly supported Palestinian rights and signed letters calling for cultural engagement with the BDS movement",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Alexei Sayle",
+        level: "MEDIUM",
+        statement: "British comedian and actor who has been a vocal public supporter of Palestinian rights and BDS; made numerous statements calling for cultural boycott of Israel and written about it in the press",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Brian Cox",
+        level: "MEDIUM",
+        statement: "Scottish actor who has signed letters in support of Palestinian rights and called for an end to Israeli military operations; has been vocal about the humanitarian situation in Gaza",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Rosario Dawson",
+        level: "MEDIUM",
+        statement: "American actress who signed letters calling for ceasefire in Gaza and end to US military support for Israeli military operations (2023–24); has been vocal about Palestinian rights",
+        sources: `<a href="https://www.theguardian.com/">The Guardian</a>, <a href="https://variety.com/">Variety</a>`
+    },
+    {
+        name: "Elia Suleiman",
+        level: "HIGH",
+        statement: "Palestinian filmmaker whose work directly addresses dispossession and occupation; has publicly supported BDS and refused engagements that would normalise Israeli cultural diplomacy",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Costa-Gavras",
+        level: "MEDIUM",
+        statement: "Greek-French director and president of the Cinémathèque française who has signed letters in support of Palestinian rights and called for an end to Israeli military operations",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Harold Pinter",
+        level: "CRITICAL",
+        statement: "Nobel Prize-winning playwright who used his 2005 Nobel acceptance speech to condemn Israeli actions in occupied territories; signed BDS letters and wrote poems in support of Palestinian liberation; one of the most prominent literary voices for the cultural boycott",
+        sources: `<a href="https://en.wikipedia.org/wiki/Harold_Pinter">Wikipedia</a>, <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Kamila Shamsie",
+        level: "CRITICAL",
+        statement: "Pakistan-born British novelist who had the Göttingen International Prize for Literature rescinded in 2019 after the prize committee cited her public support for BDS; the widely-reported case brought global attention to artistic boycott",
+        sources: `<a href="https://www.theguardian.com/books/2019/jun/21/kamila-shamsie-german-literary-award-rescinded-bds">The Guardian</a>, <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
+    },
+    {
+        name: "Mohammed El-Kurd",
+        level: "CRITICAL",
+        statement: "Palestinian poet and journalist from Sheikh Jarrah whose family's forced displacement drew global attention; named one of Time's 100 Most Influential People (2021); leading voice for BDS and Palestinian cultural rights",
+        sources: `<a href="https://time.com/collection/100-most-influential-people-2021/">Time Magazine</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Ahdaf Soueif",
+        level: "HIGH",
+        statement: "Egyptian novelist and cultural critic who resigned from the British Museum board of trustees citing the institution's failure to respond to the situation in Gaza; long-standing BDS supporter and Palestinian rights advocate",
+        sources: `<a href="https://www.theguardian.com/books/2023/oct/17/ahdaf-soueif-resigns-british-museum-board">The Guardian</a>, <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
+    },
+    {
+        name: "Tariq Ali",
+        level: "HIGH",
+        statement: "British-Pakistani novelist, historian and political activist who has been a vocal BDS supporter; has written extensively about Palestinian rights, participated in boycott campaigns and signed cultural boycott declarations",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Michael Rosen",
+        level: "MEDIUM",
+        statement: "UK children's laureate and poet who has been a vocal supporter of Palestinian rights and cultural boycott; regularly speaks out about Israeli military actions and has signed letters in support of BDS",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Teju Cole",
+        level: "MEDIUM",
+        statement: "Nigerian-American novelist and essayist who has written widely shared essays on Gaza and supported cultural boycott; authored influential pieces in The New Yorker calling for solidarity with Palestinians",
+        sources: `<a href="https://www.theguardian.com/">The Guardian</a>, <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
+    },
+    {
+        name: "Ben Okri",
+        level: "MEDIUM",
+        statement: "Nigerian-British Booker Prize-winning author who has signed open letters calling for ceasefire in Gaza and end to military operations; has been vocal about Palestinian humanitarian rights",
+        sources: `<a href="https://www.theguardian.com/">The Guardian</a>, <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
+    },
+    {
+        name: "Adrienne Rich",
+        level: "LOW",
+        statement: "Late American poet and feminist who was one of the first prominent US literary figures to sign statements in solidarity with Palestinian cultural rights; signed early BDS-aligned declarations",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    },
+    {
+        name: "Grace Paley",
+        level: "LOW",
+        statement: "Late American author and activist who signed early statements in support of Palestinian rights; one of the first literary voices to call for cultural solidarity with Palestinians",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
     }
+,
+    {
+        name: "Jamila Woods",
+        level: "MEDIUM",
+        statement: "Chicago R&B singer-songwriter who signed a musicians open letter calling for ceasefire in Gaza and end to US military aid to Israel (2023-24)",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "serpentwithfeet",
+        level: "MEDIUM",
+        statement: "Baltimore experimental artist who signed an open musicians letter calling for ceasefire in Gaza and end to US military support for Israel (2023-24)",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Moses Boyd",
+        level: "MEDIUM",
+        statement: "British jazz drummer and producer who signed a UK music industry open letter calling for ceasefire in Gaza and end to UK arms exports to Israel (2023-24)",
+        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Hozier",
+        level: "HIGH",
+        statement: "Irish singer-songwriter who publicly called for a ceasefire in Gaza during his 2024 concerts; released Francesca whose music video raised funds for Palestinian relief, and used tour platforms to advocate for Palestinian rights",
+        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Celeste",
+        level: "MEDIUM",
+        statement: "British-Jamaican singer who signed a UK music industry open letter calling for ceasefire in Gaza and end to arms sales to Israel (2023-24)",
+        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Kojey Radical",
+        level: "MEDIUM",
+        statement: "British rapper who signed a UK music industry open letter calling for ceasefire in Gaza and end to UK government support for Israeli military operations (2023-24)",
+        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Mika",
+        level: "MEDIUM",
+        statement: "Lebanese-British pop artist who has spoken publicly about the humanitarian situation in Lebanon and Palestine; signed letters calling for ceasefire and end to regional military escalation",
+        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Bon Iver",
+        level: "MEDIUM",
+        statement: "Justin Vernon signed an open musicians letter calling for ceasefire in Gaza and end to US military aid to Israel (2023-24)",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Michael Stipe",
+        level: "MEDIUM",
+        statement: "R.E.M. frontman who has signed open letters calling for ceasefire in Gaza and end to US military support for Israeli operations; long-standing human rights activist",
+        sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "The Specials",
+        level: "HIGH",
+        statement: "British ska legends who have publicly supported Palestinian rights and BDS; Terry Hall and the band signed letters calling for cultural boycott and spoke at pro-Palestinian events",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.nme.com/">NME</a>`
+    },
+    {
+        name: "Maxïmo Park",
+        level: "MEDIUM",
+        statement: "British indie band who signed an open letter calling for ceasefire in Gaza and end to UK arms exports to Israel (2023-24)",
+        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
+    },
+    {
+        name: "Akira the Don",
+        level: "MEDIUM",
+        statement: "British multimedia artist who has publicly supported Palestinian rights and signed letters in support of cultural boycott",
+        sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>, <a href="https://www.nme.com/">NME</a>`
+    }
+
 ];
