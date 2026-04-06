@@ -1072,12 +1072,6 @@ const ARTISTS_DATABASE = [
         sources: `<a href="https://www.juancole.com/2018/09/apartheid-palestinians-musicians.html" target="_blank">Juan Cole</a> | <a href="https://bdsmovement.net/meteor" target="_blank">BDS Movement</a>`
     },
     {
-        name: "Morrissey",
-        level: "CRITICAL",
-        statement: "The Smiths frontman who has repeatedly endorsed BDS, calling Israel an 'apartheid state' in multiple interviews; signed the cultural boycott pledge and cancelled planned Israeli dates",
-        sources: `<a href="https://www.theguardian.com/music/morrissey">The Guardian</a>, <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
-    },
-    {
         name: "M.I.A.",
         level: "CRITICAL",
         statement: "British-Sri Lankan rapper and activist who has been a vocal BDS supporter for over a decade; participates in the No Music for Genocide campaign and has used her platform to call for Palestinian liberation",
