@@ -1473,12 +1473,6 @@ const ARTISTS_DATABASE = [
         level: "MEDIUM",
         statement: "R.E.M. frontman who has signed open letters calling for ceasefire in Gaza and end to US military support for Israeli operations; long-standing human rights activist",
         sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>, <a href="https://www.nme.com/">NME</a>`
-    },
-    {
-        name: "Maxïmo Park",
-        level: "MEDIUM",
-        statement: "British indie band who signed an open letter calling for ceasefire in Gaza and end to UK arms exports to Israel (2023-24)",
-        sources: `<a href="https://www.nme.com/">NME</a>, <a href="https://www.theguardian.com/">The Guardian</a>`
     }
 
 ];
