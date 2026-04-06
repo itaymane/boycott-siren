@@ -461,19 +461,19 @@
         
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-number">196</div>
+                <div class="stat-number" id="statMusicians">196</div>
                 <div class="stat-label">Musicians</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">33</div>
+                <div class="stat-number" id="statActors">33</div>
                 <div class="stat-label">Actors</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">11</div>
+                <div class="stat-number" id="statDirectors">11</div>
                 <div class="stat-label">Directors</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">12</div>
+                <div class="stat-number" id="statOther">12</div>
                 <div class="stat-label">Writers & Activists</div>
             </div>
         </div>
@@ -695,8 +695,11 @@
                 return matchesCategory && matchesLevel && matchesSearch;
             });
             
-            // Stats are now static (no need to update)
-            
+            document.getElementById('statMusicians').textContent = filtered.filter(a => a.category === 'musician').length;
+            document.getElementById('statActors').textContent = filtered.filter(a => a.category === 'actor').length;
+            document.getElementById('statDirectors').textContent = filtered.filter(a => a.category === 'director').length;
+            document.getElementById('statOther').textContent = filtered.filter(a => a.category !== 'musician' && a.category !== 'actor' && a.category !== 'director').length;
+
             grid.innerHTML = filtered.map(artist => `
                 <div class="artist-card" onclick="showArtistDetails(${artist.id})" style="cursor: pointer;">
                     <div class="artist-header">
