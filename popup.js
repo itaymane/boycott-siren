@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // View website button
     document.getElementById('viewWebsite').addEventListener('click', function() {
-        chrome.tabs.create({ url: 'https://boycott-siren.netlify.app/' });
+        chrome.tabs.create({ url: 'https://artsiren.co/' });
     });
     
     // Terms link

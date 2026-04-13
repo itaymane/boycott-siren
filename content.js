@@ -804,12 +804,10 @@
         // Details button - open website
         overlay.querySelector('.boycott-details-btn').addEventListener('click', () => {
             const artistName = encodeURIComponent(artist.name);
-            window.open(`https://boycott-siren.netlify.app/?artist=${artistName}`, '_blank');
+            window.open(`https://artsiren.co/?artist=${artistName}`, '_blank');
         });
         
         // NO AUTO-HIDE - stays until user closes it manually
-        
-        console.log('🚨 FLOATING ALERT CREATED FOR:', artist.name);
     }
     
     // Show detailed modal
