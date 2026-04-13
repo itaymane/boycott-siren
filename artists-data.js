@@ -1,5 +1,5 @@
 // ArtSiren - Artist Database
-// Total: 178 verified artists
+// Total: 245 verified artists
 // Last updated: 2026-04-03
 
 const ARTISTS_DATABASE = [

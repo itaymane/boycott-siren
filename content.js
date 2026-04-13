@@ -833,8 +833,8 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         `;
         
-        const stanceColor = artist.stance === 'boycott' ? '#ff8c42' : '#ffc107';
-        const stanceLabel = artist.stance === 'boycott' ? 'Boycott' : 'Critical';
+        const stanceColor = '#ff4444';
+        const stanceLabel = 'BOYCOTTER';
         
         const content = document.createElement('div');
         content.style.cssText = `
@@ -945,38 +945,25 @@
     // Process elements
     function processElements() {
         const detector = getSiteDetector();
-        if (!detector) {
-            console.log('🔵 No detector found for this site');
-            return;
-        }
-        
+        if (!detector) return;
+
         const elements = detector();
-        console.log('🔵 Workaround: Found', elements.length, 'elements to check');
-        
-        let matchCount = 0;
+
         elements.forEach(element => {
             const text = element.textContent;
             const artist = findMatchingArtist(text);
-            
+
             if (artist && !processedElements.has(element)) {
-                console.log('🔵 MATCH FOUND:', artist.name, 'in text:', text.substring(0, 50));
-                
-                // Show floating alert (only once per artist)
                 createFloatingAlert(artist);
-                
-                // Add small icon to this element
+
                 if (!element.querySelector('.boycott-small-icon')) {
                     const icon = createSmallIcon(artist);
                     element.appendChild(icon);
-                    console.log('📌 Added small icon to element');
                 }
-                
+
                 processedElements.add(element);
-                matchCount++;
             }
         });
-        
-        console.log('🔵 Total matches found:', matchCount);
     }
     
     // Debounce
@@ -993,19 +980,11 @@
     }
 
     function init() {
-        console.log('🔵 ArtSiren - Workaround: Started');
-        console.log('🔵 Current URL:', window.location.href);
-        console.log('🔵 Artists in database:', ARTISTS_DATABASE.length);
-
-        setTimeout(() => {
-            console.log('🔵 Running first detection...');
-            processElements();
-        }, 1000);
+        setTimeout(processElements, 1000);
 
         // YouTube fires this event on every SPA navigation (new video, channel, search)
         if (window.location.hostname.includes('youtube.com')) {
             document.addEventListener('yt-navigate-finish', () => {
-                console.log('🔵 YouTube navigation detected, resetting state...');
                 resetState();
                 setTimeout(processElements, 1500);
             });
@@ -1020,10 +999,7 @@
             subtree: true
         });
 
-        setInterval(() => {
-            console.log('🔵 Periodic check...');
-            processElements();
-        }, CONFIG.checkInterval);
+        setInterval(processElements, CONFIG.checkInterval);
     }
     
     if (document.readyState === 'loading') {
