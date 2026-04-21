@@ -82,27 +82,62 @@
         gtag('config', 'G-GFQGWFV5ET');
     </script>
     
+    <!-- Google Fonts: Inter for professional typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #e8f2ff 0%, #ffffff 50%, #e8f2ff 100%);
-            min-height: 100vh;
+        :root {
+            --blue: #0047ab;
+            --blue-mid: #1a5cc8;
+            --blue-light: #4a90e2;
+            --blue-tint: #e8f2ff;
+            --blue-tint2: #f0f6ff;
+            --text-primary: #0d1117;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --border: #e2e8f0;
+            --border-blue: rgba(0, 71, 171, 0.15);
+            --card-bg: #ffffff;
+            --bg: #f5f8ff;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 16px rgba(0, 71, 171, 0.08), 0 2px 6px rgba(0,0,0,0.04);
+            --shadow-lg: 0 12px 40px rgba(0, 71, 171, 0.15), 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-xl: 0 20px 60px rgba(0, 71, 171, 0.2), 0 8px 24px rgba(0,0,0,0.08);
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            min-height: 100vh;
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ── Navbar ── */
         .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 2px solid #0047ab;
-            padding: 1rem 0;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-blue);
+            padding: 0.85rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 20px rgba(0, 71, 171, 0.1);
+            box-shadow: 0 1px 0 var(--border-blue), 0 4px 24px rgba(0, 71, 171, 0.06);
         }
         .container {
-            max-width: 1400px;
+            max-width: 1360px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
         }
         .nav-content {
             display: flex;
@@ -112,80 +147,132 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #0047ab;
+            gap: 10px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--blue);
             text-decoration: none;
+            letter-spacing: -0.02em;
         }
         .logo img {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             object-fit: contain;
         }
+
+        /* ── Footer ── */
         .footer {
-            background: rgba(255, 255, 255, 0.95);
-            border-top: 2px solid #0047ab;
-            padding: 2rem 0;
-            margin-top: 4rem;
+            background: white;
+            border-top: 1px solid var(--border);
+            padding: 2.5rem 0;
+            margin-top: 5rem;
             text-align: center;
         }
         .footer-links {
             display: flex;
-            gap: 2rem;
+            gap: 0.5rem;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             margin-bottom: 1rem;
         }
         .footer-links a {
-            color: #0047ab;
+            color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: opacity 0.2s;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            transition: color 0.15s, background 0.15s;
         }
         .footer-links a:hover {
-            opacity: 0.7;
+            color: var(--blue);
+            background: var(--blue-tint);
         }
+        .footer-links span { color: var(--border); }
         .footer-copyright {
-            color: #666;
-            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
         }
+
+        /* ── Hero ── */
         .hero {
-            padding: 4rem 0 3rem;
+            padding: 5rem 0 2.5rem;
             text-align: center;
         }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--blue-tint);
+            color: var(--blue);
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(0, 71, 171, 0.15);
+        }
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #0047ab 0%, #4a90e2 100%);
+            font-size: clamp(2.2rem, 5vw, 3.75rem);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 1rem;
         }
         .hero p {
-            font-size: 1.25rem;
-            color: #666;
-            margin-bottom: 2rem;
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
         }
+
+        /* ── Search ── */
         .search-box {
-            max-width: 600px;
-            margin: 0 auto 3rem;
+            max-width: 580px;
+            margin: 0 auto 2.5rem;
             position: relative;
+        }
+        .search-icon {
+            position: absolute;
+            left: 1.1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+            display: flex;
         }
         .search-input {
             width: 100%;
-            padding: 1rem 3rem 1rem 1.5rem;
-            font-size: 1.1rem;
-            border: 2px solid #0047ab;
-            border-radius: 50px;
+            padding: 0.9rem 1.5rem 0.9rem 3rem;
+            font-size: 1rem;
+            font-family: inherit;
+            font-weight: 500;
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-xl);
             outline: none;
-            transition: all 0.3s;
+            transition: border-color 0.2s, box-shadow 0.2s;
             background: white;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-sm);
         }
+        .search-input::placeholder { color: var(--text-muted); font-weight: 400; }
         .search-input:focus {
-            box-shadow: 0 0 0 4px rgba(0, 71, 171, 0.1);
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(0, 71, 171, 0.1), var(--shadow-sm);
         }
         .autocomplete-dropdown {
             position: absolute;
@@ -193,221 +280,297 @@
             left: 0;
             right: 0;
             background: white;
-            border: 2px solid #0047ab;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0, 71, 171, 0.18);
+            border: 1.5px solid var(--border-blue);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
             z-index: 200;
             overflow: hidden;
             opacity: 0;
-            transform: translateY(-8px);
+            transform: translateY(-6px) scale(0.99);
             pointer-events: none;
-            transition: opacity 0.2s ease, transform 0.2s ease;
+            transition: opacity 0.18s ease, transform 0.18s ease;
         }
         .autocomplete-dropdown.visible {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
             pointer-events: auto;
         }
         .autocomplete-item {
-            padding: 0.75rem 1.5rem;
+            padding: 0.7rem 1.25rem;
             cursor: pointer;
-            font-size: 1rem;
-            color: #1a1a1a;
-            transition: background 0.15s, color 0.15s;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: background 0.12s;
             text-align: left;
-            border-bottom: 1px solid #f0f4ff;
+            border-bottom: 1px solid var(--blue-tint2);
         }
-        .autocomplete-item:last-child {
-            border-bottom: none;
-        }
+        .autocomplete-item:last-child { border-bottom: none; }
         .autocomplete-item:hover,
         .autocomplete-item.ac-active {
-            background: #e8f2ff;
-            color: #0047ab;
+            background: var(--blue-tint);
+            color: var(--blue);
         }
         .autocomplete-item mark {
             background: none;
-            color: #0047ab;
+            color: var(--blue);
             font-weight: 700;
         }
+
+        /* ── Filters ── */
         .filters {
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 0.6rem;
             align-items: center;
             margin-bottom: 3rem;
         }
         .filter-group {
             display: flex;
-            gap: 0.5rem;
+            gap: 0.4rem;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
         }
         .filter-label {
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 700;
-            color: #888;
+            color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            margin-right: 0.25rem;
+            margin-right: 0.2rem;
         }
         .filter-btn {
-            padding: 0.45rem 1.1rem;
-            border: 2px solid #d0d7e3;
+            padding: 0.4rem 1rem;
+            border: 1.5px solid var(--border);
             background: white;
-            color: #555;
-            border-radius: 30px;
+            color: var(--text-secondary);
+            border-radius: 100px;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.15s;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
+            font-family: inherit;
+            line-height: 1;
         }
         .filter-btn:hover {
-            border-color: #0047ab;
-            color: #0047ab;
-            background: #f0f4ff;
+            border-color: var(--blue);
+            color: var(--blue);
+            background: var(--blue-tint);
         }
         .filter-btn.active {
-            background: linear-gradient(135deg, #0047ab, #4a90e2);
+            background: var(--blue);
             color: white;
             border-color: transparent;
-            box-shadow: 0 3px 10px rgba(0,71,171,0.3);
+            box-shadow: 0 2px 8px rgba(0,71,171,0.35);
         }
-        .level-btn-CRITICAL { border-color: #e8b4b4; color: #aa0000; }
-        .level-btn-HIGH     { border-color: #f0cdb0; color: #c04800; }
-        .level-btn-MEDIUM   { border-color: #f0dfa0; color: #8a6000; }
-        .level-btn-LOW      { border-color: #a8d4b8; color: #1e6b40; }
-        .level-btn-CRITICAL:hover { border-color: #cc0000; background: #fff0f0; color: #cc0000; }
-        .level-btn-HIGH:hover     { border-color: #e85d00; background: #fff4ee; color: #e85d00; }
-        .level-btn-MEDIUM:hover   { border-color: #c48800; background: #fffaee; color: #c48800; }
-        .level-btn-LOW:hover      { border-color: #2e8b57; background: #f0fff5; color: #2e8b57; }
-        .level-btn-CRITICAL.active { background: #cc0000; color: white; border-color: transparent; box-shadow: 0 3px 10px rgba(204,0,0,0.3); }
-        .level-btn-HIGH.active     { background: #e85d00; color: white; border-color: transparent; box-shadow: 0 3px 10px rgba(232,93,0,0.3); }
-        .level-btn-MEDIUM.active   { background: #c48800; color: white; border-color: transparent; box-shadow: 0 3px 10px rgba(196,136,0,0.3); }
-        .level-btn-LOW.active      { background: #2e8b57; color: white; border-color: transparent; box-shadow: 0 3px 10px rgba(46,139,87,0.3); }
+        .level-btn-CRITICAL { border-color: #fccaca; color: #b91c1c; }
+        .level-btn-HIGH     { border-color: #fed7aa; color: #c2410c; }
+        .level-btn-MEDIUM   { border-color: #fde68a; color: #92400e; }
+        .level-btn-LOW      { border-color: #a7f3d0; color: #065f46; }
+        .level-btn-CRITICAL:hover { border-color: #dc2626; background: #fff5f5; color: #dc2626; }
+        .level-btn-HIGH:hover     { border-color: #ea580c; background: #fff7ed; color: #ea580c; }
+        .level-btn-MEDIUM:hover   { border-color: #d97706; background: #fffbeb; color: #d97706; }
+        .level-btn-LOW:hover      { border-color: #059669; background: #f0fdf4; color: #059669; }
+        .level-btn-CRITICAL.active { background: #dc2626; color: white; border-color: transparent; box-shadow: 0 2px 8px rgba(220,38,38,0.35); }
+        .level-btn-HIGH.active     { background: #ea580c; color: white; border-color: transparent; box-shadow: 0 2px 8px rgba(234,88,12,0.35); }
+        .level-btn-MEDIUM.active   { background: #d97706; color: white; border-color: transparent; box-shadow: 0 2px 8px rgba(217,119,6,0.35); }
+        .level-btn-LOW.active      { background: #059669; color: white; border-color: transparent; box-shadow: 0 2px 8px rgba(5,150,105,0.35); }
+
+        /* ── Stats ── */
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2.5rem;
         }
         .stat-card {
             background: white;
-            padding: 1.5rem;
-            border-radius: 16px;
-            border: 1px solid rgba(0, 71, 171, 0.1);
+            padding: 1.25rem 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
             text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .stat-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
         }
         .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #0047ab, #4a90e2);
+            font-size: 2.25rem;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, var(--blue), var(--blue-light));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            line-height: 1;
         }
         .stat-label {
-            color: #666;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        /* ── Grid & Cards ── */
+        .grid-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+        }
+        .grid-title {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
         }
         .artists-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            gap: 1rem;
             margin-bottom: 4rem;
         }
         .artist-card {
-            background: white;
-            border-radius: 16px;
-            padding: 1.5rem;
-            border: 1px solid rgba(0, 71, 171, 0.1);
-            transition: all 0.3s;
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 0;
+            border: 1px solid var(--border);
+            transition: box-shadow 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+            cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-sm);
+            animation: fadeUp 0.4s ease both;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(14px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
         .artist-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 40px rgba(0, 71, 171, 0.2);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--border-blue);
+        }
+        .card-accent {
+            height: 3px;
+            width: 100%;
+        }
+        .card-accent-CRITICAL { background: linear-gradient(90deg, #dc2626, #f87171); }
+        .card-accent-HIGH     { background: linear-gradient(90deg, #ea580c, #fb923c); }
+        .card-accent-MEDIUM   { background: linear-gradient(90deg, #d97706, #fbbf24); }
+        .card-accent-LOW      { background: linear-gradient(90deg, #059669, #34d399); }
+        .card-body {
+            padding: 1.25rem 1.5rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
         .artist-header {
             display: flex;
             justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1rem;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.85rem;
         }
+        .artist-meta { min-width: 0; }
         .artist-name {
-            font-size: 1.25rem;
+            font-size: 1.05rem;
             font-weight: 700;
-            color: #1a1a1a;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .artist-category {
-            font-size: 0.85rem;
-            color: #666;
+            font-size: 0.72rem;
+            color: var(--text-muted);
             text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 600;
+            margin-top: 0.2rem;
         }
         .stance-badge {
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
+            flex-shrink: 0;
+            padding: 0.3rem 0.75rem;
+            border-radius: 100px;
+            font-size: 0.68rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.07em;
+            white-space: nowrap;
         }
-        .level-CRITICAL {
-            background: #cc0000;
-            color: white;
-        }
-        .level-HIGH {
-            background: #e85d00;
-            color: white;
-        }
-        .level-MEDIUM {
-            background: #e6a800;
-            color: white;
-        }
-        .level-LOW {
-            background: #2e8b57;
-            color: white;
-        }
+        .level-CRITICAL { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .level-HIGH     { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .level-MEDIUM   { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+        .level-LOW      { background: #f0fdf4; color: #059669; border: 1px solid #a7f3d0; }
         .artist-statement {
-            color: #555;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.65;
+            flex: 1;
+            margin-bottom: 1.25rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
-        .artist-sources {
-            padding-top: 1rem;
-            border-top: 1px solid #f0f0f0;
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: auto;
         }
         .sources-label {
-            font-size: 0.8rem;
-            color: #999;
-            margin-bottom: 0.5rem;
-        }
-        .source-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        .source-tag {
             font-size: 0.75rem;
-            color: #0047ab;
-            padding: 0.25rem 0.75rem;
-            background: #e8f2ff;
-            border-radius: 12px;
+            color: var(--text-muted);
+            font-weight: 500;
         }
+        .view-details {
+            font-size: 0.75rem;
+            color: var(--blue);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            letter-spacing: 0.02em;
+        }
+        .view-details svg { transition: transform 0.15s; }
+        .artist-card:hover .view-details svg { transform: translateX(3px); }
+
+        /* ── Responsive ── */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .artists-grid { grid-template-columns: 1fr; }
+            .container { padding: 0 1rem; }
+            .hero { padding: 3rem 0 2rem; }
+            .hero p { font-size: 1rem; }
+            .artists-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
         }
-        
+        @media (max-width: 480px) {
+            .hero { padding: 2.5rem 0 1.5rem; }
+            .stats { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+            .stat-number { font-size: 1.75rem; }
+        }
+
+        /* ── CTA Button ── */
+        .btn-cta {
+            transition: transform 0.2s, box-shadow 0.2s !important;
+        }
         .btn-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 71, 171, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 71, 171, 0.4) !important;
         }
-        
         .install-btn:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             box-shadow: 0 12px 40px rgba(0,0,0,0.3);
         }
     </style>
@@ -432,11 +595,18 @@
 
     <div class="container">
         <div class="hero">
-            <h1>Artist Boycott Database</h1>
-            <p>250+ verified artists from publicly documented sources</p>
-            
+            <div class="hero-eyebrow">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
+                Verified &amp; Source-Backed
+            </div>
+            <h1>Artist <span>Boycott</span> Database</h1>
+            <p>250+ verified artists from publicly documented, mainstream media sources.</p>
+
             <div class="search-box">
-                <input type="text" class="search-input" id="searchInput" placeholder="Search artists..." autocomplete="off">
+                <span class="search-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </span>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search artists…" autocomplete="off">
                 <div class="autocomplete-dropdown" id="autocompleteList"></div>
             </div>
             
@@ -478,6 +648,9 @@
             </div>
         </div>
         
+        <div class="grid-header">
+            <span class="grid-title" id="resultCount"></span>
+        </div>
         <div class="artists-grid" id="artistsGrid"></div>
     </div>
 
@@ -767,22 +940,30 @@
             document.getElementById('statActors').textContent = filtered.filter(a => a.category === 'actor').length;
             document.getElementById('statDirectors').textContent = filtered.filter(a => a.category === 'director').length;
             document.getElementById('statOther').textContent = filtered.filter(a => a.category !== 'musician' && a.category !== 'actor' && a.category !== 'director').length;
+            const rc = document.getElementById('resultCount');
+            if (rc) rc.textContent = filtered.length + ' artist' + (filtered.length !== 1 ? 's' : '') + ' shown';
 
-            grid.innerHTML = filtered.map(artist => `
-                <div class="artist-card" onclick="showArtistDetails(${artist.id})" style="cursor: pointer;">
-                    <div class="artist-header">
-                        <div>
-                            <div class="artist-name">${artist.name}</div>
-                            <div class="artist-category">${artist.category}</div>
+            grid.innerHTML = filtered.map((artist, i) => {
+                const lvl = artist.level || 'CRITICAL';
+                const cat = artist.category ? artist.category.charAt(0).toUpperCase() + artist.category.slice(1) : 'Artist';
+                return `<div class="artist-card" onclick="showArtistDetails(${artist.id})" style="animation-delay:${Math.min(i * 30, 300)}ms">
+                    <div class="card-accent card-accent-${lvl}"></div>
+                    <div class="card-body">
+                        <div class="artist-header">
+                            <div class="artist-meta">
+                                <div class="artist-name">${artist.name}</div>
+                                <div class="artist-category">${cat}</div>
+                            </div>
+                            <div class="stance-badge level-${lvl}">${lvl}</div>
                         </div>
-                        <div class="stance-badge level-${artist.level || 'CRITICAL'}">${artist.level || 'CRITICAL'}</div>
+                        <div class="artist-statement">${artist.statement}</div>
+                        <div class="card-footer">
+                            <span class="sources-label">Verified sources</span>
+                            <span class="view-details">View details <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+                        </div>
                     </div>
-                    <div class="artist-statement">${artist.statement}</div>
-                    <div class="artist-sources">
-                        <div class="sources-label">Click for sources →</div>
-                    </div>
-                </div>
-            `).join('');
+                </div>`;
+            }).join('');
         }
 
         document.querySelectorAll('.category-btn').forEach(btn => {
