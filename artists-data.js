@@ -6,8 +6,8 @@ const artistsData = [
   {
     name: "Roger Waters",
     level: "CRITICAL",
-    statement: "Pink Floyd co-founder and longest-standing BDS advocate in rock music; has called on fellow musicians to boycott Israel since 2005; dropped by publisher BMG in 2024 over anti-Israel statements; performed concerts featuring imagery comparing Israeli actions to Nazi Germany",
-    sources: `<a href="https://www.bdsmovement.net/news/roger-waters-and-bds">BDS Movement</a> | <a href="https://bdsmovement.net/news/facebook-live-conversation-roger-waters">PACBI</a> | <a href="https://www.guardian.co.uk/commentisfree/2011/mar/11/cultural-boycott-west-bank-wall">The Guardian</a>`
+    statement: "Pink Floyd co-founder and longest-standing BDS advocate in rock music; has called on fellow musicians to boycott Israel since 2006; dropped by publisher BMG in 2024 over anti-Israel statements; performed concerts featuring imagery comparing Israeli actions to Nazi Germany",
+    sources: `<a href="https://www.rollingstone.com/music/music-news/roger-waters-pink-floyd-bmg-israel-comments-1234957036/">Rolling Stone</a> | <a href="https://www.nme.com/news/music/roger-waters-responds-to-nick-cave-criticising-his-bds-stance-its-not-complicated-nick-3789564">NME</a> | <a href="https://www.bdsmovement.net/news/roger-waters-and-bds-moral-courage-and-unwavering-commitment-human-rights">BDS Movement</a>`
   },
   {
     name: "Dua Lipa",
