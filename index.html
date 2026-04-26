@@ -1194,16 +1194,16 @@
                 padding: 20px;
             `;
             
-            const stanceColor = artist.stance === 'boycott' ? '#ff4444' : '#ffc107';
-            const stanceLabel = artist.stance === 'boycott' ? 'BOYCOTTER' : 'CRITICAL';
-            
+            const levelColors = { CRITICAL: '#dc2626', HIGH: '#d97706', LOW: '#2563eb' };
+            const levelColor = levelColors[artist.level] || '#666';
+
             modal.innerHTML = `
                 <div style="background: white; border-radius: 20px; padding: 2rem; max-width: 600px; width: 100%; max-height: 80vh; overflow-y: auto;">
                     <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1.5rem;">
                         <div>
                             <h2 style="margin: 0 0 0.5rem 0; color: #0047ab; font-size: 2rem;">${artist.name}</h2>
-                            <div style="display: inline-block; padding: 0.5rem 1rem; background: ${stanceColor}; color: white; border-radius: 20px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase;">
-                                ${stanceLabel}
+                            <div style="display: inline-block; padding: 0.5rem 1rem; background: ${levelColor}; color: white; border-radius: 20px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase;">
+                                ${artist.level}
                             </div>
                         </div>
                         <button onclick="this.parentElement.parentElement.parentElement.remove()" style="background: none; border: none; font-size: 2rem; cursor: pointer; color: #999; line-height: 1;">×</button>
