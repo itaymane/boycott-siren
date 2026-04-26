@@ -804,8 +804,8 @@ const artistsData = [
   {
     name: "Julian Casablancas",
     level: "CRITICAL",
-    statement: "The Strokes frontman; signed the 2021 Musicians for Palestine open letter (600+ musicians) calling for a boycott of Israel; at Coachella (April 19, 2026) closed the band's headlining set with a video montage condemning US and Israeli actions in Gaza, showing captions including 'Last university standing in Gaza'; on SubwayTakes (April 21, 2026) stated: 'American Zionists get the benefits of white privileged people, but talk like they are Black people during slavery'",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    statement: "The Strokes frontman; signed the 2021 Musicians for Palestine open letter (600+ musicians) calling for a boycott of Israel; at Coachella 2026, closed the set with a video montage condemning US and Israeli bombings in Gaza, captioned 'Last university standing in Gaza'; on SubwayTakes (April 21, 2026) stated that American Zionists 'talk like Black people during slavery' while benefiting from white privilege",
+    sources: `<a href="https://www.nme.com/news/music/the-strokes-julian-casablancas-calls-out-the-white-privilege-of-american-zionists-3941737">NME</a> | <a href="https://variety.com/2026/music/news/strokes-coachella-video-montage-bombings-iran-gaza-1236725454/">Variety</a> | <a href="https://stereogum.com/2496586/julian-casablancas-sounds-off-on-american-zionists-on-subwaytakes/news">Stereogum</a> | <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
   },
   {
     name: "Sinéad O'Connor",
