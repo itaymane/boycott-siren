@@ -19,13 +19,13 @@ const artistsData = [
     name: "Patti Smith",
     level: "CRITICAL",
     statement: "Supports cultural boycott, declined to perform in Israel",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.nme.com/news/music/julian-casablancas-rage-against-the-machine-and-patti-smith-among-600-artists-calling-for-palestinian-rights-2950132">NME</a> | <a href="https://www.timesofisrael.com/patti-smith-julian-casablancas-among-600-musicians-to-urge-boycott-of-israel/">Times of Israel</a>`
   },
   {
     name: "Elvis Costello",
     level: "CRITICAL",
     statement: "Cancelled his June 2010 Tel Aviv and Caesarea concerts explicitly citing Israel's military actions against Palestinians; published a statement saying he could not 'in good conscience' appear in Israel, becoming one of the first major artists to cancel for political reasons",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.nme.com/news/music/elvis-costello-9-1297950">NME</a> | <a href="https://forward.com/fast-forward/128074/elvis-costello-cancels-israel-concerts-after-prote/">The Forward</a>`
   },
   {
     name: "Tom Morello",
@@ -37,7 +37,7 @@ const artistsData = [
     name: "The Roots",
     level: "CRITICAL",
     statement: "Signed cultural boycott pledges",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://edition.cnn.com/2021/05/27/entertainment/musicians-support-palestinians-letter-israel">CNN</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
   },
   {
     name: "Lauryn Hill",
@@ -49,7 +49,7 @@ const artistsData = [
     name: "Peter Gabriel",
     level: "CRITICAL",
     statement: "Supports cultural boycott of Israel",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.timesofisrael.com/peter-gabriel-pro-gaza-not-anti-israel/">Times of Israel</a> | <a href="https://www.rollingstone.com/music/music-news/rage-against-the-machine-serj-tankian-roger-waters-sign-open-letter-artists-boycott-israel-1175281/">Rolling Stone</a>`
   },
   {
     name: "Charlotte Church",
@@ -61,7 +61,7 @@ const artistsData = [
     name: "Sam Smith",
     level: "CRITICAL",
     statement: "Supports cultural boycott",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/sam-smith-israel-concert-cancelled">Middle East Eye</a> | <a href="https://www.thepinknews.com/2023/05/05/sam-smith-tel-aviv-israel-cancelled/">PinkNews</a>`
   },
   {
     name: "Björk",
@@ -655,7 +655,7 @@ const artistsData = [
     name: "Serj Tankian",
     level: "CRITICAL",
     statement: "System of a Down vocalist who has explicitly called Israeli military actions against Palestinians war crimes; signed open letters; called for international sanctions against Israel; one of the most vocal rock musicians on the issue",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.nme.com/news/music/system-of-a-downs-serj-tankian-shares-thoughts-on-boycotts-and-the-israel-and-palestine-war-3764694">NME</a> | <a href="https://www.rollingstone.com/music/music-news/rage-against-the-machine-serj-tankian-roger-waters-sign-open-letter-artists-boycott-israel-1175281/">Rolling Stone</a>`
   },
   {
     name: "Portishead",
@@ -673,19 +673,19 @@ const artistsData = [
     name: "Robyn",
     level: "CRITICAL",
     statement: "Swedish pop star, supports BDS",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://djmag.com/news/robyn-dj-seinfeld-fever-ray-more-swedish-artists-call-israel-ban-eurovision-2024">DJ Mag</a> | <a href="https://www.newarab.com/news/swedish-musicians-call-israels-eurovision-exclusion">New Arab</a>`
   },
   {
     name: "Lykke Li",
     level: "CRITICAL",
     statement: "Swedish singer, supports cultural boycott",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.newarab.com/news/swedish-musicians-call-israels-eurovision-exclusion">New Arab</a> | <a href="https://djmag.com/news/robyn-dj-seinfeld-fever-ray-more-swedish-artists-call-israel-ban-eurovision-2024">DJ Mag</a>`
   },
   {
     name: "Propagandhi",
     level: "CRITICAL",
     statement: "Canadian punk band, vocal BDS supporters",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://electronicintifada.net/blogs/nora-barrows-friedman/punks-against-apartheid-officially-launches-website-bds-network">Electronic Intifada</a> | <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
   },
   {
     name: "Refused",
@@ -703,7 +703,7 @@ const artistsData = [
     name: "Talib Kweli",
     level: "CRITICAL",
     statement: "Hip-hop artist, vocal supporter of Palestinian rights",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://electronicintifada.net/blogs/tamara-nassar/rapper-talib-kweli-rejects-german-demand-denounce-israel-boycott">Electronic Intifada</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
   },
   {
     name: "Chuck D",
@@ -715,37 +715,37 @@ const artistsData = [
     name: "Boots Riley",
     level: "CRITICAL",
     statement: "The Coup frontman, director, supports BDS",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://jacobin.com/2023/11/boots-riley-hollywood-gaza-class-struggle-wga-art/">Jacobin</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
   },
   {
     name: "Run the Jewels",
     level: "CRITICAL",
     statement: "El-P and Killer Mike have made explicit statements about Israeli apartheid and Palestinian rights; signed letters calling for ceasefire and accountability for Israeli actions",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.rollingstone.com/music/music-news/rage-against-the-machine-serj-tankian-roger-waters-sign-open-letter-artists-boycott-israel-1175281/">Rolling Stone</a> | <a href="https://www.complex.com/music/a/backwoodsaltar/musicians-for-israel-boycott-in-support-of-palestine">Complex</a>`
   },
   {
     name: "Noname",
     level: "CRITICAL",
     statement: "Chicago rapper who has been one of music's most outspoken BDS advocates; explicitly called on fans and fellow artists to boycott Israel; donated proceeds from music to Palestinian causes; signed No Music for Genocide pledge",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.hotnewhiphop.com/368531-run-the-jewels-and-noname-among-600-musicians-calling-for-israel-boycott-news">HotNewHipHop</a> | <a href="https://www.complex.com/music/a/backwoodsaltar/musicians-for-israel-boycott-in-support-of-palestine">Complex</a>`
   },
   {
     name: "Alice Walker",
     level: "CRITICAL",
     statement: "Author of 'The Color Purple' who refused to allow an Israeli publisher to publish her book; explicitly supports BDS; has written about and spoken at pro-Palestinian events calling for boycott of Israel",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://www.nbcnews.com/news/nbcblk/alice-walker-color-purple-revival-palestine-parental-peace-n461426">NBC News</a> | <a href="https://www.palestineinamerica.com/blog/2015/12/alice-walker-bds-the-color-purple">Palestine in America</a>`
   },
   {
     name: "Naomi Klein",
     level: "CRITICAL",
     statement: "Author and activist who has written extensively calling for BDS; explicitly called Israeli actions in Gaza genocide; organised and signed open letters calling for international boycott of Israel",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://www.democracynow.org/2024/10/22/naomi_klein_october_7_weaponized_trauma">Democracy Now</a> | <a href="https://www.theguardian.com/commentisfree/2024/jan/09/boycott-israel-bds-two-decades-palestinians">The Guardian</a>`
   },
   {
     name: "Arundhati Roy",
     level: "CRITICAL",
     statement: "Booker Prize winner, supports cultural boycott",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://www.aljazeera.com/news/2026/2/14/arundhati-roy-shocked-by-jurys-gaza-remarks-quits-berlin-film-festival">Al Jazeera</a> | <a href="https://www.commondreams.org/news/arundhati-roy-israel">Common Dreams</a>`
   },
   {
     name: "John Berger",
@@ -763,7 +763,7 @@ const artistsData = [
     name: "Sally Rooney",
     level: "CRITICAL",
     statement: "Irish novelist who refused to allow Israeli publisher Modan to translate her novel 'Beautiful World, Where Are You' into Hebrew, citing BDS principles; stated she 'would not feel comfortable' with the book being published by an Israeli company",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://time.com/6105990/sally-rooney-israeli-translation/">TIME</a> | <a href="https://www.jta.org/2024/10/30/culture/sally-rooney-percival-everett-among-thousands-of-authors-pledging-to-boycott-all-israeli-literary-institutions">JTA</a>`
   },
   {
     name: "Khaled Hosseini",
@@ -775,31 +775,31 @@ const artistsData = [
     name: "Annie Ernaux",
     level: "HIGH",
     statement: "2022 Nobel Prize in Literature laureate who publicly signed BDS-aligned letters after receiving her Nobel Prize; made explicit statements calling Israeli actions a form of apartheid and genocide",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://www.newarab.com/news/nobel-prize-winner-annie-ernaux-has-backed-israel-boycotts">New Arab</a> | <a href="https://www.aljazeera.com/news/2024/1/11/artists-urged-to-reject-german-institutions-over-berlins-stance-on-gaza">Al Jazeera</a>`
   },
   {
     name: "Angela Davis",
     level: "CRITICAL",
     statement: "American scholar and lifelong Palestinian rights activist; one of the founding intellectual figures of BDS in the United States; has spoken at countless pro-BDS events; compared Israeli treatment of Palestinians to apartheid South Africa",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a>`
   },
   {
     name: "Judith Butler",
     level: "CRITICAL",
     statement: "Philosopher at UC Berkeley who has explicitly endorsed BDS; written extensively on the legitimacy of cultural boycott of Israel; signed open letters; argued that BDS is a legitimate form of political protest against Israeli policies",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/sally-rooney-rupi-kaur-and-judith-butler-join-boycott-silent-israeli-cultural-institutions">Middle East Eye</a> | <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
   },
   {
     name: "Desmond Tutu",
     level: "HIGH",
     statement: "Late Archbishop of South Africa who explicitly compared Israeli treatment of Palestinians to apartheid South Africa, calling it 'worse in some respects'; called for international sanctions and boycott of Israel",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://www.aljazeera.com/news/2014/8/14/desmond-tutu-calls-for-end-to-attacks-on-gaza">Al Jazeera</a> | <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
   },
   {
     name: "DJ Snake",
     level: "CRITICAL",
     statement: "French DJ, supports cultural boycott",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a> | <a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a>`
   },
   {
     name: "Julian Casablancas",
@@ -817,13 +817,13 @@ const artistsData = [
     name: "System of a Down",
     level: "CRITICAL",
     statement: "Rock band, supports Palestinian rights",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://www.rollingstone.com/music/music-news/rage-against-the-machine-serj-tankian-roger-waters-sign-open-letter-artists-boycott-israel-1175281/">Rolling Stone</a> | <a href="https://www.nme.com/news/music/system-of-a-downs-serj-tankian-shares-thoughts-on-boycotts-and-the-israel-and-palestine-war-3764694">NME</a>`
   },
   {
     name: "Nigel Kennedy",
     level: "CRITICAL",
     statement: "World-renowned violinist who interrupted a BBC Proms programme to make an unscripted statement about Israeli apartheid; has publicly referred to Israeli actions as apartheid; cancelled performances in Israel",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://www.huffingtonpost.co.uk/2013/08/16/palestinian-proms_n_3766594.html">HuffPost UK</a> | <a href="https://electronicintifada.net/blogs/ali-abunimah/video-nigel-kennedy-and-palestine-strings-play-vivaldi-2013-bbc-proms">Electronic Intifada</a>`
   },
   {
     name: "John Williams (guitarist)",
@@ -847,19 +847,19 @@ const artistsData = [
     name: "Asian Dub Foundation",
     level: "CRITICAL",
     statement: "British band who have been among the most consistently outspoken musical advocates for Palestinian rights; explicitly called for cultural boycott of Israel; performed at pro-Palestine events",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a> | <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
   },
   {
     name: "Manic Street Preachers",
     level: "CRITICAL",
     statement: "Welsh rock band who cancelled their planned Israel tour dates, explicitly citing the political situation; among the first major rock bands to cancel Israel shows in solidarity with Palestinians",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://www.loudersound.com/news/waters-slams-artists-for-stance-on-israel">Louder Sound</a> | <a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a>`
   },
   {
     name: "Belle and Sebastian",
     level: "CRITICAL",
     statement: "Scottish indie band, declined Israel performance",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a> | <a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a>`
   },
   {
     name: "Jean-Luc Godard",
@@ -871,7 +871,7 @@ const artistsData = [
     name: "Mira Nair",
     level: "CRITICAL",
     statement: "Director, supports BDS",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://www.aljazeera.com/news/2025/9/8/hundreds-of-artists-pledge-boycott-of-israeli-film-institutions-over-gaza">Al Jazeera</a> | <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
   },
   {
     name: "Jane Campion",
@@ -883,19 +883,19 @@ const artistsData = [
     name: "Liam Cunningham",
     level: "CRITICAL",
     statement: "Game of Thrones actor, supports BDS",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://www.hotpress.com/film-tv/louisa-harland-liam-cunningham-and-jack-reynor-among-over-1800-signatories-on-film-workers-for-palestine-pledge-23107541">Hotpress</a> | <a href="https://www.middleeastmonitor.com/20250902-irish-actor-liam-cunningham-joins-gaza-flotilla-i-dont-accept-what-the-palestinians-are-being-subjected-to/">Middle East Monitor</a>`
   },
   {
     name: "Cat Power",
     level: "CRITICAL",
     statement: "Indie artist, supports cultural boycott",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a> | <a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a>`
   },
   {
     name: "Devendra Banhart",
     level: "CRITICAL",
     statement: "Folk singer, supports BDS",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a> | <a href="https://www.ynetnews.com/articles/0,7340,L-3905372,00.html">Ynet News</a>`
   },
   {
     name: "Cassandra Wilson",
@@ -907,7 +907,7 @@ const artistsData = [
     name: "Coldcut",
     level: "CRITICAL",
     statement: "Electronic duo, supports BDS",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a> | <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
   },
   {
     name: "The Ex",
@@ -925,103 +925,103 @@ const artistsData = [
     name: "Sonic Youth",
     level: "CRITICAL",
     statement: "Alternative rock band, supported BDS",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.rollingstone.com/music/music-news/thurston-moore-explains-nixed-tel-aviv-gig-israel-boycott-71197/">Rolling Stone</a> | <a href="https://www.juno.co.uk/junodaily/2021/05/29/600-artists-from-run-the-jewels-to-sonic-youth-sign-letter-demanding-justice-for-palestine/">Juno Daily</a>`
   },
   {
     name: "Godspeed You! Black Emperor",
     level: "CRITICAL",
     statement: "Montréal post-rock collective who declined the Polaris Music Prize in 2013, issuing a statement explicitly critical of Israeli military actions and calling for boycott; have been consistently anti-Zionist in their public statements",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://exclaim.ca/music/article/rage_against_the_machine_godspeed_you_black_emperor_pink_floyds_roger_waters_sign_open_letter_urging_israel_boycott_in_support_of_palestine">Exclaim!</a> | <a href="https://ca.billboard.com/music/music-news/musicians-for-palestine-montreal">Billboard Canada</a>`
   },
   {
     name: "A Silver Mt. Zion",
     level: "CRITICAL",
     statement: "Post-rock band, supports cultural boycott",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://exclaim.ca/music/article/rage_against_the_machine_godspeed_you_black_emperor_pink_floyds_roger_waters_sign_open_letter_urging_israel_boycott_in_support_of_palestine">Exclaim!</a> | <a href="https://ca.billboard.com/music/music-news/musicians-for-palestine-montreal">Billboard Canada</a>`
   },
   {
     name: "Do Make Say Think",
     level: "CRITICAL",
     statement: "Instrumental band, supports BDS",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://ca.billboard.com/music/music-news/musicians-for-palestine-montreal">Billboard Canada</a> | <a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a>`
   },
   {
     name: "Broken Social Scene",
     level: "HIGH",
     statement: "Canadian indie collective who signed an open letter opposing the Toronto International Film Festival's 'Tel Aviv spotlight' in 2009, explicitly criticising Israeli government cultural policy",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://ca.billboard.com/music/music-news/musicians-for-palestine-montreal">Billboard Canada</a> | <a href="https://www.cbc.ca/music/spotify-geoblock-israel-caribou-amine-elisapie-badbadnotgood-1.7648148">CBC Music</a>`
   },
   {
     name: "Feist",
     level: "CRITICAL",
     statement: "Singer-songwriter, supports BDS",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.cbc.ca/music/spotify-geoblock-israel-caribou-amine-elisapie-badbadnotgood-1.7648148">CBC Music</a> | <a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a>`
   },
   {
     name: "Stars",
     level: "CRITICAL",
     statement: "Indie pop band, supports cultural boycott",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://ca.billboard.com/music/music-news/musicians-for-palestine-montreal">Billboard Canada</a> | <a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a>`
   },
   {
     name: "Metric",
     level: "CRITICAL",
     statement: "Rock band, supports BDS",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://ca.billboard.com/music/music-news/musicians-for-palestine-montreal">Billboard Canada</a> | <a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a>`
   },
   {
     name: "Wolf Parade",
     level: "CRITICAL",
     statement: "Indie rock band, supports cultural boycott",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://ca.billboard.com/music/music-news/musicians-for-palestine-montreal">Billboard Canada</a> | <a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a>`
   },
   {
     name: "Destroyer",
     level: "CRITICAL",
     statement: "Indie project, supports BDS",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://ca.billboard.com/music/music-news/musicians-for-palestine-montreal">Billboard Canada</a> | <a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a>`
   },
   {
     name: "Owen Pallett",
     level: "CRITICAL",
     statement: "Composer, supports cultural boycott",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://ca.billboard.com/music/music-news/musicians-for-palestine-montreal">Billboard Canada</a> | <a href="https://exclaim.ca/music/article/rage_against_the_machine_godspeed_you_black_emperor_pink_floyds_roger_waters_sign_open_letter_urging_israel_boycott_in_support_of_palestine">Exclaim!</a>`
   },
   {
     name: "Peaches",
     level: "CRITICAL",
     statement: "Electronic musician, supports BDS",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://ca.billboard.com/music/music-news/musicians-for-palestine-montreal">Billboard Canada</a> | <a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a>`
   },
   {
     name: "Dead Prez",
     level: "CRITICAL",
     statement: "Hip-hop duo, supports BDS",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a> | <a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a>`
   },
   {
     name: "Immortal Technique",
     level: "CRITICAL",
     statement: "Underground rapper, vocal BDS supporter",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
   },
   {
     name: "Lowkey",
     level: "CRITICAL",
     statement: "British rapper, vocal Palestinian rights activist",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/lowkey-spotify-remove-campaign-celebrities-sign-letter-opposing">Middle East Eye</a> | <a href="https://electronicintifada.net/blogs/asa-winstanley/israel-lobby-demands-lowkey-be-deleted-spotify">Electronic Intifada</a>`
   },
   {
     name: "Akala",
     level: "CRITICAL",
     statement: "British rapper, supports BDS",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/lowkey-spotify-remove-campaign-celebrities-sign-letter-opposing">Middle East Eye</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palace-9579426/">Billboard</a>`
   },
   {
     name: "Kae Tempest",
     level: "CRITICAL",
     statement: "Poet and rapper, supports cultural boycott",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/lowkey-spotify-remove-campaign-celebrities-sign-letter-opposing">Middle East Eye</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
   },
   {
     name: "Little Simz",
@@ -1045,7 +1045,7 @@ const artistsData = [
     name: "Manu Chao",
     level: "CRITICAL",
     statement: "French-Spanish musician who has refused to perform in Israel in solidarity with Palestinians; signed the BDS cultural boycott pledge and is a long-standing campaigner for Palestinian rights",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a> | <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
   },
   {
     name: "Rage Against the Machine",
@@ -1057,7 +1057,7 @@ const artistsData = [
     name: "Lupe Fiasco",
     level: "CRITICAL",
     statement: "Chicago rapper who has been an outspoken BDS endorser; made multiple public statements calling Israel an apartheid state and has used his platform to campaign for Palestinian cultural rights",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.rollingstone.com/music/music-news/rage-against-the-machine-serj-tankian-roger-waters-sign-open-letter-artists-boycott-israel-1175281/">Rolling Stone</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
   },
   {
     name: "Billy Bragg",
@@ -1069,13 +1069,13 @@ const artistsData = [
     name: "Santana",
     level: "CRITICAL",
     statement: "Cancelled scheduled Israel performances in 2010 following calls from Palestinian civil society groups; the cancellation was confirmed as an act of solidarity with Palestinians",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/rage-against-the-machine-serj-tankian-roger-waters-sign-open-letter-artists-boycott-israel-1175281/">Rolling Stone</a>`
   },
   {
     name: "Yo La Tengo",
     level: "CRITICAL",
     statement: "New Jersey indie rock band who cancelled a planned Israel tour in solidarity with Palestinians; issued a public statement explaining their decision to honour the cultural boycott",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a> | <a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a>`
   },
   {
     name: "Klaxons",
@@ -1087,13 +1087,13 @@ const artistsData = [
     name: "Anti-Flag",
     level: "CRITICAL",
     statement: "American punk band and long-standing BDS supporters who have publicly called for a cultural boycott of Israel and refused to perform there; have used their platform to advocate for Palestinian rights for over two decades",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://electronicintifada.net/content/never-mind-johnny-rotten-real-punks-boycott-israel/10938">Electronic Intifada</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
   },
   {
     name: "Jackson Browne",
     level: "CRITICAL",
     statement: "Legendary singer-songwriter who signed an open letter calling for cultural boycott of Israel and has spoken at pro-Palestinian events; publicly criticised US military aid and has called for Palestinian statehood",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a> | <a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a>`
   },
   {
     name: "Vic Mensa",
@@ -1105,7 +1105,7 @@ const artistsData = [
     name: "Yasiin Bey",
     level: "CRITICAL",
     statement: "Rapper formerly known as Mos Def who has been a vocal advocate for Palestinian rights; has made public statements in support of BDS and participated in pro-Palestinian events and cultural campaigns",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
   },
   {
     name: "Moor Mother",
@@ -1129,7 +1129,7 @@ const artistsData = [
     name: "Jello Biafra",
     level: "CRITICAL",
     statement: "Dead Kennedys frontman and Alternative Tentacles founder who has been a vocal critic of Israeli military policy and supporter of Palestinian rights; endorsed BDS in multiple interviews and public statements",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://electronicintifada.net/blogs/nora-barrows-friedman/jello-biafra-cancels-his-tel-aviv-gig">Electronic Intifada</a> | <a href="https://www.punknews.org/article/45103/jello-biafra-on-his-trip-to-israel-and-the-israel-boycott">Punknews</a>`
   },
   {
     name: "Thievery Corporation",
@@ -1165,7 +1165,7 @@ const artistsData = [
     name: "Wallace Shawn",
     level: "LOW",
     statement: "American actor and playwright who has publicly supported Palestinian rights and signed letters calling for cultural engagement with the BDS movement",
-    sources: `<a href="https://bdsmovement.net/cultural-boycott">BDS Movement</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://www.rollingstone.com/politics/politics-news/wallace-shawn-pro-palestine-group-countering-aipac-1235002044/">Rolling Stone</a> | <a href="https://www.timesofisrael.com/wallace-shawn-cynthia-nixon-lead-actors-backing-genocide-charges-against-israel/">Times of Israel</a>`
   },
   {
     name: "Alexei Sayle",
@@ -1351,7 +1351,7 @@ const artistsData = [
     name: "Harris Dickinson",
     level: "CRITICAL",
     statement: "Signed Film Workers for Palestine pledge (September 2025) to boycott Israeli film institutions implicated in genocide and apartheid",
-    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Film Workers for Palestine</a>`
+    sources: `<a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a>`
   },
   {
     name: "Rebecca Hall",
