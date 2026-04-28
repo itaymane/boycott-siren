@@ -693,7 +693,8 @@
                 Verified &amp; Source-Backed
             </div>
             <h1>Artist <span>Boycott</span> Database</h1>
-            <p>229+ verified artists from publicly documented, mainstream media sources.</p>
+            <p><span id="heroCount">229</span>+ verified artists from publicly documented, mainstream media sources.</p>
+            <p style="font-size:0.8rem;color:#8aa4cc;margin-top:0.5rem;">Last updated: April 2026</p>
 
             <div class="search-box">
                 <span class="search-icon">
@@ -1227,20 +1228,53 @@
                         </div>
                     </div>
                     
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="font-size: 0.9rem; color: #666; margin-bottom: 0.75rem; font-weight: 600;">Share:</div>
+                        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                            <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent('🚨 ' + artist.name + ' supports the cultural boycott of Israel.\n\nartsiren.co — 229 verified artists tracked.')}&url=${encodeURIComponent('https://artsiren.co')}" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: #000; color: #fff; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">
+                                𝕏 &nbsp;Post
+                            </a>
+                            <a href="https://wa.me/?text=${encodeURIComponent('🚨 ' + artist.name + ' supports the cultural boycott of Israel.\n\nSee verified sources: https://artsiren.co')}" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: #25d366; color: #fff; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">
+                                WhatsApp
+                            </a>
+                            <button onclick="navigator.clipboard.writeText('🚨 ' + '${artist.name.replace(/'/g, "\\'")}' + ' supports the cultural boycott of Israel. See verified sources: https://artsiren.co').then(() => { this.textContent = 'Copied!'; setTimeout(() => this.textContent = 'Copy Link', 1500); })" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: #f0f4ff; color: #0047ab; border: 1px solid #c7d8f8; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer;">
+                                Copy Link
+                            </button>
+                        </div>
+                    </div>
+
                     <div style="background: #f8f9fa; padding: 1rem; border-radius: 12px; font-size: 0.85rem; color: #666; line-height: 1.5;">
                         All information from publicly documented sources. Independently verifiable.
                     </div>
                 </div>
             `;
-            
+
             document.body.appendChild(modal);
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) modal.remove();
             });
         }
         
+        function animateCount(el, target, duration) {
+            const start = Math.max(0, target - 80);
+            const startTime = performance.now();
+            function tick(now) {
+                const progress = Math.min((now - startTime) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.round(start + (target - start) * eased);
+                if (progress < 1) requestAnimationFrame(tick);
+                else el.textContent = target;
+            }
+            requestAnimationFrame(tick);
+        }
+
+        window.addEventListener('load', () => {
+            const heroEl = document.getElementById('heroCount');
+            if (heroEl) animateCount(heroEl, ARTISTS_DATABASE.length, 1200);
+        });
+
         renderArtists();
-        
+
         // Analytics tracking functions
         function trackExtensionDownload() {
             if (typeof gtag !== 'undefined') {
