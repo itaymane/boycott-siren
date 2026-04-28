@@ -4,95 +4,389 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About ArtSiren | Cultural Boycott Artist Database</title>
-    <meta name="description" content="Learn about ArtSiren – a free tool that tracks 209+ artists supporting the cultural boycott of Israel, sourced entirely from mainstream media and public statements.">
+    <meta name="description" content="ArtSiren tracks 229+ artists who publicly support the cultural boycott of Israel — with verified sources from mainstream media, so you can make informed choices.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://artsiren.co/about.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://artsiren.co/about.html">
     <meta property="og:title" content="About ArtSiren | Cultural Boycott Artist Database">
-    <meta property="og:description" content="Learn about ArtSiren – a free tool tracking artists who support the cultural boycott of Israel.">
+    <meta property="og:description" content="ArtSiren tracks 229+ artists who publicly support the cultural boycott of Israel, with verified sources from mainstream media.">
     <meta property="og:image" content="https://artsiren.co/logo.png">
     <meta property="og:site_name" content="ArtSiren">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="About ArtSiren">
-    <meta name="twitter:description" content="Free tool tracking 209+ artists who support the cultural boycott of Israel.">
+    <meta name="twitter:description" content="229+ artists tracked. Verified sources. Know before you go.">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .about-content {
-            max-width: 800px;
-            margin: 4rem auto;
-            padding: 0 20px;
+        :root {
+            --primary-blue: #0047ab;
+            --text-dark: #1a1a2e;
+            --text-muted: #555;
+            --bg-light: #f8f9ff;
+            --border: #e2e8f0;
         }
-        .about-content h1 {
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #fff;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        .navbar {
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: 700;
             color: var(--primary-blue);
-            margin-bottom: 2rem;
+            text-decoration: none;
+            letter-spacing: -0.5px;
         }
-        .about-content h2 {
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--primary-blue); }
+
+        .hero {
+            background: linear-gradient(135deg, #0047ab 0%, #1e3a8a 100%);
+            color: #fff;
+            padding: 80px 24px 64px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            opacity: 0.88;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        .stat-strip {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            background: var(--bg-light);
+            border-bottom: 1px solid var(--border);
+            padding: 32px 24px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.4rem;
+            font-weight: 800;
             color: var(--primary-blue);
-            margin: 2rem 0 1rem;
+            line-height: 1;
         }
-        .about-content p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 6px;
+        }
+
+        .main {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 64px 24px;
+        }
+
+        .section {
+            margin-bottom: 56px;
+        }
+
+        .section h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bg-light);
+        }
+
+        .section p {
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            color: var(--text-muted);
+            padding: 8px 0 8px 20px;
+            border-bottom: 1px solid var(--bg-light);
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .section ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .level-card {
+            background: var(--bg-light);
+            border-radius: 10px;
+            padding: 18px;
+            border-left: 4px solid transparent;
+        }
+
+        .level-card.critical { border-color: #dc2626; }
+        .level-card.high { border-color: #d97706; }
+        .level-card.low { border-color: #2563eb; }
+
+        .level-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            margin-bottom: 8px;
+        }
+
+        .level-card.critical .level-badge { background: #fef2f2; color: #dc2626; }
+        .level-card.high .level-badge { background: #fffbeb; color: #d97706; }
+        .level-card.low .level-badge { background: #eff6ff; color: #2563eb; }
+
+        .level-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #0047ab 0%, #1e3a8a 100%);
+            color: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #fff;
+            border: none;
+            padding: 0;
+        }
+
+        .cta-box p {
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 24px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: var(--primary-blue);
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn-primary:hover { opacity: 0.9; }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: background 0.2s;
+        }
+
+        .btn-secondary:hover { background: rgba(255,255,255,0.25); }
+
+        footer {
+            background: var(--bg-light);
+            border-top: 1px solid var(--border);
+            padding: 32px 24px;
+            text-align: center;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        footer a { color: var(--primary-blue); text-decoration: none; margin: 0 8px; }
+        footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 600px) {
+            .stat-strip { gap: 24px; }
+            .cta-box { padding: 28px 20px; }
         }
     </style>
 </head>
 <body>
+
     <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">☝️🇮🇱 ArtSiren</a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="database.html">Artist Database</a>
-                <a href="about.html">About</a>
-                <a href="extension.html">Get Extension</a>
-            </div>
+        <a href="index.html" class="logo">ArtSiren</a>
+        <div class="nav-links">
+            <a href="index.html">Artists</a>
+            <a href="about.html">About</a>
+            <a href="extension.html">Extension</a>
         </div>
     </nav>
 
-    <div class="about-content">
-        <h1>About ArtSiren</h1>
-        
-        <h2>Our Mission</h2>
-        <p>ArtSiren provides transparent, verified information about artists who have publicly taken positions on boycotting Israel. We believe consumers deserve to know this information when making entertainment choices.</p>
+    <div class="hero">
+        <h1>Know before you go</h1>
+        <p>ArtSiren is a free, independent tool that tracks artists who publicly support the cultural boycott of Israel — with verified sources from mainstream media.</p>
+    </div>
 
-        <h2>Our Approach</h2>
-        <p>All information in our database comes from publicly documented sources including:</p>
-        <ul>
-            <li>Official BDS movement documentation (archived)</li>
-            <li>Artists for Palestine UK statements</li>
-            <li>Wikipedia and major news outlets</li>
-            <li>Official artist statements and announcements</li>
-        </ul>
+    <div class="stat-strip">
+        <div class="stat">
+            <div class="stat-number">229</div>
+            <div class="stat-label">Artists tracked</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Source-verified</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Ticket sites covered</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Data collected</div>
+        </div>
+    </div>
 
-        <h2>Verification Process</h2>
-        <p>Every artist in our database has been verified through multiple sources. We provide direct citations so you can independently verify all information.</p>
+    <div class="main">
 
-        <h2>Privacy & Ethics</h2>
-        <p>We collect zero personal data. The extension runs entirely locally in your browser. We link to archived versions of boycott organization websites to document information while avoiding direct traffic to these sites.</p>
+        <div class="section">
+            <h2>Why ArtSiren exists</h2>
+            <p>When you buy a concert ticket or stream music, you're making a financial choice that benefits an artist. You deserve to know — before you pay — whether that artist has publicly called for a boycott of Israel.</p>
+            <p>This isn't about politics. It's about transparency. Every artist in our database has voluntarily made a public statement, signed an open letter, or cancelled a show in solidarity with the boycott movement. We document it. You decide.</p>
+        </div>
 
-        <h2>Corrections</h2>
-        <p>If you believe any information is inaccurate, please contact us with documentation at: <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ceada1bcbcabadbaa7a1a0bd8eaca1b7ada1babae3afa2abbcbabde0ada1a3">[email&#160;protected]</a></strong></p>
+        <div class="section">
+            <h2>How we verify</h2>
+            <p>Every entry is sourced from reputable, mainstream publishers. We don't cite fringe blogs or unverifiable social posts.</p>
+            <ul>
+                <li>Major outlets: Rolling Stone, Billboard, NME, The Guardian, Al Jazeera, BBC</li>
+                <li>Official artist statements and press releases</li>
+                <li>Open letters with named signatories (Musicians for Palestine, Film Workers for Palestine, etc.)</li>
+                <li>Confirmed concert cancellations reported in the press</li>
+            </ul>
+            <p style="margin-top:16px;">Each artist card links directly to the original source so you can verify everything independently.</p>
+        </div>
+
+        <div class="section">
+            <h2>Alert levels</h2>
+            <p>Artists are classified by the strength of their position, not our interpretation of it.</p>
+            <div class="level-grid">
+                <div class="level-card critical">
+                    <span class="level-badge">CRITICAL</span>
+                    <p>Publicly called to boycott Israel, signed a formal boycott pledge, or cancelled shows specifically in solidarity.</p>
+                </div>
+                <div class="level-card high">
+                    <span class="level-badge">HIGH</span>
+                    <p>Expressed strong solidarity with the boycott movement or signed relevant open letters.</p>
+                </div>
+                <div class="level-card low">
+                    <span class="level-badge">LOW</span>
+                    <p>Made public statements in support of Palestinian rights, without explicitly joining a boycott.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Privacy first</h2>
+            <p>The Chrome extension works entirely inside your browser. No data is ever collected, transmitted, or stored. We don't know who you are, what sites you visit, or which artists you look up.</p>
+            <p>The website has no tracking, no analytics cookies, and no third-party scripts that profile you. Our <a href="privacy.html" style="color:var(--primary-blue);">privacy policy</a> is one page and says exactly that.</p>
+        </div>
+
+        <div class="section">
+            <h2>Corrections & contact</h2>
+            <p>We take accuracy seriously. If any information is incorrect or outdated, contact us with a source and we'll update or remove the entry promptly.</p>
+            <ul>
+                <li>Email: <a href="mailto:contact@artsiren.co" style="color:var(--primary-blue);">contact@artsiren.co</a></li>
+                <li>We do not remove verified artists without evidence of a retraction</li>
+                <li>Artists who have publicly reversed their position are reclassified, not silently deleted</li>
+            </ul>
+        </div>
+
+        <div class="cta-box">
+            <h2>Start using ArtSiren</h2>
+            <p>Browse the full database on the website, or install the Chrome extension for automatic alerts while you buy tickets.</p>
+            <div class="cta-buttons">
+                <a href="index.html" class="btn-primary">Browse Artists</a>
+                <a href="extension.html" class="btn-secondary">Get the Extension</a>
+            </div>
+        </div>
+
     </div>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>ArtSiren</h4>
-                    <p>Publicly documented information about artists who boycott Israel.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <a href="database.html">Artist Database</a>
-                    <a href="about.html">About</a>
-                    <a href="extension.html">Download</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <a href="terms.html">Terms of Use</a>
-                    <a href="privacy.html">Privacy Policy</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 B
+        <p>&copy; 2026 ArtSiren &nbsp;·&nbsp;
+           <a href="index.html">Artists</a>
+           <a href="extension.html">Extension</a>
+           <a href="terms.html">Terms</a>
+           <a href="privacy.html">Privacy</a>
+           <a href="mailto:contact@artsiren.co">Contact</a>
+        </p>
+    </footer>
+
+</body>
+</html>
