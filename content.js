@@ -11,6 +11,7 @@
     
     let processedElements = new WeakSet();
     let displayedArtists = new Set();
+    let feedDetectedArtists = new Set();
 
     let settings = { hideYouTubeFeed: false };
     chrome.storage.sync.get(['hideYouTubeFeed'], result => {
@@ -382,9 +383,7 @@
             '#inner-header-container ytd-channel-name yt-formatted-string',
             // Search results: channel names
             'ytd-channel-renderer #text a',
-            // Search results: video titles
-            'ytd-video-renderer h3 a',
-            'ytd-compact-video-renderer h3 a',
+            // Search results handled by processYouTubeFeed (badge only, no popup)
             // YouTube Music
             'ytmusic-detail-header-renderer h2 yt-formatted-string',
             'ytmusic-responsive-list-item-renderer .secondary-flex-columns a'
@@ -969,7 +968,7 @@
                 if (!artist && titleEl) artist = findMatchingArtist(titleEl.textContent.trim());
                 if (artist) {
                     card.dataset.bsBoycotter = artist.name;
-                    displayedArtists.add(artist.name);
+                    feedDetectedArtists.add(artist.name);
                     if (settings.hideYouTubeFeed) {
                         card.style.display = 'none';
                     } else {
@@ -1038,10 +1037,19 @@
         debounceTimeout = setTimeout(func, delay);
     }
     
+    function dismissAllAlerts() {
+        document.querySelectorAll('.boycott-floating-alert').forEach(el => {
+            el.classList.remove('show');
+            setTimeout(() => el.remove(), 300);
+        });
+    }
+
     // Initialize
     function resetState() {
         processedElements = new WeakSet();
         displayedArtists = new Set();
+        feedDetectedArtists = new Set();
+        dismissAllAlerts();
     }
 
     const isYT = () => window.location.hostname.includes('youtube.com');
@@ -1060,6 +1068,18 @@
                     processYouTubeFeed();
                 }, 1500);
             });
+        }
+
+        // Spotify SPA navigation: dismiss alerts when URL changes
+        if (window.location.hostname.includes('spotify.com')) {
+            let lastUrl = location.href;
+            setInterval(() => {
+                if (location.href !== lastUrl) {
+                    lastUrl = location.href;
+                    resetState();
+                    setTimeout(processElements, 1000);
+                }
+            }, 1000);
         }
 
         const observer = new MutationObserver(() => {
@@ -1083,7 +1103,8 @@
             processElements();
             if (isYT()) processYouTubeFeed();
             setTimeout(() => {
-                sendResponse({ artists: Array.from(displayedArtists) });
+                const all = new Set([...displayedArtists, ...feedDetectedArtists]);
+                sendResponse({ artists: Array.from(all) });
             }, 600);
             return true;
         }
