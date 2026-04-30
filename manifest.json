@@ -6,7 +6,8 @@
   "description": "Know before you buy. See which artists support the cultural boycott of Israel — with verified sources. 229 artists tracked.",
 
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
 
   "host_permissions": [

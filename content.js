@@ -11,6 +11,17 @@
     
     let processedElements = new WeakSet();
     let displayedArtists = new Set();
+
+    let settings = { hideYouTubeFeed: false };
+    chrome.storage.sync.get(['hideYouTubeFeed'], result => {
+        settings.hideYouTubeFeed = !!result.hideYouTubeFeed;
+    });
+    chrome.storage.sync.onChanged.addListener(changes => {
+        if ('hideYouTubeFeed' in changes) {
+            settings.hideYouTubeFeed = changes.hideYouTubeFeed.newValue;
+            applyFeedHideSetting();
+        }
+    });
     
     // Detect which site we're on
     function getSiteDetector() {
@@ -940,6 +951,62 @@
         return icon;
     }
     
+    // YouTube feed: mark/hide boycotting artists in home feed, search, sidebar
+    function processYouTubeFeed() {
+        const cardSelectors = [
+            'ytd-rich-item-renderer',
+            'ytd-video-renderer',
+            'ytd-compact-video-renderer',
+            'ytd-grid-video-renderer'
+        ];
+        cardSelectors.forEach(sel => {
+            document.querySelectorAll(sel + ':not([data-bs-checked])').forEach(card => {
+                card.dataset.bsChecked = '1';
+                const channelEl = card.querySelector('#channel-name a, #text a, ytd-channel-name a');
+                const titleEl = card.querySelector('#video-title, h3 a');
+                let artist = null;
+                if (channelEl) artist = findMatchingArtist(channelEl.textContent.trim());
+                if (!artist && titleEl) artist = findMatchingArtist(titleEl.textContent.trim());
+                if (artist) {
+                    card.dataset.bsBoycotter = artist.name;
+                    displayedArtists.add(artist.name);
+                    if (settings.hideYouTubeFeed) {
+                        card.style.display = 'none';
+                    } else {
+                        addFeedBadge(card, artist.name);
+                    }
+                }
+            });
+        });
+    }
+
+    function addFeedBadge(card, artistName) {
+        if (card.querySelector('.bs-feed-badge')) return;
+        const thumb = card.querySelector('ytd-thumbnail, #thumbnail');
+        if (!thumb) return;
+        thumb.style.position = 'relative';
+        const badge = document.createElement('div');
+        badge.className = 'bs-feed-badge';
+        badge.innerHTML = `<span>🚫 ${artistName}</span><button class="bs-hide-card" title="Hide this video">×</button>`;
+        badge.querySelector('.bs-hide-card').addEventListener('click', e => {
+            e.preventDefault();
+            e.stopPropagation();
+            card.style.display = 'none';
+        });
+        thumb.appendChild(badge);
+    }
+
+    function applyFeedHideSetting() {
+        document.querySelectorAll('[data-bs-boycotter]').forEach(card => {
+            if (settings.hideYouTubeFeed) {
+                card.style.display = 'none';
+            } else {
+                card.style.display = '';
+                addFeedBadge(card, card.dataset.bsBoycotter);
+            }
+        });
+    }
+
     // Process elements
     function processElements() {
         const detector = getSiteDetector();
@@ -977,28 +1044,50 @@
         displayedArtists = new Set();
     }
 
-    function init() {
-        setTimeout(processElements, 1000);
+    const isYT = () => window.location.hostname.includes('youtube.com');
 
-        // YouTube fires this event on every SPA navigation (new video, channel, search)
-        if (window.location.hostname.includes('youtube.com')) {
+    function init() {
+        setTimeout(() => {
+            processElements();
+            if (isYT()) processYouTubeFeed();
+        }, 1000);
+
+        if (isYT()) {
             document.addEventListener('yt-navigate-finish', () => {
                 resetState();
-                setTimeout(processElements, 1500);
+                setTimeout(() => {
+                    processElements();
+                    processYouTubeFeed();
+                }, 1500);
             });
         }
 
         const observer = new MutationObserver(() => {
-            debounce(processElements, CONFIG.debounceDelay);
+            debounce(() => {
+                processElements();
+                if (isYT()) processYouTubeFeed();
+            }, CONFIG.debounceDelay);
         });
 
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
+        observer.observe(document.body, { childList: true, subtree: true });
 
-        setInterval(processElements, CONFIG.checkInterval);
+        setInterval(() => {
+            processElements();
+            if (isYT()) processYouTubeFeed();
+        }, CONFIG.checkInterval);
     }
+
+    // Popup scanner: return all detected artists on this page
+    chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+        if (msg.action === 'scanPage') {
+            processElements();
+            if (isYT()) processYouTubeFeed();
+            setTimeout(() => {
+                sendResponse({ artists: Array.from(displayedArtists) });
+            }, 600);
+            return true;
+        }
+    });
     
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
