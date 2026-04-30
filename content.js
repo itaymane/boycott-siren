@@ -378,8 +378,7 @@
             '#owner ytd-channel-name a',
             '#owner-name a',
             '#upload-info ytd-channel-name a',
-            // Channel page: channel header name
-            '#channel-name yt-formatted-string',
+            // Channel page: channel header name (specific to header, not sidebar)
             '#inner-header-container ytd-channel-name yt-formatted-string',
             // Search results: channel names
             'ytd-channel-renderer #text a',
