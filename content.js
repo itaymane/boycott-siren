@@ -735,7 +735,7 @@
         
         const normalizedText = text.toLowerCase().trim();
         
-        for (const artist of ARTISTS_DATABASE) {
+        for (const artist of artistsData) {
             const artistName = artist.name.toLowerCase();
             
             // Exact match
