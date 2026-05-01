@@ -960,7 +960,7 @@
         cardSelectors.forEach(sel => {
             document.querySelectorAll(sel + ':not([data-bs-checked])').forEach(card => {
                 card.dataset.bsChecked = '1';
-                const channelEl = card.querySelector('#channel-name a, #text a, ytd-channel-name a');
+                const channelEl = card.querySelector('ytd-channel-name a, a[href^="/@"], a[href^="/channel/"], a[href^="/user/"], #channel-name a');
                 const titleEl = card.querySelector('#video-title, h3 a');
                 let artist = null;
                 if (channelEl) artist = findMatchingArtist(channelEl.textContent.trim());
@@ -980,9 +980,11 @@
 
     function addFeedBadge(card, artistName) {
         if (card.querySelector('.bs-feed-badge')) return;
-        const thumb = card.querySelector('ytd-thumbnail, #thumbnail');
+        const thumb = card.querySelector('a#thumbnail') || card.querySelector('#thumbnail');
         if (!thumb) return;
-        thumb.style.position = 'relative';
+        if (getComputedStyle(thumb).position === 'static') {
+            thumb.style.position = 'relative';
+        }
         const badge = document.createElement('div');
         badge.className = 'bs-feed-badge';
         badge.innerHTML = `<span>🚫 ${artistName}</span><button class="bs-hide-card" title="Hide this video">×</button>`;
@@ -1059,47 +1061,41 @@
 
     const isYT = () => window.location.hostname.includes('youtube.com');
 
-    function init() {
-        setTimeout(() => {
-            processElements();
-            if (isYT()) processYouTubeFeed();
-        }, 1000);
+    function runScan() {
+        processElements();
+        if (isYT()) processYouTubeFeed();
+    }
 
+    function init() {
+        setTimeout(runScan, 1000);
+
+        // Reliable SPA navigation detection via URL polling (covers YouTube + Spotify)
+        let lastUrl = location.href;
+        setInterval(() => {
+            const current = location.href;
+            if (current !== lastUrl) {
+                lastUrl = current;
+                resetState();
+                setTimeout(runScan, 1500);
+            }
+        }, 500);
+
+        // YouTube also fires this event — use it for faster response
         if (isYT()) {
             document.addEventListener('yt-navigate-finish', () => {
+                lastUrl = location.href; // prevent double-fire with URL polling
                 resetState();
-                setTimeout(() => {
-                    processElements();
-                    processYouTubeFeed();
-                }, 1500);
+                setTimeout(runScan, 1500);
             });
         }
 
-        // Spotify SPA navigation: dismiss alerts when URL changes
-        if (window.location.hostname.includes('spotify.com')) {
-            let lastUrl = location.href;
-            setInterval(() => {
-                if (location.href !== lastUrl) {
-                    lastUrl = location.href;
-                    resetState();
-                    setTimeout(processElements, 1000);
-                }
-            }, 1000);
-        }
-
         const observer = new MutationObserver(() => {
-            debounce(() => {
-                processElements();
-                if (isYT()) processYouTubeFeed();
-            }, CONFIG.debounceDelay);
+            debounce(runScan, CONFIG.debounceDelay);
         });
 
         observer.observe(document.body, { childList: true, subtree: true });
 
-        setInterval(() => {
-            processElements();
-            if (isYT()) processYouTubeFeed();
-        }, CONFIG.checkInterval);
+        setInterval(runScan, CONFIG.checkInterval);
     }
 
     // Popup scanner: return all detected artists on this page
