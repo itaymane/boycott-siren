@@ -1068,24 +1068,37 @@
         if (isYT()) processYouTubeFeed();
     }
 
+    // Returns only the meaningful part of the URL for navigation detection.
+    // Ignores &t=, &pp=, and other YouTube playback params that change mid-video.
+    function navKey(url) {
+        try {
+            const u = new URL(url);
+            if (u.hostname.includes('youtube.com')) {
+                const v = u.searchParams.get('v') || '';
+                return u.pathname + (v ? '?v=' + v : '');
+            }
+            return u.hostname + u.pathname;
+        } catch(e) { return url; }
+    }
+
     function init() {
         setTimeout(runScan, 1000);
 
-        // Reliable SPA navigation detection via URL polling (covers YouTube + Spotify)
-        let lastUrl = location.href;
+        // SPA navigation detection — ignores minor URL param changes
+        let lastKey = navKey(location.href);
         setInterval(() => {
-            const current = location.href;
-            if (current !== lastUrl) {
-                lastUrl = current;
+            const current = navKey(location.href);
+            if (current !== lastKey) {
+                lastKey = current;
                 resetState();
                 setTimeout(runScan, 1500);
             }
         }, 500);
 
-        // YouTube also fires this event — use it for faster response
+        // YouTube also fires this event — sync lastKey to prevent double-fire
         if (isYT()) {
             document.addEventListener('yt-navigate-finish', () => {
-                lastUrl = location.href; // prevent double-fire with URL polling
+                lastKey = navKey(location.href);
                 resetState();
                 setTimeout(runScan, 1500);
             });
