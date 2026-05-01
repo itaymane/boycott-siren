@@ -1053,6 +1053,7 @@
         displayedArtists = new Set();
         feedDetectedArtists = new Set();
         dismissAllAlerts();
+        document.querySelectorAll('.boycott-small-icon').forEach(el => el.remove());
         document.querySelectorAll('[data-bs-checked]').forEach(el => {
             delete el.dataset.bsChecked;
             delete el.dataset.bsBoycotter;
