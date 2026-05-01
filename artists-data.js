@@ -16,6 +16,12 @@ const artistsData = [
     sources: `<a href="https://deadline.com/2023/12/dua-lipa-pulls-music-video-insensitive-israel-gaza-conflict-1235683400/">Deadline</a> | <a href="https://www.newsweek.com/dua-lipa-israel-palestinians-hamas-conflict-rolling-stone-interview-1861402">Newsweek</a> | <a href="https://www.euronews.com/culture/2024/05/29/dua-lipa-shares-support-for-alleyesonrafah-what-does-it-mean">Euronews</a> | <a href="https://www.timesofisrael.com/singer-dua-lipa-slams-ugly-campaign-criticizing-her-for-pro-palestinian-stance/">Times of Israel</a>`
   },
   {
+    name: "Eric Clapton",
+    level: "HIGH",
+    statement: "Made antisemitic statements claiming 'Israel is running the world'; performed with a guitar painted in Palestinian flag colors dedicated to Gaza; released a fundraising concert for Gaza children (December 2023); publicly defended Roger Waters' political activism against Israel",
+    sources: `<a href="https://www.algemeiner.com/2024/05/29/guitarist-eric-clapton-says-israel-running-world-criticizes-hearings-campus-antisemitism/">Algemeiner</a> | <a href="https://www.jpost.com/israel-hamas-war/article-782583">Jerusalem Post</a> | <a href="https://www.nme.com/news/music/eric-clapton-on-roger-waters-political-views-it-takes-a-lot-of-guts-suffers-from-it-terribly-3760854">NME</a>`
+  },
+  {
     name: "Patti Smith",
     level: "CRITICAL",
     statement: "Supports cultural boycott, declined to perform in Israel",
