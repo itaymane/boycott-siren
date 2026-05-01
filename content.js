@@ -949,13 +949,16 @@
         return icon;
     }
     
-    // YouTube feed: mark/hide boycotting artists in home feed, search, sidebar
+    // YouTube feed: mark/hide boycotting artists in home feed, search, sidebar, playlists
     function processYouTubeFeed() {
         const cardSelectors = [
             'ytd-rich-item-renderer',
             'ytd-video-renderer',
             'ytd-compact-video-renderer',
-            'ytd-grid-video-renderer'
+            'ytd-grid-video-renderer',
+            'ytd-playlist-video-renderer',
+            'ytd-playlist-panel-video-renderer',
+            'ytd-radio-item-renderer'
         ];
         cardSelectors.forEach(sel => {
             document.querySelectorAll(sel + ':not([data-bs-checked])').forEach(card => {
@@ -980,11 +983,10 @@
 
     function addFeedBadge(card, artistName) {
         if (card.querySelector('.bs-feed-badge')) return;
-        const thumb = card.querySelector('a#thumbnail') || card.querySelector('#thumbnail');
+        const thumb = card.querySelector('a#thumbnail') || card.querySelector('#thumbnail') || card.querySelector('ytd-thumbnail');
         if (!thumb) return;
-        if (getComputedStyle(thumb).position === 'static') {
-            thumb.style.position = 'relative';
-        }
+        thumb.style.position = 'relative';
+        thumb.style.overflow = 'visible';
         const badge = document.createElement('div');
         badge.className = 'bs-feed-badge';
         badge.innerHTML = `<span>🚫 ${artistName}</span><button class="bs-hide-card" title="Hide this video">×</button>`;
