@@ -1049,6 +1049,12 @@
         displayedArtists = new Set();
         feedDetectedArtists = new Set();
         dismissAllAlerts();
+        document.querySelectorAll('[data-bs-checked]').forEach(el => {
+            delete el.dataset.bsChecked;
+            delete el.dataset.bsBoycotter;
+            const badge = el.querySelector('.bs-feed-badge');
+            if (badge) badge.remove();
+        });
     }
 
     const isYT = () => window.location.hostname.includes('youtube.com');
