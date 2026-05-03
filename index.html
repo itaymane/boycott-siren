@@ -1233,13 +1233,13 @@
                     <div style="margin-bottom: 1.5rem;">
                         <div style="font-size: 0.9rem; color: #666; margin-bottom: 0.75rem; font-weight: 600;">Share:</div>
                         <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                            <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent('🚨 ' + artist.name + ' supports the cultural boycott of Israel.\n\nartsiren.co — 229 verified artists tracked.')}&url=${encodeURIComponent('https://artsiren.co')}" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: #000; color: #fff; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">
+                            <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent('🚨 ' + artist.name + ' supports the cultural boycott of Israel.')}&url=${encodeURIComponent('https://artsiren.co/?artist=' + artist.id)}" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: #000; color: #fff; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">
                                 𝕏 &nbsp;Post
                             </a>
-                            <a href="https://wa.me/?text=${encodeURIComponent('🚨 ' + artist.name + ' supports the cultural boycott of Israel.\n\nSee verified sources: https://artsiren.co')}" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: #25d366; color: #fff; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">
+                            <a href="https://wa.me/?text=${encodeURIComponent('🚨 ' + artist.name + ' supports the cultural boycott of Israel.\n\nSee verified sources: https://artsiren.co/?artist=' + artist.id)}" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: #25d366; color: #fff; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">
                                 WhatsApp
                             </a>
-                            <button onclick="navigator.clipboard.writeText('🚨 ' + '${artist.name.replace(/'/g, "\\'")}' + ' supports the cultural boycott of Israel. See verified sources: https://artsiren.co').then(() => { this.textContent = 'Copied!'; setTimeout(() => this.textContent = 'Copy Link', 1500); })" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: #f0f4ff; color: #0047ab; border: 1px solid #c7d8f8; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer;">
+                            <button onclick="navigator.clipboard.writeText('https://artsiren.co/?artist=${artist.id}').then(() => { this.textContent = 'Copied!'; setTimeout(() => this.textContent = 'Copy Link', 1500); })" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: #f0f4ff; color: #0047ab; border: 1px solid #c7d8f8; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer;">
                                 Copy Link
                             </button>
                         </div>
@@ -1338,6 +1338,16 @@
         }
         
         // Show installation guide after download
+        // Open artist modal directly from ?artist=<id> URL param
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            const artistParam = params.get('artist');
+            if (artistParam) {
+                const id = parseInt(artistParam);
+                if (!isNaN(id)) showArtistDetails(id);
+            }
+        })();
+
         function showInstallGuide() {
             setTimeout(() => {
                 const modal = document.createElement('div');
