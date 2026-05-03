@@ -1,6 +1,6 @@
 // ArtSiren Artist Database — Chrome Extension
-// Total: 229 verified artists
-// Last updated: 2026-04-25
+// Total: 230 verified artists
+// Last updated: 2026-05-03
 
 const artistsData = [
   {
@@ -1382,5 +1382,11 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Pulitzer Prize-winning author who signed the literary boycott of Israeli cultural institutions (2024) and publicly withheld permission for his book to be published by his Israeli publisher unless they endorsed Palestinian rights; vocal BDS advocate who has written extensively about the movement",
     sources: `<a href="https://www.972mag.com/viet-thanh-nguyen-bds-israel-palestine/">+972 Magazine</a> | <a href="https://lithub.com/hundreds-of-authors-pledge-to-boycott-israeli-cultural-institutions/">Literary Hub</a>`
+  },
+  {
+    name: "Dave Matthews Band",
+    level: "HIGH",
+    statement: "Frontman Dave Matthews shouted 'Free Palestine' from concert stage (June-July 2024); physically protested at the US Capitol during Netanyahu's address to Congress (July 24, 2024); told Al Jazeera 'I'm ashamed that my tax dollars are going to the brutalizing of an entire people. It's shameful'; called Congress's support for Netanyahu 'disgusting'",
+    sources: `<a href="https://www.nme.com/news/music/dave-matthews-ashamed-at-benjamin-netanyahus-visit-to-us-congress-3778344">NME</a> | <a href="https://variety.com/2024/music/news/dave-matthews-netanyahu-protest-disgusted-congress-1236084651/">Variety</a> | <a href="https://www.newsweek.com/dave-matthews-protest-congress-benjamin-netanyahu-1930973">Newsweek</a> | <a href="https://www.billboard.com/culture/politics/dave-matthews-protests-israel-prime-minister-netanyu-us-congress-visit-1235740320/">Billboard</a>`
   }
 ];
