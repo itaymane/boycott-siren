@@ -1,5 +1,5 @@
 // ArtSiren Artist Database — Chrome Extension
-// Total: 230 verified artists
+// Total: 237 verified artists
 // Last updated: 2026-05-03
 
 const artistsData = [
@@ -1388,5 +1388,47 @@ const artistsData = [
     level: "HIGH",
     statement: "Frontman Dave Matthews shouted 'Free Palestine' from concert stage (June-July 2024); physically protested at the US Capitol during Netanyahu's address to Congress (July 24, 2024); told Al Jazeera 'I'm ashamed that my tax dollars are going to the brutalizing of an entire people. It's shameful'; called Congress's support for Netanyahu 'disgusting'",
     sources: `<a href="https://www.nme.com/news/music/dave-matthews-ashamed-at-benjamin-netanyahus-visit-to-us-congress-3778344">NME</a> | <a href="https://variety.com/2024/music/news/dave-matthews-netanyahu-protest-disgusted-congress-1236084651/">Variety</a> | <a href="https://www.newsweek.com/dave-matthews-protest-congress-benjamin-netanyahu-1930973">Newsweek</a> | <a href="https://www.billboard.com/culture/politics/dave-matthews-protests-israel-prime-minister-netanyu-us-congress-visit-1235740320/">Billboard</a>`
+  },
+  {
+    name: "Billie Eilish",
+    level: "HIGH",
+    statement: "Wore 'Artists for Ceasefire' pin at the Oscars (March 2024); called Israel's plan to forcibly relocate Palestinians from Rafah 'horrifying' (July 2025); appeared in 'Together for Palestine' benefit video — 'Call for a ceasefire, stop the killing' (September 2025)",
+    sources: `<a href="https://variety.com/2024/awards/news/oscars-protest-ceasefire-pins-red-carpet-1235927210/">Variety</a> | <a href="https://www.billboard.com/music/music-news/billie-eilish-condemns-israel-plan-relocate-palestinians-1236017115/">Billboard</a> | <a href="https://www.nme.com/news/music/watch-billie-eilish-cillian-murphy-steve-coogan-joaquin-phoenix-share-message-for-together-for-palestine-call-for-a-ceasefire-stop-the-killing-3893216">NME</a>`
+  },
+  {
+    name: "Halsey",
+    level: "HIGH",
+    statement: "Broke public silence in November 2023 to reaffirm 'my stance regarding the liberation of the Palestinian people' and pledged donations to relief organizations; condemned Israel's offensive on Rafah (May 2024)",
+    sources: `<a href="https://www.newsweek.com/halsey-takes-stand-israeli-palestinian-conflict-1843876">Newsweek</a> | <a href="https://www.nme.com/news/music/halsey-regrets-letting-cowardice-stop-her-from-previously-commenting-on-israel-hamas-war-3540265">NME</a>`
+  },
+  {
+    name: "SZA",
+    level: "HIGH",
+    statement: "Shouted 'Free Palestine' while holding a Palestinian flag on stage at Spark Arena, Auckland (April 2024)",
+    sources: `<a href="https://www.billboard.com/music/music-news/sza-shouts-free-palestine-australia-sos-concert-1235658740/">Billboard</a>`
+  },
+  {
+    name: "Vampire Weekend",
+    level: "HIGH",
+    statement: "Frontman Ezra Koenig defended pro-Palestinian expression from the stage at Victorious Festival (August 2025): 'If someone was punished for flying a flag, that is wrong and they deserve an apology. The terrible suffering of the Palestinian people deserves all of our sympathy'",
+    sources: `<a href="https://www.nme.com/news/music/vampire-weekend-on-the-mary-wallopers-victorious-controversy-that-is-wrong-and-they-deserve-an-apology-3886843">NME</a> | <a href="https://www.billboard.com/music/music-news/last-dinner-party-boycotts-victorious-festival-palestine-1236050564/">Billboard</a>`
+  },
+  {
+    name: "FKA Twigs",
+    level: "HIGH",
+    statement: "Performed at Artists for Aid benefit concert in London (July 2024), raising funds for War Child UK's Gaza and Sudan Response Plan covering food, water, and education for 120,000+ children",
+    sources: `<a href="https://www.rollingstone.com/music/music-news/fka-twigs-cellophane-london-charity-show-live-1235053828/">Rolling Stone</a> | <a href="https://www.nme.com/news/music/fka-twigs-london-fundraiser-gaza-sudan-aid-mustafa-clairo-3772252">NME</a>`
+  },
+  {
+    name: "Lizzo",
+    level: "HIGH",
+    statement: "Posted Instagram video calling for 'liberation of the people... specifically Palestine, Sudan and the Congo'; thanked activists and pledged personal fundraising (May 2024)",
+    sources: `<a href="https://www.billboard.com/music/music-news/lizzo-supports-palestine-sudan-congo-college-protests-instagram-1235681873/">Billboard</a> | <a href="https://www.nme.com/news/music/lizzo-shares-support-for-palestine-sudan-dr-congo-and-college-protests-we-aint-free-til-we-all-free-3756245">NME</a>`
+  },
+  {
+    name: "Thom Yorke",
+    level: "LOW",
+    statement: "Condemned Netanyahu and called Israel's blockade of Gaza aid 'horrific' (May 2025); stated Radiohead would 'absolutely not' return to Israel (October 2025). Also condemned Hamas and rejected boycott calls — critical of Israeli government without fully endorsing BDS",
+    sources: `<a href="https://www.rollingstone.com/music/music-news/thom-yorke-condemns-netanyahu-hamas-gaza-1235351340/">Rolling Stone</a> | <a href="https://www.nme.com/news/music/thom-yorke-says-radiohead-will-absolutely-not-return-to-israel-and-he-wouldnt-want-to-be-5000-miles-anywhere-near-the-netanyahu-regime-3902353">NME</a> | <a href="https://www.billboard.com/music/rock/thom-yorke-note-heckler-israel-hamas-war-netanyahu-extremist-1235985900/">Billboard</a>`
   }
 ];
