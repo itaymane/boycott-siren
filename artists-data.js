@@ -1,5 +1,5 @@
 // ArtSiren Artist Database — Chrome Extension
-// Total: 237 verified artists
+// Total: 238 verified artists
 // Last updated: 2026-05-03
 
 const artistsData = [
@@ -1430,5 +1430,11 @@ const artistsData = [
     level: "LOW",
     statement: "Condemned Netanyahu and called Israel's blockade of Gaza aid 'horrific' (May 2025); stated Radiohead would 'absolutely not' return to Israel (October 2025). Also condemned Hamas and rejected boycott calls — critical of Israeli government without fully endorsing BDS",
     sources: `<a href="https://www.rollingstone.com/music/music-news/thom-yorke-condemns-netanyahu-hamas-gaza-1235351340/">Rolling Stone</a> | <a href="https://www.nme.com/news/music/thom-yorke-says-radiohead-will-absolutely-not-return-to-israel-and-he-wouldnt-want-to-be-5000-miles-anywhere-near-the-netanyahu-regime-3902353">NME</a> | <a href="https://www.billboard.com/music/rock/thom-yorke-note-heckler-israel-hamas-war-netanyahu-extremist-1235985900/">Billboard</a>`
+  },
+  {
+    name: "Tyler, the Creator",
+    level: "LOW",
+    statement: "Wore a Palestinian flag pin during his headline set at Coachella (April 2024)",
+    sources: `<a href="https://www.nme.com/news/music/tyler-the-creator-wore-a-palestine-pin-badge-during-his-coachella-headline-set-3618016">NME</a>`
   }
 ];
