@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtSiren | Artist Boycott Database – 229 Verified Artists</title>
+    <title>ArtSiren | Artist Boycott Database – 238 Verified Artists</title>
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0047AB">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ArtSiren">
+    <link rel="apple-touch-icon" href="/logo.png">
     <meta name="description" content="Search 229+ verified artists who support the cultural boycott of Israel. Roger Waters, Lorde, Dua Lipa, Brian Eno and more – all from publicly documented sources. Get instant alerts with our free Chrome extension.">
     <meta name="keywords" content="artist boycott Israel, BDS artists, musicians boycott Israel, cultural boycott, boycott siren, Roger Waters BDS, Lorde boycott Israel, Brian Eno Palestine">
     <meta name="robots" content="index, follow">
@@ -677,10 +685,13 @@
                 </a>
                 <div class="nav-cta-wrap">
                     <div class="nav-cta-label">Get Instant Alerts</div>
-                    <a href="boycott-siren-extension.zip" download onclick="trackExtensionDownload(); showInstallGuide();" class="btn-cta nav-cta-btn">
+                    <a href="boycott-siren-extension.zip" download onclick="trackExtensionDownload(); showInstallGuide();" class="btn-cta nav-cta-btn" id="ext-btn">
                         <span class="btn-cta-full">⚡ Add Chrome Extension</span>
                         <span class="btn-cta-short">⚡ Extension</span>
                     </a>
+                    <button id="pwa-install-btn" onclick="installPWA()" style="display:none; margin-left:8px; padding:8px 16px; background:#0047ab; color:#fff; border:none; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer;">
+                        📱 Install App
+                    </button>
                 </div>
             </div>
         </div>
@@ -1460,6 +1471,36 @@
                     if (e.target === modal) modal.remove();
                 });
             }, 500);
+        }
+
+        // PWA install prompt
+        let _pwaPrompt = null;
+        window.addEventListener('beforeinstallprompt', e => {
+            e.preventDefault();
+            _pwaPrompt = e;
+            document.getElementById('pwa-install-btn').style.display = 'inline-block';
+        });
+
+        function installPWA() {
+            if (_pwaPrompt) {
+                _pwaPrompt.prompt();
+                _pwaPrompt.userChoice.then(r => {
+                    if (r.outcome === 'accepted') {
+                        document.getElementById('pwa-install-btn').style.display = 'none';
+                    }
+                    _pwaPrompt = null;
+                });
+            } else {
+                // iOS — no beforeinstallprompt support, show manual instructions
+                alert('On iPhone/iPad:\n1. Tap the Share button (□↑) in Safari\n2. Tap "Add to Home Screen"\n3. Tap "Add"');
+            }
+        }
+
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
         }
     </script>
 

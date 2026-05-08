@@ -1,0 +1,23 @@
+{
+  "name": "ArtSiren — Know Before You Stream",
+  "short_name": "ArtSiren",
+  "description": "Search 238+ artists who support the cultural boycott of Israel. Verified sources.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0047AB",
+  "background_color": "#f8f9fc",
+  "categories": ["music", "news", "utilities"],
+  "icons": [
+    { "src": "/logo.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Search Artists",
+      "url": "/?focus=search",
+      "description": "Search the artist database"
+    }
+  ]
+}
