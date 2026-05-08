@@ -203,6 +203,126 @@
             font-size: 0.8rem;
         }
 
+        /* ── Contact Modal ── */
+        .contact-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(10,15,30,0.55);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .contact-overlay.open { display: flex; }
+        .contact-modal {
+            background: #fff;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 520px;
+            padding: 2.5rem;
+            position: relative;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.18);
+            animation: slideUp 0.25s ease;
+        }
+        .contact-modal h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0a0f1e;
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.5px;
+        }
+        .contact-modal .contact-sub {
+            font-size: 0.875rem;
+            color: #718096;
+            margin-bottom: 1.75rem;
+        }
+        .contact-close {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.25rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #a0aec0;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0.25rem;
+        }
+        .contact-close:hover { color: #0a0f1e; }
+        .contact-field {
+            margin-bottom: 1rem;
+        }
+        .contact-field label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        .contact-field input,
+        .contact-field select,
+        .contact-field textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            color: #0a0f1e;
+            background: #f8f9fc;
+            transition: border 0.15s, box-shadow 0.15s;
+            outline: none;
+        }
+        .contact-field input:focus,
+        .contact-field select:focus,
+        .contact-field textarea:focus {
+            border-color: #0047ab;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(0,71,171,0.08);
+        }
+        .contact-field textarea { resize: vertical; min-height: 110px; }
+        .contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .contact-submit {
+            width: 100%;
+            padding: 0.875rem;
+            background: #0047ab;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: background 0.15s, transform 0.15s;
+        }
+        .contact-submit:hover { background: #1a5cc7; transform: translateY(-1px); }
+        .contact-submit:disabled { background: #a0aec0; cursor: not-allowed; transform: none; }
+        .contact-success {
+            display: none;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .contact-success .success-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .contact-success h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0a0f1e;
+            margin-bottom: 0.5rem;
+        }
+        .contact-success p { color: #718096; font-size: 0.9rem; }
+        @media (max-width: 540px) {
+            .contact-modal { padding: 1.75rem 1.25rem; }
+            .contact-row { grid-template-columns: 1fr; gap: 0; }
+        }
+
         /* ── Hero ── */
         .hero {
             padding: 5rem 0 2.5rem;
@@ -786,12 +906,67 @@
                 <a href="privacy.html">Privacy Policy</a>
                 <span style="color: #ddd;">|</span>
                 <a href="extension.html">Get Extension</a>
+                <span style="color: #ddd;">|</span>
+                <a href="#" onclick="openContact(); return false;">Contact</a>
             </div>
             <div class="footer-copyright">
                 © 2026 ArtSiren
             </div>
         </div>
     </footer>
+
+    <!-- Contact Modal -->
+    <div class="contact-overlay" id="contactOverlay" onclick="if(event.target===this) closeContact()">
+        <div class="contact-modal">
+            <button class="contact-close" onclick="closeContact()">×</button>
+
+            <div id="contactForm">
+                <h2>Get in Touch</h2>
+                <p class="contact-sub">We read every message. Select a category so we can respond faster.</p>
+
+                <form name="contact" netlify data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="submitContact(event)">
+                    <input type="hidden" name="form-name" value="contact">
+                    <input type="hidden" name="bot-field" style="display:none">
+
+                    <div class="contact-field">
+                        <label>Category</label>
+                        <select name="category" required>
+                            <option value="" disabled selected>Select a reason for contact</option>
+                            <option value="artist-submission">🎵 Artist Submission — suggest adding or updating an artist</option>
+                            <option value="press-media">📰 Press & Media — journalist or media inquiry</option>
+                            <option value="legal">⚖️ Legal — legal notice or inquiry</option>
+                            <option value="partnership">🤝 Partnership — collaboration or sponsorship</option>
+                            <option value="feedback">💬 Feedback — general comments or bug report</option>
+                        </select>
+                    </div>
+
+                    <div class="contact-row">
+                        <div class="contact-field">
+                            <label>Name</label>
+                            <input type="text" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="contact-field">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="contact-field">
+                        <label>Message</label>
+                        <textarea name="message" placeholder="Tell us more..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-submit" id="contactSubmitBtn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-success" id="contactSuccess">
+                <div class="success-icon">✓</div>
+                <h3>Message received</h3>
+                <p>We'll get back to you at the email you provided.</p>
+            </div>
+        </div>
+    </div>
 
     <script>
         const ARTISTS_DATABASE = [
@@ -1471,6 +1646,39 @@
                     if (e.target === modal) modal.remove();
                 });
             }, 500);
+        }
+
+        // Contact modal
+        function openContact() {
+            document.getElementById('contactOverlay').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeContact() {
+            document.getElementById('contactOverlay').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeContact(); });
+
+        async function submitContact(e) {
+            e.preventDefault();
+            const btn = document.getElementById('contactSubmitBtn');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            const form = e.target;
+            try {
+                await fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(new FormData(form)).toString()
+                });
+                document.getElementById('contactForm').style.display = 'none';
+                document.getElementById('contactSuccess').style.display = 'block';
+                setTimeout(closeContact, 3000);
+            } catch {
+                btn.disabled = false;
+                btn.textContent = 'Send Message';
+                alert('Something went wrong. Please try again.');
+            }
         }
 
         // PWA install prompt
