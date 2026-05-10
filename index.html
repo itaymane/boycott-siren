@@ -947,7 +947,7 @@
                         </div>
                         <div class="contact-field">
                             <label>Email</label>
-                            <input type="email" name="email" placeholder="your@email.com" required>
+                            <input type="email" name="email" placeholder="your@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                         </div>
                     </div>
 
@@ -1650,6 +1650,12 @@
 
         // Contact modal
         function openContact() {
+            document.getElementById('contactForm').style.display = '';
+            document.getElementById('contactSuccess').style.display = '';
+            const btn = document.getElementById('contactSubmitBtn');
+            btn.disabled = false;
+            btn.textContent = 'Send Message';
+            document.querySelector('#contactForm form').reset();
             document.getElementById('contactOverlay').classList.add('open');
             document.body.style.overflow = 'hidden';
         }
