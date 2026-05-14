@@ -1,6 +1,6 @@
 // ArtSiren Artist Database — Chrome Extension
-// Total: 238 verified artists
-// Last updated: 2026-05-03
+// Total: 245 verified artists
+// Last updated: 2026-05-14
 
 const artistsData = [
   {
@@ -1436,5 +1436,47 @@ const artistsData = [
     level: "LOW",
     statement: "Wore a Palestinian flag pin during his headline set at Coachella (April 2024)",
     sources: `<a href="https://www.nme.com/news/music/tyler-the-creator-wore-a-palestine-pin-badge-during-his-coachella-headline-set-3618016">NME</a>`
+  },
+  {
+    name: "Wolf Alice",
+    level: "CRITICAL",
+    statement: "Publicly declared support for boycott of Israel in 2018, stating 'As long as the Israeli government commits war crimes against the Palestinian people we support their call for a boycott of Israel'; joined No Music for Genocide in 2025, geo-blocking their catalogue from Israeli streaming services",
+    sources: `<a href="https://x.com/wolfalicemusic/status/998911002493292544">Wolf Alice (X / Twitter)</a> | <a href="https://www.nme.com/news/music/more-names-join-no-music-for-genocide-campaign-including-clairo-wolf-alice-aurora-and-more-3898598">NME</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide</a>`
+  },
+  {
+    name: "MUNA",
+    level: "CRITICAL",
+    statement: "Joined No Music for Genocide in 2025 as one of the named lead artists among 1,000+ musicians geo-blocking their music from Israeli streaming services",
+    sources: `<a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163">NME</a> | <a href="https://www.clashmusic.com/news/lorde-hayley-williams-bjork-muna-more-join-no-music-for-genocide-boycott/">Clash Magazine</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide</a>`
+  },
+  {
+    name: "Wet Leg",
+    level: "CRITICAL",
+    statement: "Joined No Music for Genocide streaming boycott, geo-blocking their catalogue from Israeli streaming services as part of the 1,000+ artist campaign",
+    sources: `<a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott">NPR</a> | <a href="https://laist.com/brief/news/more-than-1-000-musicians-are-boycotting-israel-with-no-music-for-genocide">LAIST</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide</a>`
+  },
+  {
+    name: "Wednesday",
+    level: "CRITICAL",
+    statement: "Joined No Music for Genocide in 2025, geo-blocking their catalogue from Israeli streaming services",
+    sources: `<a href="https://www.avclub.com/japanese-breakfast-boycott-israel-pledge-mj-lenderman-400-more">AV Club</a> | <a href="https://stereogum.com/2323347/hundreds-of-artists-back-no-music-for-genocide-campaign-to-geo-block-israel/news">Stereogum</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide</a>`
+  },
+  {
+    name: "MJ Lenderman",
+    level: "CRITICAL",
+    statement: "Named signatory of the No Music for Genocide pledge, geo-blocking his music from Israeli streaming services",
+    sources: `<a href="https://www.avclub.com/japanese-breakfast-boycott-israel-pledge-mj-lenderman-400-more">AV Club</a> | <a href="https://www.yahoo.com/entertainment/music/articles/mj-lenderman-japanese-breakfast-over-124027998.html">Yahoo Entertainment</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide</a>`
+  },
+  {
+    name: "Of Monsters and Men",
+    level: "CRITICAL",
+    statement: "Joined No Music for Genocide streaming boycott and signed open letter calling for Eurovision boycott until Israel is banned from the competition",
+    sources: `<a href="https://laist.com/brief/news/more-than-1-000-musicians-are-boycotting-israel-with-no-music-for-genocide">LAIST</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott">NPR</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide</a>`
+  },
+  {
+    name: "Green Day",
+    level: "HIGH",
+    statement: "Billie Joe Armstrong made consistent public pro-Palestine statements: changed lyrics of 'Jesus of Suburbia' to reference Palestinian suffering at Corona Capital (November 2024) and Coachella (April 2025); carried a Palestinian flag onstage in Malaysia (February 2025)",
+    sources: `<a href="https://variety.com/2025/music/news/green-day-israel-palestine-coachella-headlining-performance-1236368327/">Variety</a> | <a href="https://www.huffpost.com/entry/green-day-coachella-palestine_n_67fd0e8ee4b0afe00ba95f9b">HuffPost</a> | <a href="https://www.algemeiner.com/2025/02/21/green-day-frontman-billie-joe-armstrong-carries-palestinian-flag-malaysia-concert/">Algemeiner</a>`
   }
 ];
