@@ -13,7 +13,7 @@
     <title>ArtSiren | מאגר אמנים המחרימים ישראל – 284 אמנים מאומתים</title>
     <!-- PWA -->
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#0047AB">
+    <meta name="theme-color" content="#000940">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -805,6 +805,181 @@
             .filter-btn {
                 flex-shrink: 0;
             }
+        }
+
+        /* ═══════════════════════════════════════════════
+           Dark Rebrand — #000940 navy / #44D7FF cyan
+           ═══════════════════════════════════════════════ */
+
+        :root {
+            --blue: #44D7FF;
+            --blue-mid: #22b8e8;
+            --blue-light: #7fe8ff;
+            --blue-tint: rgba(68, 215, 255, 0.12);
+            --blue-tint2: rgba(68, 215, 255, 0.06);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.72);
+            --text-muted: rgba(255, 255, 255, 0.45);
+            --border: rgba(255, 255, 255, 0.12);
+            --border-blue: rgba(68, 215, 255, 0.2);
+            --bg: #000940;
+            --shadow-sm: 0 1px 4px rgba(0,0,0,0.2);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.3);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.4);
+        }
+
+        /* Restore dark text inside white-bg components */
+        .artist-card,
+        .autocomplete-dropdown,
+        .contact-modal {
+            --text-primary: #0d1117;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --blue: #000940;
+            --blue-tint: rgba(0, 9, 64, 0.05);
+            --blue-tint2: rgba(0, 9, 64, 0.03);
+            --border: #e2e8f0;
+            --border-blue: rgba(0, 9, 64, 0.12);
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #000940;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            border-bottom: 1px solid rgba(68, 215, 255, 0.15);
+            box-shadow: 0 1px 0 rgba(68, 215, 255, 0.1), 0 4px 24px rgba(0,0,0,0.4);
+        }
+        .logo { color: white; }
+        .logo img { width: auto; height: 38px; max-width: 180px; }
+        .logo span { display: none; }
+        .nav-cta-label { color: rgba(255,255,255,0.5); }
+        .nav-cta-btn {
+            background: #44D7FF;
+            color: #000940;
+            box-shadow: 0 4px 15px rgba(68, 215, 255, 0.35);
+        }
+        .btn-cta:hover, .nav-cta-btn:hover {
+            box-shadow: 0 8px 24px rgba(68, 215, 255, 0.45);
+        }
+
+        /* Hero */
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            color: white;
+        }
+        .hero h1 span {
+            background: none;
+            -webkit-background-clip: unset;
+            background-clip: unset;
+            -webkit-text-fill-color: #44D7FF;
+            color: #44D7FF;
+        }
+        .hero-eyebrow {
+            background: rgba(68, 215, 255, 0.12);
+            color: #44D7FF;
+            border: 1px solid rgba(68, 215, 255, 0.3);
+        }
+
+        /* Search */
+        .search-input:focus {
+            border-color: #44D7FF;
+            box-shadow: 0 0 0 3px rgba(68, 215, 255, 0.12);
+        }
+        .autocomplete-item:hover,
+        .autocomplete-item.ac-active {
+            background: rgba(0, 9, 64, 0.05);
+            color: #000940;
+        }
+        .autocomplete-item mark { color: #000940; }
+
+        /* Filter buttons — rectangular */
+        .filter-label { color: #44D7FF; }
+        .filter-btn {
+            border-radius: 6px;
+            border: 1.5px solid rgba(255,255,255,0.25);
+            background: transparent;
+            color: rgba(255,255,255,0.82);
+        }
+        .filter-btn:hover {
+            border-color: #44D7FF;
+            color: #44D7FF;
+            background: rgba(68, 215, 255, 0.08);
+        }
+        .filter-btn.active {
+            background: #44D7FF;
+            color: #000940;
+            border-color: transparent;
+            box-shadow: 0 2px 12px rgba(68, 215, 255, 0.4);
+        }
+        .level-btn-CRITICAL { border-color: rgba(248,113,113,0.5); color: #f87171; }
+        .level-btn-HIGH     { border-color: rgba(251,146,60,0.5);  color: #fb923c; }
+        .level-btn-LOW      { border-color: rgba(52,211,153,0.5);  color: #34d399; }
+        .level-btn-CRITICAL:hover { border-color: #f87171; background: rgba(248,113,113,0.08); color: #f87171; }
+        .level-btn-HIGH:hover     { border-color: #fb923c; background: rgba(251,146,60,0.08);  color: #fb923c; }
+        .level-btn-LOW:hover      { border-color: #34d399; background: rgba(52,211,153,0.08);  color: #34d399; }
+        .level-btn-CRITICAL.active { background: #dc2626; color: white; border-color: transparent; box-shadow: 0 2px 8px rgba(220,38,38,0.4); }
+        .level-btn-HIGH.active     { background: #ea580c; color: white; border-color: transparent; box-shadow: 0 2px 8px rgba(234,88,12,0.4); }
+        .level-btn-LOW.active      { background: #059669; color: white; border-color: transparent; box-shadow: 0 2px 8px rgba(5,150,105,0.4); }
+
+        /* Stats — dark cards */
+        .stat-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(68, 215, 255, 0.15);
+            box-shadow: none;
+        }
+        .stat-card:hover {
+            box-shadow: 0 4px 20px rgba(68, 215, 255, 0.12);
+            transform: translateY(-2px);
+        }
+        .stat-number {
+            background: none;
+            -webkit-background-clip: unset;
+            background-clip: unset;
+            -webkit-text-fill-color: white;
+            color: white;
+            font-size: 2.5rem;
+        }
+        .stat-label { color: #44D7FF; }
+
+        /* Levels legend */
+        .levels-legend {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .levels-legend summary { color: rgba(255,255,255,0.6); }
+        .levels-legend summary::before { color: rgba(255,255,255,0.35); }
+        .legend-text { color: rgba(255,255,255,0.65); }
+
+        /* Grid */
+        .grid-title { color: rgba(255,255,255,0.4); }
+
+        /* Artist cards — stay white, use navy accent */
+        .view-details { color: #000940; }
+        .artist-card:hover { border-color: rgba(0,9,64,0.15); }
+
+        /* PWA install button */
+        #pwa-install-btn { background: #44D7FF !important; color: #000940 !important; }
+
+        /* Footer */
+        .footer {
+            background: #000940;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-links a { color: rgba(255,255,255,0.55); }
+        .footer-links a:hover { color: #44D7FF; background: rgba(68, 215, 255, 0.08); }
+        .footer-links span { color: rgba(255,255,255,0.15); }
+        .footer-copyright { color: rgba(255,255,255,0.3); }
+
+        /* Contact modal — keep white/professional */
+        .contact-submit { background: #000940; }
+        .contact-submit:hover { background: #001269; }
+        .contact-field input:focus,
+        .contact-field select:focus,
+        .contact-field textarea:focus {
+            border-color: #000940;
+            box-shadow: 0 0 0 3px rgba(0,9,64,0.08);
         }
     </style>
 </head>
