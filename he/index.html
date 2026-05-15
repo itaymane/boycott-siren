@@ -881,6 +881,38 @@
             color: #44D7FF;
             border: 1px solid rgba(68, 215, 255, 0.3);
         }
+        .hero-desc {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.72);
+            max-width: 580px;
+            margin: 0 auto 1rem;
+            line-height: 1.7;
+        }
+        .hero-count {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.45);
+            margin-bottom: 2rem;
+            letter-spacing: 0.01em;
+        }
+        .hero-chips {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 1.5rem 0;
+        }
+        .hero-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(68, 215, 255, 0.08);
+            border: 1px solid rgba(68, 215, 255, 0.22);
+            color: rgba(255,255,255,0.82);
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+        }
 
         /* Search */
         .search-input:focus {
@@ -999,8 +1031,8 @@
                 <div class="nav-cta-wrap">
                     <div class="nav-cta-label">קבל התראות מיידיות</div>
                     <a href="/boycott-siren-extension.zip" download onclick="trackExtensionDownload(); showInstallGuide();" class="btn-cta nav-cta-btn" id="ext-btn">
-                        <span class="btn-cta-full">⚡ הוסף תוסף לכרום</span>
-                        <span class="btn-cta-short">⚡ תוסף</span>
+                        <span class="btn-cta-full">⚡ התראות כרום</span>
+                        <span class="btn-cta-short">⚡ התראות</span>
                     </a>
                     <button id="pwa-install-btn" onclick="installPWA()" style="display:none; margin-left:8px; padding:8px 16px; background:#0047ab; color:#fff; border:none; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer;">
                         📱 התקן אפליקציה
@@ -1014,12 +1046,11 @@
         <div class="hero">
             <div class="hero-eyebrow">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
-                מאומת ומגובה במקורות
+                כלי אחריות האמנים
             </div>
-            <h1>מאגר אמנים <span>המחרימים</span> ישראל</h1>
-            <p style="font-size:1.15rem;font-weight:600;color:#e2eaff;margin-bottom:0.25rem;letter-spacing:0.01em;">דע לפני שאתה הולך</p>
-            <p><span id="heroCount">284</span>+ אמנים מאומתים ממקורות תקשורת מובילים ומתועדים.</p>
-            <p style="font-size:0.8rem;color:#8aa4cc;margin-top:0.5rem;">עודכן לאחרונה: מאי 2026</p>
+            <h1>דע לפני <span>שאתה קונה</span></h1>
+            <p class="hero-desc">כאשר אתה קונה כרטיס לקונצרט או מאזין למוסיקה בסטרימינג, אתה עושה בחירה כלכלית שמועילה לאמן. מגיע לך לדעת — לפני שאתה משלם — האם אותו אמן קרא פומבית לחרם על ישראל.</p>
+            <p class="hero-count"><span id="heroCount">284</span>+ אמנים מאומתים &nbsp;·&nbsp; מקורות תקשורת מיינסטרים &nbsp;·&nbsp; עודכן לאחרונה: מאי 2026</p>
 
             <div class="search-box">
                 <span class="search-icon">
@@ -1029,6 +1060,12 @@
                 <div class="autocomplete-dropdown" id="autocompleteList"></div>
             </div>
             
+            <div class="hero-chips">
+                <span class="hero-chip">🔍 חפש כל אמן</span>
+                <span class="hero-chip">✅ מקורות מאומתים</span>
+                <span class="hero-chip">⚡ התראות כרום</span>
+            </div>
+
             <div class="filters">
                 <div class="filter-group">
                     <span class="filter-label">קטגוריה:</span>

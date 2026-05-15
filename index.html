@@ -878,6 +878,38 @@
             color: #44D7FF;
             border: 1px solid rgba(68, 215, 255, 0.3);
         }
+        .hero-desc {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.72);
+            max-width: 580px;
+            margin: 0 auto 1rem;
+            line-height: 1.7;
+        }
+        .hero-count {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.45);
+            margin-bottom: 2rem;
+            letter-spacing: 0.01em;
+        }
+        .hero-chips {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 1.5rem 0;
+        }
+        .hero-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(68, 215, 255, 0.08);
+            border: 1px solid rgba(68, 215, 255, 0.22);
+            color: rgba(255,255,255,0.82);
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+        }
 
         /* Search */
         .search-input:focus {
@@ -996,8 +1028,8 @@
                 <div class="nav-cta-wrap">
                     <div class="nav-cta-label">Get Instant Alerts</div>
                     <a href="boycott-siren-extension.zip" download onclick="trackExtensionDownload(); showInstallGuide();" class="btn-cta nav-cta-btn" id="ext-btn">
-                        <span class="btn-cta-full">⚡ Add Chrome Extension</span>
-                        <span class="btn-cta-short">⚡ Extension</span>
+                        <span class="btn-cta-full">⚡ Chrome Alerts</span>
+                        <span class="btn-cta-short">⚡ Alerts</span>
                     </a>
                     <button id="pwa-install-btn" onclick="installPWA()" style="display:none; margin-left:8px; padding:8px 16px; background:#0047ab; color:#fff; border:none; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer;">
                         📱 Install App
@@ -1011,12 +1043,11 @@
         <div class="hero">
             <div class="hero-eyebrow">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
-                Verified &amp; Source-Backed
+                The Artist Accountability Tool
             </div>
-            <h1>Artist <span>Boycott</span> Database</h1>
-            <p style="font-size:1.15rem;font-weight:600;color:#e2eaff;margin-bottom:0.25rem;letter-spacing:0.01em;">Know Before You Go</p>
-            <p><span id="heroCount">284</span>+ verified artists from publicly documented, mainstream media sources.</p>
-            <p style="font-size:0.8rem;color:#8aa4cc;margin-top:0.5rem;">Last updated: May 2026</p>
+            <h1>Know Before <span>You Buy</span></h1>
+            <p class="hero-desc">When you buy a concert ticket or stream music, you're making a financial choice that benefits an artist. You deserve to know — before you pay — whether that artist has publicly called for a boycott of Israel.</p>
+            <p class="hero-count"><span id="heroCount">284</span>+ verified artists &nbsp;·&nbsp; Mainstream media sources &nbsp;·&nbsp; Last updated: May 2026</p>
 
             <div class="search-box">
                 <span class="search-icon">
@@ -1026,6 +1057,12 @@
                 <div class="autocomplete-dropdown" id="autocompleteList"></div>
             </div>
             
+            <div class="hero-chips">
+                <span class="hero-chip">🔍 Search any artist</span>
+                <span class="hero-chip">✅ Verified sources</span>
+                <span class="hero-chip">⚡ Chrome Alerts</span>
+            </div>
+
             <div class="filters">
                 <div class="filter-group">
                     <span class="filter-label">Category:</span>
