@@ -955,10 +955,10 @@
         /* Grid */
         .grid-title { color: rgba(255,255,255,0.4); }
 
-        /* Search bar — white bg, needs dark placeholder */
+        /* Search bar — white bg, needs dark placeholder + visible border */
+        .search-input { color: #0d1117; border-color: #e2e8f0; }
         .search-input::placeholder { color: #a0aec0; font-weight: 400; }
         .search-icon { color: #a0aec0; }
-        .search-input { color: #0d1117; }
 
         /* Artist cards — stay white, use navy accent */
         .view-details { color: #000940; }
@@ -1601,7 +1601,7 @@
                 <div style="background: white; border-radius: 20px; padding: 2rem; max-width: 600px; width: 100%; max-height: 80vh; overflow-y: auto;">
                     <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1.5rem;">
                         <div>
-                            <h2 style="margin: 0 0 0.5rem 0; color: #0047ab; font-size: 2rem;">${artist.name}</h2>
+                            <h2 style="margin: 0 0 0.5rem 0; color: #000940; font-size: 2rem;">${artist.name}</h2>
                             <div style="display: inline-block; padding: 0.5rem 1rem; background: ${levelColor}; color: white; border-radius: 20px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase;">
                                 ${artist.level}
                             </div>
@@ -1618,10 +1618,10 @@
                         <div style="font-size: 0.9rem; color: #666; margin-bottom: 1rem; font-weight: 600;">מקורות מאומתים:</div>
                         <div style="display: flex; flex-direction: column; gap: 0.75rem;">
                             ${artist.sources ? artist.sources.map(s => `
-                                <a href="${s.url || 'https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement'}" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: #e8f2ff; border-radius: 12px; text-decoration: none; color: #0047ab; font-weight: 500; transition: all 0.2s;">
+                                <a href="${s.url || 'https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement'}" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: rgba(0,9,64,0.05); border-radius: 12px; text-decoration: none; color: #000940; font-weight: 500; transition: all 0.2s;">
                                     <span>📄</span>
                                     <span>${s.name || s}</span>
-                                    <span style="margin-left: auto; color: #4a90e2;">→</span>
+                                    <span style="margin-left: auto; color: #44D7FF;">→</span>
                                 </a>
                             `).join('') : '<p style="color: #999;">אין מקורות זמינים</p>'}
                         </div>
@@ -1636,7 +1636,7 @@
                             <a href="https://wa.me/?text=${encodeURIComponent('🚨 ' + artist.name + ' supports the cultural boycott of Israel.\n\nSee verified sources: https://artsiren.co/?artist=' + artist.id)}" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: #25d366; color: #fff; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">
                                 WhatsApp
                             </a>
-                            <button onclick="navigator.clipboard.writeText('https://artsiren.co/?artist=${artist.id}').then(() => { this.textContent = 'הועתק!'; setTimeout(() => this.textContent = 'העתק קישור', 1500); })" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: #f0f4ff; color: #0047ab; border: 1px solid #c7d8f8; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer;">
+                            <button onclick="navigator.clipboard.writeText('https://artsiren.co/?artist=${artist.id}').then(() => { this.textContent = 'הועתק!'; setTimeout(() => this.textContent = 'העתק קישור', 1500); })" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: rgba(0,9,64,0.07); color: #000940; border: 1px solid rgba(0,9,64,0.15); border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer;">
                                 העתק קישור
                             </button>
                         </div>
@@ -1766,7 +1766,7 @@
                 modal.innerHTML = `
                     <div style="background: white; border-radius: 24px; padding: 0; max-width: 600px; width: 100%; max-height: 90vh; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4); animation: slideUp 0.4s;">
                         <!-- Header with logo -->
-                        <div style="background: linear-gradient(135deg, #0047ab, #4a90e2); padding: 2.5rem 2rem; text-align: center; position: relative;">
+                        <div style="background: #000940; padding: 2.5rem 2rem; text-align: center; position: relative;">
                             <img src="/logo.png" style="width: 80px; height: 80px; margin-bottom: 1rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));" alt="Logo">
                             <h2 style="color: white; font-size: 2rem; font-weight: 800; margin: 0 0 0.5rem 0;">Download Started!</h2>
                             <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin: 0;">Follow these quick steps to install</p>
@@ -1778,7 +1778,7 @@
                             <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                                 <!-- Step 1 -->
                                 <div style="display: flex; gap: 1rem; align-items: start;">
-                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: linear-gradient(135deg, #0047ab, #4a90e2); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">1</div>
+                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: #44D7FF; color: #000940; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">1</div>
                                     <div style="flex: 1;">
                                         <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: #1a1a1a;">Unzip the downloaded file</h3>
                                         <p style="margin: 0; color: #666; line-height: 1.6;">Double-click the ZIP file to extract the folder</p>
@@ -1787,17 +1787,17 @@
                                 
                                 <!-- Step 2 -->
                                 <div style="display: flex; gap: 1rem; align-items: start;">
-                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: linear-gradient(135deg, #0047ab, #4a90e2); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">2</div>
+                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: #44D7FF; color: #000940; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">2</div>
                                     <div style="flex: 1;">
                                         <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: #1a1a1a;">Open Chrome Extensions</h3>
                                         <p style="margin: 0 0 0.5rem 0; color: #666; line-height: 1.6;">Go to:</p>
-                                        <code style="background: #f5f5f5; padding: 0.5rem 1rem; border-radius: 8px; display: inline-block; color: #0047ab; font-weight: 600;">chrome://extensions/</code>
+                                        <code style="background: #f5f5f5; padding: 0.5rem 1rem; border-radius: 8px; display: inline-block; color: #000940; font-weight: 600;">chrome://extensions/</code>
                                     </div>
                                 </div>
                                 
                                 <!-- Step 3 -->
                                 <div style="display: flex; gap: 1rem; align-items: start;">
-                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: linear-gradient(135deg, #0047ab, #4a90e2); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">3</div>
+                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: #44D7FF; color: #000940; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">3</div>
                                     <div style="flex: 1;">
                                         <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: #1a1a1a;">Enable Developer Mode</h3>
                                         <p style="margin: 0; color: #666; line-height: 1.6;">Toggle the switch in the top-right corner</p>
@@ -1806,7 +1806,7 @@
                                 
                                 <!-- Step 4 -->
                                 <div style="display: flex; gap: 1rem; align-items: start;">
-                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: linear-gradient(135deg, #0047ab, #4a90e2); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">4</div>
+                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: #44D7FF; color: #000940; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">4</div>
                                     <div style="flex: 1;">
                                         <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: #1a1a1a;">Load the Extension</h3>
                                         <p style="margin: 0; color: #666; line-height: 1.6;">Click "Load unpacked" and select the unzipped folder</p>
@@ -1924,7 +1924,7 @@
 
     <!-- Static artist index for search engine crawling -->
     <section style="max-width:900px;margin:0 auto;padding:32px 20px 48px;color:#444;font-size:0.82rem;line-height:2;border-top:1px solid #e2e8f0;">
-      <h2 style="font-size:1rem;font-weight:700;color:#0047ab;margin-bottom:12px;">אמנים במאגר</h2>
+      <h2 style="font-size:1rem;font-weight:700;color:#44D7FF;margin-bottom:12px;">Artists in this database</h2>
       <p style="margin-bottom:16px;color:#666;">האמנים הבאים תמכו פומבית בחרם התרבותי על ישראל. כל רשומה מגובה בתקשורת מיינסטרים ומכתבים מאומתים.</p>
       <p>Roger Waters · Dua Lipa · Patti Smith · Elvis Costello · Tom Morello · The Roots · Lauryn Hill · Peter Gabriel · Charlotte Church · Sam Smith · Björk · Lorde · Rage Against the Machine · Brian Eno · Thurston Moore · Sonic Youth · Massive Attack · Lowkey · Kae Tempest · Roger Waters · Serj Tankian · System of a Down · Run the Jewels · Noname · Talib Kweli · Lupe Fiasco · Yasiin Bey (Mos Def) · Dead Prez · Immortal Technique · Jackson Browne · Manic Street Preachers · Jello Biafra · Anti-Flag · Propagandhi · Belle and Sebastian · Yo La Tengo · Cat Power · Feist · Metric · Peaches · Godspeed You! Black Emperor · Broken Social Scene · Owen Pallett · Wolf Parade · Stars · A Silver Mt. Zion · Do Make Say Think · Destroyer · Asian Dub Foundation · Asian Dub Foundation · Coldcut · Manu Chao · Santana · DJ Snake · Robyn · Lykke Li · Devendra Banhart · Boots Riley · Naomi Klein · Arundhati Roy · Sally Rooney · Judith Butler · Alice Walker · Angela Davis · Annie Ernaux · Nigel Kennedy · Desmond Tutu · Wallace Shawn · Mira Nair · Harris Dickinson · Liam Cunningham · Julian Casablancas · PJ Harvey · Akala · Kae Tempest · Mick Jones</p>
     </section>
