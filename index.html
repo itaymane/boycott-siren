@@ -865,6 +865,7 @@
         .hero h1 {
             font-size: clamp(3rem, 8vw, 5.5rem);
             color: white;
+            margin-bottom: 0.5rem;
         }
         .hero h1 span {
             background: none;
@@ -877,25 +878,28 @@
             background: rgba(68, 215, 255, 0.12);
             color: #44D7FF;
             border: 1px solid rgba(68, 215, 255, 0.3);
+            margin-bottom: 1rem;
         }
-        .hero-desc {
+        .hero p.hero-desc {
             font-size: 1.1rem;
             color: rgba(255,255,255,0.72);
-            max-width: 760px;
-            margin: 0 auto 1rem;
-            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto 0.5rem;
+            line-height: 1.6;
             white-space: nowrap;
+            text-align: center;
         }
-        .hero-count {
+        .hero p.hero-count {
             font-size: 0.875rem;
             color: rgba(255,255,255,0.45);
-            margin-bottom: 2rem;
+            margin: 0 auto 1.75rem;
             letter-spacing: 0.01em;
             white-space: nowrap;
+            text-align: center;
         }
-        @media (max-width: 800px) {
-            .hero-desc { white-space: normal; max-width: 90vw; }
-            .hero-count { white-space: normal; }
+        @media (max-width: 860px) {
+            .hero p.hero-desc { white-space: normal; max-width: 90vw; }
+            .hero p.hero-count { white-space: normal; }
         }
         .hero-chips {
             display: flex;
