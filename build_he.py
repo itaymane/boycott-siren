@@ -26,7 +26,7 @@ replacements = [
     ('\U0001f4f1 Install App', '\U0001f4f1 התקן אפליקציה'),
 
     ('The Artist Accountability Tool', 'כלי אחריות האמנים'),
-    ('<h1>Know Before <span>You Buy</span></h1>', '<h1>דע לפני <span>שאתה קונה</span></h1>'),
+    ('<h1>Know Before <span>You Go</span></h1>', '<h1>דע לפני <span>שאתה הולך</span></h1>'),
     ("When you buy a concert ticket or stream music, you're making a financial choice that benefits an artist. You deserve to know — before you pay — whether that artist has publicly called for a boycott of Israel.", "כאשר אתה קונה כרטיס לקונצרט או מאזין למוסיקה בסטרימינג, אתה עושה בחירה כלכלית שמועילה לאמן. מגיע לך לדעת — לפני שאתה משלם — האם אותו אמן קרא פומבית לחרם על ישראל."),
     ('<p class="hero-count"><span id="heroCount">284</span>+ verified artists &nbsp;·&nbsp; Mainstream media sources &nbsp;·&nbsp; Last updated: May 2026</p>', '<p class="hero-count"><span id="heroCount">284</span>+ אמנים מאומתים &nbsp;·&nbsp; מקורות תקשורת מיינסטרים &nbsp;·&nbsp; עודכן לאחרונה: מאי 2026</p>'),
     ('🔍 Search any artist', '🔍 חפש כל אמן'),
