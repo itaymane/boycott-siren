@@ -5,146 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArtSiren</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             width: 320px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 0;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #0047ab 0%, #4a90e2 100%);
+            background: #000940;
             color: white;
-            padding: 20px;
-            text-align: center;
         }
-        
+
+        .header {
+            background: #000940;
+            border-bottom: 1px solid rgba(68, 215, 255, 0.2);
+            padding: 18px 20px 14px;
+        }
+
         .logo {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 5px;
+            font-size: 20px;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -0.3px;
+            margin-bottom: 2px;
         }
-        
+        .logo span { color: #44D7FF; }
+
         .tagline {
             font-size: 11px;
-            opacity: 0.9;
+            color: rgba(255,255,255,0.45);
+            font-weight: 500;
+            letter-spacing: 0.3px;
         }
-        
-        .content {
-            padding: 16px;
-        }
-        
-        .stats {
-            background: white;
+
+        .content { padding: 14px; }
+
+        .card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(68, 215, 255, 0.12);
             border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 14px;
+            margin-bottom: 10px;
         }
-        
+
         .stat-item {
             display: flex;
             justify-content: space-between;
-            padding: 8px 0;
-            border-bottom: 1px solid #f0f0f0;
+            align-items: center;
+            padding: 7px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
         }
-        
-        .stat-item:last-child {
-            border-bottom: none;
-        }
-        
-        .stat-label {
-            color: #666;
-            font-size: 13px;
-        }
-        
-        .stat-value {
-            color: #0047ab;
-            font-weight: 600;
-            font-size: 13px;
-        }
-        
-        .info-box {
-            background: #f8f9fa;
-            border-left: 3px solid #0047ab;
-            padding: 12px;
-            border-radius: 6px;
-            margin-bottom: 12px;
-        }
-        
-        .info-box p {
-            font-size: 11px;
-            color: #555;
-            line-height: 1.5;
-            margin-bottom: 8px;
-        }
-        
-        .info-box p:last-child {
-            margin-bottom: 0;
-        }
-        
-        .footer {
-            background: white;
-            border-radius: 12px;
-            padding: 12px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 8px;
-        }
-        
-        .footer-link {
-            color: #0047ab;
-            text-decoration: none;
-            font-size: 11px;
-        }
-        
-        .footer-link:hover {
-            text-decoration: underline;
-        }
-        
-        .copyright {
-            font-size: 10px;
-            color: #999;
-        }
-        
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background: linear-gradient(135deg, #0047ab 0%, #4a90e2 100%);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 500;
-            cursor: pointer;
-            margin-top: 12px;
-            transition: transform 0.2s;
-        }
-        
-        .btn:hover {
-            transform: translateY(-1px);
-        }
+        .stat-item:last-child { border-bottom: none; }
+        .stat-label { color: rgba(255,255,255,0.55); font-size: 12px; }
+        .stat-value { color: #44D7FF; font-weight: 700; font-size: 13px; }
 
-        .page-scan {
-            background: white;
-            border-radius: 12px;
-            padding: 12px 14px;
-            margin-bottom: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+        .page-scan { display: none; }
+        .page-scan.visible { display: block; }
 
         .scan-header {
             display: flex;
@@ -152,50 +66,30 @@
             align-items: center;
             margin-bottom: 8px;
         }
-
-        .scan-site {
-            font-size: 12px;
-            font-weight: 600;
-            color: #333;
-        }
-
+        .scan-site { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.8); }
         .scan-btn {
-            background: #0047ab;
-            color: white;
+            background: #44D7FF;
+            color: #000940;
             border: none;
             border-radius: 6px;
             padding: 4px 10px;
             font-size: 11px;
             cursor: pointer;
-            font-weight: 500;
+            font-weight: 700;
         }
-
-        .scan-btn:hover { background: #003d9e; }
-
+        .scan-btn:hover { background: #7fe8ff; }
         .scan-output { font-size: 12px; min-height: 18px; }
-        .scan-none { color: #aaa; font-style: italic; }
-        .scan-scanning { color: #0047ab; }
-        .scan-count { color: #cc0000; font-weight: 600; margin-bottom: 4px; }
-        .scan-artist { color: #333; padding: 2px 0; }
-
-        .settings-box {
-            background: white;
-            border-radius: 12px;
-            padding: 10px 14px;
-            margin-bottom: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+        .scan-none { color: rgba(255,255,255,0.35); font-style: italic; }
+        .scan-scanning { color: #44D7FF; }
+        .scan-count { color: #f87171; font-weight: 700; margin-bottom: 4px; }
+        .scan-artist { color: rgba(255,255,255,0.75); padding: 2px 0; }
 
         .setting-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
-        .setting-row span {
-            font-size: 12px;
-            color: #555;
-        }
+        .setting-row span { font-size: 12px; color: rgba(255,255,255,0.6); }
 
         .toggle-switch {
             position: relative;
@@ -204,18 +98,15 @@
             height: 20px;
             flex-shrink: 0;
         }
-
         .toggle-switch input { opacity: 0; width: 0; height: 0; }
-
         .toggle-knob {
             position: absolute;
             cursor: pointer;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-color: #ccc;
+            background: rgba(255,255,255,0.15);
             border-radius: 20px;
             transition: 0.3s;
         }
-
         .toggle-knob:before {
             content: "";
             position: absolute;
@@ -223,26 +114,62 @@
             width: 14px;
             left: 3px;
             bottom: 3px;
-            background-color: white;
+            background: white;
             border-radius: 50%;
             transition: 0.3s;
         }
+        input:checked + .toggle-knob { background: #44D7FF; }
+        input:checked + .toggle-knob:before { transform: translateX(16px); background: #000940; }
 
-        input:checked + .toggle-knob { background-color: #0047ab; }
-        input:checked + .toggle-knob:before { transform: translateX(16px); }
+        .info-text {
+            font-size: 11px;
+            color: rgba(255,255,255,0.4);
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 6px;
+        }
+        .footer-link {
+            color: rgba(255,255,255,0.35);
+            text-decoration: none;
+            font-size: 11px;
+            transition: color 0.15s;
+        }
+        .footer-link:hover { color: #44D7FF; }
+        .copyright { font-size: 10px; color: rgba(255,255,255,0.2); text-align: center; }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 11px;
+            background: #44D7FF;
+            color: #000940;
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 4px;
+            transition: background 0.15s, transform 0.15s;
+        }
+        .btn:hover { background: #7fe8ff; transform: translateY(-1px); }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="logo">ArtSiren</div>
+        <div class="logo">Art<span>Siren</span></div>
         <div class="tagline">Know before you go</div>
     </div>
-    
+
     <div class="content">
-        <div class="stats">
+        <div class="card">
             <div class="stat-item">
                 <span class="stat-label">Artists tracked</span>
-                <span class="stat-value" id="totalArtists">229</span>
+                <span class="stat-value" id="totalArtists">284</span>
             </div>
             <div class="stat-item">
                 <span class="stat-label">Sources verified</span>
@@ -253,8 +180,8 @@
                 <span class="stat-value">100% Local</span>
             </div>
         </div>
-        
-        <div class="page-scan" id="pageScanSection" style="display:none;">
+
+        <div class="card page-scan" id="pageScanSection">
             <div class="scan-header">
                 <span id="scanSiteName" class="scan-site">Current Page</span>
                 <button id="scanNowBtn" class="scan-btn">Refresh</button>
@@ -264,7 +191,7 @@
             </div>
         </div>
 
-        <div class="settings-box">
+        <div class="card">
             <div class="setting-row">
                 <span>Hide boycotters in YouTube feed</span>
                 <label class="toggle-switch">
@@ -274,23 +201,20 @@
             </div>
         </div>
 
-        <div class="info-box">
-            <p>This tool displays publicly documented information about artists and their stated positions on boycotts of Israel.</p>
-            <p>All information is sourced from reputable outlets including Rolling Stone, Billboard, NME, The Guardian, and official statements. Sources are linked for independent verification.</p>
+        <div class="card">
+            <p class="info-text">Displays publicly documented information about artists and their stated positions. All data sourced from Rolling Stone, Billboard, NME, The Guardian, and official statements.</p>
         </div>
-        
-        <div class="footer">
-            <div class="footer-links">
-                <a href="#" class="footer-link" id="termsLink">Terms</a>
-                <a href="#" class="footer-link" id="privacyLink">Privacy</a>
-                <a href="#" class="footer-link" id="correctionsLink">Report Issue</a>
-            </div>
-            <div class="copyright">© 2026 ArtSiren</div>
+
+        <div class="footer-links">
+            <a href="#" class="footer-link" id="termsLink">Terms</a>
+            <a href="#" class="footer-link" id="privacyLink">Privacy</a>
+            <a href="#" class="footer-link" id="correctionsLink">Report Issue</a>
         </div>
-        
+        <div class="copyright">© 2026 ArtSiren</div>
+
         <button class="btn" id="viewWebsite">View Full Database</button>
     </div>
-    
+
     <script src="artists-data.js"></script>
     <script src="popup.js"></script>
 </body>
