@@ -84,7 +84,7 @@ replacements = [
     ("btn.textContent = 'Send Message';", "btn.textContent = 'שלח הודעה';"),
     ("btn.textContent = 'Sending...';", "btn.textContent = 'שולח...';"),
     ("alert('Something went wrong. Please try again.');", "alert('משהו השתבש. אנא נסה שוב.');"),
-    ('<h2 style="font-size:1rem;font-weight:700;color:#0047ab;margin-bottom:12px;">Artists in this database</h2>', '<h2 style="font-size:1rem;font-weight:700;color:#0047ab;margin-bottom:12px;">אמנים במאגר</h2>'),
+    ('<h2 style="font-size:1rem;font-weight:700;color:#44D7FF;margin-bottom:12px;">Artists in this database</h2>', '<h2 style="font-size:1rem;font-weight:700;color:#44D7FF;margin-bottom:12px;">אמנים במאגר</h2>'),
     ('The following artists have publicly supported the cultural boycott of Israel. Each entry is sourced from mainstream media and verified open letters.', 'האמנים הבאים תמכו פומבית בחרם התרבותי על ישראל. כל רשומה מגובה בתקשורת מיינסטרים ומכתבים מאומתים.'),
 ]
 
