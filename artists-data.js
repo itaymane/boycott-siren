@@ -1,6 +1,6 @@
 // ArtSiren Artist Database — Chrome Extension
-// Total: 245 verified artists
-// Last updated: 2026-05-14
+// Total: 246 verified artists
+// Last updated: 2026-05-15
 
 const artistsData = [
   {
@@ -1478,5 +1478,11 @@ const artistsData = [
     level: "HIGH",
     statement: "Billie Joe Armstrong made consistent public pro-Palestine statements: changed lyrics of 'Jesus of Suburbia' to reference Palestinian suffering at Corona Capital (November 2024) and Coachella (April 2025); carried a Palestinian flag onstage in Malaysia (February 2025)",
     sources: `<a href="https://variety.com/2025/music/news/green-day-israel-palestine-coachella-headlining-performance-1236368327/">Variety</a> | <a href="https://www.huffpost.com/entry/green-day-coachella-palestine_n_67fd0e8ee4b0afe00ba95f9b">HuffPost</a> | <a href="https://www.algemeiner.com/2025/02/21/green-day-frontman-billie-joe-armstrong-carries-palestinian-flag-malaysia-concert/">Algemeiner</a>`
+  },
+  {
+    name: "Damon Albarn",
+    level: "HIGH",
+    statement: "Used the word 'genocide' in a Channel 4 News interview (August 2025), stating 'I'm with the Palestinians'; performed with Gorillaz at the Together for Palestine benefit concert at Wembley Arena (September 2025); dedicated a Glastonbury appearance to 'all the children in Palestine' (June 2024)",
+    sources: `<a href="https://www.nme.com/news/music/damon-albarn-on-the-genocide-in-gaza-we-cannot-deny-the-palestinians-their-existence-3883749">NME (Channel 4 interview)</a> | <a href="https://www.nme.com/news/music/watch-damon-albarn-and-gorillaz-performance-at-together-for-palestine-3893405">NME (Together for Palestine)</a> | <a href="https://www.nme.com/news/music/damon-albarn-speaks-on-palestine-at-glastonbury-importance-of-voting-in-uk-general-election-next-week-3769928">NME (Glastonbury)</a>`
   }
 ];
