@@ -781,7 +781,14 @@
             <div class="boycott-alert-content">
                 <div class="boycott-alert-header">
                     <div class="boycott-alert-logo">
-                        <img src="${chrome.runtime.getURL('logo.png')}" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                        <svg width="100%" height="100%" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="13" y="5" width="10" height="15" rx="5" fill="#44D7FF"/>
+                            <path d="M9 20a9 9 0 0018 0" stroke="#44D7FF" stroke-width="2" stroke-linecap="round" fill="none"/>
+                            <line x1="18" y1="29" x2="18" y2="33" stroke="#44D7FF" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="14" y1="33" x2="22" y2="33" stroke="#44D7FF" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M26 15c1.5 1.5 1.5 4.5 0 6" stroke="#44D7FF" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.8"/>
+                            <path d="M30 12c3 3 3 9 0 12" stroke="#44D7FF" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.45"/>
+                        </svg>
                     </div>
                     <div class="boycott-header-text">
                         <div class="boycott-alert-title">BOYCOTT SIREN</div>
