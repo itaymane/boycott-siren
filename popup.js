@@ -22,6 +22,20 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('totalArtists').textContent = artistsData.length;
     }
 
+    // Alert mode selector
+    const modeBtns = document.querySelectorAll('.mode-btn');
+    chrome.storage.local.get(['alertMode'], result => {
+        const mode = result.alertMode || 'both';
+        modeBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.mode === mode));
+    });
+    modeBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            chrome.storage.local.set({ alertMode: this.dataset.mode });
+            modeBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
     // YouTube hide-in-feed toggle
     const ytToggle = document.getElementById('ytHideToggle');
     chrome.storage.sync.get(['hideYouTubeFeed'], result => {

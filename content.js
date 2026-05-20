@@ -13,7 +13,7 @@
     let displayedArtists = new Set();
     let feedDetectedArtists = new Set();
 
-    let settings = { hideYouTubeFeed: false };
+    let settings = { hideYouTubeFeed: false, alertMode: 'both' };
     chrome.storage.sync.get(['hideYouTubeFeed'], result => {
         settings.hideYouTubeFeed = !!result.hideYouTubeFeed;
     });
@@ -22,6 +22,12 @@
             settings.hideYouTubeFeed = changes.hideYouTubeFeed.newValue;
             applyFeedHideSetting();
         }
+    });
+    chrome.storage.local.get(['alertMode'], result => {
+        settings.alertMode = result.alertMode || 'both';
+    });
+    chrome.storage.local.onChanged.addListener(changes => {
+        if ('alertMode' in changes) settings.alertMode = changes.alertMode.newValue || 'both';
     });
     
     // Detect which site we're on
@@ -148,7 +154,13 @@
 
         return null;
     }
-    
+
+    function getSiteCategory() {
+        const hostname = window.location.hostname;
+        const streamingHosts = ['youtube.com', 'spotify.com', 'music.apple.com', 'netflix.com', 'primevideo.com', 'disneyplus.com'];
+        return streamingHosts.some(h => hostname.includes(h)) ? 'streaming' : 'tickets';
+    }
+
     // Ticketmaster detection
     function detectTicketmaster() {
         const selectors = [
@@ -1021,6 +1033,11 @@
         const detector = getSiteDetector();
         if (!detector) return;
 
+        const mode = settings.alertMode;
+        if (mode === 'off') return;
+        if (mode === 'tickets' && getSiteCategory() === 'streaming') return;
+        if (mode === 'streaming' && getSiteCategory() === 'tickets') return;
+
         const elements = detector();
 
         elements.forEach(element => {
@@ -1073,7 +1090,7 @@
 
     function runScan() {
         processElements();
-        if (isYT()) processYouTubeFeed();
+        if (isYT() && settings.alertMode !== 'off' && settings.alertMode !== 'tickets') processYouTubeFeed();
     }
 
     // Returns only the meaningful part of the URL for navigation detection.
