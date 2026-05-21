@@ -1,5 +1,5 @@
 // ArtSiren Artist Database — Chrome Extension
-// Total: 248 verified artists
+// Total: 243 verified artists
 // Last updated: 2026-04-25
 
 const artistsData = [
@@ -445,211 +445,181 @@ const artistsData = [
     name: "Olivia Colman",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Javier Bardem",
     level: "HIGH",
     statement: "Co-signed a 2014 open letter with Penélope Cruz calling Israel's military offensive in Gaza 'genocide'; explicitly criticized Israeli 'state terrorism'; faced backlash from the Academy but stood by the statement",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Mark Ruffalo",
     level: "HIGH",
     statement: "Has explicitly called Israel an apartheid state; signed open letters; used his significant social media platform to call for accountability for Israeli military actions in Gaza; faced industry backlash for his statements",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Steve Coogan",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Riz Ahmed",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Miriam Margolyes",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Tilda Swinton",
     level: "HIGH",
     statement: "Has signed multiple Artists for Palestine UK letters explicitly calling out Israeli policies; among the most senior British actors to publicly condemn Israeli military actions",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Khalid Abdalla",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Maxine Peake",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Susan Sarandon",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Danny Glover",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Penélope Cruz",
     level: "HIGH",
     statement: "Co-signed a 2014 open letter with Javier Bardem calling Israel's military offensive in Gaza 'genocide' and a 'war of occupation and siege'; faced industry backlash but did not retract the letter",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "John Cusack",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Cynthia Nixon",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Viggo Mortensen",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Mia Farrow",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Peter Capaldi",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Julie Christie",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Juliet Stevenson",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Paapa Essiedu",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Dame Harriet Walter",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Joe Alwyn",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Lena Headey",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Kingsley Ben-Adir",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Carla Henry",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Pooja Ghai",
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
     name: "Ken Loach",
     level: "CRITICAL",
     statement: "British director and lifelong BDS advocate; has organised multiple boycott campaigns against Israeli cultural institutions; signed countless open letters; co-founded organisations supporting cultural boycott of Israel; among the most publicly committed cultural figures in the BDS movement",
-    sources: `<a href="https://bdsmovement.net/">PACBI</a> | <a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a>`
   },
   {
     name: "Mike Leigh",
     level: "HIGH",
     statement: "Vocal supporter of cultural boycott of Israel",
-    sources: `<a href="https://bdsmovement.net/">PACBI</a> | <a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a>`
-  },
-  {
-    name: "Ava DuVernay",
-    level: "CRITICAL",
-    statement: "Vocal supporter of cultural boycott of Israel",
-    sources: `<a href="https://bdsmovement.net/">PACBI</a> | <a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a>`
-  },
-  {
-    name: "Yorgos Lanthimos",
-    level: "CRITICAL",
-    statement: "Vocal supporter of cultural boycott of Israel",
-    sources: `<a href="https://bdsmovement.net/">PACBI</a> | <a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a>`
-  },
-  {
-    name: "Adam McKay",
-    level: "CRITICAL",
-    statement: "Vocal supporter of cultural boycott of Israel",
-    sources: `<a href="https://bdsmovement.net/">PACBI</a> | <a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a>`
   },
   {
     name: "Asif Kapadia",
     level: "CRITICAL",
     statement: "Vocal supporter of cultural boycott of Israel",
-    sources: `<a href="https://bdsmovement.net/">PACBI</a> | <a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a>`
-  },
-  {
-    name: "James Schamus",
-    level: "CRITICAL",
-    statement: "Vocal supporter of cultural boycott of Israel",
-    sources: `<a href="https://bdsmovement.net/">PACBI</a> | <a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a>`
-  },
-  {
-    name: "Julia Loktev",
-    level: "CRITICAL",
-    statement: "Vocal supporter of cultural boycott of Israel",
-    sources: `<a href="https://bdsmovement.net/">PACBI</a> | <a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a>`
   },
   {
     name: "Thurston Moore",
     level: "CRITICAL",
     statement: "Sonic Youth founder, signed multiple BDS petitions",
-    sources: `<a href="https://artistsforpalestine.org.uk/">Artists for Palestine UK</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a>`
   },
   {
     name: "Serj Tankian",
