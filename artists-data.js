@@ -1225,7 +1225,7 @@ const artistsData = [
     name: "My Bloody Valentine",
     level: "CRITICAL",
     statement: "Joined No Music for Genocide (November 2025), geo-blocking music from Israeli streaming platforms; issued statement: They're not going to stop unless you make them",
-    sources: `<a href="https://stereogum.com/2480902/my-bloody-valentine-join-israel-streaming-boycott-theyre-not-going-to-stop-unless-you-make-them/news">Stereogum</a> | <a href="https://www.billboard.com/music/music-news/denzel-curry-mbv-join-no-music-for-genocide-israel-boycott-1236122537/">Billboard</a>`
+    sources: `<a href="https://stereogum.com/2430902/my-bloody-valentine-join-israel-streaming-boycott-theyre-not-going-to-stop-unless-you-make-them/news">Stereogum</a> | <a href="https://www.billboard.com/music/music-news/denzel-curry-mbv-join-no-music-for-genocide-israel-boycott-1236122537/">Billboard</a>`
   },
   {
     name: "Shygirl",
