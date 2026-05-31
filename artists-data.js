@@ -1,5 +1,5 @@
 // ArtSiren Artist Database — Chrome Extension
-// Total: 237 verified artists
+// Total: 236 verified artists
 // Last updated: 2026-04-25
 
 const artistsData = [
@@ -25,7 +25,7 @@ const artistsData = [
     name: "Elvis Costello",
     level: "CRITICAL",
     statement: "Cancelled his June 2010 Tel Aviv and Caesarea concerts explicitly citing Israel's military actions against Palestinians; published a statement saying he could not 'in good conscience' appear in Israel, becoming one of the first major artists to cancel for political reasons",
-    sources: `<a href="https://www.nme.com/news/music/elvis-costello-9-1297950">NME</a>`
+    sources: `<a href="https://www.nme.com/news/music/elvis-costello-9-1297950">NME</a> | <a href="https://www.haaretz.com/israel-news/culture/elvis-costello-joins-israel-boycott-canceling-june-shows-1.290936">Haaretz</a>`
   },
   {
     name: "Tom Morello",
@@ -601,25 +601,25 @@ const artistsData = [
     name: "Ken Loach",
     level: "CRITICAL",
     statement: "British director and lifelong BDS advocate; has organised multiple boycott campaigns against Israeli cultural institutions; signed countless open letters; co-founded organisations supporting cultural boycott of Israel; among the most publicly committed cultural figures in the BDS movement",
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://www.jta.org/2017/07/19/arts-entertainment/director-ken-loach-vows-every-penny-his-new-film-makes-in-israel-will-go-to-palestinians">JTA</a>`
   },
   {
     name: "Mike Leigh",
     level: "HIGH",
     statement: "Vocal supporter of cultural boycott of Israel",
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://www.haaretz.com/2010-10-17/ty-article/british-director-mike-leigh-cancels-israel-trip-to-protest-loyalty-oath/0000017f-db92-df62-a9ff-dfd7fb3f0000">Haaretz</a>`
   },
   {
     name: "Asif Kapadia",
     level: "CRITICAL",
     statement: "Vocal supporter of cultural boycott of Israel",
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
   },
   {
     name: "Thurston Moore",
     level: "CRITICAL",
     statement: "Sonic Youth founder, signed multiple BDS petitions",
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://www.nme.com/news/music/thurston-moore-2-1225123">NME</a>`
   },
   {
     name: "Serj Tankian",
@@ -661,7 +661,7 @@ const artistsData = [
     name: "Refused",
     level: "CRITICAL",
     statement: "Swedish hardcore band, supports BDS",
-    sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a> | <a href="https://www.nme.com/news/music/refused-explain-decision-not-to-boycott-festivals-backed-by-kkr-investment-firm-3866377">NME</a>`
   },
   {
     name: "Gil Scott-Heron",
@@ -751,19 +751,19 @@ const artistsData = [
     name: "Angela Davis",
     level: "CRITICAL",
     statement: "American scholar and lifelong Palestinian rights activist; one of the founding intellectual figures of BDS in the United States; has spoken at countless pro-BDS events; compared Israeli treatment of Palestinians to apartheid South Africa",
-    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a> | <a href="https://www.jta.org/quick-reads/angela-davis-says-pro-palestine-stance-led-to-civil-rights-group-withdrawing-her-award">JTA</a>`
   },
   {
     name: "Judith Butler",
     level: "CRITICAL",
     statement: "Philosopher at UC Berkeley who has explicitly endorsed BDS; written extensively on the legitimacy of cultural boycott of Israel; signed open letters; argued that BDS is a legitimate form of political protest against Israeli policies",
-    sources: `<a href="https://www.middleeasteye.net/news/sally-rooney-rupi-kaur-and-judith-butler-join-boycott-silent-israeli-cultural-institutions">Middle East Eye</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/sally-rooney-rupi-kaur-and-judith-butler-join-boycott-silent-israeli-cultural-institutions">Middle East Eye</a> | <a href="https://www.jta.org/2014/03/07/united-states/rashid-khalidi-and-judith-butler-object-to-boycotting-the-boycotters">JTA</a>`
   },
   {
     name: "Desmond Tutu",
     level: "HIGH",
     statement: "Late Archbishop of South Africa who explicitly compared Israeli treatment of Palestinians to apartheid South Africa, calling it 'worse in some respects'; called for international sanctions and boycott of Israel",
-    sources: `<a href="https://www.aljazeera.com/news/2014/8/14/desmond-tutu-calls-for-end-to-attacks-on-gaza">Al Jazeera</a>`
+    sources: `<a href="https://www.aljazeera.com/news/2014/8/14/desmond-tutu-calls-for-end-to-attacks-on-gaza">Al Jazeera</a> | <a href="https://www.jta.org/2021/12/26/obituaries/desmond-tutu-anti-apartheid-leader-who-identified-with-jews-and-criticized-israels-treatment-of-palestinians-dies-at-90">JTA</a>`
   },
   {
     name: "DJ Snake",
@@ -829,7 +829,7 @@ const artistsData = [
     name: "Mira Nair",
     level: "CRITICAL",
     statement: "Director, supports BDS",
-    sources: `<a href="https://www.aljazeera.com/news/2025/9/8/hundreds-of-artists-pledge-boycott-of-israeli-film-institutions-over-gaza">Al Jazeera</a>`
+    sources: `<a href="https://www.aljazeera.com/news/2025/9/8/hundreds-of-artists-pledge-boycott-of-israeli-film-institutions-over-gaza">Al Jazeera</a> | <a href="https://www.jta.org/2013/07/21/culture/indian-film-director-boycotts-haifa-film-festival">JTA</a>`
   },
   {
     name: "Liam Cunningham",
@@ -1048,12 +1048,6 @@ const artistsData = [
     sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
   },
   {
-    name: "Moor Mother",
-    level: "CRITICAL",
-    statement: "Philadelphia avant-garde musician and poet who publicly supports Palestinian liberation and BDS; incorporates themes of resistance and solidarity into her work and has made public statements calling for cultural boycott",
-    sources: `<a href="https://www.thewire.co.uk/">The Wire</a>`
-  },
-  {
     name: "Ani DiFranco",
     level: "LOW",
     statement: "Indie singer-songwriter and activist who has publicly supported Palestinian rights and signed letters calling for cultural engagement with the boycott; long-standing advocate for human rights causes",
@@ -1123,7 +1117,7 @@ const artistsData = [
     name: "Mohammed El-Kurd",
     level: "CRITICAL",
     statement: "Palestinian poet and journalist from Sheikh Jarrah whose family's forced displacement drew global attention; named one of Time's 100 Most Influential People (2021); leading voice for BDS and Palestinian cultural rights",
-    sources: `<a href="https://time.com/collection/100-most-influential-people-2021/">Time Magazine</a> | <a href="https://www.theguardian.com/">The Guardian</a>`
+    sources: `<a href="https://time.com/collection/100-most-influential-people-2021/6096098/muna-mohammed-el-kurd/">Time Magazine</a> | <a href="https://www.theguardian.com/">The Guardian</a>`
   },
   {
     name: "Ahdaf Soueif",
@@ -1375,7 +1369,7 @@ const artistsData = [
     name: "Wolf Alice",
     level: "CRITICAL",
     statement: "Publicly declared support for boycott of Israel in 2018, stating 'As long as the Israeli government commits war crimes against the Palestinian people we support their call for a boycott of Israel'; joined No Music for Genocide in 2025, geo-blocking their catalogue from Israeli streaming services",
-    sources: `<a href="https://x.com/wolfalicemusic/status/998911002493292544">Wolf Alice (X / Twitter)</a> | <a href="https://www.nme.com/news/music/more-names-join-no-music-for-genocide-campaign-including-clairo-wolf-alice-aurora-and-more-3898598">NME</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide</a>`
+    sources: `<a href="https://www.nme.com/news/music/more-names-join-no-music-for-genocide-campaign-including-clairo-wolf-alice-aurora-and-more-3898598">NME</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide</a>`
   },
   {
     name: "MUNA",
