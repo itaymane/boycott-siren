@@ -1,5 +1,5 @@
 // ArtSiren Artist Database — Chrome Extension
-// Total: 230 verified artists
+// Total: 228 verified artists
 // Last updated: 2026-04-25
 
 const artistsData = [
@@ -1042,22 +1042,10 @@ const artistsData = [
     sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
   },
   {
-    name: "Ani DiFranco",
-    level: "LOW",
-    statement: "Indie singer-songwriter and activist who has publicly supported Palestinian rights and signed letters calling for cultural engagement with the boycott; long-standing advocate for human rights causes",
-    sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
-  },
-  {
     name: "Jello Biafra",
     level: "CRITICAL",
     statement: "Dead Kennedys frontman and Alternative Tentacles founder who has been a vocal critic of Israeli military policy and supporter of Palestinian rights; endorsed BDS in multiple interviews and public statements",
     sources: `<a href="https://electronicintifada.net/blogs/nora-barrows-friedman/jello-biafra-cancels-his-tel-aviv-gig">Electronic Intifada</a> | <a href="https://www.punknews.org/article/45103/jello-biafra-on-his-trip-to-israel-and-the-israel-boycott">Punknews</a>`
-  },
-  {
-    name: "Thievery Corporation",
-    level: "LOW",
-    statement: "Washington D.C. electronic duo who have publicly supported Palestinian rights and signed letters calling for cultural engagement with the boycott movement",
-    sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a> | <a href="https://www.jpost.com/israel-news/thievery-corporation-steals-away-from-middle-east-tour-590727">Jerusalem Post</a>`
   },
   {
     name: "Wallace Shawn",
@@ -1081,7 +1069,7 @@ const artistsData = [
     name: "Kamila Shamsie",
     level: "CRITICAL",
     statement: "Pakistan-born British novelist who had the Göttingen International Prize for Literature rescinded in 2019 after the prize committee cited her public support for BDS; the widely-reported case brought global attention to artistic boycott",
-    sources: `<a href="https://www.theguardian.com/books/2019/jun/21/kamila-shamsie-german-literary-award-rescinded-bds">The Guardian</a>`
+    sources: `<a href="https://www.aljazeera.com/news/2019/9/18/author-kamila-shamsie-stripped-of-literary-award-over-bds-support">Al Jazeera</a> | <a href="https://lithub.com/kamila-shamsie-was-stripped-of-a-literary-award-for-her-support-of-palestine/">Lithub</a>`
   },
   {
     name: "Mohammed El-Kurd",
@@ -1111,7 +1099,7 @@ const artistsData = [
     name: "Adrienne Rich",
     level: "LOW",
     statement: "Late American poet and feminist who was one of the first prominent US literary figures to sign statements in solidarity with Palestinian cultural rights; signed early BDS-aligned declarations",
-    sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a> | <a href="https://mondoweiss.net/2009/02/adrienne-rich-turns-on-morally-stoneblind-israel-and-us-media/">Mondoweiss</a>`
   },
   {
     name: "Paul Weller",
@@ -1195,7 +1183,7 @@ const artistsData = [
     name: "Toni Collette",
     level: "CRITICAL",
     statement: "Signed Film Workers for Palestine pledge (September 2025) to boycott Israeli film institutions implicated in genocide and apartheid",
-    sources: `<a href="https://www.justjared.com/2025/09/25/5000-stars-have-now-joined-pledge-to-boycott-israeli-film-institutions-including-toni-collette-andrew-garfield-more/">Just Jared</a>`
+    sources: `<a href="https://www.justjared.com/2025/09/25/5000-stars-have-now-joined-pledge-to-boycott-israeli-film-institutions-including-toni-collette-andrew-garfield-more/">Just Jared</a> | <a href="https://www.thewrap.com/film-industry-pledge-end-complicity-israel-palestine-genocide-gaza/">The Wrap</a>`
   },
   {
     name: "Nicola Coughlan",
