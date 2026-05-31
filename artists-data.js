@@ -1,5 +1,5 @@
 // ArtSiren Artist Database — Chrome Extension
-// Total: 236 verified artists
+// Total: 230 verified artists
 // Last updated: 2026-04-25
 
 const artistsData = [
@@ -991,19 +991,13 @@ const artistsData = [
     name: "Rage Against the Machine",
     level: "CRITICAL",
     statement: "Iconic rock band whose members have collectively endorsed BDS; signed the cultural boycott pledge and consistently voiced support for Palestinian liberation through statements, concerts and social media",
-    sources: `<a href="https://www.rollingstone.com/">Rolling Stone</a>`
+    sources: `<a href="https://www.rollingstone.com/music/music-news/rage-against-the-machine-serj-tankian-roger-waters-sign-open-letter-artists-boycott-israel-1175281/">Rolling Stone</a>`
   },
   {
     name: "Lupe Fiasco",
     level: "CRITICAL",
     statement: "Chicago rapper who has been an outspoken BDS endorser; made multiple public statements calling Israel an apartheid state and has used his platform to campaign for Palestinian cultural rights",
     sources: `<a href="https://www.rollingstone.com/music/music-news/rage-against-the-machine-serj-tankian-roger-waters-sign-open-letter-artists-boycott-israel-1175281/">Rolling Stone</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
-  },
-  {
-    name: "Billy Bragg",
-    level: "CRITICAL",
-    statement: "British folk-punk musician who publicly supports BDS, has declined Israeli performance invitations, and regularly speaks at pro-Palestinian events; wrote extensively on the need for cultural boycott in The Guardian",
-    sources: `<a href="https://www.theguardian.com/">The Guardian</a>`
   },
   {
     name: "Santana",
@@ -1021,7 +1015,7 @@ const artistsData = [
     name: "Klaxons",
     level: "CRITICAL",
     statement: "British band who refused to perform at Israel's 60th-anniversary cultural celebrations in 2008; publicly cited the occupation as their reason for declining",
-    sources: `<a href="https://www.nme.com/">NME</a>`
+    sources: `<a href="https://www.france24.com/en/20100608-israel-music-concerts-cancel-pixies-gorillaz-klaxons-costello-santana-tel-aviv-gaza">France 24</a>`
   },
   {
     name: "Anti-Flag",
@@ -1039,7 +1033,7 @@ const artistsData = [
     name: "Vic Mensa",
     level: "CRITICAL",
     statement: "Chicago rapper who has been a vocal advocate for Palestinian rights and BDS; has spoken at rallies, released pro-Palestine material, and made multiple public statements calling for an end to Israeli military operations",
-    sources: `<a href="https://www.theguardian.com/">The Guardian</a>`
+    sources: `<a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
   },
   {
     name: "Yasiin Bey",
@@ -1066,24 +1060,6 @@ const artistsData = [
     sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a> | <a href="https://www.jpost.com/israel-news/thievery-corporation-steals-away-from-middle-east-tour-590727">Jerusalem Post</a>`
   },
   {
-    name: "Vanessa Redgrave",
-    level: "CRITICAL",
-    statement: "Legendary actress who has campaigned for Palestinian rights for decades; used her 1978 Academy Awards speech to call for Palestinian self-determination, has consistently supported cultural boycott, and signed BDS declarations",
-    sources: `<a href="https://www.theguardian.com/">The Guardian</a> | <a href="https://en.wikipedia.org/wiki/Vanessa_Redgrave">Wikipedia</a>`
-  },
-  {
-    name: "Emma Thompson",
-    level: "CRITICAL",
-    statement: "Vocal supporter of Palestinian rights who has signed open letters calling for a cultural boycott of Israel; has written publicly about her views and participated in high-profile advocacy campaigns",
-    sources: `<a href="https://www.theguardian.com/">The Guardian</a>`
-  },
-  {
-    name: "Tim Roth",
-    level: "CRITICAL",
-    statement: "British actor who has made public statements in support of Palestinian rights and endorsed the cultural boycott of Israel; signed open letters and spoken at pro-Palestinian events",
-    sources: `<a href="https://www.theguardian.com/">The Guardian</a>`
-  },
-  {
     name: "Wallace Shawn",
     level: "LOW",
     statement: "American actor and playwright who has publicly supported Palestinian rights and signed letters calling for cultural engagement with the BDS movement",
@@ -1093,19 +1069,13 @@ const artistsData = [
     name: "Alexei Sayle",
     level: "CRITICAL",
     statement: "British comedian and actor who has been a vocal public supporter of Palestinian rights and BDS; made numerous statements calling for cultural boycott of Israel and written about it in the press",
-    sources: `<a href="https://www.theguardian.com/">The Guardian</a>`
-  },
-  {
-    name: "Elia Suleiman",
-    level: "CRITICAL",
-    statement: "Palestinian filmmaker whose work directly addresses dispossession and occupation; has publicly supported BDS and refused engagements that would normalise Israeli cultural diplomacy",
-    sources: `<a href="https://www.theguardian.com/">The Guardian</a>`
+    sources: `<a href="https://mondoweiss.net/2015/02/artists-pledging-churchill/">Mondoweiss</a>`
   },
   {
     name: "Harold Pinter",
     level: "CRITICAL",
     statement: "Nobel Prize-winning playwright who used his 2005 Nobel acceptance speech to condemn Israeli actions in occupied territories; signed BDS letters and wrote poems in support of Palestinian liberation; one of the most prominent literary voices for the cultural boycott",
-    sources: `<a href="https://en.wikipedia.org/wiki/Harold_Pinter">Wikipedia</a> | <a href="https://www.theguardian.com/">The Guardian</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/Harold_Pinter">Wikipedia</a> | <a href="https://en.wikipedia.org/wiki/Harold_Pinter_and_politics">Wikipedia</a>`
   },
   {
     name: "Kamila Shamsie",
@@ -1117,7 +1087,7 @@ const artistsData = [
     name: "Mohammed El-Kurd",
     level: "CRITICAL",
     statement: "Palestinian poet and journalist from Sheikh Jarrah whose family's forced displacement drew global attention; named one of Time's 100 Most Influential People (2021); leading voice for BDS and Palestinian cultural rights",
-    sources: `<a href="https://time.com/collection/100-most-influential-people-2021/6096098/muna-mohammed-el-kurd/">Time Magazine</a> | <a href="https://www.theguardian.com/">The Guardian</a>`
+    sources: `<a href="https://time.com/collection/100-most-influential-people-2021/6096098/muna-mohammed-el-kurd/">Time Magazine</a> | <a href="https://www.theguardian.com/commentisfree/2021/jul/28/jerusalem-palestinians-homes">The Guardian</a>`
   },
   {
     name: "Ahdaf Soueif",
@@ -1129,19 +1099,13 @@ const artistsData = [
     name: "Tariq Ali",
     level: "CRITICAL",
     statement: "British-Pakistani novelist, historian and political activist who has been a vocal BDS supporter; has written extensively about Palestinian rights, participated in boycott campaigns and signed cultural boycott declarations",
-    sources: `<a href="https://www.theguardian.com/">The Guardian</a>`
+    sources: `<a href="https://mondoweiss.net/2015/02/artists-pledging-churchill/">Mondoweiss</a>`
   },
   {
     name: "Michael Rosen",
     level: "CRITICAL",
     statement: "UK children's laureate and poet who has been a vocal supporter of Palestinian rights and cultural boycott; regularly speaks out about Israeli military actions and has signed letters in support of BDS",
-    sources: `<a href="https://www.theguardian.com/">The Guardian</a>`
-  },
-  {
-    name: "Teju Cole",
-    level: "LOW",
-    statement: "Nigerian-American novelist and essayist who has written widely shared essays on Gaza and supported cultural boycott; authored influential pieces in The New Yorker calling for solidarity with Palestinians",
-    sources: `<a href="https://www.theguardian.com/">The Guardian</a>`
+    sources: `<a href="https://publishersforpalestine.org/2024/12/12/7000-authors-and-book-workers-join-historic-boycott-against-complicit-israeli-publishers/">Publishers for Palestine</a>`
   },
   {
     name: "Adrienne Rich",
