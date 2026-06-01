@@ -822,9 +822,26 @@
             box-shadow: 0 12px 40px rgba(0,0,0,0.3);
         }
 
+        #mobile-add-btn {
+            display: none;
+        }
         @media (max-width: 540px) {
             .nav-cta-wrap  { display: none; }
             .nav-cta-label { display: none; }
+            #mobile-add-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                padding: 7px 14px;
+                background: #0047ab;
+                color: #fff;
+                border: none;
+                border-radius: 20px;
+                font-size: 0.82rem;
+                font-weight: 700;
+                cursor: pointer;
+                letter-spacing: 0.2px;
+            }
             .btn-cta-full  { display: none; }
             .btn-cta-short { display: inline; }
             .nav-cta-btn {
@@ -1155,6 +1172,7 @@
                             📱 Install App
                         </button>
                     </div>
+                    <button id="mobile-add-btn" onclick="installPWA()">📱 Add to App</button>
                 </div>
             </div>
         </div>
@@ -2141,6 +2159,7 @@
                 _pwaPrompt.userChoice.then(r => {
                     if (r.outcome === 'accepted') {
                         document.getElementById('pwa-install-btn').style.display = 'none';
+                        document.getElementById('mobile-add-btn').style.display = 'none';
                     }
                     _pwaPrompt = null;
                 });
