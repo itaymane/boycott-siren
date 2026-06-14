@@ -12,6 +12,8 @@
     let processedElements = new WeakSet();
     let displayedArtists = new Set();
     let feedDetectedArtists = new Set();
+    let alertQueue = [];
+    let isAlertVisible = false;
 
     let settings = { hideYouTubeFeed: false, alertMode: 'both' };
     chrome.storage.sync.get(['hideYouTubeFeed'], result => {
@@ -773,22 +775,32 @@
         return null;
     }
     
-    // Create floating overlay alert
+    // Create floating overlay alert — queued so only one shows at a time
     function createFloatingAlert(artist) {
-        // Don't show duplicate alerts
-        if (displayedArtists.has(artist.name)) {
+        if (displayedArtists.has(artist.name)) return;
+        displayedArtists.add(artist.name);
+        alertQueue.push(artist);
+        if (!isAlertVisible) showNextAlert();
+    }
+
+    function showNextAlert() {
+        if (alertQueue.length === 0) {
+            isAlertVisible = false;
             return;
         }
-        displayedArtists.add(artist.name);
-        
+        isAlertVisible = true;
+        const artist = alertQueue.shift();
+
         const overlay = document.createElement('div');
         overlay.className = 'boycott-floating-alert';
         overlay.setAttribute('data-artist', artist.name);
-        
-        // All artists are boycotters - always show red badge
+
         const stanceColor = '#ff4444';
         const stanceLabel = 'BOYCOTTER';
-        
+        const queueNote = alertQueue.length > 0
+            ? `<div class="boycott-queue-note">${alertQueue.length} more detected — close to see next</div>`
+            : '';
+
         overlay.innerHTML = `
             <div class="boycott-alert-content">
                 <div class="boycott-alert-header">
@@ -808,34 +820,34 @@
                     </div>
                     <button class="boycott-alert-close" aria-label="Close">×</button>
                 </div>
-                
+
                 <div class="boycott-alert-body">
                     <div class="boycott-artist-name">${artist.name}</div>
                     <div class="boycott-stance-badge" style="background: ${stanceColor};">${stanceLabel}</div>
                     <div class="boycott-statement">${artist.statement}</div>
+                    ${queueNote}
                     <button class="boycott-details-btn">View Sources & Details</button>
                 </div>
             </div>
         `;
-        
+
         document.body.appendChild(overlay);
-        
-        // Animate in
         setTimeout(() => overlay.classList.add('show'), 10);
-        
-        // Close button
-        overlay.querySelector('.boycott-alert-close').addEventListener('click', () => {
+
+        function closeAlert() {
             overlay.classList.remove('show');
-            setTimeout(() => overlay.remove(), 300);
-        });
-        
-        // Details button - open website
+            setTimeout(() => {
+                overlay.remove();
+                showNextAlert();
+            }, 300);
+        }
+
+        overlay.querySelector('.boycott-alert-close').addEventListener('click', closeAlert);
+
         overlay.querySelector('.boycott-details-btn').addEventListener('click', () => {
             const artistName = encodeURIComponent(artist.name);
             window.open(`https://artsiren.co/?artist=${artistName}`, '_blank');
         });
-        
-        // NO AUTO-HIDE - stays until user closes it manually
     }
     
     // Show detailed modal
@@ -1076,6 +1088,8 @@
         processedElements = new WeakSet();
         displayedArtists = new Set();
         feedDetectedArtists = new Set();
+        alertQueue = [];
+        isAlertVisible = false;
         dismissAllAlerts();
         document.querySelectorAll('.boycott-small-icon').forEach(el => el.remove());
         document.querySelectorAll('[data-bs-checked]').forEach(el => {
