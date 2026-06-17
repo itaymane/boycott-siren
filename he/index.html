@@ -1288,9 +1288,8 @@
                 <h2>צור קשר</h2>
                 <p class="contact-sub">אנו קוראים כל הודעה. בחר קטגוריה כדי שנוכל להגיב מהר יותר.</p>
 
-                <form name="contact" netlify data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="submitContact(event)">
+                <form name="contact" onsubmit="submitContact(event)">
                     <input type="hidden" name="form-name" value="contact">
-                    <input type="hidden" name="bot-field" style="display:none">
 
                     <div class="contact-field">
                         <label>קטגוריה</label>
@@ -2120,13 +2119,27 @@
             btn.disabled = true;
             btn.textContent = 'שולח...';
             const form = e.target;
+            const fd = new FormData(form);
+            const payload = {
+                name: fd.get('name'),
+                email: fd.get('email'),
+                created_at: new Date().toISOString(),
+                title: 'contact',
+                body: fd.get('message'),
+                data: {
+                    name: fd.get('name'),
+                    email: fd.get('email'),
+                    category: fd.get('category'),
+                    message: fd.get('message')
+                }
+            };
             try {
-                await fetch('/', {
+                await fetch('https://hook.us2.make.com/5juuuyrvf37yi2wgr86igjg4q373h37z', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(new FormData(form)).toString()
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
                 });
-                gtag('event', 'contact_submit', { category: new FormData(form).get('category') });
+                gtag('event', 'contact_submit', { category: fd.get('category') });
                 document.getElementById('contactForm').style.display = 'none';
                 document.getElementById('contactSuccess').style.display = 'block';
                 setTimeout(closeContact, 3000);
