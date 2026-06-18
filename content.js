@@ -805,18 +805,18 @@
             <div class="boycott-alert-content">
                 <div class="boycott-alert-header">
                     <div class="boycott-alert-logo">
-                        <svg width="100%" height="100%" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="13" y="5" width="10" height="15" rx="5" fill="#44D7FF"/>
-                            <path d="M9 20a9 9 0 0018 0" stroke="#44D7FF" stroke-width="2" stroke-linecap="round" fill="none"/>
-                            <line x1="18" y1="29" x2="18" y2="33" stroke="#44D7FF" stroke-width="2.5" stroke-linecap="round"/>
-                            <line x1="14" y1="33" x2="22" y2="33" stroke="#44D7FF" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M26 15c1.5 1.5 1.5 4.5 0 6" stroke="#44D7FF" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.8"/>
-                            <path d="M30 12c3 3 3 9 0 12" stroke="#44D7FF" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.45"/>
+                        <svg width="22" height="22" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="13" y="5" width="10" height="15" rx="5" fill="white"/>
+                            <path d="M9 20a9 9 0 0018 0" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+                            <line x1="18" y1="29" x2="18" y2="33" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="14" y1="33" x2="22" y2="33" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M26 15c1.5 1.5 1.5 4.5 0 6" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+                            <path d="M30 12c3 3 3 9 0 12" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
                         </svg>
                     </div>
                     <div class="boycott-header-text">
-                        <div class="boycott-alert-title">BOYCOTT SIREN</div>
-                        <div class="boycott-alert-subtitle">Artist detected on boycott list</div>
+                        <div class="boycott-alert-title">ArtSiren</div>
+                        <div class="boycott-alert-subtitle">Artist stance detected</div>
                     </div>
                     <button class="boycott-alert-close" aria-label="Close">×</button>
                 </div>
@@ -826,8 +826,12 @@
                     <div class="boycott-stance-badge" style="background: ${stanceColor};">${stanceLabel}</div>
                     <div class="boycott-statement">${artist.statement}</div>
                     ${queueNote}
-                    <button class="boycott-details-btn">View Sources & Details</button>
                 </div>
+                <div class="boycott-actions">
+                    <button class="boycott-details-btn">View Sources</button>
+                    <button class="boycott-dismiss-btn">Dismiss</button>
+                </div>
+                <div class="boycott-alert-footer">No tracking. You stay in control.</div>
             </div>
         `;
 
@@ -843,6 +847,7 @@
         }
 
         overlay.querySelector('.boycott-alert-close').addEventListener('click', closeAlert);
+        overlay.querySelector('.boycott-dismiss-btn').addEventListener('click', closeAlert);
 
         overlay.querySelector('.boycott-details-btn').addEventListener('click', () => {
             const artistName = encodeURIComponent(artist.name);

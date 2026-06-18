@@ -149,10 +149,10 @@
         gtag('config', 'G-XZRJ6TZY2Y');
     </script>
     
-    <!-- Google Fonts: Inter for professional typography -->
+    <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -902,225 +902,297 @@
         }
 
         /* ═══════════════════════════════════════════════
-           Dark Rebrand — #000940 navy / #44D7FF cyan
+           New Design — Poppins / Navy #0C233E / Electric Blue #1C5FEA
            ═══════════════════════════════════════════════ */
 
         :root {
-            --blue: #44D7FF;
-            --blue-mid: #22b8e8;
-            --blue-light: #7fe8ff;
-            --blue-tint: rgba(68, 215, 255, 0.12);
-            --blue-tint2: rgba(68, 215, 255, 0.06);
-            --text-primary: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.72);
-            --text-muted: rgba(255, 255, 255, 0.45);
-            --border: rgba(255, 255, 255, 0.12);
-            --border-blue: rgba(68, 215, 255, 0.2);
-            --bg: #000940;
-            --shadow-sm: 0 1px 4px rgba(0,0,0,0.2);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
-            --shadow-lg: 0 12px 40px rgba(0,0,0,0.3);
-            --shadow-xl: 0 20px 60px rgba(0,0,0,0.4);
+            --blue: #1C5FEA;
+            --blue-mid: #1a52cc;
+            --blue-light: #4a82f0;
+            --blue-tint: rgba(28, 95, 234, 0.08);
+            --blue-tint2: rgba(28, 95, 234, 0.04);
+            --navy: #0C233E;
+            --text-primary: #0C233E;
+            --text-secondary: #6B7280;
+            --text-muted: #9CA3AF;
+            --border: #DDE1ED;
+            --border-blue: rgba(28, 95, 234, 0.18);
+            --card-bg: #ffffff;
+            --bg: #F8F9FB;
+            --success-green: #28A745;
+            --coral: #F44634;
+            --amber: #F59E0B;
+            --shadow-sm: 0 1px 3px rgba(12,35,62,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 16px rgba(12,35,62,0.08), 0 2px 6px rgba(0,0,0,0.04);
+            --shadow-lg: 0 12px 40px rgba(12,35,62,0.12), 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-xl: 0 20px 60px rgba(12,35,62,0.16), 0 8px 24px rgba(0,0,0,0.08);
         }
 
-        /* Restore dark text inside white-bg components */
-        .artist-card,
-        .autocomplete-dropdown,
-        .contact-modal {
-            --text-primary: #0d1117;
-            --text-secondary: #4a5568;
-            --text-muted: #718096;
-            --blue: #000940;
-            --blue-tint: rgba(0, 9, 64, 0.05);
-            --blue-tint2: rgba(0, 9, 64, 0.03);
-            --border: #e2e8f0;
-            --border-blue: rgba(0, 9, 64, 0.12);
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
         }
 
-        /* Navbar */
+        /* ── Navbar ── */
         .navbar {
-            background: #000940;
+            background: #ffffff;
             backdrop-filter: none;
             -webkit-backdrop-filter: none;
-            border-bottom: 1px solid rgba(68, 215, 255, 0.15);
-            box-shadow: 0 1px 0 rgba(68, 215, 255, 0.1), 0 4px 24px rgba(0,0,0,0.4);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 1px 0 var(--border), 0 2px 12px rgba(12,35,62,0.05);
         }
-        .logo { color: white; }
-        .logo img { width: auto; height: 38px; max-width: 180px; }
+        .logo { color: var(--navy); }
+        .logo img { width: auto; height: 36px; max-width: 180px; }
         .logo span { display: none; }
-        .nav-cta-label { color: rgba(255,255,255,0.5); }
         .nav-cta-btn {
-            background: #44D7FF;
-            color: #000940;
-            box-shadow: 0 4px 15px rgba(68, 215, 255, 0.35);
+            background: var(--blue);
+            color: white;
+            border-radius: 100px;
+            box-shadow: 0 4px 12px rgba(28,95,234,0.3);
         }
         .btn-cta:hover, .nav-cta-btn:hover {
-            box-shadow: 0 8px 24px rgba(68, 215, 255, 0.45);
+            background: var(--blue-mid);
+            box-shadow: 0 6px 20px rgba(28,95,234,0.4);
         }
+        .lang-btn {
+            border-color: var(--border);
+            color: var(--text-secondary);
+        }
+        .lang-btn:hover, .lang-switcher.open .lang-btn {
+            color: var(--blue);
+            border-color: var(--blue);
+        }
+        .lang-menu {
+            background: white;
+            border-color: var(--border);
+            box-shadow: var(--shadow-lg);
+        }
+        .lang-item { color: var(--text-secondary); }
+        .lang-item:hover { background: var(--blue-tint); color: var(--blue); }
+        .lang-item.lang-active { color: var(--blue); }
 
-        /* Hero */
+        /* ── Hero ── */
         .hero h1 {
-            font-size: clamp(3rem, 8vw, 5.5rem);
-            color: white;
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            color: var(--navy);
+            font-weight: 700;
             margin-bottom: 0.5rem;
         }
         .hero h1 span {
             background: none;
             -webkit-background-clip: unset;
             background-clip: unset;
-            -webkit-text-fill-color: #44D7FF;
-            color: #44D7FF;
+            -webkit-text-fill-color: var(--blue);
+            color: var(--blue);
         }
         .hero-eyebrow {
-            background: rgba(68, 215, 255, 0.12);
-            color: #44D7FF;
-            border: 1px solid rgba(68, 215, 255, 0.3);
+            background: var(--blue-tint);
+            color: var(--blue);
+            border: 1px solid var(--border-blue);
             margin-bottom: 1rem;
         }
         .hero p.hero-desc {
             font-size: 1.1rem;
-            color: rgba(255,255,255,0.72);
-            max-width: 800px;
+            color: var(--text-secondary);
+            max-width: 640px;
             margin: 0 auto 0.5rem;
             line-height: 1.6;
-            white-space: nowrap;
             text-align: center;
         }
         .hero p.hero-count {
             font-size: 0.875rem;
-            color: rgba(255,255,255,0.45);
+            color: var(--text-muted);
             margin: 0 auto 1.75rem;
             letter-spacing: 0.01em;
-            white-space: nowrap;
             text-align: center;
         }
         @media (max-width: 860px) {
-            .hero p.hero-desc { white-space: normal; max-width: 90vw; }
-            .hero p.hero-count { white-space: normal; }
+            .hero p.hero-desc { max-width: 90vw; }
         }
-        .hero-chips {
+
+        /* Trust icons row */
+        .hero-trust {
             display: flex;
             justify-content: center;
+            align-items: center;
+            gap: 2rem;
             flex-wrap: wrap;
-            gap: 10px;
-            margin: 1.5rem 0;
+            margin: 1.25rem 0 1.5rem;
         }
-        .hero-chip {
+        .hero-trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.35rem;
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .hero-trust-item svg { color: var(--blue); }
+        @media (max-width: 560px) {
+            .hero-trust { gap: 1.25rem; }
+            .hero-trust-item { font-size: 0.7rem; }
+        }
+
+        /* Popular searches */
+        .popular-searches {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.75rem 0 0;
+        }
+        .popular-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-right: 0.25rem;
+        }
+        .popular-chip {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            background: rgba(68, 215, 255, 0.08);
-            border: 1px solid rgba(68, 215, 255, 0.22);
-            color: rgba(255,255,255,0.82);
-            font-size: 0.82rem;
+            background: white;
+            border: 1.5px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.78rem;
             font-weight: 600;
-            padding: 0.4rem 1rem;
+            padding: 0.3rem 0.85rem;
             border-radius: 100px;
+            cursor: pointer;
+            transition: border-color 0.15s, color 0.15s, background 0.15s;
+            font-family: inherit;
         }
+        .popular-chip:hover {
+            border-color: var(--blue);
+            color: var(--blue);
+            background: var(--blue-tint);
+        }
+
+        /* Keep old hero-chips for backwards compat */
+        .hero-chips { display: none; }
 
         /* Search */
-        .search-input:focus {
-            border-color: #44D7FF;
-            box-shadow: 0 0 0 3px rgba(68, 215, 255, 0.12);
+        .search-input {
+            color: var(--navy);
+            border-color: var(--border);
+            border-radius: 100px;
+            padding-left: 3.25rem;
         }
+        .search-input:focus {
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(28, 95, 234, 0.1);
+        }
+        .search-input::placeholder { color: var(--text-muted); }
+        .search-icon { color: var(--text-muted); }
         .autocomplete-item:hover,
         .autocomplete-item.ac-active {
-            background: rgba(0, 9, 64, 0.05);
-            color: #000940;
+            background: var(--blue-tint);
+            color: var(--blue);
         }
-        .autocomplete-item mark { color: #000940; }
+        .autocomplete-item mark { color: var(--blue); }
 
-        /* Filter buttons — rectangular */
-        .filter-label { color: #44D7FF; }
+        /* Filter buttons */
+        .filter-label { color: var(--text-muted); }
         .filter-btn {
-            border-radius: 6px;
-            border: 1.5px solid rgba(255,255,255,0.25);
-            background: transparent;
-            color: rgba(255,255,255,0.82);
+            border-color: var(--border);
+            background: white;
+            color: var(--text-secondary);
         }
         .filter-btn:hover {
-            border-color: #44D7FF;
-            color: #44D7FF;
-            background: rgba(68, 215, 255, 0.08);
+            border-color: var(--blue);
+            color: var(--blue);
+            background: var(--blue-tint);
         }
         .filter-btn.active {
-            background: #44D7FF;
-            color: #000940;
-            border-color: transparent;
-            box-shadow: 0 2px 12px rgba(68, 215, 255, 0.4);
-        }
-        .level-btn-CRITICAL { border-color: rgba(243,113,113,0.5); color: #f87171; }
-        .level-btn-HIGH     { border-color: rgba(251,146,60,0.5);  color: #fb923c; }
-        .level-btn-LOW      { border-color: rgba(52,211,153,0.5);  color: #34d399; }
-        .level-btn-CRITICAL:hover { border-color: #f87171; background: rgba(243,113,113,0.08); color: #f87171; }
-        .level-btn-HIGH:hover     { border-color: #fb923c; background: rgba(251,146,60,0.08);  color: #fb923c; }
-        .level-btn-LOW:hover      { border-color: #34d399; background: rgba(52,211,153,0.08);  color: #34d399; }
-        .level-btn-CRITICAL.active { background: #dc2626; color: white; border-color: transparent; box-shadow: 0 2px 8px rgba(220,38,38,0.4); }
-        .level-btn-HIGH.active     { background: #ea580c; color: white; border-color: transparent; box-shadow: 0 2px 8px rgba(234,88,12,0.4); }
-        .level-btn-LOW.active      { background: #059669; color: white; border-color: transparent; box-shadow: 0 2px 8px rgba(5,150,105,0.4); }
-
-        /* Stats — dark cards */
-        .stat-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(68, 215, 255, 0.15);
-            box-shadow: none;
-        }
-        .stat-card:hover {
-            box-shadow: 0 4px 20px rgba(68, 215, 255, 0.12);
-            transform: translateY(-2px);
-        }
-        .stat-number {
-            background: none;
-            -webkit-background-clip: unset;
-            background-clip: unset;
-            -webkit-text-fill-color: white;
+            background: var(--blue);
             color: white;
-            font-size: 2.5rem;
+            border-color: transparent;
+            box-shadow: 0 2px 8px rgba(28,95,234,0.3);
         }
-        .stat-label { color: #44D7FF; }
+        .level-btn-CRITICAL { border-color: #fecaca; color: #dc2626; }
+        .level-btn-HIGH     { border-color: #fed7aa; color: #ea580c; }
+        .level-btn-LOW      { border-color: #a7f3d0; color: #059669; }
+        .level-btn-CRITICAL:hover { border-color: #dc2626; background: #fef2f2; color: #dc2626; }
+        .level-btn-HIGH:hover     { border-color: #ea580c; background: #fff7ed; color: #ea580c; }
+        .level-btn-LOW:hover      { border-color: #059669; background: #f0fdf4; color: #059669; }
+        .level-btn-CRITICAL.active { background: #dc2626; color: white; border-color: transparent; }
+        .level-btn-HIGH.active     { background: #ea580c; color: white; border-color: transparent; }
+        .level-btn-LOW.active      { background: #059669; color: white; border-color: transparent; }
+
+        /* Stats */
+        .stat-card { background: white; border-color: var(--border); }
+        .stat-number {
+            background: linear-gradient(135deg, var(--blue), var(--blue-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.25rem;
+        }
+        .stat-label { color: var(--text-muted); }
 
         /* Levels legend */
-        .levels-legend {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .levels-legend summary { color: rgba(255,255,255,0.6); }
-        .levels-legend summary::before { color: rgba(255,255,255,0.35); }
-        .legend-text { color: rgba(255,255,255,0.65); }
+        .levels-legend { background: white; border-color: var(--border); }
+        .levels-legend summary { color: var(--text-secondary); }
+        .legend-text { color: var(--text-secondary); }
 
         /* Grid */
-        .grid-title { color: rgba(255,255,255,0.4); }
+        .grid-title { color: var(--text-muted); }
 
-        /* Search bar — white bg, needs dark placeholder + visible border */
-        .search-input { color: #0d1117; border-color: #e2e8f0; }
-        .search-input::placeholder { color: #a0aec0; font-weight: 400; }
-        .search-icon { color: #a0aec0; }
-
-        /* Artist cards — stay white, use navy accent */
-        .view-details { color: #000940; }
-        .artist-card:hover { border-color: rgba(0,9,64,0.15); }
+        /* Cards */
+        .view-details { color: var(--blue); }
+        .artist-card:hover { border-color: var(--border-blue); }
 
         /* PWA install button */
-        #pwa-install-btn { background: #44D7FF !important; color: #000940 !important; }
+        #pwa-install-btn { background: var(--blue) !important; color: white !important; }
 
-        /* Footer */
+        /* Footer — navy dark */
         .footer {
-            background: #000940;
-            border-top: 1px solid rgba(255,255,255,0.08);
+            background: var(--navy);
+            border-top: none;
+            margin-top: 0;
         }
         .footer-links a { color: rgba(255,255,255,0.55); }
-        .footer-links a:hover { color: #44D7FF; background: rgba(68, 215, 255, 0.08); }
-        .footer-links span { color: rgba(255,255,255,0.15); }
-        .footer-copyright { color: rgba(255,255,255,0.3); }
+        .footer-links a:hover { color: white; background: rgba(255,255,255,0.08); }
+        .footer-links span { color: rgba(255,255,255,0.2); }
+        .footer-copyright { color: rgba(255,255,255,0.35); }
 
-        /* Contact modal — keep white/professional */
-        .contact-submit { background: #000940; }
-        .contact-submit:hover { background: #001269; }
+        /* Footer trust bar */
+        .footer-trust {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 0.75rem 1rem;
+        }
+        .footer-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.78rem;
+            font-weight: 500;
+            padding: 0.3rem 1.25rem;
+            border-right: 1px solid rgba(255,255,255,0.12);
+        }
+        .footer-trust-item:last-child { border-right: none; }
+        .footer-trust-item svg { flex-shrink: 0; opacity: 0.7; }
+        @media (max-width: 600px) {
+            .footer-trust-item { border-right: none; padding: 0.25rem 0.75rem; }
+        }
+
+        /* Contact modal */
+        .contact-submit { background: var(--blue); }
+        .contact-submit:hover { background: var(--blue-mid); }
         .contact-field input:focus,
         .contact-field select:focus,
         .contact-field textarea:focus {
-            border-color: #000940;
-            box-shadow: 0 0 0 3px rgba(0,9,64,0.08);
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(28,95,234,0.1);
         }
 
         /* ── Language Switcher ── */
@@ -1175,7 +1247,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="logo">
-                    <img src="logo.png" alt="ArtSiren" onerror="this.style.display='none'">
+                    <img src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/4ebf28762_fulllogo2.png" alt="ArtSiren" onerror="this.src='logo.png'">
                     <span>ArtSiren</span>
                 </a>
                 <div class="nav-right">
@@ -1221,10 +1293,32 @@
                 <div class="autocomplete-dropdown" id="autocompleteList"></div>
             </div>
             
-            <div class="hero-chips">
-                <span class="hero-chip">🔍 Search any artist</span>
-                <span class="hero-chip">✅ Verified sources</span>
-                <span class="hero-chip">⚡ Browser Alerts</span>
+            <div class="popular-searches">
+                <span class="popular-label">Popular:</span>
+                <button class="popular-chip" onclick="document.getElementById('searchInput').value=this.textContent;document.getElementById('searchInput').dispatchEvent(new Event('input'))">Roger Waters</button>
+                <button class="popular-chip" onclick="document.getElementById('searchInput').value=this.textContent;document.getElementById('searchInput').dispatchEvent(new Event('input'))">Björk</button>
+                <button class="popular-chip" onclick="document.getElementById('searchInput').value=this.textContent;document.getElementById('searchInput').dispatchEvent(new Event('input'))">Dua Lipa</button>
+                <button class="popular-chip" onclick="document.getElementById('searchInput').value=this.textContent;document.getElementById('searchInput').dispatchEvent(new Event('input'))">Radiohead</button>
+                <button class="popular-chip" onclick="document.getElementById('searchInput').value=this.textContent;document.getElementById('searchInput').dispatchEvent(new Event('input'))">Massive Attack</button>
+            </div>
+
+            <div class="hero-trust">
+                <div class="hero-trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Public actions
+                </div>
+                <div class="hero-trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Verified sources
+                </div>
+                <div class="hero-trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    No tracking
+                </div>
+                <div class="hero-trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Your choice
+                </div>
             </div>
 
             <div class="filters">
@@ -1295,6 +1389,24 @@
     </div>
 
     <footer class="footer">
+        <div class="footer-trust">
+            <div class="footer-trust-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Public actions only
+            </div>
+            <div class="footer-trust-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Verified media sources
+            </div>
+            <div class="footer-trust-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                No tracking, no accounts
+            </div>
+            <div class="footer-trust-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Your choice, always
+            </div>
+        </div>
         <div class="container">
             <div class="footer-links">
                 <a href="about.html">About</a>
