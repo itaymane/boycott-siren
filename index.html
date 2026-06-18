@@ -1229,13 +1229,26 @@
         }
 
         /* ── Nav links ── */
+        .nav-content {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            position: static;
+        }
         .nav-links {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 0.5rem;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            position: static;
+            left: auto;
+            transform: none;
+        }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1rem;
         }
         .nav-link {
             color: var(--text-secondary);
@@ -1249,6 +1262,135 @@
         }
         .nav-link:hover { color: var(--navy); background: rgba(12,35,62,0.06); }
         @media (max-width: 760px) { .nav-links { display: none; } }
+
+        /* ── Hero stats (compact inline row) ── */
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.25rem;
+            margin: 0.75rem 0 0;
+            flex-wrap: wrap;
+        }
+        .hero-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.1rem;
+        }
+        .hero-stat-num {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--blue);
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+        .hero-stat-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* ── Artist cards — horizontal list layout ── */
+        .artists-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            grid-template-columns: unset;
+        }
+        .artist-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.9rem 1.25rem;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            background: white;
+            cursor: pointer;
+            transition: box-shadow 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
+            box-shadow: 0 1px 4px rgba(12,35,62,0.05);
+            animation: fadeUp 0.4s ease both;
+            overflow: visible;
+        }
+        .artist-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(12,35,62,0.1);
+            border-color: var(--border-blue);
+        }
+        .card-accent { display: none !important; }
+        .card-thumb { flex-shrink: 0; }
+        .card-thumb .artist-avatar {
+            width: 70px !important;
+            height: 70px !important;
+            border-radius: 10px !important;
+            border: 1.5px solid var(--border) !important;
+            object-position: top center !important;
+        }
+        .card-thumb .artist-avatar-initials {
+            width: 70px !important;
+            height: 70px !important;
+            border-radius: 10px !important;
+            font-size: 1.1rem !important;
+        }
+        .artist-card .card-body {
+            flex: 1;
+            min-width: 0;
+            padding: 0;
+            display: block;
+        }
+        .card-top {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.15rem;
+        }
+        .card-top .artist-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+            white-space: normal;
+            overflow: visible;
+            text-overflow: unset;
+            letter-spacing: -0.01em;
+        }
+        .card-top .stance-badge {
+            font-size: 0.6rem;
+            padding: 0.18rem 0.55rem;
+        }
+        .card-cat {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        .artist-card .artist-statement {
+            -webkit-line-clamp: 2;
+            font-size: 0.82rem;
+            margin-bottom: 0;
+            color: var(--text-secondary);
+        }
+        .card-action {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+        }
+        .artist-card .view-details {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--blue);
+            white-space: nowrap;
+        }
+        .artist-card .card-footer { display: none !important; }
+        .artist-card .artist-header { display: none !important; }
 
         /* ── Language Switcher ── */
         .nav-right { display: flex; align-items: center; gap: 1rem; }
@@ -1348,10 +1490,6 @@
 
             <div class="hero-trust">
                 <div class="hero-trust-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    Public actions
-                </div>
-                <div class="hero-trust-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
                     Verified sources
                 </div>
@@ -1376,35 +1514,22 @@
                 <div class="autocomplete-dropdown" id="autocompleteList"></div>
             </div>
 
-            <div class="popular-searches">
-                <span class="popular-label">Popular:</span>
-                <button class="popular-chip" onclick="document.getElementById('searchInput').value=this.textContent;document.getElementById('searchInput').dispatchEvent(new Event('input'))">Roger Waters</button>
-                <button class="popular-chip" onclick="document.getElementById('searchInput').value=this.textContent;document.getElementById('searchInput').dispatchEvent(new Event('input'))">Björk</button>
-                <button class="popular-chip" onclick="document.getElementById('searchInput').value=this.textContent;document.getElementById('searchInput').dispatchEvent(new Event('input'))">Dua Lipa</button>
-                <button class="popular-chip" onclick="document.getElementById('searchInput').value=this.textContent;document.getElementById('searchInput').dispatchEvent(new Event('input'))">Radiohead</button>
-                <button class="popular-chip" onclick="document.getElementById('searchInput').value=this.textContent;document.getElementById('searchInput').dispatchEvent(new Event('input'))">Massive Attack</button>
-            </div>
-
-            <div class="filters">
-                <div class="filter-group">
-                    <span class="filter-label">Stance:</span>
-                    <button class="filter-btn stance-btn active" data-stance="all">All</button>
-                    <button class="filter-btn stance-btn" data-stance="BOYCOTTER">Boycotters</button>
-                    <button class="filter-btn stance-btn" data-stance="WELCOMES_ALL">Welcomes All</button>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-num" id="statMusicians">196</span>
+                    <span class="hero-stat-label">Musicians</span>
                 </div>
-                <div class="filter-group">
-                    <span class="filter-label">Category:</span>
-                    <button class="filter-btn category-btn active" data-filter="all">All</button>
-                    <button class="filter-btn category-btn" data-filter="musician">Musicians</button>
-                    <button class="filter-btn category-btn" data-filter="actor">Actors</button>
-                    <button class="filter-btn category-btn" data-filter="director">Directors</button>
+                <div class="hero-stat">
+                    <span class="hero-stat-num" id="statActors">33</span>
+                    <span class="hero-stat-label">Actors</span>
                 </div>
-                <div class="filter-group">
-                    <span class="filter-label">Severity:</span>
-                    <button class="filter-btn level-btn active" data-level="all">All</button>
-                    <button class="filter-btn level-btn level-btn-CRITICAL" data-level="CRITICAL">● Critical</button>
-                    <button class="filter-btn level-btn level-btn-HIGH" data-level="HIGH">● High</button>
-                    <button class="filter-btn level-btn level-btn-LOW" data-level="LOW">● Low</button>
+                <div class="hero-stat">
+                    <span class="hero-stat-num" id="statDirectors">11</span>
+                    <span class="hero-stat-label">Directors</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num" id="statOther">12</span>
+                    <span class="hero-stat-label">Writers &amp; Activists</span>
                 </div>
             </div>
 
@@ -1428,43 +1553,6 @@
             </div>
         </div>
 
-        <details class="levels-legend">
-            <summary>How Artists Are Classified</summary>
-            <div class="legend-grid">
-                <div class="legend-item">
-                    <span class="stance-badge level-CRITICAL">Critical</span>
-                    <span class="legend-text"><strong>Active Boycott:</strong> Formally declared participation in a boycott of Israel: signed BDS cultural boycott, joined No Music for Genocide with geo-blocking, or signed letters explicitly calling for a boycott.</span>
-                </div>
-                <div class="legend-item">
-                    <span class="stance-badge level-HIGH">High</span>
-                    <span class="legend-text"><strong>Public Condemnation:</strong> Made strong public statements against Israeli military actions (e.g. "genocide", "apartheid") or faced personal/professional risk for speaking out, without formally joining an organised boycott.</span>
-                </div>
-                <div class="legend-item">
-                    <span class="stance-badge level-LOW">Low</span>
-                    <span class="legend-text"><strong>Signed Declaration:</strong> Signed a petition or solidarity statement opposing Israeli policy.</span>
-                </div>
-            </div>
-        </details>
-
-        <div class="stats">
-            <div class="stat-card">
-                <div class="stat-number" id="statMusicians">196</div>
-                <div class="stat-label">Musicians</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" id="statActors">33</div>
-                <div class="stat-label">Actors</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" id="statDirectors">11</div>
-                <div class="stat-label">Directors</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" id="statOther">12</div>
-                <div class="stat-label">Writers & Activists</div>
-            </div>
-        </div>
-        
         <div class="grid-header">
             <span class="grid-title" id="resultCount"></span>
         </div>
@@ -1878,21 +1966,17 @@
                     ? `<img class="artist-avatar" src="${artist.image}" alt="${artist.name}" loading="lazy" onerror="this.outerHTML='<div class=\\'artist-avatar-initials\\'>${initials}</div>'">`
                     : `<div class="artist-avatar-initials">${initials}</div>`;
                 return `<div class="artist-card" onclick="showArtistDetails(${artist.id})" style="animation-delay:${Math.min(i * 30, 300)}ms">
-                    <div class="card-accent ${accentClass}"></div>
+                    <div class="card-thumb">${avatarHtml}</div>
                     <div class="card-body">
-                        <div class="artist-header">
-                            ${avatarHtml}
-                            <div class="artist-meta">
-                                <div class="artist-name">${artist.name}</div>
-                                <div class="artist-category">${cat}</div>
-                            </div>
-                            <div class="${badgeClass}">${badgeLabel}</div>
+                        <div class="card-top">
+                            <span class="artist-name">${artist.name}</span>
+                            <span class="${badgeClass}">${badgeLabel}</span>
                         </div>
+                        <div class="card-cat">${cat}</div>
                         <div class="artist-statement">${artist.statement}</div>
-                        <div class="card-footer">
-                            <span class="sources-label">Verified sources</span>
-                            <span class="view-details">View details <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
-                        </div>
+                    </div>
+                    <div class="card-action">
+                        <span class="view-details">Details <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
                     </div>
                 </div>`;
             }).join('');
