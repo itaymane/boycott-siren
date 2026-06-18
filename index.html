@@ -191,15 +191,14 @@
 
         /* ── Navbar ── */
         .navbar {
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-blue);
             padding: 0.85rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 1px 0 var(--border-blue), 0 4px 24px rgba(0, 71, 171, 0.06);
+            box-shadow: 0 2px 16px rgba(12, 35, 62, 0.06);
         }
         .container {
             max-width: 1360px;
@@ -210,6 +209,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
         .logo {
             display: flex;
@@ -384,7 +384,12 @@
 
         /* ── Hero ── */
         .hero {
-            padding: 5rem 0 2.5rem;
+            min-height: calc(92vh - 64px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 0 2rem;
             text-align: center;
         }
         .hero-eyebrow {
@@ -1199,20 +1204,23 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 0.25rem;
-            margin: 0 auto;
+            gap: 0.5rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
         .nav-link {
             color: var(--text-secondary);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
-            padding: 0.4rem 0.85rem;
+            padding: 0.45rem 1rem;
             border-radius: 8px;
             transition: color 0.15s, background 0.15s;
+            white-space: nowrap;
         }
-        .nav-link:hover { color: var(--navy); background: rgba(12,35,62,0.05); }
-        @media (max-width: 700px) { .nav-links { display: none; } }
+        .nav-link:hover { color: var(--navy); background: rgba(12,35,62,0.06); }
+        @media (max-width: 760px) { .nav-links { display: none; } }
 
         /* ── Language Switcher ── */
         .nav-right { display: flex; align-items: center; gap: 1rem; }
@@ -1271,6 +1279,7 @@
                 </a>
                 <div class="nav-links">
                     <a href="about.html" class="nav-link">About</a>
+                    <a href="sources.html" class="nav-link">Sources</a>
                     <a href="extension.html" class="nav-link">How It Works</a>
                     <a href="#" onclick="openContact();return false;" class="nav-link">Contact</a>
                 </div>
