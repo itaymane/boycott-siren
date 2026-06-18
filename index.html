@@ -384,13 +384,17 @@
 
         /* ── Hero ── */
         .hero {
-            min-height: calc(92vh - 64px);
+            min-height: calc(72vh - 64px);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 3rem 0 2rem;
+            padding: 2.5rem 0 0;
             text-align: center;
+            background: #fff;
+            border-radius: 0 0 24px 24px;
+            box-shadow: 0 8px 32px rgba(12,35,62,0.07);
+            margin-bottom: 1.5rem;
         }
         .hero-eyebrow {
             display: inline-flex;
@@ -434,10 +438,32 @@
 
         /* ── Search ── */
         .search-box {
-            max-width: 580px;
-            margin: 0 auto 2.5rem;
+            max-width: 700px;
+            width: 90%;
+            margin: 0 auto 1.25rem;
             position: relative;
+            display: flex;
+            align-items: center;
         }
+        .search-btn {
+            position: absolute;
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--blue);
+            border: none;
+            border-radius: 10px;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            transition: background 0.15s;
+            flex-shrink: 0;
+        }
+        .search-btn:hover { background: var(--blue-mid); }
         .search-icon {
             position: absolute;
             left: 1.1rem;
@@ -943,8 +969,7 @@
             background: #ffffff;
             backdrop-filter: none;
             -webkit-backdrop-filter: none;
-            border-bottom: 1px solid var(--border);
-            box-shadow: 0 1px 0 var(--border), 0 2px 12px rgba(12,35,62,0.05);
+            box-shadow: 0 2px 12px rgba(12,35,62,0.05);
         }
         .logo { color: var(--navy); }
         .logo img { width: auto; height: 36px; max-width: 180px; }
@@ -1005,9 +1030,9 @@
             text-align: center;
         }
         .hero p.hero-count {
-            font-size: 0.875rem;
+            font-size: 0.82rem;
             color: var(--text-muted);
-            margin: 0 auto 1.75rem;
+            margin: 0 auto 1rem;
             letter-spacing: 0.01em;
             text-align: center;
         }
@@ -1020,9 +1045,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 2rem;
+            gap: 2.5rem;
             flex-wrap: wrap;
-            margin: 1.25rem 0 1.5rem;
+            margin: 0.75rem 0 0.75rem;
         }
         .hero-trust-item {
             display: flex;
@@ -1164,15 +1189,18 @@
         .footer-links span { color: rgba(255,255,255,0.2); }
         .footer-copyright { color: rgba(255,255,255,0.35); }
 
-        /* Footer trust bar */
+        /* Hero trust bar (navy strip at bottom of hero card) */
         .footer-trust {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 0;
             flex-wrap: wrap;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding: 0.75rem 1rem;
+            background: var(--navy);
+            border-radius: 0 0 24px 24px;
+            padding: 0.85rem 1rem;
+            margin-top: 1.25rem;
+            width: 100%;
         }
         .footer-trust-item {
             display: flex;
@@ -1341,7 +1369,10 @@
                 <span class="search-icon">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 </span>
-                <input type="text" class="search-input" id="searchInput" placeholder="Search artists…" autocomplete="off">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search an artist, band, or venue…" autocomplete="off" style="padding-right:3.5rem;">
+                <button class="search-btn" aria-label="Search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
                 <div class="autocomplete-dropdown" id="autocompleteList"></div>
             </div>
 
@@ -1374,6 +1405,25 @@
                     <button class="filter-btn level-btn level-btn-CRITICAL" data-level="CRITICAL">● Critical</button>
                     <button class="filter-btn level-btn level-btn-HIGH" data-level="HIGH">● High</button>
                     <button class="filter-btn level-btn level-btn-LOW" data-level="LOW">● Low</button>
+                </div>
+            </div>
+
+            <div class="footer-trust">
+                <div class="footer-trust-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    Public actions, not opinions.
+                </div>
+                <div class="footer-trust-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    Verified sources, always.
+                </div>
+                <div class="footer-trust-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    No tracking. Ever.
+                </div>
+                <div class="footer-trust-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+                    You stay in control.
                 </div>
             </div>
         </div>
@@ -1422,24 +1472,6 @@
     </div>
 
     <footer class="footer">
-        <div class="footer-trust">
-            <div class="footer-trust-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                Public actions, not opinions.
-            </div>
-            <div class="footer-trust-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-                Verified sources, always.
-            </div>
-            <div class="footer-trust-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                No tracking. Ever.
-            </div>
-            <div class="footer-trust-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
-                You stay in control.
-            </div>
-        </div>
         <div class="container">
             <div class="footer-links">
                 <a href="about.html">About</a>
