@@ -1680,8 +1680,11 @@
            MOBILE — max-width: 640px
            ═══════════════════════════════════════════════ */
 
-        /* Mobile bottom nav — hidden on desktop */
+        /* Mobile-only utilities — hidden on desktop */
         .mobile-bottom-nav { display: none; }
+        .mob-br { display: none; }
+        .mob-get-app { display: none; }
+        .mob-lang-sheet { display: none; }
 
         @keyframes slideUpSheet {
             from { transform: translateY(100%); opacity: 0; }
@@ -1800,6 +1803,68 @@
             .mob-nav-item svg { width: 22px; height: 22px; }
             .mob-nav-item.active, .mob-nav-item:active { color: var(--blue); }
 
+            /* ── Mobile hero h1 line break ── */
+            .mob-br { display: block; }
+
+            /* ── "Get the App" in mobile navbar ── */
+            .mob-get-app {
+                display: inline-flex;
+                align-items: center;
+                background: var(--blue);
+                color: white;
+                text-decoration: none;
+                border-radius: 100px;
+                padding: 0.42rem 1rem;
+                font-size: 0.78rem;
+                font-weight: 600;
+                white-space: nowrap;
+                font-family: inherit;
+            }
+
+            /* ── Mobile language sheet (pops up above bottom nav) ── */
+            .mob-lang-sheet {
+                position: fixed;
+                bottom: 68px;
+                left: 0;
+                right: 0;
+                z-index: 250;
+                display: flex;
+                justify-content: center;
+                pointer-events: none;
+                opacity: 0;
+                transform: translateY(8px);
+                transition: opacity 0.18s ease, transform 0.18s ease;
+            }
+            .mob-lang-sheet.open {
+                pointer-events: auto;
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .mob-lang-inner {
+                background: white;
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                box-shadow: 0 8px 32px rgba(12,35,62,0.15);
+                padding: 0.4rem;
+                display: flex;
+                flex-direction: column;
+                min-width: 140px;
+            }
+            .mob-lang-opt {
+                display: block;
+                padding: 0.65rem 1.1rem;
+                border-radius: 10px;
+                color: var(--text-secondary);
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: 500;
+                font-family: inherit;
+                text-align: center;
+                transition: background 0.12s, color 0.12s;
+            }
+            .mob-lang-opt:hover { background: var(--blue-tint); color: var(--blue); }
+            .mob-lang-opt.mob-lang-active { color: var(--blue); font-weight: 600; }
+
             /* ── Artist modal → bottom sheet ── */
             .as-modal-overlay {
                 align-items: flex-end;
@@ -1841,6 +1906,7 @@
                     <a href="extension.html" class="nav-link">How It Works</a>
                     <a href="#" onclick="openContact();return false;" class="nav-link">Contact</a>
                 </div>
+                <a href="extension.html" class="mob-get-app">Get the App</a>
                 <div class="nav-right">
                     <div class="lang-switcher">
                         <button class="lang-btn" onclick="toggleLang(this)">
@@ -1869,7 +1935,7 @@
 
     <div class="container">
         <div class="hero">
-            <h1>Know <span>Before</span> You Go</h1>
+            <h1>Know <span>Before</span><br class="mob-br"> You Go</h1>
             <p class="hero-desc">ArtSiren brings transparency to the artists you support. Before you buy, stream, share, or show up.</p>
 
             <div class="hero-trust">
@@ -2850,24 +2916,49 @@
         <a href="#" onclick="openContact();return false;" class="footer-trust-link">Contact</a>
     </div>
 
+    <!-- Mobile language sheet (pops up above bottom nav) -->
+    <div class="mob-lang-sheet" id="mobLangSheet">
+        <div class="mob-lang-inner">
+            <a href="/" class="mob-lang-opt mob-lang-active">English</a>
+            <a href="/he/" class="mob-lang-opt">עברית</a>
+        </div>
+    </div>
+
     <!-- Mobile bottom navigation (hidden on desktop) -->
     <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
         <a href="index.html" class="mob-nav-item active">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             <span>Home</span>
         </a>
-        <button class="mob-nav-item" onclick="document.getElementById('searchInput').focus();document.getElementById('searchInput').scrollIntoView({behavior:'smooth'})">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <span>Search</span>
-        </button>
-        <a href="extension.html" class="mob-nav-item">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Extension</span>
-        </a>
         <a href="about.html" class="mob-nav-item">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
             <span>About</span>
         </a>
+        <a href="privacy.html" class="mob-nav-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            <span>Privacy</span>
+        </a>
+        <a href="#" onclick="openContact();return false;" class="mob-nav-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>Contact</span>
+        </a>
+        <button class="mob-nav-item mob-lang-btn" onclick="toggleMobLang(event)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>EN</span>
+        </button>
     </nav>
+
+    <script>
+    function toggleMobLang(e) {
+        e.stopPropagation();
+        document.getElementById('mobLangSheet').classList.toggle('open');
+    }
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('#mobLangSheet') && !e.target.closest('.mob-lang-btn')) {
+            var s = document.getElementById('mobLangSheet');
+            if (s) s.classList.remove('open');
+        }
+    });
+    </script>
 </body>
 </html>
