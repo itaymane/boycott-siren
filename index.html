@@ -1634,12 +1634,12 @@
         .lang-switcher { position: relative; }
         .lang-btn {
             background: transparent;
-            border: 1px solid rgba(255,255,255,0.22);
-            color: rgba(255,255,255,0.65);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
             border-radius: 20px;
             padding: 0.35rem 0.85rem;
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 500;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -1648,32 +1648,32 @@
             transition: color 0.15s, border-color 0.15s;
             white-space: nowrap;
         }
-        .lang-btn:hover, .lang-switcher.open .lang-btn { color: #44D7FF; border-color: #44D7FF; }
+        .lang-btn:hover, .lang-switcher.open .lang-btn { color: var(--blue); border-color: var(--blue); }
         .lang-menu {
             display: none;
             position: absolute;
             top: calc(100% + 8px);
             right: 0;
-            background: #000c4a;
-            border: 1px solid rgba(68,215,255,0.2);
+            background: white;
+            border: 1px solid var(--border);
             border-radius: 10px;
             overflow: hidden;
-            min-width: 140px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+            min-width: 130px;
+            box-shadow: 0 8px 24px rgba(12,35,62,0.12);
             z-index: 200;
         }
         .lang-switcher.open .lang-menu { display: block; }
         .lang-item {
             display: block;
             padding: 0.6rem 1rem;
-            color: rgba(255,255,255,0.65);
+            color: var(--text-secondary);
             text-decoration: none;
             font-size: 0.85rem;
-            font-weight: 500;
+            font-weight: 400;
             transition: background 0.15s, color 0.15s;
         }
-        .lang-item:hover { background: rgba(68,215,255,0.1); color: #44D7FF; }
-        .lang-item.lang-active { color: #44D7FF; font-weight: 700; pointer-events: none; }
+        .lang-item:hover { background: var(--blue-tint); color: var(--blue); }
+        .lang-item.lang-active { color: var(--blue); font-weight: 600; pointer-events: none; }
     </style>
 </head>
 <body>
