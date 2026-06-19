@@ -2353,9 +2353,31 @@
   {id: 341, name: "Jerry O'Connell", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Jerry_O%27Connell_by_Gage_Skidmore.jpg/330px-Jerry_O%27Connell_by_Gage_Skidmore.jpg", category: "actor", stance: "WELCOMES_ALL", level: "LOW", statement: "Non-Jewish actor who has been outspoken in his support for Israel and the Jewish community, saying \"I show up for my Jewish friends.\" He signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and joined an open letter slamming celebrities manipulated by pro-Palestine rhetoric.", sources: [{name: "Creative Community for Peace – Eurovision 2026 Letter", url: "https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/"}, {name: "Jerusalem Post", url: "https://www.jpost.com/j-spot/article-898243"}, {name: "TheWrap", url: "https://www.thewrap.com/uzo-aduba-julianna-margulies-jerry-oconnell-pro-israel-letter-jewish-museum-shooting/"}]}
 ];
         
+        // ── Level visibility flag ──────────────────────────────────────
+        // Set to true to restore level filter UI (CRITICAL / HIGH / LOW)
+        // When true, level buttons are injected into .filter-bar automatically.
+        // Data is always present in ARTISTS_DATABASE regardless of this flag.
+        // Archive: artist-levels-archive.json (id, name, category, stance, level)
+        const SHOW_LEVELS = false;
+        // ──────────────────────────────────────────────────────────────
+
         let categoryFilter = 'all';
         let levelFilter = 'all';
         let stanceFilter = 'all';
+
+        if (SHOW_LEVELS) {
+            const filterBar = document.querySelector('.filter-bar, .filters-row, .filter-row');
+            if (filterBar) {
+                const levelGroup = document.createElement('div');
+                levelGroup.className = 'filter-group level-filter-group';
+                levelGroup.innerHTML = `
+                    <button class="level-btn level-btn-CRITICAL" data-level="CRITICAL">Critical</button>
+                    <button class="level-btn level-btn-HIGH" data-level="HIGH">High</button>
+                    <button class="level-btn level-btn-LOW" data-level="LOW">Low</button>
+                `;
+                filterBar.appendChild(levelGroup);
+            }
+        }
 
         function renderArtists() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
