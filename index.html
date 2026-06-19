@@ -1109,6 +1109,7 @@
             border-color: var(--border);
             border-radius: 100px;
             padding-left: 3.25rem;
+            padding-right: 3.5rem;
         }
         .search-input:focus {
             border-color: var(--blue);
@@ -1719,7 +1720,6 @@
                 max-width: 100%;
                 margin-bottom: 1rem;
             }
-            .hero-trust { display: none; }
             .search-box { width: 100%; margin: 0 0 0.75rem; }
             .search-input { font-size: 0.95rem; }
             .hero-stats {
@@ -1768,6 +1768,14 @@
             /* ── Hide desktop footer strip ── */
             .footer-trust { display: none !important; }
 
+            /* ── Search: hide button, remove extra right padding ── */
+            .search-btn    { display: none !important; }
+            .search-input  { padding-right: 1rem !important; }
+
+            /* ── Hide hero decorative elements not in mobile design ── */
+            .hero-trust    { display: none !important; }
+            .hero-eyebrow  { display: none !important; }
+
             /* ── Mobile bottom nav ── */
             .mobile-bottom-nav {
                 display: flex;
@@ -1806,7 +1814,7 @@
             /* ── Mobile hero h1 line break ── */
             .mob-br { display: block; }
 
-            /* ── "Get the App" in mobile navbar ── */
+            /* ── "Get the App" in mobile navbar (right edge) ── */
             .mob-get-app {
                 display: inline-flex;
                 align-items: center;
@@ -1819,6 +1827,7 @@
                 font-weight: 600;
                 white-space: nowrap;
                 font-family: inherit;
+                margin-left: auto;
             }
 
             /* ── Mobile language sheet (pops up above bottom nav) ── */
@@ -1957,7 +1966,7 @@
                 <span class="search-icon">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 </span>
-                <input type="text" class="search-input" id="searchInput" placeholder="Search an artist, band, or venue…" autocomplete="off" style="padding-right:3.5rem;">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search an artist, band, or venue…" autocomplete="off">
                 <button class="search-btn" aria-label="Search">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 </button>
@@ -2926,10 +2935,6 @@
 
     <!-- Mobile bottom navigation (hidden on desktop) -->
     <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
-        <a href="index.html" class="mob-nav-item active">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            <span>Home</span>
-        </a>
         <a href="about.html" class="mob-nav-item">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
             <span>About</span>
