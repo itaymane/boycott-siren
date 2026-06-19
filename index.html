@@ -384,12 +384,12 @@
 
         /* ── Hero ── */
         .hero {
-            min-height: calc(72vh - 64px);
+            min-height: calc(88vh - 64px);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 2.5rem 0 0;
+            padding: 2rem 0 0;
             text-align: center;
             background: #fff;
             border-radius: 0 0 24px 24px;
@@ -1004,10 +1004,12 @@
 
         /* ── Hero ── */
         .hero h1 {
-            font-size: clamp(2.8rem, 7vw, 5rem);
+            font-size: clamp(2.6rem, 6.5vw, 4.5rem);
             color: var(--navy);
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 0.6rem;
         }
         .hero h1 span {
             background: none;
@@ -1016,27 +1018,21 @@
             -webkit-text-fill-color: var(--blue);
             color: var(--blue);
         }
-        .hero-eyebrow {
-            background: var(--blue-tint);
-            color: var(--blue);
-            border: 1px solid var(--border-blue);
-            margin-bottom: 1rem;
+        .hero p.hero-tagline {
+            font-size: clamp(1rem, 2.2vw, 1.2rem);
+            font-weight: 600;
+            color: var(--navy);
+            text-align: center;
+            margin: 0 auto 0.35rem;
+            max-width: 600px;
         }
         .hero p.hero-desc {
-            font-size: 1.05rem;
-            font-weight: 300;
-            color: var(--text-secondary);
-            max-width: 620px;
-            margin: 0 auto 0.5rem;
-            line-height: 1.65;
-            text-align: center;
-        }
-        .hero p.hero-count {
-            font-size: 0.8rem;
+            font-size: clamp(0.9rem, 1.8vw, 1rem);
             font-weight: 400;
-            color: var(--text-muted);
-            margin: 0 auto 1rem;
-            letter-spacing: 0.01em;
+            color: var(--text-secondary);
+            max-width: 520px;
+            margin: 0 auto 0.75rem;
+            line-height: 1.6;
             text-align: center;
         }
         @media (max-width: 860px) {
@@ -1047,26 +1043,25 @@
         .hero-trust {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 2.5rem;
+            align-items: flex-start;
+            gap: 2.75rem;
             flex-wrap: wrap;
-            margin: 0.75rem 0 0.75rem;
+            margin: 0.6rem 0 0.5rem;
         }
         .hero-trust-item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.35rem;
-            color: var(--text-secondary);
-            font-size: 0.75rem;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
+            gap: 0.4rem;
+            color: var(--navy);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0;
         }
-        .hero-trust-item svg { color: var(--blue); width: 28px; height: 28px; }
+        .hero-trust-item svg { color: var(--blue); width: 26px; height: 26px; }
         @media (max-width: 560px) {
             .hero-trust { gap: 1.5rem; }
-            .hero-trust-item { font-size: 0.68rem; }
+            .hero-trust-item { font-size: 0.72rem; }
         }
 
         /* Popular searches */
@@ -1275,7 +1270,7 @@
             justify-content: center;
             align-items: center;
             gap: 2.25rem;
-            margin: 0.75rem 0 0;
+            margin: 0.5rem 0 0;
             flex-wrap: wrap;
         }
         .hero-stat {
@@ -1486,15 +1481,15 @@
 
     <div class="container">
         <div class="hero">
-            <div class="hero-eyebrow">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
-                Source-backed cultural transparency
-            </div>
             <h1>Know <span>Before</span> You Go</h1>
-            <p class="hero-desc">ArtSiren helps you check source-backed public information about artists before you buy tickets, stream, share, book, or support.</p>
-            <p class="hero-count"><span id="heroCount">294</span>+ documented artists &nbsp;·&nbsp; Mainstream media sources &nbsp;·&nbsp; Last updated: May 2026</p>
+            <p class="hero-tagline">Before you buy, stream, dine, book, or support.</p>
+            <p class="hero-desc">Check source-backed public information about artists and venues.</p>
 
             <div class="hero-trust">
+                <div class="hero-trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    Public actions
+                </div>
                 <div class="hero-trust-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
                     Verified sources
