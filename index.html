@@ -950,9 +950,7 @@
             --border-blue: rgba(28, 95, 234, 0.18);
             --card-bg: #ffffff;
             --bg: #F8F9FB;
-            --success-green: #28A745;
             --coral: #F44634;
-            --amber: #F59E0B;
             --shadow-sm: 0 1px 3px rgba(12,35,62,0.06), 0 1px 2px rgba(0,0,0,0.04);
             --shadow-md: 0 4px 16px rgba(12,35,62,0.08), 0 2px 6px rgba(0,0,0,0.04);
             --shadow-lg: 0 12px 40px rgba(12,35,62,0.12), 0 4px 12px rgba(0,0,0,0.06);
@@ -1132,15 +1130,15 @@
             border-color: transparent;
             box-shadow: 0 2px 8px rgba(28,95,234,0.3);
         }
-        .level-btn-CRITICAL { border-color: #fecaca; color: #dc2626; }
-        .level-btn-HIGH     { border-color: #fed7aa; color: #ea580c; }
-        .level-btn-LOW      { border-color: #a7f3d0; color: #059669; }
-        .level-btn-CRITICAL:hover { border-color: #dc2626; background: #fef2f2; color: #dc2626; }
-        .level-btn-HIGH:hover     { border-color: #ea580c; background: #fff7ed; color: #ea580c; }
-        .level-btn-LOW:hover      { border-color: #059669; background: #f0fdf4; color: #059669; }
-        .level-btn-CRITICAL.active { background: #dc2626; color: white; border-color: transparent; }
-        .level-btn-HIGH.active     { background: #ea580c; color: white; border-color: transparent; }
-        .level-btn-LOW.active      { background: #059669; color: white; border-color: transparent; }
+        .level-btn-CRITICAL { border-color: rgba(244,70,52,0.3); color: var(--coral); }
+        .level-btn-HIGH     { border-color: rgba(244,70,52,0.2); color: var(--coral); }
+        .level-btn-LOW      { border-color: var(--border-blue); color: var(--blue); }
+        .level-btn-CRITICAL:hover { border-color: var(--coral); background: rgba(244,70,52,0.06); color: var(--coral); }
+        .level-btn-HIGH:hover     { border-color: var(--coral); background: rgba(244,70,52,0.06); color: var(--coral); }
+        .level-btn-LOW:hover      { border-color: var(--blue); background: var(--blue-tint); color: var(--blue); }
+        .level-btn-CRITICAL.active { background: var(--coral); color: white; border-color: transparent; }
+        .level-btn-HIGH.active     { background: var(--coral); color: white; border-color: transparent; }
+        .level-btn-LOW.active      { background: var(--blue); color: white; border-color: transparent; }
 
         /* Stats */
         .stat-card { background: white; border-color: var(--border); }
@@ -1357,11 +1355,11 @@
 
         /* Info column */
         .card-info { flex: 1; min-width: 0; }
-        .card-top {
+        .card-name-line {
             display: flex;
-            align-items: center;
-            gap: 0.45rem;
-            margin-bottom: 0.1rem;
+            align-items: baseline;
+            gap: 0.4rem;
+            margin-bottom: 0.2rem;
             flex-wrap: wrap;
         }
         .artist-card .artist-name {
@@ -1371,23 +1369,15 @@
             letter-spacing: -0.01em;
             line-height: 1.2;
         }
-        .card-stance-badge {
-            font-size: 0.67rem;
-            font-weight: 700;
-            padding: 0.15rem 0.55rem;
-            border-radius: 100px;
-            white-space: nowrap;
-            letter-spacing: 0.02em;
+        .card-name-sep {
+            font-size: 0.78rem;
+            color: var(--border);
+            line-height: 1;
         }
-        .card-stance-CRITICAL  { background: #FFF0EE; color: #F44634; }
-        .card-stance-HIGH      { background: #FFF4ED; color: #ea580c; }
-        .card-stance-LOW       { background: #FFFBF0; color: #d97706; }
-        .card-stance-WELCOMES_ALL { background: #F0FDF4; color: #16a34a; }
         .card-cat {
-            font-size: 0.77rem;
+            font-size: 0.78rem;
             color: var(--text-secondary);
             font-weight: 400;
-            margin-bottom: 0.15rem;
         }
         .artist-card .artist-statement {
             font-size: 0.79rem;
@@ -1526,14 +1516,14 @@
             font-weight: 400;
             white-space: nowrap;
         }
-        .modal-status-CRITICAL  { background: #FFF0EE; }
-        .modal-status-CRITICAL .modal-status-badge  { color: #F44634; }
-        .modal-status-HIGH      { background: #FFF4ED; }
-        .modal-status-HIGH .modal-status-badge      { color: #ea580c; }
-        .modal-status-LOW       { background: #FFFBF0; }
-        .modal-status-LOW .modal-status-badge       { color: #d97706; }
-        .modal-status-WELCOMES_ALL { background: #F0FDF4; }
-        .modal-status-WELCOMES_ALL .modal-status-badge { color: #16a34a; }
+        .modal-status-CRITICAL  { background: rgba(244,70,52,0.08); }
+        .modal-status-CRITICAL .modal-status-badge  { color: var(--coral); }
+        .modal-status-HIGH      { background: rgba(244,70,52,0.08); }
+        .modal-status-HIGH .modal-status-badge      { color: var(--coral); }
+        .modal-status-LOW       { background: var(--blue-tint); }
+        .modal-status-LOW .modal-status-badge       { color: var(--blue); }
+        .modal-status-WELCOMES_ALL { background: var(--blue-tint); }
+        .modal-status-WELCOMES_ALL .modal-status-badge { color: var(--blue); }
         .modal-statement-text {
             font-size: 0.9rem;
             color: var(--text-secondary);
@@ -2172,16 +2162,14 @@
                     : `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`;
 
                 const badgeClass = isWelcome ? 'card-stance-WELCOMES_ALL' : `card-stance-${lvl}`;
-                const badgeLabel = isWelcome ? 'Supports Israel' : lvl === 'LOW' ? 'Stance Unclear' : 'Boycotts Israel';
-
                 return `<div class="artist-card" onclick="showArtistDetails(${artist.id})" style="animation-delay:${Math.min(i * 30, 300)}ms">
                     <div class="card-thumb">${avatarHtml}</div>
                     <div class="card-info">
-                        <div class="card-top">
+                        <div class="card-name-line">
                             <span class="artist-name">${artist.name}</span>
-                            <span class="card-stance-badge ${badgeClass}">${badgeLabel}</span>
+                            <span class="card-name-sep">·</span>
+                            <span class="card-cat">${cat}</span>
                         </div>
-                        <div class="card-cat">${cat}</div>
                         <div class="artist-statement">${artist.statement}</div>
                     </div>
                     <div class="card-action">
