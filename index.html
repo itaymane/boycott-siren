@@ -986,10 +986,20 @@
         .lang-btn {
             border-color: var(--border);
             color: var(--text-secondary);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
         }
         .lang-btn:hover, .lang-switcher.open .lang-btn {
             color: var(--blue);
             border-color: var(--blue);
+        }
+
+        /* Neutralize old level badge colors */
+        .level-CRITICAL, .level-HIGH, .level-MEDIUM, .level-LOW {
+            background: transparent !important;
+            color: inherit !important;
+            border: none !important;
         }
         .lang-menu {
             background: white;
@@ -1683,11 +1693,12 @@
                 <div class="nav-right">
                     <div class="lang-switcher">
                         <button class="lang-btn" onclick="toggleLang(this)">
-                            🌐 EN <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0l5 6 5-6z"/></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            EN <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0l5 6 5-6z"/></svg>
                         </button>
                         <div class="lang-menu">
-                            <a href="/" class="lang-item lang-active">🇺🇸 English</a>
-                            <a href="/he/" class="lang-item">🇮🇱 עברית</a>
+                            <a href="/" class="lang-item lang-active">English</a>
+                            <a href="/he/" class="lang-item">עברית</a>
                         </div>
                     </div>
                     <div class="nav-cta-wrap">
@@ -1695,11 +1706,11 @@
                             <span class="btn-cta-full">Get Browser Alerts</span>
                             <span class="btn-cta-short">Alerts</span>
                         </a>
-                        <button id="pwa-install-btn" onclick="installPWA()" style="display:none; margin-left:8px; padding:8px 16px; background:#0047ab; color:#fff; border:none; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer;">
-                            📱 Install App
+                        <button id="pwa-install-btn" onclick="installPWA()" style="display:none; margin-left:8px; padding:8px 16px; background:var(--blue); color:#fff; border:none; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer;">
+                            Install App
                         </button>
                     </div>
-                    <button id="mobile-add-btn" onclick="installPWA()">📱 Add to App</button>
+                    <button id="mobile-add-btn" onclick="installPWA()">Add to App</button>
                 </div>
             </div>
         </div>
@@ -2150,18 +2161,7 @@
                     : `<div class="artist-avatar-initials">${initials}</div>`;
                 const sourcesCount = artist.sources ? artist.sources.length : 0;
 
-                // Status label + icon + color class
                 const isWelcome = stance === 'WELCOMES_ALL';
-                const statusClass = isWelcome ? 'card-status-WELCOMES_ALL' : `card-status-${lvl}`;
-                const statusLabel = isWelcome ? 'Positive Signal'
-                    : lvl === 'LOW' ? 'Mixed Signal' : 'Contrary Signal';
-                const statusIcon = isWelcome
-                    ? `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>`
-                    : lvl === 'LOW'
-                    ? `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`
-                    : `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`;
-
-                const badgeClass = isWelcome ? 'card-stance-WELCOMES_ALL' : `card-stance-${lvl}`;
                 return `<div class="artist-card" onclick="showArtistDetails(${artist.id})" style="animation-delay:${Math.min(i * 30, 300)}ms">
                     <div class="card-thumb">${avatarHtml}</div>
                     <div class="card-info">
@@ -2356,10 +2356,10 @@
                         </div>
                     </div>
 
-                    <div class="modal-status-row ${modalStatusClass}">
+                    ${isWelcomesAll ? `<div class="modal-status-row modal-status-WELCOMES_ALL">
                         <div class="modal-status-badge">${modalStatusIcon} ${modalStatusLabel}</div>
                         <span class="modal-status-note">Based on public actions</span>
-                    </div>
+                    </div>` : ''}
 
                     <div class="modal-statement-text">${artist.statement}</div>
 
