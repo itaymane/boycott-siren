@@ -1171,83 +1171,37 @@
         /* Grid */
         .grid-title { color: var(--text-muted); }
 
-        /* ── Filter tabs ── */
-        .filter-section { padding: 1rem 0 0.5rem; }
-
-        .filter-stance-row {
+        /* ── Filter tabs — single compact row ── */
+        .filter-section {
+            padding: 0.75rem 0 0.25rem;
+        }
+        .filter-tabs-row {
             display: flex;
             gap: 0.4rem;
-            overflow-x: auto;
-            scrollbar-width: none;
-            -webkit-overflow-scrolling: touch;
-            padding-bottom: 0.55rem;
-        }
-        .filter-stance-row::-webkit-scrollbar { display: none; }
-
-        .stance-tab {
-            flex-shrink: 0;
-            padding: 0.28rem 0.9rem;
-            border-radius: 100px;
-            border: 1.5px solid var(--border);
-            background: transparent;
-            color: var(--text-muted);
-            font-size: 0.75rem;
-            font-weight: 500;
-            cursor: pointer;
-            font-family: inherit;
-            transition: all 0.15s;
-            white-space: nowrap;
-        }
-        .stance-tab:hover { border-color: var(--text-secondary); color: var(--text-secondary); }
-        .stance-tab.active                            { background: var(--navy); color: white; border-color: transparent; }
-        .stance-tab[data-stance="BOYCOTTER"].active   { background: var(--coral); }
-        .stance-tab[data-stance="WELCOMES_ALL"].active { background: var(--blue); }
-
-        .filter-cat-row {
-            display: flex;
-            gap: 0.45rem;
             overflow-x: auto;
             scrollbar-width: none;
             -webkit-overflow-scrolling: touch;
             padding-bottom: 2px;
         }
-        .filter-cat-row::-webkit-scrollbar { display: none; }
+        .filter-tabs-row::-webkit-scrollbar { display: none; }
 
-        .cat-tab {
+        .f-tab {
             flex-shrink: 0;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.42rem 1.05rem;
+            padding: 0.32rem 0.85rem;
             border-radius: 100px;
             border: 1.5px solid var(--border);
             background: white;
             color: var(--text-secondary);
-            font-size: 0.83rem;
+            font-size: 0.8rem;
             font-weight: 500;
             cursor: pointer;
             font-family: inherit;
-            transition: all 0.15s;
+            transition: background 0.15s, border-color 0.15s, color 0.15s;
             white-space: nowrap;
+            line-height: 1.4;
         }
-        .cat-tab:hover { border-color: var(--blue); color: var(--blue); }
-        .cat-tab.active { background: var(--blue); color: white; border-color: transparent; }
-
-        .cat-tab-count {
-            font-size: 0.68rem;
-            font-weight: 700;
-            padding: 0.08rem 0.42rem;
-            border-radius: 100px;
-            min-width: 1.4em;
-            text-align: center;
-            line-height: 1.5;
-            background: var(--blue-tint);
-            color: var(--blue);
-        }
-        .cat-tab.active .cat-tab-count {
-            background: rgba(255,255,255,0.22);
-            color: white;
-        }
+        .f-tab:hover { border-color: var(--blue); color: var(--blue); }
+        .f-tab.active { background: var(--blue); color: white; border-color: transparent; }
 
         /* Cards */
         .view-details { color: var(--blue); }
@@ -1862,9 +1816,9 @@
                 left: 0;
                 right: 0;
                 z-index: 200;
-                background: white;
-                border-top: 1px solid var(--border);
-                height: 60px;
+                background: var(--navy);
+                border-top: none;
+                height: 58px;
                 padding-bottom: env(safe-area-inset-bottom, 0);
             }
             .mob-nav-item {
@@ -1874,9 +1828,9 @@
                 align-items: center;
                 justify-content: center;
                 gap: 3px;
-                color: var(--text-muted);
+                color: rgba(255,255,255,0.5);
                 text-decoration: none;
-                font-size: 0.6rem;
+                font-size: 0.58rem;
                 font-weight: 500;
                 background: none;
                 border: none;
@@ -1885,9 +1839,11 @@
                 padding: 0;
                 transition: color 0.15s;
                 letter-spacing: 0.02em;
+                text-transform: uppercase;
             }
-            .mob-nav-item svg { width: 22px; height: 22px; }
-            .mob-nav-item.active, .mob-nav-item:active { color: var(--blue); }
+            .mob-nav-item svg { width: 20px; height: 20px; }
+            .mob-nav-item.active { color: white; }
+            .mob-nav-item:active { color: rgba(255,255,255,0.85); }
 
             /* ── Mobile hero h1 line break ── */
             .mob-br { display: block; }
@@ -1911,7 +1867,7 @@
             /* ── Mobile language sheet (pops up above bottom nav) ── */
             .mob-lang-sheet {
                 position: fixed;
-                bottom: 68px;
+                bottom: 66px;
                 left: 0;
                 right: 0;
                 z-index: 250;
@@ -2072,19 +2028,16 @@
 
         </div>
 
-        <!-- Filter tabs -->
+        <!-- Filter tabs — single row -->
         <div class="filter-section">
-            <div class="filter-stance-row">
-                <button class="stance-tab active" data-stance="all">All</button>
-                <button class="stance-tab" data-stance="BOYCOTTER">Declining</button>
-                <button class="stance-tab" data-stance="WELCOMES_ALL">Welcomes All</button>
-            </div>
-            <div class="filter-cat-row">
-                <button class="cat-tab active" data-filter="all">All <span class="cat-tab-count" id="tabCountAll">—</span></button>
-                <button class="cat-tab" data-filter="musician">Musicians <span class="cat-tab-count" id="tabCountMusicians">—</span></button>
-                <button class="cat-tab" data-filter="actor">Actors <span class="cat-tab-count" id="tabCountActors">—</span></button>
-                <button class="cat-tab" data-filter="director">Directors <span class="cat-tab-count" id="tabCountDirectors">—</span></button>
-                <button class="cat-tab" data-filter="other">Writers <span class="cat-tab-count" id="tabCountWriters">—</span></button>
+            <div class="filter-tabs-row" id="filterTabsRow">
+                <button class="f-tab active" data-type="all">All</button>
+                <button class="f-tab" data-type="stance" data-stance="BOYCOTTER">Declining</button>
+                <button class="f-tab" data-type="stance" data-stance="WELCOMES_ALL">Welcomes All</button>
+                <button class="f-tab" data-type="cat" data-filter="musician">Musicians</button>
+                <button class="f-tab" data-type="cat" data-filter="actor">Actors</button>
+                <button class="f-tab" data-type="cat" data-filter="director">Directors</button>
+                <button class="f-tab" data-type="cat" data-filter="other">Writers</button>
             </div>
         </div>
 
@@ -2544,20 +2497,21 @@
             }).join('');
         }
 
-        document.querySelectorAll('.stance-tab').forEach(btn => {
+        document.querySelectorAll('.f-tab').forEach(btn => {
             btn.addEventListener('click', e => {
-                document.querySelectorAll('.stance-tab').forEach(b => b.classList.remove('active'));
-                e.currentTarget.classList.add('active');
-                stanceFilter = e.currentTarget.dataset.stance;
-                renderArtists();
-            });
-        });
-
-        document.querySelectorAll('.cat-tab').forEach(btn => {
-            btn.addEventListener('click', e => {
-                document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
-                e.currentTarget.classList.add('active');
-                categoryFilter = e.currentTarget.dataset.filter;
+                const t = e.currentTarget;
+                document.querySelectorAll('.f-tab').forEach(b => b.classList.remove('active'));
+                t.classList.add('active');
+                if (t.dataset.type === 'all') {
+                    stanceFilter = 'all';
+                    categoryFilter = 'all';
+                } else if (t.dataset.type === 'stance') {
+                    stanceFilter = t.dataset.stance;
+                    categoryFilter = 'all';
+                } else if (t.dataset.type === 'cat') {
+                    categoryFilter = t.dataset.filter;
+                    stanceFilter = 'all';
+                }
                 renderArtists();
             });
         });
@@ -2805,9 +2759,9 @@
         }
         
         // Add filter tracking
-        document.querySelectorAll('.cat-tab, .stance-tab').forEach(btn => {
+        document.querySelectorAll('.f-tab').forEach(btn => {
             btn.addEventListener('click', function() {
-                trackFilterClick(this.dataset.filter || this.dataset.stance);
+                trackFilterClick(this.dataset.filter || this.dataset.stance || 'all');
             });
         });
         
