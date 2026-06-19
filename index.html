@@ -1171,6 +1171,84 @@
         /* Grid */
         .grid-title { color: var(--text-muted); }
 
+        /* ── Filter tabs ── */
+        .filter-section { padding: 1rem 0 0.5rem; }
+
+        .filter-stance-row {
+            display: flex;
+            gap: 0.4rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 0.55rem;
+        }
+        .filter-stance-row::-webkit-scrollbar { display: none; }
+
+        .stance-tab {
+            flex-shrink: 0;
+            padding: 0.28rem 0.9rem;
+            border-radius: 100px;
+            border: 1.5px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.15s;
+            white-space: nowrap;
+        }
+        .stance-tab:hover { border-color: var(--text-secondary); color: var(--text-secondary); }
+        .stance-tab.active                            { background: var(--navy); color: white; border-color: transparent; }
+        .stance-tab[data-stance="BOYCOTTER"].active   { background: var(--coral); }
+        .stance-tab[data-stance="WELCOMES_ALL"].active { background: var(--blue); }
+
+        .filter-cat-row {
+            display: flex;
+            gap: 0.45rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 2px;
+        }
+        .filter-cat-row::-webkit-scrollbar { display: none; }
+
+        .cat-tab {
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.42rem 1.05rem;
+            border-radius: 100px;
+            border: 1.5px solid var(--border);
+            background: white;
+            color: var(--text-secondary);
+            font-size: 0.83rem;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.15s;
+            white-space: nowrap;
+        }
+        .cat-tab:hover { border-color: var(--blue); color: var(--blue); }
+        .cat-tab.active { background: var(--blue); color: white; border-color: transparent; }
+
+        .cat-tab-count {
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 0.08rem 0.42rem;
+            border-radius: 100px;
+            min-width: 1.4em;
+            text-align: center;
+            line-height: 1.5;
+            background: var(--blue-tint);
+            color: var(--blue);
+        }
+        .cat-tab.active .cat-tab-count {
+            background: rgba(255,255,255,0.22);
+            color: white;
+        }
+
         /* Cards */
         .view-details { color: var(--blue); }
         .artist-card:hover { border-color: var(--border-blue); }
@@ -1994,6 +2072,22 @@
 
         </div>
 
+        <!-- Filter tabs -->
+        <div class="filter-section">
+            <div class="filter-stance-row">
+                <button class="stance-tab active" data-stance="all">All</button>
+                <button class="stance-tab" data-stance="BOYCOTTER">Declining</button>
+                <button class="stance-tab" data-stance="WELCOMES_ALL">Welcomes All</button>
+            </div>
+            <div class="filter-cat-row">
+                <button class="cat-tab active" data-filter="all">All <span class="cat-tab-count" id="tabCountAll">—</span></button>
+                <button class="cat-tab" data-filter="musician">Musicians <span class="cat-tab-count" id="tabCountMusicians">—</span></button>
+                <button class="cat-tab" data-filter="actor">Actors <span class="cat-tab-count" id="tabCountActors">—</span></button>
+                <button class="cat-tab" data-filter="director">Directors <span class="cat-tab-count" id="tabCountDirectors">—</span></button>
+                <button class="cat-tab" data-filter="other">Writers <span class="cat-tab-count" id="tabCountWriters">—</span></button>
+            </div>
+        </div>
+
         <div class="grid-header">
             <span class="grid-title" id="resultCount"></span>
         </div>
@@ -2383,19 +2477,42 @@
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const grid = document.getElementById('artistsGrid');
 
+            const NON_MAIN = ['musician','actor','director'];
+            function catMatch(artist, filter) {
+                if (filter === 'all') return true;
+                if (filter === 'other') return !NON_MAIN.includes(artist.category);
+                return artist.category === filter;
+            }
+
             let filtered = ARTISTS_DATABASE.filter(artist => {
-                const matchesCategory = categoryFilter === 'all' || artist.category === categoryFilter;
+                const matchesCategory = catMatch(artist, categoryFilter);
                 const matchesLevel = levelFilter === 'all' || artist.level === levelFilter;
-                const matchesStance = stanceFilter === 'all' || (artist.stance || 'BOYCOTTER') === stanceFilter || (stanceFilter === 'WELCOMES_ALL' && artist.stance === 'WELCOMES_ALL');
+                const matchesStance = stanceFilter === 'all' || (artist.stance || 'BOYCOTTER') === stanceFilter;
                 const matchesSearch = artist.name.toLowerCase().includes(searchTerm) ||
                                     (artist.country && artist.country.toLowerCase().includes(searchTerm));
                 return matchesCategory && matchesLevel && matchesStance && matchesSearch;
             });
-            
+
+            // Hero stat numbers (update with category-filtered totals)
             document.getElementById('statMusicians').textContent = filtered.filter(a => a.category === 'musician').length;
             document.getElementById('statActors').textContent = filtered.filter(a => a.category === 'actor').length;
             document.getElementById('statDirectors').textContent = filtered.filter(a => a.category === 'director').length;
-            document.getElementById('statOther').textContent = filtered.filter(a => a.category !== 'musician' && a.category !== 'actor' && a.category !== 'director').length;
+            document.getElementById('statOther').textContent = filtered.filter(a => !NON_MAIN.includes(a.category)).length;
+
+            // Filter tab counts (always scoped to current stance + search, ignore category)
+            const forTabs = ARTISTS_DATABASE.filter(a => {
+                const ms = stanceFilter === 'all' || (a.stance || 'BOYCOTTER') === stanceFilter;
+                const ml = levelFilter === 'all' || a.level === levelFilter;
+                const msearch = a.name.toLowerCase().includes(searchTerm);
+                return ms && ml && msearch;
+            });
+            const el = id => document.getElementById(id);
+            if (el('tabCountAll'))       el('tabCountAll').textContent       = forTabs.length;
+            if (el('tabCountMusicians')) el('tabCountMusicians').textContent = forTabs.filter(a => a.category === 'musician').length;
+            if (el('tabCountActors'))    el('tabCountActors').textContent    = forTabs.filter(a => a.category === 'actor').length;
+            if (el('tabCountDirectors')) el('tabCountDirectors').textContent = forTabs.filter(a => a.category === 'director').length;
+            if (el('tabCountWriters'))   el('tabCountWriters').textContent   = forTabs.filter(a => !NON_MAIN.includes(a.category)).length;
+
             const rc = document.getElementById('resultCount');
             if (rc) rc.textContent = filtered.length + ' artist' + (filtered.length !== 1 ? 's' : '') + ' shown';
 
@@ -2427,29 +2544,20 @@
             }).join('');
         }
 
-        document.querySelectorAll('.stance-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                document.querySelectorAll('.stance-btn').forEach(b => b.classList.remove('active'));
-                e.target.classList.add('active');
-                stanceFilter = e.target.dataset.stance;
+        document.querySelectorAll('.stance-tab').forEach(btn => {
+            btn.addEventListener('click', e => {
+                document.querySelectorAll('.stance-tab').forEach(b => b.classList.remove('active'));
+                e.currentTarget.classList.add('active');
+                stanceFilter = e.currentTarget.dataset.stance;
                 renderArtists();
             });
         });
 
-        document.querySelectorAll('.category-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
-                e.target.classList.add('active');
-                categoryFilter = e.target.dataset.filter;
-                renderArtists();
-            });
-        });
-
-        document.querySelectorAll('.level-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                document.querySelectorAll('.level-btn').forEach(b => b.classList.remove('active'));
-                e.target.classList.add('active');
-                levelFilter = e.target.dataset.level;
+        document.querySelectorAll('.cat-tab').forEach(btn => {
+            btn.addEventListener('click', e => {
+                document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+                e.currentTarget.classList.add('active');
+                categoryFilter = e.currentTarget.dataset.filter;
                 renderArtists();
             });
         });
@@ -2697,9 +2805,9 @@
         }
         
         // Add filter tracking
-        document.querySelectorAll('.category-btn, .level-btn').forEach(btn => {
+        document.querySelectorAll('.cat-tab, .stance-tab').forEach(btn => {
             btn.addEventListener('click', function() {
-                trackFilterClick(this.dataset.filter || this.dataset.level);
+                trackFilterClick(this.dataset.filter || this.dataset.stance);
             });
         });
         
