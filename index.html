@@ -1456,29 +1456,28 @@
             padding: 0;
         }
         .modal-close-btn:hover { background: #e4e6ee; }
-        .modal-hero-section {
+        .modal-header-row {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            text-align: center;
-            padding-top: 0.5rem;
+            gap: 1rem;
             margin-bottom: 1.25rem;
+            padding-right: 2rem;
         }
-        .modal-avatar-wrap { margin-bottom: 0.75rem; }
+        .modal-avatar-wrap { flex-shrink: 0; }
         .as-modal-card .artist-avatar {
-            width: 72px;
-            height: 72px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            border: 3px solid var(--border);
+            border: 2px solid var(--border);
             object-fit: cover;
             object-position: top center;
             display: block;
         }
         .as-modal-card .artist-avatar-initials {
-            width: 72px;
-            height: 72px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: white;
             background: linear-gradient(135deg, var(--navy), var(--blue));
@@ -1486,22 +1485,23 @@
             align-items: center;
             justify-content: center;
         }
+        .modal-header-info { flex: 1; min-width: 0; }
         .modal-name-row {
             display: flex;
             align-items: center;
-            gap: 0.4rem;
-            justify-content: center;
+            gap: 0.35rem;
             margin-bottom: 0.2rem;
         }
         .modal-artist-name {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: var(--text-primary);
             letter-spacing: -0.02em;
+            line-height: 1.2;
         }
         .modal-verified-icon { flex-shrink: 0; }
         .modal-artist-meta {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             color: var(--text-secondary);
         }
         .modal-status-row {
@@ -1598,29 +1598,24 @@
             margin-top: 0.5rem;
         }
         .modal-cta-btn:hover { background: #1450c8; transform: translateY(-1px); }
-        .modal-share-row {
+        .modal-share-single {
+            width: 100%;
             display: flex;
-            gap: 0.5rem;
-        }
-        .modal-share-btn {
-            flex: 1;
-            display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 0.35rem;
-            padding: 0.55rem 0.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.8rem;
+            gap: 0.5rem;
+            padding: 0.8rem 1rem;
+            border-radius: 12px;
+            background: transparent;
+            border: 1.5px solid var(--border);
+            color: var(--text-primary);
+            font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
-            transition: opacity 0.15s;
             font-family: inherit;
+            transition: background 0.15s, border-color 0.15s;
         }
-        .modal-share-btn:hover { opacity: 0.82; }
-        .modal-share-x    { background: #000; color: #fff; border: none; }
-        .modal-share-wa   { background: #25d366; color: #fff; border: none; }
-        .modal-share-copy { background: transparent; color: var(--text-secondary); border: 1.5px solid var(--border); }
+        .modal-share-single:hover { background: var(--bg); border-color: rgba(28,95,234,0.3); }
         .modal-footer-note {
             text-align: center;
             font-size: 0.73rem;
@@ -2177,7 +2172,7 @@
                     : `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`;
 
                 const badgeClass = isWelcome ? 'card-stance-WELCOMES_ALL' : `card-stance-${lvl}`;
-                const badgeLabel = isWelcome ? 'Positive Signal' : lvl === 'LOW' ? 'Mixed Signal' : 'Contrary Signal';
+                const badgeLabel = isWelcome ? 'Supports Israel' : lvl === 'LOW' ? 'Stance Unclear' : 'Boycotts Israel';
 
                 return `<div class="artist-card" onclick="showArtistDetails(${artist.id})" style="animation-delay:${Math.min(i * 30, 300)}ms">
                     <div class="card-thumb">${avatarHtml}</div>
@@ -2329,7 +2324,7 @@
             const isWelcomesAll = artist.stance === 'WELCOMES_ALL';
             const lvl = artist.level || 'CRITICAL';
             const modalStatusClass = isWelcomesAll ? 'modal-status-WELCOMES_ALL' : `modal-status-${lvl}`;
-            const modalStatusLabel = isWelcomesAll ? 'Positive Signal' : lvl === 'LOW' ? 'Mixed Signal' : 'Contrary Signal';
+            const modalStatusLabel = isWelcomesAll ? 'Supports Israel' : lvl === 'LOW' ? 'Stance Unclear' : 'Boycotts Israel';
             const modalStatusIcon = isWelcomesAll
                 ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>`
                 : lvl === 'LOW'
@@ -2351,6 +2346,9 @@
                     </a>`).join('')
                 : '<p style="color:var(--text-muted);font-size:0.85rem;padding:0.5rem 0">No sources available</p>';
 
+            const shareUrl = 'https://artsiren.co/?artist=' + artist.id;
+            const shareText = artist.name + ' — ArtSiren';
+
             modal.className = 'as-modal-overlay';
             modal.innerHTML = `
                 <div class="as-modal-card">
@@ -2358,13 +2356,16 @@
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                     </button>
 
-                    <div class="modal-hero-section">
+                    <!-- Horizontal header: avatar left, name+category right -->
+                    <div class="modal-header-row">
                         <div class="modal-avatar-wrap">${avatarHtml}</div>
-                        <div class="modal-name-row">
-                            <span class="modal-artist-name">${artist.name}</span>
-                            <svg class="modal-verified-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="var(--blue)"/><polyline points="9 12 11 14 15 10" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <div class="modal-header-info">
+                            <div class="modal-name-row">
+                                <span class="modal-artist-name">${artist.name}</span>
+                                <svg class="modal-verified-icon" width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="var(--blue)"/><polyline points="9 12 11 14 15 10" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div class="modal-artist-meta">${cat}</div>
                         </div>
-                        <div class="modal-artist-meta">${cat}</div>
                     </div>
 
                     <div class="modal-status-row ${modalStatusClass}">
@@ -2385,11 +2386,10 @@
 
                     <button class="modal-cta-btn" onclick="var t=this.previousElementSibling.previousElementSibling;t.click()">View Sources &amp; Context</button>
 
-                    <div class="modal-share-row">
-                        <a class="modal-share-btn modal-share-x" href="https://twitter.com/intent/tweet?text=${encodeURIComponent('🚨 ' + artist.name + ' — see verified sources:')}&url=${encodeURIComponent('https://artsiren.co/?artist=' + artist.id)}" target="_blank" rel="noopener">𝕏 Share</a>
-                        <a class="modal-share-btn modal-share-wa" href="https://wa.me/?text=${encodeURIComponent('🚨 ' + artist.name + '\nhttps://artsiren.co/?artist=' + artist.id)}" target="_blank" rel="noopener">WhatsApp</a>
-                        <button class="modal-share-btn modal-share-copy" onclick="navigator.clipboard.writeText('https://artsiren.co/?artist=${artist.id}').then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Link',1500)})">Copy Link</button>
-                    </div>
+                    <button class="modal-share-single" onclick="if(navigator.share){navigator.share({title:'${artist.name.replace(/'/g,"\\'")} — ArtSiren',url:'${shareUrl}'})}else{navigator.clipboard.writeText('${shareUrl}').then(()=>{this.innerHTML='<svg width=\\'16\\' height=\\'16\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'2.5\\' stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\'><polyline points=\\'20 6 9 17 4 12\\'/></svg> Copied!';setTimeout(()=>{this.innerHTML='<svg width=\\'16\\' height=\\'16\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'2\\' stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\'><path d=\\'M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8\\'/><polyline points=\\'16 6 12 2 8 6\\'/><line x1=\\'12\\' y1=\\'2\\' x2=\\'12\\' y2=\\'15\\'/></svg> Share'},1500)})}">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                        Share
+                    </button>
 
                     <div class="modal-footer-note">All information from publicly documented sources. Independently verifiable.</div>
                 </div>
