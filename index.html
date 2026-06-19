@@ -152,7 +152,7 @@
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -962,6 +962,7 @@
         body {
             font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: var(--bg);
+            font-weight: 400;
         }
 
         /* ── Navbar ── */
@@ -1022,15 +1023,17 @@
             margin-bottom: 1rem;
         }
         .hero p.hero-desc {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+            font-weight: 300;
             color: var(--text-secondary);
-            max-width: 640px;
+            max-width: 620px;
             margin: 0 auto 0.5rem;
-            line-height: 1.6;
+            line-height: 1.65;
             text-align: center;
         }
         .hero p.hero-count {
-            font-size: 0.82rem;
+            font-size: 0.8rem;
+            font-weight: 400;
             color: var(--text-muted);
             margin: 0 auto 1rem;
             letter-spacing: 0.01em;
@@ -1055,10 +1058,10 @@
             align-items: center;
             gap: 0.35rem;
             color: var(--text-secondary);
-            font-size: 0.78rem;
-            font-weight: 600;
+            font-size: 0.75rem;
+            font-weight: 400;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.06em;
         }
         .hero-trust-item svg { color: var(--blue); width: 28px; height: 28px; }
         @media (max-width: 560px) {
@@ -1189,34 +1192,37 @@
         .footer-links span { color: rgba(255,255,255,0.2); }
         .footer-copyright { color: rgba(255,255,255,0.35); }
 
-        /* Hero trust bar (navy strip at bottom of hero card) */
+        /* Trust bar — fixed at bottom of viewport */
         .footer-trust {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 90;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 0;
             flex-wrap: wrap;
             background: var(--navy);
-            border-radius: 0 0 24px 24px;
-            padding: 0.85rem 1rem;
-            margin-top: 1.25rem;
-            width: 100%;
+            padding: 0.65rem 1rem;
         }
         .footer-trust-item {
             display: flex;
             align-items: center;
             gap: 0.4rem;
             color: rgba(255,255,255,0.5);
-            font-size: 0.78rem;
-            font-weight: 500;
-            padding: 0.3rem 1.25rem;
+            font-size: 0.75rem;
+            font-weight: 400;
+            padding: 0.25rem 1.25rem;
             border-right: 1px solid rgba(255,255,255,0.12);
         }
         .footer-trust-item:last-child { border-right: none; }
-        .footer-trust-item svg { flex-shrink: 0; opacity: 0.7; }
+        .footer-trust-item svg { flex-shrink: 0; opacity: 0.65; }
         @media (max-width: 600px) {
-            .footer-trust-item { border-right: none; padding: 0.25rem 0.75rem; }
+            .footer-trust-item { border-right: none; padding: 0.2rem 0.65rem; font-size: 0.68rem; }
         }
+        /* Keep space so footer doesn't overlap content */
+        body { padding-bottom: 44px; }
 
         /* Contact modal */
         .contact-submit { background: var(--blue); }
@@ -1254,7 +1260,7 @@
             color: var(--text-secondary);
             text-decoration: none;
             font-size: 0.9rem;
-            font-weight: 500;
+            font-weight: 400;
             padding: 0.45rem 1rem;
             border-radius: 8px;
             transition: color 0.15s, background 0.15s;
@@ -1533,24 +1539,6 @@
                 </div>
             </div>
 
-            <div class="footer-trust">
-                <div class="footer-trust-item">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    Public actions, not opinions.
-                </div>
-                <div class="footer-trust-item">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-                    Verified sources, always.
-                </div>
-                <div class="footer-trust-item">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    No tracking. Ever.
-                </div>
-                <div class="footer-trust-item">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
-                    You stay in control.
-                </div>
-            </div>
         </div>
 
         <div class="grid-header">
@@ -2487,5 +2475,25 @@
       <p style="margin-bottom:16px;color:#666;">The following artists have publicly supported the cultural boycott of Israel. Each entry is sourced from mainstream media and verified open letters.</p>
       <p>Roger Waters · Dua Lipa · Patti Smith · Elvis Costello · Tom Morello · The Roots · Lauryn Hill · Peter Gabriel · Charlotte Church · Sam Smith · Björk · Lorde · Rage Against the Machine · Brian Eno · Thurston Moore · Sonic Youth · Massive Attack · Lowkey · Kae Tempest · Roger Waters · Serj Tankian · System of a Down · Run the Jewels · Noname · Talib Kweli · Lupe Fiasco · Yasiin Bey (Mos Def) · Dead Prez · Immortal Technique · Jackson Browne · Manic Street Preachers · Jello Biafra · Anti-Flag · Propagandhi · Belle and Sebastian · Yo La Tengo · Cat Power · Feist · Metric · Peaches · Godspeed You! Black Emperor · Broken Social Scene · Owen Pallett · Wolf Parade · Stars · A Silver Mt. Zion · Do Make Say Think · Destroyer · Asian Dub Foundation · Asian Dub Foundation · Coldcut · Manu Chao · Santana · DJ Snake · Robyn · Lykke Li · Devendra Banhart · Boots Riley · Naomi Klein · Arundhati Roy · Sally Rooney · Judith Butler · Alice Walker · Angela Davis · Annie Ernaux · Nigel Kennedy · Desmond Tutu · Wallace Shawn · Mira Nair · Harris Dickinson · Liam Cunningham · Julian Casablancas · PJ Harvey · Akala · Kae Tempest · Mick Jones</p>
     </section>
+
+    <!-- Fixed trust bar at bottom of screen -->
+    <div class="footer-trust">
+        <div class="footer-trust-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Public actions, not opinions.
+        </div>
+        <div class="footer-trust-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            Verified sources, always.
+        </div>
+        <div class="footer-trust-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            No tracking. Ever.
+        </div>
+        <div class="footer-trust-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+            You stay in control.
+        </div>
+    </div>
 </body>
 </html>
