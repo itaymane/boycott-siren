@@ -1675,6 +1675,156 @@
         }
         .lang-item:hover { background: var(--blue-tint); color: var(--blue); }
         .lang-item.lang-active { color: var(--blue); font-weight: 600; pointer-events: none; }
+
+        /* ═══════════════════════════════════════════════
+           MOBILE — max-width: 640px
+           ═══════════════════════════════════════════════ */
+
+        /* Mobile bottom nav — hidden on desktop */
+        .mobile-bottom-nav { display: none; }
+
+        @keyframes slideUpSheet {
+            from { transform: translateY(100%); opacity: 0; }
+            to   { transform: translateY(0);    opacity: 1; }
+        }
+
+        @media (max-width: 640px) {
+
+            /* Body padding for bottom nav */
+            body { padding-bottom: 64px !important; }
+
+            /* ── Navbar ── */
+            .navbar { padding: 0.6rem 0; box-shadow: 0 1px 0 var(--border); }
+            .nav-links { display: none !important; }
+            .nav-right  { display: none !important; }
+            .logo img   { height: 28px; }
+
+            /* ── Hero ── */
+            .hero {
+                min-height: auto;
+                padding: 2rem 1.25rem 1.75rem;
+                border-radius: 0;
+                margin-bottom: 0;
+                box-shadow: none;
+            }
+            .hero h1 {
+                font-size: clamp(2rem, 9vw, 2.6rem);
+                margin-bottom: 0.75rem;
+            }
+            .hero p.hero-desc {
+                font-size: 0.9rem;
+                max-width: 100%;
+                margin-bottom: 1rem;
+            }
+            .hero-trust { display: none; }
+            .search-box { width: 100%; margin: 0 0 0.75rem; }
+            .search-input { font-size: 0.95rem; }
+            .hero-stats {
+                gap: 0;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                width: 100%;
+                padding: 0.25rem 0;
+            }
+            .hero-stat-num   { font-size: 1.3rem; }
+            .hero-stat-label { font-size: 0.56rem; }
+
+            /* ── Container ── */
+            .container { padding: 0 0.9rem; }
+
+            /* ── Section header ── */
+            .grid-header { padding: 1rem 0 0.5rem; }
+
+            /* ── Artist rows ── */
+            .artists-grid { gap: 0.35rem; margin-bottom: 5rem; }
+            .artist-card {
+                padding: 0.7rem 0.85rem;
+                border-radius: 10px;
+            }
+            .artist-card .artist-avatar {
+                width: 40px !important;
+                height: 40px !important;
+                border-radius: 8px !important;
+            }
+            .artist-card .artist-avatar-initials {
+                width: 40px !important;
+                height: 40px !important;
+                border-radius: 8px !important;
+                font-size: 0.78rem !important;
+            }
+            .card-name-line {
+                gap: 0.3rem;
+                flex-wrap: nowrap;
+                overflow: hidden;
+            }
+            .artist-card .artist-name  { font-size: 0.875rem; }
+            .card-cat                  { font-size: 0.72rem; white-space: nowrap; }
+            .artist-card .artist-statement { display: none; }
+            .card-action svg { width: 16px; height: 16px; }
+
+            /* ── Hide desktop footer strip ── */
+            .footer-trust { display: none !important; }
+
+            /* ── Mobile bottom nav ── */
+            .mobile-bottom-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 200;
+                background: white;
+                border-top: 1px solid var(--border);
+                height: 60px;
+                padding-bottom: env(safe-area-inset-bottom, 0);
+            }
+            .mob-nav-item {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 3px;
+                color: var(--text-muted);
+                text-decoration: none;
+                font-size: 0.6rem;
+                font-weight: 500;
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-family: inherit;
+                padding: 0;
+                transition: color 0.15s;
+                letter-spacing: 0.02em;
+            }
+            .mob-nav-item svg { width: 22px; height: 22px; }
+            .mob-nav-item.active, .mob-nav-item:active { color: var(--blue); }
+
+            /* ── Artist modal → bottom sheet ── */
+            .as-modal-overlay {
+                align-items: flex-end;
+                padding: 0;
+            }
+            .as-modal-card {
+                border-radius: 20px 20px 0 0;
+                max-width: 100%;
+                width: 100%;
+                max-height: 88vh;
+                padding: 0 1.25rem 2rem;
+                animation: slideUpSheet 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+            }
+            /* Bottom sheet drag handle */
+            .as-modal-card::before {
+                content: '';
+                display: block;
+                width: 36px;
+                height: 4px;
+                background: var(--border);
+                border-radius: 2px;
+                margin: 1.1rem auto 1.25rem;
+            }
+            .modal-close-btn { top: 1.1rem; right: 1.1rem; }
+        }
     </style>
 </head>
 <body>
@@ -2699,5 +2849,25 @@
         <a href="privacy.html" class="footer-trust-link">Privacy Policy</a>
         <a href="#" onclick="openContact();return false;" class="footer-trust-link">Contact</a>
     </div>
+
+    <!-- Mobile bottom navigation (hidden on desktop) -->
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+        <a href="index.html" class="mob-nav-item active">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>Home</span>
+        </a>
+        <button class="mob-nav-item" onclick="document.getElementById('searchInput').focus();document.getElementById('searchInput').scrollIntoView({behavior:'smooth'})">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <span>Search</span>
+        </button>
+        <a href="extension.html" class="mob-nav-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Extension</span>
+        </a>
+        <a href="about.html" class="mob-nav-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span>About</span>
+        </a>
+    </nav>
 </body>
 </html>
