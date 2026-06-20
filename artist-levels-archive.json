@@ -1,0 +1,2004 @@
+[
+  {
+    "id": 1,
+    "name": "Roger Waters",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 2,
+    "name": "Dua Lipa",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 3,
+    "name": "Patti Smith",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 4,
+    "name": "Elvis Costello",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 5,
+    "name": "Tom Morello",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 6,
+    "name": "The Roots",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 7,
+    "name": "Lauryn Hill",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 8,
+    "name": "Peter Gabriel",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 10,
+    "name": "Charlotte Church",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 11,
+    "name": "Sam Smith",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 12,
+    "name": "Björk",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 13,
+    "name": "Lorde",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 14,
+    "name": "Massive Attack",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 15,
+    "name": "Brian Eno",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 16,
+    "name": "Fontaines D.C.",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 17,
+    "name": "Japanese Breakfast",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 18,
+    "name": "Paramore",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 19,
+    "name": "Hayley Williams",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 20,
+    "name": "Rina Sawayama",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 21,
+    "name": "AURORA",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 22,
+    "name": "King Krule",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 23,
+    "name": "IDLES",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 24,
+    "name": "Hot Chip",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 25,
+    "name": "Kneecap",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 26,
+    "name": "Wednesday",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 27,
+    "name": "Mannequin Pussy",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 28,
+    "name": "BADBADNOTGOOD",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 29,
+    "name": "Young Fathers",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 30,
+    "name": "Amyl and the Sniffers",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 31,
+    "name": "Soccer Mommy",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 32,
+    "name": "Kelela",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 33,
+    "name": "Caribou",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 34,
+    "name": "Primal Scream",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 35,
+    "name": "Faye Webster",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 36,
+    "name": "Arca",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 37,
+    "name": "MIKE",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 38,
+    "name": "Erika de Casier",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 39,
+    "name": "MJ Lenderman",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 40,
+    "name": "Julia Jacklin",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 41,
+    "name": "Lucy Dacus",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 42,
+    "name": "Enter Shikari",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 43,
+    "name": "Fever Ray",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 44,
+    "name": "The Knife",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 45,
+    "name": "Blood Orange",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 46,
+    "name": "Blonde Redhead",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 47,
+    "name": "Clairo",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 48,
+    "name": "Denzel Curry",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 49,
+    "name": "Destroy Boys",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 50,
+    "name": "Eartheater",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 51,
+    "name": "Jane Remover",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 52,
+    "name": "The Blessed Madonna",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 53,
+    "name": "Hania Rani",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 54,
+    "name": "Kelsey Lu",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 55,
+    "name": "L'Rain",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 56,
+    "name": "Lambrini Girls",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 57,
+    "name": "Liv.e",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 58,
+    "name": "MARINA",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 59,
+    "name": "Maryam Saleh",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 60,
+    "name": "Maurice Louca",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 61,
+    "name": "Mogwai",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 62,
+    "name": "MØ",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 63,
+    "name": "Nicolás Jaar",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 64,
+    "name": "Nourished by Time",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 65,
+    "name": "Oklou",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 66,
+    "name": "Smerz",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 67,
+    "name": "Yaeji",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 68,
+    "name": "Yeule",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 69,
+    "name": "Ana Tijoux",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 70,
+    "name": "Julia Holter",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 71,
+    "name": "Loraine James",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 72,
+    "name": "Model/Actriz",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 73,
+    "name": "Saul Williams",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 74,
+    "name": "Four Tet",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 75,
+    "name": "Olivia Colman",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 76,
+    "name": "Javier Bardem",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 77,
+    "name": "Mark Ruffalo",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 78,
+    "name": "Steve Coogan",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 79,
+    "name": "Riz Ahmed",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 80,
+    "name": "Miriam Margolyes",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 81,
+    "name": "Tilda Swinton",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 82,
+    "name": "Khalid Abdalla",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 83,
+    "name": "Maxine Peake",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 84,
+    "name": "Susan Sarandon",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 85,
+    "name": "Danny Glover",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 86,
+    "name": "Penélope Cruz",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 87,
+    "name": "John Cusack",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 88,
+    "name": "Cynthia Nixon",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 89,
+    "name": "Viggo Mortensen",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 90,
+    "name": "Mia Farrow",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 91,
+    "name": "Peter Capaldi",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 92,
+    "name": "Julie Christie",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 93,
+    "name": "Juliet Stevenson",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 94,
+    "name": "Paapa Essiedu",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 95,
+    "name": "Dame Harriet Walter",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 96,
+    "name": "Joe Alwyn",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 97,
+    "name": "Lena Headey",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 98,
+    "name": "Kingsley Ben-Adir",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 99,
+    "name": "Carla Henry",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 100,
+    "name": "Pooja Ghai",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 101,
+    "name": "Ken Loach",
+    "category": "director",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 102,
+    "name": "Mike Leigh",
+    "category": "director",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 106,
+    "name": "Asif Kapadia",
+    "category": "director",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 109,
+    "name": "Thurston Moore",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 110,
+    "name": "Serj Tankian",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 111,
+    "name": "Portishead",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 112,
+    "name": "PJ Harvey",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 116,
+    "name": "Robyn",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 117,
+    "name": "Lykke Li",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 118,
+    "name": "Propagandhi",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 119,
+    "name": "Refused",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 120,
+    "name": "Gil Scott-Heron",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 121,
+    "name": "Talib Kweli",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 122,
+    "name": "Chuck D",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 123,
+    "name": "Boots Riley",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 124,
+    "name": "Run the Jewels",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 125,
+    "name": "Noname",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 126,
+    "name": "Alice Walker",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 127,
+    "name": "Naomi Klein",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 128,
+    "name": "Arundhati Roy",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 129,
+    "name": "John Berger",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 130,
+    "name": "Iain Banks",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 131,
+    "name": "Sally Rooney",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 132,
+    "name": "Khaled Hosseini",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 133,
+    "name": "Annie Ernaux",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 134,
+    "name": "Angela Davis",
+    "category": "activist",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 135,
+    "name": "Judith Butler",
+    "category": "academic",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 137,
+    "name": "Desmond Tutu",
+    "category": "activist",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 138,
+    "name": "DJ Snake",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 139,
+    "name": "Julian Casablancas",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 140,
+    "name": "Sinéad O'Connor",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 141,
+    "name": "System of a Down",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 142,
+    "name": "Nigel Kennedy",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 143,
+    "name": "John Williams (guitarist)",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 146,
+    "name": "Asian Dub Foundation",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 147,
+    "name": "Manic Street Preachers",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 148,
+    "name": "Belle and Sebastian",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 149,
+    "name": "Jean-Luc Godard",
+    "category": "director",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 150,
+    "name": "Mira Nair",
+    "category": "director",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 153,
+    "name": "Liam Cunningham",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 154,
+    "name": "Cat Power",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 155,
+    "name": "Devendra Banhart",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 156,
+    "name": "Cassandra Wilson",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 157,
+    "name": "Coldcut",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 160,
+    "name": "Sonic Youth",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 161,
+    "name": "Godspeed You! Black Emperor",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 162,
+    "name": "A Silver Mt. Zion",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 163,
+    "name": "Do Make Say Think",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 164,
+    "name": "Broken Social Scene",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 165,
+    "name": "Feist",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 166,
+    "name": "Stars",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 167,
+    "name": "Metric",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 168,
+    "name": "Wolf Parade",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 169,
+    "name": "Destroyer",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 170,
+    "name": "Owen Pallett",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 171,
+    "name": "Peaches",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 173,
+    "name": "Dead Prez",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 174,
+    "name": "Immortal Technique",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 175,
+    "name": "Lowkey",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 176,
+    "name": "Akala",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 177,
+    "name": "Kae Tempest",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 178,
+    "name": "Little Simz",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 181,
+    "name": "Macklemore",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 182,
+    "name": "Kehlani",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 183,
+    "name": "Manu Chao",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 184,
+    "name": "Rage Against the Machine",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 185,
+    "name": "Lupe Fiasco",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 187,
+    "name": "Santana",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 188,
+    "name": "Yo La Tengo",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 189,
+    "name": "Klaxons",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 190,
+    "name": "Anti-Flag",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 191,
+    "name": "Jackson Browne",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 192,
+    "name": "Vic Mensa",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 193,
+    "name": "Yasiin Bey",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 197,
+    "name": "Steve Earle",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 199,
+    "name": "Jello Biafra",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 226,
+    "name": "Wallace Shawn",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 227,
+    "name": "Alexei Sayle",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 232,
+    "name": "Harold Pinter",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 233,
+    "name": "Kamila Shamsie",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 234,
+    "name": "Mohammed El-Kurd",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 235,
+    "name": "Ahdaf Soueif",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 236,
+    "name": "Tariq Ali",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 237,
+    "name": "Michael Rosen",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 240,
+    "name": "Adrienne Rich",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 241,
+    "name": "Paul Weller",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 242,
+    "name": "Sigur Ros",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 243,
+    "name": "Paloma Faith",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 244,
+    "name": "Nadine Shah",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 245,
+    "name": "Dry Cleaning",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 246,
+    "name": "My Bloody Valentine",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 247,
+    "name": "Shygirl",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 248,
+    "name": "Paris Paloma",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 249,
+    "name": "Black Country New Road",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 250,
+    "name": "Joaquin Phoenix",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 251,
+    "name": "Emma Stone",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 252,
+    "name": "Ayo Edebiri",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 253,
+    "name": "Andrew Garfield",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 254,
+    "name": "Toni Collette",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 255,
+    "name": "Nicola Coughlan",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 256,
+    "name": "Lily Gladstone",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 257,
+    "name": "Elliot Page",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 258,
+    "name": "Ilana Glazer",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 259,
+    "name": "Jonathan Glazer",
+    "category": "director",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 260,
+    "name": "Rooney Mara",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 261,
+    "name": "Harris Dickinson",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 262,
+    "name": "Rebecca Hall",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 263,
+    "name": "Gael Garcia Bernal",
+    "category": "actor",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 264,
+    "name": "Rachel Kushner",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 265,
+    "name": "Ocean Vuong",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 266,
+    "name": "Viet Thanh Nguyen",
+    "category": "writer",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 267,
+    "name": "Eric Clapton",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 268,
+    "name": "Dave Matthews Band",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 269,
+    "name": "Billie Eilish",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 270,
+    "name": "Halsey",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 271,
+    "name": "SZA",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 272,
+    "name": "Vampire Weekend",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 273,
+    "name": "FKA Twigs",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 274,
+    "name": "Lizzo",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 275,
+    "name": "Thom Yorke",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 276,
+    "name": "Tyler, the Creator",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "LOW"
+  },
+  {
+    "id": 277,
+    "name": "Wolf Alice",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 278,
+    "name": "MUNA",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 279,
+    "name": "Wet Leg",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 294,
+    "name": "Wednesday",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 281,
+    "name": "MJ Lenderman",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 282,
+    "name": "Of Monsters and Men",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 283,
+    "name": "Green Day",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 342,
+    "name": "Damon Albarn",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "HIGH"
+  },
+  {
+    "id": 285,
+    "name": "Grizzly Bear",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 286,
+    "name": "Nilüfer Yanya",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 287,
+    "name": "NAO",
+    "category": "musician",
+    "stance": "BOYCOTTER",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 288,
+    "name": "Nick Cave",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 289,
+    "name": "J.K. Rowling",
+    "category": "author",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 290,
+    "name": "Scarlett Johansson",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 291,
+    "name": "Ian McEwan",
+    "category": "author",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 292,
+    "name": "Gal Gadot",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 293,
+    "name": "Jerry Seinfeld",
+    "category": "comedian",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 343,
+    "name": "Michael Douglas",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 295,
+    "name": "Helen Mirren",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 296,
+    "name": "Mark Hamill",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 297,
+    "name": "Jamie Lee Curtis",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 298,
+    "name": "Gene Simmons",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 344,
+    "name": "Ozzy Osbourne",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 345,
+    "name": "David Draiman",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 300,
+    "name": "Liev Schreiber",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 301,
+    "name": "Debra Messing",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 302,
+    "name": "Mayim Bialik",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 303,
+    "name": "Howard Jacobson",
+    "category": "author",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 304,
+    "name": "David Mamet",
+    "category": "author",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 305,
+    "name": "Elfriede Jelinek",
+    "category": "author",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 306,
+    "name": "Herta Müller",
+    "category": "author",
+    "stance": "WELCOMES_ALL",
+    "level": "CRITICAL"
+  },
+  {
+    "id": 307,
+    "name": "Paul McCartney",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "HIGH"
+  },
+  {
+    "id": 308,
+    "name": "Radiohead",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "HIGH"
+  },
+  {
+    "id": 309,
+    "name": "Madonna",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "HIGH"
+  },
+  {
+    "id": 310,
+    "name": "Alicia Keys",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "HIGH"
+  },
+  {
+    "id": 311,
+    "name": "Red Hot Chili Peppers",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "HIGH"
+  },
+  {
+    "id": 312,
+    "name": "Justin Bieber",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "HIGH"
+  },
+  {
+    "id": 313,
+    "name": "Metallica",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "HIGH"
+  },
+  {
+    "id": 314,
+    "name": "Elton John",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "HIGH"
+  },
+  {
+    "id": 315,
+    "name": "Lady Gaga",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "HIGH"
+  },
+  {
+    "id": 316,
+    "name": "Tom Jones",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "HIGH"
+  },
+  {
+    "id": 317,
+    "name": "Guns N' Roses",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "HIGH"
+  },
+  {
+    "id": 318,
+    "name": "Bon Jovi",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "HIGH"
+  },
+  {
+    "id": 319,
+    "name": "Rolling Stones",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 320,
+    "name": "Maroon 5",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 321,
+    "name": "Chris Pine",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 322,
+    "name": "Jason Alexander",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 323,
+    "name": "Amy Schumer",
+    "category": "comedian",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 324,
+    "name": "Mila Kunis",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 325,
+    "name": "Boy George",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 326,
+    "name": "Sharon Osbourne",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 327,
+    "name": "Emmy Rossum",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 328,
+    "name": "Patricia Heaton",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 329,
+    "name": "Diane Warren",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 330,
+    "name": "Jennifer Jason Leigh",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 331,
+    "name": "Selma Blair",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 332,
+    "name": "Ginnifer Goodwin",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 333,
+    "name": "Jeremy Piven",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 334,
+    "name": "Joshua Malina",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 335,
+    "name": "Matisyahu",
+    "category": "musician",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 336,
+    "name": "Tracy-Ann Oberman",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 337,
+    "name": "Dame Maureen Lipman",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 338,
+    "name": "Anthony Edwards",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 339,
+    "name": "Gregg Sulkin",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 340,
+    "name": "Noa Tishby",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  },
+  {
+    "id": 341,
+    "name": "Jerry O'Connell",
+    "category": "actor",
+    "stance": "WELCOMES_ALL",
+    "level": "LOW"
+  }
+]
