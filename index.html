@@ -1866,6 +1866,7 @@
                 background: var(--blue);
                 color: white;
                 text-decoration: none;
+                border: none;
                 border-radius: 100px;
                 padding: 0.42rem 1rem;
                 font-size: 0.78rem;
@@ -1873,6 +1874,7 @@
                 white-space: nowrap;
                 font-family: inherit;
                 margin-left: auto;
+                cursor: pointer;
             }
 
             /* ── Mobile language sheet (pops up above bottom nav) ── */
@@ -1960,7 +1962,7 @@
                     <a href="extension.html" class="nav-link">How It Works</a>
                     <a href="#" onclick="openContact();return false;" class="nav-link">Contact</a>
                 </div>
-                <a href="extension.html" class="mob-get-app">Get the App</a>
+                <button onclick="installPWA()" class="mob-get-app">Get the App</button>
                 <div class="nav-right">
                     <div class="lang-switcher">
                         <button class="lang-btn" onclick="toggleLang(this)" aria-label="Language">
@@ -2832,11 +2834,11 @@
                 modal.innerHTML = `
                     <div style="background: white; border-radius: 24px; padding: 0; max-width: 600px; width: 100%; max-height: 90vh; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4); animation: slideUp 0.4s;">
                         <!-- Header with logo -->
-                        <div style="background: #000940; padding: 2.5rem 2rem; text-align: center; position: relative;">
-                            <img src="logo.png" style="width: 80px; height: 80px; margin-bottom: 1rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));" alt="Logo">
+                        <div style="background: #0C233E; padding: 2.5rem 2rem; text-align: center; position: relative;">
+                            <img src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/4ebf28762_fulllogo2.png" style="height: 40px; width: auto; margin-bottom: 1rem;" alt="ArtSiren">
                             <h2 style="color: white; font-size: 2rem; font-weight: 800; margin: 0 0 0.5rem 0;">Download Started!</h2>
                             <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin: 0;">Follow these quick steps to install</p>
-                            <button onclick="this.parentElement.parentElement.parentElement.remove()" style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.2); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; transition: all 0.2s;">×</button>
+                            <button onclick="this.parentElement.parentElement.parentElement.remove()" style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.15); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; transition: all 0.2s;">×</button>
                         </div>
                         
                         <!-- Steps -->
@@ -2844,7 +2846,7 @@
                             <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                                 <!-- Step 1 -->
                                 <div style="display: flex; gap: 1rem; align-items: start;">
-                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: #44D7FF; color: #000940; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">1</div>
+                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: #1C5FEA; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">1</div>
                                     <div style="flex: 1;">
                                         <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: #1a1a1a;">Unzip the downloaded file</h3>
                                         <p style="margin: 0; color: #666; line-height: 1.6;">Double-click the ZIP file to extract the folder</p>
@@ -2853,17 +2855,17 @@
                                 
                                 <!-- Step 2 -->
                                 <div style="display: flex; gap: 1rem; align-items: start;">
-                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: #44D7FF; color: #000940; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">2</div>
+                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: #1C5FEA; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">2</div>
                                     <div style="flex: 1;">
                                         <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: #1a1a1a;">Open Chrome Extensions</h3>
                                         <p style="margin: 0 0 0.5rem 0; color: #666; line-height: 1.6;">Go to:</p>
-                                        <code style="background: #f5f5f5; padding: 0.5rem 1rem; border-radius: 8px; display: inline-block; color: #000940; font-weight: 600;">chrome://extensions/</code>
+                                        <code style="background: #f5f5f5; padding: 0.5rem 1rem; border-radius: 8px; display: inline-block; color: #0C233E; font-weight: 600;">chrome://extensions/</code>
                                     </div>
                                 </div>
                                 
                                 <!-- Step 3 -->
                                 <div style="display: flex; gap: 1rem; align-items: start;">
-                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: #44D7FF; color: #000940; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">3</div>
+                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: #1C5FEA; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">3</div>
                                     <div style="flex: 1;">
                                         <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: #1a1a1a;">Enable Developer Mode</h3>
                                         <p style="margin: 0; color: #666; line-height: 1.6;">Toggle the switch in the top-right corner</p>
@@ -2872,7 +2874,7 @@
                                 
                                 <!-- Step 4 -->
                                 <div style="display: flex; gap: 1rem; align-items: start;">
-                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: #44D7FF; color: #000940; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">4</div>
+                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: #1C5FEA; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">4</div>
                                     <div style="flex: 1;">
                                         <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: #1a1a1a;">Load the Extension</h3>
                                         <p style="margin: 0; color: #666; line-height: 1.6;">Click "Load unpacked" and select the unzipped folder</p>
@@ -2985,7 +2987,6 @@
                 _pwaPrompt.userChoice.then(r => {
                     if (r.outcome === 'accepted') {
                         document.getElementById('pwa-install-btn').style.display = 'none';
-                        document.getElementById('mobile-add-btn').style.display = 'none';
                     }
                     _pwaPrompt = null;
                 });
