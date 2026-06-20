@@ -179,11 +179,13 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { overflow-x: hidden; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: var(--bg);
             min-height: 100vh;
+            overflow-x: hidden;
             color: var(--text-primary);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -971,7 +973,8 @@
             box-shadow: 0 2px 12px rgba(12,35,62,0.05);
         }
         .logo { color: var(--navy); gap: 8px; }
-        .logo img { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
+        .logo img { height: 36px; width: auto; max-width: 180px; flex-shrink: 0; }
+        .logo > span { display: none; font-size: 1.15rem; font-weight: 800; letter-spacing: -0.02em; }
         .nav-cta-btn {
             background: var(--blue);
             color: white;
@@ -1182,6 +1185,7 @@
             scrollbar-width: none;
             -webkit-overflow-scrolling: touch;
             padding-bottom: 2px;
+            width: 100%;
         }
         .filter-tabs-row::-webkit-scrollbar { display: none; }
 
@@ -1940,8 +1944,8 @@
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="logo">
-                    <img src="logo.png" alt="ArtSiren">
-                    <span>ArtSiren</span>
+                    <img src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/4ebf28762_fulllogo2.png" alt="ArtSiren" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+                    <span style="display:none">ArtSiren</span>
                 </a>
                 <div class="nav-links">
                     <a href="about.html" class="nav-link">About</a>
