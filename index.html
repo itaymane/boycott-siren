@@ -980,13 +980,16 @@
             color: white;
             border-radius: 100px;
             box-shadow: 0 4px 12px rgba(28,95,234,0.3);
+            padding: 0.5rem 1.1rem;
+            font-size: 0.85rem;
         }
         .btn-cta:hover, .nav-cta-btn:hover {
             background: var(--blue-mid);
             box-shadow: 0 6px 20px rgba(28,95,234,0.4);
         }
         .lang-btn {
-            border-color: var(--border);
+            border-color: transparent;
+            padding: 0.4rem;
             color: var(--text-secondary);
             display: inline-flex;
             align-items: center;
@@ -1956,9 +1959,8 @@
                 <a href="extension.html" class="mob-get-app">Get the App</a>
                 <div class="nav-right">
                     <div class="lang-switcher">
-                        <button class="lang-btn" onclick="toggleLang(this)">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                            EN <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0l5 6 5-6z"/></svg>
+                        <button class="lang-btn" onclick="toggleLang(this)" aria-label="Language">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                         </button>
                         <div class="lang-menu">
                             <a href="/" class="lang-item lang-active">English</a>
