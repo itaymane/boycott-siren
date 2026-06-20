@@ -5,7 +5,7 @@
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "theme_color": "#0047AB",
+  "theme_color": "#0C233E",
   "background_color": "#f8f9fc",
   "categories": ["music", "news", "utilities"],
   "icons": [
