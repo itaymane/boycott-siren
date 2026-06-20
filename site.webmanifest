@@ -6,21 +6,13 @@
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#0C233E",
-  "background_color": "#f8f9fc",
+  "background_color": "#0C233E",
   "categories": ["music", "news", "utilities"],
   "icons": [
-    {
-      "src": "https://media.base44.com/images/public/6a3256d03c8df239cec9d212/792cde80b_Group44.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "https://media.base44.com/images/public/6a3256d03c8df239cec9d212/792cde80b_Group44.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
+    { "src": "/icon-192.png",          "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png",          "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-192-maskable.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "screenshots": [],
   "shortcuts": [

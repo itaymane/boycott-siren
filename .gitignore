@@ -1,6 +1,13 @@
 # Zip files (not needed in repo)
 *.zip
 
+# Node (icon generation tool — not part of the site)
+node_modules/
+package.json
+package-lock.json
+_generate-icons.mjs
+_icon-source.svg
+
 # Claude Code settings
 .claude/
 
