@@ -970,9 +970,8 @@
             -webkit-backdrop-filter: none;
             box-shadow: 0 2px 12px rgba(12,35,62,0.05);
         }
-        .logo { color: var(--navy); }
-        .logo img { width: auto; height: 36px; max-width: 180px; }
-        .logo span { display: none; }
+        .logo { color: var(--navy); gap: 8px; }
+        .logo img { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
         .nav-cta-btn {
             background: var(--blue);
             color: white;
@@ -1173,10 +1172,11 @@
 
         /* ── Filter tabs — single compact row ── */
         .filter-section {
-            padding: 0.75rem 0 0.25rem;
+            padding: 0.2rem 0 0.2rem;
         }
         .filter-tabs-row {
             display: flex;
+            justify-content: center;
             gap: 0.4rem;
             overflow-x: auto;
             scrollbar-width: none;
@@ -1187,12 +1187,12 @@
 
         .f-tab {
             flex-shrink: 0;
-            padding: 0.32rem 0.85rem;
-            border-radius: 100px;
+            padding: 0.3rem 0.75rem;
+            border-radius: 8px;
             border: 1.5px solid var(--border);
             background: white;
             color: var(--text-secondary);
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             font-weight: 500;
             cursor: pointer;
             font-family: inherit;
@@ -1940,7 +1940,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="logo">
-                    <img src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/4ebf28762_fulllogo2.png" alt="ArtSiren" onerror="this.src='logo.png'">
+                    <img src="logo.png" alt="ArtSiren">
                     <span>ArtSiren</span>
                 </a>
                 <div class="nav-links">
@@ -2007,6 +2007,19 @@
                 <div class="autocomplete-dropdown" id="autocompleteList"></div>
             </div>
 
+            <!-- Filter tabs — directly below search -->
+            <div class="filter-section" style="margin-top:0.5rem">
+                <div class="filter-tabs-row" id="filterTabsRow">
+                    <button class="f-tab active" data-type="all">All</button>
+                    <button class="f-tab" data-type="stance" data-stance="BOYCOTTER">Declining</button>
+                    <button class="f-tab" data-type="stance" data-stance="WELCOMES_ALL">Welcomes All</button>
+                    <button class="f-tab" data-type="cat" data-filter="musician">Musicians</button>
+                    <button class="f-tab" data-type="cat" data-filter="actor">Actors</button>
+                    <button class="f-tab" data-type="cat" data-filter="director">Directors</button>
+                    <button class="f-tab" data-type="cat" data-filter="other">Writers</button>
+                </div>
+            </div>
+
             <div class="hero-stats">
                 <div class="hero-stat">
                     <span class="hero-stat-num" id="statMusicians">196</span>
@@ -2022,23 +2035,10 @@
                 </div>
                 <div class="hero-stat">
                     <span class="hero-stat-num" id="statOther">12</span>
-                    <span class="hero-stat-label">Writers &amp; Activists</span>
+                    <span class="hero-stat-label">Writers</span>
                 </div>
             </div>
 
-        </div>
-
-        <!-- Filter tabs — single row -->
-        <div class="filter-section">
-            <div class="filter-tabs-row" id="filterTabsRow">
-                <button class="f-tab active" data-type="all">All</button>
-                <button class="f-tab" data-type="stance" data-stance="BOYCOTTER">Declining</button>
-                <button class="f-tab" data-type="stance" data-stance="WELCOMES_ALL">Welcomes All</button>
-                <button class="f-tab" data-type="cat" data-filter="musician">Musicians</button>
-                <button class="f-tab" data-type="cat" data-filter="actor">Actors</button>
-                <button class="f-tab" data-type="cat" data-filter="director">Directors</button>
-                <button class="f-tab" data-type="cat" data-filter="other">Writers</button>
-            </div>
         </div>
 
         <div class="grid-header">
@@ -2063,12 +2063,12 @@
                         <label>Category</label>
                         <select name="category" required>
                             <option value="" disabled selected>Select a reason for contact</option>
-                            <option value="artist-submission">🎵 Artist Submission</option>
-                            <option value="report-mistake">⚠️ Report a Mistake</option>
-                            <option value="press-media">📰 Press & Media</option>
-                            <option value="legal">⚖️ Legal</option>
-                            <option value="partnership">🤝 Partnership</option>
-                            <option value="feedback">💬 Feedback</option>
+                            <option value="artist-submission">Artist Submission</option>
+                            <option value="report-mistake">Report a Mistake</option>
+                            <option value="press-media">Press & Media</option>
+                            <option value="legal">Legal</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="feedback">Feedback</option>
                         </select>
                     </div>
 
