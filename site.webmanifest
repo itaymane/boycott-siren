@@ -9,8 +9,18 @@
   "background_color": "#f8f9fc",
   "categories": ["music", "news", "utilities"],
   "icons": [
-    { "src": "/logo.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
-    { "src": "/logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    {
+      "src": "https://media.base44.com/images/public/6a3256d03c8df239cec9d212/792cde80b_Group44.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://media.base44.com/images/public/6a3256d03c8df239cec9d212/792cde80b_Group44.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ],
   "screenshots": [],
   "shortcuts": [
