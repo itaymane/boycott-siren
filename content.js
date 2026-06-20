@@ -795,43 +795,19 @@
         overlay.className = 'boycott-floating-alert';
         overlay.setAttribute('data-artist', artist.name);
 
-        const stanceColor = '#ff4444';
-        const stanceLabel = 'BOYCOTTER';
-        const queueNote = alertQueue.length > 0
-            ? `<div class="boycott-queue-note">${alertQueue.length} more detected — close to see next</div>`
-            : '';
-
+        const sourcesUrl = `https://artsiren.co/?artist=${encodeURIComponent(artist.name)}`;
         overlay.innerHTML = `
-            <div class="boycott-alert-content">
-                <div class="boycott-alert-header">
-                    <div class="boycott-alert-logo">
-                        <svg width="22" height="22" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="13" y="5" width="10" height="15" rx="5" fill="white"/>
-                            <path d="M9 20a9 9 0 0018 0" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
-                            <line x1="18" y1="29" x2="18" y2="33" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                            <line x1="14" y1="33" x2="22" y2="33" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M26 15c1.5 1.5 1.5 4.5 0 6" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/>
-                            <path d="M30 12c3 3 3 9 0 12" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
-                        </svg>
-                    </div>
-                    <div class="boycott-header-text">
-                        <div class="boycott-alert-title">ArtSiren</div>
-                        <div class="boycott-alert-subtitle">Artist stance detected</div>
-                    </div>
-                    <button class="boycott-alert-close" aria-label="Close">×</button>
-                </div>
-
-                <div class="boycott-alert-body">
-                    <div class="boycott-artist-name">${artist.name}</div>
-                    <div class="boycott-stance-badge" style="background: ${stanceColor};">${stanceLabel}</div>
-                    <div class="boycott-statement">${artist.statement}</div>
-                    ${queueNote}
-                </div>
-                <div class="boycott-actions">
-                    <button class="boycott-details-btn">View Sources</button>
-                    <button class="boycott-dismiss-btn">Dismiss</button>
-                </div>
-                <div class="boycott-alert-footer">No tracking. You stay in control.</div>
+            <div class="boycott-alert-header">
+                <img class="boycott-alert-logo" src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/b7ac7b206_.png" alt="ArtSiren">
+                <span class="boycott-alert-title">ArtSiren</span>
+                <button class="boycott-alert-close" aria-label="Close">
+                    <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 2L12 12M12 2L2 12" stroke="#9AA7B6" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+            </div>
+            <div class="boycott-alert-body">
+                <div class="boycott-artist-name">${artist.name}</div>
+                <p class="boycott-statement">${artist.statement}</p>
+                <a class="boycott-details-btn" href="${sourcesUrl}" target="_blank" rel="noopener">View Sources</a>
             </div>
         `;
 
@@ -840,6 +816,7 @@
 
         function closeAlert() {
             overlay.classList.remove('show');
+            overlay.classList.add('hide');
             setTimeout(() => {
                 overlay.remove();
                 showNextAlert();
@@ -847,12 +824,6 @@
         }
 
         overlay.querySelector('.boycott-alert-close').addEventListener('click', closeAlert);
-        overlay.querySelector('.boycott-dismiss-btn').addEventListener('click', closeAlert);
-
-        overlay.querySelector('.boycott-details-btn').addEventListener('click', () => {
-            const artistName = encodeURIComponent(artist.name);
-            window.open(`https://artsiren.co/?artist=${artistName}`, '_blank');
-        });
     }
     
     // Show detailed modal
