@@ -1643,30 +1643,102 @@
             margin-top: 0.5rem;
         }
         .modal-cta-btn:hover { background: #1450c8; transform: translateY(-1px); }
-        .modal-share-single {
-            width: 100%;
+        .modal-share-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin: 0.75rem 0 0.25rem;
+        }
+        .share-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1rem;
-            border-radius: 12px;
-            background: transparent;
+            gap: 0.45rem;
+            padding: 0.62rem 0.5rem;
+            border-radius: 10px;
             border: 1.5px solid var(--border);
+            background: transparent;
             color: var(--text-primary);
-            font-size: 0.95rem;
-            font-weight: 600;
+            font-size: 0.82rem;
+            font-weight: 500;
             cursor: pointer;
             font-family: inherit;
-            transition: background 0.15s, border-color 0.15s;
+            transition: background 0.15s, border-color 0.15s, color 0.15s;
+            text-decoration: none;
         }
-        .modal-share-single:hover { background: var(--bg); border-color: rgba(28,95,234,0.3); }
+        .share-btn:hover { background: var(--bg); }
+        .share-wa:hover  { border-color: #25D366; color: #0a7a3c; }
+        .share-x:hover   { border-color: #1a1a1a; color: #1a1a1a; }
+        .share-sms:hover { border-color: var(--blue); color: var(--blue); }
+        .share-copy:hover{ border-color: var(--blue); color: var(--blue); }
         .modal-footer-note {
             text-align: center;
             font-size: 0.73rem;
             color: var(--text-muted);
             margin-top: 1rem;
             line-height: 1.4;
+        }
+
+        /* ── Sticky search strip ── */
+        .sticky-search-strip {
+            position: fixed;
+            top: 62px;
+            left: 0;
+            right: 0;
+            z-index: 95;
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 0.55rem 1rem;
+            box-shadow: 0 4px 16px rgba(12,35,62,0.07);
+            transform: translateY(-120%);
+            transition: transform 0.22s cubic-bezier(.4,0,.2,1);
+        }
+        .sticky-search-strip.visible { transform: translateY(0); }
+        .sticky-search-inner {
+            max-width: 680px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .sticky-search-box { position: relative; }
+        .sticky-search-icon {
+            position: absolute;
+            left: 0.85rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            display: flex;
+            pointer-events: none;
+        }
+        .sticky-search-input {
+            width: 100%;
+            padding: 0.5rem 1rem 0.5rem 2.6rem;
+            border: 1.5px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.88rem;
+            font-family: inherit;
+            color: var(--navy);
+            background: var(--bg);
+            outline: none;
+            transition: border-color 0.15s, box-shadow 0.15s;
+            box-sizing: border-box;
+        }
+        .sticky-search-input:focus {
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(28,95,234,0.1);
+            background: white;
+        }
+        .sticky-filter-row {
+            display: flex;
+            gap: 0.35rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+        .sticky-filter-row::-webkit-scrollbar { display: none; }
+        @media (max-width: 640px) {
+            .sticky-search-strip { top: 47px; }
         }
 
         @media (max-width: 640px) {
@@ -1989,6 +2061,27 @@
             </div>
         </div>
     </nav>
+
+    <!-- Sticky search strip — appears when hero search scrolls out of view -->
+    <div class="sticky-search-strip" id="stickySearchStrip">
+        <div class="sticky-search-inner">
+            <div class="sticky-search-box">
+                <span class="sticky-search-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </span>
+                <input type="text" class="sticky-search-input" id="stickySearchInput" placeholder="Search an artist…" autocomplete="off">
+            </div>
+            <div class="sticky-filter-row" id="stickyFilterRow">
+                <button class="sticky-f-tab f-tab active" data-type="all">All</button>
+                <button class="sticky-f-tab f-tab" data-type="stance" data-stance="BOYCOTTER">Declining</button>
+                <button class="sticky-f-tab f-tab" data-type="stance" data-stance="WELCOMES_ALL">Welcomes All</button>
+                <button class="sticky-f-tab f-tab" data-type="cat" data-filter="musician">Musicians</button>
+                <button class="sticky-f-tab f-tab" data-type="cat" data-filter="actor">Actors</button>
+                <button class="sticky-f-tab f-tab" data-type="cat" data-filter="director">Directors</button>
+                <button class="sticky-f-tab f-tab" data-type="cat" data-filter="other">Writers</button>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="hero">
@@ -2617,6 +2710,17 @@
             input.addEventListener('blur', () => setTimeout(hideDropdown, 150));
         })();
         
+        function copyShareUrl(btn, url) {
+            const orig = btn.innerHTML;
+            navigator.clipboard.writeText(url).then(() => {
+                btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+                setTimeout(() => { btn.innerHTML = orig; }, 1800);
+            }).catch(() => {
+                btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+                setTimeout(() => { btn.innerHTML = orig; }, 1800);
+            });
+        }
+
         // Show artist details modal
         function showArtistDetails(artistId) {
             const artist = ARTISTS_DATABASE.find(a => a.id === artistId);
@@ -2696,12 +2800,24 @@
                     </div>
                     <div class="modal-sources-list">${sourcesHtml}</div>
 
-                    <button class="modal-cta-btn" onclick="var t=this.previousElementSibling.previousElementSibling;t.click()">View Sources &amp; Context</button>
-
-                    <button class="modal-share-single" onclick="if(navigator.share){navigator.share({title:'${artist.name.replace(/'/g,"\\'")} — ArtSiren',url:'${shareUrl}'})}else{navigator.clipboard.writeText('${shareUrl}').then(()=>{this.innerHTML='<svg width=\\'16\\' height=\\'16\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'2.5\\' stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\'><polyline points=\\'20 6 9 17 4 12\\'/></svg> Copied!';setTimeout(()=>{this.innerHTML='<svg width=\\'16\\' height=\\'16\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'2\\' stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\'><path d=\\'M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8\\'/><polyline points=\\'16 6 12 2 8 6\\'/><line x1=\\'12\\' y1=\\'2\\' x2=\\'12\\' y2=\\'15\\'/></svg> Share'},1500)})}">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
-                        Share
-                    </button>
+                    <div class="modal-share-grid">
+                        <a href="https://wa.me/?text=${encodeURIComponent(shareText + '\n' + shareUrl)}" target="_blank" rel="noopener" class="share-btn share-wa">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            WhatsApp
+                        </a>
+                        <a href="https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener" class="share-btn share-x">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.264 5.638 5.9-5.638zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            X
+                        </a>
+                        <a href="sms:?body=${encodeURIComponent(shareText + ': ' + shareUrl)}" class="share-btn share-sms">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            SMS
+                        </a>
+                        <button class="share-btn share-copy" onclick="copyShareUrl(this,'${shareUrl}')">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            Copy Link
+                        </button>
+                    </div>
 
                     <div class="modal-footer-note">All information from publicly documented sources. Independently verifiable.</div>
                 </div>
@@ -2996,6 +3112,67 @@
                 showIOSInstallSheet();
             }
         }
+
+        // Hide install buttons when already running as installed PWA
+        if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
+            var _mobBtn = document.querySelector('.mob-get-app');
+            var _pwaBtn = document.getElementById('pwa-install-btn');
+            if (_mobBtn) _mobBtn.style.display = 'none';
+            if (_pwaBtn) _pwaBtn.style.display = 'none';
+        }
+
+        // Sticky search strip — show when hero search box scrolls out of view
+        (function () {
+            var strip = document.getElementById('stickySearchStrip');
+            var stickyInput = document.getElementById('stickySearchInput');
+            var mainInput = document.getElementById('searchInput');
+            var heroSearch = document.querySelector('.search-box');
+            if (!strip || !stickyInput || !mainInput) return;
+
+            // Two-way sync between sticky and main search inputs
+            stickyInput.addEventListener('input', function () {
+                mainInput.value = stickyInput.value;
+                mainInput.dispatchEvent(new Event('input', { bubbles: true }));
+            });
+            mainInput.addEventListener('input', function () {
+                if (document.activeElement !== stickyInput) stickyInput.value = mainInput.value;
+            });
+
+            // Show/hide strip
+            if ('IntersectionObserver' in window && heroSearch) {
+                new IntersectionObserver(function (entries) {
+                    strip.classList.toggle('visible', !entries[0].isIntersecting);
+                }, { threshold: 0 }).observe(heroSearch);
+            }
+
+            // Sticky filter tabs — the existing .f-tab handler already runs the filter.
+            // These listeners only sync active state between hero and sticky groups.
+            var stickyTabs = document.querySelectorAll('#stickyFilterRow .sticky-f-tab');
+            var heroTabs = document.querySelectorAll('#filterTabsRow .f-tab');
+
+            function tabKey(t) {
+                return (t.dataset.type || '') + '|' + (t.dataset.stance || '') + '|' + (t.dataset.filter || '');
+            }
+
+            stickyTabs.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    // Existing .f-tab handler already set this btn active and ran the filter.
+                    // Sync the matching hero tab.
+                    heroTabs.forEach(function (h) {
+                        h.classList.toggle('active', tabKey(h) === tabKey(btn));
+                    });
+                });
+            });
+
+            heroTabs.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    // Sync matching sticky tab.
+                    stickyTabs.forEach(function (t) {
+                        t.classList.toggle('active', tabKey(t) === tabKey(btn));
+                    });
+                });
+            });
+        })();
 
         function showIOSInstallSheet() {
             if (document.getElementById('ios-install-sheet')) return;
