@@ -1213,6 +1213,9 @@
         }
         .f-tab:hover { border-color: var(--blue); color: var(--blue); }
         .f-tab.active { background: var(--blue); color: white; border-color: transparent; }
+        .f-tab[data-stance="WELCOMES_ALL"].active { background: #0891b2; }
+        .f-tab[data-stance="BOYCOTTER"].active { background: #dc2626; }
+        .f-divider { width: 1px; height: 20px; background: var(--border); align-self: center; flex-shrink: 0; margin: 0 0.15rem; }
 
         /* Cards */
         .view-details { color: var(--blue); }
@@ -2096,12 +2099,13 @@
             <div class="filter-section" style="margin-top:0.5rem">
                 <div class="filter-tabs-row" id="filterTabsRow">
                     <button class="f-tab active" data-type="all">All</button>
-                    <button class="f-tab" data-type="stance" data-stance="BOYCOTTER">Declining</button>
-                    <button class="f-tab" data-type="stance" data-stance="WELCOMES_ALL">Welcomes All</button>
                     <button class="f-tab" data-type="cat" data-filter="musician">Musicians</button>
                     <button class="f-tab" data-type="cat" data-filter="actor">Actors</button>
                     <button class="f-tab" data-type="cat" data-filter="director">Directors</button>
                     <button class="f-tab" data-type="cat" data-filter="other">Writers</button>
+                    <span class="f-divider" aria-hidden="true"></span>
+                    <button class="f-tab" data-type="stance" data-stance="BOYCOTTER">Declining</button>
+                    <button class="f-tab" data-type="stance" data-stance="WELCOMES_ALL">Welcomes All</button>
                 </div>
             </div>
 
@@ -2582,21 +2586,33 @@
             }).join('');
         }
 
+        function updateTabActiveStates() {
+            document.querySelectorAll('.f-tab').forEach(b => {
+                const type = b.dataset.type;
+                if (type === 'all') {
+                    b.classList.toggle('active', stanceFilter === 'all' && categoryFilter === 'all');
+                } else if (type === 'stance') {
+                    b.classList.toggle('active', stanceFilter === b.dataset.stance);
+                } else if (type === 'cat') {
+                    b.classList.toggle('active', categoryFilter === b.dataset.filter);
+                }
+            });
+        }
+
         document.querySelectorAll('.f-tab').forEach(btn => {
             btn.addEventListener('click', e => {
                 const t = e.currentTarget;
-                document.querySelectorAll('.f-tab').forEach(b => b.classList.remove('active'));
-                t.classList.add('active');
                 if (t.dataset.type === 'all') {
                     stanceFilter = 'all';
                     categoryFilter = 'all';
                 } else if (t.dataset.type === 'stance') {
-                    stanceFilter = t.dataset.stance;
-                    categoryFilter = 'all';
+                    // Toggle: clicking active stance deactivates it
+                    stanceFilter = (stanceFilter === t.dataset.stance) ? 'all' : t.dataset.stance;
                 } else if (t.dataset.type === 'cat') {
-                    categoryFilter = t.dataset.filter;
-                    stanceFilter = 'all';
+                    // Toggle: clicking active category deactivates it
+                    categoryFilter = (categoryFilter === t.dataset.filter) ? 'all' : t.dataset.filter;
                 }
+                updateTabActiveStates();
                 renderArtists();
             });
         });
