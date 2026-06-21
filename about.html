@@ -12,367 +12,409 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-    <title>About ArtSiren | Cultural Boycott Artist Database</title>
-    <meta name="description" content="ArtSiren tracks 294+ artists – boycotters and supporters – with verified sources — with verified sources from mainstream media, so you can make informed choices.">
+    <title>About ArtSiren | Source-Backed Cultural Transparency</title>
+    <meta name="description" content="ArtSiren surfaces publicly documented information about artists' stances — sourced from mainstream media, so you can make informed choices.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://artsiren.co/about.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://artsiren.co/about.html">
-    <meta property="og:title" content="About ArtSiren | Cultural Boycott Artist Database">
-    <meta property="og:description" content="ArtSiren tracks 294+ artists – boycotters and supporters – with verified sources, with verified sources from mainstream media.">
+    <meta property="og:title" content="About ArtSiren | Source-Backed Cultural Transparency">
+    <meta property="og:description" content="ArtSiren surfaces publicly documented information about artists' stances — sourced from mainstream media.">
     <meta property="og:image" content="https://media.base44.com/images/public/user_699371e71a86c722ff3edc0b/ec507a643_01.png">
     <meta property="og:site_name" content="ArtSiren">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About ArtSiren">
-    <meta name="twitter:description" content="294+ artists documented. Verified sources. Know before you go.">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="twitter:description" content="Source-backed public information on 294+ artists. Know before you go.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-blue: #0047ab;
-            --text-dark: #1a1a2e;
-            --text-muted: #555;
-            --bg-light: #f8f9ff;
-            --border: #e2e8f0;
+            --blue: #1C5FEA;
+            --blue-mid: #1a52cc;
+            --blue-tint: rgba(28, 95, 234, 0.08);
+            --blue-tint2: rgba(28, 95, 234, 0.04);
+            --navy: #0C233E;
+            --text-primary: #0A1424;
+            --text-secondary: #6B7280;
+            --text-muted: #9CA3AF;
+            --border: #DDE1ED;
+            --border-blue: rgba(28, 95, 234, 0.18);
+            --card-bg: #ffffff;
+            --bg: #F8F9FB;
+            --shadow-sm: 0 1px 3px rgba(12,35,62,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 16px rgba(12,35,62,0.08), 0 2px 6px rgba(0,0,0,0.04);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { overflow-x: hidden; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #fff;
-            color: var(--text-dark);
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
             line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            padding-bottom: 42px;
         }
 
+        /* ── Navbar ── */
         .navbar {
-            background: #fff;
-            border-bottom: 1px solid var(--border);
-            padding: 16px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            background: #ffffff;
+            box-shadow: 0 2px 12px rgba(12,35,62,0.05);
+            padding: 0.85rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
         }
-
-        .navbar .logo {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--primary-blue);
-            text-decoration: none;
-            letter-spacing: -0.5px;
+        .container { max-width: 1360px; margin: 0 auto; padding: 0 1.5rem; }
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
         }
-
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--navy);
+            flex-shrink: 0;
+        }
+        .logo img { height: 36px; width: auto; max-width: 180px; }
         .nav-links {
             display: flex;
-            gap: 28px;
+            align-items: center;
+            gap: 0.25rem;
+            margin-left: auto;
         }
-
-        .nav-links a {
-            color: var(--text-muted);
+        .nav-link {
+            color: var(--text-secondary);
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.2s;
+            font-size: 0.9rem;
+            font-weight: 400;
+            padding: 0.45rem 1rem;
+            border-radius: 8px;
+            transition: color 0.15s, background 0.15s;
+            white-space: nowrap;
         }
-
-        .nav-links a:hover { color: var(--primary-blue); }
-
-        .hero {
-            background: linear-gradient(135deg, #0047ab 0%, #1e3a8a 100%);
+        .nav-link:hover { color: var(--navy); background: rgba(12,35,62,0.06); }
+        .nav-link.active { color: var(--blue); font-weight: 600; }
+        .nav-right { display: flex; align-items: center; margin-left: 1.5rem; }
+        .btn-cta {
+            background: var(--blue);
             color: #fff;
-            padding: 80px 24px 64px;
+            border: none;
+            padding: 0.55rem 1.2rem;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: inherit;
+            box-shadow: 0 4px 12px rgba(28,95,234,0.3);
+            transition: opacity 0.15s;
+            white-space: nowrap;
+        }
+        .btn-cta:hover { opacity: 0.88; }
+        @media (max-width: 760px) { .nav-links { display: none; } }
+
+        /* ── Page Hero ── */
+        .page-hero {
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            padding: 4rem 0 3rem;
             text-align: center;
         }
-
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
+        .page-hero h1 {
+            font-size: clamp(1.9rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
         }
-
-        .hero p {
-            font-size: 1.15rem;
-            opacity: 0.88;
-            max-width: 620px;
+        .page-hero p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 560px;
             margin: 0 auto;
+            font-weight: 400;
         }
 
+        /* ── Stat strip ── */
         .stat-strip {
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+        }
+        .stat-row {
             display: flex;
             justify-content: center;
-            gap: 48px;
-            background: var(--bg-light);
-            border-bottom: 1px solid var(--border);
-            padding: 32px 24px;
+            gap: 4rem;
             flex-wrap: wrap;
         }
-
-        .stat {
-            text-align: center;
-        }
-
+        .stat { text-align: center; }
         .stat-number {
-            font-size: 2.4rem;
-            font-weight: 800;
-            color: var(--primary-blue);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--blue);
             line-height: 1;
+            letter-spacing: -0.02em;
         }
-
         .stat-label {
-            font-size: 0.8rem;
+            font-size: 0.72rem;
             color: var(--text-muted);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-top: 6px;
+            letter-spacing: 0.08em;
+            margin-top: 4px;
+            font-weight: 500;
         }
+        @media (max-width: 500px) { .stat-row { gap: 2rem; } }
 
-        .main {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 64px 24px;
-        }
+        /* ── Content ── */
+        .content { padding: 3.5rem 0 5rem; }
+        .content-inner { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
 
-        .section {
-            margin-bottom: 56px;
-        }
-
+        .section { margin-bottom: 3rem; }
         .section h2 {
-            font-size: 1.35rem;
+            font-size: 1.2rem;
             font-weight: 700;
-            color: var(--primary-blue);
-            margin-bottom: 16px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--bg-light);
+            color: var(--navy);
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
         }
-
         .section p {
-            color: var(--text-muted);
-            margin-bottom: 14px;
-        }
-
-        .section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .section ul li {
-            color: var(--text-muted);
-            padding: 8px 0 8px 20px;
-            border-bottom: 1px solid var(--bg-light);
-            position: relative;
+            color: var(--text-secondary);
+            margin-bottom: 0.9rem;
             font-size: 0.95rem;
         }
+        .section p:last-child { margin-bottom: 0; }
 
-        .section ul li::before {
+        .check-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
+        .check-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.7rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--bg);
+        }
+        .check-list li:last-child { border-bottom: none; }
+        .check-list li::before {
             content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--primary-blue);
+            color: var(--blue);
             font-weight: 600;
+            flex-shrink: 0;
+            margin-top: 1px;
         }
 
-        .level-grid {
+        .source-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin-top: 16px;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-top: 1rem;
         }
-
-        .level-card {
-            background: var(--bg-light);
+        @media (max-width: 500px) { .source-grid { grid-template-columns: 1fr; } }
+        .source-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
             border-radius: 10px;
-            padding: 18px;
-            border-left: 4px solid transparent;
+            padding: 0.85rem 1.1rem;
         }
-
-        .level-card.critical { border-color: #dc2626; }
-        .level-card.high { border-color: #d97706; }
-        .level-card.low { border-color: #2563eb; }
-
-        .level-badge {
-            display: inline-block;
-            padding: 2px 10px;
-            border-radius: 20px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            margin-bottom: 8px;
-        }
-
-        .level-card.critical .level-badge { background: #fef2f2; color: #dc2626; }
-        .level-card.high .level-badge { background: #fffbeb; color: #d97706; }
-        .level-card.low .level-badge { background: #eff6ff; color: #2563eb; }
-
-        .level-card p {
+        .source-card strong {
+            display: block;
             font-size: 0.85rem;
-            color: var(--text-muted);
-            margin: 0;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.2rem;
         }
+        .source-card span { font-size: 0.82rem; color: var(--text-secondary); }
 
+        /* ── CTA box ── */
         .cta-box {
-            background: linear-gradient(135deg, #0047ab 0%, #1e3a8a 100%);
-            color: #fff;
+            background: linear-gradient(135deg, var(--navy), var(--blue));
             border-radius: 16px;
-            padding: 40px;
+            padding: 3rem 2rem;
             text-align: center;
+            margin-top: 3rem;
         }
-
         .cta-box h2 {
             font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 12px;
             color: #fff;
-            border: none;
-            padding: 0;
+            margin-bottom: 0.75rem;
         }
-
         .cta-box p {
-            color: rgba(255,255,255,0.85);
-            margin-bottom: 24px;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1.75rem;
+            font-size: 0.95rem;
         }
-
         .cta-buttons {
             display: flex;
-            gap: 12px;
+            gap: 0.75rem;
             justify-content: center;
             flex-wrap: wrap;
         }
-
-        .btn-primary {
+        .btn-white {
             background: #fff;
-            color: var(--primary-blue);
-            padding: 12px 28px;
-            border-radius: 8px;
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: opacity 0.2s;
-        }
-
-        .btn-primary:hover { opacity: 0.9; }
-
-        .btn-secondary {
-            background: rgba(255,255,255,0.15);
-            color: #fff;
-            padding: 12px 28px;
-            border-radius: 8px;
+            color: var(--blue);
+            padding: 0.7rem 1.6rem;
+            border-radius: 100px;
             font-weight: 600;
             text-decoration: none;
             font-size: 0.9rem;
-            border: 1px solid rgba(255,255,255,0.3);
-            transition: background 0.2s;
+            transition: opacity 0.15s;
         }
-
-        .btn-secondary:hover { background: rgba(255,255,255,0.25); }
-
-        footer {
-            background: var(--bg-light);
-            border-top: 1px solid var(--border);
-            padding: 32px 24px;
-            text-align: center;
-            font-size: 0.82rem;
-            color: var(--text-muted);
+        .btn-white:hover { opacity: 0.9; }
+        .btn-ghost {
+            background: rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.9);
+            padding: 0.7rem 1.6rem;
+            border-radius: 100px;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.25);
+            transition: background 0.15s;
         }
+        .btn-ghost:hover { background: rgba(255,255,255,0.2); }
 
-        footer a { color: var(--primary-blue); text-decoration: none; margin: 0 8px; }
-        footer a:hover { text-decoration: underline; }
-
+        /* ── Footer trust strip ── */
+        .footer-trust {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 90;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--navy);
+            padding: 0.6rem 1rem;
+            gap: 0;
+        }
+        .footer-trust-copy {
+            color: rgba(255,255,255,0.3);
+            font-size: 0.72rem;
+            font-weight: 400;
+            padding: 0.2rem 1.1rem 0.2rem 0;
+            margin-right: 0.5rem;
+            border-right: 1px solid rgba(255,255,255,0.12);
+        }
+        .footer-trust-link {
+            color: rgba(255,255,255,0.55);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 400;
+            padding: 0.2rem 1rem;
+            border-right: 1px solid rgba(255,255,255,0.12);
+            transition: color 0.15s;
+            white-space: nowrap;
+        }
+        .footer-trust-link:last-child { border-right: none; }
+        .footer-trust-link:hover { color: rgba(255,255,255,0.9); }
         @media (max-width: 600px) {
-            .stat-strip { gap: 24px; }
-            .cta-box { padding: 28px 20px; }
+            .footer-trust-copy { display: none; }
+            .footer-trust-link { padding: 0.2rem 0.6rem; font-size: 0.68rem; }
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="index.html" class="logo">ArtSiren</a>
-        <div class="nav-links">
-            <a href="about.html">About</a>
-            <a href="sources.html">Sources</a>
-            <a href="how-it-works.html">How It Works</a>
-            <a href="mailto:contact@artsiren.co">Contact</a>
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <img src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/4ebf28762_fulllogo2.png" alt="ArtSiren" onerror="this.style.display='none'">
+            </a>
+            <div class="nav-links">
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="sources.html" class="nav-link">Sources</a>
+                <a href="how-it-works.html" class="nav-link">How It Works</a>
+                <a href="mailto:contact@artsiren.co" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-right">
+                <a href="boycott-siren-extension.zip" download onclick="gtag('event','extension_download');" class="btn-cta">Get Browser Alerts</a>
+            </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <div class="hero">
+<div class="page-hero">
+    <div class="container">
         <h1>Know before you go</h1>
-        <p>ArtSiren is a source-backed cultural transparency tool — documenting publicly available information about artists' stances, with verified sources from mainstream media.</p>
-        <p style="font-size: 0.85rem; opacity: 0.6; margin-top: 0.5rem;">294+ documented artists &nbsp;·&nbsp; Last updated: May 20, 2026</p>
+        <p>ArtSiren surfaces publicly documented information about artists' stances — sourced from mainstream media, so you can make informed choices.</p>
     </div>
+</div>
 
-    <div class="stat-strip">
-        <div class="stat">
-            <div class="stat-number">294</div>
-            <div class="stat-label">Artists tracked</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number">100%</div>
-            <div class="stat-label">Source-verified</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number">50+</div>
-            <div class="stat-label">Ticket sites covered</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number">0</div>
-            <div class="stat-label">Data collected</div>
+<div class="stat-strip">
+    <div class="container">
+        <div class="stat-row">
+            <div class="stat">
+                <div class="stat-number">294+</div>
+                <div class="stat-label">Artists tracked</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Source-verified</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Ticket sites covered</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Data collected</div>
+            </div>
         </div>
     </div>
+</div>
 
-    <div class="main">
+<div class="content">
+    <div class="content-inner">
 
         <div class="section">
             <h2>Why ArtSiren exists</h2>
             <p>When you buy a concert ticket or stream music, you're making a financial choice that benefits an artist. You deserve to know — before you pay — whether that artist has publicly called for a boycott of Israel.</p>
-            <p>This isn't about politics. It's about transparency. Every artist in our database has voluntarily made a public statement, signed an open letter, or cancelled a show in solidarity with the boycott movement. We document it. You decide.</p>
+            <p>This isn't about politics. It's about transparency. Every artist in our tool has voluntarily made a public statement, signed an open letter, or cancelled a show in solidarity with the boycott movement. We document it. You decide.</p>
         </div>
 
         <div class="section">
             <h2>How we verify</h2>
             <p>Every entry is sourced from reputable, mainstream publishers. We don't cite fringe blogs or unverifiable social posts.</p>
-            <ul>
-                <li>Major outlets: Rolling Stone, Billboard, NME, The Guardian, Al Jazeera, BBC</li>
-                <li>Official artist statements and press releases</li>
-                <li>Open letters with named signatories (Musicians for Palestine, Film Workers for Palestine, etc.)</li>
-                <li>Confirmed concert cancellations reported in the press</li>
-            </ul>
-            <p style="margin-top:16px;">Each artist card links directly to the original source so you can verify everything independently.</p>
-        </div>
-
-        <div class="section">
-            <h2>Alert levels</h2>
-            <p>Artists are classified by the strength of their position, not our interpretation of it.</p>
-            <div class="level-grid">
-                <div class="level-card critical">
-                    <span class="level-badge">CRITICAL</span>
-                    <p>Publicly called to boycott Israel, signed a formal boycott pledge, or cancelled shows specifically in solidarity.</p>
+            <div class="source-grid">
+                <div class="source-card">
+                    <strong>Mainstream media</strong>
+                    <span>Rolling Stone, Billboard, NME, The Guardian, BBC, Al Jazeera</span>
                 </div>
-                <div class="level-card high">
-                    <span class="level-badge">HIGH</span>
-                    <p>Expressed strong solidarity with the boycott movement or signed relevant open letters.</p>
+                <div class="source-card">
+                    <strong>Official statements</strong>
+                    <span>Artist-authored posts, interviews, and official press releases</span>
                 </div>
-                <div class="level-card low">
-                    <span class="level-badge">LOW</span>
-                    <p>Made public statements in support of Palestinian rights, without explicitly joining a boycott.</p>
+                <div class="source-card">
+                    <strong>Open letters</strong>
+                    <span>Named signatories — Musicians for Palestine, Film Workers for Palestine, etc.</span>
+                </div>
+                <div class="source-card">
+                    <strong>Confirmed cancellations</strong>
+                    <span>Concert cancellations reported in the press with a stated reason</span>
                 </div>
             </div>
+            <p style="margin-top:1rem;">Each artist card links directly to the original source so you can verify everything independently.</p>
         </div>
 
         <div class="section">
             <h2>Privacy first</h2>
             <p>The Chrome extension works entirely inside your browser. No data is ever collected, transmitted, or stored. We don't know who you are, what sites you visit, or which artists you look up.</p>
-            <p>The website has no tracking, no analytics cookies, and no third-party scripts that profile you. Our <a href="privacy.html" style="color:var(--primary-blue);">privacy policy</a> is one page and says exactly that.</p>
+            <p>The website has no tracking cookies and no third-party scripts that profile you. Our <a href="privacy.html" style="color:var(--blue);font-weight:500;">privacy policy</a> says exactly that.</p>
         </div>
 
         <div class="section">
             <h2>Corrections & contact</h2>
-            <p>We take accuracy seriously. If any information is incorrect or outdated, contact us with a source and we'll update or remove the entry promptly.</p>
-            <ul>
-                <li>Email: <a href="mailto:contact@artsiren.co" style="color:var(--primary-blue);">contact@artsiren.co</a></li>
+            <ul class="check-list">
+                <li>Email us at <a href="mailto:contact@artsiren.co" style="color:var(--blue);font-weight:500;">contact@artsiren.co</a> with a source and we'll update or remove the entry promptly</li>
                 <li>We do not remove verified artists without evidence of a retraction</li>
                 <li>Artists who have publicly reversed their position are reclassified, not silently deleted</li>
             </ul>
@@ -380,24 +422,23 @@
 
         <div class="cta-box">
             <h2>Start using ArtSiren</h2>
-            <p>Browse the full database on the website, or install the Chrome extension for automatic alerts while you buy tickets.</p>
+            <p>Browse artists on the website, or install the Chrome extension for automatic alerts while you buy tickets.</p>
             <div class="cta-buttons">
-                <a href="index.html" class="btn-primary">Browse Artists</a>
-                <a href="extension.html" class="btn-secondary">Get the Extension</a>
+                <a href="index.html" class="btn-white">Browse Artists</a>
+                <a href="extension.html" class="btn-ghost">Get the Extension</a>
             </div>
         </div>
 
     </div>
+</div>
 
-    <footer>
-        <p>&copy; 2026 ArtSiren &nbsp;·&nbsp;
-           <a href="index.html">Artists</a>
-           <a href="extension.html">Extension</a>
-           <a href="terms.html">Terms</a>
-           <a href="privacy.html">Privacy</a>
-           <a href="mailto:contact@artsiren.co">Contact</a>
-        </p>
-    </footer>
+<div class="footer-trust">
+    <span class="footer-trust-copy">© 2026 ArtSiren</span>
+    <a href="about.html" class="footer-trust-link">About</a>
+    <a href="terms.html" class="footer-trust-link">Terms of Use</a>
+    <a href="privacy.html" class="footer-trust-link">Privacy Policy</a>
+    <a href="mailto:contact@artsiren.co" class="footer-trust-link">Contact</a>
+</div>
 
 </body>
 </html>
