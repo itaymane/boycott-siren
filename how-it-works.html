@@ -33,21 +33,25 @@
 
     <style>
         :root {
-            --navy:      #0C233E;
-            --blue:      #0047ab;
-            --blue-mid:  #1a5cc8;
-            --electric:  #1C5FEA;
-            --blue-tint: #e8f2ff;
-            --blue-tint2:#f0f6ff;
-            --text:      #0d1117;
-            --text-sec:  #4a5568;
-            --text-muted:#718096;
-            --border:    #e2e8f0;
-            --card:      #ffffff;
-            --bg:        #f5f8ff;
+            --navy:        #0C233E;
+            --text-dark:   #0A1424;
+            --coral:       #F44634;
+            --electric:    #1C5FEA;
+            --off-white:   #F8F9FB;
+            --light-green: #DDE1ED;
+            --blue:        #0047ab;
+            --blue-mid:    #1a5cc8;
+            --blue-tint:   #e8f2ff;
+            --blue-tint2:  #eef3fb;
+            --text:        #0A1424;
+            --text-sec:    #4a5568;
+            --text-muted:  #718096;
+            --border:      #DDE1ED;
+            --card:        #ffffff;
+            --bg:          #F8F9FB;
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-            --shadow-md: 0 4px 20px rgba(0,71,171,0.09), 0 2px 6px rgba(0,0,0,0.04);
-            --shadow-lg: 0 12px 40px rgba(0,71,171,0.14), 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 20px rgba(12,35,62,0.08), 0 2px 6px rgba(0,0,0,0.04);
+            --shadow-lg: 0 12px 40px rgba(12,35,62,0.13), 0 4px 12px rgba(0,0,0,0.06);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -146,7 +150,7 @@
             line-height: 1.1;
             margin-bottom: 1.25rem;
         }
-        .hero h1 span { color: #60a5fa; }
+        .hero h1 span { color: #5b9cf6; }
         .hero-sub {
             font-size: 1.1rem;
             color: rgba(255,255,255,0.68);
@@ -455,15 +459,14 @@
         .ext-mock-name { font-weight: 600; font-size: 0.8rem; color: #111; }
         .ext-mock-venue { font-size: 0.68rem; color: #888; }
         .ext-alert-badge {
-            background: #fef2f2;
-            color: #dc2626;
+            background: rgba(244,70,52,0.1);
+            color: #F44634;
             font-size: 0.62rem;
-            font-weight: 700;
+            font-weight: 600;
             padding: 0.2rem 0.5rem;
             border-radius: 5px;
-            letter-spacing: 0.04em;
+            white-space: nowrap;
         }
-        .ext-alert-badge.low { background: #eff6ff; color: #1C5FEA; }
         .ext-mock-banner {
             margin: 0.5rem 0 0;
             background: linear-gradient(90deg, #0C233E, #1a5cc8);
@@ -540,13 +543,13 @@
         .mobile-artist-cat { font-size: 0.52rem; color: var(--text-muted); }
         .mobile-badge {
             margin-left: auto;
-            font-size: 0.5rem;
-            font-weight: 700;
-            padding: 0.15rem 0.35rem;
-            border-radius: 4px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--coral);
+            flex-shrink: 0;
         }
-        .mobile-badge.critical { background: #fef2f2; color: #dc2626; }
-        .mobile-badge.low { background: #eff6ff; color: var(--electric); }
+        .mobile-badge.low { background: var(--electric); }
 
         /* ── Sources ── */
         .sources-section {
@@ -784,10 +787,6 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div class="hero-eyebrow">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            Transparent by design
-        </div>
         <h1>From trusted sources<br><span>to your decision</span></h1>
         <p class="hero-sub">
             We collect verified information from reputable news outlets, map each artist's public stance, and deliver that transparency exactly when you need it — before you buy a ticket, stream, or show up.
@@ -841,7 +840,7 @@
                     </div>
                     <h3>We map</h3>
                     <p>Every entry is verified, sourced, and classified by the strength of the artist's position — not our opinion of it. We link directly to the original source so you can read it yourself and verify everything independently.</p>
-                    <span class="step-tag">Critical · High · Low — classified by evidence</span>
+                    <span class="step-tag">Classified by evidence · Linked to source</span>
                 </div>
 
                 <!-- Connector -->
@@ -916,7 +915,7 @@
                                     <div class="ext-mock-name">Roger Waters</div>
                                     <div class="ext-mock-venue">Madison Square Garden</div>
                                 </div>
-                                <div class="ext-alert-badge">CRITICAL</div>
+                                <div class="ext-alert-badge">⚑ Alert</div>
                             </div>
                             <div class="ext-mock-artist-row">
                                 <div class="ext-mock-avatar">DL</div>
@@ -924,7 +923,7 @@
                                     <div class="ext-mock-name">Dua Lipa</div>
                                     <div class="ext-mock-venue">Barclays Center</div>
                                 </div>
-                                <div class="ext-alert-badge">CRITICAL</div>
+                                <div class="ext-alert-badge">⚑ Alert</div>
                             </div>
                             <div class="ext-mock-banner">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
@@ -991,7 +990,7 @@
                                     <div class="mobile-artist-name">Roger Waters</div>
                                     <div class="mobile-artist-cat">Musician</div>
                                 </div>
-                                <span class="mobile-badge critical">CRIT</span>
+                                <span class="mobile-badge"></span>
                             </div>
                             <div class="mobile-artist-row">
                                 <div class="mobile-avatar"></div>
@@ -999,7 +998,7 @@
                                     <div class="mobile-artist-name">Dua Lipa</div>
                                     <div class="mobile-artist-cat">Musician</div>
                                 </div>
-                                <span class="mobile-badge critical">CRIT</span>
+                                <span class="mobile-badge"></span>
                             </div>
                             <div class="mobile-artist-row">
                                 <div class="mobile-avatar"></div>
@@ -1007,7 +1006,7 @@
                                     <div class="mobile-artist-name">Patti Smith</div>
                                     <div class="mobile-artist-cat">Musician</div>
                                 </div>
-                                <span class="mobile-badge critical">CRIT</span>
+                                <span class="mobile-badge"></span>
                             </div>
                             <div class="mobile-artist-row">
                                 <div class="mobile-avatar"></div>
@@ -1015,7 +1014,7 @@
                                     <div class="mobile-artist-name">Brian Eno</div>
                                     <div class="mobile-artist-cat">Musician</div>
                                 </div>
-                                <span class="mobile-badge low">LOW</span>
+                                <span class="mobile-badge low"></span>
                             </div>
                         </div>
                     </div>
