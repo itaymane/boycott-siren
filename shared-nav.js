@@ -106,7 +106,7 @@
   var MAKE_HOOK = 'https://hook.us2.make.com/5juuuyrvf37yi2wgr86igjg4q373h37z';
 
   var navbarHTML = '<nav class="sn-navbar" id="sn-navbar"><div class="sn-container"><div class="sn-nav-content">'
-    + '<a href="/index.html" class="sn-logo"><img src="' + LOGO + '" alt="ArtSiren" onerror="this.style.display=\'none\'"></a>'
+    + '<a href="/" class="sn-logo"><img src="' + LOGO + '" alt="ArtSiren" onerror="this.style.display=\'none\'"></a>'
     + '<div class="sn-nav-links">'
     + link('/about.html', 'About', 'about')
     + link('/sources.html', 'Sources', 'sources')
