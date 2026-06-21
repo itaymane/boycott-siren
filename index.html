@@ -1682,7 +1682,7 @@
         /* ── Sticky search strip ── */
         .sticky-search-strip {
             position: fixed;
-            top: 62px;
+            top: 0;
             left: 0;
             right: 0;
             z-index: 95;
@@ -1690,16 +1690,13 @@
             border-bottom: 1px solid var(--border);
             padding: 0.55rem 1rem;
             box-shadow: 0 4px 16px rgba(12,35,62,0.07);
-            transform: translateY(-120%);
+            transform: translateY(-200%);
             transition: transform 0.22s cubic-bezier(.4,0,.2,1);
         }
         .sticky-search-strip.visible { transform: translateY(0); }
         .sticky-search-inner {
             max-width: 680px;
             margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 0.4rem;
         }
         .sticky-search-box { position: relative; }
         .sticky-search-icon {
@@ -1728,17 +1725,6 @@
             border-color: var(--blue);
             box-shadow: 0 0 0 3px rgba(28,95,234,0.1);
             background: white;
-        }
-        .sticky-filter-row {
-            display: flex;
-            gap: 0.35rem;
-            overflow-x: auto;
-            scrollbar-width: none;
-            -webkit-overflow-scrolling: touch;
-        }
-        .sticky-filter-row::-webkit-scrollbar { display: none; }
-        @media (max-width: 640px) {
-            .sticky-search-strip { top: 47px; }
         }
 
         @media (max-width: 640px) {
@@ -2070,15 +2056,6 @@
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 </span>
                 <input type="text" class="sticky-search-input" id="stickySearchInput" placeholder="Search an artist…" autocomplete="off">
-            </div>
-            <div class="sticky-filter-row" id="stickyFilterRow">
-                <button class="sticky-f-tab f-tab active" data-type="all">All</button>
-                <button class="sticky-f-tab f-tab" data-type="stance" data-stance="BOYCOTTER">Declining</button>
-                <button class="sticky-f-tab f-tab" data-type="stance" data-stance="WELCOMES_ALL">Welcomes All</button>
-                <button class="sticky-f-tab f-tab" data-type="cat" data-filter="musician">Musicians</button>
-                <button class="sticky-f-tab f-tab" data-type="cat" data-filter="actor">Actors</button>
-                <button class="sticky-f-tab f-tab" data-type="cat" data-filter="director">Directors</button>
-                <button class="sticky-f-tab f-tab" data-type="cat" data-filter="other">Writers</button>
             </div>
         </div>
     </div>
@@ -3127,7 +3104,15 @@
             var stickyInput = document.getElementById('stickySearchInput');
             var mainInput = document.getElementById('searchInput');
             var heroSearch = document.querySelector('.search-box');
+            var navbar = document.querySelector('.navbar');
             if (!strip || !stickyInput || !mainInput) return;
+
+            // Position strip flush against bottom of sticky navbar
+            function positionStrip() {
+                strip.style.top = (navbar ? navbar.offsetHeight : 62) + 'px';
+            }
+            positionStrip();
+            window.addEventListener('resize', positionStrip);
 
             // Two-way sync between sticky and main search inputs
             stickyInput.addEventListener('input', function () {
@@ -3138,40 +3123,12 @@
                 if (document.activeElement !== stickyInput) stickyInput.value = mainInput.value;
             });
 
-            // Show/hide strip
+            // Show/hide strip when hero search box leaves viewport
             if ('IntersectionObserver' in window && heroSearch) {
                 new IntersectionObserver(function (entries) {
                     strip.classList.toggle('visible', !entries[0].isIntersecting);
                 }, { threshold: 0 }).observe(heroSearch);
             }
-
-            // Sticky filter tabs — the existing .f-tab handler already runs the filter.
-            // These listeners only sync active state between hero and sticky groups.
-            var stickyTabs = document.querySelectorAll('#stickyFilterRow .sticky-f-tab');
-            var heroTabs = document.querySelectorAll('#filterTabsRow .f-tab');
-
-            function tabKey(t) {
-                return (t.dataset.type || '') + '|' + (t.dataset.stance || '') + '|' + (t.dataset.filter || '');
-            }
-
-            stickyTabs.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    // Existing .f-tab handler already set this btn active and ran the filter.
-                    // Sync the matching hero tab.
-                    heroTabs.forEach(function (h) {
-                        h.classList.toggle('active', tabKey(h) === tabKey(btn));
-                    });
-                });
-            });
-
-            heroTabs.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    // Sync matching sticky tab.
-                    stickyTabs.forEach(function (t) {
-                        t.classList.toggle('active', tabKey(t) === tabKey(btn));
-                    });
-                });
-            });
         })();
 
         function showIOSInstallSheet() {
