@@ -13,18 +13,27 @@
     return;
   }
 
-  // ── FOUC guard: hide body until nav is injected ──
+  // ── FOUC guard: hide body until nav + font are ready ──
   var foucStyle = document.createElement('style');
   foucStyle.id = 'sn-fouc';
-  foucStyle.textContent = 'body{visibility:hidden!important}';
+  foucStyle.textContent = 'body{visibility:hidden!important}html{overflow-y:scroll}';
   document.head.appendChild(foucStyle);
 
   // ── Poppins font (skip if already loaded) ──
   if (!document.querySelector('link[href*="Poppins"]')) {
     var fontLink = document.createElement('link');
-    fontLink.rel = 'stylesheet';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap';
+    fontLink.rel = 'preconnect';
+    fontLink.href = 'https://fonts.googleapis.com';
     document.head.appendChild(fontLink);
+    var fontLink2 = document.createElement('link');
+    fontLink2.rel = 'preconnect';
+    fontLink2.href = 'https://fonts.gstatic.com';
+    fontLink2.crossOrigin = 'anonymous';
+    document.head.appendChild(fontLink2);
+    var fontLink3 = document.createElement('link');
+    fontLink3.rel = 'stylesheet';
+    fontLink3.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap';
+    document.head.appendChild(fontLink3);
   }
 
   // ── All styles (sn- prefixed to avoid conflicts) ──
@@ -60,6 +69,7 @@
     '.sn-footer-link:last-child{border-right:none;}',
     '.sn-footer-link:hover{color:rgba(255,255,255,0.9);}',
     '@media(max-width:600px){.sn-footer-copy{display:none!important;}.sn-footer-link{padding:0.2rem 0.6rem;font-size:0.68rem;}}',
+    'html{overflow-y:scroll}',
     'body{padding-bottom:42px;}',
 
     /* Contact modal */
@@ -171,10 +181,17 @@
     // Inject modal + footer at end of body
     document.body.insertAdjacentHTML('beforeend', modalHTML + footerHTML);
 
-    // Reveal body
-    var guard = document.getElementById('sn-fouc');
-    if (guard) guard.remove();
-    document.body.style.visibility = '';
+    // Reveal body — wait for Poppins so nav never flickers between fonts
+    function revealBody() {
+      var guard = document.getElementById('sn-fouc');
+      if (guard) guard.remove();
+      document.body.style.visibility = '';
+    }
+    if (document.fonts && document.fonts.load) {
+      document.fonts.load('600 16px Poppins').then(revealBody, revealBody);
+    } else {
+      revealBody();
+    }
   });
 
   // ── Contact functions ──
