@@ -12,62 +12,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-    <title>How ArtSiren Works | Transparency Before You Buy</title>
-    <meta name="description" content="ArtSiren collects verified information from trusted news sources, maps each artist's public stance, and delivers real-time alerts so you can decide who to support.">
+    <title>How ArtSiren Works | Transparency Before You Buy or Stream</title>
+    <meta name="description" content="ArtSiren collects verified information from trusted news outlets, maps each artist's public stance, and delivers real-time alerts — so you can make informed choices.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://artsiren.co/how-it-works.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://artsiren.co/how-it-works.html">
-    <meta property="og:title" content="How ArtSiren Works | Transparency Before You Buy">
+    <meta property="og:title" content="How ArtSiren Works | Transparency Before You Buy or Stream">
     <meta property="og:description" content="We collect verified information from trusted sources, map each artist's public stance, and deliver real-time alerts — so you can decide who to support.">
     <meta property="og:image" content="https://media.base44.com/images/public/user_699371e71a86c722ff3edc0b/ec507a643_01.png">
     <meta property="og:site_name" content="ArtSiren">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="How ArtSiren Works">
-    <meta name="twitter:description" content="Verified data. Mapped artists. Real-time alerts. Know before you go.">
+    <meta name="twitter:description" content="Verified sources. Mapped artists. Real-time alerts. Know before you go.">
     <meta name="twitter:image" content="https://media.base44.com/images/public/user_699371e71a86c722ff3edc0b/ec507a643_01.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
     <style>
+        /* ── Design tokens — exact match to index.html ── */
         :root {
-            --navy:        #0C233E;
-            --text-dark:   #0A1424;
-            --coral:       #F44634;
-            --electric:    #1C5FEA;
-            --off-white:   #F8F9FB;
-            --light-green: #DDE1ED;
             --blue:        #0047ab;
             --blue-mid:    #1a5cc8;
+            --blue-light:  #4a90e2;
             --blue-tint:   #e8f2ff;
-            --blue-tint2:  #eef3fb;
-            --text:        #0A1424;
-            --text-sec:    #4a5568;
-            --text-muted:  #718096;
-            --border:      #DDE1ED;
-            --card:        #ffffff;
-            --bg:          #F8F9FB;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-            --shadow-md: 0 4px 20px rgba(12,35,62,0.08), 0 2px 6px rgba(0,0,0,0.04);
-            --shadow-lg: 0 12px 40px rgba(12,35,62,0.13), 0 4px 12px rgba(0,0,0,0.06);
+            --blue-tint2:  #f0f6ff;
+            --navy:        #0C233E;
+            --coral:       #F44634;
+            --text-primary:   #0d1117;
+            --text-secondary: #4a5568;
+            --text-muted:     #718096;
+            --border:      #e2e8f0;
+            --border-blue: rgba(0,71,171,0.15);
+            --card-bg:     #ffffff;
+            --bg:          #f5f8ff;
+            --radius-sm:   8px;
+            --radius-md:   14px;
+            --radius-lg:   20px;
+            --radius-xl:   28px;
+            --shadow-sm:   0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md:   0 4px 16px rgba(0,71,171,0.08), 0 2px 6px rgba(0,0,0,0.04);
+            --shadow-lg:   0 12px 40px rgba(0,71,171,0.15), 0 4px 12px rgba(0,0,0,0.06);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { overflow-x: hidden; scroll-behavior: smooth; }
+        html { overflow-x: hidden; }
 
         body {
-            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: var(--bg);
-            color: var(--text);
+            color: var(--text-primary);
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
         }
 
-        /* ── Navbar ── */
+        /* ── Navbar — identical to index.html ── */
         .navbar {
-            background: rgba(255,255,255,0.96);
+            background: rgba(255,255,255,0.95);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             padding: 0.85rem 0;
@@ -76,325 +76,298 @@
             z-index: 100;
             box-shadow: 0 2px 16px rgba(12,35,62,0.06);
         }
-        .container { max-width: 1160px; margin: 0 auto; padding: 0 1.5rem; }
-        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .container { max-width: 1360px; margin: 0 auto; padding: 0 1.5rem; }
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
         .logo {
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--blue);
             text-decoration: none;
+            letter-spacing: -0.02em;
         }
-        .logo img { height: 32px; width: auto; }
-        .nav-links { display: flex; gap: 0.25rem; align-items: center; }
+        .logo img { width: 40px; height: 40px; object-fit: contain; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            margin-left: auto;
+        }
         .nav-link {
-            color: var(--text-sec);
+            color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.875rem;
-            font-weight: 500;
-            padding: 0.4rem 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 400;
+            padding: 0.45rem 1rem;
             border-radius: 8px;
             transition: color 0.15s, background 0.15s;
-        }
-        .nav-link:hover { color: var(--blue); background: var(--blue-tint); }
-        .nav-link.active { color: var(--blue); font-weight: 600; }
-        .btn-nav-cta {
-            background: #fff;
-            color: var(--navy);
-            text-decoration: none;
-            font-size: 0.82rem;
-            font-weight: 600;
-            padding: 0.45rem 1rem;
-            border-radius: 100px;
-            border: 1.5px solid var(--border);
-            transition: border-color 0.15s, color 0.15s;
             white-space: nowrap;
         }
-        .btn-nav-cta:hover { border-color: var(--electric); color: var(--electric); }
+        .nav-link:hover { color: var(--navy); background: rgba(12,35,62,0.06); }
+        .nav-link.active { color: var(--blue); font-weight: 600; }
+        .nav-right { display: flex; align-items: center; gap: 1rem; margin-left: 1.5rem; }
+        .nav-cta-btn {
+            background: linear-gradient(135deg, #0047ab, #4a90e2);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,71,171,0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+            white-space: nowrap;
+        }
+        .nav-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,71,171,0.4); }
+        @media (max-width: 760px) { .nav-links { display: none; } }
+        @media (max-width: 540px) { .nav-right { display: none; } }
 
-        /* ── Hero ── */
-        .hero {
-            background: var(--navy);
-            padding: 5rem 1.5rem 4.5rem;
+        /* ── Page sections ── */
+        .page-hero {
+            background: white;
+            padding: 4rem 0 3rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            border-bottom: 1px solid var(--border);
         }
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(ellipse 60% 50% at 20% 50%, rgba(28,95,234,0.18) 0%, transparent 70%),
-                radial-gradient(ellipse 50% 60% at 80% 30%, rgba(0,71,171,0.22) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .hero-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(28,95,234,0.2);
-            border: 1px solid rgba(28,95,234,0.35);
-            color: rgba(255,255,255,0.85);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            padding: 0.35rem 0.9rem;
-            border-radius: 20px;
-            margin-bottom: 1.5rem;
-        }
-        .hero h1 {
-            font-size: clamp(2.2rem, 5vw, 3.5rem);
-            font-weight: 800;
-            color: #fff;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-            margin-bottom: 1.25rem;
-        }
-        .hero h1 span { color: #5b9cf6; }
-        .hero-sub {
-            font-size: 1.1rem;
-            color: rgba(255,255,255,0.68);
-            max-width: 560px;
-            margin: 0 auto 2.5rem;
-            line-height: 1.7;
-            font-weight: 400;
-        }
-        .hero-pills {
-            display: flex;
-            gap: 0.75rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .hero-pill {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.14);
-            color: rgba(255,255,255,0.78);
-            font-size: 0.82rem;
-            font-weight: 500;
-            padding: 0.45rem 1rem;
-            border-radius: 20px;
-        }
-        .hero-pill svg { opacity: 0.7; }
-
-        /* ── Section labels ── */
-        .section-label {
+        .page-hero-label {
             display: inline-block;
             font-size: 0.72rem;
             font-weight: 700;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: var(--electric);
-            margin-bottom: 0.6rem;
-        }
-        .section-title {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 700;
-            color: var(--navy);
-            letter-spacing: -0.025em;
-            margin-bottom: 0.75rem;
-            line-height: 1.2;
-        }
-        .section-desc {
-            color: var(--text-sec);
-            font-size: 1rem;
-            line-height: 1.7;
-            max-width: 560px;
-            font-weight: 400;
-        }
-
-        /* ── Steps ── */
-        .steps-section { padding: 5rem 1.5rem; }
-        .steps-header { text-align: center; margin-bottom: 3.5rem; }
-
-        .steps-flow {
-            display: grid;
-            grid-template-columns: 1fr 40px 1fr 40px 1fr;
-            align-items: start;
-            gap: 0;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-        .step-connector {
-            display: flex;
-            align-items: flex-start;
-            padding-top: 2.25rem;
-            justify-content: center;
-        }
-        .step-connector svg { opacity: 0.3; flex-shrink: 0; }
-
-        .step-card {
-            background: var(--card);
+            color: var(--blue);
+            background: var(--blue-tint);
+            padding: 0.3rem 0.85rem;
             border-radius: 20px;
-            padding: 2rem;
-            box-shadow: var(--shadow-md);
-            border: 1px solid rgba(0,71,171,0.07);
-            position: relative;
-            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 1.25rem;
         }
-        .step-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
+        .page-hero h1 {
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.03em;
+            line-height: 1.12;
+            margin-bottom: 1rem;
         }
-        .step-num {
-            font-size: 0.7rem;
+        .page-hero h1 span { color: var(--blue); }
+        .page-hero p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+        .hero-trust-row {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .hero-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+        .hero-trust-item svg { color: var(--blue); flex-shrink: 0; }
+
+        /* ── Card grid shared ── */
+        .section { padding: 4rem 0; }
+        .section-header { text-align: center; margin-bottom: 2.5rem; }
+        .section-eyebrow {
+            display: inline-block;
+            font-size: 0.72rem;
             font-weight: 700;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: var(--electric);
+            color: var(--blue);
+            margin-bottom: 0.5rem;
+        }
+        .section-title {
+            font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.025em;
+            margin-bottom: 0.6rem;
+        }
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        /* ── Steps ── */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .step-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-blue);
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .step-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+        .step-number {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--blue);
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
-        .step-num::before {
+        .step-number::before {
             content: '';
             display: block;
-            width: 20px;
+            width: 18px;
             height: 2px;
-            background: var(--electric);
+            background: var(--blue);
             border-radius: 1px;
         }
-        .step-icon {
-            width: 52px;
-            height: 52px;
+        .step-icon-wrap {
+            width: 48px;
+            height: 48px;
             background: var(--blue-tint);
-            border-radius: 14px;
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.1rem;
             color: var(--blue);
         }
         .step-card h3 {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             font-weight: 700;
-            color: var(--navy);
+            color: var(--text-primary);
             letter-spacing: -0.02em;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.5rem;
         }
         .step-card p {
-            font-size: 0.9rem;
-            color: var(--text-sec);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
             line-height: 1.65;
-            font-weight: 400;
         }
         .step-tag {
             display: inline-block;
-            margin-top: 1.1rem;
+            margin-top: 1rem;
             background: var(--blue-tint2);
             color: var(--blue);
-            font-size: 0.72rem;
+            font-size: 0.7rem;
             font-weight: 600;
-            padding: 0.3rem 0.7rem;
+            padding: 0.25rem 0.65rem;
             border-radius: 6px;
         }
 
         /* ── Products ── */
-        .products-section { padding: 0 1.5rem 5rem; }
-
+        .products-section { padding: 0 0 4rem; }
         .product-block {
-            max-width: 960px;
-            margin: 0 auto 3rem;
-            background: var(--card);
-            border-radius: 24px;
+            background: var(--card-bg);
+            border-radius: var(--radius-xl);
             box-shadow: var(--shadow-md);
-            border: 1px solid rgba(0,71,171,0.07);
+            border: 1px solid var(--border-blue);
             overflow: hidden;
             display: grid;
             grid-template-columns: 1fr 1fr;
+            margin-bottom: 1.5rem;
         }
-        .product-block.reverse { direction: rtl; }
-        .product-block.reverse > * { direction: ltr; }
-
         .product-body {
-            padding: 3rem 2.5rem;
+            padding: 2.75rem 2.5rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
         .product-icon {
-            width: 56px;
-            height: 56px;
+            width: 52px;
+            height: 52px;
             background: var(--navy);
-            border-radius: 16px;
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
             color: #fff;
-            flex-shrink: 0;
         }
         .product-body h2 {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             font-weight: 700;
-            color: var(--navy);
-            letter-spacing: -0.025em;
-            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.6rem;
             line-height: 1.25;
         }
-        .product-body p {
-            color: var(--text-sec);
-            font-size: 0.925rem;
+        .product-body > p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
             line-height: 1.7;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
+            margin-bottom: 1.4rem;
         }
         .feature-list {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 0.6rem;
-            margin-bottom: 2rem;
+            gap: 0.55rem;
+            margin-bottom: 1.75rem;
         }
         .feature-list li {
             display: flex;
             align-items: flex-start;
-            gap: 0.6rem;
+            gap: 0.55rem;
             font-size: 0.875rem;
-            color: var(--text-sec);
-            font-weight: 400;
+            color: var(--text-secondary);
         }
-        .feature-list li svg {
-            color: var(--electric);
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
+        .feature-list li svg { color: var(--blue); flex-shrink: 0; margin-top: 1px; }
         .btn-product {
             display: inline-flex;
             align-items: center;
             gap: 0.45rem;
-            background: #fff;
-            color: var(--navy);
+            background: linear-gradient(135deg, var(--blue), var(--blue-light));
+            color: #fff;
             text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 0.55rem 1.2rem;
-            border-radius: 100px;
-            border: 1.5px solid var(--border);
+            font-size: 0.875rem;
+            font-weight: 700;
+            padding: 0.65rem 1.4rem;
+            border-radius: 30px;
             align-self: flex-start;
-            transition: border-color 0.15s, color 0.15s;
+            box-shadow: 0 4px 12px rgba(0,71,171,0.28);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .btn-product:hover { border-color: var(--electric); color: var(--electric); }
+        .btn-product:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,71,171,0.38); }
         .btn-product-outline {
             display: inline-flex;
             align-items: center;
             gap: 0.45rem;
-            background: #fff;
-            color: var(--navy);
+            background: transparent;
+            color: var(--blue);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.875rem;
             font-weight: 600;
-            padding: 0.55rem 1.2rem;
-            border-radius: 100px;
-            border: 1.5px solid var(--border);
+            padding: 0.65rem 1.4rem;
+            border-radius: 30px;
+            border: 2px solid var(--border-blue);
             align-self: flex-start;
-            transition: border-color 0.15s, color 0.15s;
+            transition: border-color 0.15s, background 0.15s;
         }
-        .btn-product-outline:hover { border-color: var(--electric); color: var(--electric); }
+        .btn-product-outline:hover { border-color: var(--blue); background: var(--blue-tint); }
 
         .product-visual {
             background: var(--bg);
@@ -402,224 +375,163 @@
             align-items: center;
             justify-content: center;
             padding: 2.5rem;
-            min-height: 340px;
+            min-height: 320px;
         }
-        .product-visual.navy { background: var(--navy); }
+        .product-visual.dark { background: var(--navy); }
 
-        /* Extension mock */
-        .ext-mock {
+        /* Extension browser mock */
+        .browser-mock {
             width: 100%;
-            max-width: 300px;
-            background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            max-width: 310px;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
             overflow: hidden;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
         }
-        .ext-mock-bar {
+        .browser-bar {
             background: #f1f3f4;
-            padding: 0.4rem 0.75rem;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 0.45rem 0.75rem;
             display: flex;
             align-items: center;
             gap: 0.4rem;
-            font-size: 0.7rem;
-            color: #444;
-            border-bottom: 1px solid #e0e0e0;
         }
-        .ext-mock-bar-dot { width: 8px; height: 8px; border-radius: 50%; }
-        .ext-mock-bar-url {
+        .browser-dot { width: 8px; height: 8px; border-radius: 50%; }
+        .browser-url {
             flex: 1;
-            background: #fff;
+            background: white;
             border-radius: 4px;
-            padding: 0.2rem 0.5rem;
-            font-size: 0.68rem;
-            color: #555;
+            padding: 0.18rem 0.5rem;
+            font-size: 0.65rem;
+            color: #666;
             text-align: center;
         }
-        .ext-mock-content { padding: 0.75rem; }
-        .ext-mock-artist-row {
+        .browser-body { padding: 0.75rem; }
+        .browser-row {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.6rem 0;
-            border-bottom: 1px solid #f0f0f0;
+            padding: 0.55rem 0;
+            border-bottom: 1px solid #f5f5f5;
         }
-        .ext-mock-avatar {
-            width: 36px;
-            height: 36px;
+        .browser-avatar {
+            width: 34px;
+            height: 34px;
             border-radius: 50%;
-            background: #e8f2ff;
+            background: var(--blue-tint);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.65rem;
+            font-size: 0.62rem;
             font-weight: 700;
             color: var(--blue);
             flex-shrink: 0;
         }
-        .ext-mock-artist-info { flex: 1; }
-        .ext-mock-name { font-weight: 600; font-size: 0.8rem; color: #111; }
-        .ext-mock-venue { font-size: 0.68rem; color: #888; }
-        .ext-alert-badge {
-            background: rgba(244,70,52,0.1);
-            color: #F44634;
-            font-size: 0.62rem;
-            font-weight: 600;
-            padding: 0.2rem 0.5rem;
-            border-radius: 5px;
-            white-space: nowrap;
+        .browser-info { flex: 1; }
+        .browser-name { font-weight: 600; font-size: 0.78rem; color: #111; }
+        .browser-sub { font-size: 0.65rem; color: #888; }
+        .alert-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--coral);
+            flex-shrink: 0;
         }
-        .ext-mock-banner {
-            margin: 0.5rem 0 0;
-            background: linear-gradient(90deg, #0C233E, #1a5cc8);
-            border-radius: 8px;
-            padding: 0.75rem;
-            color: #fff;
+        .browser-banner {
+            margin-top: 0.6rem;
+            background: linear-gradient(90deg, var(--navy), var(--blue-mid));
+            border-radius: var(--radius-sm);
+            padding: 0.7rem 0.75rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            color: white;
         }
-        .ext-mock-banner svg { flex-shrink: 0; opacity: 0.85; }
-        .ext-mock-banner-text { font-size: 0.72rem; line-height: 1.4; }
-        .ext-mock-banner-text strong { display: block; font-size: 0.78rem; }
+        .browser-banner svg { flex-shrink: 0; opacity: 0.85; }
+        .banner-text { font-size: 0.7rem; line-height: 1.4; }
+        .banner-text strong { display: block; font-size: 0.75rem; }
 
         /* Mobile mock */
-        .mobile-mock {
-            width: 180px;
+        .phone-wrap {
+            width: 190px;
             background: var(--navy);
-            border-radius: 28px;
+            border-radius: 30px;
             padding: 6px;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.32);
         }
-        .mobile-screen {
+        .phone-screen {
             background: var(--bg);
-            border-radius: 22px;
+            border-radius: 24px;
             overflow: hidden;
-            min-height: 320px;
         }
-        .mobile-status {
+        .phone-statusbar {
             background: var(--navy);
-            color: rgba(255,255,255,0.7);
-            font-size: 0.55rem;
-            padding: 0.3rem 0.75rem 0.2rem;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.5rem;
+            padding: 0.25rem 0.75rem;
             display: flex;
             justify-content: space-between;
         }
-        .mobile-navbar {
-            background: #fff;
+        .phone-nav {
+            background: white;
             border-bottom: 1px solid var(--border);
             padding: 0.4rem 0.6rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        .mobile-logo { font-size: 0.65rem; font-weight: 700; color: var(--blue); }
-        .mobile-search {
+        .phone-logo { font-size: 0.62rem; font-weight: 700; color: var(--blue); }
+        .phone-search {
             margin: 0.5rem 0.5rem 0.3rem;
-            background: #fff;
+            background: white;
             border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 0.3rem 0.5rem;
-            font-size: 0.6rem;
+            padding: 0.28rem 0.5rem;
+            font-size: 0.58rem;
             color: var(--text-muted);
             display: flex;
             align-items: center;
-            gap: 0.3rem;
+            gap: 0.25rem;
         }
-        .mobile-artist-row {
+        .phone-row {
             display: flex;
             align-items: center;
             gap: 0.4rem;
             padding: 0.35rem 0.5rem;
             border-bottom: 1px solid #f5f5f5;
         }
-        .mobile-avatar {
-            width: 26px;
-            height: 26px;
+        .phone-avatar {
+            width: 26px; height: 26px;
             border-radius: 50%;
-            background: #dde6f4;
-            flex-shrink: 0;
-            overflow: hidden;
-        }
-        .mobile-artist-name { font-size: 0.62rem; font-weight: 600; color: var(--text); }
-        .mobile-artist-cat { font-size: 0.52rem; color: var(--text-muted); }
-        .mobile-badge {
-            margin-left: auto;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--coral);
+            background: var(--blue-tint);
             flex-shrink: 0;
         }
-        .mobile-badge.low { background: var(--electric); }
+        .phone-name { font-size: 0.6rem; font-weight: 600; color: var(--text-primary); }
+        .phone-cat { font-size: 0.5rem; color: var(--text-muted); }
+        .phone-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--coral); margin-left: auto; flex-shrink: 0; }
+        .phone-dot.blue { background: var(--blue); }
 
-        /* ── Sources ── */
-        .sources-section {
-            padding: 4.5rem 1.5rem;
-            background: var(--card);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-        .sources-inner { max-width: 760px; margin: 0 auto; text-align: center; }
-        .sources-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-        .source-chip {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 0.45rem 1rem;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: var(--text-sec);
-            transition: border-color 0.15s, color 0.15s;
-        }
-        .source-chip:hover { border-color: var(--blue); color: var(--blue); }
-        .source-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--electric);
-            flex-shrink: 0;
-        }
-        .sources-note {
-            margin-top: 1.5rem;
-            font-size: 0.82rem;
-            color: var(--text-muted);
-        }
-
-        /* ── Privacy strip ── */
-        .privacy-section {
-            padding: 4.5rem 1.5rem;
-            text-align: center;
-        }
-        .privacy-inner { max-width: 680px; margin: 0 auto; }
+        /* ── Privacy cards ── */
+        .privacy-section { padding: 0 0 4rem; }
         .privacy-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.25rem;
-            margin-top: 2.5rem;
+            max-width: 1080px;
+            margin: 0 auto;
         }
         .privacy-card {
-            background: var(--card);
-            border: 1px solid rgba(0,71,171,0.08);
-            border-radius: 16px;
-            padding: 1.5rem 1.25rem;
-            text-align: center;
+            background: var(--card-bg);
+            border: 1px solid var(--border-blue);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
             box-shadow: var(--shadow-sm);
+            text-align: center;
         }
         .privacy-icon {
-            width: 44px;
-            height: 44px;
+            width: 44px; height: 44px;
             background: var(--blue-tint);
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -627,238 +539,192 @@
             color: var(--blue);
         }
         .privacy-card h4 {
-            font-size: 0.875rem;
+            font-size: 0.9rem;
             font-weight: 700;
-            color: var(--navy);
+            color: var(--text-primary);
             margin-bottom: 0.4rem;
         }
         .privacy-card p {
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             color: var(--text-muted);
             line-height: 1.6;
-            font-weight: 400;
         }
 
-        /* ── CTA ── */
-        .cta-section {
-            padding: 0 1.5rem 6rem;
-        }
-        .cta-card {
-            max-width: 760px;
-            margin: 0 auto;
+        /* ── CTA strip ── */
+        .cta-strip {
             background: var(--navy);
-            border-radius: 24px;
-            padding: 3.5rem 2.5rem;
+            padding: 3.5rem 1.5rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            margin-top: 4rem;
         }
-        .cta-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(ellipse 60% 80% at 10% 50%, rgba(28,95,234,0.25) 0%, transparent 65%),
-                radial-gradient(ellipse 50% 70% at 90% 30%, rgba(0,71,171,0.3) 0%, transparent 65%);
-            pointer-events: none;
-        }
-        .cta-card h2 {
-            font-size: 1.85rem;
+        .cta-strip h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
             font-weight: 700;
-            color: #fff;
+            color: white;
             letter-spacing: -0.025em;
-            margin-bottom: 0.75rem;
-            position: relative;
+            margin-bottom: 0.7rem;
         }
-        .cta-card p {
-            color: rgba(255,255,255,0.65);
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            position: relative;
-            font-weight: 400;
+        .cta-strip p {
+            color: rgba(255,255,255,0.62);
+            font-size: 0.95rem;
+            margin-bottom: 1.75rem;
         }
-        .cta-buttons {
+        .cta-btns {
             display: flex;
             gap: 0.75rem;
             justify-content: center;
             flex-wrap: wrap;
-            position: relative;
         }
-        .btn-cta-primary {
-            background: #fff;
+        .btn-cta-white {
+            background: white;
             color: var(--navy);
             text-decoration: none;
             font-size: 0.875rem;
-            font-weight: 600;
-            padding: 0.6rem 1.4rem;
-            border-radius: 100px;
-            border: 1.5px solid rgba(255,255,255,0.9);
+            font-weight: 700;
+            padding: 0.7rem 1.6rem;
+            border-radius: 30px;
             transition: opacity 0.15s;
         }
-        .btn-cta-primary:hover { opacity: 0.88; }
-        .btn-cta-secondary {
+        .btn-cta-white:hover { opacity: 0.88; }
+        .btn-cta-ghost {
             background: transparent;
             color: rgba(255,255,255,0.85);
             text-decoration: none;
             font-size: 0.875rem;
             font-weight: 600;
-            padding: 0.6rem 1.4rem;
-            border-radius: 100px;
-            border: 1.5px solid rgba(255,255,255,0.3);
+            padding: 0.7rem 1.6rem;
+            border-radius: 30px;
+            border: 1.5px solid rgba(255,255,255,0.28);
             transition: border-color 0.15s, color 0.15s;
         }
-        .btn-cta-secondary:hover { border-color: rgba(255,255,255,0.7); color: #fff; }
+        .btn-cta-ghost:hover { border-color: rgba(255,255,255,0.7); color: white; }
 
-        /* ── Footer ── */
-        footer {
-            background: #fff;
-            border-top: 1px solid var(--border);
-            padding: 2rem 1.5rem;
-            text-align: center;
-        }
-        .footer-links {
+        /* ── Footer trust strip — identical to index.html ── */
+        .footer-trust {
+            background: var(--navy);
             display: flex;
-            gap: 0.25rem;
+            align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
+            gap: 0;
+            padding: 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
         }
-        .footer-links a {
-            color: var(--text-sec);
+        .footer-trust-copy {
+            color: rgba(255,255,255,0.4);
+            font-size: 0.75rem;
+            padding: 0.6rem 1rem;
+            border-right: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-trust-link {
+            color: rgba(255,255,255,0.5);
             text-decoration: none;
-            font-size: 0.82rem;
+            font-size: 0.75rem;
             font-weight: 500;
-            padding: 0.25rem 0.6rem;
-            border-radius: 6px;
-            transition: color 0.15s, background 0.15s;
+            padding: 0.6rem 1rem;
+            border-right: 1px solid rgba(255,255,255,0.08);
+            transition: color 0.15s;
         }
-        .footer-links a:hover { color: var(--blue); background: var(--blue-tint); }
-        .footer-links span { color: var(--border); padding: 0 0.1rem; }
-        .footer-copy { color: var(--text-muted); font-size: 0.76rem; }
+        .footer-trust-link:last-child { border-right: none; }
+        .footer-trust-link:hover { color: rgba(255,255,255,0.9); }
 
         /* ── Mobile ── */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero { padding: 3.5rem 1.25rem 3rem; }
-            .steps-flow {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-            }
-            .step-connector { display: none; }
-            .step-card { margin-bottom: 0; }
-            .product-block,
-            .product-block.reverse {
-                grid-template-columns: 1fr;
-                direction: ltr;
-            }
-            .product-visual { min-height: 220px; padding: 2rem 1.5rem; }
-            .privacy-grid { grid-template-columns: 1fr; }
-            .cta-card { padding: 2.5rem 1.5rem; }
-            .cta-card h2 { font-size: 1.5rem; }
-            .steps-section { padding: 3.5rem 1.25rem; }
-            .products-section { padding: 0 1.25rem 3.5rem; }
+        @media (max-width: 900px) {
+            .steps-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+            .product-block { grid-template-columns: 1fr; }
+            .product-visual { min-height: 200px; padding: 2rem 1.5rem; }
+            .privacy-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
         }
-        @media (max-width: 480px) {
-            .hero-pills { gap: 0.5rem; }
-            .hero-pill { font-size: 0.75rem; padding: 0.35rem 0.7rem; }
-            .sources-section { padding: 3rem 1.25rem; }
-            .privacy-section { padding: 3rem 1.25rem; }
+        @media (max-width: 600px) {
+            .page-hero { padding: 2.5rem 0 2rem; }
+            .hero-trust-row { gap: 1rem; }
+            .footer-trust-copy { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
+    <!-- Navbar — identical structure to index.html -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="logo">
                     <img src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/4ebf28762_fulllogo2.png"
                          alt="ArtSiren"
-                         onerror="this.style.display='none'">
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+                    <span style="display:none">ArtSiren</span>
                 </a>
                 <div class="nav-links">
-                    <a href="index.html" class="nav-link">Artists</a>
                     <a href="about.html" class="nav-link">About</a>
                     <a href="how-it-works.html" class="nav-link active">How It Works</a>
                     <a href="extension.html" class="nav-link">Extension</a>
                 </div>
-                <a href="extension.html" class="btn-nav-cta">Get Browser Alerts</a>
+                <div class="nav-right">
+                    <a href="extension.html" class="nav-cta-btn">Get Browser Alerts</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <h1>From trusted sources<br><span>to your decision</span></h1>
-        <p class="hero-sub">
-            We collect verified information from reputable news outlets, map each artist's public stance, and deliver that transparency exactly when you need it — before you buy a ticket, stream, or show up.
-        </p>
-        <div class="hero-pills">
-            <div class="hero-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-                Source-verified only
-            </div>
-            <div class="hero-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                No data collected
-            </div>
-            <div class="hero-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
-                Your choice, your values
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-label">How It Works</div>
+            <h1>From trusted sources<br>to <span>your decision</span></h1>
+            <p>We collect verified information from reputable news outlets, map each artist's public stance, and surface that context exactly when you need it — before you buy, stream, or show up.</p>
+            <div class="hero-trust-row">
+                <div class="hero-trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    Source-verified only
+                </div>
+                <div class="hero-trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    No tracking, ever
+                </div>
+                <div class="hero-trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+                    Your choice
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 3-Step Flow -->
-    <section class="steps-section">
+    <!-- Steps -->
+    <section class="section">
         <div class="container">
-            <div class="steps-header">
-                <span class="section-label">The process</span>
-                <h2 class="section-title">Three steps.<br>One goal: informed choice.</h2>
+            <div class="section-header">
+                <div class="section-eyebrow">The process</div>
+                <h2 class="section-title">Three steps. One goal.</h2>
+                <p class="section-desc">Every piece of information you see in ArtSiren went through the same pipeline — collect, verify, deliver.</p>
             </div>
-            <div class="steps-flow">
+            <div class="steps-grid">
 
-                <!-- Step 1 -->
                 <div class="step-card">
-                    <div class="step-num">Step 01</div>
-                    <div class="step-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <div class="step-number">Step 01</div>
+                    <div class="step-icon-wrap">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                     </div>
                     <h3>We collect</h3>
-                    <p>We monitor trusted news outlets, official artist statements, open letters, and confirmed press reports from across the internet — and extract publicly available information about each artist's cultural stance.</p>
-                    <span class="step-tag">Guardian · NME · Rolling Stone · BBC · Billboard</span>
+                    <p>We monitor trusted outlets — the Guardian, BBC, Rolling Stone, NME, Billboard, and more — and gather publicly available information about artists' cultural stances. Only what is said or done in public.</p>
+                    <span class="step-tag">Public actions only · Named sources</span>
                 </div>
 
-                <!-- Connector -->
-                <div class="step-connector">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0C233E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                </div>
-
-                <!-- Step 2 -->
                 <div class="step-card">
-                    <div class="step-num">Step 02</div>
-                    <div class="step-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    <div class="step-number">Step 02</div>
+                    <div class="step-icon-wrap">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                     </div>
-                    <h3>We map</h3>
-                    <p>Every entry is verified, sourced, and classified by the strength of the artist's position — not our opinion of it. We link directly to the original source so you can read it yourself and verify everything independently.</p>
+                    <h3>We verify &amp; map</h3>
+                    <p>Every entry is linked to the original source — a named journalist, an official statement, or a confirmed press report. We classify by the strength of the evidence, not our interpretation of it.</p>
                     <span class="step-tag">Classified by evidence · Linked to source</span>
                 </div>
 
-                <!-- Connector -->
-                <div class="step-connector">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0C233E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                </div>
-
-                <!-- Step 3 -->
                 <div class="step-card">
-                    <div class="step-num">Step 03</div>
-                    <div class="step-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    <div class="step-number">Step 03</div>
+                    <div class="step-icon-wrap">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                     </div>
                     <h3>You decide</h3>
-                    <p>We surface that transparency at the exact moment it matters — as a live alert in your browser when you're buying tickets, or instantly accessible on mobile when you're deciding whether to stream, share, or show up.</p>
+                    <p>We surface that context the moment it matters — as a live alert in your browser while buying tickets, or instantly on your phone. The information is yours. What you do with it is entirely your call.</p>
                     <span class="step-tag">Browser alert · Mobile search · Your call</span>
                 </div>
 
@@ -874,65 +740,64 @@
             <div class="product-block">
                 <div class="product-body">
                     <div class="product-icon">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                     </div>
-                    <span class="section-label">Chrome Extension</span>
+                    <div class="section-eyebrow" style="text-align:left; margin-bottom:0.4rem;">Chrome Extension</div>
                     <h2>Live alerts while you browse</h2>
                     <p>Install the extension once. From that point on, whenever you land on Ticketmaster, Spotify, YouTube, or 50+ other platforms and an artist we've documented appears — you get an instant, non-intrusive alert right in the page.</p>
                     <ul class="feature-list">
                         <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Works on Ticketmaster, StubHub, SeatGeek, Spotify, YouTube, Apple Music & more
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Works on Ticketmaster, StubHub, SeatGeek, Spotify, YouTube &amp; more
                         </li>
                         <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Alert shows the artist's stance, level, and a direct link to the source
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Alert links directly to the verified source
                         </li>
                         <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Runs entirely in your browser — no data ever leaves your device
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Runs entirely in your browser — nothing ever leaves your device
                         </li>
                         <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                             Free. No account. No sign-up.
                         </li>
                     </ul>
                     <a href="extension.html" class="btn-product">
                         Get the Extension
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
                 </div>
                 <div class="product-visual">
-                    <!-- Extension UI mock -->
-                    <div class="ext-mock">
-                        <div class="ext-mock-bar">
-                            <div class="ext-mock-bar-dot" style="background:#ff5f57"></div>
-                            <div class="ext-mock-bar-dot" style="background:#febc2e"></div>
-                            <div class="ext-mock-bar-dot" style="background:#28c840"></div>
-                            <div class="ext-mock-bar-url">ticketmaster.com</div>
+                    <div class="browser-mock">
+                        <div class="browser-bar">
+                            <div class="browser-dot" style="background:#ff5f57"></div>
+                            <div class="browser-dot" style="background:#febc2e"></div>
+                            <div class="browser-dot" style="background:#28c840"></div>
+                            <div class="browser-url">ticketmaster.com</div>
                         </div>
-                        <div class="ext-mock-content">
-                            <div class="ext-mock-artist-row">
-                                <div class="ext-mock-avatar">RW</div>
-                                <div class="ext-mock-artist-info">
-                                    <div class="ext-mock-name">Roger Waters</div>
-                                    <div class="ext-mock-venue">Madison Square Garden</div>
+                        <div class="browser-body">
+                            <div class="browser-row">
+                                <div class="browser-avatar">RW</div>
+                                <div class="browser-info">
+                                    <div class="browser-name">Roger Waters</div>
+                                    <div class="browser-sub">Madison Square Garden</div>
                                 </div>
-                                <div class="ext-alert-badge">⚑ Alert</div>
+                                <div class="alert-dot"></div>
                             </div>
-                            <div class="ext-mock-artist-row">
-                                <div class="ext-mock-avatar">DL</div>
-                                <div class="ext-mock-artist-info">
-                                    <div class="ext-mock-name">Dua Lipa</div>
-                                    <div class="ext-mock-venue">Barclays Center</div>
+                            <div class="browser-row">
+                                <div class="browser-avatar">DL</div>
+                                <div class="browser-info">
+                                    <div class="browser-name">Dua Lipa</div>
+                                    <div class="browser-sub">Barclays Center</div>
                                 </div>
-                                <div class="ext-alert-badge">⚑ Alert</div>
+                                <div class="alert-dot"></div>
                             </div>
-                            <div class="ext-mock-banner">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                                <div class="ext-mock-banner-text">
+                            <div class="browser-banner">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                <div class="banner-text">
                                     <strong>ArtSiren Alert</strong>
-                                    2 artists on this page support the cultural boycott
+                                    2 artists on this page have documented public actions
                                 </div>
                             </div>
                         </div>
@@ -940,87 +805,72 @@
                 </div>
             </div>
 
-            <!-- Mobile Web App -->
-            <div class="product-block reverse">
+            <!-- Mobile -->
+            <div class="product-block">
+                <div class="product-visual dark">
+                    <div class="phone-wrap">
+                        <div class="phone-screen">
+                            <div class="phone-statusbar"><span>9:41</span><span>●●●</span></div>
+                            <div class="phone-nav">
+                                <span class="phone-logo">ArtSiren</span>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0047ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            </div>
+                            <div class="phone-search">
+                                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                Search artist…
+                            </div>
+                            <div class="phone-row">
+                                <div class="phone-avatar"></div>
+                                <div><div class="phone-name">Roger Waters</div><div class="phone-cat">Musician</div></div>
+                                <div class="phone-dot"></div>
+                            </div>
+                            <div class="phone-row">
+                                <div class="phone-avatar"></div>
+                                <div><div class="phone-name">Dua Lipa</div><div class="phone-cat">Musician</div></div>
+                                <div class="phone-dot"></div>
+                            </div>
+                            <div class="phone-row">
+                                <div class="phone-avatar"></div>
+                                <div><div class="phone-name">Patti Smith</div><div class="phone-cat">Musician</div></div>
+                                <div class="phone-dot"></div>
+                            </div>
+                            <div class="phone-row">
+                                <div class="phone-avatar"></div>
+                                <div><div class="phone-name">Brian Eno</div><div class="phone-cat">Musician</div></div>
+                                <div class="phone-dot blue"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="product-body">
                     <div class="product-icon">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
                     </div>
-                    <span class="section-label">Mobile Web App</span>
+                    <div class="section-eyebrow" style="text-align:left; margin-bottom:0.4rem;">Mobile Web App</div>
                     <h2>Every artist, source-backed — always in your pocket</h2>
                     <p>Before a show, a festival, or a playlist — open ArtSiren and search any artist in seconds. Every result comes with the original source, so you're not taking our word for it. No app store. Just open and search.</p>
                     <ul class="feature-list">
                         <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            300+ artists searchable instantly — musicians, actors, directors, writers
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            300+ artists — musicians, actors, directors, writers
                         </li>
                         <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Each card links to the verified source — not our summary
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Each entry links to the original verified source
                         </li>
                         <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Installs as a PWA — works offline, feels like a native app
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Installs as a PWA — works offline, feels native
                         </li>
                         <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                             Works on iPhone, Android, and any browser
                         </li>
                     </ul>
                     <a href="index.html" class="btn-product-outline">
                         Search Artists
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
-                </div>
-                <div class="product-visual navy">
-                    <!-- Mobile mock -->
-                    <div class="mobile-mock">
-                        <div class="mobile-screen">
-                            <div class="mobile-status">
-                                <span>9:41</span><span>●●●</span>
-                            </div>
-                            <div class="mobile-navbar">
-                                <span class="mobile-logo">ArtSiren</span>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0047ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                            </div>
-                            <div class="mobile-search">
-                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                                Search artist…
-                            </div>
-                            <div class="mobile-artist-row">
-                                <div class="mobile-avatar"></div>
-                                <div>
-                                    <div class="mobile-artist-name">Roger Waters</div>
-                                    <div class="mobile-artist-cat">Musician</div>
-                                </div>
-                                <span class="mobile-badge"></span>
-                            </div>
-                            <div class="mobile-artist-row">
-                                <div class="mobile-avatar"></div>
-                                <div>
-                                    <div class="mobile-artist-name">Dua Lipa</div>
-                                    <div class="mobile-artist-cat">Musician</div>
-                                </div>
-                                <span class="mobile-badge"></span>
-                            </div>
-                            <div class="mobile-artist-row">
-                                <div class="mobile-avatar"></div>
-                                <div>
-                                    <div class="mobile-artist-name">Patti Smith</div>
-                                    <div class="mobile-artist-cat">Musician</div>
-                                </div>
-                                <span class="mobile-badge"></span>
-                            </div>
-                            <div class="mobile-artist-row">
-                                <div class="mobile-avatar"></div>
-                                <div>
-                                    <div class="mobile-artist-name">Brian Eno</div>
-                                    <div class="mobile-artist-cat">Musician</div>
-                                </div>
-                                <span class="mobile-badge low"></span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -1029,71 +879,56 @@
 
     <!-- Privacy -->
     <section class="privacy-section">
-        <div class="privacy-inner">
-            <span class="section-label">Privacy</span>
-            <h2 class="section-title">We know nothing about you</h2>
-            <p class="section-desc" style="margin: 0 auto;">
-                ArtSiren is a transparency tool — not a surveillance one. We apply that same principle to how we treat you.
-            </p>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Privacy</div>
+                <h2 class="section-title">We know nothing about you</h2>
+                <p class="section-desc">ArtSiren is a transparency tool — not a surveillance one. We apply that same principle to how we treat you.</p>
+            </div>
             <div class="privacy-grid">
                 <div class="privacy-card">
                     <div class="privacy-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     </div>
                     <h4>No data collected</h4>
-                    <p>The extension runs entirely inside your browser. Nothing is ever transmitted — we never know which pages you visit or which artists you search.</p>
+                    <p>The extension runs entirely inside your browser. Nothing is ever transmitted — we never know which pages you visit or which artists you look up.</p>
                 </div>
                 <div class="privacy-card">
                     <div class="privacy-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
                     </div>
                     <h4>No account required</h4>
                     <p>No sign-up, no email, no profile. You are completely anonymous — on the website, in the app, and in the extension.</p>
                 </div>
                 <div class="privacy-card">
                     <div class="privacy-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
                     </div>
                     <h4>Open to audit</h4>
-                    <p>Every source is public and linked directly in the app. You don't have to trust us — you can verify every single entry yourself.</p>
+                    <p>Every source is public and linked directly. You don't have to trust us — you can verify every single entry yourself, independently.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-card">
-                <h2>Make your next choice<br>an informed one</h2>
-                <p>Search 300+ artists — each backed by a verified source from a trusted outlet. Or install the Chrome extension and get automatic alerts wherever you buy tickets.</p>
-                <div class="cta-buttons">
-                    <a href="index.html" class="btn-cta-primary">Search Artists</a>
-                    <a href="extension.html" class="btn-cta-secondary">Get Browser Alerts</a>
-                </div>
-            </div>
+    <div class="cta-strip">
+        <h2>Make your next choice an informed one</h2>
+        <p>Search 300+ artists — each backed by a verified source. Or install the Chrome extension for automatic alerts wherever you buy tickets.</p>
+        <div class="cta-btns">
+            <a href="index.html" class="btn-cta-white">Search Artists</a>
+            <a href="extension.html" class="btn-cta-ghost">Get Browser Alerts</a>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-links">
-            <a href="index.html">Artists</a>
-            <span>·</span>
-            <a href="about.html">About</a>
-            <span>·</span>
-            <a href="how-it-works.html">How It Works</a>
-            <span>·</span>
-            <a href="extension.html">Extension</a>
-            <span>·</span>
-            <a href="terms.html">Terms</a>
-            <span>·</span>
-            <a href="privacy.html">Privacy</a>
-            <span>·</span>
-            <a href="mailto:contact@artsiren.co">Contact</a>
-        </div>
-        <p class="footer-copy">&copy; 2026 ArtSiren &nbsp;·&nbsp; All information from publicly documented, independently verifiable sources.</p>
-    </footer>
+    <!-- Footer trust strip — identical to index.html -->
+    <div class="footer-trust">
+        <span class="footer-trust-copy">© 2026 ArtSiren</span>
+        <a href="about.html" class="footer-trust-link">About</a>
+        <a href="terms.html" class="footer-trust-link">Terms of Use</a>
+        <a href="privacy.html" class="footer-trust-link">Privacy Policy</a>
+        <a href="mailto:contact@artsiren.co" class="footer-trust-link">Contact</a>
+    </div>
 
 </body>
 </html>
