@@ -98,17 +98,18 @@
         .nav-link:hover { color: var(--blue); background: var(--blue-tint); }
         .nav-link.active { color: var(--blue); font-weight: 600; }
         .btn-nav-cta {
-            background: var(--blue);
-            color: #fff;
+            background: #fff;
+            color: var(--navy);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 600;
-            padding: 0.5rem 1.1rem;
-            border-radius: 20px;
-            transition: background 0.15s, transform 0.15s;
+            padding: 0.45rem 1rem;
+            border-radius: 100px;
+            border: 1.5px solid var(--border);
+            transition: border-color 0.15s, color 0.15s;
             white-space: nowrap;
         }
-        .btn-nav-cta:hover { background: var(--blue-mid); transform: translateY(-1px); }
+        .btn-nav-cta:hover { border-color: var(--electric); color: var(--electric); }
 
         /* ── Hero ── */
         .hero {
@@ -365,34 +366,35 @@
         .btn-product {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            background: var(--navy);
-            color: #fff;
+            gap: 0.45rem;
+            background: #fff;
+            color: var(--navy);
             text-decoration: none;
-            font-size: 0.875rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            padding: 0.7rem 1.4rem;
-            border-radius: 12px;
+            padding: 0.55rem 1.2rem;
+            border-radius: 100px;
+            border: 1.5px solid var(--border);
             align-self: flex-start;
-            transition: background 0.15s, transform 0.15s;
+            transition: border-color 0.15s, color 0.15s;
         }
-        .btn-product:hover { background: var(--blue); transform: translateY(-1px); }
+        .btn-product:hover { border-color: var(--electric); color: var(--electric); }
         .btn-product-outline {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            background: transparent;
+            gap: 0.45rem;
+            background: #fff;
             color: var(--navy);
             text-decoration: none;
-            font-size: 0.875rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            padding: 0.7rem 1.4rem;
-            border-radius: 12px;
+            padding: 0.55rem 1.2rem;
+            border-radius: 100px;
             border: 1.5px solid var(--border);
             align-self: flex-start;
-            transition: border-color 0.15s, color 0.15s, transform 0.15s;
+            transition: border-color 0.15s, color 0.15s;
         }
-        .btn-product-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-1px); }
+        .btn-product-outline:hover { border-color: var(--electric); color: var(--electric); }
 
         .product-visual {
             background: var(--bg);
@@ -686,25 +688,26 @@
             background: #fff;
             color: var(--navy);
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 700;
-            padding: 0.8rem 1.75rem;
-            border-radius: 12px;
-            transition: opacity 0.15s, transform 0.15s;
-        }
-        .btn-cta-primary:hover { opacity: 0.92; transform: translateY(-1px); }
-        .btn-cta-secondary {
-            background: rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.9);
-            text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.875rem;
             font-weight: 600;
-            padding: 0.8rem 1.75rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: background 0.15s, transform 0.15s;
+            padding: 0.6rem 1.4rem;
+            border-radius: 100px;
+            border: 1.5px solid rgba(255,255,255,0.9);
+            transition: opacity 0.15s;
         }
-        .btn-cta-secondary:hover { background: rgba(255,255,255,0.18); transform: translateY(-1px); }
+        .btn-cta-primary:hover { opacity: 0.88; }
+        .btn-cta-secondary {
+            background: transparent;
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.6rem 1.4rem;
+            border-radius: 100px;
+            border: 1.5px solid rgba(255,255,255,0.3);
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .btn-cta-secondary:hover { border-color: rgba(255,255,255,0.7); color: #fff; }
 
         /* ── Footer ── */
         footer {
@@ -875,7 +878,7 @@
                     </div>
                     <span class="section-label">Chrome Extension</span>
                     <h2>Live alerts while you browse</h2>
-                    <p>Install the extension once. From that point on, whenever you land on Ticketmaster, Spotify, YouTube, or 50+ other platforms and an artist in our database appears — you get an instant, non-intrusive alert right in the page.</p>
+                    <p>Install the extension once. From that point on, whenever you land on Ticketmaster, Spotify, YouTube, or 50+ other platforms and an artist we've documented appears — you get an instant, non-intrusive alert right in the page.</p>
                     <ul class="feature-list">
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -944,8 +947,8 @@
                         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
                     </div>
                     <span class="section-label">Mobile Web App</span>
-                    <h2>Instant database, always in your pocket</h2>
-                    <p>Before a show, a festival lineup, or a playlist — open ArtSiren on your phone and search any artist in seconds. No app store needed. Add to your home screen for one-tap access, anytime.</p>
+                    <h2>Every artist, source-backed — always in your pocket</h2>
+                    <p>Before a show, a festival, or a playlist — open ArtSiren and search any artist in seconds. Every result comes with the original source, so you're not taking our word for it. No app store. Just open and search.</p>
                     <ul class="feature-list">
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -965,7 +968,7 @@
                         </li>
                     </ul>
                     <a href="index.html" class="btn-product-outline">
-                        Open the Database
+                        Search Artists
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
                 </div>
@@ -1024,34 +1027,6 @@
         </div>
     </section>
 
-    <!-- Sources -->
-    <section class="sources-section">
-        <div class="sources-inner">
-            <span class="section-label">Our sources</span>
-            <h2 class="section-title">Reputable outlets only</h2>
-            <p class="section-desc" style="margin: 0 auto;">
-                We never cite fringe blogs, anonymous posts, or unverifiable social media. Every artist entry links to a named journalist or official statement from a mainstream publisher — so you can read the original and make your own judgment.
-            </p>
-            <div class="sources-grid">
-                <div class="source-chip"><div class="source-dot"></div>The Guardian</div>
-                <div class="source-chip"><div class="source-dot"></div>Rolling Stone</div>
-                <div class="source-chip"><div class="source-dot"></div>NME</div>
-                <div class="source-chip"><div class="source-dot"></div>Billboard</div>
-                <div class="source-chip"><div class="source-dot"></div>BBC</div>
-                <div class="source-chip"><div class="source-dot"></div>Al Jazeera</div>
-                <div class="source-chip"><div class="source-dot"></div>Pitchfork</div>
-                <div class="source-chip"><div class="source-dot"></div>Variety</div>
-                <div class="source-chip"><div class="source-dot"></div>The Independent</div>
-                <div class="source-chip"><div class="source-dot"></div>AP News</div>
-                <div class="source-chip"><div class="source-dot"></div>Reuters</div>
-                <div class="source-chip"><div class="source-dot"></div>Official artist statements</div>
-                <div class="source-chip"><div class="source-dot"></div>Open letters with named signatories</div>
-                <div class="source-chip"><div class="source-dot"></div>Confirmed concert cancellations</div>
-            </div>
-            <p class="sources-note">Each artist card links directly to its source — verify independently at any time.</p>
-        </div>
-    </section>
-
     <!-- Privacy -->
     <section class="privacy-section">
         <div class="privacy-inner">
@@ -1091,9 +1066,9 @@
         <div class="container">
             <div class="cta-card">
                 <h2>Make your next choice<br>an informed one</h2>
-                <p>Browse 300+ verified artists on the site, or install the Chrome extension for automatic alerts wherever you buy tickets.</p>
+                <p>Search 300+ artists — each backed by a verified source from a trusted outlet. Or install the Chrome extension and get automatic alerts wherever you buy tickets.</p>
                 <div class="cta-buttons">
-                    <a href="index.html" class="btn-cta-primary">Browse the Database</a>
+                    <a href="index.html" class="btn-cta-primary">Search Artists</a>
                     <a href="extension.html" class="btn-cta-secondary">Get Browser Alerts</a>
                 </div>
             </div>
