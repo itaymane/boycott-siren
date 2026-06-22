@@ -1370,5 +1370,143 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed No Music for Genocide pledge, geo-blocked music from Israel and requested removal from Spotify Israel",
     sources: `<a href="https://nomusicforgenocide.org/">No Music for Genocide</a> | <a href="https://www.thenational.scot/news/25480882.400-artists-ban-music-streaming-platforms-israel/">The National</a>`
+  },
+  {
+    name: "Lankum",
+    level: "CRITICAL",
+    statement: "Signed No Music for Genocide (September 2025), geo-blocking all music from Israeli streaming services; Irish folk band known for transformative albums 'Between the Earth and Sky' and 'False Lankum'.",
+    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://www.npr.org/2025/09/05/nx-s1-5494617/no-music-for-genocide-artists-spotify-israel">NPR</a>`
+  },
+  {
+    name: "Sleaford Mods",
+    level: "CRITICAL",
+    statement: "Signed No Music for Genocide (2025), geo-blocking music from Israeli streaming services. Vocalist Jason Williamson publicly declared his stance on Palestine after a flag incident at a Madrid gig, stating: 'No more killing.'",
+    sources: `<a href="https://www.nme.com/news/music/sleaford-mods-jason-williamson-clarifies-stance-on-palestine-after-madrid-gig-incident-no-more-killing-3537855">NME</a> | <a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a>`
+  },
+  {
+    name: "Sudan Archives",
+    level: "CRITICAL",
+    statement: "Signed No Music for Genocide (September 2025), geo-blocking all music from Israeli streaming platforms; R&B violinist and producer known for albums 'Athena' and 'Natural Brown Prom Queen'.",
+    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-artists-block-streaming-israel-1235110120/">Rolling Stone</a>`
+  },
+  {
+    name: "Obongjayar",
+    level: "CRITICAL",
+    statement: "Signed No Music for Genocide in October 2025, geo-blocking music from Israeli streaming services; British-Nigerian artist known for politically charged album 'Some Nights I Dream of Doors'.",
+    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://www.nme.com/news/music/no-music-for-genocide-artists-spotify-israel-3537000">NME</a>`
+  },
+  {
+    name: "Beach Fossils",
+    level: "CRITICAL",
+    statement: "Signed No Music for Genocide (September 2025), geo-blocking all music from Israeli streaming platforms; Brooklyn indie rock band known for dreamy guitar-pop albums 'Somersault' and 'Bunny'.",
+    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://consequence.net/2025/09/no-music-for-genocide-artists-pull-music-from-israel/">Consequence</a>`
+  },
+  {
+    name: "Frankie Cosmos",
+    level: "CRITICAL",
+    statement: "Signed No Music for Genocide (September 2025), geo-blocking music from Israeli streaming services; New York indie pop artist known for prolific introspective releases through Double Double Whammy.",
+    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://consequence.net/2025/09/no-music-for-genocide-artists-pull-music-from-israel/">Consequence</a>`
+  },
+  {
+    name: "Water from Your Eyes",
+    level: "CRITICAL",
+    statement: "Signed No Music for Genocide (September 2025), geo-blocking music from Israeli streaming services; New York experimental indie duo known for eclectic albums blending pop, noise and electronic music.",
+    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://consequence.net/2025/09/no-music-for-genocide-artists-pull-music-from-israel/">Consequence</a>`
+  },
+  {
+    name: "Pinegrove",
+    level: "CRITICAL",
+    statement: "Signed No Music for Genocide (September 2025), geo-blocking music from Israeli streaming services; New Jersey indie folk-rock band known for heartfelt albums 'Cardinal' and 'Skylight'.",
+    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://consequence.net/2025/09/no-music-for-genocide-artists-pull-music-from-israel/">Consequence</a>`
+  },
+  {
+    name: "Bob Vylan",
+    level: "CRITICAL",
+    statement: "Chanted 'Death to the IDF' at Glastonbury 2025 in a performance broadcast live on the BBC; the US State Department subsequently revoked their visas; also pressured concert venues to drop pro-Israel sponsor Barclays.",
+    sources: `<a href="https://www.nbcnews.com/news/us-news/state-department-bans-visas-english-punk-duo-bob-vylan-glastonbury-per-rcna215996">NBC News</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/rap-punk-duo-bob-vylan-says-targeted-speaking-gaza-glastonbury-rcna216390">NBC News (statement)</a>`
+  },
+  {
+    name: "Hozier",
+    level: "HIGH",
+    statement: "Called Israeli actions 'genocide' at multiple 2024 concerts including Forest Hills and Lollapalooza; drew parallels between Irish and Palestinian histories and called for 'Palestine free from occupation and meaningful self-determination'.",
+    sources: `<a href="https://www.avclub.com/hozier-concert-end-genocide-palestine-too-sweet-1851520881">AV Club</a> | <a href="https://www.mirror.co.uk/3am/celebrity-news/hozier-calls-end-genocide-palestine-33389097">The Mirror</a>`
+  },
+  {
+    name: "Ava DuVernay",
+    level: "CRITICAL",
+    statement: "Signed the Film Workers for Palestine pledge (September 2025), refusing to work with Israeli film institutions 'complicit in genocide and apartheid'; director of Selma, 13th, and When They See Us.",
+    sources: `<a href="https://www.npr.org/2025/09/09/nx-s1-5535578/hollywood-stars-boycott-israeli-film-companies-in-response-to-gaza-crisis">NPR</a> | <a href="https://deadline.com/2025/09/film-workers-for-palestine-ava-duvernay-olivia-colman-1236511823/">Deadline</a>`
+  },
+  {
+    name: "Yorgos Lanthimos",
+    level: "CRITICAL",
+    statement: "Signed the Film Workers for Palestine pledge (September 2025) as a notable initial signatory, refusing to work with Israeli film institutions complicit in genocide; Oscar-winning Greek director of Poor Things and The Lobster.",
+    sources: `<a href="https://www.hollywoodreporter.com/movies/movie-news/ayo-edebiri-mark-ruffalo-boycott-israeli-film-institutions-1236364989/">Hollywood Reporter</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
+  },
+  {
+    name: "Joshua Oppenheimer",
+    level: "CRITICAL",
+    statement: "Signed the Film Workers for Palestine pledge (September 2025) as a notable initial signatory, refusing to work with Israeli film institutions complicit in genocide; documentarian known for The Act of Killing and The Look of Silence.",
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://www.hollywoodreporter.com/movies/movie-news/ayo-edebiri-mark-ruffalo-boycott-israeli-film-institutions-1236364989/">Hollywood Reporter</a>`
+  },
+  {
+    name: "Payal Kapadia",
+    level: "CRITICAL",
+    statement: "Signed the Film Workers for Palestine pledge (September 2025) refusing to work with Israeli film institutions complicit in genocide; Indian director of All We Imagine as Light, winner of the Grand Prix at Cannes 2024.",
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a>`
+  },
+  {
+    name: "Josh O'Connor",
+    level: "CRITICAL",
+    statement: "Signed the Film Workers for Palestine pledge (September 2025), pledging not to work with Israeli film institutions complicit in genocide; BAFTA-winning English actor known for The Crown, Challengers and La Chimera.",
+    sources: `<a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a> | <a href="https://www.thepinknews.com/2025/09/09/ayo-edebiri-olivia-coleman-josh-oconnor-israel-film-boycott/">PinkNews</a>`
+  },
+  {
+    name: "Bowen Yang",
+    level: "CRITICAL",
+    statement: "Signed the Film Workers for Palestine pledge (September 2025), pledging not to work with Israeli film institutions complicit in genocide; SNL cast member and comedian best known for his breakout role on Saturday Night Live.",
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a>`
+  },
+  {
+    name: "Emma D'Arcy",
+    level: "CRITICAL",
+    statement: "Signed the Film Workers for Palestine pledge (September 2025), pledging not to work with Israeli film institutions complicit in genocide; known for their acclaimed role as Rhaenyra Targaryen in House of the Dragon.",
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://www.thepinknews.com/2025/09/09/ayo-edebiri-olivia-coleman-josh-oconnor-israel-film-boycott/">PinkNews</a>`
+  },
+  {
+    name: "Guy Pearce",
+    level: "CRITICAL",
+    statement: "Signed the Film Workers for Palestine pledge (September 2025), pledging not to work with Israeli film institutions complicit in genocide; Australian actor known for Memento, L.A. Confidential and Iron Man 3.",
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a>`
+  },
+  {
+    name: "Aimee Lou Wood",
+    level: "CRITICAL",
+    statement: "Signed the Film Workers for Palestine pledge (September 2025) as a notable initial signatory, refusing to work with Israeli film institutions complicit in genocide; English actress known for Sex Education and The White Lotus.",
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-film-workers-boycott-israel-rcna215899">NBC News</a>`
+  },
+  {
+    name: "Joe Locke",
+    level: "CRITICAL",
+    statement: "Signed the Film Workers for Palestine pledge (September 2025), pledging not to work with Israeli film institutions complicit in genocide; Scottish actor known for playing Charlie Spring in Netflix's Heartstopper.",
+    sources: `<a href="https://www.thepinknews.com/2025/09/11/israeli-film-industry-boycott-elliot-page-joe-locke/">PinkNews</a> | <a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a>`
+  },
+  {
+    name: "Ebon Moss-Bachrach",
+    level: "CRITICAL",
+    statement: "Jewish actor who signed the Film Workers for Palestine pledge (September 2025), refusing to work with Israeli film institutions complicit in genocide; known for playing Richie Jerimovich in FX's The Bear.",
+    sources: `<a href="https://deadline.com/2025/09/film-workers-for-palestine-ava-duvernay-olivia-colman-1236511823/">Deadline</a> | <a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a>`
+  },
+  {
+    name: "Peter Sarsgaard",
+    level: "CRITICAL",
+    statement: "Signed the Film Workers for Palestine pledge (September 2025), pledging not to work with Israeli film institutions complicit in genocide; American actor known for Boys Don't Cry, Garden State and An Education.",
+    sources: `<a href="https://deadline.com/2025/09/film-workers-for-palestine-ava-duvernay-olivia-colman-1236511823/">Deadline</a> | <a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a>`
+  },
+  {
+    name: "Debra Winger",
+    level: "CRITICAL",
+    statement: "Signed the Film Workers for Palestine pledge (September 2025) as a notable initial signatory, refusing to work with Israeli film institutions complicit in genocide; Oscar-nominated actress known for An Officer and a Gentleman and Terms of Endearment.",
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-film-workers-boycott-israel-rcna215899">NBC News</a>`
   }
 ];
