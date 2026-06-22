@@ -748,24 +748,6 @@ const artistsData = [
     sources: `<a href="https://www.newarab.com/news/nobel-prize-winner-annie-ernaux-has-backed-israel-boycotts">New Arab</a> | <a href="https://www.aljazeera.com/news/2024/1/11/artists-urged-to-reject-german-institutions-over-berlins-stance-on-gaza">Al Jazeera</a>`
   },
   {
-    name: "Angela Davis",
-    level: "CRITICAL",
-    statement: "American scholar and lifelong Palestinian rights activist; one of the founding intellectual figures of BDS in the United States; has spoken at countless pro-BDS events; compared Israeli treatment of Palestinians to apartheid South Africa",
-    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a> | <a href="https://www.jta.org/quick-reads/angela-davis-says-pro-palestine-stance-led-to-civil-rights-group-withdrawing-her-award">JTA</a>`
-  },
-  {
-    name: "Judith Butler",
-    level: "CRITICAL",
-    statement: "Philosopher at UC Berkeley who has explicitly endorsed BDS; written extensively on the legitimacy of cultural boycott of Israel; signed open letters; argued that BDS is a legitimate form of political protest against Israeli policies",
-    sources: `<a href="https://www.middleeasteye.net/news/sally-rooney-rupi-kaur-and-judith-butler-join-boycott-silent-israeli-cultural-institutions">Middle East Eye</a> | <a href="https://www.jta.org/2014/03/07/united-states/rashid-khalidi-and-judith-butler-object-to-boycotting-the-boycotters">JTA</a>`
-  },
-  {
-    name: "Desmond Tutu",
-    level: "HIGH",
-    statement: "Late Archbishop of South Africa who explicitly compared Israeli treatment of Palestinians to apartheid South Africa, calling it 'worse in some respects'; called for international sanctions and boycott of Israel",
-    sources: `<a href="https://www.aljazeera.com/news/2014/8/14/desmond-tutu-calls-for-end-to-attacks-on-gaza">Al Jazeera</a> | <a href="https://www.jta.org/2021/12/26/obituaries/desmond-tutu-anti-apartheid-leader-who-identified-with-jews-and-criticized-israels-treatment-of-palestinians-dies-at-90">JTA</a>`
-  },
-  {
     name: "DJ Snake",
     level: "CRITICAL",
     statement: "French DJ, supports cultural boycott",
