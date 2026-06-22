@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="/shared-nav.js?v=3"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZRJ6TZY2Y"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -2014,44 +2015,6 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="index.html" class="logo">
-                    <img src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/4ebf28762_fulllogo2.png" alt="ArtSiren" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
-                    <span style="display:none">ArtSiren</span>
-                </a>
-                <div class="nav-links">
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="sources.html" class="nav-link">Sources</a>
-                    <a href="how-it-works.html" class="nav-link">How It Works</a>
-                    <a href="#" onclick="openContact();return false;" class="nav-link">Contact</a>
-                </div>
-                <button onclick="installPWA()" class="mob-get-app">Get the App</button>
-                <div class="nav-right">
-                    <div class="lang-switcher">
-                        <button class="lang-btn" onclick="toggleLang(this)" aria-label="Language">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                        </button>
-                        <div class="lang-menu">
-                            <a href="/" class="lang-item lang-active">English</a>
-                            <a href="/he/" class="lang-item">עברית</a>
-                        </div>
-                    </div>
-                    <div class="nav-cta-wrap">
-                        <a href="boycott-siren-extension.zip" download onclick="trackExtensionDownload(); showInstallGuide();" class="btn-cta nav-cta-btn" id="ext-btn">
-                            <span class="btn-cta-full">Get Browser Alerts</span>
-                            <span class="btn-cta-short">Alerts</span>
-                        </a>
-                        <button id="pwa-install-btn" onclick="installPWA()" style="display:none; margin-left:8px; padding:8px 16px; background:var(--blue); color:#fff; border:none; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer;">
-                            Install App
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
     <!-- Sticky search strip — appears when hero search scrolls out of view -->
     <div class="sticky-search-strip" id="stickySearchStrip">
         <div class="sticky-search-inner">
@@ -3278,14 +3241,6 @@
       <p>Roger Waters · Dua Lipa · Patti Smith · Elvis Costello · Tom Morello · The Roots · Lauryn Hill · Peter Gabriel · Charlotte Church · Sam Smith · Björk · Lorde · Rage Against the Machine · Brian Eno · Thurston Moore · Sonic Youth · Massive Attack · Lowkey · Kae Tempest · Roger Waters · Serj Tankian · System of a Down · Run the Jewels · Noname · Talib Kweli · Lupe Fiasco · Yasiin Bey (Mos Def) · Dead Prez · Immortal Technique · Jackson Browne · Manic Street Preachers · Jello Biafra · Anti-Flag · Propagandhi · Belle and Sebastian · Yo La Tengo · Cat Power · Feist · Metric · Peaches · Godspeed You! Black Emperor · Broken Social Scene · Owen Pallett · Wolf Parade · Stars · A Silver Mt. Zion · Do Make Say Think · Destroyer · Asian Dub Foundation · Asian Dub Foundation · Coldcut · Manu Chao · Santana · DJ Snake · Robyn · Lykke Li · Devendra Banhart · Boots Riley · Naomi Klein · Arundhati Roy · Sally Rooney · Judith Butler · Alice Walker · Angela Davis · Annie Ernaux · Nigel Kennedy · Desmond Tutu · Wallace Shawn · Mira Nair · Harris Dickinson · Liam Cunningham · Julian Casablancas · PJ Harvey · Akala · Kae Tempest · Mick Jones</p>
     </section>
 
-    <!-- Fixed nav strip at bottom of screen -->
-    <div class="footer-trust">
-        <span class="footer-trust-copy">© 2026 ArtSiren</span>
-        <a href="about.html" class="footer-trust-link">About</a>
-        <a href="terms.html" class="footer-trust-link">Terms of Use</a>
-        <a href="privacy.html" class="footer-trust-link">Privacy Policy</a>
-        <a href="#" onclick="openContact();return false;" class="footer-trust-link">Contact</a>
-    </div>
 
     <!-- Mobile language sheet (pops up above bottom nav) -->
     <div class="mob-lang-sheet" id="mobLangSheet">

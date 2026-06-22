@@ -1,17 +1,18 @@
 /**
  * shared-nav.js — ArtSiren unified navigation
- * Injects navbar, contact modal, and footer strip into all secondary pages.
- * index.html manages its own nav and is excluded automatically.
+ * Injects navbar, contact modal, and footer strip into all pages (except Hebrew homepage).
  */
 (function () {
   'use strict';
 
   var path = window.location.pathname;
 
-  // ── Skip index.html and Hebrew homepage ──
-  if (path === '/' || path.endsWith('index.html') || path.match(/\/he\/?$/) || path.match(/\/he\/index\.html$/)) {
+  // ── Skip Hebrew homepage only ──
+  if (path.match(/\/he\/?$/) || path.match(/\/he\/index\.html$/)) {
     return;
   }
+
+  var isHome = (path === '/' || path.endsWith('index.html'));
 
   // ── FOUC guard: hide body until nav + font are ready ──
   var foucStyle = document.createElement('style');
@@ -124,6 +125,7 @@
     + link('#', 'Contact', 'contact')
     + '</div>'
     + '<div class="sn-nav-right">'
+    + (isHome ? '<div class="lang-switcher" style="margin-right:0.5rem"><button class="lang-btn" onclick="if(window.toggleLang)toggleLang(this)" aria-label="Language"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d=\'M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\'/></svg></button><div class="lang-menu"><a href="/" class="lang-item lang-active">English</a><a href="/he/" class="lang-item">עברית</a></div></div>' : '')
     + '<a href="/boycott-siren-extension.zip" download onclick="if(window.gtag)gtag(\'event\',\'extension_download\');" class="sn-btn-cta">Get Browser Alerts</a>'
     + '</div>'
     + '</div></div></nav>';
@@ -166,7 +168,7 @@
   // ── DOM injection ──
   document.addEventListener('DOMContentLoaded', function () {
     // Remove any existing navbar
-    var oldNav = document.querySelector('nav');
+    var oldNav = document.querySelector('nav:not(.mobile-bottom-nav)');
     if (oldNav) oldNav.remove();
 
     // Remove any existing footer-trust/sn-footer
@@ -177,6 +179,17 @@
 
     // Inject navbar at very top of body
     document.body.insertAdjacentHTML('afterbegin', navbarHTML);
+
+    // Fix sticky-search top offset to match actual navbar height (index.html only)
+    if (isHome) {
+      var strip = document.getElementById('stickySearchStrip');
+      var snNav = document.getElementById('sn-navbar');
+      if (strip && snNav) {
+        function updateStripTop() { strip.style.top = snNav.offsetHeight + 'px'; }
+        updateStripTop();
+        window.addEventListener('resize', updateStripTop);
+      }
+    }
 
     // Inject modal + footer at end of body
     document.body.insertAdjacentHTML('beforeend', modalHTML + footerHTML);
