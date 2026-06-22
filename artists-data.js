@@ -1387,37 +1387,31 @@ const artistsData = [
     name: "Sudan Archives",
     level: "CRITICAL",
     statement: "Signed No Music for Genocide (September 2025), geo-blocking all music from Israeli streaming platforms; R&B violinist and producer known for albums 'Athena' and 'Natural Brown Prom Queen'.",
-    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://www.rollingstone.com/music/music-news/no-music-for-genocide-artists-block-streaming-israel-1235110120/">Rolling Stone</a>`
-  },
-  {
-    name: "Obongjayar",
-    level: "CRITICAL",
-    statement: "Signed No Music for Genocide in October 2025, geo-blocking music from Israeli streaming services; British-Nigerian artist known for politically charged album 'Some Nights I Dream of Doors'.",
-    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://www.nme.com/news/music/no-music-for-genocide-artists-spotify-israel-3537000">NME</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide (official)</a>`
   },
   {
     name: "Beach Fossils",
     level: "CRITICAL",
     statement: "Signed No Music for Genocide (September 2025), geo-blocking all music from Israeli streaming platforms; Brooklyn indie rock band known for dreamy guitar-pop albums 'Somersault' and 'Bunny'.",
-    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://consequence.net/2025/09/no-music-for-genocide-artists-pull-music-from-israel/">Consequence</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide (official)</a>`
   },
   {
     name: "Frankie Cosmos",
     level: "CRITICAL",
     statement: "Signed No Music for Genocide (September 2025), geo-blocking music from Israeli streaming services; New York indie pop artist known for prolific introspective releases through Double Double Whammy.",
-    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://consequence.net/2025/09/no-music-for-genocide-artists-pull-music-from-israel/">Consequence</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide (official)</a>`
   },
   {
     name: "Water from Your Eyes",
     level: "CRITICAL",
     statement: "Signed No Music for Genocide (September 2025), geo-blocking music from Israeli streaming services; New York experimental indie duo known for eclectic albums blending pop, noise and electronic music.",
-    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://consequence.net/2025/09/no-music-for-genocide-artists-pull-music-from-israel/">Consequence</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide (official)</a>`
   },
   {
     name: "Pinegrove",
     level: "CRITICAL",
     statement: "Signed No Music for Genocide (September 2025), geo-blocking music from Israeli streaming services; New Jersey indie folk-rock band known for heartfelt albums 'Cardinal' and 'Skylight'.",
-    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://consequence.net/2025/09/no-music-for-genocide-artists-pull-music-from-israel/">Consequence</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide (official)</a>`
   },
   {
     name: "Bob Vylan",
@@ -1471,7 +1465,7 @@ const artistsData = [
     name: "Emma D'Arcy",
     level: "CRITICAL",
     statement: "Signed the Film Workers for Palestine pledge (September 2025), pledging not to work with Israeli film institutions complicit in genocide; known for their acclaimed role as Rhaenyra Targaryen in House of the Dragon.",
-    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://www.thepinknews.com/2025/09/09/ayo-edebiri-olivia-coleman-josh-oconnor-israel-film-boycott/">PinkNews</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a>`
   },
   {
     name: "Guy Pearce",
