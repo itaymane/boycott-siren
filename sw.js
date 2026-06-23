@@ -1,4 +1,4 @@
-const CACHE = 'artsiren-v1';
+const CACHE = 'artsiren-v2';
 const ASSETS = [
   '/',
   '/index.html',
