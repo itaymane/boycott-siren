@@ -95,7 +95,17 @@
     '.sn-success-icon{font-size:3rem;margin-bottom:1rem;}',
     '.sn-success h3{font-size:1.2rem;font-weight:700;color:#0a0f1e;margin-bottom:.5rem;}',
     '.sn-success p{color:#718096;font-size:.9rem;}',
-    '@media(max-width:540px){.sn-modal{padding:1.75rem 1.25rem;}.sn-row{grid-template-columns:1fr;gap:0;}}'
+    '@media(max-width:540px){.sn-modal{padding:1.75rem 1.25rem;}.sn-row{grid-template-columns:1fr;gap:0;}}',
+
+    /* Lang switcher */
+    '.lang-switcher{position:relative;}',
+    '.lang-btn{background:transparent;border:1px solid var(--sn-border);color:var(--sn-text-sec);border-radius:20px;padding:0.35rem 0.85rem;font-size:0.8rem;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:5px;font-family:inherit;transition:color .15s,border-color .15s;white-space:nowrap;}',
+    '.lang-btn:hover,.lang-switcher.open .lang-btn{color:var(--sn-blue);border-color:var(--sn-blue);}',
+    '.lang-menu{display:none;position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid var(--sn-border);border-radius:10px;overflow:hidden;min-width:130px;box-shadow:0 8px 24px rgba(12,35,62,0.12);z-index:201;}',
+    '.lang-switcher.open .lang-menu{display:block;}',
+    '.lang-item{display:block;padding:0.6rem 1rem;color:var(--sn-text-sec);text-decoration:none;font-size:0.85rem;font-weight:400;transition:background .15s,color .15s;}',
+    '.lang-item:hover{background:var(--sn-blue-tint);color:var(--sn-blue);}',
+    '.lang-item.lang-active{color:var(--sn-blue);font-weight:600;pointer-events:none;}'
   ].join('');
   document.head.appendChild(styleEl);
 
@@ -268,6 +278,19 @@
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') window.closeContact();
+    });
+  }
+
+  if (!window.toggleLang) {
+    window.toggleLang = function (btn) {
+      btn.closest('.lang-switcher').classList.toggle('open');
+    };
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.lang-switcher')) {
+        document.querySelectorAll('.lang-switcher.open').forEach(function (el) {
+          el.classList.remove('open');
+        });
+      }
     });
   }
 
