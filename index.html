@@ -1116,7 +1116,7 @@
         .search-input {
             color: var(--navy);
             border-color: var(--border);
-            border-radius: 100px;
+            border-radius: 10px;
             padding-left: 3.25rem;
             padding-right: 3.5rem;
         }
@@ -1684,52 +1684,6 @@
         }
 
         /* ── Sticky search strip ── */
-        .sticky-search-strip {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 95;
-            background: #fff;
-            border-bottom: 1px solid var(--border);
-            padding: 0.55rem 1rem;
-            box-shadow: 0 4px 16px rgba(12,35,62,0.07);
-            transform: translateY(-120%);
-            transition: transform 0.22s cubic-bezier(.4,0,.2,1);
-        }
-        .sticky-search-strip.visible { transform: translateY(0); }
-        .sticky-search-inner {
-            max-width: 680px;
-            margin: 0 auto;
-        }
-        .sticky-search-box { position: relative; }
-        .sticky-search-icon {
-            position: absolute;
-            left: 0.85rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-muted);
-            display: flex;
-            pointer-events: none;
-        }
-        .sticky-search-input {
-            width: 100%;
-            padding: 0.5rem 1rem 0.5rem 2.6rem;
-            border: 1.5px solid var(--border);
-            border-radius: 10px;
-            font-size: 0.88rem;
-            font-family: inherit;
-            color: var(--navy);
-            background: var(--bg);
-            outline: none;
-            transition: border-color 0.15s, box-shadow 0.15s;
-            box-sizing: border-box;
-        }
-        .sticky-search-input:focus {
-            border-color: var(--blue);
-            box-shadow: 0 0 0 3px rgba(28,95,234,0.1);
-            background: white;
-        }
 
         @media (max-width: 640px) {
             .as-modal-card { padding: 1.5rem 1.1rem 1.25rem; max-height: 92vh; }
@@ -2014,17 +1968,6 @@
     </style>
 </head>
 <body>
-    <!-- Sticky search strip — appears when hero search scrolls out of view -->
-    <div class="sticky-search-strip" id="stickySearchStrip">
-        <div class="sticky-search-inner">
-            <div class="sticky-search-box">
-                <span class="sticky-search-icon">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                </span>
-                <input type="text" class="sticky-search-input" id="stickySearchInput" placeholder="Search an artist…" autocomplete="off">
-            </div>
-        </div>
-    </div>
 
     <div class="container">
         <div class="hero">
@@ -3096,29 +3039,48 @@
             if (_pwaBtn) _pwaBtn.style.display = 'none';
         }
 
-        // Sticky search strip — show when hero search box scrolls out of view
+        // Sticky search — the original .search-box sticks below navbar when scrolled past
         (function () {
-            var strip = document.getElementById('stickySearchStrip');
-            var stickyInput = document.getElementById('stickySearchInput');
-            var mainInput = document.getElementById('searchInput');
-            var heroSearch = document.querySelector('.search-box');
-            if (!strip || !stickyInput || !mainInput) return;
+            var searchBox = document.querySelector('.search-box');
+            if (!searchBox || !('IntersectionObserver' in window)) return;
 
-            // Two-way sync between sticky and main search inputs
-            stickyInput.addEventListener('input', function () {
-                mainInput.value = stickyInput.value;
-                mainInput.dispatchEvent(new Event('input', { bubbles: true }));
-            });
-            mainInput.addEventListener('input', function () {
-                if (document.activeElement !== stickyInput) stickyInput.value = mainInput.value;
-            });
+            // Zero-height sentinel marks the original top edge of the search box
+            var sentinel = document.createElement('div');
+            sentinel.style.cssText = 'height:0;pointer-events:none';
+            searchBox.parentNode.insertBefore(sentinel, searchBox);
 
-            // Show/hide strip when hero search box leaves viewport
-            if ('IntersectionObserver' in window && heroSearch) {
-                new IntersectionObserver(function (entries) {
-                    strip.classList.toggle('visible', !entries[0].isIntersecting);
-                }, { threshold: 0 }).observe(heroSearch);
+            // Spacer keeps layout height when search box is fixed
+            var spacer = document.createElement('div');
+            spacer.style.display = 'none';
+            searchBox.parentNode.insertBefore(spacer, searchBox.nextSibling);
+
+            var isFixed = false;
+            function navH() {
+                var nav = document.getElementById('sn-navbar');
+                return nav ? nav.offsetHeight : 63;
             }
+
+            function stick() {
+                if (isFixed) return;
+                isFixed = true;
+                spacer.style.cssText = 'height:' + searchBox.offsetHeight + 'px;margin-bottom:1.25rem';
+                var top = navH();
+                searchBox.style.cssText = 'position:fixed;top:' + top + 'px;left:50%;transform:translateX(-50%);width:90%;max-width:700px;z-index:95;background:#fff;box-shadow:0 4px 16px rgba(12,35,62,0.07);margin:0;padding:0;border-radius:10px';
+            }
+            function unstick() {
+                if (!isFixed) return;
+                isFixed = false;
+                spacer.style.cssText = 'display:none';
+                searchBox.style.cssText = '';
+            }
+
+            window.addEventListener('resize', function () {
+                if (isFixed) searchBox.style.top = navH() + 'px';
+            });
+
+            new IntersectionObserver(function (entries) {
+                entries[0].isIntersecting ? unstick() : stick();
+            }, { rootMargin: '-' + navH() + 'px 0px 0px 0px', threshold: 0 }).observe(sentinel);
         })();
 
         function showIOSInstallSheet() {

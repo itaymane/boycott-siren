@@ -190,21 +190,6 @@
     // Inject navbar at very top of body
     document.body.insertAdjacentHTML('afterbegin', navbarHTML);
 
-    // Fix sticky-search top offset to match actual navbar height (index.html only)
-    if (isHome) {
-      var strip = document.getElementById('stickySearchStrip');
-      var snNav = document.getElementById('sn-navbar');
-      if (strip && snNav) {
-        function updateStripTop() { strip.style.top = snNav.offsetHeight + 'px'; }
-        updateStripTop();
-        window.addEventListener('resize', updateStripTop);
-        window.addEventListener('load', updateStripTop);
-        if (document.fonts && document.fonts.ready) {
-          document.fonts.ready.then(updateStripTop);
-        }
-      }
-    }
-
     // Inject modal + footer at end of body
     document.body.insertAdjacentHTML('beforeend', modalHTML + footerHTML);
 
