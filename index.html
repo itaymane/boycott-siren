@@ -2033,7 +2033,16 @@
             .cta-mobile { display: inline; }
             .hero { margin-left: -1rem; margin-right: -1rem; border-radius: 0 0 16px 16px; }
         }
+        /* Hide install CTAs when PWA is already installed */
+        .pwa-installed .hero-cta { display: none !important; }
+        .pwa-installed #sn-navbar .sn-btn-cta { display: none !important; }
     </style>
+    <script>
+        // Hide "Get the App" CTAs if PWA is already installed
+        if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+            document.documentElement.classList.add('pwa-installed');
+        }
+    </script>
 </head>
 <body>
 
