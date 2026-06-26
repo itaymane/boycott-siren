@@ -1216,7 +1216,7 @@
         .f-tab:hover { border-color: var(--blue); color: var(--blue); }
         .f-tab.active { background: var(--blue); color: white; border-color: transparent; }
         .f-tab[data-stance="WELCOMES_ALL"].active { background: #0891b2; }
-        .f-tab[data-stance="BOYCOTTER"].active { background: #dc2626; }
+        .f-tab[data-stance="BOYCOTTER"].active { background: var(--blue); }
         .f-divider { width: 1px; height: 20px; background: var(--border); align-self: center; flex-shrink: 0; margin: 0 0.15rem; }
 
         /* Cards */
@@ -1802,7 +1802,7 @@
             .grid-header { padding: 1rem 0 0.5rem; }
 
             /* ── Artist rows ── */
-            .artists-grid { gap: 0.35rem; margin-bottom: 5rem; }
+            .artists-grid { grid-template-columns: 1fr; gap: 0.35rem; margin-bottom: 5rem; }
             .artist-card {
                 padding: 0.7rem 0.85rem;
                 border-radius: 10px;
