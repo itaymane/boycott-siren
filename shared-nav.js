@@ -59,9 +59,10 @@
     '.sn-nav-link:hover{color:var(--sn-navy);background:rgba(12,35,62,0.06);}',
     '.sn-nav-link.sn-active{color:var(--sn-blue);font-weight:600;}',
     '.sn-nav-right{display:flex;align-items:center;margin-left:1.5rem;}',
-    '.sn-btn-cta{background:var(--sn-blue);color:#fff!important;border:none;padding:0.55rem 1.2rem;border-radius:100px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none!important;font-family:inherit;box-shadow:0 4px 12px rgba(28,95,234,0.3);transition:background .15s,box-shadow .15s;white-space:nowrap;display:inline-block;}',
+    '.sn-btn-cta{background:var(--sn-blue);color:#fff!important;border:none;padding:0.55rem 1.2rem;border-radius:10px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none!important;font-family:inherit;box-shadow:0 4px 12px rgba(28,95,234,0.3);transition:background .15s,box-shadow .15s;white-space:nowrap;display:inline-block;}',
     '.sn-btn-cta:hover{background:var(--sn-blue-mid);box-shadow:0 6px 20px rgba(28,95,234,0.4);}',
-    '@media(max-width:760px){.sn-nav-links{display:none!important;}}',
+    '.sn-cta-short{display:none;}',
+    '@media(max-width:760px){.sn-nav-links{display:none!important;}.sn-cta-full{display:none;}.sn-cta-short{display:inline;}}',
 
     /* Footer strip */
     '.sn-footer{position:fixed;bottom:0;left:0;right:0;z-index:190;display:flex;justify-content:center;align-items:center;background:var(--sn-navy);padding:0.6rem 1rem;gap:0;font-family:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}',
@@ -136,7 +137,7 @@
     + '</div>'
     + '<div class="sn-nav-right">'
     + '<div class="lang-switcher" style="margin-right:0.5rem"><button class="lang-btn" onclick="if(window.toggleLang)toggleLang(this)" aria-label="Language"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d=\'M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\'/></svg></button><div class="lang-menu"><a href="/" class="lang-item lang-active">English</a><a href="/he/" class="lang-item">עברית</a></div></div>'
-    + '<a href="/boycott-siren-extension.zip" download onclick="if(window.gtag)gtag(\'event\',\'extension_download\');" class="sn-btn-cta">Get Browser Alerts</a>'
+    + '<a href="/boycott-siren-extension.zip" download onclick="if(window.gtag)gtag(\'event\',\'extension_download\');" class="sn-btn-cta"><span class="sn-cta-full">Get Browser Alerts</span><span class="sn-cta-short">Get the App</span></a>'
     + '</div>'
     + '</div></div></nav>';
 
