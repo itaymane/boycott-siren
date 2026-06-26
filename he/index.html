@@ -609,7 +609,7 @@
         }
         .artists-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
             margin-bottom: 4rem;
         }
@@ -729,13 +729,14 @@
         /* ── Responsive ── */
         @media (max-width: 768px) {
             .container { padding: 0 1rem; }
-            .hero { padding: 3rem 0 2rem; }
+            .hero { padding: 3rem 0 2rem; margin-left: -1rem; margin-right: -1rem; border-radius: 0 0 16px 16px; }
             .hero p { font-size: 1rem; }
-            .artists-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+            .artists-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
             .stats { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 480px) {
             .hero { padding: 2.5rem 0 1.5rem; }
+            .artists-grid { grid-template-columns: 1fr; }
             .stats { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
             .stat-number { font-size: 1.75rem; }
         }
@@ -793,7 +794,7 @@
             background: linear-gradient(135deg, #0047ab, #4a90e2);
             color: white;
             padding: 0.75rem 1.5rem;
-            border-radius: 30px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 700;
             font-size: 0.95rem;
@@ -1134,7 +1135,188 @@
         }
         .lang-item:hover { background: rgba(68,215,255,0.1); color: #44D7FF; }
         .lang-item.lang-active { color: #44D7FF; font-weight: 700; pointer-events: none; }
+
+        /* ── Search button ── */
+        .search-btn {
+            position: absolute;
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--blue);
+            border: none;
+            border-radius: 10px;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            transition: background 0.15s;
+            flex-shrink: 0;
+        }
+        .search-btn:hover { background: var(--blue-mid); }
+
+        /* ── Filter tabs row ── */
+        .filter-section {
+            padding: 0.2rem 0 0.2rem;
+            width: 100%;
+        }
+        .filter-tabs-row {
+            display: flex;
+            justify-content: center;
+            gap: 0.4rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 2px;
+            width: 100%;
+        }
+        .filter-tabs-row::-webkit-scrollbar { display: none; }
+        .f-tab {
+            flex-shrink: 0;
+            padding: 0.3rem 0.75rem;
+            border-radius: 8px;
+            border: 1.5px solid rgba(255,255,255,0.3);
+            background: transparent;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.15s, border-color 0.15s, color 0.15s;
+            white-space: nowrap;
+            line-height: 1.4;
+        }
+        .f-tab:hover { border-color: rgba(255,255,255,0.7); color: #fff; background: rgba(255,255,255,0.1); }
+        .f-tab.active { background: rgba(255,255,255,0.95); color: #0C233E; border-color: transparent; }
+        .f-tab[data-stance="WELCOMES_ALL"].active { background: #0891b2; color: white; }
+        .f-tab[data-stance="BOYCOTTER"].active { background: #dc2626; color: white; }
+        .f-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.25); align-self: center; flex-shrink: 0; margin: 0 0.15rem; }
+
+        /* ── Trust icons row ── */
+        .hero-trust {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 2.75rem;
+            flex-wrap: wrap;
+            margin: 0.6rem 0 0.5rem;
+        }
+        .hero-trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+            color: rgba(255,255,255,0.82);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0;
+        }
+        .hero-trust-item svg { color: rgba(255,255,255,0.82); width: 26px; height: 26px; }
+        @media (max-width: 560px) {
+            .hero-trust { gap: 1.5rem; }
+            .hero-trust-item { font-size: 0.72rem; }
+        }
+
+        /* ── Hero stats ── */
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.25rem;
+            margin: 0.5rem 0 0;
+            flex-wrap: wrap;
+        }
+        .hero-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.1rem;
+        }
+        .hero-stat-num {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+        .hero-stat-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.55);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* ── Dark hero: concert background ── */
+        .hero {
+            background: none;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: -20px;
+            background: url('../concert.jpg') center/cover no-repeat;
+            filter: blur(1px);
+            z-index: 0;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 55, 180, 0.84);
+            border-radius: 0 0 24px 24px;
+            z-index: 1;
+        }
+        .hero > *:not(.hero-bg) { position: relative; z-index: 2; }
+
+        /* Text colors on dark bg */
+        .hero h1 { color: #fff; }
+        .hero h1 span {
+            background: none;
+            -webkit-text-fill-color: #6AADFF;
+            color: #6AADFF;
+        }
+        .hero p.hero-desc { color: rgba(255,255,255,0.78); }
+
+        /* Hero CTA */
+        .hero-cta { margin: 0.75rem 0 0.25rem; }
+        .hero-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.93);
+            border: none;
+            color: #0C233E;
+            padding: 0.55rem 1.1rem;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            font-family: inherit;
+            transition: background 0.15s, box-shadow 0.15s;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+        }
+        .hero-cta-btn:hover { background: #fff; box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
+        .hero-cta-icon { height: 18px; width: auto; }
+        .cta-mobile { display: none; }
+        @media (max-width: 760px) {
+            .cta-desktop { display: none; }
+            .cta-mobile { display: inline; }
+        }
+
+        /* Hide install CTAs when PWA is already installed */
+        .pwa-installed .hero-cta { display: none !important; }
+        .pwa-installed .nav-cta-wrap { display: none !important; }
     </style>
+    <script>
+        if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+            document.documentElement.classList.add('pwa-installed');
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -1171,50 +1353,78 @@
 
     <div class="container">
         <div class="hero">
-            <div class="hero-eyebrow">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
-                כלי אחריות האמנים
-            </div>
+            <div class="hero-bg"></div>
             <h1>דע <span>לפני</span> שאתה הולך</h1>
             <p class="hero-desc">בדוק מידע ציבורי מגובה מקורות על אמנים לפני שאתה קונה כרטיס, מאזין, משתף, מזמין או תומך.</p>
-            <p class="hero-count"><span id="heroCount">294</span>+ אמנים מתועדים &nbsp;·&nbsp; מקורות תקשורת מיינסטרים &nbsp;·&nbsp; עודכן לאחרונה: מאי 2026</p>
+
+            <div class="hero-trust">
+                <div class="hero-trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    מקורות מאומתים
+                </div>
+                <div class="hero-trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    פעולות פומביות
+                </div>
+                <div class="hero-trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+                    הבחירה שלך
+                </div>
+            </div>
 
             <div class="search-box">
                 <span class="search-icon">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 </span>
-                <input type="text" class="search-input" id="searchInput" placeholder="חפש אמנים..." autocomplete="off">
+                <input type="text" class="search-input" id="searchInput" placeholder="חפש אמן, להקה..." autocomplete="off">
+                <button class="search-btn" aria-label="חיפוש">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
                 <div class="autocomplete-dropdown" id="autocompleteList"></div>
             </div>
-            
-            <div class="hero-chips">
-                <span class="hero-chip">⚡ Browser Alerts</span>
-                <span class="hero-chip">✅ מקורות מאומתים</span>
-                <span class="hero-chip">🔍 294+ אמנים</span>
+
+            <!-- CTA button -->
+            <div class="hero-cta">
+                <a href="/boycott-siren-extension.zip" download onclick="if(window.gtag)gtag('event','extension_download');" class="hero-cta-btn">
+                    <img src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/792cde80b_Group44.png" alt="" class="hero-cta-icon">
+                    <span class="cta-desktop">הוסף לכרום</span>
+                    <span class="cta-mobile">הורד את האפליקציה</span>
+                </a>
             </div>
 
-            <div class="filters">
-                <div class="filter-group">
-                    <span class="filter-label">עמדה:</span>
-                    <button class="filter-btn stance-btn active" data-stance="all">הכל</button>
-                    <button class="filter-btn stance-btn" data-stance="BOYCOTTER">מחרימים</button>
-                    <button class="filter-btn stance-btn" data-stance="WELCOMES_ALL">Welcomes All</button>
-                </div>
-                <div class="filter-group">
-                    <span class="filter-label">קטגוריה:</span>
-                    <button class="filter-btn category-btn active" data-filter="all">הכל</button>
-                    <button class="filter-btn category-btn" data-filter="musician">מוזיקאים</button>
-                    <button class="filter-btn category-btn" data-filter="actor">שחקנים</button>
-                    <button class="filter-btn category-btn" data-filter="director">במאים</button>
-                </div>
-                <div class="filter-group">
-                    <span class="filter-label">רמה:</span>
-                    <button class="filter-btn level-btn active" data-level="all">הכל</button>
-                    <button class="filter-btn level-btn level-btn-CRITICAL" data-level="CRITICAL">● קריטי</button>
-                    <button class="filter-btn level-btn level-btn-HIGH" data-level="HIGH">● גבוה</button>
-                    <button class="filter-btn level-btn level-btn-LOW" data-level="LOW">● נמוך</button>
+            <!-- Filter tabs -->
+            <div class="filter-section" style="margin-top:0.5rem">
+                <div class="filter-tabs-row" id="filterTabsRow">
+                    <button class="f-tab active" data-type="all">הכל</button>
+                    <button class="f-tab" data-type="cat" data-filter="musician">מוזיקאים</button>
+                    <button class="f-tab" data-type="cat" data-filter="actor">שחקנים</button>
+                    <button class="f-tab" data-type="cat" data-filter="director">במאים</button>
+                    <button class="f-tab" data-type="cat" data-filter="other">סופרים</button>
+                    <span class="f-divider" aria-hidden="true"></span>
+                    <button class="f-tab" data-type="stance" data-stance="BOYCOTTER">מחרימים</button>
+                    <button class="f-tab" data-type="stance" data-stance="WELCOMES_ALL">Welcomes All</button>
                 </div>
             </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-num" id="statMusicians">196</span>
+                    <span class="hero-stat-label">מוזיקאים</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num" id="statActors">33</span>
+                    <span class="hero-stat-label">שחקנים</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num" id="statDirectors">11</span>
+                    <span class="hero-stat-label">במאים</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num" id="statOther">12</span>
+                    <span class="hero-stat-label">סופרים</span>
+                </div>
+            </div>
+
         </div>
 
         <details class="levels-legend">
@@ -1707,6 +1917,37 @@
                 document.querySelectorAll('.level-btn').forEach(b => b.classList.remove('active'));
                 e.target.classList.add('active');
                 levelFilter = e.target.dataset.level;
+                renderArtists();
+            });
+        });
+
+        // Filter tabs (new unified tab row)
+        function updateTabActiveStates() {
+            document.querySelectorAll('.f-tab').forEach(b => {
+                const type = b.dataset.type;
+                if (type === 'all') {
+                    b.classList.toggle('active', stanceFilter === 'all' && categoryFilter === 'all');
+                } else if (type === 'stance') {
+                    b.classList.toggle('active', stanceFilter === b.dataset.stance);
+                } else if (type === 'cat') {
+                    b.classList.toggle('active', categoryFilter === b.dataset.filter);
+                }
+            });
+        }
+
+        document.querySelectorAll('.f-tab').forEach(btn => {
+            btn.addEventListener('click', e => {
+                const t = e.currentTarget;
+                if (t.dataset.type === 'all') {
+                    stanceFilter = 'all';
+                    categoryFilter = 'all';
+                    levelFilter = 'all';
+                } else if (t.dataset.type === 'stance') {
+                    stanceFilter = (stanceFilter === t.dataset.stance) ? 'all' : t.dataset.stance;
+                } else if (t.dataset.type === 'cat') {
+                    categoryFilter = (categoryFilter === t.dataset.filter) ? 'all' : t.dataset.filter;
+                }
+                updateTabActiveStates();
                 renderArtists();
             });
         });
