@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="/shared-nav.js?v=5"></script>
+    <script src="./shared-nav.js?v=5"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZRJ6TZY2Y"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -1968,17 +1968,25 @@
 
         /* ── Dark hero: concert background ── */
         .hero {
-            background: url('concert.jpg') center/cover no-repeat;
+            background: none;
             position: relative;
             overflow: hidden;
         }
+        /* Blurred concert image layer */
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            background: url('concert.jpg') center/cover no-repeat;
+            filter: blur(7px);
+            z-index: -1;
+        }
+        /* Dark overlay on top of blurred image */
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(8, 15, 40, 0.65);
-            backdrop-filter: blur(3px);
-            -webkit-backdrop-filter: blur(3px);
+            background: rgba(8, 15, 40, 0.62);
             border-radius: 0 0 24px 24px;
             z-index: 0;
         }
@@ -2004,29 +2012,28 @@
             background: rgba(255,255,255,0.08) !important;
         }
 
-        /* Hero CTA — "Add to Chrome" white pill with logo */
-        .hero-cta { margin: 0.9rem 0 0.4rem; }
+        /* Hero CTA — "Add to Chrome" button matching site style */
+        .hero-cta { margin: 0.75rem 0 0.25rem; }
         .hero-cta-btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.6rem;
-            background: rgba(255,255,255,0.95);
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.93);
             border: none;
             color: #0C233E;
-            padding: 0.72rem 1.75rem;
-            border-radius: 100px;
-            font-size: 0.92rem;
+            padding: 0.55rem 1.1rem;
+            border-radius: 10px;
+            font-size: 0.88rem;
             font-weight: 600;
             text-decoration: none;
             font-family: inherit;
-            transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+            transition: background 0.15s, box-shadow 0.15s;
             cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.28);
-            letter-spacing: 0.01em;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.18);
         }
-        .hero-cta-btn:hover { background: #fff; transform: translateY(-1px); box-shadow: 0 8px 28px rgba(0,0,0,0.35); }
-        .hero-cta-icon { height: 20px; width: auto; }
-        .hero-cta-free { color: #6B7280; font-weight: 400; margin-left: 0.1rem; }
+        .hero-cta-btn:hover { background: #fff; box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
+        .hero-cta-icon { height: 18px; width: auto; }
+        .hero-cta-free { color: #6B7280; font-weight: 400; }
     </style>
 </head>
 <body>
