@@ -739,7 +739,6 @@ const artistsData = [
     sources: `<a href="https://consequence.net/2018/05/portishead-join-cultural-boycott-of-israel/">Consequence</a> | <a href="https://www.nme.com/news/music/wolf-alice-shame-portishead-lend-support-artistsforpalestine-2322658">NME</a>`
   },
   {
-    name: "PJ Harvey",
     level: "LOW",
     statement: "British musician whose 2011 Mercury Prize-winning album Let England Shake addresses the human cost of war; performed at Glastonbury 2024 in front of Palestine flags with anti-war material; listed as a BDS cultural boycott supporter",
 
@@ -1502,7 +1501,6 @@ const artistsData = [
     sources: `<a href="https://www.billboard.com/music/music-news/lizzo-supports-palestine-sudan-congo-college-protests-instagram-1235681873/">Billboard</a> | <a href="https://www.nme.com/news/music/lizzo-shares-support-for-palestine-sudan-dr-congo-and-college-protests-we-aint-free-til-we-all-free-3756245">NME</a>`
   },
   {
-    name: "Thom Yorke",
     level: "LOW",
     statement: "Condemned Netanyahu and called the region's blockade of Gaza aid 'horrific' in a May 2025 Instagram statement; stated Radiohead would 'absolutely not' return to the region (October 2025). Also condemned Hamas and explicitly rejected boycott calls — stance is critical of regional government without fully endorsing BDS",
 
