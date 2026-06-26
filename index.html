@@ -1972,25 +1972,31 @@
             position: relative;
             overflow: hidden;
         }
-        /* Blurred concert image layer */
-        .hero::after {
-            content: '';
+        /* Real DOM element for blurred bg — avoids pseudo-element stacking issues */
+        .hero-bg {
             position: absolute;
             inset: -20px;
             background: url('concert.jpg') center/cover no-repeat;
             filter: blur(7px);
-            z-index: -1;
+            z-index: 0;
         }
-        /* Dark overlay on top of blurred image */
+        /* Dark overlay */
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
             background: rgba(8, 15, 40, 0.62);
             border-radius: 0 0 24px 24px;
-            z-index: 0;
+            z-index: 1;
         }
-        .hero > * { position: relative; z-index: 1; }
+        .hero > *:not(.hero-bg) { position: relative; z-index: 2; }
+
+        /* Navbar: dark to match hero */
+        #sn-navbar {
+            background: rgba(8, 15, 40, 0.88) !important;
+            box-shadow: none !important;
+        }
+        #sn-navbar .sn-logo img { filter: brightness(0) invert(1); }
 
         /* Text colors on dark bg */
         .hero h1 { color: #fff; }
@@ -2040,6 +2046,7 @@
 
     <div class="container">
         <div class="hero">
+            <div class="hero-bg"></div>
             <h1>Know <span>Before</span><br class="mob-br"> You Go</h1>
             <p class="hero-desc">ArtSiren brings transparency to the artists you support. Before you buy, stream, share, or show up.</p>
 
@@ -2073,7 +2080,7 @@
             <div class="hero-cta">
                 <a href="/boycott-siren-extension.zip" download onclick="if(window.gtag)gtag('event','extension_download');" class="hero-cta-btn">
                     <img src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/792cde80b_Group44.png" alt="" class="hero-cta-icon">
-                    Add to Chrome <span class="hero-cta-free">— Free</span>
+                    Add to Chrome
                 </a>
             </div>
 
