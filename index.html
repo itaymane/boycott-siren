@@ -656,7 +656,7 @@
         }
         .artists-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
             margin-bottom: 4rem;
         }
@@ -803,13 +803,14 @@
             .container { padding: 0 1rem; }
             .hero { padding: 3rem 0 2rem; }
             .hero p { font-size: 1rem; }
-            .artists-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+            .artists-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
             .stats { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 480px) {
             .hero { padding: 2.5rem 0 1.5rem; }
             .stats { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
             .stat-number { font-size: 1.75rem; }
+            .artists-grid { grid-template-columns: 1fr; }
         }
 
         /* ── Levels Legend ── */
