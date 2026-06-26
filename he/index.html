@@ -1314,6 +1314,9 @@
     </style>
     <script>
         if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+            localStorage.setItem('pwa-installed', '1');
+            document.documentElement.classList.add('pwa-installed');
+        } else if (localStorage.getItem('pwa-installed')) {
             document.documentElement.classList.add('pwa-installed');
         }
     </script>
