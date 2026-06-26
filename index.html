@@ -1993,6 +1993,12 @@
 
         /* Text colors on dark bg */
         .hero h1 { color: #fff; }
+        .hero h1 span {
+            background: linear-gradient(135deg, #38CFFF 0%, #00AAFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
         .hero p.hero-desc { color: rgba(255,255,255,0.78); }
         .hero .hero-trust-item { color: rgba(255,255,255,0.82); }
         .hero .hero-trust-item svg { color: rgba(255,255,255,0.82); }
