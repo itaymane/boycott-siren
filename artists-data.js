@@ -1,6 +1,6 @@
 // ArtSiren Artist Database — Chrome Extension
-// Total: 228 verified artists
-// Last updated: 2026-04-25
+// Total: 243 verified artists
+// Last updated: 2026-06-26
 
 const artistsData = [
   {
@@ -1484,5 +1484,95 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed the Film Workers for Palestine pledge (September 2025) as a notable initial signatory, refusing to work with Israeli film institutions complicit in genocide; Oscar-nominated actress known for An Officer and a Gentleman and Terms of Endearment.",
     sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-film-workers-boycott-israel-rcna215899">NBC News</a>`
+  },
+  {
+    name: "Melissa Barrera",
+    level: "CRITICAL",
+    statement: "Fired from Scream 7 in November 2023 after posting daily pro-Palestinian content on Instagram comparing Gaza to a concentration camp and raising funds for Palestinian aid organisations; one of the most high-profile career consequences for a celebrity taking an anti-Israel stance.",
+    sources: `<a href="https://variety.com/2023/film/news/scream-producers-explain-melissa-barrera-fired-antisemitism-1235804914/">Variety</a> | <a href="https://www.rollingstone.com/tv-movies/tv-movie-features/melissa-barrera-scream-firing-israel-palestinians-jenna-ortega-your-monster-sundance-1234953075/">Rolling Stone</a> | <a href="https://deadline.com/2024/11/melissa-barrera-scream-7-firing-1236188498/">Deadline</a>`
+  },
+  {
+    name: "Hannah Einbinder",
+    level: "CRITICAL",
+    statement: "Said 'Free Palestine' in her Emmy acceptance speech at the 2025 Emmy Awards; signed the Film Workers for Palestine boycott pledge; stated it is her 'obligation as a Jewish person to distinguish Jews from the State of Israel.'",
+    sources: `<a href="https://www.hollywoodreporter.com/news/politics-news/emmy-winner-hannah-einbinder-free-palestine-comment-1236371665/">Hollywood Reporter</a> | <a href="https://www.npr.org/2025/09/19/nx-s1-5536976/einbinder-bardem-israeli-film-boycott-gaza">NPR</a> | <a href="https://deadline.com/2025/09/hannah-einbinder-emmys-palestine-interview-1236532131/">Deadline</a>`
+  },
+  {
+    name: "Adam McKay",
+    level: "CRITICAL",
+    statement: "Signed the Film Workers for Palestine pledge (September 2025), committing to boycott Israeli film institutions 'implicated in genocide and apartheid against the Palestinian people'; director of The Big Short, Don't Look Up and Vice.",
+    sources: `<a href="https://www.rollingstone.com/tv-movies/tv-movie-news/ayo-edebiri-olivia-colman-film-industry-israel-boycott-gaza-1235423495/">Rolling Stone</a> | <a href="https://www.npr.org/2025/09/09/nx-s1-5535578/hollywood-stars-boycott-israeli-film-companies-in-response-to-gaza-crisis">NPR</a> | <a href="https://deadline.com/2025/09/film-workers-for-palestine-ava-duvernay-olivia-colman-1236511823/">Deadline</a>`
+  },
+  {
+    name: "Emma Seligman",
+    level: "CRITICAL",
+    statement: "Was among the original 1,200 signatories of the Film Workers for Palestine pledge (2025), refusing to work with Israeli film institutions 'implicated in genocide and apartheid'; director of Bottoms and Shiva Baby.",
+    sources: `<a href="https://www.rollingstone.com/tv-movies/tv-movie-news/ayo-edebiri-olivia-colman-film-industry-israel-boycott-gaza-1235423495/">Rolling Stone</a> | <a href="https://www.hollywoodreporter.com/movies/movie-news/ayo-edebiri-mark-ruffalo-boycott-israeli-film-institutions-1236364989/">Hollywood Reporter</a>`
+  },
+  {
+    name: "Morgan Spector",
+    level: "CRITICAL",
+    statement: "Signed the Film Workers for Palestine boycott pledge (2025) and stated in a Rolling Stone interview that he feels 'a greater responsibility as an American who is seen as Jewish to speak up about what's happening in Gaza'; known for The Gilded Age.",
+    sources: `<a href="https://www.rollingstone.com/tv-movies/tv-movie-news/ayo-edebiri-olivia-colman-film-industry-israel-boycott-gaza-1235423495/">Rolling Stone</a> | <a href="https://deadline.com/2025/09/film-workers-for-palestine-ava-duvernay-olivia-colman-1236511823/">Deadline</a>`
+  },
+  {
+    name: "Jhumpa Lahiri",
+    level: "CRITICAL",
+    statement: "Signed the October 2024 literary boycott pledging not to allow her books to be translated for the Israeli market and refusing cooperation with Israeli cultural institutions 'complicit in violating Palestinian rights'; Pulitzer Prize-winning author of The Namesake.",
+    sources: `<a href="https://www.haaretz.com/israel-news/2024-10-29/ty-article/.premium/1-000-literary-figures-boycott-israeli-publishers-complicit-in-palestinian-oppression/00000192-d832-d4a2-ab97-d93f8bd90000">Haaretz</a> | <a href="https://www.timesofisrael.com/sally-rooney-among-1000-authors-urging-boycott-of-israeli-cultural-institutions/">Times of Israel</a>`
+  },
+  {
+    name: "Percival Everett",
+    level: "CRITICAL",
+    statement: "Signed the October 2024 literary boycott pledging to boycott complicit Israeli cultural institutions; Pulitzer Prize-winning author of James.",
+    sources: `<a href="https://www.haaretz.com/israel-news/2024-10-29/ty-article/.premium/1-000-literary-figures-boycott-israeli-publishers-complicit-in-palestinian-oppression/00000192-d832-d4a2-ab97-d93f8bd90000">Haaretz</a> | <a href="https://www.timesofisrael.com/sally-rooney-among-1000-authors-urging-boycott-of-israeli-cultural-institutions/">Times of Israel</a>`
+  },
+  {
+    name: "Jonathan Lethem",
+    level: "CRITICAL",
+    statement: "Signed the October 2024 literary boycott pledging to boycott Israeli cultural institutions, refusing further Hebrew translations of his novels; author of Motherless Brooklyn and Fortress of Solitude.",
+    sources: `<a href="https://www.haaretz.com/israel-news/2024-10-29/ty-article/.premium/1-000-literary-figures-boycott-israeli-publishers-complicit-in-palestinian-oppression/00000192-d832-d4a2-ab97-d93f8bd90000">Haaretz</a> | <a href="https://www.timesofisrael.com/sally-rooney-among-1000-authors-urging-boycott-of-israeli-cultural-institutions/">Times of Israel</a>`
+  },
+  {
+    name: "Obongjayar",
+    level: "LOW",
+    statement: "Joined the No Music for Genocide initiative in 2025, geo-blocking his music from Israeli streaming platforms in protest of Israel's military campaign in Gaza; British-Nigerian singer-songwriter.",
+    sources: `<a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163">NME</a> | <a href="https://www.rollingstone.com/music/music-news/clairo-lucy-dacus-no-music-for-genocide-boycott-israel-gaza-1235445251/">Rolling Stone</a>`
+  },
+  {
+    name: "Jerry Seinfeld",
+    level: "CRITICAL",
+    statement: "Signed the October 2023 Creative Community for Peace letter condemning Hamas; visited Israel to meet with hostage families and soldiers; the most consistently outspoken Hollywood comedian supporting Israel following the October 7 attacks.",
+    sources: `<a href="https://www.hollywoodreporter.com/news/general-news/celebrities-entertainment-executives-sign-open-letter-support-israel-1235617300/">Hollywood Reporter</a> | <a href="https://www.npr.org/2024/03/01/1232497188/israel-hamas-celebrity-activism">NPR</a>`
+  },
+  {
+    name: "Debra Messing",
+    level: "CRITICAL",
+    statement: "Among the most outspoken pro-Israel voices in Hollywood: signed multiple pro-Israel letters, traveled to Israel with the IDF to document the October 7 aftermath, publicly rejected the Israeli film industry boycott, and stated she has 'never felt as proud of being a Jew.'",
+    sources: `<a href="https://www.hollywoodreporter.com/movies/movie-news/liev-schrieber-debra-messing-reject-israeli-film-boycott-1236385658/">Hollywood Reporter</a> | <a href="https://www.cnn.com/2025/02/07/entertainment/debra-messing-october-8-documentary">CNN</a> | <a href="https://www.ynetnews.com/culture/article/r1ixu9frxg">Ynet</a>`
+  },
+  {
+    name: "Liev Schreiber",
+    level: "CRITICAL",
+    statement: "Signed both the October 2023 pro-Israel letter and a subsequent letter rejecting the cultural boycott of Israel; led Hollywood figures opposed to the film industry boycott campaign; prominent Jewish voice in the debate.",
+    sources: `<a href="https://www.hollywoodreporter.com/movies/movie-news/liev-schrieber-debra-messing-reject-israeli-film-boycott-1236385658/">Hollywood Reporter</a> | <a href="https://www.jpost.com/israel-news/culture/article-868666">Jerusalem Post</a>`
+  },
+  {
+    name: "Gal Gadot",
+    level: "HIGH",
+    statement: "Signed the October 2023 Creative Community for Peace letter condemning Hamas and posted publicly: 'My heart is aching for the lives lost and families shattered. I'm praying for everyone affected by Hamas' terrorism'; Israeli-born actress known for Wonder Woman.",
+    sources: `<a href="https://www.hollywoodreporter.com/news/general-news/celebrities-entertainment-executives-sign-open-letter-support-israel-1235617300/">Hollywood Reporter</a> | <a href="https://variety.com/2023/tv/news/hollywood-open-letter-israel-support-hamas-war-1235753904/">Variety</a> | <a href="https://www.nme.com/news/film/hollywood-stars-sign-open-letter-support-israel-3514639">NME</a>`
+  },
+  {
+    name: "Gene Simmons",
+    level: "HIGH",
+    statement: "Signed the 2024 Creative Community for Peace letter supporting Israel's inclusion in Eurovision, stating those 'advocating to exclude an Israeli singer from Eurovision don't move the needle towards peace, but only further divide the world'; KISS co-founder.",
+    sources: `<a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a> | <a href="https://www.billboard.com/music/music-news/2024-eurovision-song-contest-open-letter-reject-israel-ban-1235607339/">Billboard</a>`
+  },
+  {
+    name: "Boy George",
+    level: "HIGH",
+    statement: "Signed the 2024 Creative Community for Peace letter supporting Israel's inclusion in Eurovision and publicly vowed he 'won't turn his back on his Jewish friends' amid calls to boycott Eurovision; Culture Club frontman.",
+    sources: `<a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a> | <a href="https://www.billboard.com/music/music-news/2024-eurovision-song-contest-open-letter-reject-israel-ban-1235607339/">Billboard</a>`
   }
 ];
