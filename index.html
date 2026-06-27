@@ -2082,7 +2082,7 @@
 
             <!-- CTA button -->
             <div class="hero-cta">
-                <a href="/boycott-siren-extension.zip" download onclick="if(window.gtag)gtag('event','extension_download');" class="hero-cta-btn">
+                <a href="/boycott-siren-extension.zip" download onclick="if(window.innerWidth<=640){event.preventDefault();installPWA();return false;}if(window.gtag)gtag('event','extension_download');" class="hero-cta-btn">
                     <img src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/792cde80b_Group44.png" alt="" class="hero-cta-icon">
                     <span class="cta-desktop">Add to Chrome</span>
                     <span class="cta-mobile">Get the App</span>
