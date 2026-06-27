@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,151 +13,662 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-    <title>Free Chrome Extension | ArtSiren â€“ Instant Artist Alerts</title>
-    <meta name="description" content="Install the free ArtSiren Chrome extension and get instant alerts when a boycotting artist appears on Ticketmaster or other ticket sites. Takes 30 seconds to install.">
+    <title>Chrome Extension | ArtSiren — Know Before You Buy</title>
+    <meta name="description" content="Install the free ArtSiren Chrome extension and get instant alerts when an artist appears on Ticketmaster, Spotify, YouTube and more. 250+ artists tracked with verified sources.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://artsiren.co/extension.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://artsiren.co/extension.html">
-    <meta property="og:title" content="Free Chrome Extension | ArtSiren â€“ Instant Artist Alerts">
-    <meta property="og:description" content="Get instant alerts when a boycotting artist appears on Ticketmaster. Free Chrome extension â€“ installs in 30 seconds.">
+    <meta property="og:title" content="Chrome Extension | ArtSiren — Know Before You Buy">
+    <meta property="og:description" content="Instant alerts when an artist you care about appears on Ticketmaster. Free Chrome extension — 250+ artists tracked.">
     <meta property="og:image" content="https://media.base44.com/images/public/user_699371e71a86c722ff3edc0b/ec507a643_01.png">
     <meta property="og:site_name" content="ArtSiren">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Free Chrome Extension | ArtSiren">
-    <meta name="twitter:description" content="Instant alerts when a boycotting artist appears on Ticketmaster. Free & installs in 30 seconds.">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ArtSiren Chrome Extension">
+    <meta name="twitter:description" content="Know before you buy. Instant artist alerts on Ticketmaster, Spotify & more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
-        .extension-content {
-            max-width: 900px;
-            margin: 4rem auto;
-            padding: 0 20px;
+        :root {
+            --blue: #1C5FEA;
+            --blue-mid: #1a52cc;
+            --blue-tint: rgba(28,95,234,0.08);
+            --navy: #0C233E;
+            --cyan: #44D7FF;
+            --text-primary: #0A1424;
+            --text-secondary: #6B7280;
+            --border: #DDE1ED;
+            --bg: #F8F9FB;
+            --card-bg: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(12,35,62,0.06);
+            --shadow-md: 0 4px 16px rgba(12,35,62,0.08);
+            --shadow-lg: 0 12px 40px rgba(12,35,62,0.12);
         }
-        .download-box {
-            background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
-            color: white;
-            padding: 3rem;
-            border-radius: 16px;
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { overflow-x: hidden; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            padding-bottom: 42px;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            background: linear-gradient(160deg, #0C233E 0%, #0d2d52 55%, #0f3566 100%);
+            padding: 5rem 1.5rem 4rem;
             text-align: center;
-            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
         }
-        .download-box h2 {
-            margin-bottom: 1rem;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(28,95,234,0.18) 0%, transparent 65%);
+            pointer-events: none;
         }
-        .install-steps {
-            display: grid;
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        .install-step {
-            background: var(--gray-50);
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary-blue);
-        }
-        .install-step h3 {
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-        }
-        .footer-trust {
-            position: fixed;
-            bottom: 0; left: 0; right: 0;
-            z-index: 90;
-            display: flex;
-            justify-content: center;
+        .hero-badge {
+            display: inline-flex;
             align-items: center;
-            background: #0C233E;
-            padding: 0.6rem 1rem;
-            gap: 0;
-        }
-        .footer-trust-copy {
-            color: rgba(255,255,255,0.3);
-            font-size: 0.72rem;
-            padding: 0.2rem 1.1rem 0.2rem 0;
-            margin-right: 0.5rem;
-            border-right: 1px solid rgba(255,255,255,0.12);
-        }
-        .footer-trust-link {
-            color: rgba(255,255,255,0.55);
-            text-decoration: none;
+            gap: 6px;
+            background: rgba(68,215,255,0.12);
+            border: 1px solid rgba(68,215,255,0.25);
+            color: var(--cyan);
             font-size: 0.75rem;
-            padding: 0.2rem 1rem;
-            border-right: 1px solid rgba(255,255,255,0.12);
-            transition: color 0.15s;
-            white-space: nowrap;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.9rem;
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
         }
-        .footer-trust-link:last-child { border-right: none; }
-        .footer-trust-link:hover { color: rgba(255,255,255,0.9); }
-        @media (max-width: 600px) {
-            .footer-trust-copy { display: none; }
-            .footer-trust-link { padding: 0.2rem 0.6rem; font-size: 0.68rem; }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.02em;
         }
-        body { padding-bottom: 42px; }
+        .hero h1 span { color: var(--cyan); }
+        .hero-sub {
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            color: rgba(255,255,255,0.7);
+            max-width: 540px;
+            margin: 0 auto 2.5rem;
+            font-weight: 400;
+        }
+        .hero-ctas {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .btn-chrome {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--blue);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 0.85rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            box-shadow: 0 6px 24px rgba(28,95,234,0.4);
+            transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+            font-family: inherit;
+        }
+        .btn-chrome:hover {
+            background: var(--blue-mid);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 32px rgba(28,95,234,0.5);
+        }
+        .btn-chrome svg { flex-shrink: 0; }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.85);
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.85rem 1.6rem;
+            border-radius: 12px;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.18);
+            transition: background 0.15s;
+            font-family: inherit;
+        }
+        .btn-secondary:hover { background: rgba(255,255,255,0.16); }
+        .hero-meta {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+        }
+        .hero-meta span { color: rgba(255,255,255,0.6); }
+
+        /* ── Mockup ── */
+        .mockup-wrap {
+            max-width: 400px;
+            margin: 3.5rem auto 0;
+            position: relative;
+        }
+        .mockup-browser {
+            background: #1e2533;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+        }
+        .browser-bar {
+            background: #2a3040;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .browser-dots { display: flex; gap: 5px; }
+        .browser-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+        }
+        .browser-dot:nth-child(1) { background: #FF5F56; }
+        .browser-dot:nth-child(2) { background: #FFBD2E; }
+        .browser-dot:nth-child(3) { background: #27C93F; }
+        .browser-url {
+            flex: 1;
+            background: #1e2533;
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.4);
+            font-family: monospace;
+        }
+        .browser-content {
+            background: #f5f5f5;
+            padding: 1rem;
+            min-height: 160px;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+        .browser-page-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #e8edf5 0%, #d6dde8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(100,120,150,0.3);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Extension overlay mockup */
+        .ext-overlay {
+            position: relative;
+            z-index: 10;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.22), 0 2px 8px rgba(0,0,0,0.12);
+            width: 260px;
+            overflow: hidden;
+            margin: 10px;
+            animation: floatIn 0.4s ease both;
+        }
+        @keyframes floatIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .ext-header {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .ext-close {
+            width: 22px; height: 22px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: #999; font-size: 13px; cursor: pointer;
+        }
+        .ext-brand {
+            display: flex; align-items: center; gap: 6px;
+            font-size: 0.78rem; font-weight: 700; color: #0C233E;
+        }
+        .ext-icon {
+            width: 20px; height: 20px;
+            background: #1C5FEA;
+            border-radius: 5px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .ext-body { padding: 14px 12px; }
+        .ext-artist { font-size: 1.05rem; font-weight: 700; color: #0A1424; margin-bottom: 6px; }
+        .ext-stmt {
+            font-size: 0.72rem; color: #6B7280; line-height: 1.5;
+            margin-bottom: 12px;
+            display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+        }
+        .ext-badge {
+            display: inline-block;
+            background: rgba(28,95,234,0.1);
+            color: #1C5FEA;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .ext-btn {
+            display: block;
+            background: #1C5FEA;
+            color: #fff;
+            text-align: center;
+            padding: 9px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* ── Section wrapper ── */
+        .section { padding: 5rem 1.5rem; }
+        .section-inner { max-width: 1060px; margin: 0 auto; }
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--blue);
+            margin-bottom: 0.75rem;
+        }
+        .section-title {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        .section-sub {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 520px;
+            line-height: 1.7;
+        }
+
+        /* ── Sites strip ── */
+        .sites-section {
+            background: #fff;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 1.5rem;
+        }
+        .sites-label {
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        .sites-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem 1.5rem;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .site-pill {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 0.4rem 1rem;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        .site-dot {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: var(--blue);
+        }
+
+        /* ── Features ── */
+        .features-section { background: var(--bg); }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.25rem;
+            margin-top: 3rem;
+        }
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.75rem;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .feature-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-3px);
+        }
+        .feature-icon {
+            width: 46px; height: 46px;
+            border-radius: 12px;
+            background: var(--blue-tint);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        .feature-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.4rem;
+        }
+        .feature-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* ── How it works ── */
+        .how-section { background: #fff; border-top: 1px solid var(--border); }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.9rem;
+        }
+        .step-num {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .step-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.2rem;
+        }
+        .step-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* ── Privacy strip ── */
+        .privacy-strip {
+            background: var(--blue-tint);
+            border: 1px solid rgba(28,95,234,0.15);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+            margin-top: 4rem;
+        }
+        .privacy-icon {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+        .privacy-text strong {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--navy);
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+        .privacy-text span {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* ── Bottom CTA ── */
+        .cta-section {
+            background: linear-gradient(160deg, #0C233E 0%, #0d2d52 100%);
+            padding: 5rem 1.5rem;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.02em;
+        }
+        .cta-section p {
+            color: rgba(255,255,255,0.65);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
+            .hero { padding: 3.5rem 1.25rem 3rem; }
+            .mockup-wrap { max-width: 320px; }
+            .privacy-strip { flex-direction: column; gap: 0.75rem; }
+            .section { padding: 3.5rem 1.25rem; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="extension-content">
-        <h1 style="text-align: center; color: var(--primary-blue); margin-bottom: 2rem;">Download Chrome Extension</h1>
-        
-        <div class="download-box">
-            <h2>ArtSiren Chrome Extension</h2>
-            <p style="margin-bottom: 2rem;">Get browser alerts based on documented public sources â€” covering Ticketmaster, Spotify, YouTube and more</p>
-            <a href="boycott-siren-extension.zip" class="btn btn-primary" download style="background: white; color: var(--primary-blue);" onclick="gtag('event', 'extension_download');">Download Extension (ZIP)</a>
-            <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.75;">Last updated: May 29, 2026 &nbsp;Â·&nbsp; 294+ verified artists</p>
-        </div>
-
-        <div class="install-steps">
-            <div class="install-step">
-                <h3>Step 1: Download & Extract</h3>
-                <p>Click the download button above. Double-click the ZIP file to extract it. You'll get a folder called <code>boycott-siren-extension</code>.</p>
-            </div>
-
-            <div class="install-step">
-                <h3>Step 2: Open Chrome Extensions</h3>
-                <p>In Chrome, go to <code>chrome://extensions/</code> or click the three dots â†’ Extensions â†’ Manage Extensions</p>
-            </div>
-
-            <div class="install-step">
-                <h3>Step 3: Enable Developer Mode</h3>
-                <p>Toggle "Developer mode" ON in the top-right corner</p>
-            </div>
-
-            <div class="install-step">
-                <h3>Step 4: Load Extension</h3>
-                <p>Click "Load unpacked" and select the <code>boycott-siren-extension</code> folder</p>
-            </div>
-
-            <div class="install-step">
-                <h3>Step 5: Allow Access</h3>
-                <p>Make sure "Automatically allow access on the following sites" is turned ON (blue)</p>
-            </div>
-
-            <div class="install-step">
-                <h3>Step 6: Test It!</h3>
-                <p>Visit <a href="https://www.ticketmaster.com/elvis-costello-tickets/artist/734817" target="_blank">Elvis Costello on Ticketmaster</a> - you should see a floating alert!</p>
-            </div>
-        </div>
-
-        <div style="background: var(--gray-50); padding: 2rem; border-radius: 12px; margin-top: 3rem;">
-            <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">Features</h3>
-            <ul style="line-height: 2;">
-                <li>ðŸš¨ Floating alerts that can't be missed</li>
-                <li>â˜ï¸ðŸ‡®ðŸ‡± Israeli finger emoji indicator</li>
-                <li>ðŸ“‹ Complete artist information with sources</li>
-                <li>ðŸ”’ 100% private - zero data collection</li>
-                <li>âš¡ Works on 294+ verified artists</li>
-            </ul>
-        </div>
+<!-- ── Hero ── -->
+<section class="hero">
+    <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <circle cx="6" cy="6" r="5" stroke="#44D7FF" stroke-width="1.5"/>
+            <path d="M4 6l1.5 1.5L8 4" stroke="#44D7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Free Chrome Extension
     </div>
 
-    <div class="footer-trust">
-        <span class="footer-trust-copy">Â© 2026 ArtSiren</span>
-        <a href="about.html" class="footer-trust-link">About</a>
-        <a href="terms.html" class="footer-trust-link">Terms of Use</a>
-        <a href="privacy.html" class="footer-trust-link">Privacy Policy</a>
-        <a href="mailto:contact@artsiren.co" class="footer-trust-link">Contact</a>
+    <h1>Know before<br>you <span>buy a ticket</span></h1>
+    <p class="hero-sub">ArtSiren alerts you instantly when an artist appears on Ticketmaster, Spotify, or YouTube — with verified sources so you can decide for yourself.</p>
+
+    <div class="hero-ctas">
+        <a href="https://chrome.google.com/webstore/detail/artsiren" class="btn-chrome" onclick="gtag('event','extension_cta_hero');">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.8"/>
+                <circle cx="12" cy="12" r="4" fill="white"/>
+                <path d="M12 8h8.7M8.5 14L4.2 6.5M8.5 14l-4.3 7.5" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            Add to Chrome — It's Free
+        </a>
+        <a href="/" class="btn-secondary">Browse Artists</a>
     </div>
+    <p class="hero-meta">250+ artists tracked &nbsp;·&nbsp; <span>Verified sources</span> &nbsp;·&nbsp; Zero data collection</p>
+
+    <!-- Mockup -->
+    <div class="mockup-wrap">
+        <div class="mockup-browser">
+            <div class="browser-bar">
+                <div class="browser-dots">
+                    <div class="browser-dot"></div>
+                    <div class="browser-dot"></div>
+                    <div class="browser-dot"></div>
+                </div>
+                <div class="browser-url">ticketmaster.com</div>
+            </div>
+            <div class="browser-content">
+                <div class="browser-page-bg">Ticketmaster</div>
+                <div class="ext-overlay">
+                    <div class="ext-header">
+                        <div class="ext-close">×</div>
+                        <div class="ext-brand">
+                            <div class="ext-icon">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white"/>
+                                </svg>
+                            </div>
+                            ArtSiren
+                        </div>
+                    </div>
+                    <div class="ext-body">
+                        <div class="ext-badge">Cultural Boycott</div>
+                        <div class="ext-artist">Roger Waters</div>
+                        <div class="ext-stmt">Co-founder of Pink Floyd and longtime advocate for Palestinian rights; has refused to perform and called on fellow artists to join the cultural boycott.</div>
+                        <div class="ext-btn">View Sources</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Works on ── -->
+<div class="sites-section">
+    <p class="sites-label">Works on these platforms</p>
+    <div class="sites-grid">
+        <div class="site-pill"><div class="site-dot"></div>Ticketmaster</div>
+        <div class="site-pill"><div class="site-dot"></div>Live Nation</div>
+        <div class="site-pill"><div class="site-dot"></div>StubHub</div>
+        <div class="site-pill"><div class="site-dot"></div>SeatGeek</div>
+        <div class="site-pill"><div class="site-dot"></div>Spotify</div>
+        <div class="site-pill"><div class="site-dot"></div>YouTube</div>
+        <div class="site-pill"><div class="site-dot"></div>Apple Music</div>
+        <div class="site-pill"><div class="site-dot"></div>AXS</div>
+        <div class="site-pill"><div class="site-dot"></div>Eventbrite</div>
+        <div class="site-pill"><div class="site-dot"></div>DICE</div>
+        <div class="site-pill"><div class="site-dot"></div>Songkick</div>
+        <div class="site-pill"><div class="site-dot" style="background:#44D7FF"></div>+40 more</div>
+    </div>
+</div>
+
+<!-- ── Features ── -->
+<section class="section features-section">
+    <div class="section-inner">
+        <p class="section-label">Features</p>
+        <h2 class="section-title">Everything you need,<br>nothing you don't</h2>
+        <p class="section-sub">ArtSiren works quietly in the background and only speaks up when it matters.</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Instant Alerts</div>
+                <div class="feature-desc">A non-intrusive overlay appears the moment a tracked artist shows up on the page — no searching required.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <div class="feature-title">Verified Sources</div>
+                <div class="feature-desc">Every alert links to the original mainstream media article, open letter, or interview. You see the evidence.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-title">100% Private</div>
+                <div class="feature-desc">Zero data collection. Zero tracking. ArtSiren never sends your browsing data anywhere — it all stays on your device.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎵</div>
+                <div class="feature-title">250+ Artists</div>
+                <div class="feature-desc">Musicians, actors, directors and writers — each entry manually verified with at least two credible sources.</div>
+            </div>
+        </div>
+
+        <div class="privacy-strip">
+            <div class="privacy-icon">🛡️</div>
+            <div class="privacy-text">
+                <strong>No account. No sign-up. No tracking.</strong>
+                <span>ArtSiren uses only two browser permissions: <code>activeTab</code> (to scan the current page) and <code>storage</code> (to save your preferences locally). That's it.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── How it works ── -->
+<section class="section how-section">
+    <div class="section-inner">
+        <p class="section-label">How it works</p>
+        <h2 class="section-title">Ready in under 30 seconds</h2>
+        <p class="section-sub">Install once, works everywhere automatically.</p>
+
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div>
+                    <div class="step-title">Add to Chrome</div>
+                    <div class="step-desc">Click "Add to Chrome" on the Chrome Web Store page. No account needed.</div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div>
+                    <div class="step-title">Browse normally</div>
+                    <div class="step-desc">Visit Ticketmaster, Spotify, YouTube — ArtSiren runs silently in the background.</div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div>
+                    <div class="step-title">Get alerted</div>
+                    <div class="step-desc">When a tracked artist appears, an overlay shows their documented stance and links to sources.</div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <div>
+                    <div class="step-title">Decide for yourself</div>
+                    <div class="step-desc">Read the sources, make your own call. ArtSiren informs — it never tells you what to do.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Bottom CTA ── -->
+<section class="cta-section">
+    <h2>Try it free today</h2>
+    <p>Join thousands of people who browse with more awareness.</p>
+    <a href="https://chrome.google.com/webstore/detail/artsiren" class="btn-chrome" style="margin: 0 auto;" onclick="gtag('event','extension_cta_bottom');">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="4" fill="white"/>
+            <path d="M12 8h8.7M8.5 14L4.2 6.5M8.5 14l-4.3 7.5" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        Add to Chrome — It's Free
+    </a>
+    <p style="margin-top: 1.2rem; font-size: 0.8rem; color: rgba(255,255,255,0.35);">Available for Chrome, Edge, and Brave</p>
+</section>
+
 </body>
 </html>
-
