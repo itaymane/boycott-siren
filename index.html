@@ -3108,7 +3108,8 @@
         window.addEventListener('beforeinstallprompt', e => {
             e.preventDefault();
             _pwaPrompt = e;
-            document.getElementById('pwa-install-btn').style.display = 'inline-block';
+            var _pBtn = document.getElementById('pwa-install-btn');
+            if (_pBtn) _pBtn.style.display = 'inline-block';
         });
 
         function installPWA() {
@@ -3128,8 +3129,10 @@
         // Hide install buttons when already running as installed PWA
         if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
             var _mobBtn = document.querySelector('.mob-get-app');
+            var _mobInstBtn = document.getElementById('mob-install-btn');
             var _pwaBtn = document.getElementById('pwa-install-btn');
             if (_mobBtn) _mobBtn.style.display = 'none';
+            if (_mobInstBtn) _mobInstBtn.style.display = 'none';
             if (_pwaBtn) _pwaBtn.style.display = 'none';
         }
 
@@ -3276,6 +3279,10 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <span>Contact</span>
         </a>
+        <button id="mob-install-btn" class="mob-nav-item" onclick="installPWA()" style="border:none;background:none;cursor:pointer;padding:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Get App</span>
+        </button>
         <button class="mob-nav-item mob-lang-btn" onclick="toggleMobLang(event)">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             <span>EN</span>
