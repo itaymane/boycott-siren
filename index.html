@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="./shared-nav.js?v=5"></script>
+    <script src="./shared-nav.js?v=6"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZRJ6TZY2Y"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -2039,10 +2039,9 @@
     </style>
     <script>
         if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
-            localStorage.setItem('pwa-installed', '1');
             document.documentElement.classList.add('pwa-installed');
-        } else if (localStorage.getItem('pwa-installed')) {
-            document.documentElement.classList.add('pwa-installed');
+        } else {
+            localStorage.removeItem('pwa-installed');
         }
     </script>
 </head>
