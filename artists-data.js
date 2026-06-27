@@ -1803,4 +1803,10 @@ const artistsData = [
 
     sources: `<a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a> | <a href="https://www.billboard.com/music/music-news/2024-eurovision-song-contest-open-letter-reject-israel-ban-1235607339/">Billboard</a>`
   }
+,
+  {
+    name: 'Eric Clapton',
+    statement: 'Publicly declared support for the freedom of the people of Palestine and against the genocide alongside Roger Waters (June 2024); released Gaza fundraising music video Voice of a Child; performs with Palestinian flag guitar.',
+    sources: '<a href="https://www.jpost.com/diaspora/antisemitism/article-804047" target="_blank">Jerusalem Post</a> | <a href="https://www.algemeiner.com/2024/05/29/guitarist-eric-clapton-says-israel-running-world-criticizes-hearings-campus-antisemitism/" target="_blank">Algemeiner</a> | <a href="https://faroutmagazine.co.uk/eric-clapton-claims-israel-is-running-the-world/" target="_blank">Far Out Magazine</a> | <a href="https://www.showbiz411.com/2024/06/12/eric-clapton-goes-from-anti-vaxxer-to-pro-palestinian-backs-antisemite-roger-waters-and-uk-right-wing-politician" target="_blank">Showbiz411</a>'
+  }
 ];

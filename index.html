@@ -1831,9 +1831,8 @@
             /* ── Hide desktop footer strip ── */
             .footer-trust { display: none !important; }
 
-            /* ── Search: hide button, remove extra right padding ── */
-            .search-btn    { display: none !important; }
-            .search-input  { padding-right: 1rem !important; }
+            /* ── Search: button visible on mobile ── */
+            .search-btn    { width: 38px; height: 38px; }
 
             /* ── Hide hero decorative elements not in mobile design ── */
             .hero-trust    { display: none !important; }
@@ -2503,7 +2502,8 @@
   {id: 380, name: "Liev Schreiber", popularity: 68, image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/MJK_08465_Liev_Schreiber_%28Berlinale_2018%29.jpg/330px-MJK_08465_Liev_Schreiber_%28Berlinale_2018%29.jpg", category: "actor", stance: "WELCOMES_ALL", level: "CRITICAL", statement: "Signed both the October 2023 pro-Israel Creative Community for Peace letter and a subsequent letter rejecting the cultural boycott of Israel; led Hollywood figures opposed to the film industry boycott campaign; Ray Donovan actor and prominent Jewish voice in the debate.", sources: [{name: "Hollywood Reporter", url: "https://www.hollywoodreporter.com/movies/movie-news/liev-schrieber-debra-messing-reject-israeli-film-boycott-1236385658/"}, {name: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-868666"}]},
   {id: 381, name: "Gal Gadot", popularity: 69, image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gal_Gadot_by_Gage_Skidmore_3.jpg/330px-Gal_Gadot_by_Gage_Skidmore_3.jpg", category: "actor", stance: "WELCOMES_ALL", level: "HIGH", statement: "Signed the October 2023 Creative Community for Peace open letter condemning Hamas's terrorist attacks, and posted publicly: 'My heart is aching for the lives lost and families shattered. I'm praying for everyone affected by Hamas' terrorism'; Israeli-born actress known for Wonder Woman.", sources: [{name: "Hollywood Reporter", url: "https://www.hollywoodreporter.com/news/general-news/celebrities-entertainment-executives-sign-open-letter-support-israel-1235617300/"}, {name: "Variety", url: "https://variety.com/2023/tv/news/hollywood-open-letter-israel-support-hamas-war-1235753904/"}, {name: "NME", url: "https://www.nme.com/news/film/hollywood-stars-sign-open-letter-support-israel-3514639"}]},
   {id: 382, name: "Gene Simmons", popularity: 69, image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Gene_Simmons_-_Wacken_Open_Air_2024_05_%28cropped%29.jpg/330px-Gene_Simmons_-_Wacken_Open_Air_2024_05_%28cropped%29.jpg", category: "musician", stance: "WELCOMES_ALL", level: "HIGH", statement: "Signed the 2024 Creative Community for Peace open letter supporting Israel's inclusion in Eurovision, stating those 'advocating to exclude an Israeli singer from Eurovision don't move the needle towards peace, but only further divide the world'; KISS co-founder.", sources: [{name: "NME", url: "https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835"}, {name: "Billboard", url: "https://www.billboard.com/music/music-news/2024-eurovision-song-contest-open-letter-reject-israel-ban-1235607339/"}]},
-  {id: 383, name: "Boy George", popularity: 69, image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/20260510_Senhit_Boy_George_NZ93429_%28cropped2%29.jpg/330px-20260510_Senhit_Boy_George_NZ93429_%28cropped2%29.jpg", category: "musician", stance: "WELCOMES_ALL", level: "HIGH", statement: "Signed the 2024 Creative Community for Peace open letter supporting Israel's inclusion in Eurovision and publicly vowed he 'won't turn his back on his Jewish friends' amid calls to boycott Eurovision; Culture Club frontman.", sources: [{name: "NME", url: "https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835"}, {name: "Billboard", url: "https://www.billboard.com/music/music-news/2024-eurovision-song-contest-open-letter-reject-israel-ban-1235607339/"}]}
+  {id: 383, name: "Boy George", popularity: 69, image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/20260510_Senhit_Boy_George_NZ93429_%28cropped2%29.jpg/330px-20260510_Senhit_Boy_George_NZ93429_%28cropped2%29.jpg", category: "musician", stance: "WELCOMES_ALL", level: "HIGH", statement: "Signed the 2024 Creative Community for Peace open letter supporting Israel's inclusion in Eurovision and publicly vowed he 'won't turn his back on his Jewish friends' amid calls to boycott Eurovision; Culture Club frontman.", sources: [{name: "NME", url: "https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835"}, {name: "Billboard", url: "https://www.billboard.com/music/music-news/2024-eurovision-song-contest-open-letter-reject-israel-ban-1235607339/"}]},
+    {id: 384, name: "Eric Clapton", popularity: 87, image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Eric_Clapton_2010_%28cropped%29.jpg/330px-Eric_Clapton_2010_%28cropped%29.jpg", category: "musician", stance: "BOYCOTTER", level: "HIGH", statement: "Publicly declared support 'for the freedom of the people of Palestine' and 'against the genocide' alongside Roger Waters (June 2024); released Gaza fundraising music video 'Voice of a Child'; performs with Palestinian flag guitar; stated 'Israel is running the world' in May 2024.", sources: [{name: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-804047"}, {name: "Algemeiner", url: "https://www.algemeiner.com/2024/05/29/guitarist-eric-clapton-says-israel-running-world-criticizes-hearings-campus-antisemitism/"}, {name: "Far Out Magazine", url: "https://faroutmagazine.co.uk/eric-clapton-claims-israel-is-running-the-world/"}, {name: "Showbiz411", url: "https://www.showbiz411.com/2024/06/12/eric-clapton-goes-from-anti-vaxxer-to-pro-palestinian-backs-antisemite-roger-waters-and-uk-right-wing-politician"}]}
 ];
         
         // ── Level visibility flag ──────────────────────────────────────
@@ -2859,6 +2859,12 @@
         });
 
         renderArtists();
+
+        // Search button click
+        document.querySelector('.search-btn').addEventListener('click', function() {
+            renderArtists();
+            document.getElementById('searchInput').focus();
+        });
 
         // Language switcher
         function toggleLang(btn) {
@@ -3252,11 +3258,252 @@
     </script>
 
     <!-- Static artist index for search engine crawling -->
-    <section style="max-width:900px;margin:0 auto;padding:32px 20px 48px;color:#444;font-size:0.82rem;line-height:2;border-top:1px solid #e2e8f0;">
-      <h2 style="font-size:1rem;font-weight:700;color:#44D7FF;margin-bottom:12px;">Artists in this database</h2>
-      <p style="margin-bottom:16px;color:#666;">The following artists have publicly supported the cultural boycott of Israel. Each entry is sourced from mainstream media and verified open letters.</p>
-      <p>Roger Waters · Dua Lipa · Patti Smith · Elvis Costello · Tom Morello · The Roots · Lauryn Hill · Peter Gabriel · Charlotte Church · Sam Smith · Björk · Lorde · Massive Attack · Brian Eno · Fontaines D.C. · Japanese Breakfast · Paramore · Hayley Williams · Rina Sawayama · AURORA · King Krule · IDLES · Hot Chip · Kneecap · Wednesday · Mannequin Pussy · BADBADNOTGOOD · Young Fathers · Amyl and the Sniffers · Soccer Mommy · Kelela · Caribou · Primal Scream · Faye Webster · Arca · MIKE · Erika de Casier · MJ Lenderman · Julia Jacklin · Lucy Dacus · Enter Shikari · Fever Ray · The Knife · Blood Orange · Blonde Redhead · Clairo · Denzel Curry · Destroy Boys · Eartheater · Jane Remover · The Blessed Madonna · Hania Rani · Kelsey Lu · L'Rain · Lambrini Girls · Liv.e · MARINA · Maryam Saleh · Maurice Louca · Mogwai · MØ · Nicolás Jaar · Nourished by Time · Oklou · Smerz · Yaeji · Yeule · Ana Tijoux · Julia Holter · Loraine James · Model/Actriz · Saul Williams · Four Tet · Olivia Colman · Javier Bardem · Mark Ruffalo · Steve Coogan · Riz Ahmed · Miriam Margolyes · Tilda Swinton · Khalid Abdalla · Maxine Peake · Susan Sarandon · Danny Glover · Penélope Cruz · John Cusack · Cynthia Nixon · Viggo Mortensen · Mia Farrow · Peter Capaldi · Julie Christie · Juliet Stevenson · Paapa Essiedu · Dame Harriet Walter · Joe Alwyn · Lena Headey · Kingsley Ben-Adir · Carla Henry · Pooja Ghai · Ken Loach · Mike Leigh · Asif Kapadia · Thurston Moore · Serj Tankian · Portishead · Robyn · Lykke Li · Propagandhi · Refused · Gil Scott-Heron · Talib Kweli · Chuck D · Boots Riley · Run the Jewels · Noname · Alice Walker · Naomi Klein · Arundhati Roy · John Berger · Iain Banks · Sally Rooney · Khaled Hosseini · Annie Ernaux · DJ Snake · Julian Casablancas · Sinéad O'Connor · System of a Down · Nigel Kennedy · John Williams (guitarist) · Liam Cunningham · Cat Power · Devendra Banhart · Cassandra Wilson · Sonic Youth · Godspeed You! Black Emperor · A Silver Mt. Zion · Do Make Say Think · Broken Social Scene · Feist · Stars · Metric · Wolf Parade · Destroyer · Owen Pallett · Peaches · Dead Prez · Immortal Technique · Lowkey · Akala · Kae Tempest · Little Simz · Macklemore · Kehlani · Manu Chao · Rage Against the Machine · Lupe Fiasco · Santana · Anti-Flag · Jackson Browne · Vic Mensa · Yasiin Bey · Jello Biafra · Wallace Shawn · Alexei Sayle · Harold Pinter · Kamila Shamsie · Mohammed El-Kurd · Ahdaf Soueif · Tariq Ali · Michael Rosen · Adrienne Rich · Paul Weller · Sigur Ros · Paloma Faith · Nadine Shah · Dry Cleaning · My Bloody Valentine · Shygirl · Paris Paloma · Black Country New Road · Joaquin Phoenix · Emma Stone · Ayo Edebiri · Andrew Garfield · Toni Collette · Nicola Coughlan · Lily Gladstone · Elliot Page · Ilana Glazer · Jonathan Glazer · Rooney Mara · Harris Dickinson · Rebecca Hall · Gael Garcia Bernal · Rachel Kushner · Ocean Vuong · Viet Thanh Nguyen · Dave Matthews Band · Billie Eilish · Halsey · SZA · Lizzo · Wolf Alice · MUNA · Wet Leg · Of Monsters and Men · Green Day · Damon Albarn · Grizzly Bear · Nilüfer Yanya · NAO · Lankum · Sleaford Mods · Sudan Archives · Beach Fossils · Frankie Cosmos · Water from Your Eyes · Pinegrove · Bob Vylan · Hozier · Ava DuVernay · Yorgos Lanthimos · Joshua Oppenheimer · Payal Kapadia · Josh O'Connor · Bowen Yang · Emma D'Arcy · Guy Pearce · Aimee Lou Wood · Joe Locke · Ebon Moss-Bachrach · Peter Sarsgaard · Debra Winger · Melissa Barrera · Hannah Einbinder · Adam McKay · Emma Seligman · Morgan Spector · Jhumpa Lahiri · Percival Everett · Jonathan Lethem · Obongjayar</p>
-    </section>
+    <section style="max-width:900px;margin:0 auto;padding:32px 20px 48px;color:#444;font-size:14px;">
+<h2 style="font-size:18px;margin-bottom:16px;">Artists in this database</h2>
+<p style="line-height:2.2;"><a href="/?q=A+Silver+Mt.+Zion">A Silver Mt. Zion</a>
+<a href="/?q=AURORA">AURORA</a>
+<a href="/?q=Adam+McKay">Adam McKay</a>
+<a href="/?q=Adrienne+Rich">Adrienne Rich</a>
+<a href="/?q=Ahdaf+Soueif">Ahdaf Soueif</a>
+<a href="/?q=Aimee+Lou+Wood">Aimee Lou Wood</a>
+<a href="/?q=Akala">Akala</a>
+<a href="/?q=Alexei+Sayle">Alexei Sayle</a>
+<a href="/?q=Alice+Walker">Alice Walker</a>
+<a href="/?q=Amyl+and+the+Sniffers">Amyl and the Sniffers</a>
+<a href="/?q=Ana+Tijoux">Ana Tijoux</a>
+<a href="/?q=Andrew+Garfield">Andrew Garfield</a>
+<a href="/?q=Annie+Ernaux">Annie Ernaux</a>
+<a href="/?q=Anti-Flag">Anti-Flag</a>
+<a href="/?q=Arca">Arca</a>
+<a href="/?q=Arundhati+Roy">Arundhati Roy</a>
+<a href="/?q=Asif+Kapadia">Asif Kapadia</a>
+<a href="/?q=Ava+DuVernay">Ava DuVernay</a>
+<a href="/?q=Ayo+Edebiri">Ayo Edebiri</a>
+<a href="/?q=BADBADNOTGOOD">BADBADNOTGOOD</a>
+<a href="/?q=Beach+Fossils">Beach Fossils</a>
+<a href="/?q=Billie+Eilish">Billie Eilish</a>
+<a href="/?q=Björk">Björk</a>
+<a href="/?q=Black+Country+New+Road">Black Country New Road</a>
+<a href="/?q=Blonde+Redhead">Blonde Redhead</a>
+<a href="/?q=Blood+Orange">Blood Orange</a>
+<a href="/?q=Bob+Vylan">Bob Vylan</a>
+<a href="/?q=Boots+Riley">Boots Riley</a>
+<a href="/?q=Bowen+Yang">Bowen Yang</a>
+<a href="/?q=Brian+Eno">Brian Eno</a>
+<a href="/?q=Broken+Social+Scene">Broken Social Scene</a>
+<a href="/?q=Caribou">Caribou</a>
+<a href="/?q=Carla+Henry">Carla Henry</a>
+<a href="/?q=Cassandra+Wilson">Cassandra Wilson</a>
+<a href="/?q=Cat+Power">Cat Power</a>
+<a href="/?q=Charlotte+Church">Charlotte Church</a>
+<a href="/?q=Chuck+D">Chuck D</a>
+<a href="/?q=Clairo">Clairo</a>
+<a href="/?q=Cynthia+Nixon">Cynthia Nixon</a>
+<a href="/?q=DJ+Snake">DJ Snake</a>
+<a href="/?q=Dame+Harriet+Walter">Dame Harriet Walter</a>
+<a href="/?q=Damon+Albarn">Damon Albarn</a>
+<a href="/?q=Danny+Glover">Danny Glover</a>
+<a href="/?q=Dave+Matthews+Band">Dave Matthews Band</a>
+<a href="/?q=Dead+Prez">Dead Prez</a>
+<a href="/?q=Debra+Winger">Debra Winger</a>
+<a href="/?q=Denzel+Curry">Denzel Curry</a>
+<a href="/?q=Destroy+Boys">Destroy Boys</a>
+<a href="/?q=Destroyer">Destroyer</a>
+<a href="/?q=Devendra+Banhart">Devendra Banhart</a>
+<a href="/?q=Do+Make+Say+Think">Do Make Say Think</a>
+<a href="/?q=Dry+Cleaning">Dry Cleaning</a>
+<a href="/?q=Dua+Lipa">Dua Lipa</a>
+<a href="/?q=Eartheater">Eartheater</a>
+<a href="/?q=Ebon+Moss-Bachrach">Ebon Moss-Bachrach</a>
+<a href="/?q=Elliot+Page">Elliot Page</a>
+<a href="/?q=Elvis+Costello">Elvis Costello</a>
+<a href="/?q=Emma+D'Arcy">Emma D'Arcy</a>
+<a href="/?q=Emma+Seligman">Emma Seligman</a>
+<a href="/?q=Emma+Stone">Emma Stone</a>
+<a href="/?q=Enter+Shikari">Enter Shikari</a>
+<a href="/?q=Eric+Clapton">Eric Clapton</a>
+<a href="/?q=Erika+de+Casier">Erika de Casier</a>
+<a href="/?q=Faye+Webster">Faye Webster</a>
+<a href="/?q=Feist">Feist</a>
+<a href="/?q=Fever+Ray">Fever Ray</a>
+<a href="/?q=Fontaines+D.C.">Fontaines D.C.</a>
+<a href="/?q=Four+Tet">Four Tet</a>
+<a href="/?q=Frankie+Cosmos">Frankie Cosmos</a>
+<a href="/?q=Gael+Garcia+Bernal">Gael Garcia Bernal</a>
+<a href="/?q=Gil+Scott-Heron">Gil Scott-Heron</a>
+<a href="/?q=Godspeed+You!+Black+Emperor">Godspeed You! Black Emperor</a>
+<a href="/?q=Green+Day">Green Day</a>
+<a href="/?q=Grizzly+Bear">Grizzly Bear</a>
+<a href="/?q=Guy+Pearce">Guy Pearce</a>
+<a href="/?q=Halsey">Halsey</a>
+<a href="/?q=Hania+Rani">Hania Rani</a>
+<a href="/?q=Hannah+Einbinder">Hannah Einbinder</a>
+<a href="/?q=Harold+Pinter">Harold Pinter</a>
+<a href="/?q=Harris+Dickinson">Harris Dickinson</a>
+<a href="/?q=Hayley+Williams">Hayley Williams</a>
+<a href="/?q=Hot+Chip">Hot Chip</a>
+<a href="/?q=Hozier">Hozier</a>
+<a href="/?q=IDLES">IDLES</a>
+<a href="/?q=Iain+Banks">Iain Banks</a>
+<a href="/?q=Ilana+Glazer">Ilana Glazer</a>
+<a href="/?q=Immortal+Technique">Immortal Technique</a>
+<a href="/?q=Jackson+Browne">Jackson Browne</a>
+<a href="/?q=Jane+Remover">Jane Remover</a>
+<a href="/?q=Japanese+Breakfast">Japanese Breakfast</a>
+<a href="/?q=Javier+Bardem">Javier Bardem</a>
+<a href="/?q=Jello+Biafra">Jello Biafra</a>
+<a href="/?q=Jhumpa+Lahiri">Jhumpa Lahiri</a>
+<a href="/?q=Joaquin+Phoenix">Joaquin Phoenix</a>
+<a href="/?q=Joe+Alwyn">Joe Alwyn</a>
+<a href="/?q=Joe+Locke">Joe Locke</a>
+<a href="/?q=John+Berger">John Berger</a>
+<a href="/?q=John+Cusack">John Cusack</a>
+<a href="/?q=John+Williams+(guitarist)">John Williams (guitarist)</a>
+<a href="/?q=Jonathan+Glazer">Jonathan Glazer</a>
+<a href="/?q=Jonathan+Lethem">Jonathan Lethem</a>
+<a href="/?q=Josh+O'Connor">Josh O'Connor</a>
+<a href="/?q=Joshua+Oppenheimer">Joshua Oppenheimer</a>
+<a href="/?q=Julia+Holter">Julia Holter</a>
+<a href="/?q=Julia+Jacklin">Julia Jacklin</a>
+<a href="/?q=Julian+Casablancas">Julian Casablancas</a>
+<a href="/?q=Julie+Christie">Julie Christie</a>
+<a href="/?q=Juliet+Stevenson">Juliet Stevenson</a>
+<a href="/?q=Kae+Tempest">Kae Tempest</a>
+<a href="/?q=Kamila+Shamsie">Kamila Shamsie</a>
+<a href="/?q=Kehlani">Kehlani</a>
+<a href="/?q=Kelela">Kelela</a>
+<a href="/?q=Kelsey+Lu">Kelsey Lu</a>
+<a href="/?q=Ken+Loach">Ken Loach</a>
+<a href="/?q=Khaled+Hosseini">Khaled Hosseini</a>
+<a href="/?q=Khalid+Abdalla">Khalid Abdalla</a>
+<a href="/?q=King+Krule">King Krule</a>
+<a href="/?q=Kingsley+Ben-Adir">Kingsley Ben-Adir</a>
+<a href="/?q=Kneecap">Kneecap</a>
+<a href="/?q=L'Rain">L'Rain</a>
+<a href="/?q=Lambrini+Girls">Lambrini Girls</a>
+<a href="/?q=Lankum">Lankum</a>
+<a href="/?q=Lauryn+Hill">Lauryn Hill</a>
+<a href="/?q=Lena+Headey">Lena Headey</a>
+<a href="/?q=Liam+Cunningham">Liam Cunningham</a>
+<a href="/?q=Lily+Gladstone">Lily Gladstone</a>
+<a href="/?q=Little+Simz">Little Simz</a>
+<a href="/?q=Liv.e">Liv.e</a>
+<a href="/?q=Lizzo">Lizzo</a>
+<a href="/?q=Loraine+James">Loraine James</a>
+<a href="/?q=Lorde">Lorde</a>
+<a href="/?q=Lowkey">Lowkey</a>
+<a href="/?q=Lucy+Dacus">Lucy Dacus</a>
+<a href="/?q=Lupe+Fiasco">Lupe Fiasco</a>
+<a href="/?q=Lykke+Li">Lykke Li</a>
+<a href="/?q=MARINA">MARINA</a>
+<a href="/?q=MIKE">MIKE</a>
+<a href="/?q=MJ+Lenderman">MJ Lenderman</a>
+<a href="/?q=MUNA">MUNA</a>
+<a href="/?q=Macklemore">Macklemore</a>
+<a href="/?q=Mannequin+Pussy">Mannequin Pussy</a>
+<a href="/?q=Manu+Chao">Manu Chao</a>
+<a href="/?q=Mark+Ruffalo">Mark Ruffalo</a>
+<a href="/?q=Maryam+Saleh">Maryam Saleh</a>
+<a href="/?q=Massive+Attack">Massive Attack</a>
+<a href="/?q=Maurice+Louca">Maurice Louca</a>
+<a href="/?q=Maxine+Peake">Maxine Peake</a>
+<a href="/?q=Melissa+Barrera">Melissa Barrera</a>
+<a href="/?q=Metric">Metric</a>
+<a href="/?q=Mia+Farrow">Mia Farrow</a>
+<a href="/?q=Michael+Rosen">Michael Rosen</a>
+<a href="/?q=Mike+Leigh">Mike Leigh</a>
+<a href="/?q=Miriam+Margolyes">Miriam Margolyes</a>
+<a href="/?q=Model/Actriz">Model/Actriz</a>
+<a href="/?q=Mogwai">Mogwai</a>
+<a href="/?q=Mohammed+El-Kurd">Mohammed El-Kurd</a>
+<a href="/?q=Morgan+Spector">Morgan Spector</a>
+<a href="/?q=My+Bloody+Valentine">My Bloody Valentine</a>
+<a href="/?q=MØ">MØ</a>
+<a href="/?q=NAO">NAO</a>
+<a href="/?q=Nadine+Shah">Nadine Shah</a>
+<a href="/?q=Naomi+Klein">Naomi Klein</a>
+<a href="/?q=Nicola+Coughlan">Nicola Coughlan</a>
+<a href="/?q=Nicolás+Jaar">Nicolás Jaar</a>
+<a href="/?q=Nigel+Kennedy">Nigel Kennedy</a>
+<a href="/?q=Nilüfer+Yanya">Nilüfer Yanya</a>
+<a href="/?q=Noname">Noname</a>
+<a href="/?q=Nourished+by+Time">Nourished by Time</a>
+<a href="/?q=Obongjayar">Obongjayar</a>
+<a href="/?q=Ocean+Vuong">Ocean Vuong</a>
+<a href="/?q=Of+Monsters+and+Men">Of Monsters and Men</a>
+<a href="/?q=Oklou">Oklou</a>
+<a href="/?q=Olivia+Colman">Olivia Colman</a>
+<a href="/?q=Owen+Pallett">Owen Pallett</a>
+<a href="/?q=Paapa+Essiedu">Paapa Essiedu</a>
+<a href="/?q=Paloma+Faith">Paloma Faith</a>
+<a href="/?q=Paramore">Paramore</a>
+<a href="/?q=Paris+Paloma">Paris Paloma</a>
+<a href="/?q=Patti+Smith">Patti Smith</a>
+<a href="/?q=Paul+Weller">Paul Weller</a>
+<a href="/?q=Payal+Kapadia">Payal Kapadia</a>
+<a href="/?q=Peaches">Peaches</a>
+<a href="/?q=Penélope+Cruz">Penélope Cruz</a>
+<a href="/?q=Percival+Everett">Percival Everett</a>
+<a href="/?q=Peter+Capaldi">Peter Capaldi</a>
+<a href="/?q=Peter+Gabriel">Peter Gabriel</a>
+<a href="/?q=Peter+Sarsgaard">Peter Sarsgaard</a>
+<a href="/?q=Pinegrove">Pinegrove</a>
+<a href="/?q=Pooja+Ghai">Pooja Ghai</a>
+<a href="/?q=Portishead">Portishead</a>
+<a href="/?q=Primal+Scream">Primal Scream</a>
+<a href="/?q=Propagandhi">Propagandhi</a>
+<a href="/?q=Rachel+Kushner">Rachel Kushner</a>
+<a href="/?q=Rage+Against+the+Machine">Rage Against the Machine</a>
+<a href="/?q=Rebecca+Hall">Rebecca Hall</a>
+<a href="/?q=Refused">Refused</a>
+<a href="/?q=Rina+Sawayama">Rina Sawayama</a>
+<a href="/?q=Riz+Ahmed">Riz Ahmed</a>
+<a href="/?q=Robyn">Robyn</a>
+<a href="/?q=Roger+Waters">Roger Waters</a>
+<a href="/?q=Rooney+Mara">Rooney Mara</a>
+<a href="/?q=Run+the+Jewels">Run the Jewels</a>
+<a href="/?q=SZA">SZA</a>
+<a href="/?q=Sally+Rooney">Sally Rooney</a>
+<a href="/?q=Sam+Smith">Sam Smith</a>
+<a href="/?q=Santana">Santana</a>
+<a href="/?q=Saul+Williams">Saul Williams</a>
+<a href="/?q=Serj+Tankian">Serj Tankian</a>
+<a href="/?q=Shygirl">Shygirl</a>
+<a href="/?q=Sigur+Ros">Sigur Ros</a>
+<a href="/?q=Sinéad+O'Connor">Sinéad O'Connor</a>
+<a href="/?q=Sleaford+Mods">Sleaford Mods</a>
+<a href="/?q=Smerz">Smerz</a>
+<a href="/?q=Soccer+Mommy">Soccer Mommy</a>
+<a href="/?q=Sonic+Youth">Sonic Youth</a>
+<a href="/?q=Stars">Stars</a>
+<a href="/?q=Steve+Coogan">Steve Coogan</a>
+<a href="/?q=Sudan+Archives">Sudan Archives</a>
+<a href="/?q=Susan+Sarandon">Susan Sarandon</a>
+<a href="/?q=System+of+a+Down">System of a Down</a>
+<a href="/?q=Talib+Kweli">Talib Kweli</a>
+<a href="/?q=Tariq+Ali">Tariq Ali</a>
+<a href="/?q=The+Blessed+Madonna">The Blessed Madonna</a>
+<a href="/?q=The+Knife">The Knife</a>
+<a href="/?q=The+Roots">The Roots</a>
+<a href="/?q=Thurston+Moore">Thurston Moore</a>
+<a href="/?q=Tilda+Swinton">Tilda Swinton</a>
+<a href="/?q=Tom+Morello">Tom Morello</a>
+<a href="/?q=Toni+Collette">Toni Collette</a>
+<a href="/?q=Vic+Mensa">Vic Mensa</a>
+<a href="/?q=Viet+Thanh+Nguyen">Viet Thanh Nguyen</a>
+<a href="/?q=Viggo+Mortensen">Viggo Mortensen</a>
+<a href="/?q=Wallace+Shawn">Wallace Shawn</a>
+<a href="/?q=Water+from+Your+Eyes">Water from Your Eyes</a>
+<a href="/?q=Wednesday">Wednesday</a>
+<a href="/?q=Wet+Leg">Wet Leg</a>
+<a href="/?q=Wolf+Alice">Wolf Alice</a>
+<a href="/?q=Wolf+Parade">Wolf Parade</a>
+<a href="/?q=Yaeji">Yaeji</a>
+<a href="/?q=Yasiin+Bey">Yasiin Bey</a>
+<a href="/?q=Yeule">Yeule</a>
+<a href="/?q=Yorgos+Lanthimos">Yorgos Lanthimos</a>
+<a href="/?q=Young+Fathers">Young Fathers</a></p>
+</section>
 
 
     <!-- Mobile language sheet (pops up above bottom nav) -->
