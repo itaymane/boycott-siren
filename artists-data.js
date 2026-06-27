@@ -913,13 +913,6 @@ const artistsData = [
     sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
   },
   {
-    name: "Asian Dub Foundation",
-    level: "CRITICAL",
-    statement: "British band who have been among the most consistently outspoken musical advocates for Palestinian rights; explicitly called for the cultural boycott; performed at pro-Palestine events",
-
-    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a>`
-  },
-  {
     name: "Manic Street Preachers",
     level: "CRITICAL",
     statement: "Welsh rock band who cancelled their planned the region tour dates, explicitly citing the political situation; among the first major rock bands to cancel the region shows in solidarity with Palestinians",
@@ -974,13 +967,6 @@ const artistsData = [
     statement: "Jazz singer, supports cultural boycott",
 
     sources: `<a href="https://www.haaretz.com/2012-02-22/ty-article/cassandra-wilson-joins-artistic-boycott-of-israel/0000017f-e049-d9aa-afff-f959eaac0000">Haaretz</a> | <a href="https://www.ynetnews.com/articles/0,7340,L-4193168,00.html">Ynetnews</a>`
-  },
-  {
-    name: "Coldcut",
-    level: "CRITICAL",
-    statement: "Electronic duo, supports BDS",
-
-    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a>`
   },
   {
     name: "Sonic Youth",
@@ -1149,20 +1135,6 @@ const artistsData = [
     statement: "Cancelled scheduled the region performances in 2010 following calls from Palestinian civil society groups; the cancellation was confirmed as an act of solidarity with Palestinians",
 
     sources: `<a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a> | <a href="https://www.rollingstone.com/music/music-news/rage-against-the-machine-serj-tankian-roger-waters-sign-open-letter-artists-boycott-israel-1175281/">Rolling Stone</a>`
-  },
-  {
-    name: "Yo La Tengo",
-    level: "CRITICAL",
-    statement: "New Jersey indie rock band who cancelled a planned the region tour in solidarity with Palestinians; issued a public statement explaining their decision to honour the cultural boycott",
-
-    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a>`
-  },
-  {
-    name: "Klaxons",
-    level: "CRITICAL",
-    statement: "British band who refused to perform at the region's 60th-anniversary cultural celebrations in 2008; publicly cited the occupation as their reason for declining",
-
-    sources: `<a href="https://www.france24.com/en/20100608-israel-music-concerts-cancel-pixies-gorillaz-klaxons-costello-santana-tel-aviv-gaza">France 24</a>`
   },
   {
     name: "Anti-Flag",
@@ -1445,7 +1417,6 @@ const artistsData = [
     sources: `<a href="https://www.972mag.com/viet-thanh-nguyen-bds-israel-palestine/">+972 Magazine</a> | <a href="https://lithub.com/hundreds-of-authors-pledge-to-boycott-israeli-cultural-institutions/">Literary Hub</a>`
   },
   {
-    name: "Eric Clapton",
     level: "HIGH",
     statement: "Made antisemitic statements claiming 'the region is running the world'; performed with a guitar painted in Palestinian flag colors dedicated to Gaza; released a fundraising concert for Gaza children (December 2023); publicly defended Roger Waters' political activism against the region",
 
@@ -1480,14 +1451,12 @@ const artistsData = [
     sources: `<a href="https://www.billboard.com/music/music-news/sza-shouts-free-palestine-australia-sos-concert-1235658740/">Billboard</a>`
   },
   {
-    name: "Vampire Weekend",
     level: "HIGH",
     statement: "Frontman Ezra Koenig defended pro-Palestinian expression from the stage at Victorious Festival (August 2025): 'If someone was punished for flying a flag, that is wrong and they deserve an apology. The terrible suffering of the Palestinian people deserves all of our sympathy'",
 
     sources: `<a href="https://www.nme.com/news/music/vampire-weekend-on-the-mary-wallopers-victorious-controversy-that-is-wrong-and-they-deserve-an-apology-3886843">NME</a> | <a href="https://www.billboard.com/music/music-news/last-dinner-party-boycotts-victorious-festival-palestine-1236050564/">Billboard</a>`
   },
   {
-    name: "FKA Twigs",
     level: "HIGH",
     statement: "Performed at Artists for Aid benefit concert in London (July 2024), raising funds for War Child UK's Gaza and Sudan Response Plan covering food, water, and education for 120,000+ children",
 
@@ -1507,7 +1476,6 @@ const artistsData = [
     sources: `<a href="https://www.rollingstone.com/music/music-news/thom-yorke-condemns-netanyahu-hamas-gaza-1235351340/">Rolling Stone</a> | <a href="https://www.nme.com/news/music/thom-yorke-says-radiohead-will-absolutely-not-return-to-israel-and-he-wouldnt-want-to-be-5000-miles-anywhere-near-the-netanyahu-regime-3902353">NME</a> | <a href="https://www.billboard.com/music/rock/thom-yorke-note-heckler-israel-hamas-war-netanyahu-extremist-1235985900/">Billboard</a>`
   },
   {
-    name: "Tyler, the Creator",
     level: "LOW",
     statement: "Wore a Palestinian flag pin during his headline set at Coachella (April 2024)",
 
