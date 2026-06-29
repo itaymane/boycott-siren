@@ -917,43 +917,46 @@
         document.addEventListener('keydown', escHandler);
     }
     
-    // Create small icon indicator (in addition to floating alert)
-    function createSmallIcon(artist) {
-        const icon = document.createElement('span');
-        icon.className = 'boycott-small-icon';
-        icon.setAttribute('data-artist', artist.name);
-        icon.title = `⚠️ BOYCOTT SIREN: ${artist.name} - Click for details`;
-        
-        const color = artist.stance === 'welcome' ? '#22C55E' : '#ff4444';
-        
-        icon.innerHTML = `
-            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <filter id="icon-glow-${artist.name.replace(/\s/g, '')}">
-                        <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
-                        <feMerge>
-                            <feMergeNode in="coloredBlur"/>
-                            <feMergeNode in="SourceGraphic"/>
-                        </feMerge>
-                    </filter>
-                </defs>
-                <path d="M10 3 L16 15 L4 15 Z" fill="${color}" stroke="#ffffff" stroke-width="1.5" filter="url(#icon-glow-${artist.name.replace(/\s/g, '')})"/>
-                <g transform="translate(10, 10) scale(0.3)">
-                    <path d="M0,-6 L3,0 L-3,0 Z" fill="white"/>
-                    <path d="M0,6 L3,0 L-3,0 Z" fill="white"/>
-                </g>
-            </svg>
+    // YouTube watch-page badge (injected below channel info)
+    function addYouTubeBadge(artist) {
+        if (!window.location.pathname.startsWith('/watch')) return;
+        if (document.querySelector('.artsiren-yt-badge')) return;
+        const ownerEl = document.querySelector('#owner');
+        if (!ownerEl) return;
+
+        const isWelcome = artist.stance === 'welcome';
+        const color = isWelcome ? '#22C55E' : '#EF4444';
+        const dotColor = isWelcome ? '#22C55E' : '#FF4444';
+        const statusText = isWelcome ? 'Welcomes All' : 'Excluding';
+        const sourceCount = (artist.sources.match(/<a /g) || []).length || 1;
+
+        const badge = document.createElement('div');
+        badge.className = 'artsiren-yt-badge';
+        badge.innerHTML = `
+            <div class="artsiren-yt-inner">
+                <svg class="artsiren-yt-logo" viewBox="0 57 470 284" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#0c233e" d="M453.22,149.75v-73.97c0-8.07-6.54-14.61-14.61-14.61H57.12c-8.07,0-14.62,6.54-14.62,14.61v73.97c26.13,0,47.31,21.18,47.31,47.31s-21.18,47.3-47.31,47.3v73.97c0,8.07,6.55,14.61,14.62,14.61h381.49c8.07,0,14.61-6.54,14.61-14.61v-73.97c-26.13,0-47.31-21.18-47.31-47.3s21.18-47.31,47.31-47.31ZM140.35,121.19h13.19v26.14h-13.19v-26.14ZM140.35,163.05h13.19v26.14h-13.19v-26.14ZM140.35,204.91h13.19v26.14h-13.19v-26.14ZM140.35,246.78h13.19v26.13h-13.19v-26.13ZM153.55,314.78h-13.19v-26.14h13.19v26.14ZM153.55,105.47h-13.19v-26.14h13.19v26.14ZM403.68,135.68c-20.06,13.05-33.32,35.67-33.32,61.38s13.26,48.32,33.32,61.37v26.19c0,5.95-4.87,10.82-10.82,10.82h-194.83c-5.95,0-10.82-4.87-10.82-10.82V109.49c0-5.95,4.87-10.82,10.82-10.82h194.83c5.95,0,10.82,4.87,10.82,10.82v26.19Z"/>
+                    <path fill="#0c233e" d="M348.29,162.15l-81.16,87.26-10.99-10.22-.18.2-40.52-37.06,17.29-18.91,32.84,30.04,63.95-68.76,18.76,17.45Z"/>
+                    <ellipse fill="${dotColor}" cx="41.62" cy="197.06" rx="34.42" ry="35.06"/>
+                </svg>
+                <span class="artsiren-yt-brand">ArtSiren</span>
+                <div class="artsiren-yt-status" style="color:${color};border-color:${color};background:${color}18;">
+                    <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                        ${isWelcome
+                            ? '<path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>'
+                            : '<path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>'}
+                    </svg>
+                    ${statusText}
+                </div>
+                <span class="artsiren-yt-sources">· ${sourceCount} source${sourceCount !== 1 ? 's' : ''}</span>
+                <button class="artsiren-yt-expand" title="View details">›</button>
+            </div>
         `;
-        
-        icon.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            showArtistModal(artist);
-        });
-        
-        return icon;
+        badge.querySelector('.artsiren-yt-expand').addEventListener('click', () => showArtistModal(artist));
+        badge.querySelector('.artsiren-yt-status').addEventListener('click', () => showArtistModal(artist));
+        ownerEl.insertAdjacentElement('afterend', badge);
     }
-    
+
     // YouTube feed: mark/hide boycotting artists in home feed, search, sidebar, playlists
     function processYouTubeFeed() {
         const cardSelectors = [
@@ -975,31 +978,37 @@
                 if (!artist && titleEl) artist = findMatchingArtist(titleEl.textContent.trim());
                 if (artist) {
                     card.dataset.bsBoycotter = artist.name;
+                    card.dataset.bsStance = artist.stance;
                     feedDetectedArtists.add(artist.name);
                     if (settings.hideYouTubeFeed) {
                         card.style.display = 'none';
                     } else {
-                        addFeedBadge(card, artist.name);
+                        addFeedBadge(card, artist);
                     }
                 }
             });
         });
     }
 
-    function addFeedBadge(card, artistName) {
-        if (card.querySelector('.bs-feed-badge')) return;
+    function addFeedBadge(card, artist) {
+        if (card.querySelector('.artsiren-thumb-badge')) return;
         const thumb = card.querySelector('a#thumbnail') || card.querySelector('#thumbnail') || card.querySelector('ytd-thumbnail');
         if (!thumb) return;
         thumb.style.position = 'relative';
-        thumb.style.overflow = 'visible';
+
+        const isWelcome = artist.stance === 'welcome';
+        const dotColor = isWelcome ? '#22C55E' : '#FF4444';
+
         const badge = document.createElement('div');
-        badge.className = 'bs-feed-badge';
-        badge.innerHTML = `<span>🚫 ${artistName}</span><button class="bs-hide-card" title="Hide this video">×</button>`;
-        badge.querySelector('.bs-hide-card').addEventListener('click', e => {
-            e.preventDefault();
-            e.stopPropagation();
-            card.style.display = 'none';
-        });
+        badge.className = 'artsiren-thumb-badge';
+        badge.title = artist.name;
+        badge.innerHTML = `
+            <svg viewBox="0 57 470 284" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#0c233e" d="M453.22,149.75v-73.97c0-8.07-6.54-14.61-14.61-14.61H57.12c-8.07,0-14.62,6.54-14.62,14.61v73.97c26.13,0,47.31,21.18,47.31,47.31s-21.18,47.3-47.31,47.3v73.97c0,8.07,6.55,14.61,14.62,14.61h381.49c8.07,0,14.61-6.54,14.61-14.61v-73.97c-26.13,0-47.31-21.18-47.31-47.3s21.18-47.31,47.31-47.31ZM140.35,121.19h13.19v26.14h-13.19v-26.14ZM140.35,163.05h13.19v26.14h-13.19v-26.14ZM140.35,204.91h13.19v26.14h-13.19v-26.14ZM140.35,246.78h13.19v26.13h-13.19v-26.13ZM153.55,314.78h-13.19v-26.14h13.19v26.14ZM153.55,105.47h-13.19v-26.14h13.19v26.14ZM403.68,135.68c-20.06,13.05-33.32,35.67-33.32,61.38s13.26,48.32,33.32,61.37v26.19c0,5.95-4.87,10.82-10.82,10.82h-194.83c-5.95,0-10.82-4.87-10.82-10.82V109.49c0-5.95,4.87-10.82,10.82-10.82h194.83c5.95,0,10.82,4.87,10.82,10.82v26.19Z"/>
+                <path fill="#0c233e" d="M348.29,162.15l-81.16,87.26-10.99-10.22-.18.2-40.52-37.06,17.29-18.91,32.84,30.04,63.95-68.76,18.76,17.45Z"/>
+                <ellipse fill="${dotColor}" cx="41.62" cy="197.06" rx="34.42" ry="35.06"/>
+            </svg>
+        `;
         thumb.appendChild(badge);
     }
 
@@ -1009,7 +1018,7 @@
                 card.style.display = 'none';
             } else {
                 card.style.display = '';
-                addFeedBadge(card, card.dataset.bsBoycotter);
+                addFeedBadge(card, { name: card.dataset.bsBoycotter, stance: card.dataset.bsStance });
             }
         });
     }
@@ -1032,12 +1041,7 @@
 
             if (artist && !processedElements.has(element)) {
                 createFloatingAlert(artist);
-
-                if (!element.querySelector('.boycott-small-icon')) {
-                    const icon = createSmallIcon(artist);
-                    element.appendChild(icon);
-                }
-
+                if (window.location.hostname.includes('youtube.com')) addYouTubeBadge(artist);
                 processedElements.add(element);
             }
         });
@@ -1065,7 +1069,7 @@
         alertQueue = [];
         isAlertVisible = false;
         dismissAllAlerts();
-        document.querySelectorAll('.boycott-small-icon').forEach(el => el.remove());
+        document.querySelectorAll('.artsiren-yt-badge, .artsiren-thumb-badge').forEach(el => el.remove());
         document.querySelectorAll('[data-bs-checked]').forEach(el => {
             delete el.dataset.bsChecked;
             delete el.dataset.bsBoycotter;
