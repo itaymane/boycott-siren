@@ -744,12 +744,12 @@
     
     // Find matching artist with improved whole-word matching
     function findMatchingArtist(text) {
-        if (!text || text.length < 3) return null;
-        
+        if (!text || typeof text !== 'string' || text.length < 3) return null;
+
         const normalizedText = text.toLowerCase().trim();
-        
+
         for (const artist of artistsData) {
-            if (!artist || !artist.name) continue;
+            if (!artist || typeof artist.name !== 'string' || !artist.name) continue;
             const artistName = artist.name.toLowerCase();
             
             // Exact match
