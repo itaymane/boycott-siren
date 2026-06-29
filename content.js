@@ -952,8 +952,7 @@
                 <button class="artsiren-yt-expand" title="View details">›</button>
             </div>
         `;
-        badge.querySelector('.artsiren-yt-expand').addEventListener('click', () => showArtistModal(artist));
-        badge.querySelector('.artsiren-yt-status').addEventListener('click', () => showArtistModal(artist));
+        badge.addEventListener('click', (e) => { e.stopPropagation(); showArtistModal(artist); });
         ownerEl.insertAdjacentElement('afterend', badge);
     }
 
