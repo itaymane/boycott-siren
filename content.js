@@ -796,12 +796,18 @@
         overlay.setAttribute('data-artist', artist.name);
 
         const sourcesUrl = `https://artsiren.co/?artist=${encodeURIComponent(artist.name)}`;
+        const isWelcome = artist.stance === 'welcome';
+        const dotColor = isWelcome ? '#22C55E' : '#FF4444';
         overlay.innerHTML = `
             <div class="boycott-alert-header">
-                <img class="boycott-alert-logo" src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/b7ac7b206_.png" alt="ArtSiren">
+                <svg class="boycott-alert-logo" viewBox="0 57 470 284" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path fill="#0c233e" d="M453.22,149.75v-73.97c0-8.07-6.54-14.61-14.61-14.61H57.12c-8.07,0-14.62,6.54-14.62,14.61v73.97c26.13,0,47.31,21.18,47.31,47.31s-21.18,47.3-47.31,47.3v73.97c0,8.07,6.55,14.61,14.62,14.61h381.49c8.07,0,14.61-6.54,14.61-14.61v-73.97c-26.13,0-47.31-21.18-47.31-47.3s21.18-47.31,47.31-47.31ZM140.35,121.19h13.19v26.14h-13.19v-26.14ZM140.35,163.05h13.19v26.14h-13.19v-26.14ZM140.35,204.91h13.19v26.14h-13.19v-26.14ZM140.35,246.78h13.19v26.13h-13.19v-26.13ZM153.55,314.78h-13.19v-26.14h13.19v26.14ZM153.55,105.47h-13.19v-26.14h13.19v26.14ZM403.68,135.68c-20.06,13.05-33.32,35.67-33.32,61.38s13.26,48.32,33.32,61.37v26.19c0,5.95-4.87,10.82-10.82,10.82h-194.83c-5.95,0-10.82-4.87-10.82-10.82V109.49c0-5.95,4.87-10.82,10.82-10.82h194.83c5.95,0,10.82,4.87,10.82,10.82v26.19Z"/>
+                    <path fill="#0c233e" d="M348.29,162.15l-81.16,87.26-10.99-10.22-.18.2-40.52-37.06,17.29-18.91,32.84,30.04,63.95-68.76,18.76,17.45Z"/>
+                    <ellipse fill="${dotColor}" cx="41.62" cy="197.06" rx="34.42" ry="35.06"/>
+                </svg>
                 <span class="boycott-alert-title">ArtSiren</span>
                 <button class="boycott-alert-close" aria-label="Close">
-                    <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 2L12 12M12 2L2 12" stroke="#9AA7B6" stroke-width="2" stroke-linecap="round"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M2 2L12 12M12 2L2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                 </button>
             </div>
             <div class="boycott-alert-body">
