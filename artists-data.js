@@ -844,6 +844,8 @@ const artistsData = [
     sources: `<a href="https://consequence.net/2018/05/portishead-join-cultural-boycott-of-israel/">Consequence</a> | <a href="https://www.nme.com/news/music/wolf-alice-shame-portishead-lend-support-artistsforpalestine-2322658">NME</a>`
   },
   {
+    stance: 'boycott',
+    name: "PJ Harvey",
     level: "LOW",
     statement: "British musician whose 2011 Mercury Prize-winning album Let England Shake addresses the human cost of war; performed at Glastonbury 2024 in front of Palestine flags with anti-war material; listed as a BDS cultural boycott supporter",
 
@@ -1618,6 +1620,8 @@ const artistsData = [
     sources: `<a href="https://www.972mag.com/viet-thanh-nguyen-bds-israel-palestine/">+972 Magazine</a> | <a href="https://lithub.com/hundreds-of-authors-pledge-to-boycott-israeli-cultural-institutions/">Literary Hub</a>`
   },
   {
+    stance: 'boycott',
+    name: "Eric Clapton",
     level: "HIGH",
     statement: "Made antisemitic statements claiming 'the region is running the world'; performed with a guitar painted in Palestinian flag colors dedicated to Gaza; released a fundraising concert for Gaza children (December 2023); publicly defended Roger Waters' political activism against the region",
 
@@ -1656,12 +1660,16 @@ const artistsData = [
     sources: `<a href="https://www.billboard.com/music/music-news/sza-shouts-free-palestine-australia-sos-concert-1235658740/">Billboard</a>`
   },
   {
+    stance: 'boycott',
+    name: "Vampire Weekend",
     level: "HIGH",
     statement: "Frontman Ezra Koenig defended pro-Palestinian expression from the stage at Victorious Festival (August 2025): 'If someone was punished for flying a flag, that is wrong and they deserve an apology. The terrible suffering of the Palestinian people deserves all of our sympathy'",
 
     sources: `<a href="https://www.nme.com/news/music/vampire-weekend-on-the-mary-wallopers-victorious-controversy-that-is-wrong-and-they-deserve-an-apology-3886843">NME</a> | <a href="https://www.billboard.com/music/music-news/last-dinner-party-boycotts-victorious-festival-palestine-1236050564/">Billboard</a>`
   },
   {
+    stance: 'boycott',
+    name: "FKA Twigs",
     level: "HIGH",
     statement: "Performed at Artists for Aid benefit concert in London (July 2024), raising funds for War Child UK's Gaza and Sudan Response Plan covering food, water, and education for 120,000+ children",
 
@@ -1676,12 +1684,16 @@ const artistsData = [
     sources: `<a href="https://www.billboard.com/music/music-news/lizzo-supports-palestine-sudan-congo-college-protests-instagram-1235681873/">Billboard</a> | <a href="https://www.nme.com/news/music/lizzo-shares-support-for-palestine-sudan-dr-congo-and-college-protests-we-aint-free-til-we-all-free-3756245">NME</a>`
   },
   {
+    stance: 'boycott',
+    name: "Thom Yorke",
     level: "LOW",
     statement: "Condemned Netanyahu and called the region's blockade of Gaza aid 'horrific' in a May 2025 Instagram statement; stated Radiohead would 'absolutely not' return to the region (October 2025). Also condemned Hamas and explicitly rejected boycott calls — stance is critical of regional government without fully endorsing BDS",
 
     sources: `<a href="https://www.rollingstone.com/music/music-news/thom-yorke-condemns-netanyahu-hamas-gaza-1235351340/">Rolling Stone</a> | <a href="https://www.nme.com/news/music/thom-yorke-says-radiohead-will-absolutely-not-return-to-israel-and-he-wouldnt-want-to-be-5000-miles-anywhere-near-the-netanyahu-regime-3902353">NME</a> | <a href="https://www.billboard.com/music/rock/thom-yorke-note-heckler-israel-hamas-war-netanyahu-extremist-1235985900/">Billboard</a>`
   },
   {
+    stance: 'boycott',
+    name: "Tyler, the Creator",
     level: "LOW",
     statement: "Wore a Palestinian flag pin during his headline set at Coachella (April 2024)",
 
