@@ -744,30 +744,26 @@
     
     // Find matching artist with improved whole-word matching
     function findMatchingArtist(text) {
-        try {
-            if (!text || typeof text !== 'string' || text.length < 3) return null;
+        if (!text || typeof text !== 'string' || text.length < 3) return null;
 
-            const normalizedText = text.toLowerCase().trim();
+        const normalizedText = text.toLowerCase().trim();
 
-            for (const artist of artistsData) {
-                if (!artist || typeof artist.name !== 'string' || !artist.name) continue;
-                const artistName = artist.name.toLowerCase();
+        for (const artist of artistsData) {
+            if (!artist || typeof artist.name !== 'string' || !artist.name) continue;
+            const artistName = artist.name.toLowerCase();
 
-                if (normalizedText === artistName) return artist;
+            if (normalizedText === artistName) return artist;
 
-                const wordBoundaryRegex = new RegExp('\\b' + artistName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
-                if (wordBoundaryRegex.test(text)) return artist;
+            const wordBoundaryRegex = new RegExp('\\b' + artistName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+            if (wordBoundaryRegex.test(text)) return artist;
 
-                if (artistName.startsWith('the ')) {
-                    const nameWithoutThe = artistName.substring(4);
-                    const withoutTheRegex = new RegExp('\\b' + nameWithoutThe.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
-                    if (withoutTheRegex.test(text)) return artist;
-                }
+            if (artistName.startsWith('the ')) {
+                const nameWithoutThe = artistName.substring(4);
+                const withoutTheRegex = new RegExp('\\b' + nameWithoutThe.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+                if (withoutTheRegex.test(text)) return artist;
             }
-            return null;
-        } catch (e) {
-            return null;
         }
+        return null;
     }
     
     // Create floating overlay alert — queued so only one shows at a time
