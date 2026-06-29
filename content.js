@@ -730,7 +730,7 @@
             try {
                 const found = document.querySelectorAll(selector);
                 found.forEach(el => {
-                    if (!processedElements.has(el) && el.textContent.trim().length > 0) {
+                    if (!processedElements.has(el) && el.textContent.trim().length > 0 && !el.closest('.boycott-floating-alert') && !el.closest('#boycott-alert-modal')) {
                         elements.push(el);
                     }
                 });
@@ -854,8 +854,9 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         `;
         
-        const stanceColor = '#ff4444';
-        const stanceLabel = 'BOYCOTTER';
+        const isWelcomeArtist = artist.stance === 'welcome';
+        const stanceColor = isWelcomeArtist ? '#22C55E' : '#ff4444';
+        const stanceLabel = isWelcomeArtist ? 'WELCOMES ALL' : 'BOYCOTTER';
         
         const content = document.createElement('div');
         content.style.cssText = `
@@ -933,7 +934,7 @@
         icon.setAttribute('data-artist', artist.name);
         icon.title = `⚠️ BOYCOTT SIREN: ${artist.name} - Click for details`;
         
-        const color = artist.stance === 'boycott' ? '#ff4444' : '#ffc107';
+        const color = artist.stance === 'welcome' ? '#22C55E' : '#ff4444';
         
         icon.innerHTML = `
             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
