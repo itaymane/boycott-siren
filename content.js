@@ -801,7 +801,7 @@
                 <img class="boycott-alert-logo" src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/b7ac7b206_.png" alt="ArtSiren">
                 <span class="boycott-alert-title">ArtSiren</span>
                 <button class="boycott-alert-close" aria-label="Close">
-                    <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 2L12 12M12 2L2 12" stroke="#9AA7B6" stroke-width="2" stroke-linecap="round"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M2 2L12 12M12 2L2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                 </button>
             </div>
             <div class="boycott-alert-body">
