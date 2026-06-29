@@ -744,36 +744,30 @@
     
     // Find matching artist with improved whole-word matching
     function findMatchingArtist(text) {
-        if (!text || typeof text !== 'string' || text.length < 3) return null;
+        try {
+            if (!text || typeof text !== 'string' || text.length < 3) return null;
 
-        const normalizedText = text.toLowerCase().trim();
+            const normalizedText = text.toLowerCase().trim();
 
-        for (const artist of artistsData) {
-            if (!artist || typeof artist.name !== 'string' || !artist.name) continue;
-            const artistName = artist.name.toLowerCase();
-            
-            // Exact match
-            if (normalizedText === artistName) {
-                return artist;
-            }
-            
-            // Word boundary matching - prevents "The Ex" matching in "Massive Attack"
-            const wordBoundaryRegex = new RegExp('\\b' + artistName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
-            if (wordBoundaryRegex.test(text)) {
-                return artist;
-            }
-            
-            // Handle "The" prefix
-            if (artistName.startsWith('the ')) {
-                const nameWithoutThe = artistName.substring(4);
-                const withoutTheRegex = new RegExp('\\b' + nameWithoutThe.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
-                if (withoutTheRegex.test(text)) {
-                    return artist;
+            for (const artist of artistsData) {
+                if (!artist || typeof artist.name !== 'string' || !artist.name) continue;
+                const artistName = artist.name.toLowerCase();
+
+                if (normalizedText === artistName) return artist;
+
+                const wordBoundaryRegex = new RegExp('\\b' + artistName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+                if (wordBoundaryRegex.test(text)) return artist;
+
+                if (artistName.startsWith('the ')) {
+                    const nameWithoutThe = artistName.substring(4);
+                    const withoutTheRegex = new RegExp('\\b' + nameWithoutThe.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+                    if (withoutTheRegex.test(text)) return artist;
                 }
             }
+            return null;
+        } catch (e) {
+            return null;
         }
-        
-        return null;
     }
     
     // Create floating overlay alert — queued so only one shows at a time
