@@ -24,7 +24,7 @@
     width: 268px;
     background: #0C233E;
     border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 2.5px solid #0047ab;
     box-shadow: 0 8px 32px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.2);
     z-index: 2147483647;
     overflow: hidden;
@@ -51,23 +51,24 @@
 .boycott-alert-header {
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 10px 10px 8px 12px;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
+    gap: 8px;
+    padding: 7px 8px 7px 10px;
+    background: #ffffff;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2.5px solid #0047ab;
 }
 .boycott-alert-logo {
-    height: 18px;
-    width: auto;
+    width: 51px;
+    height: 31px;
     display: block;
     flex-shrink: 0;
-    opacity: 0.9;
 }
 .boycott-alert-title {
     flex: 1;
-    color: rgba(255,255,255,0.55);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.3px;
+    color: #0c233e;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.2px;
     line-height: 1;
 }
 .boycott-alert-close {
@@ -83,11 +84,11 @@
     justify-content: center;
     transition: background 0.15s;
     padding: 0;
-    color: rgba(255,255,255,0.4);
+    color: rgba(0,0,0,0.35);
 }
 .boycott-alert-close:hover {
-    background: rgba(255,255,255,0.1);
-    color: rgba(255,255,255,0.8);
+    background: rgba(0,71,171,0.08);
+    color: rgba(0,0,0,0.7);
 }
 .boycott-alert-close svg { display: block; }
 
