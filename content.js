@@ -823,98 +823,76 @@
         overlay.querySelector('.boycott-alert-close').addEventListener('click', closeAlert);
     }
     
-    // Show detailed modal
+    // Show detailed modal — matches artsiren.co design language
     function showArtistModal(artist) {
         const existing = document.getElementById('boycott-alert-modal');
         if (existing) existing.remove();
-        
+
+        const isWelcome = artist.stance === 'welcome';
+        const dotColor  = isWelcome ? '#22C55E' : '#FF4444';
+        const stanceColor = isWelcome ? '#0891b2' : '#F44634';
+        const stanceBg    = isWelcome ? '#ecfeff' : 'rgba(244,70,52,0.08)';
+        const stanceLabel = isWelcome ? 'WELCOMES ALL' : 'EXCLUDING';
+
+        const initials = artist.name.split(/\s+/).map(w => w[0] || '').join('').slice(0, 2).toUpperCase();
+
+        // Parse sources HTML into individual links
+        const srcLinks = [];
+        const srcRe = /<a\s+href="([^"]+)"[^>]*>([^<]+)<\/a>/g;
+        let m;
+        while ((m = srcRe.exec(artist.sources || '')) !== null) srcLinks.push({ url: m[1], name: m[2].trim() });
+
+        const sourcesHTML = srcLinks.map(s => `
+            <a href="${s.url}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:#F4F6FD;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;color:#0d1117;margin-bottom:6px;transition:background 0.15s;" onmouseover="this.style.background='#e5eaf8'" onmouseout="this.style.background='#F4F6FD'">
+                <span style="flex:1;">${s.name}</span>
+                <span style="color:#0047ab;font-size:14px;">→</span>
+            </a>`).join('');
+
         const modal = document.createElement('div');
         modal.id = 'boycott-alert-modal';
-        modal.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 2147483646;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        modal.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,20,36,0.55);backdrop-filter:blur(3px);z-index:2147483646;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;direction:ltr;';
+
+        const card = document.createElement('div');
+        card.style.cssText = 'background:#fff;border-radius:24px;max-width:400px;width:92%;max-height:88vh;overflow-y:auto;padding:24px 22px 20px;position:relative;box-shadow:0 24px 64px rgba(10,20,36,0.22);direction:ltr;';
+
+        card.innerHTML = `
+            <button id="as-close" style="position:absolute;top:14px;right:14px;background:#f5f8ff;border:1px solid #e2e8f0;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#4a5568;font-size:14px;line-height:1;padding:0;">✕</button>
+
+            <div style="display:flex;align-items:center;gap:7px;margin-bottom:18px;padding-right:36px;">
+                <svg style="width:36px;height:22px;flex-shrink:0;" viewBox="0 57 470 284" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#0c233e" d="M453.22,149.75v-73.97c0-8.07-6.54-14.61-14.61-14.61H57.12c-8.07,0-14.62,6.54-14.62,14.61v73.97c26.13,0,47.31,21.18,47.31,47.31s-21.18,47.3-47.31,47.3v73.97c0,8.07,6.55,14.61,14.62,14.61h381.49c8.07,0,14.61-6.54,14.61-14.61v-73.97c-26.13,0-47.31-21.18-47.31-47.3s21.18-47.31,47.31-47.31ZM140.35,121.19h13.19v26.14h-13.19v-26.14ZM140.35,163.05h13.19v26.14h-13.19v-26.14ZM140.35,204.91h13.19v26.14h-13.19v-26.14ZM140.35,246.78h13.19v26.13h-13.19v-26.13ZM153.55,314.78h-13.19v-26.14h13.19v26.14ZM153.55,105.47h-13.19v-26.14h13.19v26.14ZM403.68,135.68c-20.06,13.05-33.32,35.67-33.32,61.38s13.26,48.32,33.32,61.37v26.19c0,5.95-4.87,10.82-10.82,10.82h-194.83c-5.95,0-10.82-4.87-10.82-10.82V109.49c0-5.95,4.87-10.82,10.82-10.82h194.83c5.95,0,10.82,4.87,10.82,10.82v26.19Z"/>
+                    <path fill="#0c233e" d="M348.29,162.15l-81.16,87.26-10.99-10.22-.18.2-40.52-37.06,17.29-18.91,32.84,30.04,63.95-68.76,18.76,17.45Z"/>
+                    <ellipse fill="${dotColor}" cx="41.62" cy="197.06" rx="34.42" ry="35.06"/>
+                </svg>
+                <span style="font-size:13px;font-weight:700;color:#0c233e;letter-spacing:-0.1px;">ArtSiren</span>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
+                <div style="width:50px;height:50px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#000940,#0047ab);color:white;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;letter-spacing:0.02em;">${initials}</div>
+                <div style="font-size:17px;font-weight:700;color:#0d1117;letter-spacing:-0.02em;line-height:1.2;">${artist.name}</div>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;margin-bottom:14px;background:${stanceBg};">
+                <span style="font-size:13px;font-weight:700;color:${stanceColor};letter-spacing:0.03em;">${stanceLabel}</span>
+            </div>
+
+            <p style="font-size:14px;color:#4a5568;line-height:1.65;margin-bottom:18px;">${artist.statement}</p>
+
+            <hr style="border:none;border-top:1px solid #e2e8f0;margin-bottom:14px;">
+
+            <div style="font-size:12px;font-weight:600;color:#718096;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Sources</div>
+            ${sourcesHTML || '<p style="font-size:13px;color:#718096;">No sources available.</p>'}
+
+            <p style="font-size:11px;color:#a0aec0;text-align:center;margin-top:14px;line-height:1.5;">Information from publicly documented sources. All data is independently verifiable.</p>
         `;
-        
-        const isWelcomeArtist = artist.stance === 'welcome';
-        const stanceColor = isWelcomeArtist ? '#22C55E' : '#ff4444';
-        const stanceLabel = isWelcomeArtist ? 'WELCOMES ALL' : 'BOYCOTTER';
-        
-        const content = document.createElement('div');
-        content.style.cssText = `
-            background: white;
-            border-radius: 16px;
-            padding: 32px;
-            max-width: 500px;
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        `;
-        
-        content.innerHTML = `
-            <div style="margin-bottom: 20px;">
-                <h2 style="margin: 0 0 8px 0; color: #0047ab; font-size: 24px;">${artist.name}</h2>
-                <div style="display: inline-block; padding: 4px 12px; background: ${stanceColor}; color: white; border-radius: 12px; font-size: 12px; font-weight: 500;">
-                    ${stanceLabel}
-                </div>
-            </div>
-            
-            <div style="background: #f5f7fa; padding: 16px; border-radius: 12px; margin-bottom: 20px;">
-                <div style="font-size: 13px; color: #666; margin-bottom: 4px;">Statement:</div>
-                <div style="font-size: 14px; color: #333;">${artist.statement}</div>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <div style="font-size: 13px; color: #666; margin-bottom: 8px; font-weight: 500;">Sources:</div>
-                <div style="font-size: 12px; color: #0047ab; line-height: 1.8;">${artist.sources}</div>
-            </div>
-            
-            <div style="background: #f8f9fa; padding: 12px; border-radius: 8px; margin-bottom: 20px;">
-                <div style="font-size: 11px; color: #666; line-height: 1.5;">
-                    Information from publicly documented sources. All data is independently verifiable.
-                </div>
-            </div>
-            
-            <button id="close-modal" style="
-                width: 100%;
-                padding: 12px;
-                background: linear-gradient(135deg, #0047ab 0%, #4a90e2 100%);
-                color: white;
-                border: none;
-                border-radius: 8px;
-                font-size: 14px;
-                font-weight: 500;
-                cursor: pointer;
-            ">Close</button>
-        `;
-        
-        modal.appendChild(content);
+
+        modal.appendChild(card);
         document.body.appendChild(modal);
-        
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) modal.remove();
-        });
-        
-        content.querySelector('#close-modal').addEventListener('click', () => {
-            modal.remove();
-        });
-        
-        const escHandler = (e) => {
-            if (e.key === 'Escape') {
-                modal.remove();
-                document.removeEventListener('keydown', escHandler);
-            }
-        };
-        document.addEventListener('keydown', escHandler);
+
+        card.querySelector('#as-close').addEventListener('click', () => modal.remove());
+        modal.addEventListener('click', (e) => { if (e.target === modal) modal.remove(); });
+        const escH = (e) => { if (e.key === 'Escape') { modal.remove(); document.removeEventListener('keydown', escH); } };
+        document.addEventListener('keydown', escH);
     }
     
     // YouTube watch-page badge (injected below channel info)
