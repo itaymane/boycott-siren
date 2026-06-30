@@ -1110,8 +1110,13 @@
         }
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') dismissAllAlerts();
-        });
+            if (e.key === 'Enter') {
+                dismissAllAlerts();
+                alertQueue = [];
+                displayedArtists = new Set();
+                isAlertVisible = false;
+            }
+        }, true); // capture phase — fires before YouTube/Spotify stop propagation
 
         const observer = new MutationObserver(() => {
             debounce(runScan, CONFIG.debounceDelay);
