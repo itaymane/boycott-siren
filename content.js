@@ -770,8 +770,14 @@
     function createFloatingAlert(artist) {
         if (displayedArtists.has(artist.name)) return;
         displayedArtists.add(artist.name);
-        alertQueue.push(artist);
-        if (!isAlertVisible) showNextAlert();
+        alertQueue = [artist]; // replace queue — only latest artist matters
+        if (isAlertVisible) {
+            dismissAllAlerts();
+            isAlertVisible = false;
+            setTimeout(showNextAlert, 320);
+        } else {
+            showNextAlert();
+        }
     }
 
     function showNextAlert() {
@@ -1073,9 +1079,10 @@
             const u = new URL(url);
             if (u.hostname.includes('youtube.com')) {
                 const v = u.searchParams.get('v') || '';
-                return u.pathname + (v ? '?v=' + v : '');
+                const q = u.searchParams.get('search_query') || '';
+                return u.pathname + (v ? '?v=' + v : '') + (q ? '?q=' + q : '');
             }
-            return u.hostname + u.pathname;
+            return u.hostname + u.pathname + u.search;
         } catch(e) { return url; }
     }
 
