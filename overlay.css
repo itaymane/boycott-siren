@@ -1,5 +1,32 @@
 /* ArtSiren Extension Overlay — Minimal dark redesign */
 
+/* ── Inline logo chip (next to artist name, all sites) ── */
+.artsiren-chip {
+    display: inline-flex !important;
+    align-items: center !important;
+    vertical-align: middle !important;
+    margin-left: 6px !important;
+    background: rgba(255,255,255,0.96) !important;
+    border-radius: 5px !important;
+    padding: 2px 4px !important;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.28) !important;
+    cursor: pointer !important;
+    transition: transform 0.15s, box-shadow 0.15s !important;
+    flex-shrink: 0 !important;
+    line-height: 0 !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+.artsiren-chip:hover {
+    transform: scale(1.12) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35) !important;
+}
+.artsiren-chip svg {
+    width: 28px !important;
+    height: 17px !important;
+    display: block !important;
+}
+
 /* ── Thumbnail corner badge ── */
 .artsiren-thumb-badge {
     position: absolute !important;
