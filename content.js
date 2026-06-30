@@ -820,7 +820,11 @@
             }, 300);
         }
 
-        overlay.querySelector('.boycott-alert-close').addEventListener('click', closeAlert);
+        const autoCloseTimer = setTimeout(closeAlert, 12000);
+        overlay.querySelector('.boycott-alert-close').addEventListener('click', () => {
+            clearTimeout(autoCloseTimer);
+            closeAlert();
+        });
     }
     
     // Show detailed modal — matches artsiren.co design language
@@ -1097,6 +1101,10 @@
                 setTimeout(runScan, 1500);
             });
         }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') dismissAllAlerts();
+        });
 
         const observer = new MutationObserver(() => {
             debounce(runScan, CONFIG.debounceDelay);
