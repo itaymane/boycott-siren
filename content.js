@@ -1025,6 +1025,52 @@
         });
     }
 
+    // Concert listing rows — adds logo chip next to each artist name on ticketing sites
+    function processTicketingRows() {
+        if (getSiteCategory() !== 'tickets') return;
+
+        // Common event row container patterns across major ticketing sites
+        const rowSelectors = [
+            '[class*="event-card"]', '[class*="event-item"]', '[class*="event-row"]',
+            '[class*="event-listing"]', '[class*="event-tile"]', '[class*="event-block"]',
+            'li[class*="event"]', 'article[class*="event"]',
+            '[class*="EventCard"]', '[class*="EventContainer"]', '[class*="EventItem"]',
+            '[class*="concert-row"]', '[class*="show-item"]', '[class*="show-card"]',
+            '[class*="lineup-item"]', '[class*="lineup-artist"]',
+            '[data-testid*="event-card"]', '[data-testid*="event-item"]',
+        ];
+
+        // Ordered by specificity — first match within each row wins
+        const nameSelectors = [
+            '[class*="artist-name"]', '[class*="artistName"]',
+            '[class*="headliner"]', '[class*="performer-name"]', '[class*="performerName"]',
+            '[class*="event-name"]', '[class*="eventName"]',
+            'a[href*="/artist/"]', 'a[href*="/artists/"]',
+            '[itemprop="name"]',
+            'h3', 'h4',
+        ];
+
+        rowSelectors.forEach(rowSel => {
+            let rows;
+            try { rows = document.querySelectorAll(rowSel); } catch(e) { return; }
+            rows.forEach(row => {
+                if (row.dataset.asRow || row.closest('.boycott-floating-alert') || row.closest('#boycott-alert-modal')) return;
+                row.dataset.asRow = '1';
+
+                for (const nameSel of nameSelectors) {
+                    let nameEl;
+                    try { nameEl = row.querySelector(nameSel); } catch(e) { continue; }
+                    if (!nameEl || nameEl.querySelector('.artsiren-chip')) continue;
+                    const artist = findMatchingArtist(nameEl.textContent.trim());
+                    if (artist) {
+                        nameEl.appendChild(createLogoChip(artist));
+                        break;
+                    }
+                }
+            });
+        });
+    }
+
     // Process elements
     function processElements() {
         const detector = getSiteDetector();
@@ -1042,7 +1088,7 @@
             const artist = findMatchingArtist(text);
 
             if (artist && !processedElements.has(element)) {
-                createFloatingAlert(artist);
+                if (getSiteCategory() === 'tickets') createFloatingAlert(artist);
                 const isYTWatch = window.location.hostname.includes('youtube.com') && window.location.pathname.startsWith('/watch');
                 if (isYTWatch) {
                     addYouTubeBadge(artist);
@@ -1083,6 +1129,7 @@
             const badge = el.querySelector('.bs-feed-badge');
             if (badge) badge.remove();
         });
+        document.querySelectorAll('[data-as-row]').forEach(el => delete el.dataset.asRow);
     }
 
     const isYT = () => window.location.hostname.includes('youtube.com');
@@ -1090,6 +1137,7 @@
     function runScan() {
         processElements();
         if (isYT() && settings.alertMode !== 'off' && settings.alertMode !== 'tickets') processYouTubeFeed();
+        processTicketingRows();
     }
 
     // Returns only the meaningful part of the URL for navigation detection.
