@@ -826,11 +826,7 @@
             }, 300);
         }
 
-        const autoCloseTimer = setTimeout(closeAlert, 12000);
-        overlay.querySelector('.boycott-alert-close').addEventListener('click', () => {
-            clearTimeout(autoCloseTimer);
-            closeAlert();
-        });
+        overlay.querySelector('.boycott-alert-close').addEventListener('click', closeAlert);
     }
     
     // Show detailed modal — matches artsiren.co design language
@@ -1031,6 +1027,9 @@
 
         // Common event row container patterns across major ticketing sites
         const rowSelectors = [
+            // Songkick
+            'li.event-listings-element', '.event-listings-element', 'article.concert',
+            // Generic patterns
             '[class*="event-card"]', '[class*="event-item"]', '[class*="event-row"]',
             '[class*="event-listing"]', '[class*="event-tile"]', '[class*="event-block"]',
             'li[class*="event"]', 'article[class*="event"]',
@@ -1042,8 +1041,11 @@
 
         // Ordered by specificity — first match within each row wins
         const nameSelectors = [
+            // Songkick
+            'strong a', '.headliner a', '.headliner',
+            // Generic
             '[class*="artist-name"]', '[class*="artistName"]',
-            '[class*="headliner"]', '[class*="performer-name"]', '[class*="performerName"]',
+            '[class*="performer-name"]', '[class*="performerName"]',
             '[class*="event-name"]', '[class*="eventName"]',
             'a[href*="/artist/"]', 'a[href*="/artists/"]',
             '[itemprop="name"]',
