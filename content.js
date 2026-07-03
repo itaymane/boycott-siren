@@ -730,15 +730,21 @@
             try {
                 const found = document.querySelectorAll(selector);
                 found.forEach(el => {
-                    if (!processedElements.has(el) && el.textContent.trim().length > 0 && !el.closest('.boycott-floating-alert') && !el.closest('#boycott-alert-modal')) {
-                        elements.push(el);
-                    }
+                    if (processedElements.has(el)) return;
+                    if (!el.textContent.trim()) return;
+                    if (el.closest('.boycott-floating-alert') || el.closest('#boycott-alert-modal')) return;
+                    // Skip elements inside search dropdowns — chip doesn't belong there
+                    if (el.closest('[role="listbox"]') || el.closest('[role="option"]') ||
+                        el.closest('[aria-autocomplete]') || el.closest('[class*="typeahead"]') ||
+                        el.closest('[class*="autocomplete"]') || el.closest('[class*="search-dropdown"]') ||
+                        el.closest('[class*="search-suggestion"]') || el.closest('[class*="suggestions-"]')) return;
+                    elements.push(el);
                 });
             } catch (e) {
                 // Ignore invalid selectors
             }
         });
-        
+
         return elements;
     }
     
