@@ -742,20 +742,32 @@
         return elements;
     }
     
+    function stripDiacritics(str) {
+        return str.normalize('NFD').replace(/[̀-ͯ]/g, '');
+    }
+
     // Find matching artist with improved whole-word matching
     function findMatchingArtist(text) {
         if (!text || typeof text !== 'string' || text.length < 3) return null;
 
         const normalizedText = text.toLowerCase().trim();
+        const strippedText = stripDiacritics(normalizedText);
 
         for (const artist of artistsData) {
             if (!artist || typeof artist.name !== 'string' || !artist.name) continue;
             const artistName = artist.name.toLowerCase();
+            const strippedName = stripDiacritics(artistName);
 
-            if (normalizedText === artistName) return artist;
+            if (normalizedText === artistName || strippedText === strippedName) return artist;
 
             const wordBoundaryRegex = new RegExp('\\b' + artistName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
             if (wordBoundaryRegex.test(text)) return artist;
+
+            // Match even when diacritics differ (e.g. "Bjork" matches "Björk")
+            if (strippedName !== artistName) {
+                const strippedRegex = new RegExp('\\b' + strippedName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+                if (strippedRegex.test(strippedText)) return artist;
+            }
 
             if (artistName.startsWith('the ')) {
                 const nameWithoutThe = artistName.substring(4);
