@@ -735,9 +735,16 @@
                     if (el.closest('.boycott-floating-alert') || el.closest('#boycott-alert-modal')) return;
                     // Skip elements inside search dropdowns — chip doesn't belong there
                     if (el.closest('[role="listbox"]') || el.closest('[role="option"]') ||
-                        el.closest('[aria-autocomplete]') || el.closest('[class*="typeahead"]') ||
-                        el.closest('[class*="autocomplete"]') || el.closest('[class*="search-dropdown"]') ||
-                        el.closest('[class*="search-suggestion"]') || el.closest('[class*="suggestions-"]')) return;
+                        el.closest('[role="combobox"]') || el.closest('[aria-autocomplete]') ||
+                        el.closest('[class*="typeahead"]') || el.closest('[class*="autocomplete"]') ||
+                        el.closest('[class*="search-dropdown"]') || el.closest('[class*="search-suggestion"]') ||
+                        el.closest('[class*="suggestions-"]') || el.closest('[class*="SearchSuggestion"]') ||
+                        el.closest('[class*="trending"]') || el.closest('[class*="SearchResult"]') ||
+                        el.closest('[class*="search-result"]') || el.closest('[class*="omnibox"]') ||
+                        el.closest('[class*="Popover"]') || el.closest('[class*="popover"]') ||
+                        el.closest('[class*="flyout"]') || el.closest('[class*="Flyout"]') ||
+                        el.closest('[data-testid*="search-suggestion"]') ||
+                        el.closest('[data-testid*="trending"]')) return;
                     elements.push(el);
                 });
             } catch (e) {
@@ -1078,6 +1085,10 @@
             try { rows = document.querySelectorAll(rowSel); } catch(e) { return; }
             rows.forEach(row => {
                 if (row.dataset.asRow || row.closest('.boycott-floating-alert') || row.closest('#boycott-alert-modal')) return;
+                if (row.closest('[class*="trending"]') || row.closest('[class*="SearchResult"]') ||
+                    row.closest('[class*="search-result"]') || row.closest('[class*="SearchSuggestion"]') ||
+                    row.closest('[class*="Popover"]') || row.closest('[class*="popover"]') ||
+                    row.closest('[class*="flyout"]') || row.closest('[role="listbox"]')) return;
                 row.dataset.asRow = '1';
 
                 for (const nameSel of nameSelectors) {
