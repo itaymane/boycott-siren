@@ -3,7 +3,7 @@
   "name": "ArtSiren",
   "version": "1.2.0",
   "version_name": "1.2.0",
-  "description": "Know before you buy. See which artists are part of the cultural boycott movement — with verified sources. 250+ artists tracked.",
+  "description": "Know before you buy. See which artists support the cultural boycott of Israel — with verified sources. 294 artists tracked.",
 
   "permissions": [
     "activeTab",
@@ -74,20 +74,20 @@
   ],
 
   "icons": {
-    "16": "logo.png",
-    "32": "logo.png",
-    "48": "logo.png",
-    "128": "logo.png"
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   },
 
   "action": {
     "default_popup": "popup.html",
     "default_title": "ArtSiren – Artist Boycott Alerts",
     "default_icon": {
-      "16": "logo.png",
-      "32": "logo.png",
-      "48": "logo.png",
-      "128": "logo.png"
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
     }
   },
 
