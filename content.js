@@ -969,7 +969,10 @@
                 <button class="artsiren-yt-expand" title="View details">›</button>
             </div>
         `;
-        badge.addEventListener('click', (e) => { e.stopPropagation(); showArtistModal(artist); });
+        badge.addEventListener('click', (e) => {
+            e.stopPropagation();
+            window.open('https://artsiren.co/?artist=' + encodeURIComponent(artist.name), '_blank', 'noopener');
+        });
         ownerEl.insertAdjacentElement('afterend', badge);
     }
 
