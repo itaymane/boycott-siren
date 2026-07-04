@@ -723,25 +723,6 @@
         return getElementsFromSelectors(selectors);
     }
 
-    // Returns true if element is inside a floating dropdown/popup (search suggestions etc.)
-    // Uses z-index + positioning instead of class names, since sites vary
-    function isInsideDropdown(el) {
-        let node = el.parentElement;
-        for (let i = 0; i < 12 && node && node !== document.body; i++) {
-            try {
-                const s = window.getComputedStyle(node);
-                if ((s.position === 'absolute' || s.position === 'fixed') &&
-                    parseInt(s.zIndex || '0') > 400 &&
-                    !node.classList.contains('boycott-floating-alert') &&
-                    node.id !== 'boycott-alert-modal') {
-                    return true;
-                }
-            } catch(e) { break; }
-            node = node.parentElement;
-        }
-        return false;
-    }
-
     // Helper function to get elements from selectors
     function getElementsFromSelectors(selectors) {
         const elements = [];
@@ -752,19 +733,6 @@
                     if (processedElements.has(el)) return;
                     if (!el.textContent.trim()) return;
                     if (el.closest('.boycott-floating-alert') || el.closest('#boycott-alert-modal')) return;
-                    // Skip elements inside search dropdowns — chip doesn't belong there
-                    if (isInsideDropdown(el)) return;
-                    if (el.closest('[role="listbox"]') || el.closest('[role="option"]') ||
-                        el.closest('[role="combobox"]') || el.closest('[aria-autocomplete]') ||
-                        el.closest('[class*="typeahead"]') || el.closest('[class*="autocomplete"]') ||
-                        el.closest('[class*="search-dropdown"]') || el.closest('[class*="search-suggestion"]') ||
-                        el.closest('[class*="suggestions-"]') || el.closest('[class*="SearchSuggestion"]') ||
-                        el.closest('[class*="trending"]') || el.closest('[class*="SearchResult"]') ||
-                        el.closest('[class*="search-result"]') || el.closest('[class*="omnibox"]') ||
-                        el.closest('[class*="Popover"]') || el.closest('[class*="popover"]') ||
-                        el.closest('[class*="flyout"]') || el.closest('[class*="Flyout"]') ||
-                        el.closest('[data-testid*="search-suggestion"]') ||
-                        el.closest('[data-testid*="trending"]')) return;
                     elements.push(el);
                 });
             } catch (e) {
@@ -1105,7 +1073,6 @@
             try { rows = document.querySelectorAll(rowSel); } catch(e) { return; }
             rows.forEach(row => {
                 if (row.dataset.asRow || row.closest('.boycott-floating-alert') || row.closest('#boycott-alert-modal')) return;
-                if (isInsideDropdown(row)) return;
                 row.dataset.asRow = '1';
 
                 for (const nameSel of nameSelectors) {

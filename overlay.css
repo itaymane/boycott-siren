@@ -14,8 +14,6 @@
     transition: transform 0.15s, box-shadow 0.15s !important;
     flex-shrink: 0 !important;
     line-height: 0 !important;
-    position: relative !important;
-    z-index: 10 !important;
 }
 .artsiren-chip:hover {
     transform: scale(1.12) !important;
