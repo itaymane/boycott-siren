@@ -211,8 +211,9 @@
         }
         .nav-content {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
+            gap: 0;
         }
         .logo {
             display: flex;
@@ -1052,8 +1053,27 @@
         }
         .nav-content { direction: ltr; }
         .logo { color: var(--blue); gap: 8px; }
-        .logo img { width: auto; height: 36px; max-width: 120px; }
-        .logo span { display: inline; font-size: 1.15rem; font-weight: 800; letter-spacing: -0.02em; }
+        .logo img { width: auto; height: 36px; max-width: 180px; display: block; }
+        .logo span { display: none; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            margin-left: auto;
+        }
+        .nav-link {
+            color: #6B7280;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            padding: 0.45rem 1rem;
+            border-radius: 8px;
+            transition: color .15s, background .15s;
+            white-space: nowrap;
+            font-family: 'AlefMultiGndr', 'Inter', sans-serif;
+        }
+        .nav-link:hover { color: #0C233E; background: rgba(12,35,62,0.06); }
+        @media (max-width: 760px) { .nav-links { display: none !important; } }
         .nav-cta-btn {
             background: var(--blue);
             color: white;
@@ -1179,7 +1199,7 @@
         }
 
         /* ── Language Switcher ── */
-        .nav-right { display: flex; align-items: center; gap: 1rem; }
+        .nav-right { display: flex; align-items: center; gap: 0.75rem; margin-left: 1.5rem; }
         .lang-switcher { position: relative; }
         .lang-btn {
             background: transparent;
@@ -1467,13 +1487,19 @@
         <div class="container">
             <div class="nav-content">
                 <a href="/" class="logo">
-                    <img src="/logo.png" alt="ArtSiren" onerror="this.style.display='none'">
-                    <span>ArtSiren</span>
+                    <img src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/4ebf28762_fulllogo2.png" alt="ArtSiren" onerror="this.src='/logo.png'">
                 </a>
+                <div class="nav-links">
+                    <a href="/about.html" class="nav-link">אודות</a>
+                    <a href="/sources.html" class="nav-link">מקורות</a>
+                    <a href="/how-it-works.html" class="nav-link">איך זה עובד</a>
+                    <a href="#" class="nav-link" onclick="openContact();return false;">צור קשר</a>
+                </div>
                 <div class="nav-right">
                     <div class="lang-switcher">
                         <button class="lang-btn" onclick="toggleLang(this)">
-                            🌐 עב <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0l5 6 5-6z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            עב
                         </button>
                         <div class="lang-menu">
                             <a href="/" class="lang-item">🇺🇸 English</a>
@@ -1482,14 +1508,10 @@
                     </div>
                     <div class="nav-cta-wrap">
                         <a href="/boycott-siren-extension.zip" download onclick="trackExtensionDownload(); showInstallGuide();" class="btn-cta nav-cta-btn" id="ext-btn">
-                            <span class="btn-cta-full">Get Browser Alerts</span>
-                            <span class="btn-cta-short">Alerts</span>
+                            <span class="btn-cta-full">התראות דפדפן</span>
+                            <span class="btn-cta-short">הורד</span>
                         </a>
-                        <button id="pwa-install-btn" onclick="installPWA()" style="display:none; margin-left:8px; padding:8px 16px; background:#0047ab; color:#fff; border:none; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer;">
-                            📱 התקן אפליקציה
-                        </button>
                     </div>
-                    <button id="mobile-add-btn" onclick="installPWA()">📱 Add to App</button>
                 </div>
             </div>
         </div>
