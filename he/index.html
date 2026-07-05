@@ -1052,8 +1052,8 @@
         }
         .nav-content { direction: ltr; }
         .logo { color: var(--blue); gap: 8px; }
-        .logo img { width: auto; height: 36px; max-width: 180px; }
-        .logo span { display: none; }
+        .logo img { width: auto; height: 36px; max-width: 120px; }
+        .logo span { display: inline; font-size: 1.15rem; font-weight: 800; letter-spacing: -0.02em; }
         .nav-cta-btn {
             background: var(--blue);
             color: white;
@@ -1225,10 +1225,13 @@
         .lang-item:hover { background: var(--blue-tint); color: var(--blue); }
         .lang-item.lang-active { color: var(--blue); font-weight: 700; pointer-events: none; }
 
-        /* ── Search button ── */
+        /* ── Search button (RTL: icon right, button left) ── */
+        .search-icon { left: auto !important; right: 1.1rem !important; }
+        .search-input { padding: 0.9rem 3rem 0.9rem 3.8rem !important; }
         .search-btn {
             position: absolute;
-            right: 6px;
+            left: 6px;
+            right: auto;
             top: 50%;
             transform: translateY(-50%);
             background: var(--blue);
@@ -1266,9 +1269,9 @@
             flex-shrink: 0;
             padding: 0.3rem 0.75rem;
             border-radius: 8px;
-            border: 1.5px solid var(--border);
+            border: 1.5px solid rgba(255,255,255,0.35);
             background: transparent;
-            color: var(--text-secondary);
+            color: rgba(255,255,255,0.85);
             font-size: 0.82rem;
             font-weight: 500;
             cursor: pointer;
@@ -1277,10 +1280,10 @@
             white-space: nowrap;
             line-height: 1.4;
         }
-        .f-tab:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-tint); }
-        .f-tab.active { background: var(--blue); color: white; border-color: var(--blue); }
-        .f-tab[data-stance="WELCOMES_ALL"].active { background: #0891b2; border-color: #0891b2; color: white; }
-        .f-divider { width: 1px; height: 20px; background: var(--border); align-self: center; flex-shrink: 0; margin: 0 0.15rem; }
+        .f-tab:hover { border-color: rgba(255,255,255,0.7); color: #fff; background: rgba(255,255,255,0.1); }
+        .f-tab.active { background: rgba(255,255,255,0.95); color: #0C233E; border-color: transparent; }
+        .f-tab[data-stance="WELCOMES_ALL"].active { background: #0891b2; color: white; }
+        .f-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.25); align-self: center; flex-shrink: 0; margin: 0 0.15rem; }
 
         /* ── Trust icons row ── */
         .hero-trust {
