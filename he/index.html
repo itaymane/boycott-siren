@@ -1042,61 +1042,29 @@
             }
         }
 
-        /* ═══════════════════════════════════════════════
-           Dark Rebrand — #000940 navy / #44D7FF cyan
-           ═══════════════════════════════════════════════ */
-
-        :root {
-            --blue: #44D7FF;
-            --blue-mid: #22b8e8;
-            --blue-light: #7fe8ff;
-            --blue-tint: rgba(68, 215, 255, 0.12);
-            --blue-tint2: rgba(68, 215, 255, 0.06);
-            --text-primary: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.72);
-            --text-muted: rgba(255, 255, 255, 0.45);
-            --border: rgba(255, 255, 255, 0.12);
-            --border-blue: rgba(68, 215, 255, 0.2);
-            --bg: #000940;
-            --shadow-sm: 0 1px 4px rgba(0,0,0,0.2);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
-            --shadow-lg: 0 12px 40px rgba(0,0,0,0.3);
-            --shadow-xl: 0 20px 60px rgba(0,0,0,0.4);
-        }
-
-        /* Restore dark text inside white-bg components */
-        .artist-card,
-        .autocomplete-dropdown,
-        .contact-modal {
-            --text-primary: #0d1117;
-            --text-secondary: #4a5568;
-            --text-muted: #718096;
-            --blue: #000940;
-            --blue-tint: rgba(0, 9, 64, 0.05);
-            --blue-tint2: rgba(0, 9, 64, 0.03);
-            --border: #e2e8f0;
-            --border-blue: rgba(0, 9, 64, 0.12);
-        }
-
-        /* Navbar */
+        /* ── Navbar (light, matches English) ── */
         .navbar {
-            background: #000940;
+            background: #ffffff;
             backdrop-filter: none;
             -webkit-backdrop-filter: none;
-            border-bottom: 1px solid rgba(68, 215, 255, 0.15);
-            box-shadow: 0 1px 0 rgba(68, 215, 255, 0.1), 0 4px 24px rgba(0,0,0,0.4);
+            box-shadow: 0 2px 12px rgba(12,35,62,0.05);
+            border-bottom: 1px solid var(--border);
         }
-        .logo { color: white; }
-        .logo img { width: auto; height: 38px; max-width: 180px; }
+        .nav-content { direction: ltr; }
+        .logo { color: var(--blue); gap: 8px; }
+        .logo img { width: auto; height: 36px; max-width: 180px; }
         .logo span { display: none; }
-        .nav-cta-label { color: rgba(255,255,255,0.5); }
         .nav-cta-btn {
-            background: #44D7FF;
-            color: #000940;
-            box-shadow: 0 4px 15px rgba(68, 215, 255, 0.35);
+            background: var(--blue);
+            color: white;
+            border-radius: 100px;
+            box-shadow: 0 4px 12px rgba(0,71,171,0.3);
+            padding: 0.5rem 1.1rem;
+            font-size: 0.85rem;
         }
         .btn-cta:hover, .nav-cta-btn:hover {
-            box-shadow: 0 8px 24px rgba(68, 215, 255, 0.45);
+            background: var(--blue-mid);
+            box-shadow: 0 6px 20px rgba(0,71,171,0.4);
         }
 
         /* Hero */
@@ -1200,63 +1168,9 @@
         .level-btn-HIGH.active     { background: #ea580c; color: white; border-color: transparent; box-shadow: 0 2px 8px rgba(234,88,12,0.4); }
         .level-btn-LOW.active      { background: #059669; color: white; border-color: transparent; box-shadow: 0 2px 8px rgba(5,150,105,0.4); }
 
-        /* Stats — dark cards */
-        .stat-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(68, 215, 255, 0.15);
-            box-shadow: none;
-        }
-        .stat-card:hover {
-            box-shadow: 0 4px 20px rgba(68, 215, 255, 0.12);
-            transform: translateY(-2px);
-        }
-        .stat-number {
-            background: none;
-            -webkit-background-clip: unset;
-            background-clip: unset;
-            -webkit-text-fill-color: white;
-            color: white;
-            font-size: 2.5rem;
-        }
-        .stat-label { color: #44D7FF; }
-
-        /* Levels legend */
-        .levels-legend {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .levels-legend summary { color: rgba(255,255,255,0.6); }
-        .levels-legend summary::before { color: rgba(255,255,255,0.35); }
-        .legend-text { color: rgba(255,255,255,0.65); }
-
-        /* Grid */
-        .grid-title { color: rgba(255,255,255,0.4); }
-
-        /* Search bar — white bg, needs dark placeholder + visible border */
-        .search-input { color: #0d1117; border-color: #e2e8f0; }
-        .search-input::placeholder { color: #a0aec0; font-weight: 400; }
-        .search-icon { color: #a0aec0; }
-
-        /* Artist cards — stay white, use navy accent */
-        .view-details { color: #000940; }
-        .artist-card:hover { border-color: rgba(0,9,64,0.15); }
-
-        /* PWA install button */
-        #pwa-install-btn { background: #44D7FF !important; color: #000940 !important; }
-
-        /* Footer */
-        .footer {
-            background: #000940;
-            border-top: 1px solid rgba(255,255,255,0.08);
-        }
-        .footer-links a { color: rgba(255,255,255,0.55); }
-        .footer-links a:hover { color: #44D7FF; background: rgba(68, 215, 255, 0.08); }
-        .footer-links span { color: rgba(255,255,255,0.15); }
-        .footer-copyright { color: rgba(255,255,255,0.3); }
-
-        /* Contact modal — keep white/professional */
-        .contact-submit { background: #000940; }
-        .contact-submit:hover { background: #001269; }
+        /* Contact modal */
+        .contact-submit { background: var(--blue); }
+        .contact-submit:hover { background: var(--blue-mid); }
         .contact-field input:focus,
         .contact-field select:focus,
         .contact-field textarea:focus {
@@ -1269,47 +1183,47 @@
         .lang-switcher { position: relative; }
         .lang-btn {
             background: transparent;
-            border: 1px solid rgba(255,255,255,0.22);
-            color: rgba(255,255,255,0.65);
+            border: 1px solid transparent;
+            color: var(--text-secondary);
             border-radius: 20px;
-            padding: 0.35rem 0.85rem;
+            padding: 0.4rem;
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 500;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 0.35rem;
             font-family: inherit;
             transition: color 0.15s, border-color 0.15s;
             white-space: nowrap;
         }
-        .lang-btn:hover, .lang-switcher.open .lang-btn { color: #44D7FF; border-color: #44D7FF; }
+        .lang-btn:hover, .lang-switcher.open .lang-btn { color: var(--blue); border-color: var(--blue); }
         .lang-menu {
             display: none;
             position: absolute;
             top: calc(100% + 8px);
             left: 0;
             right: auto;
-            background: #000c4a;
-            border: 1px solid rgba(68,215,255,0.2);
+            background: white;
+            border: 1px solid var(--border);
             border-radius: 10px;
             overflow: hidden;
             min-width: 140px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+            box-shadow: var(--shadow-lg);
             z-index: 200;
         }
         .lang-switcher.open .lang-menu { display: block; }
         .lang-item {
             display: block;
             padding: 0.6rem 1rem;
-            color: rgba(255,255,255,0.65);
+            color: var(--text-secondary);
             text-decoration: none;
             font-size: 0.85rem;
             font-weight: 500;
             transition: background 0.15s, color 0.15s;
         }
-        .lang-item:hover { background: rgba(68,215,255,0.1); color: #44D7FF; }
-        .lang-item.lang-active { color: #44D7FF; font-weight: 700; pointer-events: none; }
+        .lang-item:hover { background: var(--blue-tint); color: var(--blue); }
+        .lang-item.lang-active { color: var(--blue); font-weight: 700; pointer-events: none; }
 
         /* ── Search button ── */
         .search-btn {
@@ -1352,9 +1266,9 @@
             flex-shrink: 0;
             padding: 0.3rem 0.75rem;
             border-radius: 8px;
-            border: 1.5px solid rgba(255,255,255,0.3);
+            border: 1.5px solid var(--border);
             background: transparent;
-            color: rgba(255,255,255,0.8);
+            color: var(--text-secondary);
             font-size: 0.82rem;
             font-weight: 500;
             cursor: pointer;
@@ -1363,11 +1277,10 @@
             white-space: nowrap;
             line-height: 1.4;
         }
-        .f-tab:hover { border-color: rgba(255,255,255,0.7); color: #fff; background: rgba(255,255,255,0.1); }
-        .f-tab.active { background: rgba(255,255,255,0.95); color: #0C233E; border-color: transparent; }
-        .f-tab[data-stance="WELCOMES_ALL"].active { background: #0891b2; color: white; }
-        .f-tab[data-stance="BOYCOTTER"].active { background: rgba(255,255,255,0.95); color: #0C233E; }
-        .f-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.25); align-self: center; flex-shrink: 0; margin: 0 0.15rem; }
+        .f-tab:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-tint); }
+        .f-tab.active { background: var(--blue); color: white; border-color: var(--blue); }
+        .f-tab[data-stance="WELCOMES_ALL"].active { background: #0891b2; border-color: #0891b2; color: white; }
+        .f-divider { width: 1px; height: 20px; background: var(--border); align-self: center; flex-shrink: 0; margin: 0 0.15rem; }
 
         /* ── Trust icons row ── */
         .hero-trust {
@@ -1486,6 +1399,56 @@
         /* Hide install CTAs when PWA is already installed */
         .pwa-installed .hero-cta { display: none !important; }
         .pwa-installed .nav-cta-wrap { display: none !important; }
+
+        /* ── Mobile bottom nav ── */
+        .mobile-bottom-nav { display: none; }
+        .mob-lang-sheet { display: none; }
+        @media (max-width: 760px) {
+            .mobile-bottom-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0; left: 0; right: 0;
+                z-index: 200;
+                background: var(--navy);
+                border-top: none;
+                height: 58px;
+                padding-bottom: env(safe-area-inset-bottom, 0);
+            }
+            .mob-nav-item {
+                flex: 1; display: flex; flex-direction: column;
+                align-items: center; justify-content: center;
+                gap: 3px; color: rgba(255,255,255,0.5);
+                text-decoration: none; font-size: 0.58rem; font-weight: 500;
+                background: none; border: none; cursor: pointer;
+                font-family: inherit; padding: 0; transition: color 0.15s;
+                letter-spacing: 0.02em; text-transform: uppercase;
+            }
+            .mob-nav-item svg { width: 20px; height: 20px; }
+            .mob-nav-item.active { color: white; }
+            .mob-nav-item:active { color: rgba(255,255,255,0.85); }
+            .mob-lang-sheet {
+                position: fixed; bottom: 66px; left: 0; right: 0;
+                z-index: 250; display: flex; justify-content: center;
+                pointer-events: none; opacity: 0; transform: translateY(8px);
+                transition: opacity 0.18s ease, transform 0.18s ease;
+            }
+            .mob-lang-sheet.open { pointer-events: auto; opacity: 1; transform: translateY(0); }
+            .mob-lang-inner {
+                background: white; border: 1px solid var(--border);
+                border-radius: 14px; box-shadow: 0 8px 32px rgba(12,35,62,0.15);
+                padding: 0.4rem; display: flex; flex-direction: column; min-width: 140px;
+            }
+            .mob-lang-opt {
+                display: block; padding: 0.65rem 1.1rem; border-radius: 10px;
+                color: var(--text-secondary); text-decoration: none;
+                font-size: 0.9rem; font-weight: 500; font-family: inherit;
+                text-align: center; transition: background 0.12s, color 0.12s;
+            }
+            .mob-lang-opt:hover { background: var(--blue-tint); color: var(--blue); }
+            .mob-lang-opt.mob-lang-active { color: var(--blue); font-weight: 600; }
+            /* add bottom padding so content clears the nav */
+            body { padding-bottom: 58px; }
+        }
     </style>
     <script>
         if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
@@ -2621,9 +2584,50 @@
 
     <!-- Static artist index for search engine crawling -->
     <section style="max-width:900px;margin:0 auto;padding:32px 20px 48px;color:#444;font-size:0.82rem;line-height:2;border-top:1px solid #e2e8f0;">
-      <h2 style="font-size:1rem;font-weight:700;color:#44D7FF;margin-bottom:12px;">אמנים במאגר</h2>
+      <h2 style="font-size:1rem;font-weight:700;color:#0047ab;margin-bottom:12px;">אמנים במאגר</h2>
       <p style="margin-bottom:16px;color:#666;">האמנים הבאים תמכו פומבית בחרם התרבותי על ישראל. כל רשומה מגובה בתקשורת מיינסטרים ומכתבים מאומתים.</p>
       <p>Roger Waters · Dua Lipa · Patti Smith · Elvis Costello · Tom Morello · The Roots · Lauryn Hill · Peter Gabriel · Charlotte Church · Sam Smith · Björk · Lorde · Massive Attack · Brian Eno · Fontaines D.C. · Japanese Breakfast · Paramore · Hayley Williams · Rina Sawayama · AURORA · King Krule · IDLES · Hot Chip · Kneecap · Wednesday · Mannequin Pussy · BADBADNOTGOOD · Young Fathers · Amyl and the Sniffers · Soccer Mommy · Kelela · Caribou · Primal Scream · Faye Webster · Arca · MIKE · Erika de Casier · MJ Lenderman · Julia Jacklin · Lucy Dacus · Enter Shikari · Fever Ray · The Knife · Blood Orange · Blonde Redhead · Clairo · Denzel Curry · Destroy Boys · Eartheater · Jane Remover · The Blessed Madonna · Hania Rani · Kelsey Lu · L'Rain · Lambrini Girls · Liv.e · MARINA · Maryam Saleh · Maurice Louca · Mogwai · MØ · Nicolás Jaar · Nourished by Time · Oklou · Smerz · Yaeji · Yeule · Ana Tijoux · Julia Holter · Loraine James · Model/Actriz · Saul Williams · Four Tet · Olivia Colman · Javier Bardem · Mark Ruffalo · Steve Coogan · Riz Ahmed · Miriam Margolyes · Tilda Swinton · Khalid Abdalla · Maxine Peake · Susan Sarandon · Danny Glover · Penélope Cruz · John Cusack · Cynthia Nixon · Viggo Mortensen · Mia Farrow · Peter Capaldi · Julie Christie · Juliet Stevenson · Paapa Essiedu · Dame Harriet Walter · Joe Alwyn · Lena Headey · Kingsley Ben-Adir · Carla Henry · Pooja Ghai · Ken Loach · Mike Leigh · Asif Kapadia · Thurston Moore · Serj Tankian · Portishead · Robyn · Lykke Li · Propagandhi · Refused · Gil Scott-Heron · Talib Kweli · Chuck D · Boots Riley · Run the Jewels · Noname · Alice Walker · Naomi Klein · Arundhati Roy · John Berger · Iain Banks · Sally Rooney · Khaled Hosseini · Annie Ernaux · Angela Davis · Judith Butler · Desmond Tutu · DJ Snake · Julian Casablancas · Sinéad O'Connor · System of a Down · Nigel Kennedy · John Williams (guitarist) · Manic Street Preachers · Belle and Sebastian · Jean-Luc Godard · Mira Nair · Liam Cunningham · Cat Power · Devendra Banhart · Cassandra Wilson · Sonic Youth · Godspeed You! Black Emperor · A Silver Mt. Zion · Do Make Say Think · Broken Social Scene · Feist · Stars · Metric · Wolf Parade · Destroyer · Owen Pallett · Peaches · Dead Prez · Immortal Technique · Lowkey · Akala · Kae Tempest · Little Simz · Macklemore · Kehlani · Manu Chao · Rage Against the Machine · Lupe Fiasco · Santana · Anti-Flag · Jackson Browne · Vic Mensa · Yasiin Bey · Jello Biafra · Wallace Shawn · Alexei Sayle · Harold Pinter · Kamila Shamsie · Mohammed El-Kurd · Ahdaf Soueif · Tariq Ali · Michael Rosen · Adrienne Rich · Paul Weller · Sigur Ros · Paloma Faith · Nadine Shah · Dry Cleaning · My Bloody Valentine · Shygirl · Paris Paloma · Black Country New Road · Joaquin Phoenix · Emma Stone · Ayo Edebiri · Andrew Garfield · Toni Collette · Nicola Coughlan · Lily Gladstone · Elliot Page · Ilana Glazer · Jonathan Glazer · Rooney Mara · Harris Dickinson · Rebecca Hall · Gael Garcia Bernal · Rachel Kushner · Ocean Vuong · Viet Thanh Nguyen · Dave Matthews Band · Billie Eilish · Halsey · SZA · Lizzo · Wolf Alice · MUNA · Wet Leg · Of Monsters and Men · Green Day · Damon Albarn · Grizzly Bear · Nilüfer Yanya · NAO</p>
     </section>
+
+    <!-- Mobile language sheet -->
+    <div class="mob-lang-sheet" id="mobLangSheet">
+        <div class="mob-lang-inner">
+            <a href="/" class="mob-lang-opt">English</a>
+            <a href="/he/" class="mob-lang-opt mob-lang-active">עברית</a>
+        </div>
+    </div>
+
+    <!-- Mobile bottom navigation -->
+    <nav class="mobile-bottom-nav" aria-label="ניווט נייד">
+        <a href="/about.html" class="mob-nav-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span>אודות</span>
+        </a>
+        <a href="/privacy.html" class="mob-nav-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            <span>פרטיות</span>
+        </a>
+        <a href="#" onclick="openContact();return false;" class="mob-nav-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>צור קשר</span>
+        </a>
+        <button id="mob-install-btn" class="mob-nav-item" onclick="installPWA()" style="border:none;background:none;cursor:pointer;padding:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>הורד</span>
+        </button>
+    </nav>
+
+    <script>
+    function toggleMobLang(e) {
+        e.stopPropagation();
+        document.getElementById('mobLangSheet').classList.toggle('open');
+    }
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('#mobLangSheet') && !e.target.closest('.mob-lang-btn')) {
+            var s = document.getElementById('mobLangSheet');
+            if (s) s.classList.remove('open');
+        }
+    });
+    </script>
 </body>
 </html>
