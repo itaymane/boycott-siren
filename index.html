@@ -3143,8 +3143,10 @@
                 if (_pwaBtn) _pwaBtn.style.display = 'none';
             }
         }
-        document.addEventListener('DOMContentLoaded', hideInstallButtons);
-        if (window.location.hash === '#contact') openContact();
+        document.addEventListener('DOMContentLoaded', function() {
+            hideInstallButtons();
+            if (window.location.hash === '#contact') openContact();
+        });
 
 
         function showIOSInstallSheet() {
