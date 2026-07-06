@@ -1433,34 +1433,21 @@
             font-size: 1.15rem; font-weight: 700; font-family: inherit;
         }
         .ghost-label { color: #9AA7B6 !important; font-style: italic; }
-        .ghost-actions { display: flex; align-items: center; gap: 0.35rem; margin-top: 0.35rem; flex-wrap: wrap; }
+        .ghost-actions {
+            display: flex; align-items: stretch; gap: 0; margin-top: 0.45rem;
+            border-radius: 8px; overflow: hidden; border: 1.5px solid #DDE1ED; width: fit-content;
+        }
         .ghost-btn {
-            display: inline-flex; align-items: center; gap: 0.25rem;
-            padding: 0.22rem 0.55rem; border-radius: 6px; font-size: 0.73rem; font-weight: 600;
-            text-decoration: none; border: none; cursor: pointer; font-family: inherit;
-            transition: opacity .15s, transform .12s; white-space: nowrap; line-height: 1.4;
+            display: inline-flex; align-items: center; gap: 0.3rem;
+            padding: 0.3rem 0.8rem; font-size: 0.75rem; font-weight: 600;
+            text-decoration: none; border: none; border-left: 1px solid rgba(255,255,255,0.15);
+            cursor: pointer; font-family: inherit; white-space: nowrap; line-height: 1.4;
+            transition: filter .15s;
         }
-        .ghost-btn:hover { opacity: .82; transform: translateY(-1px); }
-        .ghost-btn-g { background: #1C5FEA; color: #fff; }
+        .ghost-btn:last-child { border-left: none; }
+        .ghost-btn:hover { filter: brightness(1.12); }
+        .ghost-btn-g  { background: #1C5FEA; color: #fff; }
         .ghost-btn-ai { background: #0f1117; color: #fff; }
-        .ghost-btn-suggest { background: none; color: #6B7280; border: 1.5px solid #DDE1ED; }
-        .ghost-btn-suggest:hover { color: #0C233E; border-color: #9AA7B6; }
-        .ghost-suggest-form {
-            display: none; flex-direction: column; gap: 0.45rem;
-            margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid #EEF0F5;
-            animation: ghostFormIn .18s ease;
-        }
-        .ghost-card.ghost-open .ghost-suggest-form { display: flex; }
-        @keyframes ghostFormIn { from { opacity:0; transform:translateY(-4px); } to { opacity:1; transform:translateY(0); } }
-        .ghost-suggest-row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-        .ghost-suggest-input {
-            flex: 1; min-width: 120px; border: 1.5px solid #DDE1ED; border-radius: 8px;
-            padding: 0.38rem 0.65rem; font-size: 0.8rem; font-family: inherit;
-            color: #0C233E; outline: none; background: #fff; transition: border-color .15s;
-            text-align: right;
-        }
-        .ghost-suggest-input:focus { border-color: #1C5FEA; }
-        .ghost-suggest-btns { display: flex; gap: 0.35rem; }
         .search-active .hero-cta { display: none !important; }
 
         /* ── Mobile bottom nav ── */
@@ -2586,44 +2573,16 @@
                     <div class="ghost-actions">
                         <a href="${gUrl}" target="_blank" rel="noopener noreferrer" class="ghost-btn ghost-btn-g">
                             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                            Google
+                            חפש ב-Google
                         </a>
                         <a href="${pUrl}" target="_blank" rel="noopener noreferrer" class="ghost-btn ghost-btn-ai">
                             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                             שאל AI
                         </a>
-                        <button class="ghost-btn ghost-btn-suggest" onclick="toggleGhostSuggest(this)">+ הצע</button>
-                    </div>
-                    <div class="ghost-suggest-form">
-                        <div class="ghost-suggest-row">
-                            <input class="ghost-suggest-input" type="text" value="${safe}" placeholder="שם האמן" aria-label="שם האמן">
-                            <input class="ghost-suggest-input" type="text" placeholder="לינק למקור (אופציונלי)" aria-label="מקור">
-                        </div>
-                        <div class="ghost-suggest-btns">
-                            <button class="ghost-btn ghost-btn-g" onclick="submitGhostSuggest(this)">שלח הצעה</button>
-                            <button class="ghost-btn ghost-btn-suggest" onclick="toggleGhostSuggest(this)">ביטול</button>
-                        </div>
                     </div>
                 </div>
                 <div class="card-action" style="visibility:hidden"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></div>
             </div>`;
-        }
-
-        function toggleGhostSuggest(btn) {
-            const card = btn.closest('.ghost-card');
-            card.classList.toggle('ghost-open');
-            if (card.classList.contains('ghost-open')) {
-                card.querySelector('.ghost-suggest-input').focus();
-            }
-        }
-
-        function submitGhostSuggest(btn) {
-            const card = btn.closest('.ghost-card');
-            const inputs = card.querySelectorAll('.ghost-suggest-input');
-            const artist = inputs[0] ? inputs[0].value.trim() : '';
-            const source = inputs[1] ? inputs[1].value.trim() : '';
-            const msg = 'הצעת אמן: ' + artist + (source ? '\nמקור: ' + source : '');
-            openContact('artist-submission', msg);
         }
 
         function openContact(category, message) {
