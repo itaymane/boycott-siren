@@ -1445,6 +1445,22 @@
         .ghost-btn-ai { background: #0f1117; color: #fff; }
         .ghost-btn-suggest { background: none; color: #6B7280; border: 1.5px solid #DDE1ED; }
         .ghost-btn-suggest:hover { color: #0C233E; border-color: #9AA7B6; }
+        .ghost-suggest-form {
+            display: none; flex-direction: column; gap: 0.45rem;
+            margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid #EEF0F5;
+            animation: ghostFormIn .18s ease;
+        }
+        .ghost-card.ghost-open .ghost-suggest-form { display: flex; }
+        @keyframes ghostFormIn { from { opacity:0; transform:translateY(-4px); } to { opacity:1; transform:translateY(0); } }
+        .ghost-suggest-row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+        .ghost-suggest-input {
+            flex: 1; min-width: 120px; border: 1.5px solid #DDE1ED; border-radius: 8px;
+            padding: 0.38rem 0.65rem; font-size: 0.8rem; font-family: inherit;
+            color: #0C233E; outline: none; background: #fff; transition: border-color .15s;
+            text-align: right;
+        }
+        .ghost-suggest-input:focus { border-color: #1C5FEA; }
+        .ghost-suggest-btns { display: flex; gap: 0.35rem; }
         .search-active .hero-cta { display: none !important; }
 
         /* ── Mobile bottom nav ── */
@@ -2556,13 +2572,14 @@
 
         function buildGhostCard(query) {
             const enc = encodeURIComponent;
+            const safe = query.replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             const gUrl = 'https://www.google.com/search?q=' + enc(query + ' cultural boycott countries');
             const pUrl = 'https://www.perplexity.ai/?q=' + enc('Has ' + query + ' refused to perform in any country?');
             return `<div class="artist-card ghost-card">
                 <div class="card-thumb"><div class="ghost-avatar">?</div></div>
                 <div class="card-info">
                     <div class="card-name-line">
-                        <span class="artist-name">&ldquo;${query}&rdquo;</span>
+                        <span class="artist-name">&ldquo;${safe}&rdquo;</span>
                         <span class="card-name-sep">&middot;</span>
                         <span class="card-cat ghost-label">לא במסד הנתונים</span>
                     </div>
@@ -2575,14 +2592,41 @@
                             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                             שאל AI
                         </a>
-                        <button class="ghost-btn ghost-btn-suggest" onclick="if(window.openContact)openContact('artist-submission')">+ הצע</button>
+                        <button class="ghost-btn ghost-btn-suggest" onclick="toggleGhostSuggest(this)">+ הצע</button>
+                    </div>
+                    <div class="ghost-suggest-form">
+                        <div class="ghost-suggest-row">
+                            <input class="ghost-suggest-input" type="text" value="${safe}" placeholder="שם האמן" aria-label="שם האמן">
+                            <input class="ghost-suggest-input" type="text" placeholder="לינק למקור (אופציונלי)" aria-label="מקור">
+                        </div>
+                        <div class="ghost-suggest-btns">
+                            <button class="ghost-btn ghost-btn-g" onclick="submitGhostSuggest(this)">שלח הצעה</button>
+                            <button class="ghost-btn ghost-btn-suggest" onclick="toggleGhostSuggest(this)">ביטול</button>
+                        </div>
                     </div>
                 </div>
                 <div class="card-action" style="visibility:hidden"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></div>
             </div>`;
         }
 
-        function openContact(category) {
+        function toggleGhostSuggest(btn) {
+            const card = btn.closest('.ghost-card');
+            card.classList.toggle('ghost-open');
+            if (card.classList.contains('ghost-open')) {
+                card.querySelector('.ghost-suggest-input').focus();
+            }
+        }
+
+        function submitGhostSuggest(btn) {
+            const card = btn.closest('.ghost-card');
+            const inputs = card.querySelectorAll('.ghost-suggest-input');
+            const artist = inputs[0] ? inputs[0].value.trim() : '';
+            const source = inputs[1] ? inputs[1].value.trim() : '';
+            const msg = 'הצעת אמן: ' + artist + (source ? '\nמקור: ' + source : '');
+            openContact('artist-submission', msg);
+        }
+
+        function openContact(category, message) {
             document.getElementById('contactForm').style.display = '';
             document.getElementById('contactSuccess').style.display = '';
             const btn = document.getElementById('contactSubmitBtn');
@@ -2592,6 +2636,10 @@
             if (category) {
                 const sel = document.querySelector('#contactForm select[name="category"]');
                 if (sel) sel.value = category;
+            }
+            if (message) {
+                const ta = document.querySelector('#contactForm textarea[name="message"]');
+                if (ta) ta.value = message;
             }
             document.getElementById('contactOverlay').classList.add('open');
             document.body.style.overflow = 'hidden';
