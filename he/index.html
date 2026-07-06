@@ -1459,6 +1459,7 @@
         }
         .nfb-close:hover { color: #0C233E; }
         .grid-dimmed { opacity: 0.35; pointer-events: none; transition: opacity .25s; }
+        .search-active .hero-cta { display: none !important; }
         @media (max-width: 600px) { .nfb-actions { width: 100%; justify-content: flex-start; } }
 
         /* ── Mobile bottom nav ── */
@@ -2086,13 +2087,14 @@
             if (rc) rc.textContent = filtered.length + (filtered.length === 1 ? ' אמן מוצג' : ' אמנים מוצגים');
 
             const rawQuery = document.getElementById('searchInput').value.trim();
+            document.body.classList.toggle('search-active', rawQuery.length >= 1);
             const showBanner = filtered.length === 0 && rawQuery.length >= 2;
             const banner = document.getElementById('notFoundBanner');
             if (showBanner) {
                 const enc = encodeURIComponent;
                 document.getElementById('nfbQuery').textContent = rawQuery;
                 document.getElementById('nfbGoogle').href = 'https://www.google.com/search?q=' + enc(rawQuery + ' cultural boycott countries');
-                document.getElementById('nfbPerplexity').href = 'https://www.perplexity.ai/search?q=' + enc('Has ' + rawQuery + ' refused to perform in any country?');
+                document.getElementById('nfbPerplexity').href = 'https://www.perplexity.ai/?q=' + enc('Has ' + rawQuery + ' refused to perform in any country?');
                 banner.style.display = 'flex';
                 grid.classList.add('grid-dimmed');
             } else {
