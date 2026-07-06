@@ -2036,6 +2036,36 @@
         /* Hide install CTAs when PWA is already installed */
         .pwa-installed .hero-cta { display: none !important; }
         .pwa-installed #sn-navbar .sn-btn-cta { display: none !important; }
+
+        /* ── Empty State ── */
+        .empty-wrap { grid-column: 1 / -1; display: flex; justify-content: center; padding: 3.5rem 1rem 5rem; }
+        .empty-state { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 360px; width: 100%; }
+        .empty-icon {
+            width: 52px; height: 52px;
+            background: rgba(28,95,234,0.08); border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            color: #1C5FEA; margin-bottom: 1.25rem; flex-shrink: 0;
+        }
+        .empty-title { font-size: 1rem; font-weight: 700; color: #0C233E; margin-bottom: 0.35rem; letter-spacing: -0.015em; }
+        .empty-query { color: #1C5FEA; }
+        .empty-sub { font-size: 0.82rem; color: #9AA7B6; line-height: 1.55; margin-bottom: 1.75rem; }
+        .empty-btns { display: flex; gap: 0.6rem; width: 100%; margin-bottom: 0.9rem; }
+        .empty-btn {
+            flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+            padding: 0.65rem 0.5rem; border-radius: 10px; font-size: 0.83rem; font-weight: 600;
+            text-decoration: none; border: none; cursor: pointer; font-family: inherit;
+            transition: opacity .15s, transform .15s; white-space: nowrap;
+        }
+        .empty-btn:hover { opacity: .85; transform: translateY(-1px); }
+        .empty-btn-g  { background: #1C5FEA; color: #fff; box-shadow: 0 3px 10px rgba(28,95,234,.22); }
+        .empty-btn-ai { background: #0f1117; color: #fff; box-shadow: 0 3px 10px rgba(0,0,0,.15); }
+        .empty-suggest {
+            font-size: 0.78rem; color: #9AA7B6; background: none; border: none;
+            cursor: pointer; font-family: inherit; padding: 0.2rem 0;
+            transition: color .15s; display: inline-flex; align-items: center; gap: 0.3rem;
+        }
+        .empty-suggest:hover { color: #0C233E; }
+        @media (max-width: 480px) { .empty-btns { flex-direction: column; } }
     </style>
     <script>
         if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
@@ -2533,6 +2563,25 @@
             }
         }
 
+        function buildEmptyState(query) {
+            const enc = encodeURIComponent;
+            const gUrl  = 'https://www.google.com/search?q=' + enc(query + ' cultural boycott countries');
+            const pUrl  = 'https://www.perplexity.ai/search?q=' + enc('Has ' + query + ' refused to perform in any country?');
+            const svgSearch = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>';
+            const svgStar   = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+            const svgPlus   = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>';
+            return `<div class="empty-wrap"><div class="empty-state">
+                <div class="empty-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v3"/><circle cx="11" cy="14.5" r="0.6" fill="currentColor" stroke="none"/></svg></div>
+                <div class="empty-title">"<span class="empty-query">${query}</span>" isn't in our database</div>
+                <div class="empty-sub">No verified information about their cultural boycott stance. Research their public positions below.</div>
+                <div class="empty-btns">
+                    <a href="${gUrl}" target="_blank" rel="noopener noreferrer" class="empty-btn empty-btn-g">${svgSearch} Search Google</a>
+                    <a href="${pUrl}" target="_blank" rel="noopener noreferrer" class="empty-btn empty-btn-ai">${svgStar} Ask Perplexity</a>
+                </div>
+                <button class="empty-suggest" onclick="if(window.openContact)openContact('artist-submission')">${svgPlus} Suggest this artist</button>
+            </div></div>`;
+        }
+
         function renderArtists() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const grid = document.getElementById('artistsGrid');
@@ -2575,6 +2624,11 @@
 
             const rc = document.getElementById('resultCount');
             if (rc) rc.textContent = filtered.length + ' artist' + (filtered.length !== 1 ? 's' : '') + ' shown';
+
+            if (filtered.length === 0 && searchTerm.length >= 2) {
+                grid.innerHTML = buildEmptyState(document.getElementById('searchInput').value.trim());
+                return;
+            }
 
             grid.innerHTML = filtered.map((artist, i) => {
                 const lvl = artist.level || 'CRITICAL';
