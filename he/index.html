@@ -1423,44 +1423,29 @@
         .pwa-installed .hero-cta { display: none !important; }
         .pwa-installed .nav-cta-wrap { display: none !important; }
 
-        /* ── Not-Found Banner ── */
-        .not-found-banner {
-            display: none; align-items: center; gap: 0.6rem; flex-wrap: wrap;
-            background: #fff; border: 1.5px solid #DDE1ED; border-radius: 10px;
-            padding: 0.55rem 0.85rem; margin: 0 auto 0.75rem;
-            max-width: 580px; width: 100%;
-            animation: nfbIn .2s ease;
+        /* ── Ghost Card (not-found result) ── */
+        .ghost-card { cursor: default; border: 1.5px dashed #DDE1ED !important; background: #fafbff !important; }
+        .ghost-card:hover { transform: none !important; box-shadow: var(--shadow-sm) !important; }
+        .ghost-avatar {
+            width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0;
+            background: rgba(28,95,234,0.08); color: #1C5FEA;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.15rem; font-weight: 700; font-family: inherit;
         }
-        @keyframes nfbIn { from { opacity:0; transform:translateY(-5px); } to { opacity:1; transform:translateY(0); } }
-        .nfb-icon { color: #1C5FEA; flex-shrink: 0; display: flex; }
-        .nfb-text { font-size: 0.84rem; color: #0C233E; font-weight: 500; flex: 1; min-width: 0; }
-        .nfb-query { font-weight: 700; color: #1C5FEA; }
-        .nfb-actions { display: flex; align-items: center; gap: 0.4rem; flex-shrink: 0; }
-        .nfb-btn {
-            display: inline-flex; align-items: center; gap: 0.3rem;
-            padding: 0.3rem 0.65rem; border-radius: 7px; font-size: 0.77rem; font-weight: 600;
+        .ghost-label { color: #9AA7B6 !important; font-style: italic; }
+        .ghost-actions { display: flex; align-items: center; gap: 0.35rem; margin-top: 0.35rem; flex-wrap: wrap; }
+        .ghost-btn {
+            display: inline-flex; align-items: center; gap: 0.25rem;
+            padding: 0.22rem 0.55rem; border-radius: 6px; font-size: 0.73rem; font-weight: 600;
             text-decoration: none; border: none; cursor: pointer; font-family: inherit;
-            transition: opacity .15s, transform .15s; white-space: nowrap;
+            transition: opacity .15s, transform .12s; white-space: nowrap; line-height: 1.4;
         }
-        .nfb-btn:hover { opacity: .82; transform: translateY(-1px); }
-        .nfb-btn-g  { background: #1C5FEA; color: #fff; }
-        .nfb-btn-ai { background: #0f1117; color: #fff; }
-        .nfb-suggest {
-            font-size: 0.77rem; color: #6B7280; background: none; border: 1.5px solid #DDE1ED;
-            cursor: pointer; font-family: inherit; padding: 0.28rem 0.6rem; border-radius: 7px;
-            transition: color .15s, border-color .15s; display: inline-flex; align-items: center;
-            gap: 0.25rem; white-space: nowrap; font-weight: 500;
-        }
-        .nfb-suggest:hover { color: #0C233E; border-color: #aab0bf; }
-        .nfb-close {
-            background: none; border: none; color: #C4CCDA; cursor: pointer;
-            font-size: 1.1rem; line-height: 1; padding: 0.1rem 0.25rem;
-            transition: color .15s; margin-right: auto;
-        }
-        .nfb-close:hover { color: #0C233E; }
-        .grid-dimmed { opacity: 0.35; pointer-events: none; transition: opacity .25s; }
+        .ghost-btn:hover { opacity: .82; transform: translateY(-1px); }
+        .ghost-btn-g { background: #1C5FEA; color: #fff; }
+        .ghost-btn-ai { background: #0f1117; color: #fff; }
+        .ghost-btn-suggest { background: none; color: #6B7280; border: 1.5px solid #DDE1ED; }
+        .ghost-btn-suggest:hover { color: #0C233E; border-color: #9AA7B6; }
         .search-active .hero-cta { display: none !important; }
-        @media (max-width: 600px) { .nfb-actions { width: 100%; justify-content: flex-start; } }
 
         /* ── Mobile bottom nav ── */
         .mobile-bottom-nav { display: none; }
@@ -1595,27 +1580,6 @@
                     <span class="cta-desktop">הוסף לכרום</span>
                     <span class="cta-mobile">הורד את האפליקציה</span>
                 </a>
-            </div>
-
-            <!-- Not-found banner -->
-            <div class="not-found-banner" id="notFoundBanner">
-                <button class="nfb-close" onclick="clearNotFound()" aria-label="נקה חיפוש">×</button>
-                <div class="nfb-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v2.5"/><circle cx="11" cy="14" r="0.6" fill="currentColor" stroke="none"/></svg></div>
-                <div class="nfb-text">"<span id="nfbQuery" class="nfb-query"></span>" לא נמצא במסד הנתונים</div>
-                <div class="nfb-actions">
-                    <a id="nfbGoogle" href="#" target="_blank" rel="noopener noreferrer" class="nfb-btn nfb-btn-g">
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                        Google
-                    </a>
-                    <a id="nfbPerplexity" href="#" target="_blank" rel="noopener noreferrer" class="nfb-btn nfb-btn-ai">
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        שאל AI
-                    </a>
-                    <button class="nfb-suggest" onclick="openContact('artist-submission')">
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                        הצע
-                    </button>
-                </div>
             </div>
 
             <!-- Filter tabs -->
@@ -2088,25 +2052,14 @@
 
             const rawQuery = document.getElementById('searchInput').value.trim();
             document.body.classList.toggle('search-active', rawQuery.length >= 1);
-            const showBanner = filtered.length === 0 && rawQuery.length >= 2;
-            const banner = document.getElementById('notFoundBanner');
-            if (showBanner) {
-                const enc = encodeURIComponent;
-                document.getElementById('nfbQuery').textContent = rawQuery;
-                document.getElementById('nfbGoogle').href = 'https://www.google.com/search?q=' + enc(rawQuery + ' cultural boycott countries');
-                document.getElementById('nfbPerplexity').href = 'https://www.perplexity.ai/?q=' + enc('Has ' + rawQuery + ' refused to perform in any country?');
-                banner.style.display = 'flex';
-                grid.classList.add('grid-dimmed');
-            } else {
-                if (banner) banner.style.display = 'none';
-                grid.classList.remove('grid-dimmed');
-            }
+            const noMatch = filtered.length === 0 && rawQuery.length >= 2;
 
-            const toRender = showBanner
+            const toRender = noMatch
                 ? ARTISTS_DATABASE.filter(a => (categoryFilter === 'all' || a.category === categoryFilter) && (levelFilter === 'all' || a.level === levelFilter) && (stanceFilter === 'all' || (a.stance || 'BOYCOTTER') === stanceFilter)).sort((a, b) => (b.popularity || 30) - (a.popularity || 30))
                 : filtered;
 
-            grid.innerHTML = toRender.map((artist, i) => {
+            const ghostHtml = noMatch ? buildGhostCard(rawQuery) : '';
+            grid.innerHTML = ghostHtml + toRender.map((artist, i) => {
                 const lvl = artist.level || 'CRITICAL';
                 const stance = artist.stance || 'BOYCOTTER';
                 const catMap = { musician: 'מוזיקאי', actor: 'שחקן', director: 'במאי', writer: 'סופר', activist: 'פעיל', academic: 'אקדמאי', author: 'סופר', comedian: 'קומיקאי' };
@@ -2601,9 +2554,32 @@
             }, 500);
         }
 
-        function clearNotFound() {
-            document.getElementById('searchInput').value = '';
-            renderArtists();
+        function buildGhostCard(query) {
+            const enc = encodeURIComponent;
+            const gUrl = 'https://www.google.com/search?q=' + enc(query + ' cultural boycott countries');
+            const pUrl = 'https://www.perplexity.ai/?q=' + enc('Has ' + query + ' refused to perform in any country?');
+            return `<div class="artist-card ghost-card">
+                <div class="card-thumb"><div class="ghost-avatar">?</div></div>
+                <div class="card-info">
+                    <div class="card-name-line">
+                        <span class="artist-name">&ldquo;${query}&rdquo;</span>
+                        <span class="card-name-sep">&middot;</span>
+                        <span class="card-cat ghost-label">לא במסד הנתונים</span>
+                    </div>
+                    <div class="ghost-actions">
+                        <a href="${gUrl}" target="_blank" rel="noopener noreferrer" class="ghost-btn ghost-btn-g">
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            Google
+                        </a>
+                        <a href="${pUrl}" target="_blank" rel="noopener noreferrer" class="ghost-btn ghost-btn-ai">
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            שאל AI
+                        </a>
+                        <button class="ghost-btn ghost-btn-suggest" onclick="if(window.openContact)openContact('artist-submission')">+ הצע</button>
+                    </div>
+                </div>
+                <div class="card-action" style="visibility:hidden"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></div>
+            </div>`;
         }
 
         function openContact(category) {
