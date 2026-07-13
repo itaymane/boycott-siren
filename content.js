@@ -1008,7 +1008,9 @@
         if (card.querySelector('.artsiren-thumb-badge')) return;
         const thumb = card.querySelector('a#thumbnail') || card.querySelector('#thumbnail') || card.querySelector('ytd-thumbnail');
         if (!thumb) return;
-        thumb.style.position = 'relative';
+        if (getComputedStyle(thumb).position === 'static') {
+            thumb.style.position = 'relative';
+        }
 
         const isWelcome = artist.stance === 'welcome';
         const dotColor = isWelcome ? '#22C55E' : '#FF4444';
@@ -1023,6 +1025,11 @@
                 <ellipse fill="${dotColor}" cx="41.62" cy="197.06" rx="34.42" ry="35.06"/>
             </svg>
         `;
+        badge.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            showArtistModal(artist);
+        });
         thumb.appendChild(badge);
     }
 
@@ -1032,7 +1039,8 @@
                 card.style.display = 'none';
             } else {
                 card.style.display = '';
-                addFeedBadge(card, { name: card.dataset.bsBoycotter, stance: card.dataset.bsStance });
+                const artist = artistsData.find(a => a.name === card.dataset.bsBoycotter);
+                if (artist) addFeedBadge(card, artist);
             }
         });
     }

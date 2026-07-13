@@ -38,7 +38,11 @@
     overflow: hidden !important;
     z-index: 100 !important;
     padding: 2px 3px !important;
-    pointer-events: none !important;
+    cursor: pointer !important;
+    transition: transform 0.15s !important;
+}
+.artsiren-thumb-badge:hover {
+    transform: scale(1.12) !important;
 }
 .artsiren-thumb-badge svg {
     width: 100% !important;
