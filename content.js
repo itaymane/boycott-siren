@@ -1025,11 +1025,7 @@
                 <ellipse fill="${dotColor}" cx="41.62" cy="197.06" rx="34.42" ry="35.06"/>
             </svg>
         `;
-        badge.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            showArtistModal(artist);
-        });
+        badge.dataset.artistName = artist.name;
         thumb.appendChild(badge);
     }
 
@@ -1202,6 +1198,19 @@
                 setTimeout(runScan, 1500);
             });
         }
+
+        // Thumbnail badges sit inside YouTube's own video links, whose SPA
+        // router intercepts clicks in the capture phase before a normal
+        // bubble-phase listener on the badge ever runs. Beat it to the punch.
+        document.addEventListener('click', (e) => {
+            const badge = e.target.closest && e.target.closest('.artsiren-thumb-badge');
+            if (!badge) return;
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            const artist = artistsData.find(a => a.name === badge.dataset.artistName);
+            if (artist) showArtistModal(artist);
+        }, true);
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
