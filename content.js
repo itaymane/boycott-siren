@@ -1008,8 +1008,14 @@
         if (card.querySelector('.artsiren-thumb-badge')) return;
         const thumb = card.querySelector('a#thumbnail') || card.querySelector('#thumbnail') || card.querySelector('ytd-thumbnail');
         if (!thumb) return;
-        if (getComputedStyle(thumb).position === 'static') {
-            thumb.style.position = 'relative';
+
+        // If the match is the <a> link itself, anchor the badge to its parent
+        // instead of the link — a click anywhere inside the <a> is treated by
+        // YouTube's SPA router as a navigation and hijacked before any listener
+        // on a descendant can stop it, no matter the event phase.
+        const container = thumb.tagName === 'A' ? (thumb.parentElement || thumb) : thumb;
+        if (getComputedStyle(container).position === 'static') {
+            container.style.position = 'relative';
         }
 
         const isWelcome = artist.stance === 'welcome';
@@ -1026,7 +1032,7 @@
             </svg>
         `;
         badge.dataset.artistName = artist.name;
-        thumb.appendChild(badge);
+        container.appendChild(badge);
     }
 
     function applyFeedHideSetting() {
