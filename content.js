@@ -4,19 +4,6 @@
 (function() {
     'use strict';
 
-    // Registered immediately (script runs at document_start, before YouTube's
-    // own scripts), so this always wins the race to handle a click on our
-    // thumbnail badge before YouTube's SPA router treats it as a navigation.
-    document.addEventListener('click', (e) => {
-        const badge = e.target.closest && e.target.closest('.artsiren-thumb-badge');
-        if (!badge) return;
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-        const artist = artistsData.find(a => a.name === badge.dataset.artistName);
-        if (artist) showArtistModal(artist);
-    }, true);
-
     const CONFIG = {
         checkInterval: 2000,
         debounceDelay: 500
@@ -1038,7 +1025,11 @@
                 <ellipse fill="${dotColor}" cx="41.62" cy="197.06" rx="34.42" ry="35.06"/>
             </svg>
         `;
-        badge.dataset.artistName = artist.name;
+        badge.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            showArtistModal(artist);
+        });
         thumb.appendChild(badge);
     }
 
