@@ -3,7 +3,20 @@
 
 (function() {
     'use strict';
-    
+
+    // Registered immediately (script runs at document_start, before YouTube's
+    // own scripts), so this always wins the race to handle a click on our
+    // thumbnail badge before YouTube's SPA router treats it as a navigation.
+    document.addEventListener('click', (e) => {
+        const badge = e.target.closest && e.target.closest('.artsiren-thumb-badge');
+        if (!badge) return;
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        const artist = artistsData.find(a => a.name === badge.dataset.artistName);
+        if (artist) showArtistModal(artist);
+    }, true);
+
     const CONFIG = {
         checkInterval: 2000,
         debounceDelay: 500
@@ -1008,14 +1021,8 @@
         if (card.querySelector('.artsiren-thumb-badge')) return;
         const thumb = card.querySelector('a#thumbnail') || card.querySelector('#thumbnail') || card.querySelector('ytd-thumbnail');
         if (!thumb) return;
-
-        // If the match is the <a> link itself, anchor the badge to its parent
-        // instead of the link — a click anywhere inside the <a> is treated by
-        // YouTube's SPA router as a navigation and hijacked before any listener
-        // on a descendant can stop it, no matter the event phase.
-        const container = thumb.tagName === 'A' ? (thumb.parentElement || thumb) : thumb;
-        if (getComputedStyle(container).position === 'static') {
-            container.style.position = 'relative';
+        if (getComputedStyle(thumb).position === 'static') {
+            thumb.style.position = 'relative';
         }
 
         const isWelcome = artist.stance === 'welcome';
@@ -1032,7 +1039,7 @@
             </svg>
         `;
         badge.dataset.artistName = artist.name;
-        container.appendChild(badge);
+        thumb.appendChild(badge);
     }
 
     function applyFeedHideSetting() {
@@ -1204,19 +1211,6 @@
                 setTimeout(runScan, 1500);
             });
         }
-
-        // Thumbnail badges sit inside YouTube's own video links, whose SPA
-        // router intercepts clicks in the capture phase before a normal
-        // bubble-phase listener on the badge ever runs. Beat it to the punch.
-        document.addEventListener('click', (e) => {
-            const badge = e.target.closest && e.target.closest('.artsiren-thumb-badge');
-            if (!badge) return;
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-            const artist = artistsData.find(a => a.name === badge.dataset.artistName);
-            if (artist) showArtistModal(artist);
-        }, true);
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {

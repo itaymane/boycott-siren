@@ -157,7 +157,7 @@
       ],
       "js": ["artists-data.js", "content.js"],
       "css": ["overlay.css"],
-      "run_at": "document_idle"
+      "run_at": "document_start"
     }
   ],
 
