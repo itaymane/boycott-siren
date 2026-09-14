@@ -131,12 +131,12 @@ async function buildSpotify() {
     <text x="538" y="748" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#b3b3b3">${NAME_NEW}</text>
     ${chipSvg(637, 730)}
 
-    <!-- mini player thumb -->
-    <rect x="576" y="337" width="60" height="66" fill="#062440"/>
+    <!-- mini player thumb (measured original bbox x578-635,y340-410 — widened cover rect to fully swallow it, was leaving a sliver of the real album art visible at the bottom-right edge) -->
+    <rect x="572" y="334" width="70" height="82" fill="#062440"/>
     <image href="${miniThumbUri}" x="580" y="341" width="52" height="58"/>
 
-    <!-- ArtSiren popup — dropped below the big hero title (y96 collided with "Windward Fields"); this SVG is composited pre-crop (crop removes 178px from the left), so shifted +178 here -->
-    ${popupCard(1096, 228, NAME_NEW, CARD_LINE1, CARD_LINE2)}
+    <!-- ArtSiren popup — title glyphs run roughly y175-222 (baseline 222, no descenders); sitting the card at y215 only grazes the very bottom few px of the letters instead of cutting through their middle -->
+    ${popupCard(1096, 215, NAME_NEW, CARD_LINE1, CARD_LINE2)}
   </svg>`;
 
   const edited = await sharp(SRC + 'Screenshot 2026-07-04 101207.png')
