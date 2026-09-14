@@ -52,6 +52,32 @@ function chipSvg(x, y) {
   </g>`;
 }
 
+// The real floating popup card (verbatim proportions from overlay.css
+// .boycott-floating-alert, scaled 1.27x from its 268px CSS width to 340px
+// so it reads clearly at this canvas size): white header with logo + close,
+// navy body with artist name / statement / "View Sources" link.
+const CARD_W = 340, CARD_H = 182;
+function popupCard(x, y, name, line1, line2) {
+  const s = 39 / 284; // logo scale: viewBox is 470 wide x 284 tall -> ~65x39
+  return `
+  <g transform="translate(${x},${y})">
+    <rect width="${CARD_W}" height="${CARD_H}" rx="15" fill="#0C233E" stroke="#0047ab" stroke-width="3"/>
+    <path d="M3 15 Q3 3 15 3 H${CARD_W - 15} Q${CARD_W - 3} 3 ${CARD_W - 3} 15 V57 H3 Z" fill="white"/>
+    <line x1="3" y1="57" x2="${CARD_W - 3}" y2="57" stroke="#0047ab" stroke-width="3"/>
+    <g transform="translate(13, ${9 - 57 * s}) scale(${s})">${logoPaths()}</g>
+    <text x="90" y="38" font-family="-apple-system, 'Segoe UI', Arial, sans-serif" font-size="19" font-weight="800" fill="#0c233e" letter-spacing="-0.2">ArtSiren</text>
+    <line x1="${CARD_W - 34}" y1="20" x2="${CARD_W - 20}" y2="34" stroke="rgba(0,0,0,0.35)" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="${CARD_W - 20}" y1="20" x2="${CARD_W - 34}" y2="34" stroke="rgba(0,0,0,0.35)" stroke-width="2.5" stroke-linecap="round"/>
+
+    <text x="15" y="94" font-family="-apple-system, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="white">${name}</text>
+    <text x="15" y="120" font-family="-apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.6)">${line1}</text>
+    <text x="15" y="142" font-family="-apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.6)">${line2}</text>
+    <text x="15" y="168" font-family="-apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="600" fill="#5B9BFF">View Sources →</text>
+  </g>`;
+}
+const CARD_LINE1 = 'Has publicly addressed performing in the';
+const CARD_LINE2 = 'region; statement independently verified…';
+
 // ===================================================================
 // 1. SPOTIFY — 1459x801 native, edited then cropped to 1280x800
 // ===================================================================
@@ -108,6 +134,9 @@ async function buildSpotify() {
     <!-- mini player thumb -->
     <rect x="576" y="337" width="60" height="66" fill="#062440"/>
     <image href="${miniThumbUri}" x="580" y="341" width="52" height="58"/>
+
+    <!-- ArtSiren popup — dropped below the big hero title (y96 collided with "Windward Fields"); this SVG is composited pre-crop (crop removes 178px from the left), so shifted +178 here -->
+    ${popupCard(1096, 228, NAME_NEW, CARD_LINE1, CARD_LINE2)}
   </svg>`;
 
   const edited = await sharp(SRC + 'Screenshot 2026-07-04 101207.png')
@@ -216,6 +245,9 @@ async function buildYoutube() {
     <image href="${avatarUri}" x="1368" y="717" width="64" height="64"/>
     <text x="1255" y="742" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#0f0f0f">${NAME_NEW}</text>
     <text x="1255" y="761" font-family="Arial, sans-serif" font-size="12" fill="#606060">5.18M subscribers</text>
+
+    <!-- ArtSiren popup — same on-canvas position as the Ticketmaster shot (final x918,y96); this SVG is composited pre-crop (crop removes 275px from the left, 5px from the top), so shifted +275/+5 here -->
+    ${popupCard(1193, 101, NAME_NEW, CARD_LINE1, CARD_LINE2)}
   </svg>`;
 
   const edited = await sharp(SRC + 'Screenshot 2026-07-04 101327.png')
