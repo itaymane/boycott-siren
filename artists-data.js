@@ -1255,9 +1255,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Macklemore",
     level: "CRITICAL",
-    statement: "Participated in the No Music for Genocide campaign (2024–25), geo-blocking his music from regional streaming platforms; performed at pro-Palestinian rallies and publicly called for an end to US military aid to the region",
+    statement: "Participated in the No Music for Genocide campaign (2024–25), geo-blocking his music from regional streaming platforms; performed at pro-Palestinian rallies and publicly called for an end to US military aid to the region. In September 2026, chanted 'Free Palestine' and performed his protest song 'Hind's Hall' while opening for Ed Sheeran at MetLife Stadium in New Jersey, drawing a petition calling for his removal from the tour; he defended the remarks, saying wanting all humans treated equally 'should never be controversial'",
 
-    sources: `<a href="https://www.rollingstone.com/music/music-news/macklemore-pro-palestine-protest-song-hinds-hall-1235016487/">Rolling Stone</a> | <a href="https://www.billboard.com/music/rb-hip-hop/macklemore-gaza-college-protests-hinds-hall-song-1235675967/">Billboard</a>`
+    sources: `<a href="https://www.rollingstone.com/music/music-news/macklemore-pro-palestine-protest-song-hinds-hall-1235016487/">Rolling Stone</a> | <a href="https://www.billboard.com/music/rb-hip-hop/macklemore-gaza-college-protests-hinds-hall-song-1235675967/">Billboard</a> | <a href="https://www.billboard.com/music/pop/macklemore-responds-backlash-free-palestine-chant-sheeran-show-1236335590/">Billboard</a> | <a href="https://www.hollywoodreporter.com/music/music-news/macklemore-responds-backlash-free-palestine-plea-ed-sheeran-1236693499/">Hollywood Reporter</a> | <a href="https://variety.com/2026/music/news/macklemore-responds-free-palestine-criticism-ed-sheeran-1236854276/">Variety</a>`
   },
   {
     stance: 'boycott',
