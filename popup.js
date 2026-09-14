@@ -20,6 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (typeof artistsData !== 'undefined') {
         document.getElementById('totalArtists').textContent = artistsData.length;
+        // Same live-data overlay as content.js — popup.html loads its own copy
+        // of artists-data.js, so it needs its own overlay to show the current count.
+        chrome.storage.local.get(['artistsDataRemote'], result => {
+            const remote = result.artistsDataRemote;
+            if (Array.isArray(remote) && remote.length) {
+                document.getElementById('totalArtists').textContent = remote.length;
+            }
+        });
     }
 
     // Alert mode selector
