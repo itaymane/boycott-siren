@@ -108,7 +108,7 @@ async function buildSpotify() {
     <rect x="478" y="86" width="812" height="150" fill="url(#heroCover)"/>
     <image href="${albumArtUri}" x="480" y="88" width="210" height="210"/>
     <text x="708" y="156" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="1">ALBUM</text>
-    <text x="704" y="222" font-family="'Helvetica Neue', Arial, sans-serif" font-size="55" font-weight="800" fill="white">Windward Fields</text>
+    <text x="704" y="222" font-family="'Helvetica Neue', Arial, sans-serif" font-size="55" font-weight="800" fill="white">Tides</text>
 
     <!-- avatar + name (leave meta text " • 2000 • ..." at x970+ untouched) -->
     <rect x="700" y="246" width="270" height="40" fill="#0f4676"/>
@@ -119,7 +119,7 @@ async function buildSpotify() {
 
     <!-- track 1 -->
     <rect x="530" y="606" width="740" height="34" fill="#121212"/>
-    <text x="538" y="632" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="white">Windward Fields</text>
+    <text x="538" y="632" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="white">Tides</text>
     <rect x="530" y="634" width="270" height="44" fill="#121212"/>
     <text x="538" y="663" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#b3b3b3">${NAME_NEW}</text>
     ${chipSvg(637, 645)}
@@ -131,12 +131,12 @@ async function buildSpotify() {
     <text x="538" y="748" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#b3b3b3">${NAME_NEW}</text>
     ${chipSvg(637, 730)}
 
-    <!-- mini player thumb (measured original bbox x578-635,y340-410 — widened cover rect to fully swallow it, was leaving a sliver of the real album art visible at the bottom-right edge) -->
-    <rect x="572" y="334" width="70" height="82" fill="#062440"/>
+    <!-- mini player thumb (measured original bbox x578-635,y340-410 — cover rect now well past every edge with a large safety margin) -->
+    <rect x="566" y="328" width="82" height="94" fill="#062440"/>
     <image href="${miniThumbUri}" x="580" y="341" width="52" height="58"/>
 
-    <!-- ArtSiren popup — title glyphs run roughly y175-222 (baseline 222, no descenders); sitting the card at y215 only grazes the very bottom few px of the letters instead of cutting through their middle -->
-    ${popupCard(1096, 215, NAME_NEW, CARD_LINE1, CARD_LINE2)}
+    <!-- ArtSiren popup — same top:70 position used on the Ticketmaster/YouTube shots for consistency. This does overlap the tail of "Windward Fields", same as a real floating notification would overlap whatever's on screen — that's authentic, not a glitch. -->
+    ${popupCard(1096, 70, NAME_NEW, CARD_LINE1, CARD_LINE2)}
   </svg>`;
 
   const edited = await sharp(SRC + 'Screenshot 2026-07-04 101207.png')
