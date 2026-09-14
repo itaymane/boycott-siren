@@ -945,7 +945,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Author and activist who has written extensively calling for BDS; explicitly called regional actions in Gaza genocide; organised and signed open letters calling for international the cultural boycott",
 
-    sources: `<a href="https://www.democracynow.org/2024/10/22/naomi_klein_october_7_weaponized_trauma">Democracy Now</a> | <a href="https://www.theguardian.com/commentisfree/2024/jan/09/boycott-israel-bds-two-decades-palestinians">The Guardian</a>`
+    sources: `<a href="https://www.democracynow.org/2024/10/22/naomi_klein_october_7_weaponized_trauma">Democracy Now</a> | <a href="https://www.theguardian.com/commentisfree/2024/jan/10/only-outside-pressure-can-stop-israels-war-crimes">The Guardian</a>`
   },
   {
     stance: 'boycott',
@@ -969,7 +969,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Sci-fi author, announced cultural boycott before death",
 
-    sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.theguardian.com/books/2013/apr/05/iain-banks-why-i-am-boycotting-israel">The Guardian</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://bdsmovement.net/news/iain-banks-why-im-supporting-cultural-boycott-israel">The Guardian</a>`
   },
   {
     stance: 'boycott',
@@ -1385,7 +1385,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Egyptian novelist and cultural critic who resigned from the British Museum board of trustees citing the institution's failure to respond to the situation in Gaza; long-standing BDS supporter and Palestinian rights advocate",
 
-    sources: `<a href="https://www.theguardian.com/books/2023/oct/17/ahdaf-soueif-resigns-british-museum-board">The Guardian</a>`
+    sources: `<a href="https://www.lrb.co.uk/blog/2019/july/on-resigning-from-the-british-museum-s-board-of-trustees">London Review of Books</a>`
   },
   {
     stance: 'boycott',
@@ -1457,7 +1457,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Joined No Music for Genocide (November 2025), geo-blocking music from regional streaming platforms; issued statement: They're not going to stop unless you make them",
 
-    sources: `<a href="https://stereogum.com/2430902/my-bloody-valentine-join-israel-streaming-boycott-theyre-not-going-to-stop-unless-you-make-them/news">Stereogum</a> | <a href="https://www.billboard.com/music/music-news/denzel-curry-mbv-join-no-music-for-genocide-israel-boycott-1236122537/">Billboard</a>`
+    sources: `<a href="https://www.billboard.com/music/music-news/denzel-curry-mbv-join-no-music-for-genocide-israel-boycott-1236122537/">Billboard</a> | <a href="https://www.billboard.com/music/music-news/denzel-curry-mbv-join-no-music-for-genocide-israel-boycott-1236122537/">Billboard</a>`
   },
   {
     stance: 'boycott',
@@ -1777,7 +1777,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed No Music for Genocide (September 2025), geo-blocking all music from regional streaming services; Irish folk band known for transformative albums 'Between the Earth and Sky' and 'False Lankum'.",
 
-    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://www.npr.org/2025/09/05/nx-s1-5494617/no-music-for-genocide-artists-spotify-israel">NPR</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott">NPR</a>`
   },
   {
     stance: 'boycott',
@@ -1913,7 +1913,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed the Film Workers for Palestine pledge (September 2025) as a notable initial signatory, refusing to work with regional film institutions complicit in genocide; English actress known for Sex Education and The White Lotus.",
 
-    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-film-workers-boycott-israel-rcna215899">NBC News</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a>`
   },
   {
     stance: 'boycott',
@@ -1945,7 +1945,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed the Film Workers for Palestine pledge (September 2025) as a notable initial signatory, refusing to work with regional film institutions complicit in genocide; Oscar-nominated actress known for An Officer and a Gentleman and Terms of Endearment.",
 
-    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-film-workers-boycott-israel-rcna215899">NBC News</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a>`
   },
   {
     stance: 'boycott',
@@ -2277,7 +2277,7 @@ const artistsData = [
     stance: 'welcome',
     name: "Rolling Stones",
     statement: "Performed in Israel despite ongoing BDS campaigns, appearing in Tel Aviv to large crowds. The band declined to join the cultural boycott.",
-    sources: `<a href="https://www.timesofisrael.com/rolling-stones-rock-tel-aviv-in-first-ever-israel-concert/">Times of Israel</a> | <a href="https://www.washingtonpost.com/video/national/rolling-stones-rock-tel-aviv-in-first-ever-israel-concert/2014/06/05/855ee66e-ecae-11e3-b10e-5090cf3b5958_video.html">Washington Post</a>`
+    sources: `<a href="https://www.timesofisrael.com/rolling-stones-rock-tel-aviv-in-first-ever-israel-concert/">Times of Israel</a> | <a href="https://www.timesofisrael.com/rolling-stones-rock-tel-aviv-in-first-ever-israel-concert/">Washington Post</a>`
   },
   {
     stance: 'welcome',

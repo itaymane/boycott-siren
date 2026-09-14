@@ -1,0 +1,46 @@
+{
+  "status": "COMPLETE — all 8 broken links resolved (6 replaced with working approved-source URLs, 2 removed as unreplaceable). See git log for the commit. Kept as a record of what was found/why, not an action item.",
+  "checkpoint_note": "Fresh audit run — supersedes any prior version of this file. 319 unique source URLs checked via curl with browser UA. 15 got 403 and were spot-checked (3 via WebFetch across different domains, all confirmed to be real live articles just bot-blocking automation) — treated as FINE, not broken. 8 confirmed genuinely broken (404/DNS failure).",
+  "confirmed_fine_403_domains_do_not_touch": [
+    "timesofisrael.com", "newarab.com", "electronicintifada.net", "juno.co.uk",
+    "tabletmag.com", "metallica.com", "israelhayom.com"
+  ],
+  "confirmed_broken": [
+    {
+      "url": "https://www.theguardian.com/books/2023/oct/17/ahdaf-soueif-resigns-british-museum-board-of-trustees-over-its-failure-to-act-on-gaza (+ artists-data.js variant)",
+      "artist": "Ahdaf Soueif",
+      "resolution": "REMOVED, not replaced. NEEDS USER REVIEW: the statement text claims she resigned from the British Museum board 'citing the institution's failure to respond to the situation in Gaza' — but the only real source for her resignation (London Review of Books, 2019, kept as her sole remaining source) says it was over BP oil sponsorship and restitution issues, years before the Gaza war. Could not verify any real Gaza-specific boycott action by her. The statement itself is likely factually wrong, not just the link. She's now down to 1 source (LRB) in both files, below the site's 2-source minimum. Suggest either finding a genuine Gaza-related statement from her, rewriting the statement to accurately reflect the 2019 BP resignation, or removing her entirely."
+    },
+    {
+      "url": "https://www.washingtonpost.com/video/... rolling-stones-rock-tel-aviv...",
+      "artist": "Rolling Stones",
+      "resolution": "FIXED — replaced with https://www.timesofisrael.com/rolling-stones-rock-tel-aviv-in-first-ever-israel-concert/ (same story, approved outlet) in both files."
+    },
+    {
+      "url": "https://www.npr.org/2025/09/05/nx-s1-5494617/no-music-for-genocide-artists-spotify-israel",
+      "artist": "Lankum",
+      "resolution": "FIXED — NPR republished under a new URL, https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott, confirmed live and still names Lankum. Updated in both files."
+    },
+    {
+      "url": "https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-film-workers-boycott-israel-rcna215899",
+      "artist": "Aimee Lou Wood and Debra Winger (shared source)",
+      "resolution": "REMOVED, not replaced. NEEDS USER REVIEW: could not find an approved-outlet (see approved list) article naming either of them individually in connection with the Film Workers for Palestine pledge within the search time budget — only non-approved outlets (AOL, JustJared, ArabNews, CBC) did. Both are now down to 1 source each (Wikipedia's Film Workers for Palestine page) in both files, below the 2-source minimum. Suggest a targeted search for a Variety/Guardian/Deadline/Billboard piece naming them specifically, or accept Wikipedia as sufficient, or remove them."
+    },
+    {
+      "url": "https://www.theguardian.com/commentisfree/2024/jan/09/boycott-israel-bds-two-decades-palestinians",
+      "artist": "Naomi Klein",
+      "resolution": "FIXED — index.html already had the correct live URL for what's the same underlying Klein Guardian piece (https://www.theguardian.com/commentisfree/2024/jan/10/only-outside-pressure-can-stop-israels-war-crimes); artists-data.js's dead URL was updated to match."
+    },
+    {
+      "url": "https://www.theguardian.com/books/2013/apr/05/iain-banks-why-i-am-boycotting-israel",
+      "artist": "Iain Banks",
+      "resolution": "FIXED, with a caveat: could not find the article still live on theguardian.com itself. index.html already cited this same piece via its republication at https://bdsmovement.net/news/iain-banks-why-im-supporting-cultural-boycott-israel (labeled \"The Guardian\" there too, pre-existing, not something this audit introduced) — mirrored that same URL into artists-data.js for consistency. Content is the same Banks piece, just not hosted on theguardian.com anymore."
+    },
+    {
+      "url": "https://stereogum.com/2430902/my-bloody-valentine-join-israel-streaming-boycott-theyre-not-going-to-stop-unless-you-make-them/news",
+      "artist": "My Bloody Valentine",
+      "resolution": "FIXED — replaced with an approved outlet, https://www.billboard.com/music/music-news/denzel-curry-mbv-join-no-music-for-genocide-israel-boycott-1236122537/, which names My Bloody Valentine specifically (Stereogum wasn't on the approved list anyway)."
+    }
+  ],
+  "artists_now_below_2_sources_needing_attention": ["Ahdaf Soueif (1 source)", "Aimee Lou Wood (1 source)", "Debra Winger (1 source)"]
+}
