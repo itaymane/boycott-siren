@@ -7,10 +7,12 @@
 
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "alarms"
   ],
 
   "host_permissions": [
+    "https://artsiren.co/*",
     "*://*.ticketmaster.com/*",
     "*://*.ticketmaster.co.uk/*",
     "*://*.ticketmaster.com.au/*",
@@ -72,6 +74,10 @@
     "*://*.primevideo.com/*",
     "*://*.disneyplus.com/*"
   ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
 
   "icons": {
     "16": "icon16.png",

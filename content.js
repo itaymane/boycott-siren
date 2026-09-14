@@ -31,7 +31,23 @@
     chrome.storage.local.onChanged.addListener(changes => {
         if ('alertMode' in changes) settings.alertMode = changes.alertMode.newValue || 'both';
     });
-    
+
+    // artistsData starts as the bundled artists-data.js snapshot (works offline /
+    // on first install before background.js has fetched anything). Overlay the
+    // freshest copy from chrome.storage.local, kept up to date by background.js —
+    // this is what lets the database update without a new extension version.
+    function applyRemoteArtistData(remote) {
+        if (!Array.isArray(remote) || !remote.length) return;
+        artistsData.length = 0;
+        artistsData.push(...remote);
+    }
+    chrome.storage.local.get(['artistsDataRemote'], result => {
+        applyRemoteArtistData(result.artistsDataRemote);
+    });
+    chrome.storage.local.onChanged.addListener(changes => {
+        if (changes.artistsDataRemote) applyRemoteArtistData(changes.artistsDataRemote.newValue);
+    });
+
     // Detect which site we're on
     function getSiteDetector() {
         const hostname = window.location.hostname;
