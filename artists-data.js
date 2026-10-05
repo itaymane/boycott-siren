@@ -1,5 +1,5 @@
 // ArtSiren Artist Database — Chrome Extension
-// Total: 322 verified artists
+// Total: 300 verified artists
 // Last updated: 2026-10-05
 
 const artistsData = [
@@ -845,14 +845,6 @@ const artistsData = [
   },
   {
     stance: 'boycott',
-    name: "PJ Harvey",
-    level: "LOW",
-    statement: "British musician whose 2011 Mercury Prize-winning album Let England Shake addresses the human cost of war; performed at Glastonbury 2024 in front of Palestine flags with anti-war material; listed as a BDS cultural boycott supporter",
-
-    sources: `<a href="https://faroutmagazine.co.uk/friday-at-glastonbury-2024-the-highs-the-lows-and-the-political-statements/">Far Out Magazine</a>`
-  },
-  {
-    stance: 'boycott',
     name: "Robyn",
     level: "CRITICAL",
     statement: "Swedish pop star, supports BDS",
@@ -1042,38 +1034,6 @@ const artistsData = [
     statement: "Classical guitarist, supports cultural boycott",
 
     sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
-  },
-  {
-    stance: 'boycott',
-    name: "Manic Street Preachers",
-    level: "CRITICAL",
-    statement: "Welsh rock band who cancelled their planned the region tour dates, explicitly citing the political situation; among the first major rock bands to cancel the region shows in solidarity with Palestinians",
-
-    sources: `<a href="https://www.loudersound.com/news/waters-slams-artists-for-stance-on-israel">Louder Sound</a> | <a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a>`
-  },
-  {
-    stance: 'boycott',
-    name: "Belle and Sebastian",
-    level: "CRITICAL",
-    statement: "Scottish indie band, declined the region performance",
-
-    sources: `<a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a> | <a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a>`
-  },
-  {
-    stance: 'boycott',
-    name: "Jean-Luc Godard",
-    level: "CRITICAL",
-    statement: "Late film director, supported BDS",
-
-    sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.jta.org/2018/05/08/israel/french-director-jean-luc-godard-among-dozens-film-professionals-boycott-israel-cinema-event">Jewish Telegraphic Agency</a> | <a href="https://www.timesofisrael.com/french-new-wave-pioneer-godard-joins-israel-cinema-boycott/">Times of Israel</a>`
-  },
-  {
-    stance: 'boycott',
-    name: "Mira Nair",
-    level: "CRITICAL",
-    statement: "Director, supports BDS",
-
-    sources: `<a href="https://www.aljazeera.com/news/2025/9/8/hundreds-of-artists-pledge-boycott-of-israeli-film-institutions-over-gaza">Al Jazeera</a> | <a href="https://www.jta.org/2013/07/21/culture/indian-film-director-boycotts-haifa-film-festival">JTA</a>`
   },
   {
     stance: 'boycott',
@@ -1621,14 +1581,6 @@ const artistsData = [
   },
   {
     stance: 'boycott',
-    name: "Eric Clapton",
-    level: "HIGH",
-    statement: "Made antisemitic statements claiming 'the region is running the world'; performed with a guitar painted in Palestinian flag colors dedicated to Gaza; released a fundraising concert for Gaza children (December 2023); publicly defended Roger Waters' political activism against the region",
-
-    sources: `<a href="https://www.algemeiner.com/2024/05/29/guitarist-eric-clapton-says-israel-running-world-criticizes-hearings-campus-antisemitism/">Algemeiner</a> | <a href="https://www.jpost.com/israel-hamas-war/article-782583">Jerusalem Post</a> | <a href="https://www.nme.com/news/music/eric-clapton-on-roger-waters-political-views-it-takes-a-lot-of-guts-suffers-from-it-terribly-3760854">NME</a>`
-  },
-  {
-    stance: 'boycott',
     name: "Dave Matthews Band",
     level: "HIGH",
     statement: "Frontman Dave Matthews shouted 'Free Palestine' from concert stage (June-July 2024); physically protested at the US Capitol during Netanyahu's address to Congress (July 24, 2024); told Al Jazeera 'I'm ashamed that my tax dollars are going to the brutalizing of an entire people. It's shameful'; called Congress's support for Netanyahu 'disgusting'",
@@ -1661,43 +1613,11 @@ const artistsData = [
   },
   {
     stance: 'boycott',
-    name: "Vampire Weekend",
-    level: "HIGH",
-    statement: "Frontman Ezra Koenig defended pro-Palestinian expression from the stage at Victorious Festival (August 2025): 'If someone was punished for flying a flag, that is wrong and they deserve an apology. The terrible suffering of the Palestinian people deserves all of our sympathy'",
-
-    sources: `<a href="https://www.nme.com/news/music/vampire-weekend-on-the-mary-wallopers-victorious-controversy-that-is-wrong-and-they-deserve-an-apology-3886843">NME</a> | <a href="https://www.billboard.com/music/music-news/last-dinner-party-boycotts-victorious-festival-palestine-1236050564/">Billboard</a>`
-  },
-  {
-    stance: 'boycott',
-    name: "FKA Twigs",
-    level: "HIGH",
-    statement: "Performed at Artists for Aid benefit concert in London (July 2024), raising funds for War Child UK's Gaza and Sudan Response Plan covering food, water, and education for 120,000+ children",
-
-    sources: `<a href="https://www.rollingstone.com/music/music-news/fka-twigs-cellophane-london-charity-show-live-1235053828/">Rolling Stone</a> | <a href="https://www.nme.com/news/music/fka-twigs-london-fundraiser-gaza-sudan-aid-mustafa-clairo-3772252">NME</a>`
-  },
-  {
-    stance: 'boycott',
     name: "Lizzo",
     level: "HIGH",
     statement: "Posted Instagram video calling for 'liberation of the people... specifically Palestine, Sudan and the Congo'; thanked activists and pledged personal fundraising (May 2024)",
 
     sources: `<a href="https://www.billboard.com/music/music-news/lizzo-supports-palestine-sudan-congo-college-protests-instagram-1235681873/">Billboard</a> | <a href="https://www.nme.com/news/music/lizzo-shares-support-for-palestine-sudan-dr-congo-and-college-protests-we-aint-free-til-we-all-free-3756245">NME</a>`
-  },
-  {
-    stance: 'boycott',
-    name: "Thom Yorke",
-    level: "LOW",
-    statement: "Condemned Netanyahu and called the region's blockade of Gaza aid 'horrific' in a May 2025 Instagram statement; stated Radiohead would 'absolutely not' return to the region (October 2025). Also condemned Hamas and explicitly rejected boycott calls — stance is critical of regional government without fully endorsing BDS",
-
-    sources: `<a href="https://www.rollingstone.com/music/music-news/thom-yorke-condemns-netanyahu-hamas-gaza-1235351340/">Rolling Stone</a> | <a href="https://www.nme.com/news/music/thom-yorke-says-radiohead-will-absolutely-not-return-to-israel-and-he-wouldnt-want-to-be-5000-miles-anywhere-near-the-netanyahu-regime-3902353">NME</a> | <a href="https://www.billboard.com/music/rock/thom-yorke-note-heckler-israel-hamas-war-netanyahu-extremist-1235985900/">Billboard</a>`
-  },
-  {
-    stance: 'boycott',
-    name: "Tyler, the Creator",
-    level: "LOW",
-    statement: "Wore a Palestinian flag pin during his headline set at Coachella (April 2024)",
-
-    sources: `<a href="https://www.nme.com/news/music/tyler-the-creator-wore-a-palestine-pin-badge-during-his-coachella-headline-set-3618016">NME</a>`
   },
   {
     stance: 'boycott',
@@ -2020,62 +1940,6 @@ const artistsData = [
     sources: `<a href="https://www.nme.com/news/music/lorde-idles-muna-lead-1000-artists-joining-no-music-for-genocide-israel-streaming-block-3897163">NME</a> | <a href="https://www.rollingstone.com/music/music-news/clairo-lucy-dacus-no-music-for-genocide-boycott-israel-gaza-1235445251/">Rolling Stone</a>`
   },
   {
-    stance: 'boycott',
-    name: "Jerry Seinfeld",
-    level: "CRITICAL",
-    statement: "Signed the October 2023 Creative Community for Peace letter condemning Hamas; visited the region to meet with hostage families and soldiers; the most consistently outspoken Hollywood comedian supporting regional engagement following the October 7 attacks.",
-
-    sources: `<a href="https://www.hollywoodreporter.com/news/general-news/celebrities-entertainment-executives-sign-open-letter-support-israel-1235617300/">Hollywood Reporter</a> | <a href="https://www.npr.org/2024/03/01/1232497188/israel-hamas-celebrity-activism">NPR</a>`
-  },
-  {
-    stance: 'boycott',
-    name: "Debra Messing",
-    level: "CRITICAL",
-    statement: "Among the most outspoken pro-engagement voices in Hollywood: signed multiple pro-engagement letters, traveled to the region with the IDF to document the October 7 aftermath, publicly rejected the regional film industry boycott, and stated she has 'never felt as proud of being a Jew.'",
-
-    sources: `<a href="https://www.hollywoodreporter.com/movies/movie-news/liev-schrieber-debra-messing-reject-israeli-film-boycott-1236385658/">Hollywood Reporter</a> | <a href="https://www.cnn.com/2025/02/07/entertainment/debra-messing-october-8-documentary">CNN</a> | <a href="https://www.ynetnews.com/culture/article/r1ixu9frxg">Ynet</a>`
-  },
-  {
-    stance: 'boycott',
-    name: "Liev Schreiber",
-    level: "CRITICAL",
-    statement: "Signed both the October 2023 pro-engagement letter and a subsequent letter rejecting the the cultural boycott; led Hollywood figures opposed to the film industry boycott campaign; prominent Jewish voice in the debate.",
-
-    sources: `<a href="https://www.hollywoodreporter.com/movies/movie-news/liev-schrieber-debra-messing-reject-israeli-film-boycott-1236385658/">Hollywood Reporter</a> | <a href="https://www.jpost.com/israel-news/culture/article-868666">Jerusalem Post</a>`
-  },
-  {
-    stance: 'boycott',
-    name: "Gal Gadot",
-    level: "HIGH",
-    statement: "Signed the October 2023 Creative Community for Peace letter condemning Hamas and posted publicly: 'My heart is aching for the lives lost and families shattered. I'm praying for everyone affected by Hamas' terrorism'; regional-born actress known for Wonder Woman.",
-
-    sources: `<a href="https://www.hollywoodreporter.com/news/general-news/celebrities-entertainment-executives-sign-open-letter-support-israel-1235617300/">Hollywood Reporter</a> | <a href="https://variety.com/2023/tv/news/hollywood-open-letter-israel-support-hamas-war-1235753904/">Variety</a> | <a href="https://www.nme.com/news/film/hollywood-stars-sign-open-letter-support-israel-3514639">NME</a>`
-  },
-  {
-    stance: 'boycott',
-    name: "Gene Simmons",
-    level: "HIGH",
-    statement: "Signed the 2024 Creative Community for Peace letter supporting the region's inclusion in Eurovision, stating those 'advocating to exclude an regional singer from Eurovision don't move the needle towards peace, but only further divide the world'; KISS co-founder.",
-
-    sources: `<a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a> | <a href="https://www.billboard.com/music/music-news/2024-eurovision-song-contest-open-letter-reject-israel-ban-1235607339/">Billboard</a>`
-  },
-  {
-    stance: 'boycott',
-    name: "Boy George",
-    level: "HIGH",
-    statement: "Signed the 2024 Creative Community for Peace letter supporting the region's inclusion in Eurovision and publicly vowed he 'won't turn his back on his Jewish friends' amid calls to boycott Eurovision; Culture Club frontman.",
-
-    sources: `<a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a> | <a href="https://www.billboard.com/music/music-news/2024-eurovision-song-contest-open-letter-reject-israel-ban-1235607339/">Billboard</a>`
-  }
-,
-  {
-    stance: 'boycott',
-    name: 'Eric Clapton',
-    statement: 'Publicly declared support for the freedom of the people of Palestine and against the genocide alongside Roger Waters (June 2024); released Gaza fundraising music video Voice of a Child; performs with Palestinian flag guitar.',
-    sources: '<a href="https://www.jpost.com/diaspora/antisemitism/article-804047" target="_blank">Jerusalem Post</a> | <a href="https://www.algemeiner.com/2024/05/29/guitarist-eric-clapton-says-israel-running-world-criticizes-hearings-campus-antisemitism/" target="_blank">Algemeiner</a> | <a href="https://faroutmagazine.co.uk/eric-clapton-claims-israel-is-running-the-world/" target="_blank">Far Out Magazine</a> | <a href="https://www.showbiz411.com/2024/06/12/eric-clapton-goes-from-anti-vaxxer-to-pro-palestinian-backs-antisemite-roger-waters-and-uk-right-wing-politician" target="_blank">Showbiz411</a>'
-  }
-,
-  {
     stance: 'welcome',
     name: "Steve Earle",
     statement: "Explicitly rejected the cultural boycott of Israel, stating publicly he does not support boycotts and has performed in Israel despite BDS pressure.",
@@ -2107,18 +1971,6 @@ const artistsData = [
   },
   {
     stance: 'welcome',
-    name: "Gal Gadot",
-    statement: "Israeli actress and former IDF soldier who publicly posted a pro-Israel statement during the 2021 Gaza conflict, expressing support for the Israeli people. She also signed the Creative Community for Peace statement rejecting the cultural boycott of Israel.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2023/10/12/israel-under-attack-open-letter/">Creative Community for Peace</a> | <a href="https://variety.com/2021/film/news/gal-gadot-israel-palestine-wonder-woman-1234971511/">Variety</a>`
-  },
-  {
-    stance: 'welcome',
-    name: "Jerry Seinfeld",
-    statement: "Vocal defender of Israel who signed the Creative Community for Peace statement. After October 7, 2023, he travelled to Israel to meet personally with freed hostages and families of those still held by Hamas, calling it \"the most powerful experience of my life.\"",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2023/12/21/jerry-seinfeld-meets-with-families-of-israeli-hostages-amid-ongoing-conflict/">Creative Community for Peace</a> | <a href="https://www.timesofisrael.com/visiting-israel-jerry-seinfeld-meets-with-freed-hostages-families-of-abductees/">Times of Israel</a> | <a href="https://www.hollywoodreporter.com/news/general-news/jerry-seinfeld-meets-israeli-hostage-families-1235765834/">The Hollywood Reporter</a>`
-  },
-  {
-    stance: 'welcome',
     name: "Michael Douglas",
     statement: "Signed the Creative Community for Peace statement defending Israel and rejecting the cultural boycott. He has also been a long-time supporter of organisations combating antisemitism and has spoken publicly about his Jewish heritage.",
     sources: `<a href="https://www.creativecommunityforpeace.com/blog/2023/10/12/israel-under-attack-open-letter/">Creative Community for Peace</a> | <a href="https://www.hollywoodreporter.com/news/general-news/celebrities-entertainment-executives-sign-open-letter-support-israel-1235617300/">The Hollywood Reporter</a>`
@@ -2143,12 +1995,6 @@ const artistsData = [
   },
   {
     stance: 'welcome',
-    name: "Gene Simmons",
-    statement: "KISS co-founder and outspoken defender of Israel. Israeli-born (Chaim Witz), he has blasted anti-Israel boycotts of arts festivals, signed letters opposing Israel's exclusion from Eurovision, and proposed a global 'Never Again' concert at Holocaust memorial sites.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2022/01/07/gene-simmons-and-other-entertainment-industry-heavyweights-blast-anti-israel-boycott-of-sydney-festival/">Creative Community for Peace</a> | <a href="https://www.creativecommunityforpeace.com/blog/2024/02/15/boy-george-sharon-osbourne-gene-simmons-more-sign-letter-rejecting-attempt-to-bar-israel-from-2024-eurovision-song-contest/">Creative Community for Peace</a> | <a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a> | <a href="https://www.timesofisrael.com/kiss-frontman-simmons-wants-to-rock-holocaust-memorials-with-never-again-concert/">Times of Israel</a>`
-  },
-  {
-    stance: 'welcome',
     name: "Ozzy Osbourne",
     statement: "Black Sabbath co-founder who signed the Creative Community for Peace statement rejecting the cultural boycott of Israel. Black Sabbath performed in Israel multiple times and resisted pressure to cancel shows. He was remembered by Jewish advocacy groups as a steadfast supporter of Israel and the Jewish people.",
     sources: `<a href="https://www.creativecommunityforpeace.com/blog/2023/10/12/israel-under-attack-open-letter/">Creative Community for Peace</a> | <a href="https://www.algemeiner.com/2025/07/24/rock-legend-black-sabbath-co-founder-ozzy-osbourne-steadfast-supporter-israel-jewish-people/">Algemeiner</a>`
@@ -2158,18 +2004,6 @@ const artistsData = [
     name: "David Draiman",
     statement: "Lead vocalist of Disturbed and one of rock's most outspoken defenders of Israel and Jewish identity. Raised in an Orthodox Jewish home, he has slammed Roger Waters and other boycotters as 'Nazi comrades', publicly defended Israel during the Hamas war, told artists to ignore BDS pressure, raised $29K for Matisyahu's security after pro-Palestinian protests, responded to being booed at a Black Sabbath show by calling the hecklers 'Jew-hating morons', and said he would 'gladly serve jail time' if he ever met Roger Waters. His support caused Disturbed to announce a band hiatus in 2025 amid controversy, but Draiman stated he doesn't 'give a shit' about alienating people with his pro-Israel stance.",
     sources: `<a href="https://www.nme.com/news/music/disturbeds-david-draiman-doesnt-give-a-shit-if-he-alienates-people-with-pro-israel-comments-3165089">NME</a> | <a href="https://www.nme.com/news/music/disturbeds-david-draiman-responds-to-booing-from-a-few-jew-hating-morons-at-black-sabbath-farewell-show-3876730">NME</a> | <a href="https://blabbermouth.net/news/disturbeds-david-draiman-slams-roger-waters-and-the-rest-of-his-nazi-comrades-for-boycotting-israel">Blabbermouth</a> | <a href="https://blabbermouth.net/news/disturbeds-david-draiman-defends-israel-in-war-against-hamas-no-one-wishes-for-a-true-ceasefire-more-than-us">Blabbermouth</a> | <a href="https://www.timesofisrael.com/after-belgium-show-canceled-pro-israel-heavy-metal-front-man-david-draiman-urges-unity/">Times of Israel</a> | <a href="https://www.algemeiner.com/2023/02/14/disturbed-frontman-tells-artists-to-ignore-pressure-from-bds-supporters-about-performing-in-israel/">Algemeiner</a> | <a href="https://consequence.net/2026/04/disturbed-david-draiman-roger-waters-betrayed-jews/">Consequence</a> | <a href="https://jewishchronicle.timesofisrael.com/david-draiman-jewish-heavy-metal-frontman-raises-29k-for-security-for-matisyahu-after-pro-palestinian-protests/">Pittsburgh Jewish Chronicle</a> | <a href="https://www.creativecommunityforpeace.com/blog/2023/04/06/david-draiman-2/">Creative Community for Peace</a>`
-  },
-  {
-    stance: 'welcome',
-    name: "Liev Schreiber",
-    statement: "Signed the Creative Community for Peace statement rejecting the cultural boycott of Israel and was honoured as CCFP's 'Ambassador of Peace' at their 5th annual gala. He was also among 1,200 industry figures who signed a letter decrying the discriminatory Israeli film boycott.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2024/01/18/more-than-500-artists-and-entertainment-industry-leaders-gathered-to-honor-liev-schreiber-kat-graham-ezekiel-lewis-aaron-rosenberg-and-gustavo-lopez-at-creative-community-for-peaces-5th-a/">Creative Community for Peace</a> | <a href="https://www.hollywoodreporter.com/movies/movie-news/liev-schrieber-debra-messing-reject-israeli-film-boycott-1236385658/">The Hollywood Reporter</a> | <a href="https://www.thejc.com/news/showbiz/liev-schreiber-sharon-osbourne-letter-israeli-film-boycott-sfrbokna">The Jewish Chronicle</a>`
-  },
-  {
-    stance: 'welcome',
-    name: "Debra Messing",
-    statement: "Signed the Creative Community for Peace statement rejecting the cultural boycott of Israel. She has been intensely outspoken against antisemitism post-October 7, produced the documentary 'October 8' about the rise of antisemitism, and signed multiple pro-Israel open letters.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2025/06/03/lies-designed-to-demonize-jews-mayim-bialik-debra-messing-sign-letter-advocating-for-israel/">Creative Community for Peace</a> | <a href="https://www.hollywoodreporter.com/movies/movie-news/liev-schrieber-debra-messing-reject-israeli-film-boycott-1236385658/">The Hollywood Reporter</a> | <a href="https://www.cnn.com/2025/02/07/entertainment/debra-messing-october-8-documentary">CNN</a>`
   },
   {
     stance: 'welcome',
@@ -2311,12 +2145,6 @@ const artistsData = [
   },
   {
     stance: 'welcome',
-    name: "Boy George",
-    statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and opposing cultural boycotts.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a>`
-  },
-  {
-    stance: 'welcome',
     name: "Sharon Osbourne",
     statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and opposing cultural boycotts.",
     sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a>`
@@ -2413,9 +2241,27 @@ const artistsData = [
   },
   {
     stance: 'welcome',
+    name: "U2",
+    statement: "Frontman Bono compared national security minister Itamar Ben-Gvir's remarks about Gazans — \"They shouldn't live. They're not even people\" — to the rhetoric of Nazi SS chief Heinrich Himmler in a September 2026 Rolling Stone interview, calling it \"just outrageous\" and saying Ben-Gvir was putting Judaism \"in the shade.\" In the same interview Bono described himself as someone who has \"stood by Israel,\" called the October 7 Hamas attack \"an unholy offence\" and said \"we never needed the moral force of Judaism more than now.\" His criticism was aimed at Ben-Gvir and the Netanyahu coalition that keeps him in office, not at Israel or Israeli audiences, and he made no call to boycott.",
+    sources: `<a href="https://www.rollingstone.com/music/music-features/u2-cover-story-carnaval-de-luz-larry-mullen-dolly-parton-1235631171/">Rolling Stone</a> | <a href="https://www.timesofisrael.com/u2s-bono-compares-ben-gvir-to-nazi-ss-chief-himmler-over-his-comments-on-gaza/">Times of Israel</a> | <a href="https://www.ynetnews.com/culture/article/bkwdogy9gl">Ynet</a>`
+  },
+  {
+    stance: 'welcome',
     name: "Jerry Seinfeld",
-    statement: "Signed the October 2023 Creative Community for Peace letter signed by 700+ Hollywood figures condemning Hamas; visited Israel to meet with hostage families and Israeli soldiers; has been the most consistently outspoken Hollywood comedian supporting Israel following the October 7 attacks.",
-    sources: `<a href="https://www.hollywoodreporter.com/news/general-news/celebrities-entertainment-executives-sign-open-letter-support-israel-1235617300/">Hollywood Reporter</a> | <a href="https://www.npr.org/2024/03/01/1232497188/israel-hamas-celebrity-activism">NPR</a>`
+    statement: "Vocal defender of Israel who signed the Creative Community for Peace statement. After October 7, 2023, he travelled to Israel to meet personally with freed hostages and families of those still held by Hamas, calling it \"the most powerful experience of my life.\"",
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2023/12/21/jerry-seinfeld-meets-with-families-of-israeli-hostages-amid-ongoing-conflict/">Creative Community for Peace</a> | <a href="https://www.timesofisrael.com/visiting-israel-jerry-seinfeld-meets-with-freed-hostages-families-of-abductees/">Times of Israel</a> | <a href="https://www.hollywoodreporter.com/news/general-news/jerry-seinfeld-meets-israeli-hostage-families-1235765834/">The Hollywood Reporter</a>`
+  },
+  {
+    stance: 'welcome',
+    name: "Gene Simmons",
+    statement: "KISS co-founder and outspoken defender of Israel. Israeli-born (Chaim Witz), he has blasted anti-Israel boycotts of arts festivals, signed letters opposing Israel's exclusion from Eurovision, and proposed a global 'Never Again' concert at Holocaust memorial sites.",
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2022/01/07/gene-simmons-and-other-entertainment-industry-heavyweights-blast-anti-israel-boycott-of-sydney-festival/">Creative Community for Peace</a> | <a href="https://www.creativecommunityforpeace.com/blog/2024/02/15/boy-george-sharon-osbourne-gene-simmons-more-sign-letter-rejecting-attempt-to-bar-israel-from-2024-eurovision-song-contest/">Creative Community for Peace</a> | <a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a> | <a href="https://www.timesofisrael.com/kiss-frontman-simmons-wants-to-rock-holocaust-memorials-with-never-again-concert/">Times of Israel</a>`
+  },
+  {
+    stance: 'welcome',
+    name: "Liev Schreiber",
+    statement: "Signed the Creative Community for Peace statement rejecting the cultural boycott of Israel and was honoured as CCFP's 'Ambassador of Peace' at their 5th annual gala. He was also among 1,200 industry figures who signed a letter decrying the discriminatory Israeli film boycott.",
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2024/01/18/more-than-500-artists-and-entertainment-industry-leaders-gathered-to-honor-liev-schreiber-kat-graham-ezekiel-lewis-aaron-rosenberg-and-gustavo-lopez-at-creative-community-for-peaces-5th-a/">Creative Community for Peace</a> | <a href="https://www.hollywoodreporter.com/movies/movie-news/liev-schrieber-debra-messing-reject-israeli-film-boycott-1236385658/">The Hollywood Reporter</a> | <a href="https://www.thejc.com/news/showbiz/liev-schreiber-sharon-osbourne-letter-israeli-film-boycott-sfrbokna">The Jewish Chronicle</a>`
   },
   {
     stance: 'welcome',
@@ -2425,21 +2271,9 @@ const artistsData = [
   },
   {
     stance: 'welcome',
-    name: "Liev Schreiber",
-    statement: "Signed both the October 2023 pro-Israel Creative Community for Peace letter and a subsequent letter rejecting the cultural boycott of Israel; led Hollywood figures opposed to the film industry boycott campaign; Ray Donovan actor and prominent Jewish voice in the debate.",
-    sources: `<a href="https://www.hollywoodreporter.com/movies/movie-news/liev-schrieber-debra-messing-reject-israeli-film-boycott-1236385658/">Hollywood Reporter</a> | <a href="https://www.jpost.com/israel-news/culture/article-868666">Jerusalem Post</a>`
-  },
-  {
-    stance: 'welcome',
     name: "Gal Gadot",
     statement: "Signed the October 2023 Creative Community for Peace open letter condemning Hamas's terrorist attacks, and posted publicly: 'My heart is aching for the lives lost and families shattered. I'm praying for everyone affected by Hamas' terrorism'; Israeli-born actress known for Wonder Woman.",
     sources: `<a href="https://www.hollywoodreporter.com/news/general-news/celebrities-entertainment-executives-sign-open-letter-support-israel-1235617300/">Hollywood Reporter</a> | <a href="https://variety.com/2023/tv/news/hollywood-open-letter-israel-support-hamas-war-1235753904/">Variety</a> | <a href="https://www.nme.com/news/film/hollywood-stars-sign-open-letter-support-israel-3514639">NME</a>`
-  },
-  {
-    stance: 'welcome',
-    name: "Gene Simmons",
-    statement: "Signed the 2024 Creative Community for Peace open letter supporting Israel's inclusion in Eurovision, stating those 'advocating to exclude an Israeli singer from Eurovision don't move the needle towards peace, but only further divide the world'; KISS co-founder.",
-    sources: `<a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a> | <a href="https://www.billboard.com/music/music-news/2024-eurovision-song-contest-open-letter-reject-israel-ban-1235607339/">Billboard</a>`
   },
   {
     stance: 'welcome',
@@ -2448,9 +2282,11 @@ const artistsData = [
     sources: `<a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a> | <a href="https://www.billboard.com/music/music-news/2024-eurovision-song-contest-open-letter-reject-israel-ban-1235607339/">Billboard</a>`
   },
   {
-    stance: 'welcome',
-    name: "U2",
-    statement: "Frontman Bono compared national security minister Itamar Ben-Gvir's remarks about Gazans — \"They shouldn't live. They're not even people\" — to the rhetoric of Nazi SS chief Heinrich Himmler in a September 2026 Rolling Stone interview, calling it \"just outrageous\" and saying Ben-Gvir was putting Judaism \"in the shade.\" In the same interview Bono described himself as someone who has \"stood by Israel,\" called the October 7 Hamas attack \"an unholy offence\" and said \"we never needed the moral force of Judaism more than now.\" His criticism was aimed at Ben-Gvir and the Netanyahu coalition that keeps him in office, not at Israel or Israeli audiences, and he made no call to boycott.",
-    sources: `<a href="https://www.rollingstone.com/music/music-features/u2-cover-story-carnaval-de-luz-larry-mullen-dolly-parton-1235631171/">Rolling Stone</a> | <a href="https://www.timesofisrael.com/u2s-bono-compares-ben-gvir-to-nazi-ss-chief-himmler-over-his-comments-on-gaza/">Times of Israel</a> | <a href="https://www.ynetnews.com/culture/article/bkwdogy9gl">Ynet</a>`
+    stance: 'boycott',
+    name: "Eric Clapton",
+    level: "HIGH",
+    statement: "Made antisemitic statements claiming 'the region is running the world'; publicly declared support for the freedom of the people of Palestine and against the genocide alongside Roger Waters (June 2024); released Gaza fundraising music video 'Voice of a Child'; performs with Palestinian flag guitar.",
+
+    sources: `<a href="https://www.jpost.com/israel-hamas-war/article-782583">Jerusalem Post</a> | <a href="https://www.algemeiner.com/2024/05/29/guitarist-eric-clapton-says-israel-running-world-criticizes-hearings-campus-antisemitism/">Algemeiner</a> | <a href="https://faroutmagazine.co.uk/eric-clapton-claims-israel-is-running-the-world/">Far Out Magazine</a> | <a href="https://www.showbiz411.com/2024/06/12/eric-clapton-goes-from-anti-vaxxer-to-pro-palestinian-backs-antisemite-roger-waters-and-uk-right-wing-politician">Showbiz411</a>`
   }
 ];
