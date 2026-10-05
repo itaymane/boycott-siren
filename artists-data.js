@@ -1,6 +1,6 @@
 // ArtSiren Artist Database — Chrome Extension
-// Total: 243 verified artists
-// Last updated: 2026-06-26
+// Total: 322 verified artists
+// Last updated: 2026-10-05
 
 const artistsData = [
   {
@@ -2446,5 +2446,11 @@ const artistsData = [
     name: "Boy George",
     statement: "Signed the 2024 Creative Community for Peace open letter supporting Israel's inclusion in Eurovision and publicly vowed he 'won't turn his back on his Jewish friends' amid calls to boycott Eurovision; Culture Club frontman.",
     sources: `<a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a> | <a href="https://www.billboard.com/music/music-news/2024-eurovision-song-contest-open-letter-reject-israel-ban-1235607339/">Billboard</a>`
+  },
+  {
+    stance: 'welcome',
+    name: "U2",
+    statement: "Frontman Bono compared national security minister Itamar Ben-Gvir's remarks about Gazans — \"They shouldn't live. They're not even people\" — to the rhetoric of Nazi SS chief Heinrich Himmler in a September 2026 Rolling Stone interview, calling it \"just outrageous\" and saying Ben-Gvir was putting Judaism \"in the shade.\" In the same interview Bono described himself as someone who has \"stood by Israel,\" called the October 7 Hamas attack \"an unholy offence\" and said \"we never needed the moral force of Judaism more than now.\" His criticism was aimed at Ben-Gvir and the Netanyahu coalition that keeps him in office, not at Israel or Israeli audiences, and he made no call to boycott.",
+    sources: `<a href="https://www.rollingstone.com/music/music-features/u2-cover-story-carnaval-de-luz-larry-mullen-dolly-parton-1235631171/">Rolling Stone</a> | <a href="https://www.timesofisrael.com/u2s-bono-compares-ben-gvir-to-nazi-ss-chief-himmler-over-his-comments-on-gaza/">Times of Israel</a> | <a href="https://www.ynetnews.com/culture/article/bkwdogy9gl">Ynet</a>`
   }
 ];
