@@ -1,0 +1,5 @@
+# Lets the Chrome extension's background.js fetch the live database without
+# needing an artsiren.co host permission (a new host permission would disable
+# the extension for existing users until they re-approve it).
+/artists.json
+  Access-Control-Allow-Origin: *
