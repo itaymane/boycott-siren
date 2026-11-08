@@ -1215,9 +1215,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Macklemore",
     level: "CRITICAL",
-    statement: "Participated in the No Music for Genocide campaign (2024–25), geo-blocking his music from regional streaming platforms; performed at pro-Palestinian rallies and publicly called for an end to US military aid to the region. In September 2026, chanted 'Free Palestine' and performed his protest song 'Hind's Hall' while opening for Ed Sheeran at MetLife Stadium in New Jersey, drawing a petition calling for his removal from the tour; he defended the remarks, saying wanting all humans treated equally 'should never be controversial'",
+    statement: "Participated in the No Music for Genocide campaign (2024–25), geo-blocking his music from regional streaming platforms; performed at pro-Palestinian rallies and publicly called for an end to US military aid to the region. In September 2026, chanted 'Free Palestine' and performed his protest song 'Hind's Hall' while opening for Ed Sheeran at MetLife Stadium in New Jersey, drawing a petition calling for his removal from the tour; he defended the remarks, saying wanting all humans treated equally 'should never be controversial'. He was then removed from the rest of the tour, which he blamed on pressure from Patriots owner Robert Kraft; he responded by announcing a 'Free Palestine Tour' (Dublin, Paris and London, October 2026) with all proceeds going to organizations supporting Palestinians, and pledged $1 million of his Loop Tour earnings to Palestinian relief",
 
-    sources: `<a href="https://www.rollingstone.com/music/music-news/macklemore-pro-palestine-protest-song-hinds-hall-1235016487/">Rolling Stone</a> | <a href="https://www.billboard.com/music/rb-hip-hop/macklemore-gaza-college-protests-hinds-hall-song-1235675967/">Billboard</a> | <a href="https://www.billboard.com/music/pop/macklemore-responds-backlash-free-palestine-chant-sheeran-show-1236335590/">Billboard</a> | <a href="https://www.hollywoodreporter.com/music/music-news/macklemore-responds-backlash-free-palestine-plea-ed-sheeran-1236693499/">Hollywood Reporter</a> | <a href="https://variety.com/2026/music/news/macklemore-responds-free-palestine-criticism-ed-sheeran-1236854276/">Variety</a>`
+    sources: `<a href="https://www.rollingstone.com/music/music-news/macklemore-pro-palestine-protest-song-hinds-hall-1235016487/">Rolling Stone</a> | <a href="https://www.billboard.com/music/rb-hip-hop/macklemore-gaza-college-protests-hinds-hall-song-1235675967/">Billboard</a> | <a href="https://www.billboard.com/music/pop/macklemore-responds-backlash-free-palestine-chant-sheeran-show-1236335590/">Billboard</a> | <a href="https://www.hollywoodreporter.com/music/music-news/macklemore-responds-backlash-free-palestine-plea-ed-sheeran-1236693499/">Hollywood Reporter</a> | <a href="https://variety.com/2026/music/news/macklemore-responds-free-palestine-criticism-ed-sheeran-1236854276/">Variety</a> | <a href="https://www.axios.com/2026/09/14/macklemore-ed-sheeran-tour-free-palestine-protests">Axios</a> | <a href="https://www.aljazeera.com/news/2026/9/24/us-rapper-macklemore-announces-free-palestine-tour-after-ed-sheeran-fallout">Al Jazeera</a>`
   },
   {
     stance: 'boycott',
@@ -2278,8 +2278,8 @@ const artistsData = [
   {
     stance: 'welcome',
     name: "Boy George",
-    statement: "Signed the 2024 Creative Community for Peace open letter supporting Israel's inclusion in Eurovision and publicly vowed he 'won't turn his back on his Jewish friends' amid calls to boycott Eurovision; Culture Club frontman.",
-    sources: `<a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a> | <a href="https://www.billboard.com/music/music-news/2024-eurovision-song-contest-open-letter-reject-israel-ban-1235607339/">Billboard</a>`
+    statement: "Signed the 2024 Creative Community for Peace open letter supporting Israel's inclusion in Eurovision and publicly vowed he 'won't turn his back on his Jewish friends' amid calls to boycott Eurovision; Culture Club frontman. In November 2026 he defied the cultural boycott to play two shows at Tel Aviv's Menora Mivtachim Arena, his first in Israel since 2017; the second was dedicated to Nova festival survivors. During the visit he met President Isaac Herzog and visited the Nova memorial site.",
+    sources: `<a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a> | <a href="https://www.billboard.com/music/music-news/2024-eurovision-song-contest-open-letter-reject-israel-ban-1235607339/">Billboard</a> | <a href="https://www.timesofisrael.com/boy-george-offers-friendship-and-80s-hits-to-appreciative-tel-aviv-audience/">Times of Israel</a> | <a href="https://www.jpost.com/israel-news/politics-and-diplomacy/article-913879">Jerusalem Post</a>`
   },
   {
     stance: 'boycott',
@@ -2288,5 +2288,35 @@ const artistsData = [
     statement: "Made antisemitic statements claiming 'the region is running the world'; publicly declared support for the freedom of the people of Palestine and against the genocide alongside Roger Waters (June 2024); released Gaza fundraising music video 'Voice of a Child'; performs with Palestinian flag guitar.",
 
     sources: `<a href="https://www.jpost.com/israel-hamas-war/article-782583">Jerusalem Post</a> | <a href="https://www.algemeiner.com/2024/05/29/guitarist-eric-clapton-says-israel-running-world-criticizes-hearings-campus-antisemitism/">Algemeiner</a> | <a href="https://faroutmagazine.co.uk/eric-clapton-claims-israel-is-running-the-world/">Far Out Magazine</a> | <a href="https://www.showbiz411.com/2024/06/12/eric-clapton-goes-from-anti-vaxxer-to-pro-palestinian-backs-antisemite-roger-waters-and-uk-right-wing-politician">Showbiz411</a>`
+  },
+  {
+    stance: 'boycott',
+    name: "Finneas",
+    level: "HIGH",
+    statement: "Withdrew from his November 2026 South American tour dates opening for Ed Sheeran after Macklemore was removed from the tour over his 'Free Palestine' remarks, writing that 'artists must not be silenced when they speak up for the oppressed' and 'I stand with Palestine and its people' (September 2026).",
+
+    sources: `<a href="https://au.variety.com/2026/music/news/finneas-drops-ed-sheeran-tour-macklemore-palestine-40384/">Variety Australia</a> | <a href="https://www.thenationalnews.com/arts-culture/music-stage/2026/09/16/all-of-ed-sheerans-opening-acts-withdraw-from-tour-in-support-of-macklemore-over-palestine/">The National</a> | <a href="https://complex.com/music/a/backwoodsaltar/finneas-drops-ed-sheeran-macklemore-tour-palestine">Complex</a>`
+  },
+  {
+    stance: 'boycott',
+    name: "Beoga",
+    level: "HIGH",
+    statement: "Irish folk band that played as Ed Sheeran's backing band; quit the rest of his US Loop Tour in September 2026 after Macklemore was removed over his 'Free Palestine' remarks, saying 'we are Irish people who understand colonialism' and describing themselves as 'founding members of the Irish Artists for Palestine movement' and 'committed activists for justice'. The band later said 'Free Palestine' on RTÉ's The Late Late Show.",
+
+    sources: `<a href="https://www.itv.com/news/utv/2026-09-16/beoga-quit-sheeran-tour">ITV News</a> | <a href="https://www.newarab.com/news/supporting-acts-band-quit-ed-sheerans-tour-over-palestine">The New Arab</a> | <a href="https://www.ibtimes.co.uk/beoga-withdrawal-ed-sheeran-tour-macklemore-dispute-1827541">IBTimes UK</a>`
+  },
+  {
+    stance: 'boycott',
+    name: "Russ Millions",
+    level: "HIGH",
+    statement: "UK drill rapper who pulled out of headlining Tel Aviv's Boomerang Music Festival (October 22, 2026) after backlash over the booking, saying on Instagram Live: 'If I was aware of any form of people killing, children or women I wouldn't even have accepted any show' and 'I will not be attending Tel Aviv.'",
+
+    sources: `<a href="https://www.newarab.com/news/israel-music-showcase-struggles-gaza-genocide-fuels-boycott">The New Arab</a> | <a href="https://en.royanews.tv/news/75029">Roya News</a>`
+  },
+  {
+    stance: 'welcome',
+    name: "Andrea Bocelli",
+    statement: "Performed at a Tel Aviv stadium in 2022 despite calls to boycott, with Prime Minister Benjamin Netanyahu in the audience, and sang in Jerusalem's Old City in 2011. In October 2026 the BDS movement's Jordan chapter called for a boycott of his November 27 concert at Petra over his support for Israel, and Indonesia's top Muslim council opposed his concerts in Indonesia on the same grounds.",
+    sources: `<a href="https://www.timesofisrael.com/groups-demand-boycott-of-andrea-bocellis-jordan-concert-over-his-israel-support/">Times of Israel</a> | <a href="https://malaymail.com/news/showbiz/2026/10/08/bds-movement-urges-boycott-of-andrea-bocellis-jordan-concert-at-petra-over-israel-ties/238167">Malay Mail</a> | <a href="https://www.ksat.com/entertainment/2026/10/14/indonesias-top-muslim-council-opposes-upcoming-andrea-bocelli-concerts-over-israel-ties/">AP via KSAT</a>`
   }
 ];
