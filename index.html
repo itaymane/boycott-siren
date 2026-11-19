@@ -3167,11 +3167,12 @@
                 }
             };
             try {
-                await fetch('https://hook.us2.make.com/5juuuyrvf37yi2wgr86igjg4q373h37z', {
+                const res = await fetch('https://hook.us2.make.com/5juuuyrvf37yi2wgr86igjg4q373h37z', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
                 });
+                if (!res.ok) throw new Error('Webhook returned ' + res.status);
                 gtag('event', 'contact_submit', { category: fd.get('category') });
                 document.getElementById('contactForm').style.display = 'none';
                 document.getElementById('contactSuccess').style.display = 'block';
