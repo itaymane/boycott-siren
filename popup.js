@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('viewWebsite').addEventListener('click', function() {
-        chrome.tabs.create({ url: 'https://artsiren.co/' });
+        chrome.tabs.create({ url: 'https://artsiren.co/?utm_source=extension&utm_medium=popup' });
     });
 
     document.getElementById('termsLink').addEventListener('click', function(e) {
         e.preventDefault();
-        chrome.tabs.create({ url: 'https://artsiren.co/terms.html' });
+        chrome.tabs.create({ url: 'https://artsiren.co/terms.html?utm_source=extension&utm_medium=popup' });
     });
 
     document.getElementById('privacyLink').addEventListener('click', function(e) {
         e.preventDefault();
-        chrome.tabs.create({ url: 'https://artsiren.co/privacy.html' });
+        chrome.tabs.create({ url: 'https://artsiren.co/privacy.html?utm_source=extension&utm_medium=popup' });
     });
 
     document.getElementById('correctionsLink').addEventListener('click', function(e) {

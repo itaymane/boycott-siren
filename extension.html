@@ -9,7 +9,7 @@
       gtag('js', new Date());
       gtag('config', 'G-XZRJ6TZY2Y');
     </script>
-    <script src="/shared-nav.js?v=5"></script>
+    <script src="/shared-nav.js?v=7"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -482,6 +482,19 @@
             margin-bottom: 2rem;
         }
 
+        /* ── Mobile: extension can't be installed, offer link instead ── */
+        .mobile-note { display: none; max-width: 420px; margin: 0 auto; padding: 1.25rem; border-radius: 14px;
+            background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); text-align: center; }
+        .mobile-note-title { color: #fff !important; font-weight: 700; font-size: 1rem; margin: 0 0 0.4rem !important; }
+        .mobile-note-sub { color: rgba(255,255,255,0.7) !important; font-size: 0.85rem; margin: 0 0 1rem !important; }
+        .mobile-note-actions { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+        .mobile-note-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px;
+            padding: 0.6rem 1.2rem; border-radius: 10px; border: none; background: var(--blue); color: #fff;
+            font: 600 0.9rem/1 inherit; font-family: inherit; text-decoration: none; cursor: pointer; }
+        .mobile-note-btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.35); }
+        html.is-mobile .btn-chrome { display: none !important; }
+        html.is-mobile .mobile-note { display: block; }
+
         /* ── Responsive ── */
         @media (max-width: 640px) {
             .hero { padding: 3.5rem 1.25rem 3rem; }
@@ -490,6 +503,10 @@
             .section { padding: 3.5rem 1.25rem; }
         }
     </style>
+    <script>
+      // Chrome extensions can't be installed on phones/tablets (incl. iPadOS, which reports as Mac)
+      (function(){var u=navigator.userAgent;if(/Android|iPhone|iPad|iPod|Mobile/i.test(u)||(/Macintosh/.test(u)&&navigator.maxTouchPoints>1)){document.documentElement.classList.add('is-mobile');}})();
+    </script>
 </head>
 <body>
 
@@ -507,7 +524,7 @@
     <p class="hero-sub">ArtSiren alerts you instantly when an artist appears on Ticketmaster, Spotify, or YouTube — with verified sources so you can decide for yourself.</p>
 
     <div class="hero-ctas">
-        <a href="https://chrome.google.com/webstore/detail/artsiren" class="btn-chrome" onclick="gtag('event','extension_cta_hero');">
+        <a href="https://chromewebstore.google.com/detail/artsiren/kpcaekjcohndlkipojidkfafaefblhhi" target="_blank" rel="noopener noreferrer" class="btn-chrome" onclick="if(window.gtag)gtag('event','install_click',{button_location:'hero'});">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.8"/>
                 <circle cx="12" cy="12" r="4" fill="white"/>
@@ -515,6 +532,14 @@
             </svg>
             Add to Chrome — It's Free
         </a>
+        <div class="mobile-note" role="note">
+            <p class="mobile-note-title">ArtSiren works on desktop Chrome</p>
+            <p class="mobile-note-sub">Chrome extensions can't be installed on phones or tablets. Send yourself the link and install it from your computer.</p>
+            <div class="mobile-note-actions">
+                <button type="button" class="mobile-note-btn" onclick="copyInstallLink(this)">Copy link</button>
+                <a class="mobile-note-btn mobile-note-btn-ghost" href="mailto:?subject=Install%20ArtSiren%20on%20desktop%20Chrome&amp;body=Open%20this%20on%20your%20computer%3A%20https%3A%2F%2Fartsiren.co%2Fextension.html" onclick="if(window.gtag)gtag('event','mobile_link_share',{method:'email'});">Email me the link</a>
+            </div>
+        </div>
         <a href="/" class="btn-secondary">Browse Artists</a>
     </div>
     <p class="hero-meta">300+ artists tracked &nbsp;·&nbsp; <span>Verified sources</span> &nbsp;·&nbsp; Zero data collection</p>
@@ -659,7 +684,7 @@
 <section class="cta-section">
     <h2>Try it free today</h2>
     <p>Join thousands of people who browse with more awareness.</p>
-    <a href="https://chrome.google.com/webstore/detail/artsiren" class="btn-chrome" style="margin: 0 auto;" onclick="gtag('event','extension_cta_bottom');">
+    <a href="https://chromewebstore.google.com/detail/artsiren/kpcaekjcohndlkipojidkfafaefblhhi" target="_blank" rel="noopener noreferrer" class="btn-chrome" style="margin: 0 auto;" onclick="if(window.gtag)gtag('event','install_click',{button_location:'bottom_cta'});">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.8"/>
             <circle cx="12" cy="12" r="4" fill="white"/>
@@ -667,8 +692,28 @@
         </svg>
         Add to Chrome — It's Free
     </a>
+    <div class="mobile-note" role="note">
+        <p class="mobile-note-title">ArtSiren works on desktop Chrome</p>
+        <p class="mobile-note-sub">Chrome extensions can't be installed on phones or tablets. Send yourself the link and install it from your computer.</p>
+        <div class="mobile-note-actions">
+            <button type="button" class="mobile-note-btn" onclick="copyInstallLink(this)">Copy link</button>
+            <a class="mobile-note-btn mobile-note-btn-ghost" href="mailto:?subject=Install%20ArtSiren%20on%20desktop%20Chrome&amp;body=Open%20this%20on%20your%20computer%3A%20https%3A%2F%2Fartsiren.co%2Fextension.html" onclick="if(window.gtag)gtag('event','mobile_link_share',{method:'email'});">Email me the link</a>
+        </div>
+    </div>
     <p style="margin-top: 1.2rem; font-size: 0.8rem; color: rgba(255,255,255,0.35);">Available for Chrome, Edge, and Brave</p>
 </section>
 
+<script>
+function copyInstallLink(btn) {
+    var url = 'https://artsiren.co/extension.html';
+    var done = function () { btn.textContent = 'Link copied!'; setTimeout(function () { btn.textContent = 'Copy link'; }, 2000); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, function () { window.prompt('Copy this link:', url); });
+    } else {
+        window.prompt('Copy this link:', url);
+    }
+    if (window.gtag) gtag('event', 'mobile_link_share', { method: 'copy' });
+}
+</script>
 </body>
 </html>

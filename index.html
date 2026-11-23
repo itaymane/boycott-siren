@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="./shared-nav.js?v=6"></script>
+    <script src="./shared-nav.js?v=7"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZRJ6TZY2Y"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -144,15 +144,6 @@
     }
     </script>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZRJ6TZY2Y"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XZRJ6TZY2Y');
-    </script>
-    
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2113,7 +2104,7 @@
 
             <!-- CTA button -->
             <div class="hero-cta">
-                <a href="https://chromewebstore.google.com/detail/artsiren/kpcaekjcohndlkipojidkfafaefblhhi" target="_blank" rel="noopener noreferrer" onclick="if(window.innerWidth<=640){event.preventDefault();installPWA();return false;}if(window.gtag)gtag('event','extension_download');" class="hero-cta-btn">
+                <a href="https://chromewebstore.google.com/detail/artsiren/kpcaekjcohndlkipojidkfafaefblhhi" target="_blank" rel="noopener noreferrer" onclick="if(window.innerWidth<=640){event.preventDefault();installPWA();return false;}if(window.gtag)gtag('event','install_click',{button_location:'hero'});" class="hero-cta-btn">
                     <img src="https://media.base44.com/images/public/6a3256d03c8df239cec9d212/792cde80b_Group44.png" alt="" class="hero-cta-icon">
                     <span class="cta-desktop">Add to Chrome</span>
                     <span class="cta-mobile">Get the App</span>
@@ -2806,7 +2797,7 @@
             
             // Track artist modal view
             if (typeof gtag !== 'undefined') {
-                gtag('event', 'view_artist', {
+                gtag('event', 'artist_view', {
                     artist_name: artist.name,
                     artist_stance: artist.stance,
                     artist_category: artist.category
@@ -2945,16 +2936,6 @@
         });
 
         // Analytics tracking functions
-        function trackExtensionDownload() {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'download_extension', {
-                    event_category: 'Extension',
-                    event_label: 'Chrome Extension Download',
-                    value: 1
-                });
-            }
-        }
-        
         function trackFilterClick(filterType) {
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'filter_click', {
@@ -2966,7 +2947,7 @@
         
         function trackSearch(searchTerm) {
             if (typeof gtag !== 'undefined' && searchTerm.length > 2) {
-                gtag('event', 'search', {
+                gtag('event', 'artist_search', {
                     search_term: searchTerm
                 });
             }
@@ -3173,7 +3154,7 @@
                     body: JSON.stringify(payload)
                 });
                 if (!res.ok) throw new Error('Webhook returned ' + res.status);
-                gtag('event', 'contact_submit', { category: fd.get('category') });
+                if (window.gtag) gtag('event', 'contact_submit', { topic: fd.get('category'), category: fd.get('category') });
                 document.getElementById('contactForm').style.display = 'none';
                 document.getElementById('contactSuccess').style.display = 'block';
                 setTimeout(closeContact, 3000);

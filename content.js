@@ -821,7 +821,7 @@
         overlay.className = 'boycott-floating-alert';
         overlay.setAttribute('data-artist', artist.name);
 
-        const sourcesUrl = `https://artsiren.co/?artist=${encodeURIComponent(artist.name)}`;
+        const sourcesUrl = `https://artsiren.co/?artist=${encodeURIComponent(artist.name)}&utm_source=extension&utm_medium=alert`;
         const isWelcome = artist.stance === 'welcome';
         const dotColor = isWelcome ? '#22C55E' : '#FF4444';
         overlay.innerHTML = `
@@ -982,7 +982,7 @@
         `;
         badge.addEventListener('click', (e) => {
             e.stopPropagation();
-            window.open('https://artsiren.co/?artist=' + encodeURIComponent(artist.name), '_blank', 'noopener');
+            window.open('https://artsiren.co/?artist=' + encodeURIComponent(artist.name) + '&utm_source=extension&utm_medium=youtube_badge', '_blank', 'noopener');
         });
         ownerEl.insertAdjacentElement('afterend', badge);
     }
