@@ -591,25 +591,25 @@ const artistsData = [
     stance: 'boycott',
     name: "Olivia Colman",
     level: "LOW",
-    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
+    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
   },
   {
     stance: 'boycott',
     name: "Javier Bardem",
     level: "HIGH",
-    statement: "Co-signed a 2014 open letter with Penélope Cruz calling the region's military offensive in Gaza 'genocide'; explicitly criticized regional 'state terrorism'; faced backlash from the Academy but stood by the statement",
+    statement: "Co-signed a 2014 open letter with Penélope Cruz calling the region's military offensive in Gaza 'genocide'; explicitly criticized regional 'state terrorism'; faced backlash from the Academy but stood by the statement. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
   },
   {
     stance: 'boycott',
     name: "Mark Ruffalo",
     level: "HIGH",
-    statement: "Has explicitly called the region an apartheid state; signed open letters; used his significant social media platform to call for accountability for regional engagementi military actions in Gaza; faced industry backlash for his statements",
+    statement: "Has explicitly called the region an apartheid state; signed open letters; used his significant social media platform to call for accountability for regional engagementi military actions in Gaza; faced industry backlash for his statements. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
   },
   {
     stance: 'boycott',
@@ -623,25 +623,25 @@ const artistsData = [
     stance: 'boycott',
     name: "Riz Ahmed",
     level: "LOW",
-    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
+    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
   },
   {
     stance: 'boycott',
     name: "Miriam Margolyes",
     level: "LOW",
-    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
+    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.thewrap.com/film-industry-pledge-end-complicity-israel-palestine-genocide-gaza">TheWrap</a>`
   },
   {
     stance: 'boycott',
     name: "Tilda Swinton",
     level: "HIGH",
-    statement: "Has signed multiple Artists for Palestine UK letters explicitly calling out regional policies; among the most senior British actors to publicly condemn regional military actions",
+    statement: "Has signed multiple Artists for Palestine UK letters explicitly calling out regional policies; among the most senior British actors to publicly condemn regional military actions. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
   },
   {
     stance: 'boycott',
@@ -655,17 +655,17 @@ const artistsData = [
     stance: 'boycott',
     name: "Maxine Peake",
     level: "LOW",
-    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
+    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
   },
   {
     stance: 'boycott',
     name: "Susan Sarandon",
     level: "LOW",
-    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
+    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.thewrap.com/film-industry-pledge-end-complicity-israel-palestine-genocide-gaza">TheWrap</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
   },
   {
     stance: 'boycott',
@@ -695,9 +695,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Cynthia Nixon",
     level: "LOW",
-    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
+    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a>`
   },
   {
     stance: 'boycott',
@@ -743,9 +743,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Paapa Essiedu",
     level: "LOW",
-    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
+    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
   },
   {
     stance: 'boycott',
@@ -759,9 +759,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Joe Alwyn",
     level: "LOW",
-    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
+    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a> | <a href="https://www.jpost.com/bds-threat/article-866820">Jerusalem Post</a>`
   },
   {
     stance: 'boycott',
@@ -799,17 +799,17 @@ const artistsData = [
     stance: 'boycott',
     name: "Ken Loach",
     level: "CRITICAL",
-    statement: "British director and lifelong BDS advocate; has organised multiple boycott campaigns against regional cultural institutions; signed countless open letters; co-founded organisations supporting the cultural boycott; among the most publicly committed cultural figures in the BDS movement",
+    statement: "British director and lifelong BDS advocate; has organised multiple boycott campaigns against regional cultural institutions; signed countless open letters; co-founded organisations supporting the cultural boycott; among the most publicly committed cultural figures in the BDS movement. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://www.jta.org/2017/07/19/arts-entertainment/director-ken-loach-vows-every-penny-his-new-film-makes-in-israel-will-go-to-palestinians">JTA</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://www.jta.org/2017/07/19/arts-entertainment/director-ken-loach-vows-every-penny-his-new-film-makes-in-israel-will-go-to-palestinians">JTA</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
   },
   {
     stance: 'boycott',
     name: "Mike Leigh",
     level: "HIGH",
-    statement: "Vocal supporter of the cultural boycott",
+    statement: "Vocal supporter of the cultural boycott. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://www.haaretz.com/2010-10-17/ty-article/british-director-mike-leigh-cancels-israel-trip-to-protest-loyalty-oath/0000017f-db92-df62-a9ff-dfd7fb3f0000">Haaretz</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://www.haaretz.com/2010-10-17/ty-article/british-director-mike-leigh-cancels-israel-trip-to-protest-loyalty-oath/0000017f-db92-df62-a9ff-dfd7fb3f0000">Haaretz</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
   },
   {
     stance: 'boycott',
@@ -817,7 +817,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Vocal supporter of the cultural boycott",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a>`
   },
   {
     stance: 'boycott',
@@ -903,9 +903,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Boots Riley",
     level: "CRITICAL",
-    statement: "The Coup frontman, director, supports BDS",
+    statement: "The Coup frontman, director, supports BDS. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://jacobin.com/2023/11/boots-riley-hollywood-gaza-class-struggle-wga-art/">Jacobin</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
+    sources: `<a href="https://jacobin.com/2023/11/boots-riley-hollywood-gaza-class-struggle-wga-art/">Jacobin</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a>`
   },
   {
     stance: 'boycott',
@@ -1473,7 +1473,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed Film Workers for Palestine pledge (September 2025) to join the cultural boycotti film institutions implicated in genocide and apartheid",
 
-    sources: `<a href="https://www.justjared.com/2025/09/25/5000-stars-have-now-joined-pledge-to-boycott-israeli-film-institutions-including-toni-collette-andrew-garfield-more/">Just Jared</a> | <a href="https://www.thewrap.com/film-industry-pledge-end-complicity-israel-palestine-genocide-gaza/">The Wrap</a>`
+    sources: `<a href="https://www.justjared.com/2025/09/25/5000-stars-have-now-joined-pledge-to-boycott-israeli-film-institutions-including-toni-collette-andrew-garfield-more/">Just Jared</a> | <a href="https://www.thewrap.com/film-industry-pledge-end-complicity-israel-palestine-genocide-gaza/">The Wrap</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a>`
   },
   {
     stance: 'boycott',
@@ -1497,7 +1497,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed Film Workers for Palestine pledge (September 2025) to join the cultural boycotti film institutions implicated in genocide and apartheid",
 
-    sources: `<a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a> | <a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Film Workers for Palestine</a>`
+    sources: `<a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a> | <a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Film Workers for Palestine</a> | <a href="https://www.thewrap.com/film-industry-pledge-end-complicity-israel-palestine-genocide-gaza">TheWrap</a>`
   },
   {
     stance: 'boycott',
@@ -1505,7 +1505,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed Film Workers for Palestine pledge (September 2025) to join the cultural boycotti film institutions implicated in genocide and apartheid",
 
-    sources: `<a href="https://www.thepinknews.com/2025/09/11/israeli-film-industry-boycott-elliot-page-joe-locke/">PinkNews</a> | <a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a>`
+    sources: `<a href="https://www.thepinknews.com/2025/09/11/israeli-film-industry-boycott-elliot-page-joe-locke/">PinkNews</a> | <a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a>`
   },
   {
     stance: 'boycott',
@@ -1545,7 +1545,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Among the initial signatories of Film Workers for Palestine pledge (September 8, 2025) to join the cultural boycotti film institutions implicated in genocide and apartheid",
 
-    sources: `<a href="https://deadline.com/2025/09/film-workers-for-palestine-ava-duvernay-olivia-colman-1236511823/">Deadline</a> | <a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Film Workers for Palestine</a>`
+    sources: `<a href="https://deadline.com/2025/09/film-workers-for-palestine-ava-duvernay-olivia-colman-1236511823/">Deadline</a> | <a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Film Workers for Palestine</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
   },
   {
     stance: 'boycott',
@@ -1553,7 +1553,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Among the initial signatories of Film Workers for Palestine pledge (September 8, 2025) to join the cultural boycotti film institutions implicated in genocide and apartheid; previously signed open letters calling for an end to the regioni military operations",
 
-    sources: `<a href="https://www.jta.org/2025/09/08/culture/gael-garcia-bernal-ilana-glazer-ayo-edebiri-among-hollywood-a-listers-pledging-to-boycott-israeli-film-institutions">JTA</a> | <a href="https://forward.com/fast-forward/767539/gael-garcia-bernal-ilana-glazer-ayo-edebiri-among-hollywood-a-listers-pledging-to-boycott-israeli-film-institutions/">Forward</a>`
+    sources: `<a href="https://www.jta.org/2025/09/08/culture/gael-garcia-bernal-ilana-glazer-ayo-edebiri-among-hollywood-a-listers-pledging-to-boycott-israeli-film-institutions">JTA</a> | <a href="https://forward.com/fast-forward/767539/gael-garcia-bernal-ilana-glazer-ayo-edebiri-among-hollywood-a-listers-pledging-to-boycott-israeli-film-institutions/">Forward</a> | <a href="https://www.thewrap.com/film-industry-pledge-end-complicity-israel-palestine-genocide-gaza">TheWrap</a> | <a href="https://www.jpost.com/bds-threat/article-866820">Jerusalem Post</a>`
   },
   {
     stance: 'boycott',
@@ -1785,7 +1785,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed the Film Workers for Palestine pledge (September 2025) as a notable initial signatory, refusing to work with regional film institutions complicit in genocide; documentarian known for The Act of Killing and The Look of Silence.",
 
-    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://www.hollywoodreporter.com/movies/movie-news/ayo-edebiri-mark-ruffalo-boycott-israeli-film-institutions-1236364989/">Hollywood Reporter</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://www.hollywoodreporter.com/movies/movie-news/ayo-edebiri-mark-ruffalo-boycott-israeli-film-institutions-1236364989/">Hollywood Reporter</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a>`
   },
   {
     stance: 'boycott',
@@ -1793,7 +1793,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed the Film Workers for Palestine pledge (September 2025) refusing to work with regional film institutions complicit in genocide; Indian director of All We Imagine as Light, winner of the Grand Prix at Cannes 2024.",
 
-    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a> | <a href="https://www.thewrap.com/film-industry-pledge-end-complicity-israel-palestine-genocide-gaza">TheWrap</a>`
   },
   {
     stance: 'boycott',
@@ -1801,7 +1801,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed the Film Workers for Palestine pledge (September 2025), pledging not to work with regional film institutions complicit in genocide; BAFTA-winning English actor known for The Crown, Challengers and La Chimera.",
 
-    sources: `<a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a> | <a href="https://www.thepinknews.com/2025/09/09/ayo-edebiri-olivia-coleman-josh-oconnor-israel-film-boycott/">PinkNews</a>`
+    sources: `<a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a> | <a href="https://www.thepinknews.com/2025/09/09/ayo-edebiri-olivia-coleman-josh-oconnor-israel-film-boycott/">PinkNews</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a>`
   },
   {
     stance: 'boycott',
@@ -1809,7 +1809,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed the Film Workers for Palestine pledge (September 2025), pledging not to work with regional film institutions complicit in genocide; SNL cast member and comedian best known for his breakout role on Saturday Night Live.",
 
-    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a>`
   },
   {
     stance: 'boycott',
@@ -1817,7 +1817,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed the Film Workers for Palestine pledge (September 2025), pledging not to work with regional film institutions complicit in genocide; known for their acclaimed role as Rhaenyra Targaryen in House of the Dragon.",
 
-    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a> | <a href="https://www.thewrap.com/film-industry-pledge-end-complicity-israel-palestine-genocide-gaza">TheWrap</a>`
   },
   {
     stance: 'boycott',
@@ -1825,7 +1825,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed the Film Workers for Palestine pledge (September 2025), pledging not to work with regional film institutions complicit in genocide; Australian actor known for Memento, L.A. Confidential and Iron Man 3.",
 
-    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://variety.com/2025/film/global/stars-sign-pledge-complicit-israeli-film-companies-1236511010/">Variety</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a>`
   },
   {
     stance: 'boycott',
@@ -1833,7 +1833,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed the Film Workers for Palestine pledge (September 2025) as a notable initial signatory, refusing to work with regional film institutions complicit in genocide; English actress known for Sex Education and The White Lotus.",
 
-    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://www.thewrap.com/film-industry-pledge-end-complicity-israel-palestine-genocide-gaza">TheWrap</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
   },
   {
     stance: 'boycott',
@@ -1849,7 +1849,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Jewish actor who signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions complicit in genocide; known for playing Richie Jerimovich in FX's The Bear.",
 
-    sources: `<a href="https://deadline.com/2025/09/film-workers-for-palestine-ava-duvernay-olivia-colman-1236511823/">Deadline</a> | <a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a>`
+    sources: `<a href="https://deadline.com/2025/09/film-workers-for-palestine-ava-duvernay-olivia-colman-1236511823/">Deadline</a> | <a href="https://en.wikipedia.org/wiki/Film_Workers_for_Palestine">Wikipedia – Film Workers for Palestine</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a>`
   },
   {
     stance: 'boycott',
@@ -2135,37 +2135,37 @@ const artistsData = [
     stance: 'welcome',
     name: "Amy Schumer",
     statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and opposing cultural boycotts.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.kveller.com/helen-mirren-amy-schumer-liev-schreiber-and-others-sign-open-letter-in-support-of-israels-inclusion-in-the-eurovision/">Kveller – Open Letter Coverage</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.kveller.com/helen-mirren-amy-schumer-liev-schreiber-and-others-sign-open-letter-in-support-of-israels-inclusion-in-the-eurovision/">Kveller – Open Letter Coverage</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a> | <a href="https://www.jpost.com/israel-news/culture/article-893424">Jerusalem Post</a>`
   },
   {
     stance: 'welcome',
     name: "Mila Kunis",
     statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and opposing cultural boycotts.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.kveller.com/helen-mirren-amy-schumer-liev-schreiber-and-others-sign-open-letter-in-support-of-israels-inclusion-in-the-eurovision/">Kveller – Open Letter Coverage</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.kveller.com/helen-mirren-amy-schumer-liev-schreiber-and-others-sign-open-letter-in-support-of-israels-inclusion-in-the-eurovision/">Kveller – Open Letter Coverage</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a> | <a href="https://www.jpost.com/israel-news/culture/article-893424">Jerusalem Post</a>`
   },
   {
     stance: 'welcome',
     name: "Sharon Osbourne",
     statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and opposing cultural boycotts.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a> | <a href="https://www.jpost.com/israel-news/culture/article-893424">Jerusalem Post</a>`
   },
   {
     stance: 'welcome',
     name: "Emmy Rossum",
     statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and opposing cultural boycotts.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://variety.com/2024/music/global/israel-eurovision-open-letter-scooter-braun-1235910561/">Variety</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://variety.com/2024/music/global/israel-eurovision-open-letter-scooter-braun-1235910561/">Variety</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a>`
   },
   {
     stance: 'welcome',
     name: "Patricia Heaton",
     statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026. She has also visited Israel and spoken about how her faith drew her to support the Jewish people.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.jpost.com/j-spot/article-872913">Jerusalem Post</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.jpost.com/j-spot/article-872913">Jerusalem Post</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a>`
   },
   {
     stance: 'welcome',
     name: "Diane Warren",
     statement: "Grammy-winning songwriter who signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and opposing cultural boycotts.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.thewrap.com/david-mamet-diane-warren-and-debra-messing-among-oppose-israel-boycotts-in-open-letter/">TheWrap</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.thewrap.com/david-mamet-diane-warren-and-debra-messing-among-oppose-israel-boycotts-in-open-letter/">TheWrap</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a> | <a href="https://www.jpost.com/israel-news/culture/article-893424">Jerusalem Post</a>`
   },
   {
     stance: 'welcome',
@@ -2177,55 +2177,55 @@ const artistsData = [
     stance: 'welcome',
     name: "Selma Blair",
     statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and has declared her support for Israel and called for the release of Hamas-held hostages.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.thewrap.com/selma-blair-israel-hostages/">TheWrap</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.thewrap.com/selma-blair-israel-hostages/">TheWrap</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a> | <a href="https://www.jpost.com/israel-news/culture/article-893424">Jerusalem Post</a>`
   },
   {
     stance: 'welcome',
     name: "Ginnifer Goodwin",
     statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026. She has also publicly explained that the slogan \"Globalize the Intifada\" is a call for violence against Jews.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.ajc.org/news/actress-ginnifer-goodwin-explains-how-globalize-the-intifada-is-a-call-for-violence">American Jewish Committee</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.ajc.org/news/actress-ginnifer-goodwin-explains-how-globalize-the-intifada-is-a-call-for-violence">American Jewish Committee</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a> | <a href="https://www.jpost.com/israel-news/culture/article-893424">Jerusalem Post</a>`
   },
   {
     stance: 'welcome',
     name: "Jeremy Piven",
     statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026. He has visited Israel and underwent a bar mitzvah ceremony in Jerusalem, describing it as a transformative experience.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.thejc.com/news/world/i-am-a-man-again-says-jeremy-piven-after-israel-barmitzvah-lqrmf20l">The Jewish Chronicle</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.thejc.com/news/world/i-am-a-man-again-says-jeremy-piven-after-israel-barmitzvah-lqrmf20l">The Jewish Chronicle</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a> | <a href="https://www.jpost.com/israel-news/culture/article-893424">Jerusalem Post</a>`
   },
   {
     stance: 'welcome',
     name: "Joshua Malina",
     statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026. He has been a lifelong vocal supporter of Israel and works with Jewish advocacy organisations.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://jewishinsider.com/2022/01/joshua-malina-speaks-out/">Jewish Insider</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://jewishinsider.com/2022/01/joshua-malina-speaks-out/">Jewish Insider</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a> | <a href="https://www.jpost.com/israel-news/culture/article-893424">Jerusalem Post</a>`
   },
   {
     stance: 'welcome',
     name: "Matisyahu",
     statement: "Jewish reggae musician and a major target of BDS activists. In 2015 he was removed from the Rototom Sunsplash festival in Spain due to BDS pressure, but was reinstated following an international outcry and performed his anthem 'Jerusalem' to a massive crowd — one of the most high-profile defeats of BDS cultural pressure. He also signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.jta.org/2015/08/23/culture/matisyahu-performs-jerusalem-in-spain-amid-palestinian-protests">Jewish Telegraphic Agency</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.jta.org/2015/08/23/culture/matisyahu-performs-jerusalem-in-spain-amid-palestinian-protests">Jewish Telegraphic Agency</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a> | <a href="https://www.jpost.com/israel-news/culture/article-893424">Jerusalem Post</a>`
   },
   {
     stance: 'welcome',
     name: "Tracy-Ann Oberman",
     statement: "British actress who has become one of the UK's most prominent public voices against antisemitism. She signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and has reclaimed 'The Merchant of Venice' as a statement against antisemitism.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://rudermanfoundation.org/podcasts/tracy-ann-oberman-unabashedly-fighting-antisemitism-and-reclaiming-the-merchant-of-venice/">Ruderman Foundation</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://rudermanfoundation.org/podcasts/tracy-ann-oberman-unabashedly-fighting-antisemitism-and-reclaiming-the-merchant-of-venice/">Ruderman Foundation</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a>`
   },
   {
     stance: 'welcome',
     name: "Dame Maureen Lipman",
     statement: "British actress and one of the UK's most outspoken public defenders of Israel and the Jewish community. Following October 7, 2023, she urged Jews to \"stand proud and speak out\" against rising antisemitism and signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.thejc.com/community/stand-proud-and-speak-out-says-dame-maureen-lipman-tm8sucsn">The Jewish Chronicle</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.thejc.com/community/stand-proud-and-speak-out-says-dame-maureen-lipman-tm8sucsn">The Jewish Chronicle</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a>`
   },
   {
     stance: 'welcome',
     name: "Anthony Edwards",
     statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and was among over 1,200 entertainment figures who signed a letter opposing boycotts of Israeli film institutions.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.israelhayom.com/2025/09/25/hollywood-stars-sign-pro-israel-petition/">Israel Hayom</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.israelhayom.com/2025/09/25/hollywood-stars-sign-pro-israel-petition/">Israel Hayom</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a>`
   },
   {
     stance: 'welcome',
     name: "Gregg Sulkin",
     statement: "British-Jewish actor who has stated \"I am very proud to be Jewish and love Israel.\" He had his bar mitzvah in Jerusalem, has spoken publicly about fighting antisemitism, and signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.thejc.com/life/gregg-sulkin-my-jerusalem-bar-mitzvah-was-the-best-day-of-my-life-ke5ofb93">The Jewish Chronicle</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.thejc.com/life/gregg-sulkin-my-jerusalem-bar-mitzvah-was-the-best-day-of-my-life-ke5ofb93">The Jewish Chronicle</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a>`
   },
   {
     stance: 'welcome',
