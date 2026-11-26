@@ -671,9 +671,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Danny Glover",
     level: "LOW",
-    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
+    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott. Has publicly called for a cultural boycott of Israel, including urging filmmakers to withdraw from a Tel Aviv film festival.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.timesofisrael.com/danny-glover-pushes-for-tel-aviv-festival-boycott/">Times of Israel</a> | <a href="https://www.haaretz.com/life/television/danny-glover-calls-for-boycott-of-israel-1.5248179">Haaretz</a>`
   },
   {
     stance: 'boycott',
@@ -713,7 +713,7 @@ const artistsData = [
     level: "LOW",
     statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.ynetnews.com/article/3790720">Ynet</a>`
   },
   {
     stance: 'boycott',
@@ -897,7 +897,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Public Enemy frontman, supports BDS",
 
-    sources: `<a href="https://www.amostrust.org/palestine-justice/change-the-record/cultural-boycott/">Amos Trust</a>`
+    sources: `<a href="https://www.amostrust.org/palestine-justice/change-the-record/cultural-boycott/">Amos Trust</a> | <a href="https://www.billboard.com/music/rb-hip-hop/chuck-d-defends-bob-vylan-glastonbury-set-1236015827/">Billboard</a>`
   },
   {
     stance: 'boycott',
@@ -1695,9 +1695,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Lankum",
     level: "CRITICAL",
-    statement: "Signed No Music for Genocide (September 2025), geo-blocking all music from regional streaming services; Irish folk band known for transformative albums 'Between the Earth and Sky' and 'False Lankum'.",
+    statement: "Signed No Music for Genocide (September 2025), geo-blocking all music from regional streaming services; Irish folk band known for transformative albums 'Between the Earth and Sky' and 'False Lankum'. In 2023 a Leipzig venue cancelled their concert over the band's pro-Palestinian stance.",
 
-    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott">NPR</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a> | <a href="https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott">NPR</a> | <a href="https://www.irishtimes.com/culture/music/2023/11/25/lankum-cancellation-in-leipzig-highlights-german-minefield-on-israel/">Irish Times</a>`
   },
   {
     stance: 'boycott',
@@ -2015,7 +2015,7 @@ const artistsData = [
     stance: 'welcome',
     name: "Howard Jacobson",
     statement: "Booker Prize-winning British novelist who has written extensively against BDS and the cultural boycott of Israel. He has argued that academics boycotting Israeli universities are committing \"intellectual violence\" against themselves and that antisemites hide behind Israel criticism.",
-    sources: `<a href="https://www.timesofisrael.com/anti-semites-shielded-by-israel-criticism/">Times of Israel</a> | <a href="https://www.tabletmag.com/sections/arts-letters/articles/a-polite-hatred-1-jacobson">Tablet Magazine</a> | <a href="https://spme.org/spme-research/letters-from-our-readers/howard-jacobson-those-who-boycott-israeli-universities-are-doing-intellectual-violence-to-themselves/3521/">SPME</a>`
+    sources: `<a href="https://www.timesofisrael.com/anti-semites-shielded-by-israel-criticism/">Times of Israel</a> | <a href="https://www.tabletmag.com/sections/arts-letters/articles/a-polite-hatred-1-jacobson">Tablet Magazine</a> | <a href="https://spme.org/spme-research/letters-from-our-readers/howard-jacobson-those-who-boycott-israeli-universities-are-doing-intellectual-violence-to-themselves/3521/">SPME</a> | <a href="https://www.thejc.com/news/sir-simon-schama-simon-sebag-montefiore-and-howard-jacobson-lead-1-000-intellectuals-in-open-letter-against-boycott-of-israel-e52engk8">The JC</a>`
   },
   {
     stance: 'welcome',
@@ -2026,14 +2026,14 @@ const artistsData = [
   {
     stance: 'welcome',
     name: "Elfriede Jelinek",
-    statement: "Nobel Prize-winning Austrian author who signed a Creative Community for Peace letter rejecting the cultural boycott of Israel alongside over 1,000 other artists and entertainment figures, despite her own leftist political background.",
-    sources: `<a href="https://www.jpost.com/bds-threat/article-826896">Jerusalem Post</a> | <a href="https://lithub.com/hundreds-of-writers-and-entertainment-figures-sign-letter-rejecting-israel-boycott/">Literary Hub</a>`
+    statement: "Nobel Prize-winning Austrian author who signed a Creative Community for Peace letter rejecting the cultural boycott of Israel alongside over 1,000 other artists and entertainment figures, despite her own leftist political background. She has separately criticised regional 'land grabbing' in Gaza and the West Bank.",
+    sources: `<a href="https://www.jpost.com/bds-threat/article-826896">Jerusalem Post</a> | <a href="https://lithub.com/hundreds-of-writers-and-entertainment-figures-sign-letter-rejecting-israel-boycott/">Literary Hub</a> | <a href="https://www.timesofisrael.com/in-letter-over-1000-reject-attempts-to-boycott-scapegoat-jewish-and-israeli-authors/">Times of Israel</a>`
   },
   {
     stance: 'welcome',
     name: "Herta Müller",
     statement: "Nobel Prize-winning German-Romanian author who signed a Creative Community for Peace letter rejecting the cultural boycott of Israel. In a 2024 Haaretz interview she compared the Hamas October 7 attack to Holocaust imagery, drawing on her experience living under totalitarian regimes.",
-    sources: `<a href="https://www.haaretz.com/israel-news/2024-06-08/ty-article-magazine/.highlight/hamas-wanted-to-evoke-the-shoah-an-interview-with-nobel-winning-author-herta-muller/0000018f-edf4-d3f3-a7ff-fff482590000">Haaretz</a> | <a href="https://lithub.com/hundreds-of-writers-and-entertainment-figures-sign-letter-rejecting-israel-boycott/">Literary Hub</a>`
+    sources: `<a href="https://www.haaretz.com/israel-news/2024-06-08/ty-article-magazine/.highlight/hamas-wanted-to-evoke-the-shoah-an-interview-with-nobel-winning-author-herta-muller/0000018f-edf4-d3f3-a7ff-fff482590000">Haaretz</a> | <a href="https://lithub.com/hundreds-of-writers-and-entertainment-figures-sign-letter-rejecting-israel-boycott/">Literary Hub</a> | <a href="https://www.timesofisrael.com/in-letter-over-1000-reject-attempts-to-boycott-scapegoat-jewish-and-israeli-authors/">Times of Israel</a>`
   },
   {
     stance: 'welcome',
@@ -2123,7 +2123,7 @@ const artistsData = [
     stance: 'welcome',
     name: "Chris Pine",
     statement: "Signed the Creative Community for Peace statement rejecting the cultural boycott of Israel.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2023/10/12/israel-under-attack-open-letter/">Creative Community for Peace</a> | <a href="https://www.hollywoodreporter.com/news/general-news/celebrities-entertainment-executives-sign-open-letter-support-israel-1235617300/">The Hollywood Reporter</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2023/10/12/israel-under-attack-open-letter/">Creative Community for Peace</a> | <a href="https://www.hollywoodreporter.com/news/general-news/celebrities-entertainment-executives-sign-open-letter-support-israel-1235617300/">The Hollywood Reporter</a> | <a href="https://au.variety.com/2023/tv/news/hollywood-open-letter-israel-support-hamas-war-11491/">Variety</a>`
   },
   {
     stance: 'welcome',
@@ -2207,7 +2207,7 @@ const artistsData = [
     stance: 'welcome',
     name: "Tracy-Ann Oberman",
     statement: "British actress who has become one of the UK's most prominent public voices against antisemitism. She signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and has reclaimed 'The Merchant of Venice' as a statement against antisemitism.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://rudermanfoundation.org/podcasts/tracy-ann-oberman-unabashedly-fighting-antisemitism-and-reclaiming-the-merchant-of-venice/">Ruderman Foundation</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://rudermanfoundation.org/podcasts/tracy-ann-oberman-unabashedly-fighting-antisemitism-and-reclaiming-the-merchant-of-venice/">Ruderman Foundation</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a> | <a href="https://www.timesofisrael.com/police-secure-opening-night-of-london-play-after-jewish-actress-receives-threats/">Times of Israel</a>`
   },
   {
     stance: 'welcome',
@@ -2219,7 +2219,7 @@ const artistsData = [
     stance: 'welcome',
     name: "Anthony Edwards",
     statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and was among over 1,200 entertainment figures who signed a letter opposing boycotts of Israeli film institutions.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.israelhayom.com/2025/09/25/hollywood-stars-sign-pro-israel-petition/">Israel Hayom</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.israelhayom.com/2025/09/25/hollywood-stars-sign-pro-israel-petition/">Israel Hayom</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a> | <a href="https://www.timesofisrael.com/entertainment-figures-add-names-to-letter-rejecting-calls-to-kick-israel-out-of-eurovision/">Times of Israel</a>`
   },
   {
     stance: 'welcome',
@@ -2231,7 +2231,7 @@ const artistsData = [
     stance: 'welcome',
     name: "Noa Tishby",
     statement: "Israeli actress and author who wrote \"Israel: A Simple Guide to the Most Misunderstood Country on Earth\" (2021) and was appointed Israel's Special Envoy for Combating Antisemitism in 2021. She signed the Creative Community for Peace open letter opposing the cultural boycott of Israeli artists in film.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2025/09/24/filmopenletter/">Creative Community for Peace – Film Open Letter 2025</a> | <a href="https://www.timesofisrael.com/noa-tishby-booted-as-antisemitism-envoy-after-criticizing-overhaul/">Times of Israel</a> | <a href="https://jewishjournal.com/israel/357631/noa-tishby-dismissed-as-special-envoy-on-antisemitism/">Jewish Journal</a>`
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2025/09/24/filmopenletter/">Creative Community for Peace – Film Open Letter 2025</a> | <a href="https://www.timesofisrael.com/noa-tishby-booted-as-antisemitism-envoy-after-criticizing-overhaul/">Times of Israel</a> | <a href="https://jewishjournal.com/israel/357631/noa-tishby-dismissed-as-special-envoy-on-antisemitism/">Jewish Journal</a> | <a href="https://www.jpost.com/diaspora/antisemitism/article-703859">Jerusalem Post</a>`
   },
   {
     stance: 'welcome',
@@ -2303,7 +2303,7 @@ const artistsData = [
     level: "HIGH",
     statement: "Irish folk band that played as Ed Sheeran's backing band; quit the rest of his US Loop Tour in September 2026 after Macklemore was removed over his 'Free Palestine' remarks, saying 'we are Irish people who understand colonialism' and describing themselves as 'founding members of the Irish Artists for Palestine movement' and 'committed activists for justice'. The band later said 'Free Palestine' on RTÉ's The Late Late Show.",
 
-    sources: `<a href="https://www.itv.com/news/utv/2026-09-16/beoga-quit-sheeran-tour">ITV News</a> | <a href="https://www.newarab.com/news/supporting-acts-band-quit-ed-sheerans-tour-over-palestine">The New Arab</a> | <a href="https://www.ibtimes.co.uk/beoga-withdrawal-ed-sheeran-tour-macklemore-dispute-1827541">IBTimes UK</a>`
+    sources: `<a href="https://www.itv.com/news/utv/2026-09-16/beoga-quit-sheeran-tour">ITV News</a> | <a href="https://www.newarab.com/news/supporting-acts-band-quit-ed-sheerans-tour-over-palestine">The New Arab</a> | <a href="https://www.ibtimes.co.uk/beoga-withdrawal-ed-sheeran-tour-macklemore-dispute-1827541">IBTimes UK</a> | <a href="https://www.irishtimes.com/culture/music/2026/09/15/irish-acts-aaron-rowe-and-beoga-quit-ed-sheerans-us-tour-in-protest-over-palestine/">Irish Times</a> | <a href="https://www.rte.ie/entertainment/2026/0915/1591691-irish-acts-exit-ed-sheeran-tour-as-they-back-macklemore/">RTÉ</a>`
   },
   {
     stance: 'boycott',
