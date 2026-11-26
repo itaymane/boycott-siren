@@ -73,7 +73,7 @@ const artistsData = [
     level: "HIGH",
     statement: "Repeatedly used the chant 'From the River to the Sea, Palestine will be free' at her shows and publicly defended doing so; stated her family received threats over her support for Gaza; among the most outspoken British artists condemning military actions",
 
-    sources: `<a href="https://www.nme.com/news/music/charlotte-church-defends-use-of-pro-palestinian-river-to-the-sea-chant-at-show-3593172">NME</a> | <a href="https://www.nme.com/news/music/charlotte-church-says-her-family-have-been-threatened-by-some-pretty-scary-people-over-support-of-gaza-3600203">NME (threats)</a>`
+    sources: `<a href="https://www.nme.com/news/music/charlotte-church-defends-use-of-pro-palestinian-river-to-the-sea-chant-at-show-3593172">NME</a> | <a href="https://www.nme.com/news/music/charlotte-church-says-her-family-have-been-threatened-by-some-pretty-scary-people-over-support-of-gaza-3600203">NME (threats)</a> | <a href="https://www.jpost.com/diaspora/antisemitism/article-791953">Jerusalem Post</a>`
   },
   {
     stance: 'boycott',
@@ -599,7 +599,7 @@ const artistsData = [
     stance: 'boycott',
     name: "Javier Bardem",
     level: "HIGH",
-    statement: "Co-signed a 2014 open letter with Penélope Cruz calling the region's military offensive in Gaza 'genocide'; explicitly criticized regional 'state terrorism'; faced backlash from the Academy but stood by the statement. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
+    statement: "Co-signed a 2014 open letter with Penélope Cruz calling the region's military offensive in Gaza 'genocide'; explicitly criticized regional 'state terrorism'; after the backlash he clarified that he was critical of the military response but had great respect for the people of Israel. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
     sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-stars-thousands-pledge-not-work-israeli-film-institutions-rcna230463">NBC News</a> | <a href="https://www.screendaily.com/news/olivia-colman-yorgos-lanthimos-among-1300-signatories-of-pledge-against-working-with-israeli-film-institutions-complicit-in-genocide/5208694.article">Screen Daily</a>`
   },
@@ -679,9 +679,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Penélope Cruz",
     level: "HIGH",
-    statement: "Co-signed a 2014 open letter with Javier Bardem calling the region's military offensive in Gaza 'genocide' and a 'war of occupation and siege'; faced industry backlash but did not retract the letter",
+    statement: "Co-signed a 2014 open letter with Javier Bardem calling the region's military offensive in Gaza 'genocide' and a 'war of occupation and siege'; faced industry backlash but did not retract the letter. After the backlash she clarified that she was aware of the complexity of the conflict.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.hollywoodreporter.com/movies/movie-news/penelope-cruz-javier-bardem-denounce-721894/">Hollywood Reporter</a> | <a href="https://www.haaretz.com/israel-news/culture/2014-07-29/ty-article/spanish-stars-blast-israel-on-gaza/0000017f-e560-d97e-a37f-f765c7eb0000">Haaretz</a>`
   },
   {
     stance: 'boycott',
@@ -849,7 +849,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Swedish pop star, supports BDS",
 
-    sources: `<a href="https://djmag.com/news/robyn-dj-seinfeld-fever-ray-more-swedish-artists-call-israel-ban-eurovision-2024">DJ Mag</a> | <a href="https://www.newarab.com/news/swedish-musicians-call-israels-eurovision-exclusion">New Arab</a>`
+    sources: `<a href="https://djmag.com/news/robyn-dj-seinfeld-fever-ray-more-swedish-artists-call-israel-ban-eurovision-2024">DJ Mag</a> | <a href="https://www.newarab.com/news/swedish-musicians-call-israels-eurovision-exclusion">New Arab</a> | <a href="https://www.ynetnews.com/culture/article/s1lztc85p">Ynet</a> | <a href="https://stereogum.com/2249679/robyn-fever-ray-viagra-boys-a-thousand-more-swedish-artists-call-for-israels-exclusion-from-eurovision-2024/news">Stereogum</a>`
   },
   {
     stance: 'boycott',
@@ -871,9 +871,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Refused",
     level: "CRITICAL",
-    statement: "Swedish hardcore band, supports BDS",
+    statement: "Swedish hardcore band, supports BDS. Also signed the January 2024 open letter by Swedish musicians calling for Israel's exclusion from Eurovision.",
 
-    sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a> | <a href="https://www.nme.com/news/music/refused-explain-decision-not-to-boycott-festivals-backed-by-kkr-investment-firm-3866377">NME</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a> | <a href="https://www.nme.com/news/music/refused-explain-decision-not-to-boycott-festivals-backed-by-kkr-investment-firm-3866377">NME</a> | <a href="https://stereogum.com/2249679/robyn-fever-ray-viagra-boys-a-thousand-more-swedish-artists-call-for-israels-exclusion-from-eurovision-2024/news">Stereogum</a>`
   },
   {
     stance: 'boycott',
@@ -881,7 +881,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Late poet and musician, supported BDS",
 
-    sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a> | <a href="https://www.newsweek.com/celebrities-refuse-perform-israel-1844673">Newsweek</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia</a> | <a href="https://www.newsweek.com/celebrities-refuse-perform-israel-1844673">Newsweek</a> | <a href="https://jewishchronicle.timesofisrael.com/boycott-targets-stars-from-elvis-to-elton/">Times of Israel</a>`
   },
   {
     stance: 'boycott',
@@ -943,9 +943,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Arundhati Roy",
     level: "CRITICAL",
-    statement: "Booker Prize winner, supports cultural boycott",
+    statement: "Booker Prize winner, supports cultural boycott. Signed the October 2024 'Refusing Complicity' letter, in which thousands of writers pledged to boycott regional cultural institutions.",
 
-    sources: `<a href="https://www.aljazeera.com/news/2026/2/14/arundhati-roy-shocked-by-jurys-gaza-remarks-quits-berlin-film-festival">Al Jazeera</a> | <a href="https://www.commondreams.org/news/arundhati-roy-israel">Common Dreams</a>`
+    sources: `<a href="https://www.aljazeera.com/news/2026/2/14/arundhati-roy-shocked-by-jurys-gaza-remarks-quits-berlin-film-festival">Al Jazeera</a> | <a href="https://www.commondreams.org/news/arundhati-roy-israel">Common Dreams</a> | <a href="https://www.ynetnews.com/culture/article/hjkvdwre1x">Ynet</a>`
   },
   {
     stance: 'boycott',
@@ -1377,7 +1377,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed No Music for Genocide open letter (April 2026) calling for the region's expulsion from Eurovision, stating they reject Eurovision being used to whitewash and normalise the region's genocide; appeared in Palestine Solidarity Campaign video explicitly saying It's a genocide",
 
-    sources: `<a href="https://www.nme.com/news/music/eurovision-2026-paul-weller-idles-massive-attack-paloma-faith-kneecap-primal-scream-sigur-ros-lead-1000-artists-calling-for-no-music-for-genocide-boycott-over-israel-3941533">NME</a> | <a href="https://www.musicradar.com/artists/shows-festivals/we-reject-eurovision-being-used-to-whitewash-and-normalise-israels-genocide-siege-and-brutal-military-occupation-against-palestinians-brian-eno-paul-weller-massive-attack-and-others-call-for-israel-to-be-kicked-out-of-eurovision">MusicRadar</a>`
+    sources: `<a href="https://www.nme.com/news/music/eurovision-2026-paul-weller-idles-massive-attack-paloma-faith-kneecap-primal-scream-sigur-ros-lead-1000-artists-calling-for-no-music-for-genocide-boycott-over-israel-3941533">NME</a> | <a href="https://www.musicradar.com/artists/shows-festivals/we-reject-eurovision-being-used-to-whitewash-and-normalise-israels-genocide-siege-and-brutal-military-occupation-against-palestinians-brian-eno-paul-weller-massive-attack-and-others-call-for-israel-to-be-kicked-out-of-eurovision">MusicRadar</a> | <a href="https://www.rte.ie/entertainment/2026/0421/1569404-kneecap-among-1-100-artists-urging-eurovision-boycott/">RTÉ</a>`
   },
   {
     stance: 'boycott',
@@ -1393,7 +1393,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed No Music for Genocide open letter (April 2026) calling for the region's ban from Eurovision; appeared in Palestine Solidarity Campaign video explicitly stating It's a genocide",
 
-    sources: `<a href="https://www.nme.com/news/music/eurovision-2026-paul-weller-idles-massive-attack-paloma-faith-kneecap-primal-scream-sigur-ros-lead-1000-artists-calling-for-no-music-for-genocide-boycott-over-israel-3941533">NME</a>`
+    sources: `<a href="https://www.nme.com/news/music/eurovision-2026-paul-weller-idles-massive-attack-paloma-faith-kneecap-primal-scream-sigur-ros-lead-1000-artists-calling-for-no-music-for-genocide-boycott-over-israel-3941533">NME</a> | <a href="https://www.rte.ie/entertainment/2026/0421/1569404-kneecap-among-1-100-artists-urging-eurovision-boycott/">RTÉ</a>`
   },
   {
     stance: 'boycott',
@@ -1561,7 +1561,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed Palestine Festival of Literature boycott letter (October 2024) pledging to join the cultural boycotti cultural institutions complicit in genocide, apartheid, and occupation",
 
-    sources: `<a href="https://www.timesofisrael.com/sally-rooney-among-1000-authors-urging-boycott-of-israeli-cultural-institutions/">Times of Israel</a> | <a href="https://lithub.com/hundreds-of-authors-pledge-to-boycott-israeli-cultural-institutions/">Literary Hub</a>`
+    sources: `<a href="https://www.timesofisrael.com/sally-rooney-among-1000-authors-urging-boycott-of-israeli-cultural-institutions/">Times of Israel</a> | <a href="https://lithub.com/hundreds-of-authors-pledge-to-boycott-israeli-cultural-institutions/">Literary Hub</a> | <a href="https://www.ynetnews.com/culture/article/hjkvdwre1x">Ynet</a>`
   },
   {
     stance: 'boycott',
@@ -1569,7 +1569,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Signed Palestine Festival of Literature boycott letter (October 2024) pledging to join the cultural boycotti cultural institutions complicit in genocide, apartheid, and occupation",
 
-    sources: `<a href="https://lithub.com/hundreds-of-authors-pledge-to-boycott-israeli-cultural-institutions/">Literary Hub</a>`
+    sources: `<a href="https://lithub.com/hundreds-of-authors-pledge-to-boycott-israeli-cultural-institutions/">Literary Hub</a> | <a href="https://www.ynetnews.com/culture/article/hjkvdwre1x">Ynet</a>`
   },
   {
     stance: 'boycott',
@@ -1625,7 +1625,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Publicly declared support for the cultural boycott in 2018, stating 'As long as the regional government commits war crimes against the Palestinian people we support their call for a the cultural boycott'; joined No Music for Genocide in 2025, geo-blocking their catalogue from regional streaming services",
 
-    sources: `<a href="https://www.nme.com/news/music/more-names-join-no-music-for-genocide-campaign-including-clairo-wolf-alice-aurora-and-more-3898598">NME</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide</a>`
+    sources: `<a href="https://www.nme.com/news/music/more-names-join-no-music-for-genocide-campaign-including-clairo-wolf-alice-aurora-and-more-3898598">NME</a> | <a href="https://nomusicforgenocide.org/">No Music for Genocide</a> | <a href="https://www.haaretz.com/world-news/europe/2018-09-23/ty-article/u-k-band-wolf-alice-defends-eurovision-move-says-boycotting-israel-not-hypocritical/0000017f-e9fe-da9b-a1ff-edff1a220000">Haaretz</a>`
   },
   {
     stance: 'boycott',
@@ -1657,7 +1657,7 @@ const artistsData = [
     level: "HIGH",
     statement: "Billie Joe Armstrong made consistent public pro-Palestine statements: changed lyrics of 'Jesus of Suburbia' to reference Palestinian suffering at Corona Capital (November 2024) and Coachella (April 2025); carried a Palestinian flag onstage in Malaysia (February 2025)",
 
-    sources: `<a href="https://variety.com/2025/music/news/green-day-israel-palestine-coachella-headlining-performance-1236368327/">Variety</a> | <a href="https://www.huffpost.com/entry/green-day-coachella-palestine_n_67fd0e8ee4b0afe00ba95f9b">HuffPost</a> | <a href="https://www.algemeiner.com/2025/02/21/green-day-frontman-billie-joe-armstrong-carries-palestinian-flag-malaysia-concert/">Algemeiner</a>`
+    sources: `<a href="https://variety.com/2025/music/news/green-day-israel-palestine-coachella-headlining-performance-1236368327/">Variety</a> | <a href="https://www.huffpost.com/entry/green-day-coachella-palestine_n_67fd0e8ee4b0afe00ba95f9b">HuffPost</a> | <a href="https://www.algemeiner.com/2025/02/21/green-day-frontman-billie-joe-armstrong-carries-palestinian-flag-malaysia-concert/">Algemeiner</a> | <a href="https://www.nme.com/news/music/green-day-alter-jesus-of-suburbia-lyric-to-reference-palestine-during-coachella-2025-headline-performance-3854418">NME</a>`
   },
   {
     stance: 'boycott',
@@ -1665,7 +1665,7 @@ const artistsData = [
     level: "HIGH",
     statement: "Used the word 'genocide' in a Channel 4 News interview (August 2025), stating 'I'm with the Palestinians'; performed with Gorillaz at the Together for Palestine benefit concert at Wembley Arena (September 2025); dedicated a Glastonbury appearance to 'all the children in Palestine' (June 2024)",
 
-    sources: `<a href="https://www.nme.com/news/music/damon-albarn-on-the-genocide-in-gaza-we-cannot-deny-the-palestinians-their-existence-3883749">NME</a> | <a href="https://www.nme.com/news/music/watch-damon-albarn-and-gorillaz-performance-at-together-for-palestine-3893405">NME</a> | <a href="https://www.nme.com/news/music/damon-albarn-speaks-on-palestine-at-glastonbury-importance-of-voting-in-uk-general-election-next-week-3769928">NME</a>`
+    sources: `<a href="https://www.nme.com/news/music/damon-albarn-on-the-genocide-in-gaza-we-cannot-deny-the-palestinians-their-existence-3883749">NME</a> | <a href="https://www.nme.com/news/music/watch-damon-albarn-and-gorillaz-performance-at-together-for-palestine-3893405">NME</a> | <a href="https://www.nme.com/news/music/damon-albarn-speaks-on-palestine-at-glastonbury-importance-of-voting-in-uk-general-election-next-week-3769928">NME</a> | <a href="https://stereogum.com/2318717/damon-albarn-talks-gaza-genocide-new-gorillaz-music/news">Stereogum</a>`
   },
   {
     stance: 'boycott',
@@ -1753,15 +1753,15 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Chanted 'Death to the IDF' at Glastonbury 2025 in a performance broadcast live on the BBC; the US State Department subsequently revoked their visas; also pressured concert venues to drop pro-engagement sponsor Barclays.",
 
-    sources: `<a href="https://www.nbcnews.com/news/us-news/state-department-bans-visas-english-punk-duo-bob-vylan-glastonbury-per-rcna215996">NBC News</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/rap-punk-duo-bob-vylan-says-targeted-speaking-gaza-glastonbury-rcna216390">NBC News (statement)</a>`
+    sources: `<a href="https://www.nbcnews.com/news/us-news/state-department-bans-visas-english-punk-duo-bob-vylan-glastonbury-per-rcna215996">NBC News</a> | <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/rap-punk-duo-bob-vylan-says-targeted-speaking-gaza-glastonbury-rcna216390">NBC News (statement)</a> | <a href="https://www.nme.com/news/music/glastonbury-2025-bob-vylan-lead-chants-of-death-to-the-idf-and-free-free-palestine-in-provocative-set-3873913">NME</a> | <a href="https://www.cnn.com/2025/06/29/uk/glastonbury-bob-vylan-kneecap-uk-police-intl">CNN</a>`
   },
   {
     stance: 'boycott',
     name: "Hozier",
     level: "HIGH",
-    statement: "Called regional actions 'genocide' at multiple 2024 concerts including Forest Hills and Lollapalooza; drew parallels between Irish and Palestinian histories and called for 'Palestine free from occupation and meaningful self-determination'.",
+    statement: "Called regional actions 'genocide' at multiple 2024 concerts including Forest Hills and Lollapalooza; drew parallels between Irish and Palestinian histories and called for 'Palestine free from occupation and meaningful self-determination'. Called for a ceasefire in Gaza at Lollapalooza 2024 and joined Macklemore's 'Free Palestine' concert in Dublin in October 2026.",
 
-    sources: `<a href="https://www.avclub.com/hozier-concert-end-genocide-palestine-too-sweet-1851520881">AV Club</a> | <a href="https://www.mirror.co.uk/3am/celebrity-news/hozier-calls-end-genocide-palestine-33389097">The Mirror</a>`
+    sources: `<a href="https://www.avclub.com/hozier-concert-end-genocide-palestine-too-sweet-1851520881">AV Club</a> | <a href="https://www.mirror.co.uk/3am/celebrity-news/hozier-calls-end-genocide-palestine-33389097">The Mirror</a> | <a href="https://www.nme.com/news/music/watch-hozier-give-unreleased-song-nobodys-soldier-its-live-debut-and-call-for-a-ceasefire-in-gaza-at-lollapalooza-2024-3780259">NME</a> | <a href="https://www.rte.ie/entertainment/2026/1026/1596857-macklemores-free-palestine-gig-in-dublin-tonight/">RTÉ</a>`
   },
   {
     stance: 'boycott',
@@ -1949,7 +1949,7 @@ const artistsData = [
     stance: 'welcome',
     name: "Nick Cave",
     statement: "Performed in Tel Aviv in 2017 despite intense BDS pressure and open letters from fans. In his newsletter The Red Hand Files, he wrote extensively defending his decision and rejecting the cultural boycott, calling it \"cowardly and artistically narrow.\"",
-    sources: `<a href="https://www.theredhandfiles.com/what-are-your-thoughts-on-brian-enos-stance-on-israel/">The Red Hand Files</a> | <a href="https://www.nme.com/news/music/roger-waters-responds-to-nick-cave-criticising-his-bds-stance-its-not-complicated-nick-3789564">NME</a>`
+    sources: `<a href="https://www.theredhandfiles.com/what-are-your-thoughts-on-brian-enos-stance-on-israel/">The Red Hand Files</a> | <a href="https://www.nme.com/news/music/roger-waters-responds-to-nick-cave-criticising-his-bds-stance-its-not-complicated-nick-3789564">NME</a> | <a href="https://www.timesofisrael.com/aussie-rocker-nick-cave-says-hes-in-israel-because-of-bds/">Times of Israel</a>`
   },
   {
     stance: 'welcome',
@@ -2039,7 +2039,7 @@ const artistsData = [
     stance: 'welcome',
     name: "Paul McCartney",
     statement: "Performed in Tel Aviv in 2008 despite intensive BDS campaigning, including an open letter from Roger Waters. He said: \"If music can't make a difference, I don't know what can.\" He has refused to cancel Israel shows whenever called upon to do so.",
-    sources: `<a href="https://en.wikipedia.org/wiki/Cultural_boycott_of_Israel">Wikipedia – Cultural boycott of Israel</a> | <a href="https://www.paulmccartney.com/news/paul-confirms-friendship-first-show-in-israel">PaulMcCartney.com</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/Cultural_boycott_of_Israel">Wikipedia – Cultural boycott of Israel</a> | <a href="https://www.paulmccartney.com/news/paul-confirms-friendship-first-show-in-israel">PaulMcCartney.com</a> | <a href="https://www.rollingstone.com/music/music-news/paul-mccartney-promises-israel-show-will-go-on-despite-outcry-255406/">Rolling Stone</a> | <a href="https://www.billboard.com/music/music-news/mccartney-rocks-for-huge-crowd-in-tel-aviv-1043969/">Billboard</a>`
   },
   {
     stance: 'welcome',
@@ -2051,13 +2051,13 @@ const artistsData = [
     stance: 'welcome',
     name: "Madonna",
     statement: "Performed at the Eurovision Song Contest in Tel Aviv in 2019 and has played concerts in Israel, declining boycott calls. She has also been outspoken against antisemitism.",
-    sources: `<a href="https://en.wikipedia.org/wiki/Cultural_boycott_of_Israel">Wikipedia – Cultural boycott of Israel</a> | <a href="https://www.nme.com/news/music/madonna-speaks-2019-eurovision-controversy-israel-boycott-2487785">BBC</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/Cultural_boycott_of_Israel">Wikipedia – Cultural boycott of Israel</a> | <a href="https://www.nme.com/news/music/madonna-speaks-2019-eurovision-controversy-israel-boycott-2487785">BBC</a> | <a href="https://www.timesofisrael.com/madonna-ahead-of-eurovision-performance-says-bds-wont-stop-her-music/">Times of Israel</a>`
   },
   {
     stance: 'welcome',
     name: "Alicia Keys",
     statement: "Performed in Tel Aviv in 2013 despite BDS calls and an open letter from Alice Walker urging her to cancel. She chose to go ahead with the concert, stating she believed in the power of music to bring people together.",
-    sources: `<a href="https://en.wikipedia.org/wiki/Cultural_boycott_of_Israel">Wikipedia – Cultural boycott of Israel</a> | <a href="https://electronicintifada.net/blogs/nora-barrows-friedman/bds-roundup-mounting-calls-alicia-keys-cancel-israel-show">Rolling Stone</a>`
+    sources: `<a href="https://en.wikipedia.org/wiki/Cultural_boycott_of_Israel">Wikipedia – Cultural boycott of Israel</a> | <a href="https://electronicintifada.net/blogs/nora-barrows-friedman/bds-roundup-mounting-calls-alicia-keys-cancel-israel-show">Rolling Stone</a> | <a href="https://www.jta.org/2013/06/03/culture/alicia-keys-will-play-israel-even-though-alice-walker-doesnt-want-her-to">JTA</a> | <a href="https://www.timesofisrael.com/alicia-keys-to-perform-in-israel-despite-boycott-calls/">Times of Israel</a>`
   },
   {
     stance: 'welcome',
@@ -2080,8 +2080,8 @@ const artistsData = [
   {
     stance: 'welcome',
     name: "Elton John",
-    statement: "Performed in Israel and explicitly rejected the cultural boycott, saying: \"Music is more powerful than politics and music will break down barriers.\" He has consistently refused to cancel Israeli concerts.",
-    sources: `<a href="https://www.haaretz.com/israel-news/culture/2016-05-26/ty-article/.premium/elton-john-wows-40-000-fans-at-tel-aviv-concert/0000017f-e92d-dc91-a17f-fdad21130000">Haaretz</a> | <a href="https://www.voanews.com/a/elton-john-plays-for-israelis-amid-boycotts-96654984/164735.html">VOA News</a>`
+    statement: "Performed in Israel and explicitly rejected the cultural boycott when he played Tel Aviv in 2010, after other artists had cancelled, saying musicians \"don't cherry-pick our conscience.\"",
+    sources: `<a href="https://www.haaretz.com/israel-news/culture/2016-05-26/ty-article/.premium/elton-john-wows-40-000-fans-at-tel-aviv-concert/0000017f-e92d-dc91-a17f-fdad21130000">Haaretz</a> | <a href="https://www.voanews.com/a/elton-john-plays-for-israelis-amid-boycotts-96654984/164735.html">VOA News</a> | <a href="https://www.billboard.com/articles/news/957721/elton-john-rocks-israel-after-other-artists-cancel/">Billboard</a>`
   },
   {
     stance: 'welcome',
@@ -2099,19 +2099,19 @@ const artistsData = [
     stance: 'welcome',
     name: "Guns N' Roses",
     statement: "Performed in Tel Aviv despite BDS calls, drawing a sold-out crowd of 60,000 fans. The band declined to participate in the cultural boycott of Israel.",
-    sources: `<a href="https://www.timesofisrael.com/guns-n-roses-rocks-sold-out-crowd-of-60000-in-tel-aviv/">Times of Israel</a> | <a href="https://www.algemeiner.com/2023/06/06/guns-n-roses-shut-down-israel-streets-for-tel-aviv-concert-attended-by-60000-fans/">Algemeiner</a>`
+    sources: `<a href="https://www.timesofisrael.com/guns-n-roses-rocks-sold-out-crowd-of-60000-in-tel-aviv/">Times of Israel</a> | <a href="https://www.algemeiner.com/2023/06/06/guns-n-roses-shut-down-israel-streets-for-tel-aviv-concert-attended-by-60000-fans/">Algemeiner</a> | <a href="https://www.ynetnews.com/articles/0,7340,L-4989768,00.html">Ynet</a>`
   },
   {
     stance: 'welcome',
     name: "Bon Jovi",
     statement: "Performed in Israel despite boycott pressure, headlining concerts in Tel Aviv. Jon Bon Jovi has spoken warmly about Israeli audiences and declined to cancel shows.",
-    sources: `<a href="https://www.timesofisrael.com/he-dont-run-bon-jovis-rocking-return-to-tel-aviv-more-welcome-than-elections/">Times of Israel</a> | <a href="https://jewishjournal.com/israel/302150/bon-jovi-performs-in-tel-aviv-despite-bds-pressure/">Jewish Journal</a>`
+    sources: `<a href="https://www.timesofisrael.com/he-dont-run-bon-jovis-rocking-return-to-tel-aviv-more-welcome-than-elections/">Times of Israel</a> | <a href="https://jewishjournal.com/israel/302150/bon-jovi-performs-in-tel-aviv-despite-bds-pressure/">Jewish Journal</a> | <a href="https://www.jta.org/2015/10/04/israel/bon-jovi-at-tel-aviv-concert-promises-return-to-israel">JTA</a> | <a href="https://www.rollingstone.com/music/music-news/roger-waters-slams-bon-jovi-over-israel-concert-in-open-letter-190452/">Rolling Stone</a>`
   },
   {
     stance: 'welcome',
     name: "Rolling Stones",
     statement: "Performed in Israel despite ongoing BDS campaigns, appearing in Tel Aviv to large crowds. The band declined to join the cultural boycott.",
-    sources: `<a href="https://www.timesofisrael.com/rolling-stones-rock-tel-aviv-in-first-ever-israel-concert/">Times of Israel</a> | <a href="https://www.timesofisrael.com/rolling-stones-rock-tel-aviv-in-first-ever-israel-concert/">Washington Post</a>`
+    sources: `<a href="https://www.timesofisrael.com/rolling-stones-rock-tel-aviv-in-first-ever-israel-concert/">Times of Israel</a> | <a href="https://www.timesofisrael.com/rolling-stones-rock-tel-aviv-in-first-ever-israel-concert/">Washington Post</a> | <a href="https://www.jta.org/2014/05/02/israel/pink-floyd-founders-urge-rolling-stones-to-cancel-israel-concert">JTA</a>`
   },
   {
     stance: 'welcome',
@@ -2287,7 +2287,7 @@ const artistsData = [
     level: "HIGH",
     statement: "Made antisemitic statements claiming 'the region is running the world'; publicly declared support for the freedom of the people of Palestine and against the genocide alongside Roger Waters (June 2024); released Gaza fundraising music video 'Voice of a Child'; performs with Palestinian flag guitar.",
 
-    sources: `<a href="https://www.jpost.com/israel-hamas-war/article-782583">Jerusalem Post</a> | <a href="https://www.algemeiner.com/2024/05/29/guitarist-eric-clapton-says-israel-running-world-criticizes-hearings-campus-antisemitism/">Algemeiner</a> | <a href="https://faroutmagazine.co.uk/eric-clapton-claims-israel-is-running-the-world/">Far Out Magazine</a> | <a href="https://www.showbiz411.com/2024/06/12/eric-clapton-goes-from-anti-vaxxer-to-pro-palestinian-backs-antisemite-roger-waters-and-uk-right-wing-politician">Showbiz411</a>`
+    sources: `<a href="https://www.jpost.com/israel-hamas-war/article-782583">Jerusalem Post</a> | <a href="https://www.algemeiner.com/2024/05/29/guitarist-eric-clapton-says-israel-running-world-criticizes-hearings-campus-antisemitism/">Algemeiner</a> | <a href="https://faroutmagazine.co.uk/eric-clapton-claims-israel-is-running-the-world/">Far Out Magazine</a> | <a href="https://www.showbiz411.com/2024/06/12/eric-clapton-goes-from-anti-vaxxer-to-pro-palestinian-backs-antisemite-roger-waters-and-uk-right-wing-politician">Showbiz411</a> | <a href="https://www.ynetnews.com/culture/article/sjoddmle6">Ynet</a>`
   },
   {
     stance: 'boycott',
@@ -2317,6 +2317,6 @@ const artistsData = [
     stance: 'welcome',
     name: "Andrea Bocelli",
     statement: "Performed at a Tel Aviv stadium in 2022 despite calls to boycott, with Prime Minister Benjamin Netanyahu in the audience, and sang in Jerusalem's Old City in 2011. In October 2026 the BDS movement's Jordan chapter called for a boycott of his November 27 concert at Petra over his support for Israel, and Indonesia's top Muslim council opposed his concerts in Indonesia on the same grounds.",
-    sources: `<a href="https://www.timesofisrael.com/groups-demand-boycott-of-andrea-bocellis-jordan-concert-over-his-israel-support/">Times of Israel</a> | <a href="https://malaymail.com/news/showbiz/2026/10/08/bds-movement-urges-boycott-of-andrea-bocellis-jordan-concert-at-petra-over-israel-ties/238167">Malay Mail</a> | <a href="https://www.ksat.com/entertainment/2026/10/14/indonesias-top-muslim-council-opposes-upcoming-andrea-bocelli-concerts-over-israel-ties/">AP via KSAT</a>`
+    sources: `<a href="https://www.timesofisrael.com/groups-demand-boycott-of-andrea-bocellis-jordan-concert-over-his-israel-support/">Times of Israel</a> | <a href="https://malaymail.com/news/showbiz/2026/10/08/bds-movement-urges-boycott-of-andrea-bocellis-jordan-concert-at-petra-over-israel-ties/238167">Malay Mail</a> | <a href="https://www.ksat.com/entertainment/2026/10/14/indonesias-top-muslim-council-opposes-upcoming-andrea-bocelli-concerts-over-israel-ties/">AP via KSAT</a> | <a href="https://www.ynetnews.com/culture/article/ryj8ni1kq">Ynet</a>`
   }
 ];
