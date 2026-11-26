@@ -1996,8 +1996,8 @@ const artistsData = [
   {
     stance: 'welcome',
     name: "Ozzy Osbourne",
-    statement: "Black Sabbath co-founder who signed the Creative Community for Peace statement rejecting the cultural boycott of Israel. Black Sabbath performed in Israel multiple times and resisted pressure to cancel shows. He was remembered by Jewish advocacy groups as a steadfast supporter of Israel and the Jewish people.",
-    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2023/10/12/israel-under-attack-open-letter/">Creative Community for Peace</a> | <a href="https://www.algemeiner.com/2025/07/24/rock-legend-black-sabbath-co-founder-ozzy-osbourne-steadfast-supporter-israel-jewish-people/">Algemeiner</a>`
+    statement: "Black Sabbath frontman who headlined Ozzfest in Tel Aviv in 2010 and returned to play Israel on his 2018 farewell tour despite boycott pressure, saying he had 'no time' for politics; remembered after his death in 2025 for standing against anti-Israel bias and antisemitism. His wife and longtime manager, Sharon Osbourne, is an outspoken supporter of Israel.",
+    sources: `<a href="https://www.creativecommunityforpeace.com/blog/2023/10/12/israel-under-attack-open-letter/">Creative Community for Peace</a> | <a href="https://www.algemeiner.com/2025/07/24/rock-legend-black-sabbath-co-founder-ozzy-osbourne-steadfast-supporter-israel-jewish-people/">Algemeiner</a> | <a href="https://www.timesofisrael.com/ozzy-osbourne-stood-against-anti-israel-bias-and-antisemitism/">Times of Israel</a> | <a href="https://www.thejc.com/news/israel/ozzy-osbourne-talks-israel-ahead-of-concert-o0bwq0hq">The JC</a> | <a href="https://www.timesofisrael.com/ozzy-osbournes-wife-on-israel-gig-we-play-where-we-want/">Times of Israel</a>`
   },
   {
     stance: 'welcome',
@@ -2146,7 +2146,7 @@ const artistsData = [
   {
     stance: 'welcome',
     name: "Sharon Osbourne",
-    statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and opposing cultural boycotts.",
+    statement: "Signed the Creative Community for Peace open letter supporting Israel's inclusion in Eurovision 2026 and opposing cultural boycotts. She is the widow and longtime manager of Ozzy Osbourne.",
     sources: `<a href="https://www.creativecommunityforpeace.com/blog/2026/04/15/eurovision2026/">Creative Community for Peace – Eurovision 2026 Letter</a> | <a href="https://www.nme.com/news/music/sharon-osbourne-gene-simmons-boy-george-sign-letter-supporting-israel-eurovision-2024-3587835">NME</a> | <a href="https://www.ynetnews.com/culture/article/r12otmepbl">Ynet</a> | <a href="https://www.jpost.com/israel-news/culture/article-893424">Jerusalem Post</a>`
   },
   {
