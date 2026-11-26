@@ -77,14 +77,6 @@ const artistsData = [
   },
   {
     stance: 'boycott',
-    name: "Sam Smith",
-    level: "CRITICAL",
-    statement: "Supports cultural boycott",
-
-    sources: `<a href="https://www.middleeasteye.net/news/sam-smith-israel-concert-cancelled">Middle East Eye</a> | <a href="https://www.thepinknews.com/2023/05/05/sam-smith-tel-aviv-israel-cancelled/">PinkNews</a>`
-  },
-  {
-    stance: 'boycott',
     name: "Björk",
     level: "CRITICAL",
     statement: "Signed No Music for Genocide pledge in 2025 and geo-blocked her entire catalogue from regional streaming services; one of the most high-profile artists to join the streaming boycott",
@@ -825,7 +817,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Sonic Youth founder, signed multiple BDS petitions. Also signed the May 2021 Musicians for Palestine open letter calling on artists to refuse to perform at regional cultural institutions.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://www.nme.com/news/music/thurston-moore-2-1225123">NME</a> | <a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://www.nme.com/news/music/thurston-moore-2-1225123">NME</a> | <a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a> | <a href="https://www.haaretz.com/israel-news/culture/2015-06-27/ty-article/thurston-moore-backs-bds-movement/0000017f-eff6-dc28-a17f-fff757fa0000">Haaretz</a>`
   },
   {
     stance: 'boycott',
@@ -1069,14 +1061,6 @@ const artistsData = [
   },
   {
     stance: 'boycott',
-    name: "Sonic Youth",
-    level: "CRITICAL",
-    statement: "Alternative rock band, supported BDS",
-
-    sources: `<a href="https://www.rollingstone.com/music/music-news/thurston-moore-explains-nixed-tel-aviv-gig-israel-boycott-71197/">Rolling Stone</a> | <a href="https://www.juno.co.uk/junodaily/2021/05/29/600-artists-from-run-the-jewels-to-sonic-youth-sign-letter-demanding-justice-for-palestine/">Juno Daily</a>`
-  },
-  {
-    stance: 'boycott',
     name: "Godspeed You! Black Emperor",
     level: "CRITICAL",
     statement: "Montréal post-rock collective who declined the Polaris Music Prize in 2013, issuing a statement explicitly critical of regional military actions and calling for boycott; have been consistently anti-Zionist in their public statements",
@@ -1202,14 +1186,6 @@ const artistsData = [
     statement: "Poet and rapper, supports cultural boycott. In 2017 joined artists boycotting Berlin's Pop-Kultur festival because the regional embassy was among its sponsors.",
 
     sources: `<a href="https://www.middleeasteye.net/news/lowkey-spotify-remove-campaign-celebrities-sign-letter-opposing">Middle East Eye</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a> | <a href="https://www.jpost.com/BDS-THREAT/Anti-Israel-British-rapper-cancels-Berlin-event-due-to-protests-505632">Jerusalem Post</a>`
-  },
-  {
-    stance: 'boycott',
-    name: "Little Simz",
-    level: "CRITICAL",
-    statement: "Withdrew from the region's Meteor Festival in 2018 following BDS boycott calls; stated 'I will not be appearing at Meteor Festival'",
-
-    sources: `<a href="https://www.juancole.com/2018/09/apartheid-palestinians-musicians.html">Juan Cole</a> | <a href="https://bdsmovement.net/meteor">BDS Movement</a>`
   },
   {
     stance: 'boycott',
@@ -1701,14 +1677,6 @@ const artistsData = [
   },
   {
     stance: 'boycott',
-    name: "Sleaford Mods",
-    level: "CRITICAL",
-    statement: "Signed No Music for Genocide (2025), geo-blocking music from regional streaming services. Vocalist Jason Williamson publicly declared his stance on Palestine after a flag incident at a Madrid gig, stating: 'No more killing.'",
-
-    sources: `<a href="https://www.nme.com/news/music/sleaford-mods-jason-williamson-clarifies-stance-on-palestine-after-madrid-gig-incident-no-more-killing-3537855">NME</a> | <a href="https://en.wikipedia.org/wiki/No_Music_for_Genocide">Wikipedia – No Music for Genocide</a>`
-  },
-  {
-    stance: 'boycott',
     name: "Sudan Archives",
     level: "CRITICAL",
     statement: "Signed No Music for Genocide (September 2025), geo-blocking all music from regional streaming platforms; R&B violinist and producer known for albums 'Athena' and 'Natural Brown Prom Queen'.",
@@ -2040,12 +2008,6 @@ const artistsData = [
     name: "Paul McCartney",
     statement: "Performed in Tel Aviv in 2008 despite intensive BDS campaigning, including an open letter from Roger Waters. He said: \"If music can't make a difference, I don't know what can.\" He has refused to cancel Israel shows whenever called upon to do so.",
     sources: `<a href="https://en.wikipedia.org/wiki/Cultural_boycott_of_Israel">Wikipedia – Cultural boycott of Israel</a> | <a href="https://www.paulmccartney.com/news/paul-confirms-friendship-first-show-in-israel">PaulMcCartney.com</a> | <a href="https://www.rollingstone.com/music/music-news/paul-mccartney-promises-israel-show-will-go-on-despite-outcry-255406/">Rolling Stone</a> | <a href="https://www.billboard.com/music/music-news/mccartney-rocks-for-huge-crowd-in-tel-aviv-1043969/">Billboard</a>`
-  },
-  {
-    stance: 'welcome',
-    name: "Radiohead",
-    statement: "Performed in Tel Aviv in 2017 despite an open BDS campaign backed by Roger Waters, Ken Loach, and others. Thom Yorke said the boycott call was \"offensive and condescending\" and that artists should be free to engage with audiences wherever they are.",
-    sources: `<a href="https://en.wikipedia.org/wiki/Cultural_boycott_of_Israel">Wikipedia – Cultural boycott of Israel</a> | <a href="https://www.rollingstone.com/music/music-news/thom-yorke-breaks-silence-on-israel-controversy-126675/">Rolling Stone</a>`
   },
   {
     stance: 'welcome',
