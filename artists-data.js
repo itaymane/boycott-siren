@@ -631,9 +631,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Miriam Margolyes",
     level: "LOW",
-    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
+    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide. Also signed the October 2024 'Refusing Complicity' letter pledging to boycott regional literary institutions.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.thewrap.com/film-industry-pledge-end-complicity-israel-palestine-genocide-gaza">TheWrap</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.thewrap.com/film-industry-pledge-end-complicity-israel-palestine-genocide-gaza">TheWrap</a> | <a href="https://www.euronews.com/2024/10/30/1000-signatories-in-largest-boycott-of-israeli-publishing-industry">Euronews</a>`
   },
   {
     stance: 'boycott',
@@ -687,9 +687,9 @@ const artistsData = [
     stance: 'boycott',
     name: "John Cusack",
     level: "LOW",
-    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
+    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott. Also signed the October 2024 'Refusing Complicity' letter pledging to boycott regional literary institutions.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.jta.org/2024/10/30/culture/sally-rooney-percival-everett-among-thousands-of-authors-pledging-to-boycott-all-israeli-literary-institutions">JTA</a>`
   },
   {
     stance: 'boycott',
@@ -767,9 +767,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Lena Headey",
     level: "LOW",
-    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott",
+    statement: "Signed Artists' Pledge for Palestine, supports cultural boycott. Also signed the Film Workers for Palestine pledge (September 2025), refusing to work with regional film institutions it calls complicit in genocide.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://en.wikipedia.org/wiki/List_of_supporters_of_the_BDS_movement">Wikipedia - BDS Supporters</a> | <a href="https://www.timesofisrael.com/over-4000-actors-filmmakers-sign-pledge-to-boycott-israeli-film-industry-over-gaza/">Times of Israel</a>`
   },
   {
     stance: 'boycott',
@@ -823,9 +823,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Thurston Moore",
     level: "CRITICAL",
-    statement: "Sonic Youth founder, signed multiple BDS petitions",
+    statement: "Sonic Youth founder, signed multiple BDS petitions. Also signed the May 2021 Musicians for Palestine open letter calling on artists to refuse to perform at regional cultural institutions.",
 
-    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://www.nme.com/news/music/thurston-moore-2-1225123">NME</a>`
+    sources: `<a href="https://artistsforpalestine.org.uk/a-pledge/">Artists for Palestine UK</a> | <a href="https://www.nme.com/news/music/thurston-moore-2-1225123">NME</a> | <a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a>`
   },
   {
     stance: 'boycott',
@@ -921,7 +921,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Chicago rapper who has been one of music's most outspoken BDS advocates; explicitly called on fans and fellow artists to join the cultural boycott; donated proceeds from music to Palestinian causes; signed No Music for Genocide pledge",
 
-    sources: `<a href="https://www.hotnewhiphop.com/368531-run-the-jewels-and-noname-among-600-musicians-calling-for-israel-boycott-news">HotNewHipHop</a> | <a href="https://www.complex.com/music/a/backwoodsaltar/musicians-for-israel-boycott-in-support-of-palestine">Complex</a>`
+    sources: `<a href="https://www.hotnewhiphop.com/368531-run-the-jewels-and-noname-among-600-musicians-calling-for-israel-boycott-news">HotNewHipHop</a> | <a href="https://www.complex.com/music/a/backwoodsaltar/musicians-for-israel-boycott-in-support-of-palestine">Complex</a> | <a href="https://consequence.net/2021/05/musicians-for-palestine-israel-boycott/">Consequence</a>`
   },
   {
     stance: 'boycott',
@@ -929,7 +929,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Author of 'The Color Purple' who refused to allow an regional publisher to publish her book; explicitly supports BDS; has written about and spoken at pro-Palestinian events calling for the cultural boycott",
 
-    sources: `<a href="https://www.nbcnews.com/news/nbcblk/alice-walker-color-purple-revival-palestine-parental-peace-n461426">NBC News</a> | <a href="https://www.palestineinamerica.com/blog/2015/12/alice-walker-bds-the-color-purple">Palestine in America</a>`
+    sources: `<a href="https://www.nbcnews.com/news/nbcblk/alice-walker-color-purple-revival-palestine-parental-peace-n461426">NBC News</a> | <a href="https://www.palestineinamerica.com/blog/2015/12/alice-walker-bds-the-color-purple">Palestine in America</a> | <a href="https://www.jta.org/2012/06/18/israel/walker-refuses-to-authorize-hebrew-version-of-the-color-purple">JTA</a>`
   },
   {
     stance: 'boycott',
@@ -937,7 +937,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Author and activist who has written extensively calling for BDS; explicitly called regional actions in Gaza genocide; organised and signed open letters calling for international the cultural boycott",
 
-    sources: `<a href="https://www.democracynow.org/2024/10/22/naomi_klein_october_7_weaponized_trauma">Democracy Now</a> | <a href="https://www.theguardian.com/commentisfree/2024/jan/10/only-outside-pressure-can-stop-israels-war-crimes">The Guardian</a>`
+    sources: `<a href="https://www.democracynow.org/2024/10/22/naomi_klein_october_7_weaponized_trauma">Democracy Now</a> | <a href="https://www.theguardian.com/commentisfree/2024/jan/10/only-outside-pressure-can-stop-israels-war-crimes">The Guardian</a> | <a href="https://www.haaretz.com/1.5072164">Haaretz</a>`
   },
   {
     stance: 'boycott',
@@ -985,7 +985,7 @@ const artistsData = [
     level: "HIGH",
     statement: "2022 Nobel Prize in Literature laureate who publicly signed BDS-aligned letters after receiving her Nobel Prize; made explicit statements calling regional actions a form of apartheid and genocide",
 
-    sources: `<a href="https://www.newarab.com/news/nobel-prize-winner-annie-ernaux-has-backed-israel-boycotts">New Arab</a> | <a href="https://www.aljazeera.com/news/2024/1/11/artists-urged-to-reject-german-institutions-over-berlins-stance-on-gaza">Al Jazeera</a>`
+    sources: `<a href="https://www.newarab.com/news/nobel-prize-winner-annie-ernaux-has-backed-israel-boycotts">New Arab</a> | <a href="https://www.aljazeera.com/news/2024/1/11/artists-urged-to-reject-german-institutions-over-berlins-stance-on-gaza">Al Jazeera</a> | <a href="https://www.jpost.com/bds-threat/article-719059">Jerusalem Post</a> | <a href="https://www.euronews.com/2024/10/30/1000-signatories-in-largest-boycott-of-israeli-publishing-industry">Euronews</a>`
   },
   {
     stance: 'boycott',
@@ -1007,9 +1007,9 @@ const artistsData = [
     stance: 'boycott',
     name: "Sinéad O'Connor",
     level: "CRITICAL",
-    statement: "Late Irish singer; cancelled 2014 the region concert after learning of BDS boycott call; said 'I will not play in the region'",
+    statement: "Late Irish singer who said in June 2014 that she wanted to withdraw from a scheduled concert in Israel after learning of the Palestinian call for a cultural boycott, saying she had not known about it when she agreed to perform.",
 
-    sources: `<a href="https://electronicintifada.net/blogs/david-cronin/thank-you-sinead-oconnor-boycotting-israel">Electronic Intifada</a> | <a href="https://www.hotpress.com/music/sinead-oconnor-i-wont-play-in-israel-11954250">Hotpress</a>`
+    sources: `<a href="https://electronicintifada.net/blogs/david-cronin/thank-you-sinead-oconnor-boycotting-israel">Electronic Intifada</a> | <a href="https://www.hotpress.com/music/sinead-oconnor-i-wont-play-in-israel-11954250">Hotpress</a> | <a href="https://www.timesofisrael.com/oconnor-wants-to-cancel-israel-show/">Times of Israel</a> | <a href="https://www.jta.org/2014/06/17/israel/sinead-oconnor-trying-to-back-out-of-israel-concert">JTA</a>`
   },
   {
     stance: 'boycott',
@@ -1025,7 +1025,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "World-renowned violinist who interrupted a BBC Proms programme to make an unscripted statement about regional apartheid; has publicly referred to the regioni actions as apartheid; cancelled performances in the region",
 
-    sources: `<a href="https://www.huffingtonpost.co.uk/2013/08/16/palestinian-proms_n_3766594.html">HuffPost UK</a> | <a href="https://electronicintifada.net/blogs/ali-abunimah/video-nigel-kennedy-and-palestine-strings-play-vivaldi-2013-bbc-proms">Electronic Intifada</a>`
+    sources: `<a href="https://www.huffingtonpost.co.uk/2013/08/16/palestinian-proms_n_3766594.html">HuffPost UK</a> | <a href="https://electronicintifada.net/blogs/ali-abunimah/video-nigel-kennedy-and-palestine-strings-play-vivaldi-2013-bbc-proms">Electronic Intifada</a> | <a href="https://www.jpost.com/international/report-bbc-to-cut-israel-apartheid-remarks-from-uk-concert-broadcast-323419">Jerusalem Post</a> | <a href="https://www.thejc.com/news/bbc-to-cut-kennedy-slur-from-proms-broadcast-bkxl1i36">The JC</a>`
   },
   {
     stance: 'boycott',
@@ -1185,7 +1185,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "British rapper, vocal Palestinian rights activist",
 
-    sources: `<a href="https://www.middleeasteye.net/news/lowkey-spotify-remove-campaign-celebrities-sign-letter-opposing">Middle East Eye</a> | <a href="https://electronicintifada.net/blogs/asa-winstanley/israel-lobby-demands-lowkey-be-deleted-spotify">Electronic Intifada</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/lowkey-spotify-remove-campaign-celebrities-sign-letter-opposing">Middle East Eye</a> | <a href="https://electronicintifada.net/blogs/asa-winstanley/israel-lobby-demands-lowkey-be-deleted-spotify">Electronic Intifada</a> | <a href="https://www.aljazeera.com/opinions/2022/4/22/i-will-not-be-bullied-by-israel">Al Jazeera</a> | <a href="https://www.thejc.com/news/jeremy-corbyn-praises-good-messages-of-anti-zionist-rapper-lowkey-gcznaw20">The JC</a>`
   },
   {
     stance: 'boycott',
@@ -1281,7 +1281,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Chicago rapper who has been a vocal advocate for Palestinian rights and BDS; has spoken at rallies, released pro-Palestine material, and made multiple public statements calling for an end to the regioni military operations",
 
-    sources: `<a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
+    sources: `<a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a> | <a href="https://www.timesofisrael.com/rapper-vic-mensa-slams-israels-treatment-of-palestinians/">Times of Israel</a>`
   },
   {
     stance: 'boycott',
@@ -1289,7 +1289,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Rapper formerly known as Mos Def who has been a vocal advocate for Palestinian rights; has made public statements in support of BDS and participated in pro-Palestinian events and cultural campaigns",
 
-    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a>`
+    sources: `<a href="https://www.middleeasteye.net/news/israel-boycott-musicians-pledge-stand-solidarity-palestine">Middle East Eye</a> | <a href="https://www.billboard.com/music/music-news/israel-boycott-artists-open-letter-palestine-9579426/">Billboard</a> | <a href="https://www.nme.com/news/music/massive-london-lido-setlist-video-khalid-abdalla-mos-def-yasiin-beyin-palestine-3868037">NME</a>`
   },
   {
     stance: 'boycott',
@@ -1577,7 +1577,7 @@ const artistsData = [
     level: "CRITICAL",
     statement: "Pulitzer Prize-winning author who signed the literary the cultural boycotti cultural institutions (2024) and publicly withheld permission for his book to be published by his regional publisher unless they endorsed Palestinian rights; vocal BDS advocate who has written extensively about the movement",
 
-    sources: `<a href="https://www.972mag.com/viet-thanh-nguyen-bds-israel-palestine/">+972 Magazine</a> | <a href="https://lithub.com/hundreds-of-authors-pledge-to-boycott-israeli-cultural-institutions/">Literary Hub</a>`
+    sources: `<a href="https://www.972mag.com/viet-thanh-nguyen-bds-israel-palestine/">+972 Magazine</a> | <a href="https://lithub.com/hundreds-of-authors-pledge-to-boycott-israeli-cultural-institutions/">Literary Hub</a> | <a href="https://www.jta.org/2024/10/30/culture/sally-rooney-percival-everett-among-thousands-of-authors-pledging-to-boycott-all-israeli-literary-institutions">JTA</a> | <a href="https://www.euronews.com/2024/10/30/1000-signatories-in-largest-boycott-of-israeli-publishing-industry">Euronews</a>`
   },
   {
     stance: 'boycott',
