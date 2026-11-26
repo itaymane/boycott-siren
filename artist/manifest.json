@@ -1,0 +1,1478 @@
+{
+ "roger-waters": {
+  "id": 1,
+  "name": "Roger Waters",
+  "hash": "f025fe3b0f81",
+  "modified": "2026-11-26"
+ },
+ "dua-lipa": {
+  "id": 2,
+  "name": "Dua Lipa",
+  "hash": "72042c1a7925",
+  "modified": "2026-11-26"
+ },
+ "patti-smith": {
+  "id": 3,
+  "name": "Patti Smith",
+  "hash": "4e184094f5a8",
+  "modified": "2026-11-26"
+ },
+ "elvis-costello": {
+  "id": 4,
+  "name": "Elvis Costello",
+  "hash": "6d020c6a9890",
+  "modified": "2026-11-26"
+ },
+ "tom-morello": {
+  "id": 5,
+  "name": "Tom Morello",
+  "hash": "26e7220509aa",
+  "modified": "2026-11-26"
+ },
+ "the-roots": {
+  "id": 6,
+  "name": "The Roots",
+  "hash": "7951930116b8",
+  "modified": "2026-11-26"
+ },
+ "lauryn-hill": {
+  "id": 7,
+  "name": "Lauryn Hill",
+  "hash": "ec2628acc969",
+  "modified": "2026-11-26"
+ },
+ "peter-gabriel": {
+  "id": 8,
+  "name": "Peter Gabriel",
+  "hash": "ef82f623214c",
+  "modified": "2026-11-26"
+ },
+ "charlotte-church": {
+  "id": 10,
+  "name": "Charlotte Church",
+  "hash": "eaf12958f666",
+  "modified": "2026-11-26"
+ },
+ "bjork": {
+  "id": 12,
+  "name": "Björk",
+  "hash": "344b06ce49ed",
+  "modified": "2026-11-26"
+ },
+ "lorde": {
+  "id": 13,
+  "name": "Lorde",
+  "hash": "23307f95c8ad",
+  "modified": "2026-11-26"
+ },
+ "massive-attack": {
+  "id": 14,
+  "name": "Massive Attack",
+  "hash": "9a28e63cc7b0",
+  "modified": "2026-11-26"
+ },
+ "brian-eno": {
+  "id": 15,
+  "name": "Brian Eno",
+  "hash": "f63f1ae5b2f9",
+  "modified": "2026-11-26"
+ },
+ "fontaines-dc": {
+  "id": 16,
+  "name": "Fontaines D.C.",
+  "hash": "b62768fd9649",
+  "modified": "2026-11-26"
+ },
+ "japanese-breakfast": {
+  "id": 17,
+  "name": "Japanese Breakfast",
+  "hash": "738745806728",
+  "modified": "2026-11-26"
+ },
+ "paramore": {
+  "id": 18,
+  "name": "Paramore",
+  "hash": "2dfc17a79181",
+  "modified": "2026-11-26"
+ },
+ "hayley-williams": {
+  "id": 19,
+  "name": "Hayley Williams",
+  "hash": "d3cc4be5d063",
+  "modified": "2026-11-26"
+ },
+ "rina-sawayama": {
+  "id": 20,
+  "name": "Rina Sawayama",
+  "hash": "04a3f656307f",
+  "modified": "2026-11-26"
+ },
+ "aurora": {
+  "id": 21,
+  "name": "AURORA",
+  "hash": "24de21890c53",
+  "modified": "2026-11-26"
+ },
+ "king-krule": {
+  "id": 22,
+  "name": "King Krule",
+  "hash": "afb1f431cf1a",
+  "modified": "2026-11-26"
+ },
+ "idles": {
+  "id": 23,
+  "name": "IDLES",
+  "hash": "d716334af095",
+  "modified": "2026-11-26"
+ },
+ "hot-chip": {
+  "id": 24,
+  "name": "Hot Chip",
+  "hash": "f1d20dedfb2f",
+  "modified": "2026-11-26"
+ },
+ "kneecap": {
+  "id": 25,
+  "name": "Kneecap",
+  "hash": "a6e025b2bab7",
+  "modified": "2026-11-26"
+ },
+ "wednesday": {
+  "id": 26,
+  "name": "Wednesday",
+  "hash": "1a20577c6226",
+  "modified": "2026-11-26"
+ },
+ "mannequin-pussy": {
+  "id": 27,
+  "name": "Mannequin Pussy",
+  "hash": "44d756b2f978",
+  "modified": "2026-11-26"
+ },
+ "badbadnotgood": {
+  "id": 28,
+  "name": "BADBADNOTGOOD",
+  "hash": "e7d75f99d94f",
+  "modified": "2026-11-26"
+ },
+ "young-fathers": {
+  "id": 29,
+  "name": "Young Fathers",
+  "hash": "2ed50cdcc8d2",
+  "modified": "2026-11-26"
+ },
+ "amyl-and-the-sniffers": {
+  "id": 30,
+  "name": "Amyl and the Sniffers",
+  "hash": "03f1eb01f863",
+  "modified": "2026-11-26"
+ },
+ "soccer-mommy": {
+  "id": 31,
+  "name": "Soccer Mommy",
+  "hash": "30992f285220",
+  "modified": "2026-11-26"
+ },
+ "kelela": {
+  "id": 32,
+  "name": "Kelela",
+  "hash": "edd6fb5de0f7",
+  "modified": "2026-11-26"
+ },
+ "caribou": {
+  "id": 33,
+  "name": "Caribou",
+  "hash": "c829d47555f2",
+  "modified": "2026-11-26"
+ },
+ "primal-scream": {
+  "id": 34,
+  "name": "Primal Scream",
+  "hash": "7204d52e586b",
+  "modified": "2026-11-26"
+ },
+ "faye-webster": {
+  "id": 35,
+  "name": "Faye Webster",
+  "hash": "c6a6db046816",
+  "modified": "2026-11-26"
+ },
+ "arca": {
+  "id": 36,
+  "name": "Arca",
+  "hash": "ab95ff260e31",
+  "modified": "2026-11-26"
+ },
+ "mike": {
+  "id": 37,
+  "name": "MIKE",
+  "hash": "245a857551b1",
+  "modified": "2026-11-26"
+ },
+ "erika-de-casier": {
+  "id": 38,
+  "name": "Erika de Casier",
+  "hash": "769a3c994c73",
+  "modified": "2026-11-26"
+ },
+ "mj-lenderman": {
+  "id": 39,
+  "name": "MJ Lenderman",
+  "hash": "5eab777b4d1d",
+  "modified": "2026-11-26"
+ },
+ "julia-jacklin": {
+  "id": 40,
+  "name": "Julia Jacklin",
+  "hash": "3b19319be370",
+  "modified": "2026-11-26"
+ },
+ "lucy-dacus": {
+  "id": 41,
+  "name": "Lucy Dacus",
+  "hash": "bb1bec54c55c",
+  "modified": "2026-11-26"
+ },
+ "enter-shikari": {
+  "id": 42,
+  "name": "Enter Shikari",
+  "hash": "cff5342850e0",
+  "modified": "2026-11-26"
+ },
+ "fever-ray": {
+  "id": 43,
+  "name": "Fever Ray",
+  "hash": "1e28fadcab76",
+  "modified": "2026-11-26"
+ },
+ "the-knife": {
+  "id": 44,
+  "name": "The Knife",
+  "hash": "0b6c5505bea0",
+  "modified": "2026-11-26"
+ },
+ "blood-orange": {
+  "id": 45,
+  "name": "Blood Orange",
+  "hash": "bdb79da0c3a2",
+  "modified": "2026-11-26"
+ },
+ "blonde-redhead": {
+  "id": 46,
+  "name": "Blonde Redhead",
+  "hash": "7fadcf2eddbd",
+  "modified": "2026-11-26"
+ },
+ "clairo": {
+  "id": 47,
+  "name": "Clairo",
+  "hash": "8ea0bef5c1fc",
+  "modified": "2026-11-26"
+ },
+ "denzel-curry": {
+  "id": 48,
+  "name": "Denzel Curry",
+  "hash": "163c03fca4a6",
+  "modified": "2026-11-26"
+ },
+ "destroy-boys": {
+  "id": 49,
+  "name": "Destroy Boys",
+  "hash": "bafc71d0f03e",
+  "modified": "2026-11-26"
+ },
+ "eartheater": {
+  "id": 50,
+  "name": "Eartheater",
+  "hash": "468f8c1df4ab",
+  "modified": "2026-11-26"
+ },
+ "jane-remover": {
+  "id": 51,
+  "name": "Jane Remover",
+  "hash": "f0978290cba2",
+  "modified": "2026-11-26"
+ },
+ "the-blessed-madonna": {
+  "id": 52,
+  "name": "The Blessed Madonna",
+  "hash": "000ea33f1e24",
+  "modified": "2026-11-26"
+ },
+ "hania-rani": {
+  "id": 53,
+  "name": "Hania Rani",
+  "hash": "2d5fa831c4d1",
+  "modified": "2026-11-26"
+ },
+ "kelsey-lu": {
+  "id": 54,
+  "name": "Kelsey Lu",
+  "hash": "630d01529dc6",
+  "modified": "2026-11-26"
+ },
+ "lrain": {
+  "id": 55,
+  "name": "L'Rain",
+  "hash": "ced11f63bc45",
+  "modified": "2026-11-26"
+ },
+ "lambrini-girls": {
+  "id": 56,
+  "name": "Lambrini Girls",
+  "hash": "8f6bacbd7ce0",
+  "modified": "2026-11-26"
+ },
+ "live": {
+  "id": 57,
+  "name": "Liv.e",
+  "hash": "d6400e27068f",
+  "modified": "2026-11-26"
+ },
+ "marina": {
+  "id": 58,
+  "name": "MARINA",
+  "hash": "74bf7cdb6d71",
+  "modified": "2026-11-26"
+ },
+ "maryam-saleh": {
+  "id": 59,
+  "name": "Maryam Saleh",
+  "hash": "a9c3c4cee5b1",
+  "modified": "2026-11-26"
+ },
+ "maurice-louca": {
+  "id": 60,
+  "name": "Maurice Louca",
+  "hash": "0a12c6fee170",
+  "modified": "2026-11-26"
+ },
+ "mogwai": {
+  "id": 61,
+  "name": "Mogwai",
+  "hash": "c9cba69756c7",
+  "modified": "2026-11-26"
+ },
+ "m": {
+  "id": 62,
+  "name": "MØ",
+  "hash": "aace9b3f2940",
+  "modified": "2026-11-26"
+ },
+ "nicolas-jaar": {
+  "id": 63,
+  "name": "Nicolás Jaar",
+  "hash": "0263db3ce184",
+  "modified": "2026-11-26"
+ },
+ "nourished-by-time": {
+  "id": 64,
+  "name": "Nourished by Time",
+  "hash": "86247f622ca2",
+  "modified": "2026-11-26"
+ },
+ "oklou": {
+  "id": 65,
+  "name": "Oklou",
+  "hash": "cad6c0c6267a",
+  "modified": "2026-11-26"
+ },
+ "smerz": {
+  "id": 66,
+  "name": "Smerz",
+  "hash": "9330932b081d",
+  "modified": "2026-11-26"
+ },
+ "yaeji": {
+  "id": 67,
+  "name": "Yaeji",
+  "hash": "6e4df2e0e09b",
+  "modified": "2026-11-26"
+ },
+ "yeule": {
+  "id": 68,
+  "name": "Yeule",
+  "hash": "b4f9fcceca04",
+  "modified": "2026-11-26"
+ },
+ "ana-tijoux": {
+  "id": 69,
+  "name": "Ana Tijoux",
+  "hash": "e5a7b2486de2",
+  "modified": "2026-11-26"
+ },
+ "julia-holter": {
+  "id": 70,
+  "name": "Julia Holter",
+  "hash": "6abbd6cad78e",
+  "modified": "2026-11-26"
+ },
+ "loraine-james": {
+  "id": 71,
+  "name": "Loraine James",
+  "hash": "09837f3d006a",
+  "modified": "2026-11-26"
+ },
+ "model-actriz": {
+  "id": 72,
+  "name": "Model/Actriz",
+  "hash": "f02b0baf74e5",
+  "modified": "2026-11-26"
+ },
+ "saul-williams": {
+  "id": 73,
+  "name": "Saul Williams",
+  "hash": "4434b908295b",
+  "modified": "2026-11-26"
+ },
+ "four-tet": {
+  "id": 74,
+  "name": "Four Tet",
+  "hash": "57b6cf81e5f9",
+  "modified": "2026-11-26"
+ },
+ "olivia-colman": {
+  "id": 75,
+  "name": "Olivia Colman",
+  "hash": "6b18f5ac065b",
+  "modified": "2026-11-26"
+ },
+ "javier-bardem": {
+  "id": 76,
+  "name": "Javier Bardem",
+  "hash": "324745c56828",
+  "modified": "2026-11-26"
+ },
+ "mark-ruffalo": {
+  "id": 77,
+  "name": "Mark Ruffalo",
+  "hash": "68fd03ea1204",
+  "modified": "2026-11-26"
+ },
+ "steve-coogan": {
+  "id": 78,
+  "name": "Steve Coogan",
+  "hash": "02210944d0e4",
+  "modified": "2026-11-26"
+ },
+ "riz-ahmed": {
+  "id": 79,
+  "name": "Riz Ahmed",
+  "hash": "b5c7d05237a8",
+  "modified": "2026-11-26"
+ },
+ "miriam-margolyes": {
+  "id": 80,
+  "name": "Miriam Margolyes",
+  "hash": "07446f80d9ca",
+  "modified": "2026-11-26"
+ },
+ "tilda-swinton": {
+  "id": 81,
+  "name": "Tilda Swinton",
+  "hash": "e7a56fb1372e",
+  "modified": "2026-11-26"
+ },
+ "khalid-abdalla": {
+  "id": 82,
+  "name": "Khalid Abdalla",
+  "hash": "f207e0dfff78",
+  "modified": "2026-11-26"
+ },
+ "maxine-peake": {
+  "id": 83,
+  "name": "Maxine Peake",
+  "hash": "322730504d46",
+  "modified": "2026-11-26"
+ },
+ "susan-sarandon": {
+  "id": 84,
+  "name": "Susan Sarandon",
+  "hash": "cac03c746409",
+  "modified": "2026-11-26"
+ },
+ "danny-glover": {
+  "id": 85,
+  "name": "Danny Glover",
+  "hash": "adc7667c9bb4",
+  "modified": "2026-11-26"
+ },
+ "penelope-cruz": {
+  "id": 86,
+  "name": "Penélope Cruz",
+  "hash": "da48683f1601",
+  "modified": "2026-11-26"
+ },
+ "cynthia-nixon": {
+  "id": 88,
+  "name": "Cynthia Nixon",
+  "hash": "77f23909a4aa",
+  "modified": "2026-11-26"
+ },
+ "viggo-mortensen": {
+  "id": 89,
+  "name": "Viggo Mortensen",
+  "hash": "9b4846408dd6",
+  "modified": "2026-11-26"
+ },
+ "joe-alwyn": {
+  "id": 96,
+  "name": "Joe Alwyn",
+  "hash": "8c911c54c04d",
+  "modified": "2026-11-26"
+ },
+ "ken-loach": {
+  "id": 101,
+  "name": "Ken Loach",
+  "hash": "ae8af2d4cdef",
+  "modified": "2026-11-26"
+ },
+ "mike-leigh": {
+  "id": 102,
+  "name": "Mike Leigh",
+  "hash": "91a3be233ce0",
+  "modified": "2026-11-26"
+ },
+ "asif-kapadia": {
+  "id": 106,
+  "name": "Asif Kapadia",
+  "hash": "72c45eeb6b93",
+  "modified": "2026-11-26"
+ },
+ "thurston-moore": {
+  "id": 109,
+  "name": "Thurston Moore",
+  "hash": "79038bbb86d8",
+  "modified": "2026-11-26"
+ },
+ "serj-tankian": {
+  "id": 110,
+  "name": "Serj Tankian",
+  "hash": "f62e2eb5a3f4",
+  "modified": "2026-11-26"
+ },
+ "portishead": {
+  "id": 111,
+  "name": "Portishead",
+  "hash": "3fc0cb7ff55b",
+  "modified": "2026-11-26"
+ },
+ "robyn": {
+  "id": 116,
+  "name": "Robyn",
+  "hash": "9da305be6e43",
+  "modified": "2026-11-26"
+ },
+ "refused": {
+  "id": 119,
+  "name": "Refused",
+  "hash": "8ce4b25092aa",
+  "modified": "2026-11-26"
+ },
+ "gil-scott-heron": {
+  "id": 120,
+  "name": "Gil Scott-Heron",
+  "hash": "ff70c2773527",
+  "modified": "2026-11-26"
+ },
+ "talib-kweli": {
+  "id": 121,
+  "name": "Talib Kweli",
+  "hash": "367eff5f1faf",
+  "modified": "2026-11-26"
+ },
+ "boots-riley": {
+  "id": 123,
+  "name": "Boots Riley",
+  "hash": "4768e3c20f89",
+  "modified": "2026-11-26"
+ },
+ "run-the-jewels": {
+  "id": 124,
+  "name": "Run the Jewels",
+  "hash": "0a70e3bf9e69",
+  "modified": "2026-11-26"
+ },
+ "noname": {
+  "id": 125,
+  "name": "Noname",
+  "hash": "6e270aaba6df",
+  "modified": "2026-11-26"
+ },
+ "alice-walker": {
+  "id": 126,
+  "name": "Alice Walker",
+  "hash": "326c010b15cd",
+  "modified": "2026-11-26"
+ },
+ "naomi-klein": {
+  "id": 127,
+  "name": "Naomi Klein",
+  "hash": "1afacce6e29c",
+  "modified": "2026-11-26"
+ },
+ "arundhati-roy": {
+  "id": 128,
+  "name": "Arundhati Roy",
+  "hash": "650d13b80f0f",
+  "modified": "2026-11-26"
+ },
+ "iain-banks": {
+  "id": 130,
+  "name": "Iain Banks",
+  "hash": "987e580218e9",
+  "modified": "2026-11-26"
+ },
+ "sally-rooney": {
+  "id": 131,
+  "name": "Sally Rooney",
+  "hash": "eb9581246265",
+  "modified": "2026-11-26"
+ },
+ "annie-ernaux": {
+  "id": 133,
+  "name": "Annie Ernaux",
+  "hash": "d593aa009feb",
+  "modified": "2026-11-26"
+ },
+ "julian-casablancas": {
+  "id": 139,
+  "name": "Julian Casablancas",
+  "hash": "82cafc65a9b3",
+  "modified": "2026-11-26"
+ },
+ "sinead-oconnor": {
+  "id": 140,
+  "name": "Sinéad O'Connor",
+  "hash": "19e597bb08bd",
+  "modified": "2026-11-26"
+ },
+ "system-of-a-down": {
+  "id": 141,
+  "name": "System of a Down",
+  "hash": "2e1ee79c5bc2",
+  "modified": "2026-11-26"
+ },
+ "nigel-kennedy": {
+  "id": 142,
+  "name": "Nigel Kennedy",
+  "hash": "71ee425fd9cb",
+  "modified": "2026-11-26"
+ },
+ "liam-cunningham": {
+  "id": 153,
+  "name": "Liam Cunningham",
+  "hash": "f2ae014f818d",
+  "modified": "2026-11-26"
+ },
+ "cat-power": {
+  "id": 154,
+  "name": "Cat Power",
+  "hash": "abed699f8878",
+  "modified": "2026-11-26"
+ },
+ "devendra-banhart": {
+  "id": 155,
+  "name": "Devendra Banhart",
+  "hash": "477e78ca70c1",
+  "modified": "2026-11-26"
+ },
+ "cassandra-wilson": {
+  "id": 156,
+  "name": "Cassandra Wilson",
+  "hash": "283891d56397",
+  "modified": "2026-11-26"
+ },
+ "godspeed-you-black-emperor": {
+  "id": 161,
+  "name": "Godspeed You! Black Emperor",
+  "hash": "583f36fee1f7",
+  "modified": "2026-11-26"
+ },
+ "a-silver-mt-zion": {
+  "id": 162,
+  "name": "A Silver Mt. Zion",
+  "hash": "ce1673910f08",
+  "modified": "2026-11-26"
+ },
+ "owen-pallett": {
+  "id": 170,
+  "name": "Owen Pallett",
+  "hash": "dbae302a5162",
+  "modified": "2026-11-26"
+ },
+ "lowkey": {
+  "id": 175,
+  "name": "Lowkey",
+  "hash": "e87dd36cb259",
+  "modified": "2026-11-26"
+ },
+ "kae-tempest": {
+  "id": 177,
+  "name": "Kae Tempest",
+  "hash": "b82c4d1e0ee0",
+  "modified": "2026-11-26"
+ },
+ "macklemore": {
+  "id": 181,
+  "name": "Macklemore",
+  "hash": "d4b47df1791b",
+  "modified": "2026-11-26"
+ },
+ "kehlani": {
+  "id": 182,
+  "name": "Kehlani",
+  "hash": "37833d70fe4d",
+  "modified": "2026-11-26"
+ },
+ "rage-against-the-machine": {
+  "id": 184,
+  "name": "Rage Against the Machine",
+  "hash": "9731ecf2fd79",
+  "modified": "2026-11-26"
+ },
+ "lupe-fiasco": {
+  "id": 185,
+  "name": "Lupe Fiasco",
+  "hash": "31eab3fe296f",
+  "modified": "2026-11-26"
+ },
+ "santana": {
+  "id": 187,
+  "name": "Santana",
+  "hash": "4de1f62a8f2d",
+  "modified": "2026-11-26"
+ },
+ "vic-mensa": {
+  "id": 192,
+  "name": "Vic Mensa",
+  "hash": "e01d1ce4593d",
+  "modified": "2026-11-26"
+ },
+ "yasiin-bey": {
+  "id": 193,
+  "name": "Yasiin Bey",
+  "hash": "7897cb6b8fc0",
+  "modified": "2026-11-26"
+ },
+ "wallace-shawn": {
+  "id": 226,
+  "name": "Wallace Shawn",
+  "hash": "1dd9935b9c0b",
+  "modified": "2026-11-26"
+ },
+ "alexei-sayle": {
+  "id": 227,
+  "name": "Alexei Sayle",
+  "hash": "c004738b2afb",
+  "modified": "2026-11-26"
+ },
+ "harold-pinter": {
+  "id": 232,
+  "name": "Harold Pinter",
+  "hash": "d350e341efb1",
+  "modified": "2026-11-26"
+ },
+ "kamila-shamsie": {
+  "id": 233,
+  "name": "Kamila Shamsie",
+  "hash": "07bdfebbd3f0",
+  "modified": "2026-11-26"
+ },
+ "mohammed-el-kurd": {
+  "id": 234,
+  "name": "Mohammed El-Kurd",
+  "hash": "6ae27d0aa368",
+  "modified": "2026-11-26"
+ },
+ "michael-rosen": {
+  "id": 237,
+  "name": "Michael Rosen",
+  "hash": "63184a42c1aa",
+  "modified": "2026-11-26"
+ },
+ "paul-weller": {
+  "id": 241,
+  "name": "Paul Weller",
+  "hash": "12266697d47a",
+  "modified": "2026-11-26"
+ },
+ "sigur-ros": {
+  "id": 242,
+  "name": "Sigur Ros",
+  "hash": "24a57351e544",
+  "modified": "2026-11-26"
+ },
+ "paloma-faith": {
+  "id": 243,
+  "name": "Paloma Faith",
+  "hash": "935a8c7e47da",
+  "modified": "2026-11-26"
+ },
+ "nadine-shah": {
+  "id": 244,
+  "name": "Nadine Shah",
+  "hash": "15c81288d9f8",
+  "modified": "2026-11-26"
+ },
+ "my-bloody-valentine": {
+  "id": 246,
+  "name": "My Bloody Valentine",
+  "hash": "b17411430c49",
+  "modified": "2026-11-26"
+ },
+ "shygirl": {
+  "id": 247,
+  "name": "Shygirl",
+  "hash": "84135645d0fb",
+  "modified": "2026-11-26"
+ },
+ "paris-paloma": {
+  "id": 248,
+  "name": "Paris Paloma",
+  "hash": "eb89a16189a5",
+  "modified": "2026-11-26"
+ },
+ "joaquin-phoenix": {
+  "id": 250,
+  "name": "Joaquin Phoenix",
+  "hash": "943b99cc72b1",
+  "modified": "2026-11-26"
+ },
+ "emma-stone": {
+  "id": 251,
+  "name": "Emma Stone",
+  "hash": "8f3eb145b2ca",
+  "modified": "2026-11-26"
+ },
+ "ayo-edebiri": {
+  "id": 252,
+  "name": "Ayo Edebiri",
+  "hash": "f55930cd3ff7",
+  "modified": "2026-11-26"
+ },
+ "andrew-garfield": {
+  "id": 253,
+  "name": "Andrew Garfield",
+  "hash": "1947aee3d300",
+  "modified": "2026-11-26"
+ },
+ "nicola-coughlan": {
+  "id": 255,
+  "name": "Nicola Coughlan",
+  "hash": "6911535d3836",
+  "modified": "2026-11-26"
+ },
+ "lily-gladstone": {
+  "id": 256,
+  "name": "Lily Gladstone",
+  "hash": "4aca80772407",
+  "modified": "2026-11-26"
+ },
+ "elliot-page": {
+  "id": 257,
+  "name": "Elliot Page",
+  "hash": "fef5e5339ec1",
+  "modified": "2026-11-26"
+ },
+ "ilana-glazer": {
+  "id": 258,
+  "name": "Ilana Glazer",
+  "hash": "3506091eb198",
+  "modified": "2026-11-26"
+ },
+ "jonathan-glazer": {
+  "id": 259,
+  "name": "Jonathan Glazer",
+  "hash": "31c14de5e033",
+  "modified": "2026-11-26"
+ },
+ "rooney-mara": {
+  "id": 260,
+  "name": "Rooney Mara",
+  "hash": "7a1c2ac3a27f",
+  "modified": "2026-11-26"
+ },
+ "harris-dickinson": {
+  "id": 261,
+  "name": "Harris Dickinson",
+  "hash": "b1632132a2af",
+  "modified": "2026-11-26"
+ },
+ "rebecca-hall": {
+  "id": 262,
+  "name": "Rebecca Hall",
+  "hash": "7e6c10033366",
+  "modified": "2026-11-26"
+ },
+ "gael-garcia-bernal": {
+  "id": 263,
+  "name": "Gael Garcia Bernal",
+  "hash": "d51630dd0081",
+  "modified": "2026-11-26"
+ },
+ "rachel-kushner": {
+  "id": 264,
+  "name": "Rachel Kushner",
+  "hash": "57f5544a0320",
+  "modified": "2026-11-26"
+ },
+ "ocean-vuong": {
+  "id": 265,
+  "name": "Ocean Vuong",
+  "hash": "4036fa6df2a3",
+  "modified": "2026-11-26"
+ },
+ "viet-thanh-nguyen": {
+  "id": 266,
+  "name": "Viet Thanh Nguyen",
+  "hash": "482bed1a6a70",
+  "modified": "2026-11-26"
+ },
+ "dave-matthews-band": {
+  "id": 268,
+  "name": "Dave Matthews Band",
+  "hash": "1095e518cf80",
+  "modified": "2026-11-26"
+ },
+ "billie-eilish": {
+  "id": 269,
+  "name": "Billie Eilish",
+  "hash": "a53d37ae59c2",
+  "modified": "2026-11-26"
+ },
+ "halsey": {
+  "id": 270,
+  "name": "Halsey",
+  "hash": "bb7c9c179233",
+  "modified": "2026-11-26"
+ },
+ "lizzo": {
+  "id": 274,
+  "name": "Lizzo",
+  "hash": "a4e21c95872f",
+  "modified": "2026-11-26"
+ },
+ "wolf-alice": {
+  "id": 277,
+  "name": "Wolf Alice",
+  "hash": "c119b173730a",
+  "modified": "2026-11-26"
+ },
+ "muna": {
+  "id": 278,
+  "name": "MUNA",
+  "hash": "2460d2ff7dcb",
+  "modified": "2026-11-26"
+ },
+ "of-monsters-and-men": {
+  "id": 282,
+  "name": "Of Monsters and Men",
+  "hash": "9c47edfa988c",
+  "modified": "2026-11-26"
+ },
+ "green-day": {
+  "id": 283,
+  "name": "Green Day",
+  "hash": "0bd51ffe7668",
+  "modified": "2026-11-26"
+ },
+ "damon-albarn": {
+  "id": 342,
+  "name": "Damon Albarn",
+  "hash": "ba3a130e7a24",
+  "modified": "2026-11-26"
+ },
+ "nilufer-yanya": {
+  "id": 286,
+  "name": "Nilüfer Yanya",
+  "hash": "a8fbc78f5af8",
+  "modified": "2026-11-26"
+ },
+ "nao": {
+  "id": 287,
+  "name": "NAO",
+  "hash": "6df24420d32c",
+  "modified": "2026-11-26"
+ },
+ "nick-cave": {
+  "id": 288,
+  "name": "Nick Cave",
+  "hash": "05259cae97cb",
+  "modified": "2026-11-26"
+ },
+ "jk-rowling": {
+  "id": 289,
+  "name": "J.K. Rowling",
+  "hash": "e86cdb885f74",
+  "modified": "2026-11-26"
+ },
+ "scarlett-johansson": {
+  "id": 290,
+  "name": "Scarlett Johansson",
+  "hash": "5177e2a9d6c7",
+  "modified": "2026-11-26"
+ },
+ "ian-mcewan": {
+  "id": 291,
+  "name": "Ian McEwan",
+  "hash": "2a1dacdb70f7",
+  "modified": "2026-11-26"
+ },
+ "jerry-seinfeld": {
+  "id": 293,
+  "name": "Jerry Seinfeld",
+  "hash": "2b64a7bcb5e4",
+  "modified": "2026-11-26"
+ },
+ "helen-mirren": {
+  "id": 295,
+  "name": "Helen Mirren",
+  "hash": "ffe14af49e45",
+  "modified": "2026-11-26"
+ },
+ "mark-hamill": {
+  "id": 296,
+  "name": "Mark Hamill",
+  "hash": "ac7db24a5e98",
+  "modified": "2026-11-26"
+ },
+ "jamie-lee-curtis": {
+  "id": 297,
+  "name": "Jamie Lee Curtis",
+  "hash": "f0f91443cc4f",
+  "modified": "2026-11-26"
+ },
+ "gene-simmons": {
+  "id": 298,
+  "name": "Gene Simmons",
+  "hash": "6defb846cf86",
+  "modified": "2026-11-26"
+ },
+ "ozzy-osbourne": {
+  "id": 344,
+  "name": "Ozzy Osbourne",
+  "hash": "32b44a9e76dc",
+  "modified": "2026-11-26"
+ },
+ "david-draiman": {
+  "id": 345,
+  "name": "David Draiman",
+  "hash": "7bd9a5be8a91",
+  "modified": "2026-11-26"
+ },
+ "liev-schreiber": {
+  "id": 300,
+  "name": "Liev Schreiber",
+  "hash": "ddf105022eb8",
+  "modified": "2026-11-26"
+ },
+ "mayim-bialik": {
+  "id": 302,
+  "name": "Mayim Bialik",
+  "hash": "8094648efe32",
+  "modified": "2026-11-26"
+ },
+ "howard-jacobson": {
+  "id": 303,
+  "name": "Howard Jacobson",
+  "hash": "f3a4321efa8a",
+  "modified": "2026-11-26"
+ },
+ "david-mamet": {
+  "id": 304,
+  "name": "David Mamet",
+  "hash": "ac76785f1333",
+  "modified": "2026-11-26"
+ },
+ "elfriede-jelinek": {
+  "id": 305,
+  "name": "Elfriede Jelinek",
+  "hash": "9838f49975af",
+  "modified": "2026-11-26"
+ },
+ "herta-muller": {
+  "id": 306,
+  "name": "Herta Müller",
+  "hash": "1eb24f4f3974",
+  "modified": "2026-11-26"
+ },
+ "paul-mccartney": {
+  "id": 307,
+  "name": "Paul McCartney",
+  "hash": "0678905f53d9",
+  "modified": "2026-11-26"
+ },
+ "madonna": {
+  "id": 309,
+  "name": "Madonna",
+  "hash": "28a2aac00ade",
+  "modified": "2026-11-26"
+ },
+ "alicia-keys": {
+  "id": 310,
+  "name": "Alicia Keys",
+  "hash": "5ed29cd193bd",
+  "modified": "2026-11-26"
+ },
+ "red-hot-chili-peppers": {
+  "id": 311,
+  "name": "Red Hot Chili Peppers",
+  "hash": "ba0c31f6b2de",
+  "modified": "2026-11-26"
+ },
+ "justin-bieber": {
+  "id": 312,
+  "name": "Justin Bieber",
+  "hash": "afc038824e18",
+  "modified": "2026-11-26"
+ },
+ "elton-john": {
+  "id": 314,
+  "name": "Elton John",
+  "hash": "5d03531940ab",
+  "modified": "2026-11-26"
+ },
+ "lady-gaga": {
+  "id": 315,
+  "name": "Lady Gaga",
+  "hash": "b641a084440d",
+  "modified": "2026-11-26"
+ },
+ "tom-jones": {
+  "id": 316,
+  "name": "Tom Jones",
+  "hash": "0971fa84bd36",
+  "modified": "2026-11-26"
+ },
+ "guns-n-roses": {
+  "id": 317,
+  "name": "Guns N' Roses",
+  "hash": "57ad0662c2db",
+  "modified": "2026-11-26"
+ },
+ "bon-jovi": {
+  "id": 318,
+  "name": "Bon Jovi",
+  "hash": "5943dad8d727",
+  "modified": "2026-11-26"
+ },
+ "rolling-stones": {
+  "id": 319,
+  "name": "Rolling Stones",
+  "hash": "9066f13d7670",
+  "modified": "2026-11-26"
+ },
+ "maroon-5": {
+  "id": 320,
+  "name": "Maroon 5",
+  "hash": "885647454f37",
+  "modified": "2026-11-26"
+ },
+ "chris-pine": {
+  "id": 321,
+  "name": "Chris Pine",
+  "hash": "426bcb833457",
+  "modified": "2026-11-26"
+ },
+ "jason-alexander": {
+  "id": 322,
+  "name": "Jason Alexander",
+  "hash": "7dafa0b697f4",
+  "modified": "2026-11-26"
+ },
+ "amy-schumer": {
+  "id": 323,
+  "name": "Amy Schumer",
+  "hash": "1e0e44f63d0d",
+  "modified": "2026-11-26"
+ },
+ "mila-kunis": {
+  "id": 324,
+  "name": "Mila Kunis",
+  "hash": "5e8e853b4c09",
+  "modified": "2026-11-26"
+ },
+ "sharon-osbourne": {
+  "id": 326,
+  "name": "Sharon Osbourne",
+  "hash": "d46ca5dfae3e",
+  "modified": "2026-11-26"
+ },
+ "emmy-rossum": {
+  "id": 327,
+  "name": "Emmy Rossum",
+  "hash": "b197b84157dd",
+  "modified": "2026-11-26"
+ },
+ "patricia-heaton": {
+  "id": 328,
+  "name": "Patricia Heaton",
+  "hash": "e3650cff7e1d",
+  "modified": "2026-11-26"
+ },
+ "diane-warren": {
+  "id": 329,
+  "name": "Diane Warren",
+  "hash": "7682c9efd342",
+  "modified": "2026-11-26"
+ },
+ "jennifer-jason-leigh": {
+  "id": 330,
+  "name": "Jennifer Jason Leigh",
+  "hash": "69f96091fb4c",
+  "modified": "2026-11-26"
+ },
+ "selma-blair": {
+  "id": 331,
+  "name": "Selma Blair",
+  "hash": "d6bff27e451e",
+  "modified": "2026-11-26"
+ },
+ "ginnifer-goodwin": {
+  "id": 332,
+  "name": "Ginnifer Goodwin",
+  "hash": "a6af5fdeffe9",
+  "modified": "2026-11-26"
+ },
+ "jeremy-piven": {
+  "id": 333,
+  "name": "Jeremy Piven",
+  "hash": "7c9acb4b8856",
+  "modified": "2026-11-26"
+ },
+ "joshua-malina": {
+  "id": 334,
+  "name": "Joshua Malina",
+  "hash": "364daab523d8",
+  "modified": "2026-11-26"
+ },
+ "matisyahu": {
+  "id": 335,
+  "name": "Matisyahu",
+  "hash": "eeab5dceb3c5",
+  "modified": "2026-11-26"
+ },
+ "tracy-ann-oberman": {
+  "id": 336,
+  "name": "Tracy-Ann Oberman",
+  "hash": "14a39fa663d8",
+  "modified": "2026-11-26"
+ },
+ "dame-maureen-lipman": {
+  "id": 337,
+  "name": "Dame Maureen Lipman",
+  "hash": "031f9d7ec13d",
+  "modified": "2026-11-26"
+ },
+ "anthony-edwards": {
+  "id": 338,
+  "name": "Anthony Edwards",
+  "hash": "198b3833e17d",
+  "modified": "2026-11-26"
+ },
+ "gregg-sulkin": {
+  "id": 339,
+  "name": "Gregg Sulkin",
+  "hash": "09313debfe80",
+  "modified": "2026-11-26"
+ },
+ "noa-tishby": {
+  "id": 340,
+  "name": "Noa Tishby",
+  "hash": "2ac519f6b070",
+  "modified": "2026-11-26"
+ },
+ "jerry-oconnell": {
+  "id": 341,
+  "name": "Jerry O'Connell",
+  "hash": "86fda9339ef1",
+  "modified": "2026-11-26"
+ },
+ "lankum": {
+  "id": 346,
+  "name": "Lankum",
+  "hash": "1d0914132900",
+  "modified": "2026-11-26"
+ },
+ "bob-vylan": {
+  "id": 354,
+  "name": "Bob Vylan",
+  "hash": "76088ea282c2",
+  "modified": "2026-11-26"
+ },
+ "hozier": {
+  "id": 355,
+  "name": "Hozier",
+  "hash": "1d056f894376",
+  "modified": "2026-11-26"
+ },
+ "ava-duvernay": {
+  "id": 356,
+  "name": "Ava DuVernay",
+  "hash": "98f0744abf65",
+  "modified": "2026-11-26"
+ },
+ "yorgos-lanthimos": {
+  "id": 357,
+  "name": "Yorgos Lanthimos",
+  "hash": "20af8f7dfe51",
+  "modified": "2026-11-26"
+ },
+ "joshua-oppenheimer": {
+  "id": 358,
+  "name": "Joshua Oppenheimer",
+  "hash": "f6fb3ad76475",
+  "modified": "2026-11-26"
+ },
+ "payal-kapadia": {
+  "id": 359,
+  "name": "Payal Kapadia",
+  "hash": "dbeebc9c3fd4",
+  "modified": "2026-11-26"
+ },
+ "josh-oconnor": {
+  "id": 360,
+  "name": "Josh O'Connor",
+  "hash": "1abb7f45e84c",
+  "modified": "2026-11-26"
+ },
+ "bowen-yang": {
+  "id": 361,
+  "name": "Bowen Yang",
+  "hash": "da1b38d73d20",
+  "modified": "2026-11-26"
+ },
+ "emma-darcy": {
+  "id": 362,
+  "name": "Emma D'Arcy",
+  "hash": "c42b6b84670e",
+  "modified": "2026-11-26"
+ },
+ "guy-pearce": {
+  "id": 363,
+  "name": "Guy Pearce",
+  "hash": "26fcece20df3",
+  "modified": "2026-11-26"
+ },
+ "aimee-lou-wood": {
+  "id": 364,
+  "name": "Aimee Lou Wood",
+  "hash": "1d45562c3665",
+  "modified": "2026-11-26"
+ },
+ "ebon-moss-bachrach": {
+  "id": 366,
+  "name": "Ebon Moss-Bachrach",
+  "hash": "c37757f46096",
+  "modified": "2026-11-26"
+ },
+ "peter-sarsgaard": {
+  "id": 367,
+  "name": "Peter Sarsgaard",
+  "hash": "7de2dc4d69b7",
+  "modified": "2026-11-26"
+ },
+ "melissa-barrera": {
+  "id": 369,
+  "name": "Melissa Barrera",
+  "hash": "77f8c841d8da",
+  "modified": "2026-11-26"
+ },
+ "hannah-einbinder": {
+  "id": 370,
+  "name": "Hannah Einbinder",
+  "hash": "c0e74d425de6",
+  "modified": "2026-11-26"
+ },
+ "adam-mckay": {
+  "id": 371,
+  "name": "Adam McKay",
+  "hash": "4774681b8f90",
+  "modified": "2026-11-26"
+ },
+ "emma-seligman": {
+  "id": 372,
+  "name": "Emma Seligman",
+  "hash": "e6bc467dcb76",
+  "modified": "2026-11-26"
+ },
+ "morgan-spector": {
+  "id": 373,
+  "name": "Morgan Spector",
+  "hash": "20ad8c355325",
+  "modified": "2026-11-26"
+ },
+ "jhumpa-lahiri": {
+  "id": 374,
+  "name": "Jhumpa Lahiri",
+  "hash": "e89a5c224e4c",
+  "modified": "2026-11-26"
+ },
+ "percival-everett": {
+  "id": 375,
+  "name": "Percival Everett",
+  "hash": "58111fb097c4",
+  "modified": "2026-11-26"
+ },
+ "jonathan-lethem": {
+  "id": 376,
+  "name": "Jonathan Lethem",
+  "hash": "b5d152d2d01a",
+  "modified": "2026-11-26"
+ },
+ "obongjayar": {
+  "id": 377,
+  "name": "Obongjayar",
+  "hash": "14340869caae",
+  "modified": "2026-11-26"
+ },
+ "debra-messing": {
+  "id": 379,
+  "name": "Debra Messing",
+  "hash": "2f0087e56156",
+  "modified": "2026-11-26"
+ },
+ "gal-gadot": {
+  "id": 381,
+  "name": "Gal Gadot",
+  "hash": "0bb476faafa0",
+  "modified": "2026-11-26"
+ },
+ "boy-george": {
+  "id": 383,
+  "name": "Boy George",
+  "hash": "27b44249c340",
+  "modified": "2026-11-26"
+ },
+ "eric-clapton": {
+  "id": 384,
+  "name": "Eric Clapton",
+  "hash": "36e319d871a9",
+  "modified": "2026-11-26"
+ },
+ "u2": {
+  "id": 385,
+  "name": "U2",
+  "hash": "3a8ad74e55e8",
+  "modified": "2026-11-26"
+ },
+ "finneas": {
+  "id": 386,
+  "name": "Finneas",
+  "hash": "2a18e4bac7d3",
+  "modified": "2026-11-26"
+ },
+ "beoga": {
+  "id": 387,
+  "name": "Beoga",
+  "hash": "8d2335b2d952",
+  "modified": "2026-11-26"
+ },
+ "andrea-bocelli": {
+  "id": 389,
+  "name": "Andrea Bocelli",
+  "hash": "65251483a883",
+  "modified": "2026-11-26"
+ }
+}

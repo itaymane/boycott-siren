@@ -209,7 +209,7 @@
 
   // ── Contact functions ──
   if (!window.openContact) {
-    window.openContact = function (category) {
+    window.openContact = function (category, message) {
       var overlay = document.getElementById('snOverlay');
       if (!overlay) return;
       // Reset form
@@ -223,6 +223,10 @@
       if (category) {
         var sel = document.getElementById('snCategory');
         if (sel) sel.value = category;
+      }
+      if (message) {
+        var ta = overlay.querySelector('textarea[name="message"]');
+        if (ta) ta.value = message;
       }
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
