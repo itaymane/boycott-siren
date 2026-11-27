@@ -171,6 +171,7 @@
   var footerHTML = '<div class="sn-footer" id="sn-footer">'
     + '<span class="sn-footer-copy">© 2026 ArtSiren</span>'
     + '<a href="/about.html" class="sn-footer-link">About</a>'
+    + '<a href="/updates/" class="sn-footer-link">Updates</a>'
     + '<a href="/terms.html" class="sn-footer-link">Terms of Use</a>'
     + '<a href="/privacy.html" class="sn-footer-link">Privacy Policy</a>'
     + '<a href="#" onclick="openContact();return false;" class="sn-footer-link">Contact</a>'

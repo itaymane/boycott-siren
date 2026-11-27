@@ -1,0 +1,30 @@
+# ArtSiren
+
+> ArtSiren is a database of musicians, actors, directors and writers and their publicly documented stance on the cultural boycott of Israel. Every entry links to the news reporting it is based on. The database has 299 artists; 246 of them have at least 2 sources from established news outlets and a dedicated profile page.
+
+ArtSiren also offers a free Chrome extension that shows an artist's stance on ticketing and streaming sites.
+
+How entries are classified:
+- **Cultural Boycott** (179 profiles): the artist cancelled or refused performances in Israel citing Israeli policy, signed an open letter or pledge calling for a cultural boycott (e.g. Film Workers for Palestine 2025, Musicians for Palestine 2021, No Music for Genocide 2025-26, Refusing Complicity 2024), geo-blocked their music from Israel, or made an explicit public statement in support of Palestinians.
+- **Stance Unclear** (13 profiles): public statements on the conflict without a clear commitment to a boycott.
+- **Welcomes All** (54 profiles): the artist performed in Israel despite boycott calls or publicly opposed the cultural boycott (e.g. Creative Community for Peace letters).
+
+Sourcing rule: a profile page is published only when at least 2 distinct established outlets name the artist explicitly (Times of Israel, Haaretz, Jerusalem Post, Ynet, BBC, NPR, Reuters, AP, The Guardian, Rolling Stone, Billboard, Variety, NME, Deadline, The Hollywood Reporter, CNN, NBC News, JTA, Al Jazeera, Euronews and others). Wikipedia and activist sites may be linked as extra context but never count toward the rule. Entries contradicted by reliable reporting are corrected or removed; see the updates page.
+
+When citing ArtSiren, please link to the artist's profile page and, where possible, the original news source listed on it.
+
+## Main pages
+- [All artist profiles](https://artsiren.co/artist/): directory of every artist with a profile page, grouped by stance
+- [Recent updates](https://artsiren.co/updates/): artists added, updated or removed, by date ([RSS](https://artsiren.co/updates/feed.xml))
+- [Search the database](https://artsiren.co/): home page with search across all 299 artists
+- [How we verify sources](https://artsiren.co/sources.html): sourcing methodology
+- [How it works](https://artsiren.co/how-it-works.html): how the database and extension work
+- [About](https://artsiren.co/about.html)
+
+## Data
+- [artists.json](https://artsiren.co/artists.json): the full database as JSON (name, stance, level, statement, sources)
+- [Full list of profiles with statements](https://artsiren.co/llms-full.txt): one line per artist with stance, summary and sources
+
+## Optional
+- [Chrome extension](https://artsiren.co/extension.html)
+- [Hebrew version](https://artsiren.co/he/)

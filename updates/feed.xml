@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>ArtSiren: database updates</title>
+<link>https://artsiren.co/updates/</link>
+<atom:link href="https://artsiren.co/updates/feed.xml" rel="self" type="application/rss+xml"/>
+<description>Artists added, updated or removed from the ArtSiren database.</description>
+<language>en</language>
+<item>
+<title>26 November 2026: 81 updated, 5 removed</title>
+<link>https://artsiren.co/updates/#d-2026-11-26</link>
+<guid isPermaLink="false">artsiren-updates-2026-11-26</guid>
+<pubDate>Thu, 26 Nov 2026 12:00:00 GMT</pubDate>
+<description>Updated: Adrienne Rich, Ahdaf Soueif, Alexei Sayle, Alice Walker, Alicia Keys, Andrea Bocelli, Annie Ernaux, Anthony Edwards, Arundhati Roy, Beoga, Bob Vylan, Bon Jovi, Cat Power, Charlotte Church, Chris Pine, Chuck D, Cynthia Nixon, Damon Albarn, Danny Glover, Debra Winger, Elfriede Jelinek, Elton John, Eric Clapton, Gil Scott-Heron, Green Day, Guns N' Roses, Harold Pinter, Herta Müller, Howard Jacobson, Hozier, Iain Banks, Javier Bardem, John Berger, John Cusack, Juliet Stevenson, Kae Tempest, Kamila Shamsie, Khalid Abdalla, Lankum, Lena Headey, Liam Cunningham, Lowkey, Madonna, Maxine Peake, Mia Farrow, Michael Rosen, Miriam Margolyes, MUNA, Nadine Shah, NAO, Naomi Klein, Nick Cave, Nigel Kennedy, Nilüfer Yanya, Noa Tishby, Noname, Ocean Vuong, Of Monsters and Men, Ozzy Osbourne, Paloma Faith, Paul McCartney, Paul Weller, Penélope Cruz, Peter Capaldi, Peter Sarsgaard, Rachel Kushner, Refused, Robyn, Rolling Stones, Sharon Osbourne, Sigur Ros, Sinéad O'Connor, Steve Coogan, Talib Kweli, Thurston Moore, Tracy-Ann Oberman, Vic Mensa, Viet Thanh Nguyen, Viggo Mortensen, Wolf Alice, Yasiin Bey
+Removed after review: Little Simz, Radiohead, Sam Smith, Sleaford Mods, Sonic Youth</description>
+</item>
+<item>
+<title>24 November 2026: 43 updated</title>
+<link>https://artsiren.co/updates/#d-2026-11-24</link>
+<guid isPermaLink="false">artsiren-updates-2026-11-24</guid>
+<pubDate>Tue, 24 Nov 2026 12:00:00 GMT</pubDate>
+<description>Updated: Aimee Lou Wood, Amy Schumer, Andrew Garfield, Anthony Edwards, Asif Kapadia, Boots Riley, Bowen Yang, Cynthia Nixon, Dame Maureen Lipman, Diane Warren, Ebon Moss-Bachrach, Elliot Page, Emma D'Arcy, Emmy Rossum, Gael Garcia Bernal, Ginnifer Goodwin, Gregg Sulkin, Guy Pearce, Javier Bardem, Jeremy Piven, Joe Alwyn, Josh O'Connor, Joshua Malina, Joshua Oppenheimer, Ken Loach, Lily Gladstone, Mark Ruffalo, Matisyahu, Maxine Peake, Mike Leigh, Mila Kunis, Miriam Margolyes, Olivia Colman, Paapa Essiedu, Patricia Heaton, Payal Kapadia, Rebecca Hall, Riz Ahmed, Selma Blair, Sharon Osbourne, Susan Sarandon, Tilda Swinton, Tracy-Ann Oberman</description>
+</item>
+<item>
+<title>8 November 2026: 4 added, 2 updated</title>
+<link>https://artsiren.co/updates/#d-2026-11-08</link>
+<guid isPermaLink="false">artsiren-updates-2026-11-08</guid>
+<pubDate>Sun, 08 Nov 2026 12:00:00 GMT</pubDate>
+<description>Added: Andrea Bocelli, Beoga, Finneas, Russ Millions
+Updated: Boy George, Macklemore</description>
+</item>
+<item>
+<title>5 October 2026: 1 added</title>
+<link>https://artsiren.co/updates/#d-2026-10-05</link>
+<guid isPermaLink="false">artsiren-updates-2026-10-05</guid>
+<pubDate>Mon, 05 Oct 2026 12:00:00 GMT</pubDate>
+<description>Added: U2</description>
+</item>
+<item>
+<title>14 September 2026: 5 updated</title>
+<link>https://artsiren.co/updates/#d-2026-09-14</link>
+<guid isPermaLink="false">artsiren-updates-2026-09-14</guid>
+<pubDate>Mon, 14 Sep 2026 12:00:00 GMT</pubDate>
+<description>Updated: Ahdaf Soueif, Aimee Lou Wood, Debra Winger, Lankum, Rolling Stones</description>
+</item>
+</channel>
+</rss>

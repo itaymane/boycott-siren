@@ -12,7 +12,10 @@
  *   artist/<slug>/index.html   one page per qualifying artist
  *   artist/index.html          directory of all artist pages
  *   artist/manifest.json       content hash + last-changed date per page (keeps lastmod stable)
- *   sitemap.xml                static pages + directory + every artist page
+ *   sitemap.xml                static pages + directory + updates + every artist page
+ *   updates.json               changelog (added/updated/removed per day), appended by diffing the manifest
+ *   updates/index.html, updates/feed.xml   recent-updates page and RSS feed
+ *   llms.txt, llms-full.txt    site summary and full profile list for AI tools (llmstxt.org)
  *   index.html                 rewrites the static name list links to /artist/<slug>/ and the
  *                              ARTIST_PAGES map used by the modal's "Full profile" link
  *
@@ -113,10 +116,51 @@ for (const a of qualifying) {
   used.add(s); slugs.set(a.id, s);
 }
 
-// ── Manifest (stable lastmod) ────────────────────────────────────────────────
+// ── Manifest (stable lastmod + change detection) ─────────────────────────────
+// artist/manifest.json = { artists: { <id>: { name, slug, hash, modified, f: {stance, statement, sources} } } }
+// `hash/modified` track the rendered page (sitemap lastmod); `f` holds per-field hashes of the
+// database entry, diffed against the previous run to append entries to updates.json.
 const manifestPath = path.join(OUT_DIR, 'manifest.json');
-const oldManifest = fs.existsSync(manifestPath) ? JSON.parse(fs.readFileSync(manifestPath, 'utf8')) : {};
-const manifest = {};
+const oldRaw = fs.existsSync(manifestPath) ? JSON.parse(fs.readFileSync(manifestPath, 'utf8')) : null;
+const oldArtists = oldRaw && oldRaw.artists ? oldRaw.artists : null;
+const legacyBySlug = oldRaw && !oldRaw.artists ? oldRaw : {};
+const manifest = { artists: {} };
+const h12 = v => crypto.createHash('sha1').update(JSON.stringify(v)).digest('hex').slice(0, 12);
+const fieldHashes = a => ({
+  stance: h12([a.stance, a.level || '']),
+  statement: h12(a.statement),
+  sources: h12((a.sources || []).map(s => s.url))
+});
+
+// ── Changelog (updates.json) ─────────────────────────────────────────────────
+const updatesPath = path.join(ROOT, 'updates.json');
+let updates = fs.existsSync(updatesPath) ? JSON.parse(fs.readFileSync(updatesPath, 'utf8')) : [];
+let newUpdates = 0;
+if (oldArtists) {
+  const pushU = u => {
+    // collapse repeat runs on the same day into one entry per artist
+    const i = updates.findIndex(x => x.date === u.date && x.id === u.id);
+    if (i >= 0) {
+      const e = updates[i];
+      if (u.type === 'removed') { if (e.type === 'added') updates.splice(i, 1); else updates[i] = u; return; }
+      if (e.type === 'updated' && u.changes) e.changes = [...new Set([...e.changes, ...u.changes])];
+      return;
+    }
+    updates.unshift(u); newUpdates++;
+  };
+  for (const a of DB) {
+    const prev = oldArtists[a.id];
+    if (!prev) { pushU({ date: TODAY, type: 'added', id: a.id, name: a.name }); continue; }
+    const f = fieldHashes(a);
+    const changes = ['stance', 'statement', 'sources'].filter(k => prev.f && prev.f[k] !== f[k]);
+    if (changes.length) pushU({ date: TODAY, type: 'updated', id: a.id, name: a.name, changes });
+  }
+  const ids = new Set(DB.map(a => a.id));
+  for (const [id, prev] of Object.entries(oldArtists)) {
+    if (!ids.has(Number(id)) && !DB.some(a => a.name === prev.name)) pushU({ date: TODAY, type: 'removed', id: Number(id), name: prev.name });
+  }
+  updates.sort((x, y) => y.date.localeCompare(x.date) || x.name.localeCompare(y.name));
+}
 
 // ── Shared page chrome ───────────────────────────────────────────────────────
 const CSS = `
@@ -159,6 +203,7 @@ h2{font-size:1.15rem;margin:1.6rem 0 .6rem}
 .dir-list{columns:3 200px;column-gap:1.5rem;list-style:none;font-size:.92rem}
 .dir-list li{break-inside:avoid;padding:.15rem 0}
 .dir-list a{text-decoration:none;color:var(--text)}.dir-list a:hover{color:var(--blue)}
+.dir-group p{margin:.4rem 0;font-size:.92rem}.dir-group p a{text-decoration:none}.dir-group p a:hover{text-decoration:underline}
 .note{font-size:.82rem;color:var(--muted)}
 @media(max-width:560px){.card{padding:1.2rem}h1{font-size:1.4rem}.avatar,.initials{width:64px;height:64px;font-size:1.2rem}}
 `;
@@ -233,10 +278,10 @@ function artistPage(a) {
     : `Does ${a.name} Boycott Israel? Stance and Sources | ArtSiren`;
   const description = metaDescription(a, st);
 
-  const hash = crypto.createHash('sha1').update(JSON.stringify([a.name, a.stance, a.level, a.category, a.statement, sources.map(s => s.url), a.image])).digest('hex').slice(0, 12);
-  const prev = oldManifest[slug];
-  const modified = prev && prev.hash === hash ? prev.modified : TODAY;
-  manifest[slug] = { id: a.id, name: a.name, hash, modified };
+  const hash = h12([a.name, a.stance, a.level, a.category, a.statement, sources.map(s => s.url), a.image]);
+  const prev = oldArtists ? oldArtists[a.id] : legacyBySlug[slug];
+  const modified = prev && prev.hash === hash && prev.modified ? prev.modified : TODAY;
+  manifest.artists[a.id] = { name: a.name, slug, hash, modified, f: fieldHashes(a) };
 
   const jsonld = {
     '@context': 'https://schema.org',
@@ -300,7 +345,7 @@ ${rel ? `<h2>Related artists</h2>
 ${rel}
 </ul>` : ''}
 
-<p class="note" style="margin-top:1.6rem">ArtSiren records publicly documented actions and statements by artists regarding Israel, with links to the original reporting. <a href="/sources.html">How we verify sources</a> · <a href="/artist/">All artists</a></p>
+<p class="note" style="margin-top:1.6rem">ArtSiren records publicly documented actions and statements by artists regarding Israel, with links to the original reporting. <a href="/sources.html">How we verify sources</a> · <a href="/artist/">All artists</a> · <a href="/updates/">Recent updates</a></p>
 </main>
 ` + FOOT;
 }
@@ -331,7 +376,7 @@ ${list.slice().sort((x, y) => x.name.localeCompare(y.name)).map(a => `<li><a hre
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">ArtSiren</a> › Artists</nav>
 <div class="card">
 <h1>All artists</h1>
-<p class="note" style="margin-top:.5rem">${qualifying.length} artists with at least ${MIN} independent news sources. Search the full database on the <a href="/">home page</a>.</p>
+<p class="note" style="margin-top:.5rem">${qualifying.length} artists with at least ${MIN} independent news sources. Search the full database on the <a href="/">home page</a> · <a href="/updates/">Recent updates</a></p>
 ${body}
 </div>
 </main>
@@ -356,23 +401,143 @@ for (const entry of fs.readdirSync(OUT_DIR, { withFileTypes: true })) {
   }
 }
 fs.writeFileSync(path.join(OUT_DIR, 'index.html'), directoryPage());
+// artists without a page still get a manifest entry so later runs can detect their changes
+for (const a of DB) {
+  if (!manifest.artists[a.id]) manifest.artists[a.id] = { name: a.name, slug: null, hash: null, modified: null, f: fieldHashes(a) };
+}
 fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 1) + '\n');
+fs.writeFileSync(updatesPath, JSON.stringify(updates, null, 1) + '\n');
+
+// ── Updates page + RSS feed ──────────────────────────────────────────────────
+const fmtDate = d => new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const slugById = new Map(qualifying.map(a => [a.id, slugs.get(a.id)]));
+const nameLink = u => slugById.has(u.id) ? `<a href="/artist/${slugById.get(u.id)}/">${esc(u.name)}</a>` : esc(u.name);
+const CHANGE_LABEL = { stance: 'stance', statement: 'statement', sources: 'sources' };
+const byDate = [];
+for (const u of updates) {
+  let g = byDate[byDate.length - 1];
+  if (!g || g.date !== u.date) { g = { date: u.date, added: [], updated: [], removed: [] }; byDate.push(g); }
+  g[u.type].push(u);
+}
+const shownDates = byDate.slice(0, 40);
+const daySummary = g => [g.added.length && `${g.added.length} added`, g.updated.length && `${g.updated.length} updated`, g.removed.length && `${g.removed.length} removed`].filter(Boolean).join(', ');
+
+function updatesPage() {
+  const title = 'Recent Updates to the Artist Database | ArtSiren';
+  const description = 'Artists recently added, updated or removed from the ArtSiren database of documented stances on the cultural boycott of Israel.';
+  const jsonld = { '@context': 'https://schema.org', '@type': 'CollectionPage', url: SITE + '/updates/', name: title, description,
+    dateModified: isoDateTime(byDate.length ? byDate[0].date : TODAY), isPartOf: { '@type': 'WebSite', name: 'ArtSiren', url: SITE + '/' } };
+  const body = shownDates.map(g => {
+    const parts = [];
+    if (g.added.length) parts.push(`<p><strong>Added:</strong> ${g.added.map(nameLink).join(', ')}</p>`);
+    if (g.updated.length) {
+      const sorted = g.updated.slice().sort((x, y) => x.name.localeCompare(y.name));
+      parts.push(`<p><strong>Updated:</strong> ${sorted.map(u => nameLink(u) + (u.changes && u.changes.length ? ` <span class="note">(${u.changes.map(c => CHANGE_LABEL[c] || c).join(', ')})</span>` : '')).join(', ')}</p>`);
+    }
+    if (g.removed.length) parts.push(`<p><strong>Removed after review:</strong> ${g.removed.map(u => esc(u.name)).join(', ')}</p>`);
+    return `<section class="dir-group" id="d-${g.date}">
+<h2>${esc(fmtDate(g.date))} <span class="note">· ${esc(daySummary(g))}</span></h2>
+${parts.join('\n')}
+</section>`;
+  }).join('\n');
+  return headHtml({ title, description, canonical: SITE + '/updates/', jsonld })
+    .replace('</head>', `<link rel="alternate" type="application/rss+xml" title="ArtSiren updates" href="${SITE}/updates/feed.xml">\n</head>`) + `
+<main class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">ArtSiren</a> › Updates</nav>
+<div class="card">
+<h1>Recent updates</h1>
+<p class="note" style="margin-top:.5rem">Artists we added, re-sourced or removed. Every entry links to news sources; artists are removed when reliable reporting contradicts the record. Spotted something wrong? Use “Report an error” on any artist page. <a href="/updates/feed.xml">RSS feed</a></p>
+${body || '<p>No updates yet.</p>'}
+</div>
+</main>
+` + FOOT;
+}
+fs.mkdirSync(path.join(ROOT, 'updates'), { recursive: true });
+fs.writeFileSync(path.join(ROOT, 'updates', 'index.html'), updatesPage());
+
+const xml = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const rss = ['<?xml version="1.0" encoding="UTF-8"?>', '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">', '<channel>',
+  '<title>ArtSiren: database updates</title>', `<link>${SITE}/updates/</link>`,
+  `<atom:link href="${SITE}/updates/feed.xml" rel="self" type="application/rss+xml"/>`,
+  '<description>Artists added, updated or removed from the ArtSiren database.</description>', '<language>en</language>'];
+for (const g of byDate.slice(0, 20)) {
+  const lines = [];
+  if (g.added.length) lines.push('Added: ' + g.added.map(u => u.name).join(', '));
+  if (g.updated.length) lines.push('Updated: ' + g.updated.map(u => u.name).join(', '));
+  if (g.removed.length) lines.push('Removed after review: ' + g.removed.map(u => u.name).join(', '));
+  rss.push('<item>', `<title>${xml(fmtDate(g.date) + ': ' + daySummary(g))}</title>`, `<link>${SITE}/updates/#d-${g.date}</link>`,
+    `<guid isPermaLink="false">artsiren-updates-${g.date}</guid>`, `<pubDate>${new Date(g.date + 'T12:00:00Z').toUTCString()}</pubDate>`,
+    `<description>${xml(lines.join('\n'))}</description>`, '</item>');
+}
+rss.push('</channel>', '</rss>', '');
+fs.writeFileSync(path.join(ROOT, 'updates', 'feed.xml'), rss.join('\n'));
+
+// ── llms.txt / llms-full.txt (https://llmstxt.org) ───────────────────────────
+const nBoy = qualifying.filter(a => stanceInfo(a).key === 'boycott').length;
+const nUnc = qualifying.filter(a => stanceInfo(a).key === 'unclear').length;
+const nWel = qualifying.filter(a => stanceInfo(a).key === 'welcomes').length;
+const outletNames = 'Times of Israel, Haaretz, Jerusalem Post, Ynet, BBC, NPR, Reuters, AP, The Guardian, Rolling Stone, Billboard, Variety, NME, Deadline, The Hollywood Reporter, CNN, NBC News, JTA, Al Jazeera, Euronews and others';
+const llms = `# ArtSiren
+
+> ArtSiren is a database of musicians, actors, directors and writers and their publicly documented stance on the cultural boycott of Israel. Every entry links to the news reporting it is based on. The database has ${DB.length} artists; ${qualifying.length} of them have at least ${MIN} sources from established news outlets and a dedicated profile page.
+
+ArtSiren also offers a free Chrome extension that shows an artist's stance on ticketing and streaming sites.
+
+How entries are classified:
+- **Cultural Boycott** (${nBoy} profiles): the artist cancelled or refused performances in Israel citing Israeli policy, signed an open letter or pledge calling for a cultural boycott (e.g. Film Workers for Palestine 2025, Musicians for Palestine 2021, No Music for Genocide 2025-26, Refusing Complicity 2024), geo-blocked their music from Israel, or made an explicit public statement in support of Palestinians.
+- **Stance Unclear** (${nUnc} profiles): public statements on the conflict without a clear commitment to a boycott.
+- **Welcomes All** (${nWel} profiles): the artist performed in Israel despite boycott calls or publicly opposed the cultural boycott (e.g. Creative Community for Peace letters).
+
+Sourcing rule: a profile page is published only when at least ${MIN} distinct established outlets name the artist explicitly (${outletNames}). Wikipedia and activist sites may be linked as extra context but never count toward the rule. Entries contradicted by reliable reporting are corrected or removed; see the updates page.
+
+When citing ArtSiren, please link to the artist's profile page and, where possible, the original news source listed on it.
+
+## Main pages
+- [All artist profiles](${SITE}/artist/): directory of every artist with a profile page, grouped by stance
+- [Recent updates](${SITE}/updates/): artists added, updated or removed, by date ([RSS](${SITE}/updates/feed.xml))
+- [Search the database](${SITE}/): home page with search across all ${DB.length} artists
+- [How we verify sources](${SITE}/sources.html): sourcing methodology
+- [How it works](${SITE}/how-it-works.html): how the database and extension work
+- [About](${SITE}/about.html)
+
+## Data
+- [artists.json](${SITE}/artists.json): the full database as JSON (name, stance, level, statement, sources)
+- [Full list of profiles with statements](${SITE}/llms-full.txt): one line per artist with stance, summary and sources
+
+## Optional
+- [Chrome extension](${SITE}/extension.html)
+- [Hebrew version](${SITE}/he/)
+`;
+fs.writeFileSync(path.join(ROOT, 'llms.txt'), llms);
+
+const fullLines = qualifying.slice().sort((x, y) => x.name.localeCompare(y.name)).map(a => {
+  const st = stanceInfo(a);
+  const outs = [...new Set((a.sources || []).filter(s => isApproved(domainOf(s.url))).map(s => s.name || domainOf(s.url)))];
+  return `- [${a.name}](${SITE}/artist/${slugs.get(a.id)}/): ${st.label}. ${a.statement.replace(/\s+/g, ' ').trim()} (Sources: ${outs.join(', ')})`;
+});
+fs.writeFileSync(path.join(ROOT, 'llms-full.txt'), `# ArtSiren: all artist profiles
+
+> ${qualifying.length} artists with at least ${MIN} established news sources, with their documented stance on the cultural boycott of Israel. Generated ${TODAY}. Each line links to the artist's profile page, which lists every source URL. Stances: Cultural Boycott, Stance Unclear, Welcomes All (see ${SITE}/llms.txt).
+
+${fullLines.join('\n')}
+`);
 
 // ── Sitemap ──────────────────────────────────────────────────────────────────
 const STATIC = [
-  ['/', 'weekly', '1.0'], ['/he/', 'weekly', '0.9'], ['/artist/', 'weekly', '0.9'],
+  ['/', 'weekly', '1.0'], ['/he/', 'weekly', '0.9'], ['/artist/', 'weekly', '0.9'], ['/updates/', 'weekly', '0.8'],
   ['/about.html', 'monthly', '0.7'], ['/extension.html', 'monthly', '0.8'], ['/sources.html', 'monthly', '0.6'],
   ['/how-it-works.html', 'monthly', '0.6'], ['/privacy.html', 'yearly', '0.3'], ['/terms.html', 'yearly', '0.3']
 ];
-const lastmodAll = Object.values(manifest).map(m => m.modified).sort().pop() || TODAY;
+const pageDates = Object.values(manifest.artists).map(m => m.modified).filter(Boolean);
+const lastmodAll = [...pageDates, byDate.length ? byDate[0].date : ''].sort().pop() || TODAY;
 const sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
 for (const [p, f, pr] of STATIC) {
-  const lm = (p === '/' || p === '/he/' || p === '/artist/') ? lastmodAll : '2026-05-20';
+  const lm = ['/', '/he/', '/artist/', '/updates/'].includes(p) ? lastmodAll : '2026-05-20';
   sm.push(`  <url><loc>${SITE}${p}</loc><lastmod>${lm}</lastmod><changefreq>${f}</changefreq><priority>${pr}</priority></url>`);
 }
 for (const a of qualifying) {
   const s = slugs.get(a.id);
-  sm.push(`  <url><loc>${SITE}/artist/${s}/</loc><lastmod>${manifest[s].modified}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`);
+  sm.push(`  <url><loc>${SITE}/artist/${s}/</loc><lastmod>${manifest.artists[a.id].modified}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`);
 }
 sm.push('</urlset>', '');
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sm.join('\n'));
@@ -396,3 +561,4 @@ fs.writeFileSync(indexPath, indexHtml);
 
 console.log(`artist pages: ${qualifying.length} written, ${DB.length - qualifying.length} skipped (<${MIN} approved sources), ${removed} stale removed`);
 console.log(`sitemap.xml: ${STATIC.length + qualifying.length} URLs; index.html static links changed: ${relinked}`);
+console.log(`updates.json: ${updates.length} entries (${newUpdates} new this run); llms.txt + llms-full.txt written`);
