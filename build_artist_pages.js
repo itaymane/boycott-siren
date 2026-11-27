@@ -72,6 +72,25 @@ function stanceInfo(a) {
   };
 }
 
+// Bands/duos/collectives get schema.org MusicGroup; everyone else is a Person.
+// Google's ProfilePage requires mainEntity to be a Person or an Organization (MusicGroup is one).
+// Add new group acts here when they are added to the database.
+const MUSIC_GROUPS = new Set([
+  'A Silver Mt. Zion', 'Amyl and the Sniffers', 'BADBADNOTGOOD', 'Beoga', 'Blonde Redhead', 'Bob Vylan',
+  'Bon Jovi', 'Dave Matthews Band', 'Destroy Boys', 'Enter Shikari', 'Fontaines D.C.',
+  'Godspeed You! Black Emperor', 'Green Day', "Guns N' Roses", 'Hot Chip', 'IDLES', 'Kneecap',
+  'Lambrini Girls', 'Lankum', 'Mannequin Pussy', 'Maroon 5', 'Massive Attack', 'Model/Actriz', 'Mogwai',
+  'MUNA', 'My Bloody Valentine', 'Of Monsters and Men', 'Paramore', 'Portishead', 'Primal Scream',
+  'Rage Against the Machine', 'Red Hot Chili Peppers', 'Refused', 'Rolling Stones', 'Run the Jewels',
+  'Santana', 'Sigur Ros', 'Smerz', 'System of a Down', 'The Knife', 'The Roots', 'U2', 'Wednesday',
+  'Wolf Alice', 'Young Fathers', 'Metric', 'Stars', 'Wolf Parade', 'Do Make Say Think', 'Dead Prez',
+  'Broken Social Scene', 'Propagandhi', 'Anti-Flag', 'Grizzly Bear', 'Wet Leg', 'Dry Cleaning',
+  'Black Country New Road', 'Beach Fossils', 'Pinegrove', 'Water from Your Eyes', 'Metallica'
+]);
+const schemaType = a => MUSIC_GROUPS.has(a.name) ? 'MusicGroup' : 'Person';
+// Google wants a full ISO 8601 datetime with timezone, not a bare date.
+const isoDateTime = d => d + 'T00:00:00+00:00';
+
 const CAT_LABEL = { musician: 'Musician', actor: 'Actor', director: 'Director', writer: 'Writer', author: 'Author', comedian: 'Comedian' };
 const catLabel = c => CAT_LABEL[c] || (c ? c[0].toUpperCase() + c.slice(1) : 'Artist');
 
@@ -222,7 +241,7 @@ function artistPage(a) {
   const jsonld = {
     '@context': 'https://schema.org',
     '@type': 'ProfilePage',
-    url, name: title, description, dateModified: modified,
+    url, name: title, description, dateModified: isoDateTime(modified),
     inLanguage: 'en',
     isPartOf: { '@type': 'WebSite', name: 'ArtSiren', url: SITE + '/' },
     breadcrumb: {
@@ -232,7 +251,7 @@ function artistPage(a) {
         { '@type': 'ListItem', position: 3, name: a.name, item: url }
       ]
     },
-    mainEntity: { '@type': 'Thing', name: a.name, description: a.statement, ...(a.image ? { image: a.image } : {}) },
+    mainEntity: { '@type': schemaType(a), name: a.name, description: a.statement, url, ...(a.image ? { image: a.image } : {}) },
     citation: sources.map(s => ({ '@type': 'CreativeWork', name: s.name, url: s.url }))
   };
 
