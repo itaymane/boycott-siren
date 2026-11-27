@@ -3281,11 +3281,11 @@
   "389": {
    "name": "Andrea Bocelli",
    "slug": "andrea-bocelli",
-   "hash": "65251483a883",
-   "modified": "2026-11-26",
+   "hash": "1bdc48d79fc0",
+   "modified": "2026-11-27",
    "f": {
     "stance": "35f0a4e79258",
-    "statement": "51860554eecf",
+    "statement": "1fe5e063dc51",
     "sources": "9d9e823f96ca"
    }
   }

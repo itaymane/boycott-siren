@@ -2278,7 +2278,7 @@ const artistsData = [
   {
     stance: 'welcome',
     name: "Andrea Bocelli",
-    statement: "Performed at a Tel Aviv stadium in 2022 despite calls to boycott, with Prime Minister Benjamin Netanyahu in the audience, and sang in Jerusalem's Old City in 2011. In October 2026 the BDS movement's Jordan chapter called for a boycott of his November 27 concert at Petra over his support for Israel, and Indonesia's top Muslim council opposed his concerts in Indonesia on the same grounds.",
+    statement: "Performed at a Tel Aviv stadium in 2022 despite calls to boycott, with Benjamin Netanyahu, then a former prime minister, in the audience, and sang in Jerusalem's Old City in 2011. In October 2026 the BDS movement's Jordan chapter called for a boycott of his November 27 concert at Petra over his support for Israel, and Indonesia's top Muslim council opposed his concerts in Indonesia on the same grounds.",
     sources: `<a href="https://www.timesofisrael.com/groups-demand-boycott-of-andrea-bocellis-jordan-concert-over-his-israel-support/">Times of Israel</a> | <a href="https://malaymail.com/news/showbiz/2026/10/08/bds-movement-urges-boycott-of-andrea-bocellis-jordan-concert-at-petra-over-israel-ties/238167">Malay Mail</a> | <a href="https://www.ksat.com/entertainment/2026/10/14/indonesias-top-muslim-council-opposes-upcoming-andrea-bocelli-concerts-over-israel-ties/">AP via KSAT</a> | <a href="https://www.ynetnews.com/culture/article/ryj8ni1kq">Ynet</a>`
   }
 ];

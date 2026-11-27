@@ -208,16 +208,45 @@ h2{font-size:1.15rem;margin:1.6rem 0 .6rem}
 @media(max-width:560px){.card{padding:1.2rem}h1{font-size:1.4rem}.avatar,.initials{width:64px;height:64px;font-size:1.2rem}}
 `;
 
-function headHtml({ title, description, canonical, image, jsonld }) {
+// ── Hebrew translations (he_translations.json) ───────────────────────────────
+// { <id>: { name_he, statement_he, en_hash } }; en_hash = sha1(English statement) when translated.
+// A Hebrew page is built only when the English statement is unchanged since translation.
+const HE = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'he_translations.json'), 'utf8')); } catch (e) { return {}; } })();
+const enHash = s => crypto.createHash('sha1').update(s).digest('hex').slice(0, 12);
+const heStale = [];
+const heMissing = [];
+const heReady = new Set(qualifying.filter(a => {
+  const t = HE[a.id];
+  if (!t) { heMissing.push(a.name); return false; }
+  if (t.en_hash !== enHash(a.statement)) { heStale.push(a.name); return false; }
+  return true;
+}).map(a => a.id));
+
+const CSS_HE = `
+body{font-family:'Heebo','Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.statement{border-left:0;border-right:3px solid var(--blue);border-radius:10px 0 0 10px}
+.tag{margin-left:0;margin-right:.4rem}
+.he-top{background:#fff;box-shadow:0 2px 12px rgba(12,35,62,.05);padding:.8rem 0}
+.he-top .wrap{padding-top:0;padding-bottom:0;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.he-top a{text-decoration:none;color:var(--navy);font-size:.9rem}
+.he-top .brand{font-weight:700;font-size:1.2rem;color:var(--blue)}
+.he-top nav{display:flex;gap:1rem;flex-wrap:wrap}
+.he-foot{text-align:center;font-size:.78rem;color:var(--muted);padding:1.5rem 16px}
+.he-foot a{color:var(--muted)}
+.en-name{color:var(--muted);font-size:.95rem;font-weight:400}
+`;
+
+function headHtml({ title, description, canonical, image, jsonld, lang = 'en', alternates = [] }) {
+  const he = lang === 'he';
+  const alt = alternates.map(([hl, href]) => `<link rel="alternate" hreflang="${hl}" href="${esc(href)}">`).join('\n');
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="${he ? 'he' : 'en'}"${he ? ' dir="rtl"' : ''}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZRJ6TZY2Y"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XZRJ6TZY2Y');</script>
-<script src="/shared-nav.js?v=8"></script>
-<title>${esc(title)}</title>
+${he ? '' : '<script src="/shared-nav.js?v=8"></script>\n'}${alt ? alt + '\n' : ''}<title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="${esc(canonical)}">
@@ -233,13 +262,19 @@ function headHtml({ title, description, canonical, image, jsonld }) {
 <link rel="icon" href="/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>${CSS}</style>
+<link href="https://fonts.googleapis.com/css2?family=${he ? 'Heebo:wght@400;500;700&family=' : ''}Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>${CSS}${he ? CSS_HE : ''}</style>
 <script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>
 </head>
 <body>
-`;
+${he ? `<header class="he-top"><div class="wrap"><a class="brand" href="/he/">ArtSiren</a><nav><a href="/he/">חיפוש במאגר</a><a href="/he/artist/">כל האמנים</a><a href="/sources.html">מקורות</a></nav></div></header>\n` : ''}`;
 }
+
+const FOOT_HE = `
+<footer class="he-foot">© 2026 ArtSiren · <a href="/he/">דף הבית</a> · <a href="/terms.html">תנאי שימוש</a> · <a href="/privacy.html">פרטיות</a></footer>
+</body>
+</html>
+`;
 
 const FOOT = `
 <script>
@@ -309,7 +344,9 @@ function artistPage(a) {
   const rel = relatedFor(a).map(b => `<li><a href="/artist/${slugs.get(b.id)}/">${esc(b.name)}</a></li>`).join('\n');
   const nApproved = approvedCount(a);
 
-  return headHtml({ title, description, canonical: url, image: a.image, jsonld }) + `
+  const alternates = heReady.has(a.id)
+    ? [['en', url], ['he', `${SITE}/he/artist/${slug}/`], ['x-default', url]] : [];
+  return headHtml({ title, description, canonical: url, image: a.image, jsonld, alternates }) + `
 <main class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">ArtSiren</a> › <a href="/artist/">Artists</a> › ${esc(a.name)}</nav>
 <article class="card">
@@ -345,7 +382,7 @@ ${rel ? `<h2>Related artists</h2>
 ${rel}
 </ul>` : ''}
 
-<p class="note" style="margin-top:1.6rem">ArtSiren records publicly documented actions and statements by artists regarding Israel, with links to the original reporting. <a href="/sources.html">How we verify sources</a> · <a href="/artist/">All artists</a> · <a href="/updates/">Recent updates</a></p>
+<p class="note" style="margin-top:1.6rem">ArtSiren records publicly documented actions and statements by artists regarding Israel, with links to the original reporting. <a href="/sources.html">How we verify sources</a> · <a href="/artist/">All artists</a> · <a href="/updates/">Recent updates</a>${heReady.has(a.id) ? ` · <a href="/he/artist/${slug}/" hreflang="he" lang="he">בעברית</a>` : ''}</p>
 </main>
 ` + FOOT;
 }
@@ -383,6 +420,122 @@ ${body}
 ` + FOOT;
 }
 
+// ── Hebrew pages (/he/artist/) ───────────────────────────────────────────────
+const HE_OUT = path.join(ROOT, 'he', 'artist');
+const CAT_HE = { musician: 'מוזיקה', actor: 'משחק', director: 'בימוי', writer: 'ספרות', author: 'ספרות', comedian: 'קומדיה' };
+function stanceHe(a) {
+  const k = stanceInfo(a).key;
+  if (k === 'welcomes') return { key: k, label: 'מקבל/ת את כולם',
+    summary: 'לפי המקורות שלהלן, יש תיעוד פומבי של הופעה בישראל או של התנגדות לחרם התרבותי עליה.' };
+  if (k === 'unclear') return { key: k, label: 'עמדה לא ברורה',
+    summary: 'יש התבטאויות פומביות בנושא ישראל והפלסטינים, אך אין תיעוד של התחייבות ברורה לחרם.' };
+  return { key: k, label: 'חרם תרבותי',
+    summary: 'לפי המקורות שלהלן, יש תיעוד פומבי של תמיכה בחרם תרבותי על ישראל או של עמדה פומבית נגד מדיניות ישראל.' };
+}
+const heName = a => (HE[a.id] && HE[a.id].name_he) || a.name;
+
+function heArtistPage(a) {
+  const slug = slugs.get(a.id);
+  const url = `${SITE}/he/artist/${slug}/`;
+  const enUrl = `${SITE}/artist/${slug}/`;
+  const t = HE[a.id];
+  const st = stanceHe(a);
+  const nh = heName(a);
+  const sources = (a.sources || []).map(s => ({ name: s.name || domainOf(s.url), url: s.url, domain: domainOf(s.url) }));
+  sources.sort((x, y) => isApproved(y.domain) - isApproved(x.domain));
+  const title = `${nh} (${a.name}) והחרם על ישראל: עמדה ומקורות | ArtSiren`;
+  let description = `${nh}: ${st.label}. ${t.statement_he}`;
+  if (description.length > 158) description = description.slice(0, 155).replace(/\s+\S*$/, '') + '…';
+  const modified = manifest.artists[a.id].modified;
+  const jsonld = {
+    '@context': 'https://schema.org', '@type': 'ProfilePage', url, name: title, description,
+    dateModified: isoDateTime(modified), inLanguage: 'he',
+    isPartOf: { '@type': 'WebSite', name: 'ArtSiren', url: SITE + '/he/' },
+    breadcrumb: { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'ArtSiren', item: SITE + '/he/' },
+      { '@type': 'ListItem', position: 2, name: 'כל האמנים', item: SITE + '/he/artist/' },
+      { '@type': 'ListItem', position: 3, name: nh, item: url }] },
+    mainEntity: { '@type': schemaType(a), name: a.name, alternateName: nh, description: t.statement_he, url, ...(a.image ? { image: a.image } : {}) },
+    citation: sources.map(s => ({ '@type': 'CreativeWork', name: s.name, url: s.url }))
+  };
+  const initials = a.name.split(/\s+/).slice(0, 2).map(w => w[0] || '').join('').toUpperCase();
+  const avatar = a.image
+    ? `<img class="avatar" src="${esc(a.image)}" alt="${esc(nh)}" width="84" height="84" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;initials&quot;>${esc(initials)}</div>'">`
+    : `<div class="initials">${esc(initials)}</div>`;
+  const srcHtml = sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener nofollow"><span>${esc(s.name)}${isApproved(s.domain) ? '<span class="tag">כלי תקשורת מוכר</span>' : ''}</span><span class="src-domain" dir="ltr">${esc(s.domain)}</span></a></li>`).join('\n');
+  const rel = relatedFor(a).filter(b => heReady.has(b.id)).map(b => `<li><a href="/he/artist/${slugs.get(b.id)}/">${esc(heName(b))}</a></li>`).join('\n');
+  const reportHref = `/he/?report=${a.id}&name=${encodeURIComponent(a.name)}`;
+  return headHtml({ title, description, canonical: url, image: a.image, jsonld, lang: 'he',
+    alternates: [['he', url], ['en', enUrl], ['x-default', enUrl]] }) + `
+<main class="wrap">
+<nav class="crumbs" aria-label="ניווט"><a href="/he/">ArtSiren</a> › <a href="/he/artist/">כל האמנים</a> › ${esc(nh)}</nav>
+<article class="card">
+<header class="head">
+${avatar}
+<div>
+<h1>${esc(nh)} <span class="en-name" dir="ltr">${esc(a.name)}</span></h1>
+<div class="cat">${esc(CAT_HE[a.category] || 'אמנות')}</div>
+<span class="badge ${st.key}">${esc(st.label)}</span>
+</div>
+</header>
+
+<h2>מה העמדה של ${esc(nh)} לגבי החרם על ישראל?</h2>
+<p class="answer"><strong>${esc(st.label)}.</strong> ${esc(st.summary)}</p>
+
+<h2>מה נאמר או נעשה</h2>
+<p class="statement">${esc(t.statement_he)}</p>
+
+<h2>מקורות (${sources.length})</h2>
+<ul class="sources">
+${srcHtml}
+</ul>
+<p class="meta">${approvedCount(a)} מהמקורות הם מכלי תקשורת מוכרים. המקורות באנגלית. נבדק לאחרונה ${esc(modified)}.</p>
+
+<div class="actions">
+<a class="btn primary" href="/he/?artist=${a.id}">פתיחה במאגר ArtSiren</a>
+<a class="btn" href="${esc(reportHref)}" onclick="if(window.gtag)gtag('event','report_error_click',{artist_name:${esc(JSON.stringify(a.name))},page:'artist_page_he'})">מצאתם טעות? דווחו לנו</a>
+</div>
+</article>
+
+${rel ? `<h2>אמנים נוספים</h2>
+<ul class="related">
+${rel}
+</ul>` : ''}
+
+<p class="note" style="margin-top:1.6rem">ArtSiren מתעד פעולות והצהרות פומביות של אמנים בנוגע לישראל, עם קישורים לדיווחים המקוריים. <a href="/he/artist/">כל האמנים</a> · <a href="/artist/${slug}/" hreflang="en" lang="en">English</a></p>
+</main>
+` + FOOT_HE;
+}
+
+function heDirectoryPage() {
+  const list = qualifying.filter(a => heReady.has(a.id));
+  const groups = [['חרם תרבותי', 'boycott'], ['עמדה לא ברורה', 'unclear'], ['מקבלים את כולם', 'welcomes']]
+    .map(([label, key]) => [label, list.filter(a => stanceInfo(a).key === key)]);
+  const title = 'כל האמנים: עמדות לגבי החרם התרבותי על ישראל, עם מקורות | ArtSiren';
+  const description = `${list.length} מוזיקאים, שחקנים, במאים וסופרים והעמדה המתועדת שלהם לגבי החרם התרבותי על ישראל, עם קישורים למקורות חדשותיים.`;
+  const jsonld = { '@context': 'https://schema.org', '@type': 'CollectionPage', url: SITE + '/he/artist/', name: title, description, inLanguage: 'he',
+    isPartOf: { '@type': 'WebSite', name: 'ArtSiren', url: SITE + '/he/' },
+    mainEntity: { '@type': 'ItemList', numberOfItems: list.length,
+      itemListElement: list.map((a, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE}/he/artist/${slugs.get(a.id)}/`, name: heName(a) })) } };
+  const body = groups.filter(g => g[1].length).map(([label, l]) => `<section class="dir-group">
+<h2>${esc(label)} (${l.length})</h2>
+<ul class="dir-list">
+${l.slice().sort((x, y) => heName(x).localeCompare(heName(y), 'he')).map(a => `<li><a href="/he/artist/${slugs.get(a.id)}/">${esc(heName(a))}</a></li>`).join('\n')}
+</ul>
+</section>`).join('\n');
+  return headHtml({ title, description, canonical: SITE + '/he/artist/', jsonld, lang: 'he',
+    alternates: [['he', SITE + '/he/artist/'], ['en', SITE + '/artist/'], ['x-default', SITE + '/artist/']] }) + `
+<main class="wrap">
+<nav class="crumbs" aria-label="ניווט"><a href="/he/">ArtSiren</a> › כל האמנים</nav>
+<div class="card">
+<h1>כל האמנים</h1>
+<p class="note" style="margin-top:.5rem">${list.length} אמנים עם לפחות ${MIN} מקורות חדשותיים בלתי תלויים. לחיפוש במאגר המלא: <a href="/he/">דף הבית</a>.</p>
+${body}
+</div>
+</main>
+` + FOOT_HE;
+}
+
 // ── Write pages ──────────────────────────────────────────────────────────────
 fs.mkdirSync(OUT_DIR, { recursive: true });
 const keep = new Set();
@@ -401,6 +554,21 @@ for (const entry of fs.readdirSync(OUT_DIR, { withFileTypes: true })) {
   }
 }
 fs.writeFileSync(path.join(OUT_DIR, 'index.html'), directoryPage());
+
+// Hebrew pages (after the English loop, which fills manifest.artists[*].modified)
+fs.mkdirSync(HE_OUT, { recursive: true });
+const keepHe = new Set();
+for (const a of qualifying) {
+  if (!heReady.has(a.id)) continue;
+  const dir = path.join(HE_OUT, slugs.get(a.id));
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, 'index.html'), heArtistPage(a));
+  keepHe.add(slugs.get(a.id));
+}
+for (const entry of fs.readdirSync(HE_OUT, { withFileTypes: true })) {
+  if (entry.isDirectory() && !keepHe.has(entry.name)) fs.rmSync(path.join(HE_OUT, entry.name), { recursive: true, force: true });
+}
+fs.writeFileSync(path.join(HE_OUT, 'index.html'), heDirectoryPage());
 // artists without a page still get a manifest entry so later runs can detect their changes
 for (const a of DB) {
   if (!manifest.artists[a.id]) manifest.artists[a.id] = { name: a.name, slug: null, hash: null, modified: null, f: fieldHashes(a) };
@@ -530,14 +698,22 @@ const STATIC = [
 ];
 const pageDates = Object.values(manifest.artists).map(m => m.modified).filter(Boolean);
 const lastmodAll = [...pageDates, byDate.length ? byDate[0].date : ''].sort().pop() || TODAY;
-const sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
+const sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'];
+const altLinks = (en, he) => `<xhtml:link rel="alternate" hreflang="en" href="${en}"/><xhtml:link rel="alternate" hreflang="he" href="${he}"/><xhtml:link rel="alternate" hreflang="x-default" href="${en}"/>`;
+STATIC.splice(4, 0, ['/he/artist/', 'weekly', '0.8']);
 for (const [p, f, pr] of STATIC) {
-  const lm = ['/', '/he/', '/artist/', '/updates/'].includes(p) ? lastmodAll : '2026-05-20';
-  sm.push(`  <url><loc>${SITE}${p}</loc><lastmod>${lm}</lastmod><changefreq>${f}</changefreq><priority>${pr}</priority></url>`);
+  const lm = ['/', '/he/', '/artist/', '/he/artist/', '/updates/'].includes(p) ? lastmodAll : '2026-05-20';
+  const alts = p === '/artist/' || p === '/he/artist/' ? altLinks(`${SITE}/artist/`, `${SITE}/he/artist/`) : '';
+  sm.push(`  <url><loc>${SITE}${p}</loc><lastmod>${lm}</lastmod><changefreq>${f}</changefreq><priority>${pr}</priority>${alts}</url>`);
 }
+let heCount = 0;
 for (const a of qualifying) {
   const s = slugs.get(a.id);
-  sm.push(`  <url><loc>${SITE}/artist/${s}/</loc><lastmod>${manifest.artists[a.id].modified}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`);
+  const lm = manifest.artists[a.id].modified;
+  const en = `${SITE}/artist/${s}/`, he = `${SITE}/he/artist/${s}/`;
+  const alts = heReady.has(a.id) ? altLinks(en, he) : '';
+  sm.push(`  <url><loc>${en}</loc><lastmod>${lm}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>${alts}</url>`);
+  if (heReady.has(a.id)) { heCount++; sm.push(`  <url><loc>${he}</loc><lastmod>${lm}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>${alts}</url>`); }
 }
 sm.push('</urlset>', '');
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sm.join('\n'));
@@ -560,5 +736,6 @@ if (/\/\*ARTIST_PAGES\*\/[\s\S]*?\/\*END_ARTIST_PAGES\*\//.test(indexHtml)) {
 fs.writeFileSync(indexPath, indexHtml);
 
 console.log(`artist pages: ${qualifying.length} written, ${DB.length - qualifying.length} skipped (<${MIN} approved sources), ${removed} stale removed`);
-console.log(`sitemap.xml: ${STATIC.length + qualifying.length} URLs; index.html static links changed: ${relinked}`);
+console.log(`sitemap.xml: ${STATIC.length + qualifying.length + heCount} URLs; index.html static links changed: ${relinked}`);
+console.log(`hebrew pages: ${heReady.size} written` + (heMissing.length ? `; NO TRANSLATION (add to he_translations.json): ${heMissing.join(', ')}` : '') + (heStale.length ? `; STALE, English changed since translation (re-translate): ${heStale.join(', ')}` : ''));
 console.log(`updates.json: ${updates.length} entries (${newUpdates} new this run); llms.txt + llms-full.txt written`);

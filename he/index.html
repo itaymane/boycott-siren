@@ -2595,13 +2595,20 @@
             document.getElementById('contactOverlay').classList.add('open');
             document.body.style.overflow = 'hidden';
         }
-        function reportArtistError(artistId) {
+        function reportArtistError(artistId, fallbackName) {
             const artist = ARTISTS_DATABASE.find(a => a.id === artistId);
-            if (!artist) return;
+            const name = artist ? artist.name : fallbackName;
+            if (!name) return;
             document.querySelectorAll('.as-modal-overlay').forEach(m => m.remove());
-            if (window.gtag) gtag('event', 'report_error_click', { artist_name: artist.name });
-            openContact('report-mistake', 'אמן/ית: ' + artist.name + ' (id ' + artist.id + ')\n\nמה לא מדויק? (אם יש, צרפו קישור למקור):\n');
+            if (window.gtag) gtag('event', 'report_error_click', { artist_name: name });
+            openContact('report-mistake', 'אמן/ית: ' + name + ' (id ' + artistId + ')\n\nמה לא מדויק? (אם יש, צרפו קישור למקור):\n');
         }
+        // "Report an error" links from /he/artist/<slug>/ pages land here as ?report=<id>&name=<name>
+        document.addEventListener('DOMContentLoaded', function () {
+            const p = new URLSearchParams(window.location.search);
+            const rid = parseInt(p.get('report'));
+            if (!isNaN(rid)) setTimeout(() => reportArtistError(rid, p.get('name')), 300);
+        });
         function closeContact() {
             document.getElementById('contactOverlay').classList.remove('open');
             document.body.style.overflow = '';
