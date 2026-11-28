@@ -17,14 +17,14 @@ When citing ArtSiren, please link to the artist's profile page and, where possib
 - [All artist profiles](https://artsiren.co/artist/): directory of every artist with a profile page, grouped by stance
 - [Recent updates](https://artsiren.co/updates/): artists added, updated or removed, by date ([RSS](https://artsiren.co/updates/feed.xml))
 - [Search the database](https://artsiren.co/): home page with search across all 299 artists
-- [How we verify sources](https://artsiren.co/sources.html): sourcing methodology
-- [How it works](https://artsiren.co/how-it-works.html): how the database and extension work
-- [About](https://artsiren.co/about.html)
+- [How we verify sources](https://artsiren.co/sources): sourcing methodology
+- [How it works](https://artsiren.co/how-it-works): how the database and extension work
+- [About](https://artsiren.co/about)
 
 ## Data
 - [artists.json](https://artsiren.co/artists.json): the full database as JSON (name, stance, level, statement, sources)
 - [Full list of profiles with statements](https://artsiren.co/llms-full.txt): one line per artist with stance, summary and sources
 
 ## Optional
-- [Chrome extension](https://artsiren.co/extension.html)
+- [Chrome extension](https://artsiren.co/extension)
 - [Hebrew version](https://artsiren.co/he/)

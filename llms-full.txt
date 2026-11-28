@@ -1,6 +1,6 @@
 # ArtSiren: all artist profiles
 
-> 246 artists with at least 2 established news sources, with their documented stance on the cultural boycott of Israel. Generated 2026-11-27. Each line links to the artist's profile page, which lists every source URL. Stances: Cultural Boycott, Stance Unclear, Welcomes All (see https://artsiren.co/llms.txt).
+> 246 artists with at least 2 established news sources, with their documented stance on the cultural boycott of Israel. Generated 2026-11-28. Each line links to the artist's profile page, which lists every source URL. Stances: Cultural Boycott, Stance Unclear, Welcomes All (see https://artsiren.co/llms.txt).
 
 - [A Silver Mt. Zion](https://artsiren.co/artist/a-silver-mt-zion/): Cultural Boycott. Montréal post-rock collective led by Efrim Menuck who signed open letters supporting a cultural boycott of Israel; closely associated with Godspeed You! Black Emperor, whose members have been vocal advocates for Palestinian rights and the BDS movement (Sources: Exclaim!, Billboard Canada)
 - [Adam McKay](https://artsiren.co/artist/adam-mckay/): Cultural Boycott. Signed the Film Workers for Palestine pledge (September 2025), committing to boycott Israeli film institutions 'implicated in genocide and apartheid against the Palestinian people'; director of The Big Short, Don't Look Up and Vice. (Sources: Rolling Stone, NPR, Deadline)

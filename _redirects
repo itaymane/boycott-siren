@@ -1,0 +1,9 @@
+# Permanent redirects from old .html URLs to clean URLs (query strings are kept).
+/index.html              /                301
+/about.html              /about           301
+/extension.html          /extension       301
+/sources.html            /sources         301
+/how-it-works.html       /how-it-works    301
+/privacy.html            /privacy         301
+/terms.html              /terms           301
+/he/index.html           /he/             301

@@ -130,9 +130,9 @@
   var navbarHTML = '<nav class="sn-navbar" id="sn-navbar"><div class="sn-container"><div class="sn-nav-content">'
     + '<a href="/" class="sn-logo"><img src="' + LOGO + '" alt="ArtSiren" onerror="this.style.display=\'none\'"></a>'
     + '<div class="sn-nav-links">'
-    + link('/about.html', 'About', 'about')
-    + link('/sources.html', 'Sources', 'sources')
-    + link('/how-it-works.html', 'How It Works', 'how-it-works')
+    + link('/about', 'About', 'about')
+    + link('/sources', 'Sources', 'sources')
+    + link('/how-it-works', 'How It Works', 'how-it-works')
     + link('#', 'Contact', 'contact')
     + '</div>'
     + '<div class="sn-nav-right">'
@@ -170,10 +170,10 @@
 
   var footerHTML = '<div class="sn-footer" id="sn-footer">'
     + '<span class="sn-footer-copy">© 2026 ArtSiren</span>'
-    + '<a href="/about.html" class="sn-footer-link">About</a>'
+    + '<a href="/about" class="sn-footer-link">About</a>'
     + '<a href="/updates/" class="sn-footer-link">Updates</a>'
-    + '<a href="/terms.html" class="sn-footer-link">Terms of Use</a>'
-    + '<a href="/privacy.html" class="sn-footer-link">Privacy Policy</a>'
+    + '<a href="/terms" class="sn-footer-link">Terms of Use</a>'
+    + '<a href="/privacy" class="sn-footer-link">Privacy Policy</a>'
     + '<a href="#" onclick="openContact();return false;" class="sn-footer-link">Contact</a>'
     + '</div>';
 

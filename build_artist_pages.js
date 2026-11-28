@@ -246,7 +246,7 @@ function headHtml({ title, description, canonical, image, jsonld, lang = 'en', a
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZRJ6TZY2Y"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XZRJ6TZY2Y');</script>
-${he ? '' : '<script src="/shared-nav.js?v=8"></script>\n'}${alt ? alt + '\n' : ''}<title>${esc(title)}</title>
+${he ? '' : '<script src="/shared-nav.js?v=9"></script>\n'}${alt ? alt + '\n' : ''}<title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="${esc(canonical)}">
@@ -267,11 +267,11 @@ ${he ? '' : '<script src="/shared-nav.js?v=8"></script>\n'}${alt ? alt + '\n' : 
 <script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>
 </head>
 <body>
-${he ? `<header class="he-top"><div class="wrap"><a class="brand" href="/he/">ArtSiren</a><nav><a href="/he/">חיפוש במאגר</a><a href="/he/artist/">כל האמנים</a><a href="/sources.html">מקורות</a></nav></div></header>\n` : ''}`;
+${he ? `<header class="he-top"><div class="wrap"><a class="brand" href="/he/">ArtSiren</a><nav><a href="/he/">חיפוש במאגר</a><a href="/he/artist/">כל האמנים</a><a href="/sources">מקורות</a></nav></div></header>\n` : ''}`;
 }
 
 const FOOT_HE = `
-<footer class="he-foot">© 2026 ArtSiren · <a href="/he/">דף הבית</a> · <a href="/terms.html">תנאי שימוש</a> · <a href="/privacy.html">פרטיות</a></footer>
+<footer class="he-foot">© 2026 ArtSiren · <a href="/he/">דף הבית</a> · <a href="/terms">תנאי שימוש</a> · <a href="/privacy#he">פרטיות</a></footer>
 </body>
 </html>
 `;
@@ -382,7 +382,7 @@ ${rel ? `<h2>Related artists</h2>
 ${rel}
 </ul>` : ''}
 
-<p class="note" style="margin-top:1.6rem">ArtSiren records publicly documented actions and statements by artists regarding Israel, with links to the original reporting. <a href="/sources.html">How we verify sources</a> · <a href="/artist/">All artists</a> · <a href="/updates/">Recent updates</a>${heReady.has(a.id) ? ` · <a href="/he/artist/${slug}/" hreflang="he" lang="he">בעברית</a>` : ''}</p>
+<p class="note" style="margin-top:1.6rem">ArtSiren records publicly documented actions and statements by artists regarding Israel, with links to the original reporting. <a href="/sources">How we verify sources</a> · <a href="/artist/">All artists</a> · <a href="/updates/">Recent updates</a>${heReady.has(a.id) ? ` · <a href="/he/artist/${slug}/" hreflang="he" lang="he">בעברית</a>` : ''}</p>
 </main>
 ` + FOOT;
 }
@@ -664,16 +664,16 @@ When citing ArtSiren, please link to the artist's profile page and, where possib
 - [All artist profiles](${SITE}/artist/): directory of every artist with a profile page, grouped by stance
 - [Recent updates](${SITE}/updates/): artists added, updated or removed, by date ([RSS](${SITE}/updates/feed.xml))
 - [Search the database](${SITE}/): home page with search across all ${DB.length} artists
-- [How we verify sources](${SITE}/sources.html): sourcing methodology
-- [How it works](${SITE}/how-it-works.html): how the database and extension work
-- [About](${SITE}/about.html)
+- [How we verify sources](${SITE}/sources): sourcing methodology
+- [How it works](${SITE}/how-it-works): how the database and extension work
+- [About](${SITE}/about)
 
 ## Data
 - [artists.json](${SITE}/artists.json): the full database as JSON (name, stance, level, statement, sources)
 - [Full list of profiles with statements](${SITE}/llms-full.txt): one line per artist with stance, summary and sources
 
 ## Optional
-- [Chrome extension](${SITE}/extension.html)
+- [Chrome extension](${SITE}/extension)
 - [Hebrew version](${SITE}/he/)
 `;
 fs.writeFileSync(path.join(ROOT, 'llms.txt'), llms);
@@ -693,8 +693,8 @@ ${fullLines.join('\n')}
 // ── Sitemap ──────────────────────────────────────────────────────────────────
 const STATIC = [
   ['/', 'weekly', '1.0'], ['/he/', 'weekly', '0.9'], ['/artist/', 'weekly', '0.9'], ['/updates/', 'weekly', '0.8'],
-  ['/about.html', 'monthly', '0.7'], ['/extension.html', 'monthly', '0.8'], ['/sources.html', 'monthly', '0.6'],
-  ['/how-it-works.html', 'monthly', '0.6'], ['/privacy.html', 'yearly', '0.3'], ['/terms.html', 'yearly', '0.3']
+  ['/about', 'monthly', '0.7'], ['/extension', 'monthly', '0.8'], ['/sources', 'monthly', '0.6'],
+  ['/how-it-works', 'monthly', '0.6'], ['/privacy', 'yearly', '0.3'], ['/terms', 'yearly', '0.3']
 ];
 const pageDates = Object.values(manifest.artists).map(m => m.modified).filter(Boolean);
 const lastmodAll = [...pageDates, byDate.length ? byDate[0].date : ''].sort().pop() || TODAY;
